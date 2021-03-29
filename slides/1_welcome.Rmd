@@ -1,0 +1,82 @@
+---
+title: "Welcoming words"
+author: "The team"
+date: "last updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: [default, "slides-theme.css"]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: ''
+      titleSlideClass: [center, middle]
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+
+library(tidyverse)
+theme_set(theme_light())
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+```
+
+
+## Montpellier vs. virtual
+
+???
+
++ Welcome to the workshop blabla
++ My name is Olivier Gimenez, I am blabla
++ Wish it was in Montpellier
++ But hey, some advantages, not sure we could have fit 500 people in our meeting room at the lab
+
+---
+## How it all started
+
++ Running workshop for 15 years
++ Daniel Turek in sabbatical who taught us Nimble and convinced us to switch from Jags to Nimble
++ Science should be open
++ A tweet that blew up in my face
+
+---
+## What this workshop is about
+
++ Demographic parameters
++ HMMs
++ Bayes stats
++ Check attendees expectations
+
+---
+## The team 
+
+---
+## Schedule
+
++ Day 1
+    + 
+    + 
+    + 
++ Day 2
+    + 
+    + 
+    + 
+
+---
+## Philosophy of teaching
+
++ Lot of stuff
++ OK if you do not digest everything in 2 days
++ all available on website for you to play around
+
+---
+## The way we will interact with each other
+
++ Zoom, Q and A
++ Slack?
+
+

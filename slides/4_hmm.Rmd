@@ -1,0 +1,55 @@
+---
+title: "What you see is not what you get: Hidden Markov models and capture-recapture data"
+author: "The team"
+date: "last updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: [default, "slides-theme.css"]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: ''
+      titleSlideClass: [center, middle]
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+
+library(tidyverse)
+theme_set(theme_light())
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+```
+
+
+## Longitudinal data
+
++ Monitor individuals over time
++ Markov models (extend simple survival example from previous section to longitudinal data): main assumptions
++ Example with animal survival
+
+---
+## Imperfect detection
+
++ Observation difficult
++ Imperfect detection
++ Add obs layer
++ Hidden markov models
++ Example with animal survival
+
+---
+## Implementation in Nimble
+
++ Some code
+
+
+---
+## Further reading
+
++ ref 1
++ ref 2
+

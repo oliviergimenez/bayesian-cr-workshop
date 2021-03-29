@@ -1,0 +1,40 @@
+---
+title: "Skip your coffee break: Speed up MCMC convergence"
+author: "The team"
+date: "last updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: [default, "slides-theme.css"]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: ''
+      titleSlideClass: [center, middle]
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+
+library(tidyverse)
+theme_set(theme_light())
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+```
+
+
+## Plan
+
++ Simple pieces of advice (good inits, known states as in Kéry and Schaub, simpler models, simulations, block sampling, etc...)
++ Marginalization (use dHMM)
++ Encounter histories pooling
++ m-array formulation of the likelihood
+
+---
+## Further reading
+
++ ref 1
++ ref 2

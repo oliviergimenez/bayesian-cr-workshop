@@ -1,0 +1,45 @@
+---
+title: "On the move: Transition estimation"
+author: "The team"
+date: "last updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: [default, "slides-theme.css"]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: ''
+      titleSlideClass: [center, middle]
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+
+library(tidyverse)
+theme_set(theme_light())
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+```
+
+## Plan
+
++ Some theory
++ Dispersal w/ Canada geese
++ More than 2 sites/states: multinomial link, Dirichlet
++ Site may be states. Mass example Nichols et al. 1992. Pour aller dans matrix modes.
++ Life-history trade-offs w/ roe deer (Nichols et al. 1994. Ou bien un papier de Manue)
++ Multisite recruitment (Roseate tern et analyses dans Lebreton et al. 2009)
++ Mixture of information (recap and recoveries) (Henaux et al. 2007)? 
++ Competing sources of mortality?
++ Local minima (example from Mark book)
+
+
+---
+## Further reading
+
++ ref 1
++ ref 2

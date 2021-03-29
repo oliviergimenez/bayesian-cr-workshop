@@ -1,0 +1,45 @@
+---
+title: "Free the modeler in you: Introduction to Nimble"
+author: "The team"
+date: "last updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: [default, "slides-theme.css"]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: ''
+      titleSlideClass: [center, middle]
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+
+library(tidyverse)
+theme_set(theme_light())
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+```
+
+
+---
+## Nimble
+
++ Free the modeler is from Marc Kéry
++ What is it
++ Why Nimble and not Jags or Stan?
++ Workflow
++ Example with animal survival
++ Do we need to introduce advanced stuff here?
+
+
+---
+## Further reading
+
++ ref 1
++ ref 2
+
