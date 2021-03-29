@@ -2,7 +2,7 @@ name: "Bayesian capture-recapture inference"
 title: "Bayesian capture-recapture inference"
 output_dir: "docs"
 theme: "theme.css"
-#repository_url: https://github.com/wilkelab/SDS375
+repository_url: https://oliviergimenez.github.io/bayesian-cr-workshop/
 include: [".nojekyll"]
 navbar:
   source_url: true
@@ -30,10 +30,11 @@ navbar:
           href: slides/8_speed.html
         - text: "Class 9: Take-home messages"
           href: slides/9_conclusion.html
-
     - text: "Live demos"
       menu:
         - text: "Demo 1: Simple example"
           href: worksheets/1_demo.html
+    - icon: fab fa-github
+      href: https://github.com/oliviergimenez/bayesian-cr-workshop
 
 output: distill::distill_article
