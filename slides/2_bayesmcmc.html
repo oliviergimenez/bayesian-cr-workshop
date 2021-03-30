@@ -458,13 +458,191 @@ Code here: &lt;https://mbjoseph.github.io/posts/2018-12-25-animating-the-metropo
 
 Visit &lt;https://chi-feng.github.io/mcmc-demo/&gt;
 
+---
+# Assessing convergence
+
+--
+
++ MCMC algorithms can be used to construct a Markov chain with a given stationary distribution (set to be the posterior distribution).
+
+--
+
++ For the MCMC algorithm, the posterior distribution is only needed to be known up to proportionality. 
+
+--
+
++ Once the stationary distribution is reached, we can regard the realisations of the chain as a (dependent) sample from the posterior distribution (and obtain Monte Carlo estimates).
+
+--
+
++ We consider some important implementation issues.
+
+---
+# Mixing and autocorrelation
+
+.center[
+![](img/mixing.png)
+]
+
+???
+
++ The movement around the parameter space is often referred to as **mixing**.
+
++ Traceplots of for small and big moves provide (relatively) high correlations (known as autocorrelations) between successive observations of the Markov chain.
+
++ Strongly correlated observations require large sample sizes and therefore longer simulations.
+
++ Autocorrelation function (ACF) plots are a convenient way of displaying the strength of autocorrelation in the given sample values.
+
++ ACF plots provide the autocorrelation between successively sampled values separated by `\(k\)` iterations, referred to as lag, (i.e. `\(\text{cor}(\theta_t, \theta_{t+k})\)`) for increasing values of `\(k\)`.
+
+---
+# How do good chains behave? 
+
+--
+
++ Converge to same target distribution: We need to think of the time required for convergence (realisations of the Markov chain have to be discarded before this is achieved).
+
+--
+
++ Once there, explore efficiently: The post-convergence sample size required for suitable numerical summaries.
+
+--
+
++ Therefore, we are looking to determine how long it takes for the Markov chain to converge to the stationary distribution.
+
+--
+
++ In practice, we must discard observations from the start of the chain and just use observations from the chain once it has converged.
+
+--
+
++ The initial observations that we discard are referred to as the **burn-in**.
+
+--
+
++ The simplest method to determine the length of the burn-in period is to look at trace plots.
+
+---
+## Burn-in (if simulations cheap, be conservative)
+
+.center[
+![](img/burnin.png)
+]
+
+---
+# Effective sample size `n.eff`
+
+--
+
+* How long of a chain is needed to produce stable estimates ?
+
+--
+
+* Most MCMC chains are strongly autocorrelated.
+
+--
+
+* Successive steps are near each other, and are not independent. 
+
+--
+
+* The effective sample size (`n.eff`) measures chain length while taking into account the autocorrelation of the chain.
+    * `n.eff` is less than the number of MCMC iterations.
+    * Check the `n.eff` of every parameter of interest.
+    * Check the `n.eff` of any interesting parameter combinations.
+
+--
+
+* We need `\(\text{n.eff} \geq 100\)` independent steps. 
+
+---
+# Potential scale reduction factor
+
+--
+
++ Gelman-Rubin statistic `\(\hat{R}\)`
+
+--
+
++ Measures the ratio of the total variability combining multiple chains (between-chain plus within-chain) to the within-chain variability. Asks the question is there a chain effect? Very much alike the `\(F\)` test in an ANOVA. 
+
+--
+
++ Values near `\(1\)` indicates likely convergence, a value of `\(\leq 1.1\)` is considered acceptable.
+
+--
+
++ Necessary condition, not sufficient; In other words, these diagnostics cannot tell you that you have converged for sure, only that you have not. 
+
+---
+# To sum up
+
+--
+
++ Run multiple chains from arbitrary starting places (initial values).
+
+--
+
++ Assume convergence when all chains reach same regime
+
+--
+
++ Discard initial burn-in phase.
+
+--
+
++ Proceed with posterior inference. 
+
+--
+
++ Use traceplot, effective sample size and `\(\hat{R}\)`.
+
+---
+# What if you have issues of convergence?
+
+--
+
++ Increase burn-in, sample more.
+
+--
+
++	Use more informative priors.
+
+--
+
++ Pick better initial values (good guess).
+
+--
+
++ Reparameterize: 
+     + Standardize covariates.
+     + Non-centering: `\(\alpha \sim N(0,\sigma)\)` becomes `\(\alpha = z \sigma\)` with `\(z \sim N(0,1)\)`.
+
+--
+
++	Something wrong with your model? 
+     + Start with a simpler model (remove complexities). 
+     + Use simulations. 
+
+--
+
++ Change your sampler. More in the Nimble section. 
 
 
 ---
-## Further reading
+# Further reading
 
 + ref 1
 + ref 2
++ ref 3
+
+---
+# To-do list
+
++ Smooth everything
++ Time the whole class to make sure we're below 1 hour
++ Add something on Monte Carlo estimates, on Markov chains?
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
