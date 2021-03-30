@@ -101,7 +101,7 @@ background-size: cover
 ### Day 1
 + Crash course on Bayesian statistics and MCMC algorithms
 + Free the modeler in you: Introduction to Nimble
-+ What you see is not what you get: Hidden Markov models and capture-recapture data
++ What you see is not what you get: Hidden Markov models and capture-recapture
 + Dead or alive: Survival estimation
 ### Day 2
 + On the move: Transition estimation
