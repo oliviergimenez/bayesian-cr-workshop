@@ -56,10 +56,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * Install `Nimble` following [these guidelines](https://r-nimble.org/download).
 
-* Install the following `R` packages: `tidyverse`, `here`. You can install them all at once by running the following code in the `R` command line:
+* Install the following `R` packages: `tidyverse`, `MCMCvis`, `here`. You can install them all at once by running the following code in the `R` command line:
 
 ```{r eval = FALSE, echo = TRUE}
-install.packages(c("tidyverse", "here"))
+install.packages(c("tidyverse", "MCMCvis", "here"))
 ```
 
 
