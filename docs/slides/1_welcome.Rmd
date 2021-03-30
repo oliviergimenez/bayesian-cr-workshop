@@ -77,8 +77,13 @@ background-size: cover
 ---
 ## What this workshop is about
 
+--
 + Estimating demographic parameters 
+
+--
 + Using a class of models called hidden Markov models
+
+--
 + Within the Bayesian framework
 
 ---
@@ -98,11 +103,16 @@ background-size: cover
 ---
 ## On our plate
 
+--
+
 ### Day 1
 + Crash course on Bayesian statistics and MCMC algorithms
 + Free the modeler in you: Introduction to Nimble
 + What you see is not what you get: Hidden Markov models and capture-recapture
 + Dead or alive: Survival estimation
+
+--
+
 ### Day 2
 + On the move: Transition estimation
 + Known knowns, unknown knowns and unknowns: Uncertainty in state assignment
@@ -112,16 +122,32 @@ background-size: cover
 ---
 ## Philosophy of teaching
 
-+ We've packed lots of things to understand in two days
-+ We do not expect you to digest everything in 2 days
+--
++ We've packed a lot of things in two days
+
+--
++ We do not expect you to digest everything
+
+--
 + All material on website <https://oliviergimenez.github.io/bayesian-cr-workshop/>
+
+???
+
+Let's take a minute to have a look to the website
+
+
+--
 + Feel free to play around with material while we walk through it, and afterwards
+
+--
++ The workshop is organized in modules
+
+--
++ Each module is a combination of lectures and live demos
 
 ---
 ## The way we will interact with each other
 
-+ The workshop is organized in modules, each of which will be a combination of lecture/live demo
-+ Everything happens on Zoom
-+ Questions and answers via Zoom (or Slack?)
-
-
++ Everything happens on Zoom, same link for both days
++ Everything is video recorded
++ Questions and answers via Zoom on the chat

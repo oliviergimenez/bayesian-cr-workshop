@@ -1,5 +1,5 @@
 ---
-title: "Free the modeler in you: Introduction to Nimble"
+title: "Free the modeler in you: Intro to Nimble"
 author: "The team"
 date: "last updated: `r Sys.Date()`"
 output:
@@ -242,12 +242,16 @@ MCMCtrace(mcmc.output,
 ---
 ## More
 
-+ Add stuff here, and say that we'll see more advanced use as the workshop goes.
-+ Explain workflow
-+ Distinguish data and constants, remontrer exemple survival
-+ Distribution
-+ Vectoriser pour aller plus vite
-+ Etc
++ Explain workflow.
++ Distinguish data and constants, redo survival example w/ $n$ constant and $y$ data.
++ Distribution dnorm, dunif, etc.
++ Vectorise to speed up.
++ Say that we'll see more advanced use as the workshop goes, on the fly.
+
+---
+
+![](img/nimble_workflow.png)
+
 
 ---
 ## Useful resources
@@ -274,9 +278,4 @@ de Valpine, Perry, Daniel Turek, Christopher J. Paciorek, Clifford Anderson-Berg
 
 + Do we need to say anything about why Nimble and not Jags or Stan?
 
-+ Do we need to introduce advanced stuff here? Or later on progressively? 
-
----
-
-![](img/nimble_workflow.png)
-
++ NIMBLE, Nimble or nimble - homogeneise.

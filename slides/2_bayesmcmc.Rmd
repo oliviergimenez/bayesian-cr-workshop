@@ -88,7 +88,7 @@ $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{h
 
 --
 
-+ Due to practical problems of implementing the Bayesian approach, and some wars of male statisticians's egos, little advance was made for over two centuries.
++ Due to practical problems of implementing the Bayesian approach, and futile wars between (male) statisticians, little progress was made for over two centuries.
 
 --
 
@@ -177,7 +177,7 @@ $${\color{red}{\Pr(\theta \mid \text{data})}} = \frac{\color{blue}{\Pr(\text{dat
 
 
 ---
-# Brute force approach via numerical integration
+# Brute force via numerical integration
 
 --
 
@@ -282,7 +282,7 @@ ggplot() +
 ]
 
 ---
-# What if multiple parameters, like in a simple linear regression?
+# What if multiple parameters?
 
 + Example of a linear regression with parameters $\alpha$, $\beta$ and $\sigma$ to be estimated. 
 
@@ -449,6 +449,7 @@ tail(theta.post)
 ```
 
 ---
+## A chain
 
 .center.nogap[
 ```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
@@ -462,6 +463,7 @@ df %>%
 ]
 
 ---
+## Another chain
 
 .center.nogap[
 ```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
@@ -487,7 +489,7 @@ for (t in 2:steps){ # repeat steps 2-4 (step 5)
 
 df2 <- data.frame(x = 1:steps, y = theta.post2)
   ggplot() +
-  geom_line(data = df, aes(x = x, y = y), size = 1.5) + 
+  geom_line(data = df, aes(x = x, y = y), size = 1.5, color = "darkgreen") + 
   geom_line(data = df2, aes(x = x, y = y), size = 1.5, color = "darkblue") + 
   labs(x = "iterations", y = "values from posterior distribution") + 
   ylim(0.1, 0.6)
@@ -496,6 +498,7 @@ df2 <- data.frame(x = 1:steps, y = theta.post2)
 
 
 ---
+## With 5000 steps 
 
 .center.nogap[
 ```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
@@ -536,14 +539,10 @@ df %>%
   geom_hline(aes(yintercept = 19/57), 
              color = "darkred",
              size = 1.2)
-  
-
-#abline(h = mean(theta.post), col = "blue", lwd = 2)
-#text(3700, 0.57, "posterior mean", col = "blue", adj = c(-.1, -.1))
-#abline(h = 19/57, col = "red", lwd = 2)
-#text(3700, 0.55, "max lik estimate", col = "red", adj = c(-.1, -.1))
 ```
 ]
+
+In blue: posterior mean; in red: maximum likelihood estimate.
 
 ---
 # Animating MCMC - 1D example
@@ -595,7 +594,9 @@ Visit <https://chi-feng.github.io/mcmc-demo/>
 # Mixing and autocorrelation
 
 .center[
-![](img/mixing.png)
+```{r, fig.align = 'center', echo = FALSE, out.width = "450cm"}
+knitr::include_graphics(here::here("slides/img","mixing.png"))
+```
 ]
 
 ???
@@ -615,7 +616,7 @@ Visit <https://chi-feng.github.io/mcmc-demo/>
 
 --
 
-+ Converge to same target distribution: We need to think of the time required for convergence (realisations of the Markov chain have to be discarded before this is achieved).
++ Converge to same target distribution; discard some realisations of Markov chain before convergence is achieved.
 
 --
 
@@ -635,14 +636,16 @@ Visit <https://chi-feng.github.io/mcmc-demo/>
 
 --
 
-+ The simplest method to determine the length of the burn-in period is to look at trace plots.
++ Simplest method to determine length of burn-in period is to look at trace plots.
 
 ---
-## Burn-in (if simulations cheap, be conservative)
+## Burn-in
 
 .center[
 ![](img/burnin.png)
 ]
+
+If simulations cheap, be conservative.
 
 ---
 # Effective sample size `n.eff`
@@ -741,7 +744,7 @@ Visit <https://chi-feng.github.io/mcmc-demo/>
 
 --
 
-+ Change your sampler. More in the Nimble section. 
++ Change your sampler. More later on. 
 
 
 ---
