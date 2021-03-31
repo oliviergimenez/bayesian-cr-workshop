@@ -204,7 +204,9 @@ a <- 1; b <- 1; p <- seq(0,1,.002); prior <- dbeta(p,a,b)
 dfprior <- data.frame(p = p, prior = prior) 
 dfprior %>%
   ggplot() + 
-  geom_line(aes(x = p, y = prior), size = 1.5)
+  geom_line(aes(x = p, y = prior), 
+            size = 1.5,
+            color = wesanderson::wes_palettes$Royal1[1])
 #plot(p, dbeta(p,a,b), type='l', lwd=3)
 ```
 ]
@@ -232,10 +234,11 @@ numerical_posterior %>%
   ggplot() + 
   geom_line(aes(x = p, y = posterior), 
             size = 1.5, 
-            col = "darkgreen", 
+            col = wesanderson::wes_palettes$Royal1[2], 
             alpha = 0.5)
 ```
 ]
+
 
 ---
 # Superimpose explicit posterior
@@ -248,12 +251,12 @@ ggplot() +
   geom_line(data = numerical_posterior, 
             aes(x = p, y = posterior), 
             size = 1.5, 
-            col = "darkgreen",
+            col = wesanderson::wes_palettes$Royal1[2],
             alpha = 0.5) + 
   geom_line(data = dfexpposterior, 
             aes(x = p, y = explicit_posterior),
             size = 1.5, 
-            col = "darkred", 
+            col = wesanderson::wes_palettes$Royal1[3], 
             linetype = "dashed")
 ```
 ]
@@ -267,16 +270,16 @@ ggplot() +
   geom_line(data = numerical_posterior, 
             aes(x = p, y = posterior), 
             size = 1.5, 
-            col = "darkgreen", 
+            col = wesanderson::wes_palettes$Royal1[2], 
             alpha = 0.5) + 
   geom_line(data = dfexpposterior, 
             aes(x = p, y = explicit_posterior),
-            col = "darkred", 
+            col = wesanderson::wes_palettes$Royal1[3], 
             size = 1.5, 
             linetype = "dashed") + 
   geom_line(data = dfprior,
             aes(x = p, y = prior),
-            col = "darkblue",
+            col = wesanderson::wes_palettes$Royal1[1],
             size = 1.5)
 ```
 ]
@@ -456,7 +459,7 @@ tail(theta.post)
 df <- data.frame(x = 1:steps, y = theta.post)
 df %>%
   ggplot() +
-  geom_line(aes(x = x, y = y), size = 1.5, color = "darkgreen") + 
+  geom_line(aes(x = x, y = y), size = 1.5, color = wesanderson::wes_palettes$Zissou1[1]) + 
   labs(x = "iterations", y = "values from posterior distribution") + 
   ylim(0.1, 0.6)
 ```
@@ -489,8 +492,8 @@ for (t in 2:steps){ # repeat steps 2-4 (step 5)
 
 df2 <- data.frame(x = 1:steps, y = theta.post2)
   ggplot() +
-  geom_line(data = df, aes(x = x, y = y), size = 1.5, color = "darkgreen") + 
-  geom_line(data = df2, aes(x = x, y = y), size = 1.5, color = "darkblue") + 
+  geom_line(data = df, aes(x = x, y = y), size = 1.5, color = wesanderson::wes_palettes$Zissou1[1]) + 
+  geom_line(data = df2, aes(x = x, y = y), size = 1.5, color = wesanderson::wes_palettes$Zissou1[3]) + 
   labs(x = "iterations", y = "values from posterior distribution") + 
   ylim(0.1, 0.6)
 ```
@@ -530,19 +533,19 @@ for (t in 2:steps){ # repeat steps 2-4 (step 5)
 df <- data.frame(x = 1:steps, y = theta.post)
 df %>%
   ggplot() +
-  geom_line(aes(x = x, y = y), size = 1, color = "darkgreen") + 
+  geom_line(aes(x = x, y = y), size = 1, color = wesanderson::wes_palettes$Zissou1[1]) + 
   labs(x = "iterations", y = "values from posterior distribution") + 
   ylim(0.1, 0.6) + 
   geom_hline(aes(yintercept = mean(theta.post)), 
-             color = "darkblue",
+             color = wesanderson::wes_palettes$Zissou1[3],
              size = 1.2) + 
   geom_hline(aes(yintercept = 19/57), 
-             color = "darkred",
+             color = wesanderson::wes_palettes$Zissou1[5],
              size = 1.2)
 ```
 ]
 
-In blue: posterior mean; in red: maximum likelihood estimate.
+In yellow: posterior mean; in red: maximum likelihood estimate.
 
 ---
 # Animating MCMC - 1D example
