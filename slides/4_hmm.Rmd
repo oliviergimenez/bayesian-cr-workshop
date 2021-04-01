@@ -12,6 +12,9 @@ output:
       highlightLines: true
       slideNumberFormat: ''
       titleSlideClass: [center, middle]
+header-includes: 
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
@@ -25,12 +28,140 @@ library(here)
 library(nimble)
 ```
 
+# Back to our survival example
 
-## Longitudinal data
+--
 
-+ Monitor individuals over time
-+ Markov models (extend simple survival example from previous section to longitudinal data): main assumptions
-+ Example with animal survival
++ We have $z$ survivors out of $n$ released animals with winter survival probability $\phi$
+
+--
+
++ Our model so far:
+
+\begin{align*}
+   z &\sim \text{Binomial}(n, \phi) &\text{[likelihood]}
+   \\
+  \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
+\end{align*}
+
+--
+
++ This is also:
+
+\begin{align*}
+   z_i &\sim \text{Bernoulli}(\phi), \; i = 1, \ldots, n &\text{[likelihood]}
+   \\
+  \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
+\end{align*}
+
+--
+
++ Now what if we had several winters? Say five winters.
+
+---
+# Longitudinal data
+
++ $z_{i,t} = 1$ if individual $i$ alive at winter $t$, and $z_{i,t} = 2$ if dead.
+
+
+.center.nogap[
+```{r echo = FALSE}
+nind <- 57
+nocc <- 5
+first <- rep(1, nind) # single cohort
+z <- matrix(NA, nrow = nind, ncol = nocc)
+phi <- 0.8
+for (i in 1:nind){
+  z[i,first[i]] <- 1
+  for (t in (first[i]+1):nocc){
+    z[i,t] <- rbinom(1, 1, phi * z[i,t-1]) # once you're dead z = 0, you remain dead
+  }
+}
+z[z==0] <- 2 # 2 = dead, 1 = alive
+colnames(z) <- paste0("winter ", 1:nocc)
+z %>% 
+  as_tibble() %>% 
+  add_column(id = 1:nind, .before = "winter 1") %>%
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "400px")
+#  kableExtra::kable_styling(font_size = 8, 
+#                            latex_options = "scale_down")
+```
+]
+
+???
+
++ Once you're dead, you remain dead.
+
+---
+# A model for longitudinal survival data
+
+--
+
++ A model relies on assumptions.
+
+--
+
++ The state of an animal at a given winter, alive or dead, is only dependent of its state the winter before. 
+
+--
+
++ If an animal is alive in a given winter, the probability it survives to the next winter is $\phi$. 
+
+--
+
++ The probability it dies is $1 - \phi$.
+
+--
+
++ If an animal is dead a winter, it remains dead, unless you believe in zombies. 
+
+--
+
++ This defines a Markov process.
+
+---
+# Markov process figure w/ tikz
+
+---
+# Transition matrix
+
++ The core of the Markov process is made of the transition probabilities.
+
++ For example, the probability of transitioning from state alive at $t-1$ to state alive at $t$ is $\Pr(z_t = 1 | z_{t-1} = 1) = \gamma_{1,1}$. It is the survival probability. 
+
++ The probability of dying over the interval $(t-1, t)$ is $\Pr(z_t = 2 | z_{t-1} = 1) = \gamma_{1,2}$.
+
++ Now if an animal is dead at $t-1$, then $\Pr(z_t = 1 | z_{t-1} = 2) = 0$ and $\Pr(z_t = 2 | z_{t-1} = 2) = 1$.
+
++ These probabilities can be packed in a transition matrix $\Gamma$:
+
+\begin{align*}
+\Gamma = 
+\left(\begin{array}{cc} 
+\gamma_{1,1} & \gamma_{1,2}\\ 
+\gamma_{2,1} & \gamma_{2,2}
+\end{array}\right) =
+\left(\begin{array}{cc} 
+\phi & 1 - \phi\\ 
+0 & 1
+\end{array}\right)
+\end{align*}
+
+
+---
+# Markov process figure w/ tikz
+
+Same figure w/ notation for $\gamma$ and $\phi$.
+
+---
+# Some Nimble code
+
+---
+
+<br><br>
+
+This is the data we wish we had.
 
 ---
 ## Imperfect detection
@@ -46,10 +177,25 @@ library(nimble)
 
 + Some code
 
+---
+## A bit of history
+
++ probabilities à la main.
+
++ state-space which is HMM. 
+
+---
+# To-do list
+
++ Add decision trees, comme dans le workshop multievent
 
 ---
 ## Further reading
 
-+ ref 1
-+ ref 2
++ Zucchini et al. (2008, 2016) Hidden Markov Models for Time Series: An Introduction Using R
 
++ McClintock et al. (2020) Uncovering ecological state dynamics with hidden Markov models
+
++ Pradel 2005. 
+
++ Gimenez 2012. 

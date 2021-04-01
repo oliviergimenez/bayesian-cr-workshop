@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # Crash course on Bayesian statistics and MCMC algorithms
 ### The team
-### last updated: 2021-03-31
+### last updated: 2021-04-01
 
 ---
 
@@ -172,13 +172,12 @@ $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{h
 
 + Difficult if not impossible to calculate. This is one of the reasons why we need simulation (MCMC) methods.
 
-
 ---
 # Brute force via numerical integration
 
 --
 
-+ Say we release `\(n\)` animals at the beginning of the winter, out of which `\(y\)` survive, and we'd like to estimate winter survival. 
++ Say we release `\(n\)` animals at the beginning of the winter, out of which `\(y\)` survive, and we'd like to estimate winter survival `\(\theta\)`. 
 
 ```r
 y &lt;- 19 # nb of success
@@ -187,11 +186,13 @@ n &lt;- 57 # nb of attempts
 
 --
 
-+ Likelihood `\(\text{Binomial}(57, \theta)\)`
++ Our model:
 
---
-
-+ Prior `\(\text{Beta}(a = 1, b = 1)\)`
+`\begin{align*}
+   y &amp;\sim \text{Binomial}(n, \theta) &amp;\text{[likelihood]}
+   \\
+  \theta &amp;\sim \text{Beta}(1, 1) &amp;\text{[prior for }\theta \text{]} \\ 
+\end{align*}`
 
 ---
 # Beta prior

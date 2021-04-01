@@ -175,13 +175,12 @@ $${\color{red}{\Pr(\theta \mid \text{data})}} = \frac{\color{blue}{\Pr(\text{dat
 
 + Difficult if not impossible to calculate. This is one of the reasons why we need simulation (MCMC) methods.
 
-
 ---
 # Brute force via numerical integration
 
 --
 
-+ Say we release $n$ animals at the beginning of the winter, out of which $y$ survive, and we'd like to estimate winter survival. 
++ Say we release $n$ animals at the beginning of the winter, out of which $y$ survive, and we'd like to estimate winter survival $\theta$. 
 ```{r}
 y <- 19 # nb of success
 n <- 57 # nb of attempts
@@ -189,11 +188,13 @@ n <- 57 # nb of attempts
 
 --
 
-+ Likelihood $\text{Binomial}(57, \theta)$
++ Our model:
 
---
-
-+ Prior $\text{Beta}(a = 1, b = 1)$
+\begin{align*}
+   y &\sim \text{Binomial}(n, \theta) &\text{[likelihood]}
+   \\
+  \theta &\sim \text{Beta}(1, 1) &\text{[prior for }\theta \text{]} \\ 
+\end{align*}
 
 ---
 # Beta prior
