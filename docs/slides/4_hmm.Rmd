@@ -345,11 +345,40 @@ z %>%
 \begin{align*}
 \Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
                 &= \Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\
-                &= \mathbf{\delta} \mathbf{\Gamma} \ldots \mathbf{\Gamma}
+                &= \mathbf{\delta} \; \mathbf{\Gamma} \cdots \mathbf{\Gamma}
 \end{align*}
 
+---
+# Example
 
-Survival example:
++ Let assume an animal is alive, alive then dies. 
+
+--
+
++ We have $\mathbf{z} = (1, 1, 2)$. What is the contribution of this animal to the likelihood?
+
+--
+
+\begin{align*}
+\Pr(\mathbf{z} = (1, 1, 2)) &= \Pr(z_1 = 1) \; \gamma_{z_{1} = 1, z_{2} = 1} \; \gamma_{z_{3} = 2, z_{2} = 1}\\
+                            &= 1 \; \phi \; (1 - \phi).
+\end{align*}
+
+--
+
++ Remember: 
+
+\begin{align*}
+\mathbf{\Gamma} = 
+\left(\begin{array}{cc} 
+\gamma_{1,1} & \gamma_{1,2}\\ 
+\gamma_{2,1} & \gamma_{2,2}
+\end{array}\right) =
+\left(\begin{array}{cc} 
+\phi & 1 - \phi\\ 
+0 & 1
+\end{array}\right)
+\end{align*}
 
 
 ---
@@ -363,7 +392,9 @@ Survival example:
 
 --
 
-+ In Nimble, we will use the categorical distribution `dcat()` a multinomial distribution with a single draw. 
++ In Nimble, we will use the categorical distribution `dcat()`.
+
++ The categorical distribution is a multinomial distribution with a single draw. 
 
 ???
 
@@ -380,13 +411,13 @@ library(nimble)
 ```{r}
 markov.survival <- nimbleCode({
   phi ~ dunif(0, 1) # prior
-  # likelihood
   gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
   gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
   gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
   gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
   delta[1] <- 1          # Pr(alive t = 1) = 1
   delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
   for (i in 1:N){
     z[i,1] ~ dcat(delta[1:2])
     for (j in 2:T){
@@ -581,7 +612,40 @@ y %>%
 + This table $y$ is what we observe in real life.
 
 ---
+# Observation matrix
+
+--
+
++ The observation process probabilities can be packed in a transition matrix $\mathbf{\Omega}$.
+
+--
+
++ In rows: the states alive $z = 1$ and dead $z = 2$.  
+
+--
+
++ In columns: the observations non-detected $y = 1$ and detected $y = 2$. 
+
+\begin{align*}
+\mathbf{\Omega} = 
+\left(\begin{array}{cc} 
+\omega_{1,1} & \omega_{1,2}\\ 
+\omega_{2,1} & \omega_{2,2}
+\end{array}\right) =
+\left(\begin{array}{cc} 
+1 - p & p\\ 
+0 & 1
+\end{array}\right)
+\end{align*}
+
+
+---
 # Markov model
+
+<br>
+<br>
+<br>
+<br>
 
 .center.nogap[
 ```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
@@ -604,6 +668,8 @@ y %>%
 \end{tikzpicture}
 ```
 ]
+
++ States $z$ are in gray.
 
 ---
 # Hidden Markov model
@@ -639,6 +705,10 @@ y %>%
 \end{tikzpicture}
 ```
 ]
+
++ States $z$ are in gray.
+
++ Observations $y$ are in white.
 
 
 ---
@@ -676,34 +746,86 @@ y %>%
 ```
 ]
 
-+ For states (in gray), $z = 1$ is alive, $z = 2$ is alive.
++ For states (in gray), $z = 1$ is alive, $z = 2$ is dead.
 
 + For observations (in white), $y = 1$ is non-detected, $y = 2$ is detected
 
 
 ---
-# Observation process
+# HMM likelihood 
 
-+ Comment dénoter la matrice des obs? On a $\omega$ et $\delta$ poru les états. Les transitions. 
++ Using the formula of total probability, then the likelihood of a Markov chain: 
 
-+ Matrice des observations. Ce sont les émissions. Utiliser T et E instead? 
+\begin{align*}
+\Pr(\mathbf{y}) &= \Pr(y_1, y_{2}, \ldots, y_T)\\
+                &= \sum_{z_1} \cdots \sum_{z_T} \Pr(y_1, y_{2}, \ldots, y_T | z_1, z_{2}, \ldots, z_T) \Pr(z_1, z_{2}, \ldots, z_T)\\
+                &= \sum_{z_1} \cdots \sum_{z_T} \left(\prod_{t=1}^T{\omega_{z_{t}, y_t}}\right) \left(\Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\right)\\
+\end{align*}
+
+--
+
++ It has a matrix formulation:
+\begin{align*}
+\Pr(\mathbf{y}) &= \mathbf{\delta} \; \mathbf{\Omega} \; \mathbf{\Gamma} \cdots \mathbf{\Omega} \; \mathbf{\Gamma} \; \mathbf{\Omega} \; \mathbb{1}
+\end{align*}
 
 
 ---
-# HMM likelihood 
+# Example 
+
++ Let assume an animal is detected, missed then detected again. 
+
+--
+
++ We have $\mathbf{y} = (2, 1)$. What is the contribution of this animal to the likelihood?
+
+--
 
 \begin{align*}
-\Pr(\mathbf{y}) &= \Pr(y_T, y_{T-1}, y_{T-2}, \ldots, y_1)\\
-                &= \Pr(y_T, y_{T-1}, y_{T-2}, \ldots, y_1 | z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1)\\
-                &= \Pr(z_{1}) \prod_{t=1}^T{\omega_{z_{t}}} \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\
-                &= \mathbf{\delta} \mathbf{\Omega} \mathbf{\Gamma} \cdots \mathbf{\Omega} \mathbf{\Gamma} \mathbf{\Omega} \mathbb{1}
+\Pr(\mathbf{y} = (2, 1)) &= \sum_{z_1 = 1}^2 \; \sum_{z_2 = 1}^2 w_{z_1, y_1 = 2} w_{z_2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2} \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1, z_1, z_1, z_1)}\\
+\end{align*}
+
+
+---
+# Example 
+
++ Let assume an animal is detected, missed then detected again. 
+
++ We have $\mathbf{y} = (2, 1)$. What is the contribution of this animal to the likelihood?
+
+\begin{align*}
+\Pr(\mathbf{y} = (2, 1)) &= \sum_{z_1 = 1}^2 \; \sum_{z_2 = 1}^2 w_{z_1, y_1 = 2} w_{z_2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2} \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1, z_1, z_1, z_1)}\\
+&= \sum_{z_1 = 1}^2 \left( w_{z_1, y_1 = 2} w_{z_2 = 1, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 1} + w_{z_1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 2} \right) \\
 \end{align*}
 
 ---
 # Example 
 
-+ With alive and dead, and a particular encounter history.
++ Let assume an animal is detected, missed then detected again. 
 
++ We have $\mathbf{y} = (2, 1)$. What is the contribution of this animal to the likelihood?
+
+\begin{align*}
+\Pr(\mathbf{y} = (2, 1)) &= \sum_{z_1 = 1}^2 \; \sum_{z_2 = 1}^2 w_{z_1, y_1 = 2} w_{z_2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2} \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1, z_1, z_1, z_1)}\\
+&= \sum_{z_1 = 1}^2 \left( w_{z_1, y_1 = 2} w_{z_2 = 1, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 1} + w_{z_1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 2} \right) \\
+&= w_{z_1 = 1, y_1 = 2} w_{z_2 = 1, y_1 = 1}\delta_1 \gamma_{z_1 = 1, z_2 = 1} + w_{z_1 = 1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \delta_1 \gamma_{z_1 = 1, z_2 = 2}
+\end{align*}
+
+---
+# Example 
+
++ Let assume an animal is detected, missed then detected again. 
+
++ We have $\mathbf{y} = (2, 1)$. What is the contribution of this animal to the likelihood?
+
+\begin{align*}
+\Pr(\mathbf{y} = (2, 1)) &= \sum_{z_1 = 1}^2 \; \sum_{z_2 = 1}^2 w_{z_1, y_1 = 2} w_{z_2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2} \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1, z_1, z_1, z_1)}\\
+&= \sum_{z_1 = 1}^2 \left( w_{z_1, y_1 = 2} w_{z_2 = 1, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 1} + w_{z_1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 2} \right) \\
+&= w_{z_1 = 1, y_1 = 2} w_{z_2 = 1, y_2 = 1} \delta_1 \gamma_{z_1 = 1, z_2 = 1} + w_{z_1 = 1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \delta_1 \gamma_{z_1 = 1, z_2 = 2}\\
+&= (1 - p) \phi
+\end{align*}
+
+Note: $w_{z1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition on first capture. 
 
 ---
 # Our model
@@ -719,23 +841,9 @@ y %>%
 
 ---
 
-```{r eval = FALSE}
-markov.survival <- nimbleCode({
-  phi ~ dunif(0, 1) # prior
-  # likelihood
-  gamma[1,1] <- phi
-  gamma[1,2] <- 1 - phi
-  gamma[2,1] <- 0
-  gamma[2,2] <- 1
-  delta[1] <- 1
-  delta[2] <- 0
-  for (i in 1:N){
-    z[i,1] ~ dcat(delta[1:2])
-    for (j in 2:T){
-      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
-    }
-  }})
-```
+<br><br>
+
+<font size="8">Nimble implementation</font>
 
 
 ---
@@ -746,16 +854,16 @@ hmm.survival <- nimbleCode({
   phi ~ dunif(0, 1) # prior survival
   p ~ dunif(0, 1) # prior detection
   # likelihood
-  gamma[1,1] <- phi
-  gamma[1,2] <- 1 - phi
-  gamma[2,1] <- 0
-  gamma[2,2] <- 1
-  delta[1] <- 1
-  delta[2] <- 0
-  omega[1,1] <- 1 - p
-  omega[1,2] <- p
-  omega[2,1] <- 1
-  omega[2,2] <- 0
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
   for (i in 1:N){
     z[i,first[i]] ~ dcat(delta[1:2])
     for (j in (first[i]+1):T){
@@ -779,16 +887,16 @@ hmm.survival <- nimbleCode({
 ```{r eval=FALSE}
 ...
   # parameters
-  gamma[1,1] <- phi
-  gamma[1,2] <- 1 - phi
-  gamma[2,1] <- 0
-  gamma[2,2] <- 1
-  delta[1] <- 1
-  delta[2] <- 0
-  omega[1,1] <- 1 - p
-  omega[1,2] <- p
-  omega[2,1] <- 1
-  omega[2,2] <- 0
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
 ...
 ```
 
@@ -819,6 +927,20 @@ my.constants
 
 ---
 ## Data
+
+--
+
++ The data are made of 0s for non-detections and 1s for detections.
+
+--
+
++ We cannot use a null index in Nimble.
+
+--
+
++ Add 1 to get the correct format $y=1$ for non-detection and $y = 2$ for detection.
+
+--
 
 ```{r}
 my.data <- list(y = y + 1)
