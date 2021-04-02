@@ -15,17 +15,18 @@ output:
 header-includes: 
   - \usepackage{tikz}
   - \usepackage{pgfplots}
+  - \usepackage{blkarray}
 ---
 
-```{r setup, include=FALSE, echo=FALSE}
+```{r setup, include=FALSE, echo=FALSE, cache = TRUE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(comment = "")
-
 library(tidyverse)
 theme_set(theme_light())
 update_geom_defaults("point", list(size = 2)) 
 library(here)
 library(nimble)
+library(MCMCvis)
 ```
 
 # Back to our survival example
@@ -49,14 +50,14 @@ library(nimble)
 + This is also:
 
 \begin{align*}
-   z_i &\sim \text{Bernoulli}(\phi), \; i = 1, \ldots, n &\text{[likelihood]}
+   z_i &\sim \text{Bernoulli}(\phi), \; i = 1, \ldots, N &\text{[likelihood]}
    \\
   \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
 \end{align*}
 
 --
 
-+ Now what if we had several winters? Say five winters.
++ What if we had several winters? Say $T = 5$ winters.
 
 ---
 # Longitudinal data
@@ -65,7 +66,8 @@ library(nimble)
 
 
 .center.nogap[
-```{r echo = FALSE}
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
 nind <- 57
 nocc <- 5
 first <- rep(1, nind) # single cohort
@@ -121,23 +123,87 @@ z %>%
 + This defines a Markov process.
 
 ---
-# Markov process figure w/ tikz
+# Markov process
+
+<br>
+<br>
+
+.center.nogap[
+```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+\usetikzlibrary{arrows, fit, positioning, automata}
+\begin{tikzpicture}[node distance = 2cm]
+\tikzset{state/.style = {circle, draw, minimum size = 30pt, scale = 3, line width=1pt}}
+\node [state,fill=lightgray!75] (6) [] {$z_{t}$};
+\node [state,fill=lightgray!75] (5) [left = 20mm of 6] {$z_{t-1}$};
+\node [state,fill=lightgray!75] (4) [left = 20mm of 5] {$z_{t-2}$};
+\node [state,fill=lightgray!75] (3) [left = 20mm of 4] {$\cdots$};
+\node [state,fill=lightgray!75] (7) [right = 20mm of 6] {$z_{t+1}$};
+\node [state,fill=lightgray!75] (8) [right = 20mm of 7] {$z_{t+2}$};
+\node [state,fill=lightgray!75] (9) [right = 20mm of 8] {$\cdots$};
+\draw[->,black, line width=0.25mm,-latex] (3) to (4);
+\draw[->,black, line width=0.25mm,-latex] (4) to (5);
+\draw[->,black, line width=0.25mm,-latex] (5) to (6);
+\draw[->,black, line width=0.25mm,-latex] (6) to (7);
+\draw[->,black, line width=0.25mm,-latex] (7) to (8);
+\draw[->,black, line width=0.25mm,-latex] (8) to (9);
+\end{tikzpicture}
+```
+]
+
+---
+# Markov process
+
+<br>
+<br>
+
+.center.nogap[
+```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+\usetikzlibrary{arrows, fit, positioning, automata}
+\begin{tikzpicture}[node distance = 2cm]
+\tikzset{state/.style = {circle, draw, minimum size = 30pt, scale = 3, line width=1pt}}
+\node [state,fill=lightgray!75] (6) [] {$1$};
+\node [state,fill=lightgray!75] (5) [left = 20mm of 6] {$1$};
+\node [state,fill=lightgray!75] (4) [left = 20mm of 5] {$1$};
+\node [state,fill=lightgray!75] (3) [left = 20mm of 4] {$1$};
+\node [state,fill=lightgray!75] (7) [right = 20mm of 6] {$2$};
+\node [state,fill=lightgray!75] (8) [right = 20mm of 7] {$2$};
+\node [state,fill=lightgray!75] (9) [right = 20mm of 8] {$\cdots$};
+\draw[->,black, line width=0.25mm,-latex] (3) -- node[above=3mm, align=center] {\huge $\varphi$} (4);
+\draw[->,black, line width=0.25mm,-latex] (4) -- node[above=3mm, align=center] {\huge $\varphi$} (5);
+\draw[->,black, line width=0.25mm,-latex] (5) -- node[above=3mm, align=center] {\huge $\varphi$} (6);
+\draw[->,black, line width=0.25mm,-latex] (6) -- node[above=3mm, align=center] {\huge $1 - \varphi$} (7);
+\draw[->,black, line width=0.25mm,-latex] (7) -- node[above=3mm, align=center] {\huge 1} (8);
+\draw[->,black, line width=0.25mm,-latex] (8) -- node[above=3mm, align=center] {\huge 1} (9);
+\end{tikzpicture}
+```
+]
+
 
 ---
 # Transition matrix
 
+--
+
 + The core of the Markov process is made of the transition probabilities.
 
-+ For example, the probability of transitioning from state alive at $t-1$ to state alive at $t$ is $\Pr(z_t = 1 | z_{t-1} = 1) = \gamma_{1,1}$. It is the survival probability. 
+--
 
-+ The probability of dying over the interval $(t-1, t)$ is $\Pr(z_t = 2 | z_{t-1} = 1) = \gamma_{1,2}$.
++ For example, the probability of transitioning from state alive at $t-1$ to state alive at $t$ is $\Pr(z_t = 1 | z_{t-1} = 1) = \gamma_{1,1}$. It is the survival probability $\phi$. 
+
+--
+
++ The probability of dying over the interval $(t-1, t)$ is $\Pr(z_t = 2 | z_{t-1} = 1) = \gamma_{1,2} = 1 - \phi$.
+
+--
 
 + Now if an animal is dead at $t-1$, then $\Pr(z_t = 1 | z_{t-1} = 2) = 0$ and $\Pr(z_t = 2 | z_{t-1} = 2) = 1$.
 
-+ These probabilities can be packed in a transition matrix $\Gamma$:
+--
+
++ These probabilities can be packed in a transition matrix $\mathbf{\Gamma}$:
 
 \begin{align*}
-\Gamma = 
+\mathbf{\Gamma} = 
 \left(\begin{array}{cc} 
 \gamma_{1,1} & \gamma_{1,2}\\ 
 \gamma_{2,1} & \gamma_{2,2}
@@ -148,46 +214,696 @@ z %>%
 \end{array}\right)
 \end{align*}
 
+???
+
++ Add by hand column and row names w/ states and time
+
 
 ---
-# Markov process figure w/ tikz
+# Initial states
 
-Same figure w/ notation for $\gamma$ and $\phi$.
+--
+
++ A Markov process has to start somewhere. 
+
+--
+
++ We need the probabilities of initial states, i.e. states at $t = 1$. 
+
+--
+
++ We will use $\mathbf{\delta} = \left(\Pr(z_1 = 1), \Pr(z_1 = 2)\right)$.
+
+--
+
++ Here we assume that all animals are alive at first winter, i.e. $\Pr(z_1 = 1) = 1$ and $\Pr(z_1 = 2) = 0$. 
 
 ---
-# Some Nimble code
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)} \\
+\end{align*}
+
+---
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+\end{align*}
+
+---
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+\end{align*}
+
+---
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}, \ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)\\
+\end{align*}
+
+---
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}, \ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \Pr(z_{T-2}, \ldots, z_1)\\
+\end{align*}
+
+---
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}, \ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \ldots \\
+\end{align*}
+
+---
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}, \ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \ldots \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \ldots \Pr(z_{2} | z_{1}) \Pr(z_{1})\\
+\end{align*}
+
+
+---
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}, \ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \ldots \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \ldots \Pr(z_{2} | z_{1}) \Pr(z_{1})\\
+                &= \Pr(z_{1}) \prod_{t=2}^T{\Pr(z_{t} | z_{t-1})}\\
+\end{align*}
+
+
+---
+# Likelihood 
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}, \ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \Pr(z_{T-2}, \ldots, z_1)\\
+                &= \ldots \\
+                &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \ldots \Pr(z_{2} | z_{1}) \Pr(z_{1})\\
+                &= \Pr(z_{1}) \prod_{t=2}^T{\Pr(z_{t} | z_{t-1})}\\
+                &= \Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\
+\end{align*}
+
+---
+# Matrix formulation of the likelihood
+
+\begin{align*}
+\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
+                &= \Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\
+                &= \mathbf{\delta} \mathbf{\Gamma} \ldots \mathbf{\Gamma}
+\end{align*}
+
+
+Survival example:
+
+
+---
+# Our model
+
+\begin{align*}
+   z_1 &\sim \text{Multinomial}(1, \delta) &\text{[likelihood, }t = 1 \text{]}\\
+   z_t | z_{t-1} &\sim \text{Multinomial}(1, \gamma_{z_{t-1},z_{t}}) &\text{[likelihood, }t > 1 \text{]}\\
+  \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
+\end{align*}
+
+--
+
++ In Nimble, we will use the categorical distribution `dcat()` a multinomial distribution with a single draw. 
+
+???
+
+
+https://en.wikipedia.org/wiki/Categorical_distribution
+
+The categorical distribution is the generalization of the Bernoulli distribution for a categorical random variable, i.e. for a discrete variable with more than two possible outcomes, such as the roll of a dice. On the other hand, the categorical distribution is a special case of the multinomial distribution, in that it gives the probabilities of potential outcomes of a single drawing rather than multiple drawings. 
+
+---
+### Nimble code
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(nimble)
+```
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  # likelihood
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2])
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    }
+  }})
+```
+
+---
+## Constants and data
+
+```{r}
+my.constants <- list(N = 57, T = 5)
+my.constants
+
+my.data <- list(z = z)
+```
+
+---
+## Initial values
+
+```{r}
+initial.values <- function() list(phi = runif(1,0,1))
+initial.values()
+```
+
+---
+## Parameters to monitor
+
+```{r}
+parameters.to.save <- c("phi")
+parameters.to.save
+```
+
+---
+## MCMC details
+
+```{r}
+n.iter <- 5000
+n.burnin <- 1000
+n.chains <- 2
+```
+
+---
+## Run Nimble
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
+mcmc.output <- nimbleMCMC(code = markov.survival, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter, 
+                          nburnin = n.burnin, 
+                          nchains = n.chains)
+```
+
+```{r, message=FALSE, warning=FALSE, eval=TRUE, echo = FALSE}
+mcmc.output <- nimbleMCMC(code = markov.survival, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter, 
+                          nburnin = n.burnin, 
+                          nchains = n.chains,
+                          progressBar = FALSE)
+```
+
+---
+## Posterior distribution of survival
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.output, round = 2)
+```
+
+--
+
++ Posterior mean and median are close to $0.8$. 
+
+--
+
++ Cool! The data was simulated, with (true) survival $\phi = 0.8$. 
 
 ---
 
 <br><br>
 
-This is the data we wish we had.
+<font size="10">Unfortunately, this is the data we wish we had.</font>
 
 ---
-## Imperfect detection
+# In real life
 
-+ Observation difficult
-+ Imperfect detection
-+ Add obs layer
-+ Hidden markov models
-+ Example with animal survival
+--
+
++ Animals cannot be monitored exhaustively, like humans in a medical trial.
+
+--
+
++ Animals are captured, marked or identified then released alive. 
+
+--
+
++ Then, these animals may be detected again, or go undetected <span>&#8212;</span> **capture-recapture** 
+
+--
+
++ Whenever animals go undetected, it might be that they were alive but missed, or because they were dead and therefore could not be detected <span>&#8212;</span> **imperfect detection**. 
+
+--
+
++ The Markov process for survival is only partially observed <span>&#8212;</span> **hidden Markov models**.  
+
+--
+
++ We define $y_{i,t}$ the random variable taking value $1$ if animal $i$ was detected at occasion $t$ and $0$ otherwise. 
 
 ---
-## Implementation in Nimble
+# The truth is in $z$
 
-+ Some code
+.center.nogap[
+```{r echo = FALSE}
+z %>% 
+  as_tibble() %>% 
+  add_column(id = 1:nind, .before = "winter 1") %>%
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+]
+
+--
+
++ Unfortunately, we have only partial access to $z$. 
+
+--
+
++ We do observe $y$ the detections and non-detections. 
+
+--
+
++ How are $z$ and $y$ connected?  
+
+---
+## Dead animals go undetected
+
+--
+
++ When an animal is dead i.e. $z = 2$, it cannot be detected, therefore $y = 0$. 
+
+--
+
+.center.nogap[
+```{r echo = FALSE}
+z %>% 
+  as_tibble() %>% 
+  replace(. == 2, 0) %>%
+  add_column(id = 1:nind, .before = "winter 1") %>%
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+]
+
+---
+## Alive animals may be detected or not
+
++ If animal is alive $z = 1$, it is detected $y = 1$ w/ prob $p$ or not w/ prob $1-p$. 
+
++ Before **first** detection, we know nothing, and we proceed conditional on it.
+
+.center.nogap[
+```{r echo = FALSE}
+p <- 0.6
+y <- z
+y[z==2] <- 0
+y[y==1] <- rbinom(n = sum(y==1), 1, p)
+nobs <- sum(apply(y,1,sum) != 0)
+y <- y[apply(y,1,sum) !=0, ]
+first <- apply(y, 1, function(x) min(which(x !=0)))
+for (i in 1:nobs){
+  if(first[i] > 1) y[i, 1:(first[i]-1)] <- NA
+}
+y %>%
+  as_tibble() %>%
+  add_column(id = 1:nobs, .before = "winter 1") %>%
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+]
+
+--
+
++ This table $y$ is what we observe in real life.
+
+---
+# Markov model
+
+.center.nogap[
+```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+\usetikzlibrary{arrows, fit, positioning, automata}
+\begin{tikzpicture}[node distance = 2cm]
+\tikzset{state/.style = {circle, draw, minimum size = 30pt, scale = 3, line width=1pt}}
+\node [state,fill=lightgray!75] (6) [] {$z_{t}$};
+\node [state,fill=lightgray!75] (5) [left = 20mm of 6] {$z_{t-1}$};
+\node [state,fill=lightgray!75] (4) [left = 20mm of 5] {$z_{t-2}$};
+\node [state,fill=lightgray!75] (3) [left = 20mm of 4] {$\cdots$};
+\node [state,fill=lightgray!75] (7) [right = 20mm of 6] {$z_{t+1}$};
+\node [state,fill=lightgray!75] (8) [right = 20mm of 7] {$z_{t+2}$};
+\node [state,fill=lightgray!75] (9) [right = 20mm of 8] {$\cdots$};
+\draw[->,black, line width=0.25mm,-latex] (3) to (4);
+\draw[->,black, line width=0.25mm,-latex] (4) to (5);
+\draw[->,black, line width=0.25mm,-latex] (5) to (6);
+\draw[->,black, line width=0.25mm,-latex] (6) to (7);
+\draw[->,black, line width=0.25mm,-latex] (7) to (8);
+\draw[->,black, line width=0.25mm,-latex] (8) to (9);
+\end{tikzpicture}
+```
+]
+
+---
+# Hidden Markov model
+
+.center.nogap[
+```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+\usetikzlibrary{arrows, fit, positioning, automata}
+\begin{tikzpicture}[node distance = 2cm]
+\tikzset{state/.style = {circle, draw, minimum size = 30pt, scale = 3, line width=1pt}}
+\node [state,fill=lightgray!75] (6) [] {$z_{t}$};
+\node [state,fill=lightgray!75] (5) [left = 20mm of 6] {$z_{t-1}$};
+\node [state,fill=lightgray!75] (4) [left = 20mm of 5] {$z_{t-2}$};
+\node [state,fill=lightgray!75] (3) [left = 20mm of 4] {$\cdots$};
+\node [state,fill=lightgray!75] (7) [right = 20mm of 6] {$z_{t+1}$};
+\node [state,fill=lightgray!75] (8) [right = 20mm of 7] {$z_{t+2}$};
+\node [state,fill=lightgray!75] (9) [right = 20mm of 8] {$\cdots$};
+\node [state,fill=white] (16) [above = 20mm of 6] {$y_{t}$};
+\node [state,fill=white] (15) [above = 20mm of 5] {$y_{t-1}$};
+\node [state,fill=white] (14) [above = 20mm of 4] {$y_{t-2}$};
+\node [state,fill=white] (17) [above = 20mm of 7] {$y_{t+1}$};
+\node [state,fill=white] (18) [above = 20mm of 8] {$y_{t+2}$};
+\draw[->,black, line width=0.25mm,-latex] (3) to (4);
+\draw[->,black, line width=0.25mm,-latex] (4) to (5);
+\draw[->,black, line width=0.25mm,-latex] (5) to (6);
+\draw[->,black, line width=0.25mm,-latex] (6) to (7);
+\draw[->,black, line width=0.25mm,-latex] (7) to (8);
+\draw[->,black, line width=0.25mm,-latex] (8) to (9);
+\draw[->,black, line width=0.25mm,-latex] (4) to (14);
+\draw[->,black, line width=0.25mm,-latex] (5) to (15);
+\draw[->,black, line width=0.25mm,-latex] (6) to (16);
+\draw[->,black, line width=0.25mm,-latex] (7) to (17);
+\draw[->,black, line width=0.25mm,-latex] (8) to (18);
+\end{tikzpicture}
+```
+]
+
+
+---
+# Hidden Markov model
+
+.center.nogap[
+```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+\usetikzlibrary{arrows, fit, positioning, automata}
+\begin{tikzpicture}[node distance = 2cm]
+\tikzset{state/.style = {circle, draw, minimum size = 30pt, scale = 3, line width=1pt}}
+\node [state,fill=lightgray!75] (6) [] {$1$};
+\node [state,fill=lightgray!75] (5) [left = 20mm of 6] {$1$};
+\node [state,fill=lightgray!75] (4) [left = 20mm of 5] {$1$};
+\node [state,fill=lightgray!75] (3) [left = 20mm of 4] {$1$};
+\node [state,fill=lightgray!75] (7) [right = 20mm of 6] {$2$};
+\node [state,fill=lightgray!75] (8) [right = 20mm of 7] {$2$};
+\node [state,fill=lightgray!75] (9) [right = 20mm of 8] {$\cdots$};
+\node [state,fill=white] (16) [above = 20mm of 6] {$1$};
+\node [state,fill=white] (15) [above = 20mm of 5] {$2$};
+\node [state,fill=white] (14) [above = 20mm of 4] {$1$};
+\node [state,fill=white] (17) [above = 20mm of 7] {$1$};
+\node [state,fill=white] (18) [above = 20mm of 8] {$1$};
+\draw[->,black, line width=0.25mm,-latex] (3) -- node[above=3mm, align=center] {\huge $\varphi$} (4);
+\draw[->,black, line width=0.25mm,-latex] (4) -- node[above=3mm, align=center] {\huge $\varphi$} (5);
+\draw[->,black, line width=0.25mm,-latex] (5) -- node[above=3mm, align=center] {\huge $\varphi$} (6);
+\draw[->,black, line width=0.25mm,-latex] (6) -- node[above=3mm, align=center] {\huge $1 - \varphi$} (7);
+\draw[->,black, line width=0.25mm,-latex] (7) -- node[above=3mm, align=center] {\huge $1$} (8);
+\draw[->,black, line width=0.25mm,-latex] (8) -- node[above=3mm, align=center] {\huge $1$} (9);
+\draw[->,black, line width=0.25mm,-latex] (4) -- node[left=3mm, align=center] {\huge $1 - p$} (14);
+\draw[->,black, line width=0.25mm,-latex] (5) -- node[left=3mm, align=center] {\huge $p$} (15);
+\draw[->,black, line width=0.25mm,-latex] (6) -- node[left=3mm, align=center] {\huge $1 - p$} (16);
+\draw[->,black, line width=0.25mm,-latex] (7) -- node[left=3mm, align=center] {\huge $1$} (17);
+\draw[->,black, line width=0.25mm,-latex] (8) -- node[left=3mm, align=center] {\huge $1$} (18);
+\end{tikzpicture}
+```
+]
+
++ For states (in gray), $z = 1$ is alive, $z = 2$ is alive.
+
++ For observations (in white), $y = 1$ is non-detected, $y = 2$ is detected
+
+
+---
+# Observation process
+
++ Comment dénoter la matrice des obs? On a $\omega$ et $\delta$ poru les états. Les transitions. 
+
++ Matrice des observations. Ce sont les émissions. Utiliser T et E instead? 
+
+
+---
+# HMM likelihood 
+
+\begin{align*}
+\Pr(\mathbf{y}) &= \Pr(y_T, y_{T-1}, y_{T-2}, \ldots, y_1)\\
+                &= \Pr(y_T, y_{T-1}, y_{T-2}, \ldots, y_1 | z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1)\\
+                &= \Pr(z_{1}) \prod_{t=1}^T{\omega_{z_{t}}} \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\
+                &= \mathbf{\delta} \mathbf{\Omega} \mathbf{\Gamma} \cdots \mathbf{\Omega} \mathbf{\Gamma} \mathbf{\Omega} \mathbb{1}
+\end{align*}
+
+---
+# Example 
+
++ With alive and dead, and a particular encounter history.
+
+
+---
+# Our model
+
+\begin{align*}
+   z_{\text{first}} &\sim \text{Multinomial}(1, \delta) &\text{[likelihood]}\\
+   z_t | z_{t-1} &\sim \text{Multinomial}(1, \gamma_{z_{t-1},z_{t}}) &\text{[likelihood]}\\
+   y_t | z_{t} &\sim \text{Multinomial}(1, \omega_{z_{t}}) &\text{[likelihood]}\\
+  \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
+  p &\sim \text{Beta}(1, 1) &\text{[prior for }p \text{]} \\ 
+\end{align*}
+
+
+---
+
+```{r eval = FALSE}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  # likelihood
+  gamma[1,1] <- phi
+  gamma[1,2] <- 1 - phi
+  gamma[2,1] <- 0
+  gamma[2,2] <- 1
+  delta[1] <- 1
+  delta[2] <- 0
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2])
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    }
+  }})
+```
+
+
+---
+## Priors
+
+```{r, echo=FALSE}
+hmm.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior survival
+  p ~ dunif(0, 1) # prior detection
+  # likelihood
+  gamma[1,1] <- phi
+  gamma[1,2] <- 1 - phi
+  gamma[2,1] <- 0
+  gamma[2,2] <- 1
+  delta[1] <- 1
+  delta[2] <- 0
+  omega[1,1] <- 1 - p
+  omega[1,2] <- p
+  omega[2,1] <- 1
+  omega[2,2] <- 0
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+
+```{r eval=FALSE}
+hmm.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior survival
+  p ~ dunif(0, 1) # prior detection
+...
+```
+
+---
+## HMM ingredients
+
+```{r eval=FALSE}
+...
+  # parameters
+  gamma[1,1] <- phi
+  gamma[1,2] <- 1 - phi
+  gamma[2,1] <- 0
+  gamma[2,2] <- 1
+  delta[1] <- 1
+  delta[2] <- 0
+  omega[1,1] <- 1 - p
+  omega[1,2] <- p
+  omega[2,1] <- 1
+  omega[2,2] <- 0
+...
+```
+
+---
+## Likelihood
+
+```{r eval=FALSE}
+...
+    # likelihood
+    for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+
+---
+## Constants
+
+```{r}
+first <- apply(y, 1, function(x) min(which(x !=0)))
+my.constants <- list(N = nrow(y), T = 5, first = first)
+my.constants
+```
+
+---
+## Data
+
+```{r}
+my.data <- list(y = y + 1)
+```
+
+---
+## Initial values
+
+```{r}
+zinits <- y + 1 # non-detection -> alive
+zinits[zinits == 2] <- 1 # dead -> alive
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+```
+
+---
+## Parameters to monitor
+
+```{r}
+parameters.to.save <- c("phi", "p")
+parameters.to.save
+```
+
+---
+## MCMC details
+
+```{r}
+n.iter <- 5000
+n.burnin <- 1000
+n.chains <- 2
+```
+
+---
+## Run Nimble
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
+mcmc.output <- nimbleMCMC(code = hmm.survival, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter, 
+                          nburnin = n.burnin, 
+                          nchains = n.chains)
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, cache = TRUE}
+mcmc.output <- nimbleMCMC(code = hmm.survival, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter, 
+                          nburnin = n.burnin, 
+                          nchains = n.chains,
+                          progressBar = FALSE)
+```
+
+---
+## Posterior distribution of survival
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.output, round = 2)
+```
+
+True survival is $\phi = 0.8$ and detection is $p = 0.6$.
+
+
 
 ---
 ## A bit of history
 
-+ probabilities à la main.
++ Cormack-Jolly-Seber model. 
 
-+ state-space which is HMM. 
++ Faut-il expliquer que ce sont des données simulées?
 
----
-# To-do list
++ Probabilities à la main.
 
-+ Add decision trees, comme dans le workshop multievent
++ Histoire de Cormack et Jolly dans même bâtiment. Num spécial Stat science et interviews. 
+
++ Monographie Lebreton. 
+
++ state-space which is HMM. Bayes uptake.  
+
 
 ---
 ## Further reading
@@ -198,4 +914,12 @@ This is the data we wish we had.
 
 + Pradel 2005. 
 
-+ Gimenez 2012. 
++ Gimenez 2007, 2012.
+
++ Royle et al. 2008.
+
++ Lebreton et al. 1992. 
+
++ King et al. 2012. 
+
+
