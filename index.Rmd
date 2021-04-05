@@ -8,11 +8,11 @@ site: distill::distill_website
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-**What**: This is a workshop on Bayesian inference about animal demography. Hopefully, you will learn about how to infer demographic parameters (e.g. survival, dispersal). Our hope is to provide you with what you need to go your own path. The event is free of charge, and video-recorded. 
-
-**How**: You will become comfortable with the Bayesian approach, MCMC methods and the `R` `Nimble` package to fit single-site, multi-site, multi-state and multi-event models to capture-recapture data. 
+**What**: This is a workshop on Bayesian inference of animal demography. Hopefully, you will learn about how to infer demographic parameters (e.g. survival, dispersal). Our hope is to provide you with what you need to go your own path. The event is free of charge, and video-recorded. 
 
 **For whom**: This is a workshop for ecologists. No previous experience with `Nimble` or Bayesian statistics is assumed, but knowledge of `R` is required. 
+
+**How**: Through a combination of lectures and live demonstrations, you will get acquainted with the Bayesian approach, MCMC methods and the `R` `Nimble` package to fit single-site, multi-site, multi-state and multi-event models to capture-recapture data. 
 
 **Who**: [O. Gimenez](https://twitter.com/oaggimenez), [C. R. Nater](https://twitter.com/chloe_nater), [S. Cubaynes](https://twitter.com/sarahcubaynes), [P. de Valpine](https://twitter.com/r_nimble), [M. Quéroué](https://twitter.com/maudqueroue)    
 
@@ -31,24 +31,6 @@ knitr::opts_chunk$set(echo = FALSE)
 7. Known knowns, unknown knowns and unknowns: Uncertainty in state assignment
 8. Skip your coffee break: Speed up MCMC convergence 
 9. Take-home messages
-
-## To-do list
-
-+ How to organise everything: Lecture and live demonstration. Q&A every 30 minutes, every hour, through Zoom and Q&A or via Slack. I'd rather have everything on Zoom to be able to record everything. Then we can format the questions in some FAQ page that could be added to the website. 
-+ Send email to everybody giving program, what we do not cover, stuff to install
-+ R scripts of the lecture, more Nimble examples (not covered in the classes or live demos), Jags translation
-+ Add a slide further reading at end of each section (papier de Daniel, papier Gelman sur workflow). 
-+ Next edition: SCR models (which can be seen as HMMs), robust design, sojour time, semi-Markov, pop size is treated elsewhere. 
-+ Some case studies
-    + GEESE: multisite standard comme dans Hesteck et al. 1993. Faire aussi modele à mémoire. Illustrer le lien logis généralisé. Et la Dirichlet aussi. 
-    + DIPPER: refaire les modèles de Lebreton et al., avec et sans la covariable. Tests avec wAIC ou DIC, ou variable selection.
-    + SWIFTS: additives effects. Dans Lebreton et al. 1992. Model selection. Citer les papiers de Conn, Hooten.
-    + FLAMINGOS: Recrutement. Pradel et al. 1997. 
-    + HOUSE FINCHES: Faustino et al. 2004 et Conn & Cooch 2009.
-    + GRAY WOLVES: Cubaynes et al. 2010. Hétérogénéité. Avec ou sans transition entre états. 
-    + SOOTY SHEARWATERS. ROE DEER plutôt?
-    + Memory model. Trap-dependence. Comment on met les covariables avec multinomial logia link ou Dirichlet. 
-
 
 ## Requirements
 

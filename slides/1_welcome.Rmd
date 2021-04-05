@@ -26,7 +26,7 @@ library(nimble)
 ```
 
 
-class: center, middle
+class: middle
 background-image: url(img/montpellier.png)
 background-size: cover
 

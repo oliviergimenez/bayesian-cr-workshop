@@ -14,14 +14,18 @@ class: center, middle, title-slide
 
 # Free the modeler in you: Intro to Nimble
 ### The team
-### last updated: 2021-04-01
+### last updated: 2021-04-05
 
 ---
 
 
 
 
-# What is NIMBLE?
+# What is Nimble?
+
+--
+
++ **N**umerical **I**nference for statistical **M**odels using **B**ayesian and **L**ikelihood **E**stimation.
 
 --
 
@@ -53,10 +57,6 @@ class: center, middle, title-slide
 
 + A model-generic programming system to write new analysis methods.
 
---
-
-+ Numerical Inference for statistical Models using Bayesian and Likelihood Estimation.
-
 
 ---
 ## Load `nimble` package
@@ -87,6 +87,17 @@ naive.survival.model &lt;- nimbleCode({
 my.data &lt;- list(n = 57, y = 19)
 ```
 
+
+---
+## Distinguish constants and data
+
+
+```r
+my.constants &lt;- list(n = 57)
+my.data &lt;- list(y = 19)
+```
+
+
 ---
 ## Specify initial values
 
@@ -104,7 +115,7 @@ initial.values()
 
 ```
 $phi
-[1] 0.7952005
+[1] 0.1054847
 ```
 
 
@@ -133,7 +144,8 @@ n.chains &lt;- 2
 
 ```r
 mcmc.output &lt;- nimbleMCMC(code = naive.survival.model,     
-                          data = my.data,              
+                          data = my.data,  
+                          constants = my.constants,
                           inits = initial.values,
                           monitors = parameters.to.save,
                           niter = n.iter, 
@@ -157,11 +169,11 @@ str(mcmc.output)
 
 ```
 List of 2
- $ chain1: num [1:4000, 1] 0.342 0.342 0.409 0.409 0.326 ...
+ $ chain1: num [1:4000, 1] 0.345 0.345 0.345 0.217 0.217 ...
   ..- attr(*, "dimnames")=List of 2
   .. ..$ : NULL
   .. ..$ : chr "phi"
- $ chain2: num [1:4000, 1] 0.452 0.452 0.452 0.452 0.28 ...
+ $ chain2: num [1:4000, 1] 0.39 0.408 0.408 0.408 0.452 ...
   ..- attr(*, "dimnames")=List of 2
   .. ..$ : NULL
   .. ..$ : chr "phi"
@@ -178,19 +190,19 @@ head(mcmc.output$chain1)
 
 ```
            phi
-[1,] 0.3418533
-[2,] 0.3418533
-[3,] 0.4090841
-[4,] 0.4090841
-[5,] 0.3259602
-[6,] 0.3259602
+[1,] 0.3449223
+[2,] 0.3449223
+[3,] 0.3449223
+[4,] 0.2174584
+[5,] 0.2174584
+[6,] 0.2771901
 ```
 
 ---
 ## Explore MCMC outputs
 
 .center.nogap[
-![](3_nimble_files/figure-html/unnamed-chunk-12-1.svg)&lt;!-- --&gt;
+![](3_nimble_files/figure-html/unnamed-chunk-13-1.svg)&lt;!-- --&gt;
 ]
 
 ---
@@ -204,7 +216,7 @@ MCMCsummary(mcmc.output, round = 2)
 
 ```
     mean   sd 2.5%  50% 97.5% Rhat n.eff
-phi 0.34 0.06 0.23 0.34  0.46    1  1991
+phi 0.34 0.06 0.23 0.34  0.46    1  1854
 ```
 
 ---
@@ -224,7 +236,7 @@ MCMCtrace(mcmc.output,
 .pull-right[
 
 .center.nogap[
-![](3_nimble_files/figure-html/unnamed-chunk-15-1.svg)&lt;!-- --&gt;
+![](3_nimble_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
 ]
 ]
 
@@ -251,23 +263,28 @@ MCMCtrace(mcmc.output,
 .pull-right[
 
 .center.nogap[
-![](3_nimble_files/figure-html/unnamed-chunk-17-1.svg)&lt;!-- --&gt;
+![](3_nimble_files/figure-html/unnamed-chunk-18-1.svg)&lt;!-- --&gt;
 ]
 ]
 
 ---
-## More
+## Our `nimble` workflow so far
 
-+ Explain workflow.
-+ Distinguish data and constants, redo survival example w/ `\(n\)` constant and `\(y\)` data.
-+ Distribution dnorm, dunif, etc.
-+ Vectorise to speed up.
-+ Say that we'll see more advanced use as the workshop goes, on the fly.
+![](img/nimble_workflow_sofar.png)
+
 
 ---
+## But `nimble` gives full access to the MCMC engine
+
+--
 
 ![](img/nimble_workflow.png)
 
+---
+class: middle center
+background-color: black
+
+![](img/I1bIY06.gif)
 
 ---
 ## Useful resources
@@ -282,19 +299,20 @@ MCMCtrace(mcmc.output,
 
 + Reference to cite when using nimble in a publication:
 
-de Valpine, Perry, Daniel Turek, Christopher J. Paciorek, Clifford Anderson-Bergman, Duncan Temple Lang, and Rastislav Bodik (2017). Programming With Models: Writing Statistical Algorithms for General Model Structures With NIMBLE. *Journal of Computational and Graphical Statistics* **26** (2): 403–13. &lt;https://doi.org/10.1080/10618600.2016.1172487&gt;.
+&gt; de Valpine, P., D. Turek, C. J. Paciorek, C. Anderson-Bergman, D. Temple Lang, and R. Bodik (2017). Programming With Models: Writing Statistical Algorithms for General Model Structures With NIMBLE. *Journal of Computational and Graphical Statistics* **26** (2): 403–13.
 
 
 ---
-# To-do list
+background-color: black
+# &lt;span style="color:white"&gt;Live demo&lt;/span&gt;
 
-+ I chose to start w/ nimbleMCMC() so that Jags users can catch up in a second, and beginners are not overwhelmed with the different steps that are relevant to more advanced users
+&lt;br&gt;
+&lt;br&gt;
 
-+ Free the modeler is from Marc Kéry
+.center[
+![](img/r_1051694_ifmHZ.gif)
+]
 
-+ Do we need to say anything about why Nimble and not Jags or Stan?
-
-+ NIMBLE, Nimble or nimble - homogeneise.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

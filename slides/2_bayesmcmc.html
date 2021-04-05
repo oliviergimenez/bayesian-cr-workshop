@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # Crash course on Bayesian statistics and MCMC algorithms
 ### The team
-### last updated: 2021-04-01
+### last updated: 2021-04-05
 
 ---
 
@@ -76,6 +76,11 @@ $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{h
 ---
 # What is doing science after all?
 
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
 How plausible is some hypothesis given the data?
 
 $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{hypothesis}) \; \Pr(\text{hypothesis})}{\Pr(\text{data})} $$
@@ -101,7 +106,7 @@ $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{h
 
 --
 
-+ The frequentist approach (**maximum likelihood estimation** – MLE) assumes that the parameters are fixed, but have unknown values to be estimated.
++ The frequentist approach (maximum likelihood estimation – MLE) assumes that the parameters are fixed, but have unknown values to be estimated.
 
 --
 
@@ -286,22 +291,38 @@ $$ P(\alpha, \beta, \sigma \mid \text{data}) = \frac{ P(\text{data} \mid \alpha,
 ---
 # Why are MCMC methods so useful?
 
+--
+
 + MCMC are stochastic algorithms to produce sequence of dependent random numbers from a Markov chain.
+
+--
 
 + Converge to equilibrium (aka stationary) distribution.
 
+--
+
 + Equilibrium distribution is the desired posterior distribution!
 
+--
+
 + Several ways of constructing these chains: e.g., Metropolis-Hastings, Gibbs sampler.
+
+--
 
 + How to implement them in practice?!
 
 ---
 # The Metropolis algorithm
 
+--
+
 + Let's go back to animal survival estimation.
 
+--
+
 + We illustrate sampling from the posterior distribution. 
+
+--
 
 + We write functions in `R` for the likelihood, the prior and the posterior.
 
@@ -330,7 +351,7 @@ posterior &lt;- function(x, p){
 ```
 
 ---
-# Metropolis algorithm
+## Metropolis algorithm
 
 --
 
@@ -338,19 +359,19 @@ posterior &lt;- function(x, p){
 
 --
 
-2. To decide where to visit next, we propose to move away from the current value of the parameter. We add to this current value some random value from say a normal distribution with some variance. We call this the **candidate** location.
+2. To decide where to visit next, we propose to move away from the current value of the parameter &lt;span&gt;&amp;#8212;&lt;/span&gt; this is a **candidate** value. To do so, we add to the current value some random value from say a normal distribution with some variance.
 
 --
 
-3. We compute the ratio of the probabilities at the candidate and current locations `\(R = posterior(candidate)/posterior(current)\)`. This is where the magic of MCMC happens, in that `\(\Pr(data)\)` (the denominator of the Bayes theorem) cancels out when we compute `\(R\)`. 
+3. We compute the ratio of the probabilities at the candidate and current locations `\(R = \text{posterior(candidate)/posterior(current)}\)`. This is where the magic of MCMC happens, in that `\(\Pr(\text{data})\)`, the denominator of the Bayes theorem, cancels out. 
 
 --
 
-4. We spin a continuous spinner that lands anywhere from 0 to 1 –- call the random spin `\(X\)`. If `\(X\)` is smaller than `\(R\)`, we move to the candidate location, otherwise we remain at the current location.
+4. We spin a continuous spinner that lands anywhere from 0 to 1 &lt;span&gt;&amp;#8212;&lt;/span&gt; call it the random spin `\(X\)`. If `\(X\)` is smaller than `\(R\)`, we move to the candidate location, otherwise we remain at the current location.
 
 --
 
-5. We repeat 2-4 a number of times called **steps** (many steps).
+5. We repeat 2-4 a number of times &lt;span&gt;&amp;#8212;&lt;/span&gt; or **steps** (many steps).
 
 ---
 
@@ -642,16 +663,21 @@ If simulations cheap, be conservative.
 ---
 # Further reading
 
-+ ref 1
-+ ref 2
-+ ref 3
++ McCarthy, M. (2007). Bayesian Methods for Ecology. Cambridge: Cambridge University Press.
+
++ McElreath, R. (2020). Statistical Rethinking: A Bayesian Course with Examples in R and Stan (2nd ed.). CRC Press.
+
++ Gelman, A. and Hill, J. (2006). Data Analysis Using Regression and Multilevel/Hierarchical Models (Analytical Methods for Social Research). Cambridge: Cambridge University Press.
+
 
 ---
-# To-do list
+background-color: #234f66
+## &lt;span style="color:white"&gt;Live demo&lt;/span&gt;
 
-+ Smooth everything
-+ Time the whole class to make sure we're below 1 hour
-+ Add something on Monte Carlo estimates, on Markov chains?
+.center[
+![](img/b5b086f9cc403008ba7be5dd508cfed2.gif)
+]
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -25,7 +25,11 @@ library(here)
 library(nimble)
 ```
 
-# What is NIMBLE?
+# What is Nimble?
+
+--
+
++ **N**umerical **I**nference for statistical **M**odels using **B**ayesian and **L**ikelihood **E**stimation.
 
 --
 
@@ -57,10 +61,6 @@ library(nimble)
 
 + A model-generic programming system to write new analysis methods.
 
---
-
-+ Numerical Inference for statistical Models using Bayesian and Likelihood Estimation.
-
 
 ---
 ## Load `nimble` package
@@ -87,6 +87,16 @@ naive.survival.model <- nimbleCode({
 ```{r}
 my.data <- list(n = 57, y = 19)
 ```
+
+
+---
+## Distinguish constants and data
+
+```{r}
+my.constants <- list(n = 57)
+my.data <- list(y = 19)
+```
+
 
 ---
 ## Specify initial values
@@ -124,7 +134,8 @@ n.chains <- 2
 
 ```{r, warning=FALSE, message=FALSE, eval = FALSE}
 mcmc.output <- nimbleMCMC(code = naive.survival.model,     
-                          data = my.data,              
+                          data = my.data,  
+                          constants = my.constants,
                           inits = initial.values,
                           monitors = parameters.to.save,
                           niter = n.iter, 
@@ -136,6 +147,7 @@ mcmc.output <- nimbleMCMC(code = naive.survival.model,
 ```{r, cache = TRUE, echo = FALSE, warning=FALSE, message=FALSE}
 mcmc.output <- nimbleMCMC(code = naive.survival.model,     
                           data = my.data,              
+                          constants = my.constants,
                           inits = initial.values,
                           monitors = parameters.to.save,
                           niter = n.iter, 
@@ -240,18 +252,23 @@ MCMCtrace(mcmc.output,
 ]
 
 ---
-## More
+## Our `nimble` workflow so far
 
-+ Explain workflow.
-+ Distinguish data and constants, redo survival example w/ $n$ constant and $y$ data.
-+ Distribution dnorm, dunif, etc.
-+ Vectorise to speed up.
-+ Say that we'll see more advanced use as the workshop goes, on the fly.
+![](img/nimble_workflow_sofar.png)
+
 
 ---
+## But `nimble` gives full access to the MCMC engine
+
+--
 
 ![](img/nimble_workflow.png)
 
+---
+class: middle center
+background-color: black
+
+![](img/I1bIY06.gif)
 
 ---
 ## Useful resources
@@ -266,16 +283,17 @@ MCMCtrace(mcmc.output,
 
 + Reference to cite when using nimble in a publication:
 
-de Valpine, Perry, Daniel Turek, Christopher J. Paciorek, Clifford Anderson-Bergman, Duncan Temple Lang, and Rastislav Bodik (2017). Programming With Models: Writing Statistical Algorithms for General Model Structures With NIMBLE. *Journal of Computational and Graphical Statistics* **26** (2): 403–13. <https://doi.org/10.1080/10618600.2016.1172487>.
+> de Valpine, P., D. Turek, C. J. Paciorek, C. Anderson-Bergman, D. Temple Lang, and R. Bodik (2017). Programming With Models: Writing Statistical Algorithms for General Model Structures With NIMBLE. *Journal of Computational and Graphical Statistics* **26** (2): 403–13.
 
 
 ---
-# To-do list
+background-color: black
+# <span style="color:white">Live demo</span>
 
-+ I chose to start w/ nimbleMCMC() so that Jags users can catch up in a second, and beginners are not overwhelmed with the different steps that are relevant to more advanced users
+<br>
+<br>
 
-+ Free the modeler is from Marc Kéry
+.center[
+![](img/r_1051694_ifmHZ.gif)
+]
 
-+ Do we need to say anything about why Nimble and not Jags or Stan?
-
-+ NIMBLE, Nimble or nimble - homogeneise.

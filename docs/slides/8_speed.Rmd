@@ -32,6 +32,8 @@ library(nimble)
 + Marginalization (use dHMM)
 + Encounter histories pooling
 + m-array formulation of the likelihood
++ vectorise to speed up.
+
 
 ---
 ## Further reading
