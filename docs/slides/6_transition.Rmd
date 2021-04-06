@@ -37,6 +37,9 @@ library(nimble)
 + Competing sources of mortality?
 + Local minima (example from Mark book)
 
+---
+
+![](img/more_than_2_states.png)
 
 ---
 ## Further reading
