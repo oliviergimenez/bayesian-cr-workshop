@@ -29,8 +29,8 @@ library(nimble)
 ## Plan
 
 + Some theory
-+ Sex, breeding and/or disease states
-+ Trap-dependence, memory
++ Sex, **breeding** and **disease states**
++ Trap-dependence, **memory**
 
 ---
 ## Further reading
