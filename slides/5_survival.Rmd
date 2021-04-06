@@ -33,7 +33,232 @@ library(nimble)
 + Why Bayes? Incorporating information through prior
 + What to do w/ missing values (discretization and multistate, fill in NAs Bonner, Langrock)
 + Predictive prior/posterior checks
-+ Example w/ white storks or something else
+
+---
+# Model selection
+
+---
+## How to select a best model?
+
++ Is there any effect of rain or temperature or both on breeding success?
+
++ The proportion of explained variance $R^2$ is problematic, because the more variables you have, the bigger $R^2$ is.
+
++ Idea: **penalize models with too many parameters**.
+
+---
+## Akaike information criterion (AIC)
+
+$$AIC = - 2 \log(L(\hat{\theta}_1,\ldots,\hat{\theta}_K)) + 2 K$$
+
+with $L$ the likelihood and $K$ the number of parameters $\theta_i$.
+
+---
+## Akaike information criterion (AIC)
+
+$$\text{AIC} = {\color{red}{- 2 \log(L(\hat{\theta}_1,\ldots,\hat{\theta}_K))}} + 2 K$$
+
+\textcolor{red}{A measure of goodness-of-fit of the model to the data}: the more parameters you have, the smaller the deviance is (or the bigger the likelihood is).
+
+---
+## Akaike information criterion (AIC)
+
+$$\text{AIC} = - 2 \log(L(\hat{\theta}_1,\ldots,\hat{\theta}_K)) + {\color{red}{2 K}}$$
+
+\textcolor{red}{A penalty}: twice the number of parameters $K$
+
+---
+## Akaike information criterion (AIC)
+
++ AIC makes the balance between *quality of fit* and *complexity* of a model.
+
++ Best model is the one with lowest AIC value.
+
++ Two models are difficult to distinguish if $\Delta \text{AIC} < 2$.
+
+---
+## Bayesian version
+
++ Watanabe-Akaike (Widely-Applicable) Information Criteria or WAIC:
+
+$$\textrm{WAIC} = -2 \sum_{i = 1}^n \log E[\Pr(y_i \mid \theta)] + 
+                  2 p_\text{WAIC}$$
+
++ where $E[p(y_i \mid \theta)]$ is the posterior mean of the likelihood evaluated pointwise at each $i$th observation.
+
++ $p_\text{WAIC}$ is a penalty computed using the posterior variance of the likelihood. 
+
++ More in this video <https://www.youtube.com/watch?v=vSjL2Zc-gEQ> by R. McElreath.
+
+
+---
+# How to incorporate prior information? 
+
++ So far, we have assumed a vague prior:
+
+$$\phi_{prior} \sim \text{Beta}(1,1) = \text{Uniform}(0,1)$$
+
++ How to incorporate prior information?
+
+---
+# How to incorporate prior information?
+
+--
+
++ If no information, mean posterior survival is $\phi_{posterior} = 0.56$ with credible interval $[0.51,0.61]$.
+
+--
+
++ Using information on body mass and annual survival of 27 European passerines, we can predict survival of European dippers using only body mass.
+
+--
+
++ For dippers, body mass is 59.8g, therefore $\phi = 0.57$ with $\text{sd} = 0.073$.
+
+--
+
++ Assuming an informative prior $\phi_{prior} \sim \text{Normal}(0.57,0.073^2)$.
+
+--
+
++ Mean posterior $\phi_{posterior} = 0.56$ with credible interval $[0.52, 0.60]$.
+
+--
+
++ No increase of precision in posterior inference.
+
+---
+# How to incorporate prior information?
+
+--
+
++ Now if you had only the three first years of data, what would have happened?
+
+--
+
++ Width of credible interval is 0.47 (vague prior) vs. 0.30 (informative prior).
+
+--
+
++ Huge increase of precision in posterior inference ($40\%$ gain)!
+
++ Compare \textcolor{blue}{vague} vs. \textcolor{red}{informative} prior
+
+<!-- surv~dnorm(0.57,187.6) # Norm(0.57,sd=0.073) ; precision = 1/var = 1/0.073^2 -->
+
+---
+# Prior elicitation via moment matching
+
+--
+
++ Remember the Beta distribution
+
+--
+
++ Recall that the Beta distribution is a continuous distribution with values between 0 and 1. Useful for modelling survival or detection probabilities. 
+
+--
+
++ If $X \sim Beta(\alpha,\beta)$, then the first and second moments of $X$ are:
+
+$$\mu = \text{E}(X) = \frac{\alpha}{\alpha + \beta}$$
+
+$$\sigma^2 = \text{Var}(X) = \frac{\alpha\beta}{(\alpha + \beta)^2 (\alpha + \beta + 1)}$$
+
+---
+# Moment matching
+
++ In the capture-recapture example, we know a priori that the mean of the probability we're interested in is $\mu = 0.57$ and its variance is $\sigma^2 = 0.073^2$.
+
+--
+
++ Parameters $\mu$ and $\sigma^2$ are seen as the moments of a $Beta(\alpha,\beta)$ distribution.
+
+---
+
++ Now we look for values of $\alpha$ and $\beta$ that match the observed moments of the Beta distribution ($\mu$ and $\sigma^2$).
+
+--
+
++ We need another set of equations:
+
+$$\alpha = \bigg(\frac{1-\mu}{\sigma^2}- \frac{1}{\mu} \bigg)\mu^2$$
+
+$$\beta = \alpha \bigg(\frac{1}{\mu}-1\bigg)$$
+
+--
+
++ For our model, that means:
+
+```{r echo = TRUE}
+(alpha <- ( (1 - 0.57)/(0.073*0.073) - (1/0.57) )*0.57^2)
+(beta <- alpha * ( (1/0.57) - 1))
+```
+
+--
+
++ Now use $\phi_{prior} \sim \text{Beta}(\alpha = 25.6,\beta = 19.3)$ instead of $\phi_{prior} \sim \text{Normal}(0.57,0.073^2)$
+
+---
+# Prior predictive checks
+
+---
+## Linear regression
+
+--
+
+.pull-left[
+
+Unreasonable prior $\beta \sim N(0, 1000^2)$
+
+```{r echo=1, fig.height=3, fig.width=3, fig.align='left', echo = FALSE}
+plot(density(rnorm(1000, 0, 1000)),   
+     main="", xlab="Height (m)")
+```
+]
+
+--
+
+.pull-right[
+
+Reasonable prior $\beta \sim N(2, 0.5^2)$
+
+```{r echo=1, fig.height=3, fig.width=3, fig.align='left', echo = FALSE}
+plot(density(rnorm(1000, 2, 0.5)),   
+      main="", xlab="Height (m)")
+```
+]
+
+---
+## Logistic regression
+
+--
+
+.pull-left[
+
+Unreasonable
+$\text{logit}(\phi) = \beta \sim N(0, 10^2)$
+
+```{r echo=1, fig.height=3, fig.width=3, fig.align='left', echo = FALSE}
+plot(density(plogis(rnorm(1000,0,10)), 
+from = 0, to = 1), main='', xlab='survival')
+```
+]
+
+--
+
+.pull-right[
+
+Reasonable 
+$\text{logit}(\phi) = \beta \sim N(0, 1.5^2)$
+
+```{r echo=1, fig.height=3, fig.width=3, fig.align='left', echo = FALSE}
+plot(density(plogis(rnorm(1000,0,1.5)), 
+from = 0, to = 1), main='', xlab='survival')
+```
+]
+
+
 
 
 ---
