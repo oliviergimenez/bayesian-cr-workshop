@@ -721,7 +721,7 @@ y %>%
 
 
 ---
-# Hidden Markov model
+# Hidden Markov model for survival
 
 .center.nogap[
 ```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}

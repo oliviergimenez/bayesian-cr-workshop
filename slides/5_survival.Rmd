@@ -61,10 +61,88 @@ knitr::include_graphics("img/king.png")
 ??? Bayesian uptake
 
 ---
-# What is the CJS model exactly? 
+### What we've seen so far 
 
-+ Where we're at so far?
-+ Time-variation
+--
+
+.center.nogap[
+```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+\usetikzlibrary{arrows, fit, positioning, automata}
+\begin{tikzpicture}[node distance = 2cm]
+\tikzset{state/.style = {circle, draw, minimum size = 30pt, scale = 3, line width=1pt}}
+\node [state,fill=lightgray!75] (6) [] {$1$};
+\node [state,fill=lightgray!75] (5) [left = 20mm of 6] {$1$};
+\node [state,fill=lightgray!75] (4) [left = 20mm of 5] {$1$};
+\node [state,fill=lightgray!75] (3) [left = 20mm of 4] {$1$};
+\node [state,fill=lightgray!75] (7) [right = 20mm of 6] {$2$};
+\node [state,fill=lightgray!75] (8) [right = 20mm of 7] {$2$};
+\node [state,fill=lightgray!75] (9) [right = 20mm of 8] {$\cdots$};
+\node [state,fill=white] (16) [above = 20mm of 6] {$1$};
+\node [state,fill=white] (15) [above = 20mm of 5] {$2$};
+\node [state,fill=white] (14) [above = 20mm of 4] {$1$};
+\node [state,fill=white] (17) [above = 20mm of 7] {$1$};
+\node [state,fill=white] (18) [above = 20mm of 8] {$1$};
+\draw[->,black, line width=0.25mm,-latex] (3) -- node[above=3mm, align=center] {\huge $\varphi$} (4);
+\draw[->,black, line width=0.25mm,-latex] (4) -- node[above=3mm, align=center] {\huge $\varphi$} (5);
+\draw[->,black, line width=0.25mm,-latex] (5) -- node[above=3mm, align=center] {\huge $\varphi$} (6);
+\draw[->,black, line width=0.25mm,-latex] (6) -- node[above=3mm, align=center] {\huge $1 - \varphi$} (7);
+\draw[->,black, line width=0.25mm,-latex] (7) -- node[above=3mm, align=center] {\huge $1$} (8);
+\draw[->,black, line width=0.25mm,-latex] (8) -- node[above=3mm, align=center] {\huge $1$} (9);
+\draw[->,black, line width=0.25mm,-latex] (4) -- node[left=3mm, align=center] {\huge $1 - p$} (14);
+\draw[->,black, line width=0.25mm,-latex] (5) -- node[left=3mm, align=center] {\huge $p$} (15);
+\draw[->,black, line width=0.25mm,-latex] (6) -- node[left=3mm, align=center] {\huge $1 - p$} (16);
+\draw[->,black, line width=0.25mm,-latex] (7) -- node[left=3mm, align=center] {\huge $1$} (17);
+\draw[->,black, line width=0.25mm,-latex] (8) -- node[left=3mm, align=center] {\huge $1$} (18);
+\end{tikzpicture}
+```
+]
+
++ For states (in gray), $z = 1$ is alive, $z = 2$ is dead.
+
++ For observations (in white), $y = 1$ is non-detected, $y = 2$ is detected
+
+---
+### In the CJS model, survival and recapture are time-varying
+
+--
+
+.center.nogap[
+```{r, engine = 'tikz', echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+\usetikzlibrary{arrows, fit, positioning, automata}
+\begin{tikzpicture}[node distance = 2cm]
+\tikzset{state/.style = {circle, draw, minimum size = 30pt, scale = 3, line width=1pt}}
+\node [state,fill=lightgray!75] (6) [] {$1$};
+\node [state,fill=lightgray!75] (5) [left = 20mm of 6] {$1$};
+\node [state,fill=lightgray!75] (4) [left = 20mm of 5] {$1$};
+\node [state,fill=lightgray!75] (3) [left = 20mm of 4] {$1$};
+\node [state,fill=lightgray!75] (7) [right = 20mm of 6] {$2$};
+\node [state,fill=lightgray!75] (8) [right = 20mm of 7] {$2$};
+\node [state,fill=lightgray!75] (9) [right = 20mm of 8] {$\cdots$};
+\node [state,fill=white] (16) [above = 20mm of 6] {$1$};
+\node [state,fill=white] (15) [above = 20mm of 5] {$2$};
+\node [state,fill=white] (14) [above = 20mm of 4] {$1$};
+\node [state,fill=white] (17) [above = 20mm of 7] {$1$};
+\node [state,fill=white] (18) [above = 20mm of 8] {$1$};
+\draw[->,black, line width=0.25mm,-latex] (3) -- node[above=3mm, align=center] {\huge $\varphi_1$} (4);
+\draw[->,black, line width=0.25mm,-latex] (4) -- node[above=3mm, align=center] {\huge $\varphi_2$} (5);
+\draw[->,black, line width=0.25mm,-latex] (5) -- node[above=3mm, align=center] {\huge $\varphi_3$} (6);
+\draw[->,black, line width=0.25mm,-latex] (6) -- node[above=3mm, align=center] {\huge $1 - \varphi_4$} (7);
+\draw[->,black, line width=0.25mm,-latex] (7) -- node[above=3mm, align=center] {\huge $1$} (8);
+\draw[->,black, line width=0.25mm,-latex] (8) -- node[above=3mm, align=center] {\huge $1$} (9);
+\draw[->,black, line width=0.25mm,-latex] (4) -- node[left=3mm, align=center] {\huge $1 - p_2$} (14);
+\draw[->,black, line width=0.25mm,-latex] (5) -- node[left=3mm, align=center] {\huge $p_3$} (15);
+\draw[->,black, line width=0.25mm,-latex] (6) -- node[left=3mm, align=center] {\huge $1 - p_4$} (16);
+\draw[->,black, line width=0.25mm,-latex] (7) -- node[left=3mm, align=center] {\huge $1$} (17);
+\draw[->,black, line width=0.25mm,-latex] (8) -- node[left=3mm, align=center] {\huge $1$} (18);
+\end{tikzpicture}
+```
+]
+
++ Survival probability is $\phi_t = \Pr(z_{t+1} = 1 | z_t = 1)$.
+
++ Recapture (detection) probability is $p_t = \Pr(y_{t} = 1 | z_t = 1)$.
+
++ Accounts for variation in environmental conditions (survival) or in the sampling effort (detection). 
 
 ---
 # Model selection
@@ -141,6 +219,27 @@ $$\textrm{WAIC} = -2 \sum_{i = 1}^n \log E[\Pr(y_i \mid \theta)] +
 + Mixture here, and later on as an HMM.
 
 ---
+## Capture-recapture models rely on assumptions
+
+--
+
++ Design
+    + No mark lost
+    + Identity of individuals recorded without error (no false positives)
+    + Captured individuals are a random sample
+
+--
+
++ Model
+    + Homogeneity of survival and recapture probabilities
+    + Independence between individuals (overdispersion)
+
+--
+
++ Note: Use goodness-of-fit tests to assess assumptions (Pradel et al. 2005) 
+
+
+---
 # GOF
 
 + Predictive prior/posterior checks bof
@@ -148,7 +247,7 @@ $$\textrm{WAIC} = -2 \sum_{i = 1}^n \log E[\Pr(y_i \mid \theta)] +
 
 
 ---
-# Why Bayes? Incorporating information through prior
+## Why Bayes? Incorporating information through prior
 
 ---
 # How to incorporate prior information? 
@@ -322,6 +421,33 @@ from = 0, to = 1), main='', xlab='survival')
 
 + prior-posterior overlap
 
+---
+## What does survival actually mean in capture-recapture ?
+
+--
+
++ Survival refers to the study area
+
+--
+
++ Mortality and permanent emigration are confounded
+
+--
+
++ Therefore we estimate apparent survival, not true survival
+
+--
+
++ Apparent survival probability = true survival × study area fidelity
+
+--
+
++ Consequently, apparent survival < true survival unless study area fidelity = 1
+
+--
+
++ Note: Combine with recoveries (Lebreton et al. 1999), or go spatial (Gilroy et al.
+2012, Schaub & Royle 2014)
 
 ---
 ## Further reading

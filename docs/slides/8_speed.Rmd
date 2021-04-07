@@ -30,7 +30,7 @@ library(nimble)
 
 + Simple pieces of advice (good inits, known states as in Kéry and Schaub, simpler models, simulations, block sampling, etc...)
 + Vectorise to speed up.
-+ Marginalization (use dHMM) w/ NimbleEcology and Turek's 2016 paper.
++ Marginalization (use dHMM) w/ NimbleEcology and Turek's 2016 paper. Redo some of the previous examples. 
 + Encounter histories pooling
 + m-array formulation of the likelihood
 

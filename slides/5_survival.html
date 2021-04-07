@@ -51,10 +51,32 @@ class: center, middle, title-slide
 ??? Bayesian uptake
 
 ---
-# What is the CJS model exactly? 
+### What we've seen so far 
 
-+ Where we're at so far?
-+ Time-variation
+--
+
+.center.nogap[
+![](5_survival_files/figure-html/unnamed-chunk-4-1.svg)&lt;!-- --&gt;
+]
+
++ For states (in gray), `\(z = 1\)` is alive, `\(z = 2\)` is dead.
+
++ For observations (in white), `\(y = 1\)` is non-detected, `\(y = 2\)` is detected
+
+---
+### In the CJS model, survival and recapture are time-varying
+
+--
+
+.center.nogap[
+![](5_survival_files/figure-html/unnamed-chunk-5-1.svg)&lt;!-- --&gt;
+]
+
++ Survival probability is `\(\phi_t = \Pr(z_{t+1} = 1 | z_t = 1)\)`.
+
++ Recapture (detection) probability is `\(p_t = \Pr(y_{t} = 1 | z_t = 1)\)`.
+
++ Accounts for variation in environmental conditions (survival) or in the sampling effort (detection). 
 
 ---
 # Model selection
@@ -131,6 +153,27 @@ with `\(L\)` the likelihood and `\(K\)` the number of parameters `\(\theta_i\)`.
 + Mixture here, and later on as an HMM.
 
 ---
+## Capture-recapture models rely on assumptions
+
+--
+
++ Design
+    + No mark lost
+    + Identity of individuals recorded without error (no false positives)
+    + Captured individuals are a random sample
+
+--
+
++ Model
+    + Homogeneity of survival and recapture probabilities
+    + Independence between individuals (overdispersion)
+
+--
+
++ Note: Use goodness-of-fit tests to assess assumptions (Pradel et al. 2005) 
+
+
+---
 # GOF
 
 + Predictive prior/posterior checks bof
@@ -138,7 +181,7 @@ with `\(L\)` the likelihood and `\(K\)` the number of parameters `\(\theta_i\)`.
 
 
 ---
-# Why Bayes? Incorporating information through prior
+## Why Bayes? Incorporating information through prior
 
 ---
 # How to incorporate prior information? 
@@ -272,7 +315,7 @@ with `\(L\)` the likelihood and `\(K\)` the number of parameters `\(\theta_i\)`.
 
 Unreasonable prior `\(\beta \sim N(0, 1000^2)\)`
 
-&lt;img src="5_survival_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="5_survival_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 --
@@ -281,7 +324,7 @@ Unreasonable prior `\(\beta \sim N(0, 1000^2)\)`
 
 Reasonable prior `\(\beta \sim N(2, 0.5^2)\)`
 
-&lt;img src="5_survival_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="5_survival_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -294,7 +337,7 @@ Reasonable prior `\(\beta \sim N(2, 0.5^2)\)`
 Unreasonable
 `\(\text{logit}(\phi) = \beta \sim N(0, 10^2)\)`
 
-&lt;img src="5_survival_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="5_survival_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 --
@@ -304,7 +347,7 @@ Unreasonable
 Reasonable 
 `\(\text{logit}(\phi) = \beta \sim N(0, 1.5^2)\)`
 
-&lt;img src="5_survival_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="5_survival_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -312,6 +355,33 @@ Reasonable
 
 + prior-posterior overlap
 
+---
+## What does survival actually mean in capture-recapture ?
+
+--
+
++ Survival refers to the study area
+
+--
+
++ Mortality and permanent emigration are confounded
+
+--
+
++ Therefore we estimate apparent survival, not true survival
+
+--
+
++ Apparent survival probability = true survival × study area fidelity
+
+--
+
++ Consequently, apparent survival &lt; true survival unless study area fidelity = 1
+
+--
+
++ Note: Combine with recoveries (Lebreton et al. 1999), or go spatial (Gilroy et al.
+2012, Schaub &amp; Royle 2014)
 
 ---
 ## Further reading
