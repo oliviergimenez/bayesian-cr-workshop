@@ -25,14 +25,46 @@ library(here)
 library(nimble)
 ```
 
-## Plan
+![](img/lebreton.png)
+
+---
+### History of the Cormack-Jolly-Seber (CJS) model
+
+--
+
+<font size="5">S.T. Buckland (2016). A Conversation with Richard M. Cormack. Statistical Science 31: 142-150.</font>
+
+--
+
+.pull-left[
+```{r, echo=FALSE, out.width="80%"}
+knitr::include_graphics("img/cormack-left.png")
+```
+]
+
+--
+
+.pull-right[
+```{r, echo=FALSE, out.width="80%"}
+knitr::include_graphics("img/cormack-right.png")
+```
+]
+
+---
+
+.center[
+```{r, echo=FALSE, out.width="70%"}
+knitr::include_graphics("img/king.png")
+```
+]
+
+??? Bayesian uptake
+
+---
+# What is the CJS model exactly? 
+
++ Where we're at so far?
 + Time-variation
-+ Model selection w/ wAIC
-+ Include individual and temporal covariates (continuous, discrete; sex, age, etc)
-+ Random effects
-+ Why Bayes? Incorporating information through prior
-+ What to do w/ missing values (discretization and multistate, fill in NAs Bonner, Langrock)
-+ Predictive prior/posterior checks
 
 ---
 # Model selection
@@ -90,6 +122,33 @@ $$\textrm{WAIC} = -2 \sum_{i = 1}^n \log E[\Pr(y_i \mid \theta)] +
 
 + More in this video <https://www.youtube.com/watch?v=vSjL2Zc-gEQ> by R. McElreath.
 
+---
+# Embrace heterogeneity
+
++ Include individual and temporal covariates (continuous, discrete; sex, age, etc)
++ What about time-varying individual covariates: missing value issue
+
+---
+# Missing values
+
++ What to do w/ missing values (discretization and multistate, fill in NAs Bonner, Langrock)
+
+
+---
+# Unobserved heterogeneity
+
++ Random effects
++ Mixture here, and later on as an HMM.
+
+---
+# GOF
+
++ Predictive prior/posterior checks bof
++ We have all what we need
+
+
+---
+# Why Bayes? Incorporating information through prior
 
 ---
 # How to incorporate prior information? 
@@ -258,11 +317,19 @@ from = 0, to = 1), main='', xlab='survival')
 ```
 ]
 
+---
+# Parameter-redundancy issue
 
++ prior-posterior overlap
 
 
 ---
 ## Further reading
 
-+ ref 1
-+ ref 2
++ Gimenez 2007, 
+
++ Royle et al. 2008.
+
++ Lebreton et al. 1992. 
+
++ King et al. 2012. 

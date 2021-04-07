@@ -1016,41 +1016,14 @@ library(MCMCvis)
 MCMCsummary(mcmc.output, round = 2)
 ```
 
-True survival is $\phi = 0.8$ and detection is $p = 0.6$.
-
-
-
----
-## A bit of history
-
-+ Cormack-Jolly-Seber model. 
-
-+ Faut-il expliquer que ce sont des données simulées?
-
-+ Probabilities à la main.
-
-+ Histoire de Cormack et Jolly dans même bâtiment. Num spécial Stat science et interviews. 
-
-+ Monographie Lebreton. 
-
-+ state-space which is HMM. Bayes uptake.  
+The data is simulated, with true survival $\phi = 0.8$ and detection $p = 0.6$.
 
 
 ---
 ## Further reading
 
-+ Zucchini et al. (2008, 2016) Hidden Markov Models for Time Series: An Introduction Using R
++ Zucchini, MacDonald and Langrock (2016) Hidden Markov Models for Time Series: An Introduction Using R (2nd ed). Chapman and Hall/CRC. 
 
-+ McClintock et al. (2020) Uncovering ecological state dynamics with hidden Markov models
-
-+ Pradel 2005. 
-
-+ Gimenez 2007, 2012.
-
-+ Royle et al. 2008.
-
-+ Lebreton et al. 1992. 
-
-+ King et al. 2012. 
++ McClintock, B.T., Langrock, R., Gimenez, O., Cam, E., Borchers, D.L., Glennie, R. and Patterson, T.A. (2020), Uncovering ecological state dynamics with hidden Markov models. Ecology Letters, 23: 1878-1903. 
 
 

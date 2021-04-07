@@ -14,21 +14,47 @@ class: center, middle, title-slide
 
 # Dead or alive: Survival estimation
 ### The team
-### last updated: 2021-04-06
+### last updated: 2021-04-07
 
 ---
 
 
 
 
-## Plan
+![](img/lebreton.png)
+
+---
+### History of the Cormack-Jolly-Seber (CJS) model
+
+--
+
+&lt;font size="5"&gt;S.T. Buckland (2016). A Conversation with Richard M. Cormack. Statistical Science 31: 142-150.&lt;/font&gt;
+
+--
+
+.pull-left[
+&lt;img src="img/cormack-left.png" width="80%" /&gt;
+]
+
+--
+
+.pull-right[
+&lt;img src="img/cormack-right.png" width="80%" /&gt;
+]
+
+---
+
+.center[
+&lt;img src="img/king.png" width="70%" /&gt;
+]
+
+??? Bayesian uptake
+
+---
+# What is the CJS model exactly? 
+
++ Where we're at so far?
 + Time-variation
-+ Model selection w/ wAIC
-+ Include individual and temporal covariates (continuous, discrete; sex, age, etc)
-+ Random effects
-+ Why Bayes? Incorporating information through prior
-+ What to do w/ missing values (discretization and multistate, fill in NAs Bonner, Langrock)
-+ Predictive prior/posterior checks
 
 ---
 # Model selection
@@ -86,6 +112,33 @@ with `\(L\)` the likelihood and `\(K\)` the number of parameters `\(\theta_i\)`.
 
 + More in this video &lt;https://www.youtube.com/watch?v=vSjL2Zc-gEQ&gt; by R. McElreath.
 
+---
+# Embrace heterogeneity
+
++ Include individual and temporal covariates (continuous, discrete; sex, age, etc)
++ What about time-varying individual covariates: missing value issue
+
+---
+# Missing values
+
++ What to do w/ missing values (discretization and multistate, fill in NAs Bonner, Langrock)
+
+
+---
+# Unobserved heterogeneity
+
++ Random effects
++ Mixture here, and later on as an HMM.
+
+---
+# GOF
+
++ Predictive prior/posterior checks bof
++ We have all what we need
+
+
+---
+# Why Bayes? Incorporating information through prior
 
 ---
 # How to incorporate prior information? 
@@ -219,7 +272,7 @@ with `\(L\)` the likelihood and `\(K\)` the number of parameters `\(\theta_i\)`.
 
 Unreasonable prior `\(\beta \sim N(0, 1000^2)\)`
 
-&lt;img src="5_survival_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="5_survival_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 --
@@ -228,7 +281,7 @@ Unreasonable prior `\(\beta \sim N(0, 1000^2)\)`
 
 Reasonable prior `\(\beta \sim N(2, 0.5^2)\)`
 
-&lt;img src="5_survival_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="5_survival_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -241,7 +294,7 @@ Reasonable prior `\(\beta \sim N(2, 0.5^2)\)`
 Unreasonable
 `\(\text{logit}(\phi) = \beta \sim N(0, 10^2)\)`
 
-&lt;img src="5_survival_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="5_survival_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 --
@@ -251,17 +304,25 @@ Unreasonable
 Reasonable 
 `\(\text{logit}(\phi) = \beta \sim N(0, 1.5^2)\)`
 
-&lt;img src="5_survival_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="5_survival_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
+---
+# Parameter-redundancy issue
 
++ prior-posterior overlap
 
 
 ---
 ## Further reading
 
-+ ref 1
-+ ref 2
++ Gimenez 2007, 
+
++ Royle et al. 2008.
+
++ Lebreton et al. 1992. 
+
++ King et al. 2012. 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
