@@ -23,6 +23,7 @@ theme_set(theme_light())
 update_geom_defaults("point", list(size = 2)) 
 library(here)
 library(nimble)
+library(MCMCvis)
 ```
 
 ![](img/lebreton.png)
@@ -142,19 +143,367 @@ knitr::include_graphics("img/king.png")
 
 + Recapture (detection) probability is $p_t = \Pr(y_{t} = 1 | z_t = 1)$.
 
-+ Accounts for variation in environmental conditions (survival) or in the sampling effort (detection). 
++ Accounts for variation in e.g. environmental conditions (survival) or sampling effort (detection). 
+
+---
+## The famous Dipper example
+
+.center[
+.pull-left[
+```{r, echo=FALSE, out.width="60%", fig.cap="White-throated Dipper (Cinclus cinclus)"}
+knitr::include_graphics(here::here("slides/img/Marzo_BaguesMance.jpg"))
+```
+]
+]
+
+--
+
+.pull-right[
+```{r, echo=FALSE, fig.cap="Gilbert Marzolin", out.width="60%"}
+knitr::include_graphics(here::here("slides/img/Marzocuissardes.jpg"))
+```
+]
+
+---
+## 294 birds captured and recaptured between 1981 and 1987 with known sex and wing length
+
+.center.nogap[
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+dipper <- read_csv(here::here("slides", "dat", "dipper.csv"))
+dipper %>%  
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "400px")
+y <- dipper %>%
+  select(year_1981:year_1987) %>%
+  as.matrix()
+```
+]
+
+---
+class: middle
+
+## Back to Nimble. 
+
+---
+### Our model so far $(\phi, p)$
+
+.tiny-font[
+```{r eval = FALSE}
+hmm.phip <- nimbleCode({
+  phi ~ dunif(0, 1) # prior survival
+  p ~ dunif(0, 1) # prior detection
+  # likelihood
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+]
+
+---
+### Our model so far $(\phi, p)$
+
+```{r echo = FALSE}
+load(here::here("slides","dat","dipper.RData"))
+MCMCsummary(object = mcmc.phip, params = c("phi","p"), round = 2)
+```
+
+
+---
+### The CJS model $(\phi_t, p_t)$
+
+--
+
+.tiny-font[
+```{r eval=FALSE}
+hmm.phitpt <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    phi[t] ~ dunif(0, 1) # prior survival #<<
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
+    p[t] ~ dunif(0, 1) # prior detection #<<
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t)
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t)
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  }
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])
+    }
+  }
+})
+```
+]
+
+---
+### The CJS model $(\phi_t, p_t)$
+
+
+
+.tiny-font[
+```{r eval=FALSE}
+hmm.phitpt <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){ #<<
+    phi[t] ~ dunif(0, 1) # prior survival
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
+    p[t] ~ dunif(0, 1) # prior detection
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t)
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t)
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  } #<<
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])
+    }
+  }
+})
+```
+]
+
+
+---
+### The CJS model $(\phi_t, p_t)$
+
+
+
+.tiny-font[
+```{r eval=FALSE}
+hmm.phitpt <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    phi[t] ~ dunif(0, 1) # prior survival
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1) #<<
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1) #<<
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1) #<<
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1) #<<
+    p[t] ~ dunif(0, 1) # prior detection
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t)
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t)
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  }
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])
+    }
+  }
+})
+```
+]
+
+---
+### The CJS model $(\phi_t, p_t)$
+
+
+
+.tiny-font[
+```{r eval=FALSE}
+hmm.phitpt <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    phi[t] ~ dunif(0, 1) # prior survival
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1) 
+    p[t] ~ dunif(0, 1) # prior detection
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t) #<<
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t) #<<
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t) #<<
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t) #<<
+  }
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])
+    }
+  }
+})
+```
+]
+
+---
+### The CJS model $(\phi_t, p_t)$
+
+
+
+.tiny-font[
+```{r eval=FALSE}
+hmm.phitpt <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    phi[t] ~ dunif(0, 1) # prior survival
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1) 
+    p[t] ~ dunif(0, 1) # prior detection
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t)
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t)
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  }
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1]) #<<
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1]) #<<
+    }
+  }
+})
+```
+]
+
+---
+### The CJS model $(\phi_t, p_t)$
+
+```{r echo = FALSE}
+load(here::here("slides","dat","dipper.RData"))
+MCMCsummary(object = mcmc.phitpt, params = c("phi","p"), round = 2)
+```
+
+
+---
+### Time-varying survival $(\phi_t, p)$
+
+.tiny-font[
+```{r eval=FALSE}
+hmm.phitp <- nimbleCode({
+  for (t in 1:(T-1)){
+    phi[t] ~ dunif(0, 1) # prior survival
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
+  }
+  p ~ dunif(0, 1) # prior detection
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+]
+
+---
+### Time-varying survival $(\phi_t, p)$
+
+```{r echo = FALSE}
+load(here::here("slides","dat","dipper.RData"))
+MCMCsummary(object = mcmc.phitp, params = c("phi","p"), round = 2)
+```
+
+
+---
+### Time-varying detection $(\phi, p_t)$
+
+.tiny-font[
+```{r eval=FALSE}
+hmm.phipt <- nimbleCode({
+  phi ~ dunif(0, 1) # prior survival
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    p[t] ~ dunif(0, 1) # prior detection
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t)
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t)
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  }
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])
+    }
+  }
+})
+```
+]
+
+---
+### Time-varying detection $(\phi, p_t)$
+
+```{r echo = FALSE}
+load(here::here("slides","dat","dipper.RData"))
+MCMCsummary(object = mcmc.phipt, params = c("phi","p"), round = 2)
+```
+
+
+---
+class: middle
+
+## How to select a best model?
 
 ---
 # Model selection
 
----
-## How to select a best model?
+--
 
-+ Is there any effect of rain or temperature or both on breeding success?
++ Which of the four models above is best supported by the data?
+
+--
 
 + The proportion of explained variance $R^2$ is problematic, because the more variables you have, the bigger $R^2$ is.
 
-+ Idea: **penalize models with too many parameters**.
+--
+
++ The idea is to penalize models with too many parameters.
 
 ---
 ## Akaike information criterion (AIC)
@@ -168,14 +517,14 @@ with $L$ the likelihood and $K$ the number of parameters $\theta_i$.
 
 $$\text{AIC} = {\color{red}{- 2 \log(L(\hat{\theta}_1,\ldots,\hat{\theta}_K))}} + 2 K$$
 
-\textcolor{red}{A measure of goodness-of-fit of the model to the data}: the more parameters you have, the smaller the deviance is (or the bigger the likelihood is).
+<span style="color: red;">A measure of goodness-of-fit of the model to the data</span>: the more parameters you have, the smaller the deviance is (or the bigger the likelihood is).
 
 ---
 ## Akaike information criterion (AIC)
 
 $$\text{AIC} = - 2 \log(L(\hat{\theta}_1,\ldots,\hat{\theta}_K)) + {\color{red}{2 K}}$$
 
-\textcolor{red}{A penalty}: twice the number of parameters $K$
+<span style="color: red;">A penalty</span>: twice the number of parameters $K$
 
 ---
 ## Akaike information criterion (AIC)
@@ -189,16 +538,76 @@ $$\text{AIC} = - 2 \log(L(\hat{\theta}_1,\ldots,\hat{\theta}_K)) + {\color{red}{
 ---
 ## Bayesian version
 
+--
+
 + Watanabe-Akaike (Widely-Applicable) Information Criteria or WAIC:
 
 $$\textrm{WAIC} = -2 \sum_{i = 1}^n \log E[\Pr(y_i \mid \theta)] + 
                   2 p_\text{WAIC}$$
 
+--
+
 + where $E[p(y_i \mid \theta)]$ is the posterior mean of the likelihood evaluated pointwise at each $i$th observation.
+
+--
 
 + $p_\text{WAIC}$ is a penalty computed using the posterior variance of the likelihood. 
 
+--
+
 + More in this video <https://www.youtube.com/watch?v=vSjL2Zc-gEQ> by R. McElreath.
+
+---
+## How to compute WAIC in Nimble?
+
+--
+
+```{r eval = FALSE}
+mcmc.phitpt <- nimbleMCMC(code = hmm.phitpt, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter,
+                          nburnin = n.burnin, 
+                          nchains = n.chains)
+```
+
+
+---
+## How to compute WAIC in Nimble?
+
+
+
+```{r eval = FALSE}
+mcmc.phitpt <- nimbleMCMC(code = hmm.phitpt, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter,
+                          nburnin = n.burnin, 
+                          nchains = n.chains,
+                          WAIC = TRUE) #<<
+```
+
+
+---
+## Dipper example - continued
+
+```{r echo = FALSE}
+load(here::here("slides","dat","dipper_waic.RData"))
+data.frame(model = c("(phi,p)",
+                     "(phit,p)",
+                     "(phi,pt)",
+                     "(phit,pt)"),
+           WAIC = c(mcmc.phip$WAIC, 
+             mcmc.phitp$WAIC, 
+             mcmc.phipt$WAIC, 
+             mcmc.phitpt$WAIC))
+```
+
+
 
 ---
 # Embrace heterogeneity

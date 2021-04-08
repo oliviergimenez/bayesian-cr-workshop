@@ -313,7 +313,7 @@ $$ P(\alpha, \beta, \sigma \mid \text{data}) = \frac{ P(\text{data} \mid \alpha,
 + In the early 1990s, statisticians rediscovered work from the 1950's in physics.
 
 ```{r, fig.align = 'center', echo = FALSE, out.width = "600cm"}
-knitr::include_graphics(here::here("slides/img","metropolis.png"))
+knitr::include_graphics(here::here("slides","img","metropolis.png"))
 ```
 
 --
