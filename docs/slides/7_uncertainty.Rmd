@@ -31,6 +31,7 @@ library(nimble)
 + Some theory
 + Sex, **breeding** and **disease states**
 + Trap-dependence, **memory**
++ Individual heterogeneity w/ finite mixtures
 
 ---
 ## Further reading

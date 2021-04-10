@@ -17,9 +17,8 @@ output:
 ```{r setup, include=FALSE, echo=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(comment = "")
-
 library(tidyverse)
-theme_set(theme_light())
+theme_set(theme_light(base_size = 14))
 update_geom_defaults("point", list(size = 2)) 
 library(here)
 library(nimble)
@@ -563,6 +562,7 @@ $$\textrm{WAIC} = -2 \sum_{i = 1}^n \log E[\Pr(y_i \mid \theta)] +
 --
 
 ```{r eval = FALSE}
+parameters.to.save <- c("phi", "p")
 mcmc.phitpt <- nimbleMCMC(code = hmm.phitpt, 
                           constants = my.constants,
                           data = my.data,              
@@ -580,6 +580,7 @@ mcmc.phitpt <- nimbleMCMC(code = hmm.phitpt,
 
 
 ```{r eval = FALSE}
+parameters.to.save <- c("phi", "p", "z") #<<
 mcmc.phitpt <- nimbleMCMC(code = hmm.phitpt, 
                           constants = my.constants,
                           data = my.data,              
@@ -607,25 +608,328 @@ data.frame(model = c("(phi,p)",
              mcmc.phitpt$WAIC))
 ```
 
+---
+class: middle
 
+## Can we describe time variation better?
 
 ---
 # Embrace heterogeneity
 
-+ Include individual and temporal covariates (continuous, discrete; sex, age, etc)
-+ What about time-varying individual covariates: missing value issue
+--
+
++ Include temporal covariates, say $x_t$
+
+--
+
++ $\text{logit}(\phi_t) = \beta_1 + \beta_2 x_t$
 
 ---
-# Missing values
 
-+ What to do w/ missing values (discretization and multistate, fill in NAs Bonner, Langrock)
+.tiny-font[
+```{r eval = FALSE}
+hmm.phiflowp <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    logit(phi[t]) <- beta[1] + beta[2] * flow[t] #<<
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
+  }
+  p ~ dunif(0, 1) # prior detection
+  omega[1,1,t] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2,t] <- p        # Pr(alive t -> detected t)
+  omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  beta[1] ~ dnorm(0, 1.5) # prior intercept #<<
+  beta[2] ~ dnorm(0, 1.5) # prior slope #<<
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+]
+
+---
+
+.small-font[
+```{r eval = FALSE}
+# water flow in L/s
+water_flow <- c(443, 1114, 529, 434, 627, 466) # 1981, 1982, ..., 1987
+water_flow_st <- (water_flow - mean(water_flow))/sd(water_flow) #<<
+```
+]
+
+--
+
+.small-font[
+```{r eval = FALSE}
+my.constants <- list(N = nrow(y), 
+                     T = ncol(y), 
+                     first = first, 
+                     flow = water_flow_st) #<<
+
+initial.values <- function() list(beta = rnorm(2,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+
+parameters.to.save <- c("beta", "p", "phi")
+```
+]
+
+---
+### Regression intercept and slope
+
+.center[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides/dat/dipperflow.RData"))
+MCMCplot(object = mcmc.phiflowp, params = "beta", ISB = TRUE)
+```
+]
+
+---
+### Time-dependent (covariate constrained) survival probability estimates
+
+.center[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides/dat/dipperflow.RData"))
+MCMCplot(object = mcmc.phiflowp, params = "phi", ISB = TRUE)
+```
+]
+
+---
+# Embrace heterogeneity
+
+
++ Include temporal covariates, say $x_t$
+
++ $\text{logit}(\phi_t) = \beta_1 + \beta_2 x_t$
+
+--
+
++ If temporal variation not fully explained by covariates, add random effects
+
+--
+
++ $\text{logit}(\phi_t) = \beta_1 + \beta_2 x_t + \varepsilon_t, \; \varepsilon_t \sim N(0,\sigma^2)$
+
+---
+
+```{r eval = FALSE}
+hmm.phiflowREp <- nimbleCode({
+  for (t in 1:(T-1)){
+    logit(phi[t]) <- beta[1] + beta[2] * flow[t] + eps[t] 
+    eps[t] ~ dnorm(0, sd = sdeps) 
+    ...  
+  }
+  sdeps ~ dunif(0,10) 
+  ...
+```
 
 
 ---
-# Unobserved heterogeneity
+# What about individual heterogeneity?
 
-+ Random effects
-+ Mixture here, and later on as an HMM.
+--
+
++ Discrete covariate like, e.g., sex
+
+--
+
++ Continuous covariate like, e.g., mass or size
+
+---
+## Sex and wing length in Dipper
+
+.center.nogap[
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+dipper %>%  
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "400px")
+```
+]
+
+---
+# Sex effect
+
+--
+
++ Let's use a covariate $\text{sex}$ that takes value 0 if male, and 1 if female
+
+--
+
++ And write $\text{logit}(\phi_i) = \beta_1 + \beta_2 \; \text{sex}_i$ for bird $i$
+
+--
+
++ Then male survival is 
+
+$$\text{logit}(\phi_i) = \beta_1$$
+
+--
+
++ And female survival is 
+
+$$\text{logit}(\phi_i) = \beta_1 + \beta_2$$
+
+
+---
+### Nimble implementation with sex as a covariate
+
+.tiny-font[
+```{r eval = FALSE}
+hmm.phisexp <- nimbleCode({
+...
+  for (i in 1:N){ #<<
+    logit(phi[i]) <- beta[1] + beta[2] * sex[i] #<<
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1        # Pr(dead t -> dead t+1)
+  } #<<
+  beta[1] ~ dnorm(mean = 0, sd = 1.5) #<<
+  beta[2] ~ dnorm(mean = 0, sd = 1.5) #<<
+  phi_male <- 1/(1+exp(-beta[1])) #<<
+  phi_female <- 1/(1+exp(-(beta[1]+beta[2]))) #<<
+...
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i]) #<<
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+]
+
+---
+class: middle
+
+```{r echo = FALSE}
+load(here::here("slides/dat/phisexp.RData"))
+MCMCsummary(object = mcmc.phisexp, round = 2)
+```
+
+
+---
+### Nimble implementation with nested indexing
+
+--
+
++ Let's use a covariate $\text{sex}$ that takes value 1 if male, and 2 if female
+
+--
+
+```{r eval = FALSE}
+...
+for (i in 1:N){
+  phi[i] <- beta[sex[i]] #<<
+  gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+  gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+  gamma[2,1,i] <- 0           # Pr(dead t -> alive t+1)
+  gamma[2,2,i] <- 1           # Pr(dead t -> dead t+1)
+}
+beta[1] ~ dunif(0,1) #<<
+beta[2] ~ dunif(0,1) #<<
+...
+```
+
+---
+class: middle
+
+```{r echo = FALSE}
+load(here::here("slides/dat/phisexpni.RData"))
+MCMCsummary(object = mcmc.phisexp.ni, round = 2)
+```
+
+
+---
+### What about wing length?
+
+--
+
+```{r eval = FALSE}
+...  
+  for (i in 1:N){ #<<
+    logit(phi[i]) <- beta[1] + beta[2] * winglength[i] #<<
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1        # Pr(dead t -> dead t+1)
+  }
+  beta[1] ~ dnorm(mean = 0, sd = 1.5) #<<
+  beta[2] ~ dnorm(mean = 0, sd = 1.5) #<<
+...
+```
+
+
+
+---
+### Wing length
+
+.center[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides/dat/phiwingp.RData"))
+beta1 <- c(mcmc.phiwlp$chain1[,'beta[1]'], mcmc.phiwlp$chain2[,'beta[1]'])
+beta2 <- c(mcmc.phiwlp$chain1[,'beta[2]'], mcmc.phiwlp$chain2[,'beta[2]'])
+wing.length.st <- as.vector(scale(dipper$wing_length))
+predicted_survival <- matrix(NA, 
+                             nrow = length(beta1), 
+                             ncol = length(wing.length.st))
+for (i in 1:length(beta1)){
+  for (j in 1:length(wing.length.st)){
+    predicted_survival[i,j] <- plogis(beta1[i] + beta2[i] * wing.length.st[j])
+  }
+}
+mean_survival <- apply(predicted_survival, 2, mean)
+lci <- apply(predicted_survival, 2, quantile, prob = 2.5/100)
+uci <- apply(predicted_survival, 2, quantile, prob = 97.5/100)
+ord <- order(wing.length.st)
+df <- data.frame(wing_length = wing.length.st[ord],
+                 survival = mean_survival[ord],
+                 lci = lci[ord],
+                 uci = uci[ord])
+df %>%
+  ggplot() + 
+  aes(x = wing_length, y = survival) + 
+  geom_line() + 
+  geom_ribbon(aes(ymin = lci, ymax = uci), fill = "grey70", alpha = 0.5) + 
+  ylim(0,1) + 
+  labs(x = "wing length", y = "estimated survival")
+```
+]
+
+---
+## What if covariates vary with individual and time?
+
+--
+
++ Think of age for example; covariate or nested indexing works fine <span>&#8212;</span> see live demo
+
+--
+
++ Now, think of body size across life
+
+--
+
++ Problem is we cannot record size when animal is non-detected
+
+--
+
++ Discretize in small, medium and large and treat as a state <span>&#8212;</span> more later
+
+--
+
++ Assume a model for covariate and fill in missing values (work by S. Bonner, R. Langrock)
 
 ---
 ## Capture-recapture models rely on assumptions
@@ -645,34 +949,61 @@ data.frame(model = c("(phi,p)",
 
 --
 
-+ Note: Use goodness-of-fit tests to assess assumptions (Pradel et al. 2005) 
++ Test validity of assumptions
+    + These assumptions should be valid, whatever inferential framework
+    + Use goodness-of-fit tests <span>&#8212;</span> Pradel et al. (2005)
+    + `R` implementation with [package `R2ucare`](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13014)
 
 
 ---
-# GOF
-
-+ Predictive prior/posterior checks bof
-+ We have all what we need
-
-
----
-## Why Bayes? Incorporating information through prior
+## Why Bayes?
 
 ---
 # How to incorporate prior information? 
+
+--
 
 + So far, we have assumed a vague prior:
 
 $$\phi_{prior} \sim \text{Beta}(1,1) = \text{Uniform}(0,1)$$
 
-+ How to incorporate prior information?
+--
 
----
-# How to incorporate prior information?
++ With no information, mean posterior survival is $\phi_{posterior} = 0.56$ 
 
 --
 
-+ If no information, mean posterior survival is $\phi_{posterior} = 0.56$ with credible interval $[0.51,0.61]$.
++ With credible interval $[0.52,0.62]$
+
+---
+
+.center[
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides","dat","dipper.RData"))
+PR <- runif(1500, 0, 1)
+MCMCtrace(mcmc.phip, 
+          params = c('phi'),
+          ISB = FALSE,
+          exact = TRUE,
+          priors = PR,
+          pdf = FALSE,
+          Rhat = FALSE,
+          n.eff = FALSE,
+#          post_zm = TRUE,
+          sz_txt = NULL,
+          ind = TRUE,
+          type = "density",
+          lwd_den = 3,
+          lwd_pr = 3,
+          col_pr = "gray70",
+          lty_pr = 2,
+          main_den = "",
+          xlab_den = "survival")
+```
+]
+
+---
+## How to incorporate prior information?
 
 --
 
@@ -688,7 +1019,7 @@ $$\phi_{prior} \sim \text{Beta}(1,1) = \text{Uniform}(0,1)$$
 
 --
 
-+ Mean posterior $\phi_{posterior} = 0.56$ with credible interval $[0.52, 0.60]$.
++ Mean posterior $\phi_{posterior} = 0.56$ with credible interval $[0.52, 0.61]$.
 
 --
 
@@ -703,15 +1034,35 @@ $$\phi_{prior} \sim \text{Beta}(1,1) = \text{Uniform}(0,1)$$
 
 --
 
-+ Width of credible interval is 0.47 (vague prior) vs. 0.30 (informative prior).
++ Width of credible interval is 0.53 (vague prior) vs. 0.24 (informative prior).
 
 --
 
-+ Huge increase of precision in posterior inference ($40\%$ gain)!
++ Huge increase of precision in posterior inference, a $120\%$ gain!
 
-+ Compare \textcolor{blue}{vague} vs. \textcolor{red}{informative} prior
 
-<!-- surv~dnorm(0.57,187.6) # Norm(0.57,sd=0.073) ; precision = 1/var = 1/0.073^2 -->
+---
+
+.center[
+```{r, echo = FALSE, warning=FALSE, message=FALSE,fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides","dat","phip3y.RData"))
+phinoprior <- c(mcmc.phip$chain1[,"phi"], mcmc.phip$chain2[,"phi"])
+load(here::here("slides","dat","phipriorp3y.RData"))
+phiprior <- c(mcmc.phip$chain1[,"phi"], mcmc.phip$chain2[,"phi"])
+df <- data.frame(posterior = c(phinoprior, phiprior),
+                 type = c(rep("vague prior", length(phinoprior)),
+                          rep("informative prior", length(phiprior))))
+df %>%
+  ggplot() + 
+  aes(x = posterior, fill = type) + 
+  geom_density(aes(y = ..density..), 
+               bins = 40, 
+               color = "white", 
+               alpha = 0.6) + 
+  labs(x = "survival", fill = "") +
+  scale_fill_manual(values = wesanderson::wes_palette("Royal1")[2:1])
+```
+]
 
 ---
 # Prior elicitation via moment matching
@@ -743,7 +1094,7 @@ $$\sigma^2 = \text{Var}(X) = \frac{\alpha\beta}{(\alpha + \beta)^2 (\alpha + \be
 
 ---
 
-+ Now we look for values of $\alpha$ and $\beta$ that match the observed moments of the Beta distribution ($\mu$ and $\sigma^2$).
++ Now we look for values of $\alpha$ and $\beta$ that match the observed moments of the Beta distribution $\mu$ and $\sigma^2$.
 
 --
 
@@ -753,7 +1104,7 @@ $$\alpha = \bigg(\frac{1-\mu}{\sigma^2}- \frac{1}{\mu} \bigg)\mu^2$$
 
 $$\beta = \alpha \bigg(\frac{1}{\mu}-1\bigg)$$
 
---
+---
 
 + For our model, that means:
 
@@ -778,10 +1129,16 @@ $$\beta = \alpha \bigg(\frac{1}{\mu}-1\bigg)$$
 
 Unreasonable prior $\beta \sim N(0, 1000^2)$
 
-```{r echo=1, fig.height=3, fig.width=3, fig.align='left', echo = FALSE}
-plot(density(rnorm(1000, 0, 1000)),   
-     main="", xlab="Height (m)")
+.center[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+df <- rnorm(1000, 0, 1000)
+df %>%
+  as_tibble() %>%
+  ggplot(aes(x = value)) + 
+  geom_density(size = 2) + 
+  labs(x = "Height (m)")
 ```
+]
 ]
 
 --
@@ -790,10 +1147,16 @@ plot(density(rnorm(1000, 0, 1000)),
 
 Reasonable prior $\beta \sim N(2, 0.5^2)$
 
-```{r echo=1, fig.height=3, fig.width=3, fig.align='left', echo = FALSE}
-plot(density(rnorm(1000, 2, 0.5)),   
-      main="", xlab="Height (m)")
+.center[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+df <- rnorm(1000, 2, 0.5)
+df %>%
+  as_tibble() %>%
+  ggplot(aes(x = value)) + 
+  geom_density(size = 2) + 
+  labs(x = "Height (m)")
 ```
+]
 ]
 
 ---
@@ -803,32 +1166,147 @@ plot(density(rnorm(1000, 2, 0.5)),
 
 .pull-left[
 
-Unreasonable
-$\text{logit}(\phi) = \beta \sim N(0, 10^2)$
+Unreasonable prior $\text{logit}(\phi) = \beta \sim N(0, 10^2)$
 
-```{r echo=1, fig.height=3, fig.width=3, fig.align='left', echo = FALSE}
-plot(density(plogis(rnorm(1000,0,10)), 
-from = 0, to = 1), main='', xlab='survival')
+.center[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+df <- plogis(rnorm(1000, 0, 10)) 
+df %>%
+  as_tibble() %>%
+  ggplot(aes(x = value)) + 
+  geom_density(size = 2) + 
+  labs(x = "survival")
 ```
+]
 ]
 
 --
 
 .pull-right[
 
-Reasonable 
-$\text{logit}(\phi) = \beta \sim N(0, 1.5^2)$
+Reasonable prior $\text{logit}(\phi) = \beta \sim N(0, 1.5^2)$
 
-```{r echo=1, fig.height=3, fig.width=3, fig.align='left', echo = FALSE}
-plot(density(plogis(rnorm(1000,0,1.5)), 
-from = 0, to = 1), main='', xlab='survival')
+.center[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+df <- plogis(rnorm(1000, 0, 1.5)) 
+df %>%
+  as_tibble() %>%
+  ggplot(aes(x = value)) + 
+  geom_density(size = 2) + 
+  labs(x = "survival")
 ```
+]
 ]
 
 ---
 # Parameter-redundancy issue
 
-+ prior-posterior overlap
+---
+## prior-posterior overlap for $\phi_4$ and $\phi_6$
+
+.pull-left[
+.center[
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides","dat","dipper.RData"))
+PR <- runif(1500, 0, 1)
+MCMCtrace(mcmc.phitpt, 
+          params = c('phi[4]'),
+          ISB = FALSE,
+          exact = TRUE,
+          priors = PR,
+          pdf = FALSE,
+          Rhat = FALSE,
+          n.eff = FALSE,
+          ind = FALSE,
+          type = "density",
+          lwd_den = 3,
+          lwd_pr = 3,
+          col_pr = "gray70",
+          lty_pr = 2,
+          main_den = "",
+          xlab_den = "survival")
+```
+]
+]
+
+.pull-right[
+.center[
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides","dat","dipper.RData"))
+PR <- runif(1500, 0, 1)
+MCMCtrace(mcmc.phitpt, 
+          params = c('phi[6]'),
+          ISB = FALSE,
+          exact = TRUE,
+          priors = PR,
+          pdf = FALSE,
+          Rhat = FALSE,
+          n.eff = FALSE,
+          ind = FALSE,
+          type = "density",
+          lwd_den = 3,
+          lwd_pr = 3,
+          col_pr = "gray70",
+          lty_pr = 2,
+          main_den = "",
+          xlab_den = "survival")
+```
+]
+]
+
+---
+## prior-posterior overlap for $p_3$ and $p_7$
+
+.pull-left[
+.center[
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides","dat","dipper.RData"))
+PR <- runif(1500, 0, 1)
+MCMCtrace(mcmc.phitpt, 
+          params = c('p[2]'),
+          ISB = FALSE,
+          exact = TRUE,
+          priors = PR,
+          pdf = FALSE,
+          Rhat = FALSE,
+          n.eff = FALSE,
+          ind = FALSE,
+          type = "density",
+          lwd_den = 3,
+          lwd_pr = 3,
+          col_pr = "gray70",
+          lty_pr = 2,
+          main_den = "",
+          xlab_den = "survival")
+```
+]
+]
+
+.pull-right[
+.center[
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+load(here::here("slides","dat","dipper.RData"))
+PR <- runif(1500, 0, 1)
+MCMCtrace(mcmc.phitpt, 
+          params = c('p[6]'),
+          ISB = FALSE,
+          exact = TRUE,
+          priors = PR,
+          pdf = FALSE,
+          Rhat = FALSE,
+          n.eff = FALSE,
+          ind = FALSE,
+          type = "density",
+          lwd_den = 3,
+          lwd_pr = 3,
+          col_pr = "gray70",
+          lty_pr = 2,
+          main_den = "",
+          xlab_den = "survival")
+```
+]
+]
+
 
 ---
 ## What does survival actually mean in capture-recapture ?
