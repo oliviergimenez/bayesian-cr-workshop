@@ -795,8 +795,48 @@ trace / (plot1 + plot2 + plot3)
 ---
 ## Burn-in
 
-.center[
-![](img/burnin.png)
+.center.nogap[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+
+# set up the scene
+steps <- 1000
+theta.post <- rep(NA, steps)
+set.seed(1234)
+
+# pick starting value (step 1)
+inits <- 0.99
+theta.post[1] <- inits
+
+for (t in 2:steps){ # repeat steps 2-4 (step 5)
+  
+  # propose candidate value for prob of success (step 2)
+  theta_star <- move(theta.post[t-1], away = 0.1)
+  
+  # calculate ratio R (step 3)
+  pstar <- posterior(survived, p = theta_star)  
+  pprev <- posterior(survived, p = theta.post[t-1])
+  logR <- pstar - pprev
+  R <- exp(logR)
+  
+  # decide to accept candidate value or to keep current value (step 4)
+  accept <- rbinom(1, 1, prob = min(R, 1))
+  theta.post[t] <- ifelse(accept == 1, theta_star, theta.post[t-1])
+}
+
+df <- data.frame(x = 1:steps, y = theta.post)
+df %>%
+  ggplot() +
+  geom_line(aes(x = x, y = y), size = 1.2, color = wesanderson::wes_palettes$Zissou1[1]) + 
+  labs(x = "iterations", y = "values from posterior distribution") + 
+  theme_light(base_size = 14) + 
+  annotate("rect", 
+           xmin = 0, 
+           xmax = 500, 
+           ymin = 0.1, 
+           ymax = 1, 
+           alpha = .3) +
+  scale_y_continuous(expand = c(0,0))
+```
 ]
 
 If simulations cheap, be conservative.
