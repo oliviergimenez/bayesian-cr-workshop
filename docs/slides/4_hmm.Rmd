@@ -1022,8 +1022,8 @@ The data is simulated, with true survival $\phi = 0.8$ and detection $p = 0.6$.
 ---
 ## Further reading
 
-+ Zucchini, MacDonald and Langrock (2016) Hidden Markov Models for Time Series: An Introduction Using R (2nd ed). Chapman and Hall/CRC. 
++ Zucchini, MacDonald and Langrock (2016) [Hidden Markov Models for Time Series: An Introduction Using R (2nd ed)](https://www.routledge.com/Hidden-Markov-Models-for-Time-Series-An-Introduction-Using-R-Second-Edition/Zucchini-MacDonald-Langrock/p/book/9781482253832). Chapman and Hall/CRC. 
 
-+ McClintock, B.T., Langrock, R., Gimenez, O., Cam, E., Borchers, D.L., Glennie, R. and Patterson, T.A. (2020), Uncovering ecological state dynamics with hidden Markov models. Ecology Letters, 23: 1878-1903. 
++ McClintock, B.T., Langrock, R., Gimenez, O., Cam, E., Borchers, D.L., Glennie, R. and Patterson, T.A. (2020), [Uncovering ecological state dynamics with hidden Markov models](https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13610). Ecology Letters, 23: 1878-1903. 
 
 
