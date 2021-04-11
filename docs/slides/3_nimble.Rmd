@@ -1,6 +1,6 @@
 ---
-title: "Free the modeler in you: Intro to Nimble"
-author: "The team"
+title: "'Free the modeler in you': Intro to Nimble"
+author: "The team (citation by Marc Kéry)"
 date: "last updated: `r Sys.Date()`"
 output:
   xaringan::moon_reader:

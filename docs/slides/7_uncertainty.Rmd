@@ -29,9 +29,9 @@ library(nimble)
 ## Plan
 
 + Some theory
-+ Sex, **breeding** and **disease states**
++ Sex, **breeding** and **disease states** (house finches Faustino et al. 2004 et Conn & Cooch 2009)
 + Trap-dependence, **memory**
-+ Individual heterogeneity w/ finite mixtures
++ Individual heterogeneity w/ finite mixtures. Gray wolves case study with or without transition. Cite Daniel's EES paper. Sarah Cons Biol paper as well. 
 
 ---
 ## Further reading
