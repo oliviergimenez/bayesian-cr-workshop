@@ -965,7 +965,7 @@ df %>%
 
 --
 
-+ Assume a model for covariate and fill in missing values 
++ Assume a model for covariate and fill in missing values (imputation)
 
 ---
 class: middle
@@ -1251,9 +1251,36 @@ df %>%
     + `R` implementation with [package `R2ucare`](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13014)
 
 ---
-# Parameter-redundancy issue
+### Parameter-redundancy issue
 
-+ Last survival and recapture probabilities cannot be estimated separately
+.center[
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.518, dev = "svg"}
+load(here::here("slides", "dat", "profiledeviance.RData"))
+df <- data.frame(last_survival = grid_lastphi, 
+                 max_dev = devmax)
+mytable <- df %>% slice(c(20, 27, 38, 44)) %>% round(2)
+ggplot() + 
+  geom_line(data = df, 
+            aes(x = last_survival, y = max_dev),
+            size = 1.5,
+            color = "gray70") + 
+  geom_point(data = df %>% slice(c(20, 27, 38, 44)), 
+             aes(x = last_survival, y = max_dev), 
+             size = 3.5, 
+             pch = 16,
+             color = "darkblue") +
+  labs(x = "survival over last time interval", y = "-log-likelihood") + 
+  theme_light(base_size = 14) + 
+  annotation_custom(gridExtra::tableGrob(mytable, rows=NULL), xmin=0.4, xmax=0.9, ymin=350, ymax=380)
+```
+]
+
+--
+
++ Last survival and recapture probabilities cannot be estimated separately.
+
+--
+
 + Problem w/ MCMC mixing.
 
 ---
@@ -1413,19 +1440,10 @@ MCMCtrace(mcmc.phitpt,
 ---
 ## Further reading
 
-+ Gimenez 2007, 
++ CJS state-space formulation [Gimenez et al. (2007)](https://oliviergimenez.github.io/pubs/Gimenezetal2007EcologicalModelling.pdf) and [Royle (2008)](https://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2007.00891.x).
 
-+ Royle et al. 2008.
++ Work on missing values by [Bonner et al. (2006)](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1541-0420.2005.00399.x) and [Langrock and King (2013)](https://projecteuclid.org/journals/annals-of-applied-statistics/volume-7/issue-3/Maximum-likelihood-estimation-of-markrecapturerecovery-models-in-the-presence-of/10.1214/13-AOAS644.full) and [Worthington et al. (2015)](https://link.springer.com/article/10.1007/s13253-014-0184-z).
 
-+ Lebreton et al. 1992. 
++ Combine live recapture w/ dead recoveries by [Lebreton et al. (1999)](https://www.tandfonline.com/doi/pdf/10.1080/00063659909477230) and go spatial to account for emigration [Gilroy et al. (2012)](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/12-0124.1) and [Schaub & Royle (2014)](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12134).
 
-+ King et al. 2012. 
-
-+ work by S. Bonner, R. Langrock on missing values
-
-+ combine w/ recoveries Lebreton et al. 1999
-
-+ go spatial to infer emigration Gilroy et al.
-2012, Schaub & Royle 2014
-
-+ Book Diana on param redundancy. Our 2009 paper on Bayesian non-id.
++ Non-identifiability in a Bayesian framework by [Gimenez et al. (2009)](https://oliviergimenez.github.io/pubs/Gimenezetal2009-weakidentifiability.pdf) and [book by Cole (2020)](https://www.routledge.com/Parameter-Redundancy-and-Identifiability/Cole/p/book/9781498720878). 
