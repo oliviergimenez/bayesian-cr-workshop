@@ -340,10 +340,8 @@ $$ P(\alpha, \beta, \sigma \mid \text{data}) = \frac{ P(\text{data} \mid \alpha,
 
 ---
 
-.center.nogap[
-```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.518}
-knitr::include_graphics(here::here("slides", "img", "maniac.png"))
-```
+.center[
+![](img/maniac.png)
 ]
 
 ---

@@ -150,7 +150,7 @@ knitr::include_graphics("img/king.png")
 .center[
 .pull-left[
 ```{r, echo=FALSE, out.width="60%", fig.cap="White-throated Dipper (Cinclus cinclus)"}
-knitr::include_graphics(here::here("slides/img/Marzo_BaguesMance.jpg"))
+knitr::include_graphics("img/Marzo_BaguesMance.jpg")
 ```
 ]
 ]
@@ -159,7 +159,7 @@ knitr::include_graphics(here::here("slides/img/Marzo_BaguesMance.jpg"))
 
 .pull-right[
 ```{r, echo=FALSE, fig.cap="Gilbert Marzolin", out.width="60%"}
-knitr::include_graphics(here::here("slides/img/Marzocuissardes.jpg"))
+knitr::include_graphics("img/Marzocuissardes.jpg")
 ```
 ]
 
@@ -168,13 +168,13 @@ knitr::include_graphics(here::here("slides/img/Marzocuissardes.jpg"))
 
 .pull-left[
 ```{r, echo=FALSE, out.width="90%"}
-knitr::include_graphics(here::here("slides/img/gull.jpg"))
+knitr::include_graphics("img/gull.jpg")
 ```
 ]
 
 .pull-right[
 ```{r, echo=FALSE, out.width="110%"}
-knitr::include_graphics(here::here("slides/img/bighorn.png"))
+knitr::include_graphics("img/bighorn.png")
 ```
 ]
 
@@ -186,13 +186,13 @@ Artificial marks
 
 .pull-left[
 ```{r, echo=FALSE, out.width="90%"}
-knitr::include_graphics(here::here("slides/img/lynx.png"))
+knitr::include_graphics("img/lynx.png")
 ```
 ]
 
 .pull-right[
 ```{r, echo=FALSE, out.width="120%"}
-knitr::include_graphics(here::here("slides/img/bearscat.png"))
+knitr::include_graphics("img/bearscat.png")
 ```
 ]
 
