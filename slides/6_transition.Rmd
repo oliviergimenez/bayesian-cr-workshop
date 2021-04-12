@@ -527,6 +527,9 @@ class: middle, center
 background-image: url("img/sooty.jpg")
 background-size: cover
 
+### <span style="color: white;">Sooty shearwater (David Boyle)</span>
+
+
 ---
 ## Sooty shearwaters and life-history tradeoffs
 
@@ -967,7 +970,5 @@ plotdet / (plotpsiAB + plotpsiBA)
 ---
 ## Further reading
 
-+ Pradel 2005 
-+ Gimenez et al. 2012
-+ Hestbeck et al. 1991
++ Lebreton, J.-D., J. D. Nichols, R. J. Barker, R. Pradel and J. A. Spendelow (2009). [Modeling Individual Animal Histories with Multistate Capture–Recapture Models](https://multievent.sciencesconf.org/conference/multievent/pages/Lebretonetal2009AER.pdf). Advances in Ecological Research, 41:87-173.
 

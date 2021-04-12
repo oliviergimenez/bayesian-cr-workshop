@@ -36,5 +36,5 @@ library(nimble)
 ---
 ## Further reading
 
-+ ref 1
-+ ref 2
++ Pradel 2005
++ Gimenez et al. 2012
