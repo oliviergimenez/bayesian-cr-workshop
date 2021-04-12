@@ -24,6 +24,8 @@ library(here)
 library(nimble)
 ```
 
+
+
 <style>
 
 .center2 {
@@ -72,6 +74,10 @@ background-color: #230404
 ![](img/deadpool.gif)
 
 ---
+background-image: url(https://media.giphy.com/media/26BRGxMMN3Pn1MMdG/source.gif)
+background-size: cover
+
+---
 
 .center[
 ![](img/nichols.png)
@@ -86,7 +92,7 @@ background-size: cover
 ## <span style="color: white;">Wintering site fidelity in Canada Geese</span>
 
 ---
-### 3 sites Carolinas, Chesapeake, Mid-Atlantic, with 6 years, data kindly provided by Jay Hestbeck ([Hestbeck et al. 1991](https://esajournals.onlinelibrary.wiley.com/doi/10.2307/2937193))
+### 3 sites Carolinas, Chesapeake, Mid-Atlantic, with 21277 banded geese, data kindly provided by Jay Hestbeck ([Hestbeck et al. 1991](https://esajournals.onlinelibrary.wiley.com/doi/10.2307/2937193))
 
 .center.nogap[
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
@@ -104,7 +110,7 @@ y <- geese %>%
 (large areas along East coast of US)
 
 ---
-### HMM model for dispersal with 2 sites
+### HMM model for dispersal with 2 sites (drop Carolinas)
 
 Transition matrix:
 
@@ -266,7 +272,7 @@ MCMCplot(mcmc.multisite)
 ]
 
 ---
-# What if more than two sites/states?
+# What if three sites?
 
 --
 
@@ -274,11 +280,11 @@ MCMCplot(mcmc.multisite)
 
 --
 
-+ Another constraint is that the sum of transition probabilities from any site should be one. 
++ Another constraint is that the sum of three probabilities of departure rom a given site should be one. 
 
 --
 
-+ Two methods to fullfill both constraints. 
++ Two methods to fulfill both constraints. 
     + Dirichlet prior
     + Multinomial logit link
 
@@ -467,17 +473,17 @@ multisite <- nimbleCode({
 multisite <- nimbleCode({
 ...
   # Define probabilities of state z(t+1) given z(t)
-  gamma[1,1] <- phiA * (1 - psiA[1] - psiA[2])
-  gamma[1,2] <- phiA * psiA[1]
-  gamma[1,3] <- phiA * psiA[2]
+  gamma[1,1] <- phiA * psiA[1]
+  gamma[1,2] <- phiA * psiA[2]
+  gamma[1,3] <- phiA * psiA[3]
   gamma[1,4] <- 1 - phiA
   gamma[2,1] <- phiB * psiB[1]
-  gamma[2,2] <- phiB * (1 - psiB[1] - psiB[2])
-  gamma[2,3] <- phiB * psiB[2]
+  gamma[2,2] <- phiB * psiB[2]
+  gamma[2,3] <- phiB * psiB[3]
   gamma[2,4] <- 1 - phiB
   gamma[3,1] <- phiC * psiC[1]
   gamma[3,2] <- phiC * psiC[2]
-  gamma[3,3] <- phiC * (1 - psiC[1] - psiC[2])
+  gamma[3,3] <- phiC * psiC[3]
   gamma[3,4] <- 1 - phiC
   gamma[4,1] <- 0
   gamma[4,2] <- 0
@@ -757,6 +763,97 @@ load(here::here("slides","dat","titis.RData"))
 MCMCplot(mcmc.multistate)
 ```
 ]
+
+---
+## Multistate models are very flexible
+
++ Access to reproduction
+
++ Temporary emigration
+
++ Combination of life and dead encounters
+
+
+---
+### Access to reproduction
+
+Transition matrix:
+\begin{align*}
+\mathbf{\Gamma} = 
+\left(\begin{array}{ccccc} 
+0 & \phi_1 (1-\alpha_1) & 0 & \phi_1 \alpha_1 & 1 - \phi_1\\ 
+0 & 0 & \phi_2 (1-\alpha_2) & \phi_2 \alpha_2 & 1 - \phi_2\\ 
+0 & 0 & 0 & \phi_3 & 1 - \phi_3\\ 
+0 & 0 & 0 & \phi_B & 1 - \phi_B\\ 
+0 & 0 & 0 & 0 & 1
+\end{array}\right)
+\end{align*}
+
+Observation matrix:
+\begin{align*}
+\mathbf{\Omega} = 
+\left(\begin{array}{cccc} 
+1 & 0 & 0 & 0\\
+1 - p_1 & p_1 & 0 & 0\\ 
+1 - p_2 & 0 & p_2 & 0\\ 
+1 - p_3 & 0 & 0 & p_3\\ 
+1 & 0 & 0 & 0
+\end{array}\right)
+\end{align*}
+
+
+---
+## Temporary emigration
+
+Transition matrix:
+
+\begin{align*}
+\mathbf{\Gamma} = 
+\left(\begin{array}{ccc} 
+\phi (1-\psi_{IO}) & \phi \psi_{IO} & 1 - \phi\\ 
+\phi \psi_{OI} & \phi (1-\psi_{OI}) & 1 - \phi\\ 
+0 & 0 & 1
+\end{array}\right)
+\end{align*}
+
+Observation matrix:
+
+\begin{align*}
+\mathbf{\Omega} = 
+\left(\begin{array}{cc} 
+1 - p & p\\ 
+1 & 0\\
+1 & 0
+\end{array}\right)
+\end{align*}
+
+
+
+---
+## Combination of life and dead encounters
+
+
+Transition matrix:
+
+\begin{align*}
+\mathbf{\Gamma} = 
+\left(\begin{array}{ccc} 
+s & 1-s & 0\\ 
+0 & 0 & 1\\
+0 & 0 & 1
+\end{array}\right)
+\end{align*}
+
+Observation matrix:
+
+\begin{align*}
+\mathbf{\Omega} = 
+\left(\begin{array}{ccc} 
+1 - p & 0 & p\\ 
+1 - r & r & 0\\ 
+1 & 0 & 0
+\end{array}\right)
+\end{align*}
 
 
 
