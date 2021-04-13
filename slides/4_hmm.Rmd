@@ -540,9 +540,11 @@ background-color: #13080C
 
 + The Markov process for survival is only partially observed <span>&#8212;</span> **hidden Markov models**.  
 
---
 
-+ We define $y_{i,t}$ the random variable taking value $1$ if animal $i$ was detected at occasion $t$ and $0$ otherwise. 
+---
+class: center, middle
+background-image: url(img/satellite.png)
+background-size: cover
 
 ---
 # The truth is in $z$
@@ -563,7 +565,7 @@ z %>%
 
 --
 
-+ We do observe $y$ the detections and non-detections. 
++ We do observe $y$ the detections and non-detections.
 
 --
 
