@@ -12,6 +12,7 @@ output:
       highlightLines: true
       slideNumberFormat: ''
       titleSlideClass: [center, middle]
+      
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
@@ -23,8 +24,6 @@ update_geom_defaults("point", list(size = 2))
 library(here)
 library(nimble)
 ```
-
-
 
 <style>
 
@@ -372,7 +371,7 @@ Transition matrix:
 
 \begin{align*}
 \mathbf{\Gamma} = 
-\left(\begin{array}{ccc} 
+\left(\begin{array}{ccc}
 \phi_A (1-\psi_{AB}) & \phi_A \psi_{AB} & 1 - \phi_A\\ 
 \phi_B \psi_{BA} & \phi_B (1-\psi_{BA}) & 1 - \phi_B\\ 
 0 & 0 & 1
