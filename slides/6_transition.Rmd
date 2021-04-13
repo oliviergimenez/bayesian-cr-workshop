@@ -369,25 +369,53 @@ ggplot() +
 
 Transition matrix:
 
-\begin{align*}
+$$
+\begin{matrix}
+& \\
 \mathbf{\Gamma} = 
-\left(\begin{array}{ccc}
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    z_t=1 & z_t=2 & z_t=3 \\ \hdashline
 \phi_A (1-\psi_{AB}) & \phi_A \psi_{AB} & 1 - \phi_A\\ 
 \phi_B \psi_{BA} & \phi_B (1-\psi_{BA}) & 1 - \phi_B\\ 
 0 & 0 & 1
-\end{array}\right)
-\end{align*}
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t-1}=1 \\ z_{t-1}=2 \\ z_{t-1}=3
+    \end{matrix}
+\end{matrix}
+$$
 
 Observation matrix:
 
-\begin{align*}
+$$
+\begin{matrix}
+& \\
 \mathbf{\Omega} = 
-\left(\begin{array}{ccc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    y_t=0 & y_t=1 & y_t=2 \\ \hdashline
 1 - p_A & p_A & 0\\ 
 1 - p_B & 0 & p_A\\ 
 1 & 0 & 0
-\end{array}\right)
-\end{align*}
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t}=1 \\ z_{t}=2 \\ z_{t}=3
+    \end{matrix}
+\end{matrix}
+$$
 
 ---
 ### Our model $(\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)$
@@ -861,26 +889,53 @@ titis %>%
 
 Transition matrix:
 
-\begin{align*}
+$$
+\begin{matrix}
+& \\
 \mathbf{\Gamma} = 
-\left(\begin{array}{ccc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    z_t=B & z_t=NB & z_t=D \\ \hdashline
 \phi_B (1-\psi_{BNB}) & \phi_B \psi_{BNB} & 1 - \phi_B\\ 
 \phi_{NB} \psi_{NBB} & \phi_{NB} (1-\psi_{NBB}) & 1 - \phi_{NB}\\ 
 0 & 0 & 1
-\end{array}\right)
-\end{align*}
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t-1}=B \\ z_{t-1}=NB \\ z_{t-1}=D
+    \end{matrix}
+\end{matrix}
+$$
 
 Observation matrix:
 
-\begin{align*}
+$$
+\begin{matrix}
+& \\
 \mathbf{\Omega} = 
-\left(\begin{array}{ccc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    y_t=0 & y_t=1 & y_t=2 \\ \hdashline
 1 - p_B & p_B & 0\\ 
 1 - p_{NB} & 0 & p_{NB}\\ 
 1 & 0 & 0
-\end{array}\right)
-\end{align*}
-
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t}=B \\ z_{t}=NB \\ z_{t}=D
+    \end{matrix}
+\end{matrix}
+$$
 
 ---
 ### Our model $(\phi_{NB}, \phi_B, \psi_{NBB}, \psi_{BNB}, p_{NB}, p_B)$
@@ -1033,28 +1088,62 @@ MCMCplot(mcmc.multistate)
 ### Access to reproduction
 
 Transition matrix:
-\begin{align*}
+
+$$
+\begin{matrix}
+& \\
 \mathbf{\Gamma} = 
-\left(\begin{array}{ccccc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \\ 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    z_t=J & z_t=1yNB & z_t=2yNB & z_t=B & z_t=D \\ \hdashline
 0 & \phi_1 (1-\alpha_1) & 0 & \phi_1 \alpha_1 & 1 - \phi_1\\ 
 0 & 0 & \phi_2 (1-\alpha_2) & \phi_2 \alpha_2 & 1 - \phi_2\\ 
 0 & 0 & 0 & \phi_3 & 1 - \phi_3\\ 
 0 & 0 & 0 & \phi_B & 1 - \phi_B\\ 
 0 & 0 & 0 & 0 & 1
-\end{array}\right)
-\end{align*}
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t-1} = J \\ z_{t-1} = 1yNB \\ z_{t-1} = 2yNB \\ z_{t-1} = B \\ z_{t-1} = D
+    \end{matrix}
+\end{matrix}
+$$
+
+---
+### Access to reproduction
 
 Observation matrix:
-\begin{align*}
+
+$$
+\begin{matrix}
+& \\
 \mathbf{\Omega} = 
-\left(\begin{array}{cccc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \\ 12 \\12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+y_t = 0 & y_t = 1 & y_t = 2 & y_t = 3\\ \hdashline
 1 & 0 & 0 & 0\\
 1 - p_1 & p_1 & 0 & 0\\ 
 1 - p_2 & 0 & p_2 & 0\\ 
 1 - p_3 & 0 & 0 & p_3\\ 
 1 & 0 & 0 & 0
-\end{array}\right)
-\end{align*}
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \\ 12 \\12 \end{matrix} } \right )
+    \begin{matrix}
+    z_t = J \\ z_t = 1yNB \\ z_t = 2yNB \\ z_t = B \\ z_t = D
+    \end{matrix}
+\end{matrix}
+$$
+
 
 
 ---
@@ -1062,27 +1151,53 @@ Observation matrix:
 
 Transition matrix:
 
-\begin{align*}
+$$
+\begin{matrix}
+& \\
 \mathbf{\Gamma} = 
-\left(\begin{array}{ccc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    z_t=I & z_t=O & z_t=D \\ \hdashline
 \phi (1-\psi_{IO}) & \phi \psi_{IO} & 1 - \phi\\ 
 \phi \psi_{OI} & \phi (1-\psi_{OI}) & 1 - \phi\\ 
 0 & 0 & 1
-\end{array}\right)
-\end{align*}
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t-1}=I \\ z_{t-1}=O \\ z_{t-1}=D
+    \end{matrix}
+\end{matrix}
+$$
 
 Observation matrix:
 
-\begin{align*}
+$$
+\begin{matrix}
+& \\
 \mathbf{\Omega} = 
-\left(\begin{array}{cc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    y_t=0 & y_t=1 \\ \hdashline
 1 - p & p\\ 
 1 & 0\\
 1 & 0
-\end{array}\right)
-\end{align*}
-
-
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t}=I \\ z_{t}=O \\ z_{t}=D
+    \end{matrix}
+\end{matrix}
+$$
 
 ---
 ## Combination of life and dead encounters
@@ -1090,27 +1205,53 @@ Observation matrix:
 
 Transition matrix:
 
-\begin{align*}
+$$
+\begin{matrix}
+& \\
 \mathbf{\Gamma} = 
-\left(\begin{array}{ccc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    z_t=A & z_t=JD & z_t=D \\ \hdashline
 s & 1-s & 0\\ 
 0 & 0 & 1\\
 0 & 0 & 1
-\end{array}\right)
-\end{align*}
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t-1}=A \\ z_{t-1}=JD \\ z_{t-1}=D
+    \end{matrix}
+\end{matrix}
+$$
 
 Observation matrix:
 
-\begin{align*}
+$$
+\begin{matrix}
+& \\
 \mathbf{\Omega} = 
-\left(\begin{array}{ccc} 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12\end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    y_t=0 & y_t=1 & y_t=2 \\ \hdashline
 1 - p & 0 & p\\ 
 1 - r & r & 0\\ 
 1 & 0 & 0
-\end{array}\right)
-\end{align*}
-
-
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t}=A \\ z_{t}=JD \\ z_{t}=D
+    \end{matrix}
+\end{matrix}
+$$
 
 ---
 # Issue of local minima

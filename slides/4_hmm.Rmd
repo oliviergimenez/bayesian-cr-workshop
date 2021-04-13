@@ -218,6 +218,33 @@ z %>%
 
 + Add by hand column and row names w/ states and time
 
+---
+class: middle, center
+
+Transition matrix:
+
+$$
+\begin{matrix}
+& \\
+\mathbf{\Gamma} = 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    z_t=A & z_t=D \\ \hdashline
+\phi & 1-\phi \\
+0 & 1
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t-1}=A \\ z_{t-1}=D
+    \end{matrix}
+\end{matrix}
+$$
+
 
 ---
 # Initial states
@@ -645,9 +672,35 @@ y %>%
 \end{array}\right) =
 \left(\begin{array}{cc} 
 1 - p & p\\ 
-0 & 1
+1 & 0
 \end{array}\right)
 \end{align*}
+
+--
+
+Observation matrix:
+
+$$
+\begin{matrix}
+& \\
+\mathbf{\Omega} = 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    y_t=0 & y_t=1 \\ \hdashline
+1 - p & p\\ 
+1 & 0\\
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t}=A \\ z_{t}=D
+    \end{matrix}
+\end{matrix}
+$$
 
 
 ---
