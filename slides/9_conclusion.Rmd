@@ -35,6 +35,16 @@ library(nimble)
 + Bags of tricks for HMM, and Nimble
 
 ---
+## Bag of tricks and recommendations
+
++ Think of OBS and STATES first. And the observation and transition matrices.
++ Start simple, all parameters constant for example. 
++ Use simulations!!
++ Do not try to optimize your code. Make it work first. Then think of optimization.
++ Workflow by Gelman et al. 
++ Sensitivity analyses.
+
+---
 ## Further reading
 
 + ref 1

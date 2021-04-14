@@ -29,12 +29,21 @@ library(nimble)
 ## Plan
 
 + Some theory
+
 + Sex, **breeding** and **disease states** (house finches Faustino et al. 2004 et Conn & Cooch 2009)
+
 + Trap-dependence, **memory**
-+ Individual heterogeneity w/ finite mixtures. Gray wolves case study with or without transition. Cite Daniel's EES paper. Sarah Cons Biol paper as well. 
+
++ Individual heterogeneity w/ finite mixtures. Gray wolves case study with or without transition. Cite Daniel's EES paper. Sarah Cons Biol paper as well. With vs without heterogeneity, compare with wAIC. Cite Daniel's paper. 
+
++ Add matrices like in multistate slides for examples we will not cover
 
 ---
 ## Further reading
 
-+ Pradel 2005
++ Pradel 2005 (memory model)
 + Gimenez et al. 2012
+
++ Turek, D., Wehrhahn, C. & Gimenez, O. Bayesian non-parametric detection heterogeneity in ecological models. Environ Ecol Stat (2021). https://doi.org/10.1007/s10651-021-00489-1
+
++ Conn, P.B. and Cooch, E.G. (2009), Multistate capture–recapture analysis under imperfect state observation: an application to disease models. Journal of Applied Ecology, 46: 486-492. https://doi.org/10.1111/j.1365-2664.2008.01597.x
