@@ -48,7 +48,7 @@ library(nimble)
 ---
 ## Marginalization 
 
-+ use dHMM) w/ NimbleEcology and Turek's 2016 paper. 
++ use dHMM w/ NimbleEcology and Turek's 2016 paper. 
 
 + Redo some of the previous examples. 
 
