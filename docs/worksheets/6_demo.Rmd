@@ -1,5 +1,5 @@
 ---
-title: "Class 3 live demo"
+title: "Class 7 live demo"
 author: "The team"
 date: "last updated: `r Sys.Date()`"
 output: html_document
@@ -8,7 +8,7 @@ output: html_document
 
 ```{r setup, include=FALSE, echo=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(comment = "")
+knitr::opts_chunk$set(comment = "", message = TRUE, warning = TRUE)
 library(tidyverse)
 theme_set(theme_light(base_size = 14))
 update_geom_defaults("point", list(size = 2)) 
@@ -16,111 +16,494 @@ library(here)
 library(nimble)
 ```
 
+## Breeding state uncertainty
 
 ```{r}
-library(nimble)
+titis <- read_csv2(here::here("slides", "dat", "titis_with_uncertainty.csv"), col_names = FALSE)
+y <- titis %>%
+  as.matrix()
 ```
 
+
 ```{r}
-naive.survival.model <- nimbleCode({
-  # prior
-  phi ~ dunif(0, 1)
-  # likelihood
-  y ~ dbinom(phi, n)
+multievent <- nimbleCode({
+  
+  # -------------------------------------------------
+  # Parameters:
+  # phiB: survival probability state B
+  # phiNB: survival probability state NB
+  # psiBNB: transition probability from B to NB
+  # psiNBB: transition probability from NB to B
+  # pB: recapture probability B
+  # pNB: recapture probability NB
+  # piB prob. of being in initial state breeder
+  # betaNB prob to ascertain the breeding status of an individual encountered as non-breeder
+  # betaB prob to ascertain the breeding status of an individual encountered as breeder
+  # -------------------------------------------------
+  # States (S):
+  # 1 alive B
+  # 2 alive NB
+  # 3 dead
+  # Observations (O):  
+  # 1 = non-detected
+  # 2 = seen and ascertained as breeder
+  # 3 = seen and ascertained as non-breeder
+  # 4 = not ascertained
+  # -------------------------------------------------
+  
+  # priors
+  phiB ~ dunif(0, 1)
+  phiNB ~ dunif(0, 1)
+  psiBNB ~ dunif(0, 1)
+  psiNBB ~ dunif(0, 1)
+  pB ~ dunif(0, 1)
+  pNB ~ dunif(0, 1)
+  piB ~ dunif(0, 1)
+  betaNB ~ dunif(0, 1)
+  betaB ~ dunif(0, 1)
+  
+  # vector of initial stats probs
+  delta[1] <- piB # prob. of being in initial state B
+  delta[2] <- 1 - piB # prob. of being in initial state NB
+  delta[3] <- 0 # prob. of being in initial state dead
+  
+  # probabilities of state z(t+1) given z(t)
+  gamma[1,1] <- phiB * (1 - psiBNB)
+  gamma[1,2] <- phiB * psiBNB
+  gamma[1,3] <- 1 - phiB
+  gamma[2,1] <- phiNB * psiNBB
+  gamma[2,2] <- phiNB * (1 - psiNBB)
+  gamma[2,3] <- 1 - phiNB
+  gamma[3,1] <- 0
+  gamma[3,2] <- 0
+  gamma[3,3] <- 1
+  
+  # probabilities of y(t) given z(t)
+  omega[1,1] <- 1 - pB             # Pr(alive B t -> non-detected t)
+  omega[1,2] <- pB * betaB         # Pr(alive B t -> detected B t)
+  omega[1,3] <- 0                  # Pr(alive B t -> detected NB t)
+  omega[1,4] <- pB * (1 - betaB)   # Pr(alive B t -> detected U t)
+  omega[2,1] <- 1 - pNB            # Pr(alive NB t -> non-detected t)
+  omega[2,2] <- 0                  # Pr(alive NB t -> detected B t)
+  omega[2,3] <- pNB * betaNB       # Pr(alive NB t -> detected NB t)
+  omega[2,4] <- pNB * (1 - betaNB) # Pr(alive NB t -> detected U t)
+  omega[3,1] <- 1                  # Pr(dead t -> non-detected t)
+  omega[3,2] <- 0                  # Pr(dead t -> detected N t)
+  omega[3,3] <- 0                  # Pr(dead t -> detected NB t)
+  omega[3,4] <- 0                  # Pr(dead t -> detected U t)
+  
+  omega.init[1,1] <- 0                  # Pr(alive B t = 1 -> non-detected t = 1)
+  omega.init[1,2] <- betaB              # Pr(alive B t = 1 -> detected B t = 1)
+  omega.init[1,3] <- 0                  # Pr(alive B t = 1 -> detected NB t = 1)
+  omega.init[1,4] <- 1 - betaB          # Pr(alive B t = 1 -> detected U t = 1)
+  omega.init[2,1] <- 0                  # Pr(alive NB t = 1 -> non-detected t = 1)
+  omega.init[2,2] <- 0                  # Pr(alive NB t = 1 -> detected B t = 1)
+  omega.init[2,3] <- betaNB             # Pr(alive NB t = 1 -> detected NB t = 1)
+  omega.init[2,4] <- 1 - betaNB         # Pr(alive NB t = 1 -> detected U t = 1)
+  omega.init[3,1] <- 1                  # Pr(dead t = 1 -> non-detected t = 1)
+  omega.init[3,2] <- 0                  # Pr(dead t = 1 -> detected N t = 1)
+  omega.init[3,3] <- 0                  # Pr(dead t = 1 -> detected NB t = 1)
+  omega.init[3,4] <- 0                  # Pr(dead t = 1 -> detected U t = 1)
+  
+  # Likelihood 
+  for (i in 1:N){
+    # Define latent state at first capture
+    z[i,first[i]] ~ dcat(delta[1:3])
+    y[i,first[i]] ~ dcat(omega.init[z[i,first[i]],1:4])
+    for (t in (first[i]+1):K){
+      # State process: draw S(t) given S(t-1)
+      z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
+      # Observation process: draw O(t) given S(t)
+      y[i,t] ~ dcat(omega[z[i,t],1:4])
+    }
+  }
 })
 ```
 
+
 ```{r}
-my.data <- list(n = 57, y = 19)
+get.first <- function(x) min(which(x != 0))
+first <- apply(y, 1, get.first)
 ```
 
 
 ```{r}
-my.constants <- list(n = 57)
-my.data <- list(y = 19)
+my.constants <- list(first = first, 
+                     K = ncol(y), 
+                     N = nrow(y))
 ```
 
 
 ```{r}
-initial.values <- function() list(phi = runif(1,0,1))
+my.data <- list(y = y + 1)
 ```
 
 
 ```{r}
-initial.values()
+zinit <- y
+zinit[zinit==3] <- sample(c(1,2), sum(zinit==3), replace = TRUE)
+for (i in 1:nrow(y)) {
+  for (j in 1:ncol(y)) {
+    if (j > first[i] & y[i,j]==0) {zinit[i,j] <- which(rmultinom(1, 1, c(1/2,1/2))==1)}
+    if (j < first[i]) {zinit[i,j] <- 0}
+  }
+}
+zinit <- as.matrix(zinit)
+initial.values <- function(){list(phiNB = runif(1, 0, 1), 
+                                  phiB = runif(1, 0, 1), 
+                                  psiNBB = runif(1, 0, 1), 
+                                  psiBNB = runif(1, 0, 1), 
+                                  pNB = runif(1, 0, 1), 
+                                  pB = runif(1, 0, 1),
+                                  piB = runif(1, 0, 1),
+                                  betaB = runif(1, 0, 1),
+                                  betaNB = runif(1, 0, 1),
+                                  z = zinit)}
 ```
 
 
-
 ```{r}
-parameters.to.save <- c("phi")
+parameters.to.save <- c("phiB", 
+                        "phiNB", 
+                        "psiNBB", 
+                        "psiBNB", 
+                        "piB", 
+                        "pB", 
+                        "pNB", 
+                        "betaNB", 
+                        "betaB")
 ```
 
 
 ```{r}
 n.iter <- 5000
-n.burnin <- 1000
+n.burnin <- 2500
 n.chains <- 2
 ```
 
 
-```{r, warning=FALSE, message=FALSE, eval = TRUE}
-mcmc.output <- nimbleMCMC(code = naive.survival.model,     
-                          data = my.data,  
-                          constants = my.constants,
-                          inits = initial.values,
-                          monitors = parameters.to.save,
-                          niter = n.iter, 
-                          nburnin = n.burnin, 
-                          nchains = n.chains)
-```
-
-
 ```{r}
-str(mcmc.output)
+mcmc.multievent <- nimbleMCMC(code = multievent, 
+                              constants = my.constants,
+                              data = my.data,              
+                              inits = initial.values,
+                              monitors = parameters.to.save,
+                              niter = n.iter,
+                              nburnin = n.burnin, 
+                              nchains = n.chains)
 ```
 
-
-```{r}
-head(mcmc.output$chain1)
-```
-
-
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-mcmc.output %>%
-  as_tibble() %>%
-  janitor::clean_names() %>%
-  ggplot() + 
-  geom_histogram(aes(x = chain1[,"phi"]), color = "white") + 
-  labs(x = "survival probability")
-```
 
 ```{r}
 library(MCMCvis)
-MCMCsummary(mcmc.output, round = 2)
+MCMCsummary(mcmc.multievent, round = 2)
 ```
 
 
-
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-MCMCtrace(mcmc.output,
-          pdf = FALSE) 
+```{r}
+MCMCplot(mcmc.multievent)
 ```
 
 
+## Disease state uncertainty
 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-MCMCtrace(mcmc.output,
-          pdf = FALSE,
-          ind = TRUE,
-          Rhat = TRUE,
-          n.eff = TRUE) 
+```{r}
+y <- as.matrix(read.table(here::here("slides", "dat", "hofi_2000.txt")))
 ```
 
 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+```{r}
+hmm.disease <- nimbleCode({
+  
+  # priors
+  phiH ~ dunif(0, 1) # prior survival healthy
+  phiI ~ dunif(0, 1) # prior survival ill
+  psiIH ~ dunif(0, 1) # prior transition ill -> healthy
+  psiHI ~ dunif(0, 1) # prior transition healthy -> ill
+  pH ~ dunif(0, 1) # prior detection healthy
+  pI ~ dunif(0, 1) # prior detection ill
+  pi ~ dunif(0, 1) # prob init state healthy
+  betaH ~ dunif(0,1)
+  betaI ~ dunif(0,1)
+
+  # HMM ingredients
+  delta[1] <- pi         # Pr(healthy t = 1) = pi
+  delta[2] <- 1 - pi     # Pr(ill t = 1) = 1 - pi
+  delta[3] <- 0          # Pr(dead t = 1) = 0
+  
+  gamma[1,1] <- phiH * (1 - psiHI)      # Pr(H t -> H t+1)
+  gamma[1,2] <- phiH * psiHI            # Pr(H t -> I t+1)
+  gamma[1,3] <- 1 - phiH                # Pr(alive t -> dead t+1)
+  gamma[2,1] <- phiI * psiIH            # Pr(I t -> H t+1)
+  gamma[2,2] <- phiI * (1 - psiIH)      # Pr(I t -> I t+1)
+  gamma[2,3] <- 1 - phiI                # Pr(alive t -> dead t+1)
+  gamma[3,1] <- 0                       # Pr(dead t -> alive t+1)
+  gamma[3,2] <- 0                       # Pr(dead t -> alive t+1)
+  gamma[3,3] <- 1                       # Pr(dead t -> dead t+1)
+  
+  omega[1,1] <- 1 - pH           # Pr(H t -> non-detected t)
+  omega[1,2] <- pH * betaH       # Pr(H t -> detected H t)
+  omega[1,3] <- 0                # Pr(H t -> detected I t)
+  omega[1,4] <- pH * (1 - betaH) # Pr(H t -> detected U t)
+  omega[2,1] <- 1 - pI           # Pr(I t -> non-detected t)
+  omega[2,2] <- 0                # Pr(I t -> detected H t)
+  omega[2,3] <- pI * betaI       # Pr(I t -> detected I t)
+  omega[2,4] <- pI * (1 - betaI) # Pr(I t -> detected U t)
+  omega[3,1] <- 1                # Pr(dead t -> non-detected t)
+  omega[3,2] <- 0                # Pr(dead t -> detected H t)
+  omega[3,3] <- 0                # Pr(dead t -> detected I t)
+  omega[3,4] <- 0                # Pr(dead t -> detected U t)
+  
+  omega.init[1,1] <- 0                # Pr(H t = 1 -> non-detected t = 1)
+  omega.init[1,2] <- betaH            # Pr(H t = 1 -> detected H t = 1)
+  omega.init[1,3] <- 0                # Pr(H t = 1 -> detected I t = 1)
+  omega.init[1,4] <- 1 - betaH        # Pr(H t = 1 -> detected U t = 1)
+  omega.init[2,1] <- 0                # Pr(I t = 1 -> non-detected t = 1)
+  omega.init[2,2] <- 0                # Pr(I t = 1 -> detected H t = 1)
+  omega.init[2,3] <- betaI            # Pr(I t = 1 -> detected I t = 1)
+  omega.init[2,4] <- 1 - betaI        # Pr(I t = 1 -> detected U t = 1)
+  omega.init[3,1] <- 1                # Pr(dead t = 1 -> non-detected t = 1)
+  omega.init[3,2] <- 0                # Pr(dead t = 1 -> detected H t = 1)
+  omega.init[3,3] <- 0                # Pr(dead t = 1 -> detected I t = 1)
+  omega.init[3,4] <- 0                # Pr(dead t = 1 -> detected U t = 1)
+
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:3])
+    y[i,first[i]] ~ dcat(omega.init[z[i,first[i]], 1:4])
+    for (j in (first[i]+1):K){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:3])
+      y[i,j] ~ dcat(omega[z[i,j], 1:4])
+    }
+  }
+})
 ```
 
 
+```{r}
+first <- apply(y, 1, function(x) min(which(x !=0)))
+my.constants <- list(N = nrow(y), K = ncol(y), first = first)
+```
 
 
+```{r}
+my.data <- list(y = y + 1)
+```
+
+
+```{r}
+zinit <- y
+zinit[zinit==3] <- sample(c(1,2), sum(zinit==3), replace = TRUE)
+for (i in 1:nrow(y)) {
+  for (j in 1:ncol(y)) {
+    if (j > first[i] & y[i,j]==0) {zinit[i,j] <- which(rmultinom(1, 1, c(1/2,1/2))==1)}
+    if (j < first[i]) {zinit[i,j] <- 0}
+  }
+}
+zinit <- as.matrix(zinit)
+initial.values <- function() list(phiH = runif(1, 0, 1),
+                                  phiI = runif(1, 0, 1),
+                                  pH = runif(1, 0, 1),
+                                  pI = runif(1, 0, 1),
+                                  pi = runif(1, 0, 1),
+                                  betaH = runif(1, 0, 1),
+                                  betaI = runif(1, 0, 1),
+                                  psiHI = runif(1, 0, 1),
+                                  psiIH = runif(1, 0, 1),
+                                  z = zinit)
+```
+
+
+```{r}
+parameters.to.save <- c("phiH", 
+                        "phiI", 
+                        "pH", 
+                        "pI", 
+                        "pi",
+                        "betaH", 
+                        "betaI", 
+                        "psiHI", 
+                        "psiIH")
+```
+
+
+```{r}
+n.iter <- 40000
+n.burnin <- 25000
+n.chains <- 2
+```
+
+
+```{r}
+out <- nimbleMCMC(code = hmm.disease, 
+                           constants = my.constants,
+                           data = my.data,              
+                           inits = initial.values,
+                           monitors = parameters.to.save,
+                           niter = n.iter,
+                           nburnin = n.burnin, 
+                           nchains = n.chains)
+```
+
+
+```{r}
+library(MCMCvis)
+```
+
+
+```{r}
+MCMCsummary(out, round = 2)
+```
+
+
+```{r}
+MCMCtrace(out, pdf = FALSE, params = c("pH", "pI"))
+```
+
+
+```{r}
+MCMCtrace(out, pdf = FALSE, params = c("betaH", "betaI"))
+```
+
+
+```{r}
+MCMCtrace(out, pdf = FALSE, params = c("phiH", "phiI"))
+```
+
+
+```{r}
+MCMCtrace(out, pdf = FALSE, params = c("psiHI", "psiIH"))
+```
+
+
+```{r}
+MCMCtrace(out, pdf = FALSE, params = c("pi"))
+```
+
+## Individual heterogeneity
+
+```{r}
+y <- as.matrix(read.table(here::here("slides", "dat", "wolf.txt")))
+# 1 seen
+# 0 not seen
+```
+
+
+```{r}
+hmm.phipmix <- nimbleCode({
+  
+  # priors
+  phi ~ dunif(0, 1) # prior survival
+  p1 ~ dunif(0, 1) # prior detection
+  p2 ~ dunif(0, 1) # prior detection
+  pi ~ dunif(0, 1) # prob init state 1
+
+  # HMM ingredients
+  gamma[1,1] <- phi      # Pr(alive 1 t -> alive 1 t+1)
+  gamma[1,2] <- 0        # Pr(alive 1 t -> alive 2 t+1) // no transition
+  gamma[1,3] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(alive 1 t -> alive 1 t+1) // no transition
+  gamma[2,2] <- phi      # Pr(alive 1 t -> alive 2 t+1) 
+  gamma[2,3] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[3,1] <- 0        # Pr(dead t -> alive 1 t+1)
+  gamma[3,2] <- 0        # Pr(dead t -> alive 1 t+1)
+  gamma[3,3] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- pi         # Pr(alive t = 1) = pi
+  delta[2] <- 1 - pi     # Pr(alive t = 1) = 1 - pi
+  delta[3] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p1   # Pr(alive state 1 t -> non-detected t)
+  omega[1,2] <- p1       # Pr(alive state 1 t -> detected t)
+  omega[2,1] <- 1 - p2   # Pr(alive state 2 t -> non-detected t)
+  omega[2,2] <- p2       # Pr(alive state 2 t -> detected t)
+  omega[3,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[3,2] <- 0        # Pr(dead t -> detected t)
+  omega.init[1,1] <- 0   # Pr(alive state 1 t -> non-detected t)
+  omega.init[1,2] <- 1       # Pr(alive state 1 t -> detected t)
+  omega.init[2,1] <- 0   # Pr(alive state 2 t -> non-detected t)
+  omega.init[2,2] <- 1       # Pr(alive state 2 t -> detected t)
+  omega.init[3,1] <- 1        # Pr(dead t -> non-detected t)
+  omega.init[3,2] <- 0        # Pr(dead t -> detected t)
+  
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:3])
+    y[i,first[i]] ~ dcat(omega.init[z[i,first[i]], 1:2])
+    for (j in (first[i]+1):K){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:3])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+
+
+```{r}
+first <- apply(y, 1, function(x) min(which(x != 0)))
+my.constants <- list(N = nrow(y), K = ncol(y), first = first)
+```
+
+
+```{r}
+my.data <- list(y = y + 1)
+```
+
+
+```{r}
+zinit <- y
+for (i in 1:nrow(y)) {
+  for (j in first[i]:ncol(y)) {
+    if (j == first[i]) zinit[i,j] <- which(rmultinom(1, 1, c(1/2,1/2))==1) # pick alive state
+    if (j > first[i]) zinit[i,j] <- zinit[i,j-1] # because no transition, state remains the same
+  }
+}
+zinit <- as.matrix(zinit)
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p1 = runif(1,0,1),
+                                  p2 = runif(1,0,1),
+                                  pi = runif(1,0,1),
+                                  z = zinit)
+```
+
+
+```{r}
+parameters.to.save <- c("phi", "p1", "p2", "pi")
+```
+
+
+```{r}
+n.iter <- 10000
+n.burnin <- 5000
+n.chains <- 2
+```
+
+
+```{r}
+mcmc.phipmix <- nimbleMCMC(code = hmm.phipmix, 
+                           constants = my.constants,
+                           data = my.data,              
+                           inits = initial.values,
+                           monitors = parameters.to.save,
+                           niter = n.iter,
+                           nburnin = n.burnin, 
+                           nchains = n.chains)
+```
+
+
+```{r}
+library(MCMCvis)
+```
+
+
+```{r}
+MCMCsummary(mcmc.phipmix, round = 2)
+```
+
+
+```{r}
+MCMCtrace(mcmc.phipmix, pdf = FALSE, params = c("pi", "p1", "p2"))
+```
+
+
+```{r}
+MCMCtrace(mcmc.phipmix, pdf = FALSE, params = c("phi"))
+```

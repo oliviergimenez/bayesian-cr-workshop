@@ -34,16 +34,28 @@ navbar:
       menu:
         - text: "Class 2 live demo"
           href: worksheets/1_demo.html
+        - text: "Class 2 live demo - R source"
+          href: worksheets/1_demo.Rmd
         - text: "Class 3 live demo"
           href: worksheets/2_demo.html
+        - text: "Class 3 live demo - R source"
+          href: worksheets/2_demo.Rmd
         - text: "Class 4 live demo"
           href: worksheets/3_demo.html
+        - text: "Class 4 live demo - R source"
+          href: worksheets/3_demo.Rmd
         - text: "Class 5 live demo"
           href: worksheets/4_demo.html
+        - text: "Class 5 live demo - R source"
+          href: worksheets/4_demo.Rmd
         - text: "Class 6 live demo"
           href: worksheets/5_demo.html
+        - text: "Class 6 live demo - R source"
+          href: worksheets/5_demo.Rmd
         - text: "Class 7 live demo"
           href: worksheets/6_demo.html
+        - text: "Class 7 live demo - R source"
+          href: worksheets/6_demo.Rmd
     - icon: fab fa-github
       href: https://github.com/oliviergimenez/bayesian-cr-workshop
 

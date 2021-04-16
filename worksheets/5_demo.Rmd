@@ -1,5 +1,5 @@
 ---
-title: "Class 3 live demo"
+title: "Class 6 live demo"
 author: "The team"
 date: "last updated: `r Sys.Date()`"
 output: html_document
@@ -8,7 +8,7 @@ output: html_document
 
 ```{r setup, include=FALSE, echo=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(comment = "")
+knitr::opts_chunk$set(comment = "", echo = TRUE, warning = FALSE, message = FALSE)
 library(tidyverse)
 theme_set(theme_light(base_size = 14))
 update_geom_defaults("point", list(size = 2)) 
@@ -17,110 +17,1018 @@ library(nimble)
 ```
 
 
-```{r}
-library(nimble)
-```
+## Multiste model with 2 sites
 
 ```{r}
-naive.survival.model <- nimbleCode({
-  # prior
-  phi ~ dunif(0, 1)
-  # likelihood
-  y ~ dbinom(phi, n)
+geese <- read_csv(here::here("slides", "dat", "geese.csv"), col_names = TRUE)
+y <- geese %>%
+  as.matrix()
+y2 <- y
+y2[y2==3] <- 0
+mask <- apply(y2, 1, sum)
+y2 <- y2[mask!=0,]
+dim(y2)
+```
+
+
+```{r}
+get.first <- function(x) min(which(x != 0))
+first <- apply(y2, 1, get.first)
+first
+```
+
+
+```{r}
+multisite <- nimbleCode({
+  
+  # -------------------------------------------------
+  # Parameters:
+  # phiA: survival probability site A
+  # phiB: survival probability site B
+  # psiAB: movement probability from site A to site B
+  # psiBA: movement probability from site B to site A
+  # pA: recapture probability site A
+  # pB: recapture probability site B
+  # piA: prop of being in site A at initial capture
+  # -------------------------------------------------
+  # States (S):
+  # 1 alive at A
+  # 2 alive at B
+  # 3 dead
+  # Observations (O):  
+  # 1 not seen
+  # 2 seen at A 
+  # 3 seen at B
+  # -------------------------------------------------
+  
+  # priors
+  phiA ~ dunif(0, 1)
+  phiB ~ dunif(0, 1)
+  psiAB ~ dunif(0, 1)
+  psiBA ~ dunif(0, 1)
+  pA ~ dunif(0, 1)
+  pB ~ dunif(0, 1)
+  piA ~ dunif(0, 1)
+  
+  # probabilities of state z(t+1) given z(t)
+  gamma[1,1] <- phiA * (1 - psiAB)
+  gamma[1,2] <- phiA * psiAB
+  gamma[1,3] <- 1 - phiA
+  gamma[2,1] <- phiB * psiBA
+  gamma[2,2] <- phiB * (1 - psiBA)
+  gamma[2,3] <- 1 - phiB
+  gamma[3,1] <- 0
+  gamma[3,2] <- 0
+  gamma[3,3] <- 1
+  
+  delta[1] <- piA          # Pr(alive in A t = 1)
+  delta[2] <- 1 - piA      # Pr(alive in B t = 1)
+  delta[3] <- 0            # Pr(dead t = 1) = 0
+  
+  # Define probabilities of y(t) given z(t)
+  omega[1,1] <- 1 - pA     # Pr(alive A t -> non-detected t)
+  omega[1,2] <- pA         # Pr(alive A t -> detected A t)
+  omega[1,3] <- 0         # Pr(alive A t -> detected B t)
+  omega[2,1] <- 1 - pB     # Pr(alive B t -> non-detected t)
+  omega[2,2] <- 0         # Pr(alive B t -> detected A t)
+  omega[2,3] <- pB         # Pr(alive B t -> detected B t)
+  omega[3,1] <- 1         # Pr(dead t -> non-detected t)
+  omega[3,2] <- 0         # Pr(dead t -> detected A t)
+  omega[3,3] <- 0         # Pr(dead t -> detected B t)
+  
+  # Likelihood 
+  for (i in 1:N){
+    # Define latent state at first capture
+    z[i,first[i]] ~ dcat(delta[1:3])
+    for (t in (first[i]+1):K){
+      # State process: draw S(t) given S(t-1)
+      z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
+      # Observation process: draw O(t) given S(t)
+      y[i,t] ~ dcat(omega[z[i,t],1:3])
+    }
+  }
 })
 ```
 
+
 ```{r}
-my.data <- list(n = 57, y = 19)
+my.data <- list(y = y2 + 1)
 ```
 
 
 ```{r}
-my.constants <- list(n = 57)
-my.data <- list(y = 19)
+my.constants <- list(first = first, 
+                     K = ncol(y2), 
+                     N = nrow(y2))
 ```
 
 
 ```{r}
-initial.values <- function() list(phi = runif(1,0,1))
+zinits <- y2
+zinits[zinits==0] <- sample(c(1,2), sum(zinits==0), replace = TRUE)
+initial.values <- function(){list(phiA = runif(1, 0, 1), 
+                                  phiB = runif(1, 0, 1), 
+                                  psiAB = runif(1, 0, 1), 
+                                  psiBA = runif(1, 0, 1), 
+                                  pA = runif(1, 0, 1), 
+                                  pB = runif(1, 0, 1), 
+                                  piA = runif(1, 0, 1),
+                                  z = zinits)}
 ```
 
 
 ```{r}
-initial.values()
-```
-
-
-
-```{r}
-parameters.to.save <- c("phi")
+# MCMC settings
+parameters.to.save <- c("phiA", "phiB","psiAB", "psiBA", "pA", "pB", "piA")
+parameters.to.save
 ```
 
 
 ```{r}
 n.iter <- 5000
-n.burnin <- 1000
+n.burnin <- 2500
 n.chains <- 2
 ```
 
 
-```{r, warning=FALSE, message=FALSE, eval = TRUE}
-mcmc.output <- nimbleMCMC(code = naive.survival.model,     
-                          data = my.data,  
-                          constants = my.constants,
-                          inits = initial.values,
-                          monitors = parameters.to.save,
-                          niter = n.iter, 
-                          nburnin = n.burnin, 
-                          nchains = n.chains)
-```
-
-
 ```{r}
-str(mcmc.output)
+mcmc.multisite <- nimbleMCMC(code = multisite, 
+                              constants = my.constants,
+                              data = my.data,              
+                              inits = initial.values,
+                              monitors = parameters.to.save,
+                              niter = n.iter,
+                              nburnin = n.burnin, 
+                              nchains = n.chains)
 ```
 
-
-```{r}
-head(mcmc.output$chain1)
-```
-
-
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-mcmc.output %>%
-  as_tibble() %>%
-  janitor::clean_names() %>%
-  ggplot() + 
-  geom_histogram(aes(x = chain1[,"phi"]), color = "white") + 
-  labs(x = "survival probability")
-```
 
 ```{r}
 library(MCMCvis)
-MCMCsummary(mcmc.output, round = 2)
+MCMCsummary(mcmc.multisite, round = 2)
 ```
 
 
+```{r}
+MCMCplot(mcmc.multisite)
+```
 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-MCMCtrace(mcmc.output,
-          pdf = FALSE) 
+Actually, initial state is known exactly. It is alive at site of initial capture. 
+```{r}
+is <- rep(NA, nrow(y2))
+for (i in 1:nrow(y2)){
+  is[i] <- y2[i, first[i]]
+}
+table(is)
+mean(is == 1)
+mean(is == 2)
 ```
 
 
+```{r}
+multisite <- nimbleCode({
+  
+  # -------------------------------------------------
+  # Parameters:
+  # phiA: survival probability site A
+  # phiB: survival probability site B
+  # psiAB: movement probability from site A to site B
+  # psiBA: movement probability from site B to site A
+  # pA: recapture probability site A
+  # pB: recapture probability site B
+  # -------------------------------------------------
+  # States (S):
+  # 1 alive at A
+  # 2 alive at B
+  # 3 dead
+  # Observations (O):  
+  # 1 not seen
+  # 2 seen at A 
+  # 3 seen at B
+  # -------------------------------------------------
+  
+  # Priors
+  phiA ~ dunif(0, 1)
+  phiB ~ dunif(0, 1)
+  psiAB ~ dunif(0, 1)
+  psiBA ~ dunif(0, 1)
+  pA ~ dunif(0, 1)
+  pB ~ dunif(0, 1)
 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-MCMCtrace(mcmc.output,
-          pdf = FALSE,
-          ind = TRUE,
-          Rhat = TRUE,
-          n.eff = TRUE) 
+  # probabilities of state z(t+1) given z(t)
+  gamma[1,1] <- phiA * (1 - psiAB)
+  gamma[1,2] <- phiA * psiAB
+  gamma[1,3] <- 1 - phiA
+  gamma[2,1] <- phiB * psiBA
+  gamma[2,2] <- phiB * (1 - psiBA)
+  gamma[2,3] <- 1 - phiB
+  gamma[3,1] <- 0
+  gamma[3,2] <- 0
+  gamma[3,3] <- 1
+  
+  # probabilities of y(t) given z(t)
+  omega[1,1] <- 1 - pA     # Pr(alive A t -> non-detected t)
+  omega[1,2] <- pA         # Pr(alive A t -> detected A t)
+  omega[1,3] <- 0         # Pr(alive A t -> detected B t)
+  omega[2,1] <- 1 - pB     # Pr(alive B t -> non-detected t)
+  omega[2,2] <- 0         # Pr(alive B t -> detected A t)
+  omega[2,3] <- pB         # Pr(alive B t -> detected B t)
+  omega[3,1] <- 1         # Pr(dead t -> non-detected t)
+  omega[3,2] <- 0         # Pr(dead t -> detected A t)
+  omega[3,3] <- 0         # Pr(dead t -> detected B t)
+  
+  # Likelihood 
+  for (i in 1:N){
+    # Define latent state at first capture
+    z[i,first[i]] <- y[i,first[i]] - 1
+    for (t in (first[i]+1):K){
+      # State process: draw S(t) given S(t-1)
+      z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
+      # Observation process: draw O(t) given S(t)
+      y[i,t] ~ dcat(omega[z[i,t],1:3])
+    }
+  }
+})
 ```
 
 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+```{r}
+my.data <- list(y = y2 + 1)
 ```
 
 
+```{r}
+my.constants <- list(first = first, 
+                     K = ncol(y2), 
+                     N = nrow(y2))
+```
 
+
+```{r}
+zinits <- y2
+zinits[zinits==0] <- sample(c(1,2), sum(zinits==0), replace = TRUE)
+initial.values <- function(){list(phiA = runif(1, 0, 1), 
+                                  phiB = runif(1, 0, 1), 
+                                  psiAB = runif(1, 0, 1), 
+                                  psiBA = runif(1, 0, 1), 
+                                  pA = runif(1, 0, 1), 
+                                  pB = runif(1, 0, 1), 
+                                  z = zinits)}
+```
+
+
+```{r}
+parameters.to.save <- c("phiA", "phiB","psiAB", "psiBA", "pA", "pB")
+parameters.to.save
+```
+
+
+```{r}
+n.iter <- 5000
+n.burnin <- 2500
+n.chains <- 2
+```
+
+
+```{r}
+mcmc.multisite <- nimbleMCMC(code = multisite, 
+                             constants = my.constants,
+                             data = my.data,              
+                             inits = initial.values,
+                             monitors = parameters.to.save,
+                             niter = n.iter,
+                             nburnin = n.burnin, 
+                             nchains = n.chains)
+```
+
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.multisite, round = 2)
+```
+
+
+```{r}
+MCMCplot(mcmc.multisite)
+```
+
+
+## Multisite model with 3 sites
+
+
+### Multinomial logit link
+
+```{r}
+geese <- read_csv(here::here("slides", "dat", "geese.csv"), col_names = TRUE)
+y <- geese %>%
+  as.matrix()
+```
+
+
+```{r}
+get.first <- function(x) min(which(x != 0))
+first <- apply(y, 1, get.first)
+first
+```
+
+
+```{r}
+multisite <- nimbleCode({
+  
+  # -------------------------------------------------
+  # Parameters:
+  # phiA: survival probability site A
+  # phiB: survival probability site B
+  # phiC: survival probability site B
+  # psiAA: movement probability from site A to site A (reference)
+  # psiAB = psiA[1]: movement probability from site A to site B
+  # psiAC = psiA[2]: movement probability from site A to site C 
+  # psiBA = psiB[1]: movement probability from site B to site A
+  # psiBB: movement probability from site B to site B (reference)
+  # psiBC = psiB[2]: movement probability from site B to site C
+  # psiCA = psiC[1]: movement probability from site C to site A
+  # psiCB = psiC[2]: movement probability from site C to site B
+  # psiCC: movement probability from site C to site C (reference)
+  # pA: recapture probability site A
+  # pB: recapture probability site B
+  # pC: recapture probability site C
+  # -------------------------------------------------
+  # States (S):
+  # 1 alive at A
+  # 2 alive at B
+  # 2 alive at C
+  # 3 dead
+  # Observations (O):  
+  # 1 not seen
+  # 2 seen at A 
+  # 3 seen at B
+  # 3 seen at C
+  # -------------------------------------------------
+  
+  # Priors
+  phiA ~ dunif(0, 1)
+  phiB ~ dunif(0, 1)
+  phiC ~ dunif(0, 1)
+  pA ~ dunif(0, 1)
+  pB ~ dunif(0, 1)
+  pC ~ dunif(0, 1)
+  # transitions: multinomial logit
+  # normal priors on logit of all but one transition probs
+  for (i in 1:2){
+    lpsiA[i] ~ dnorm(0, sd = 1000)
+    lpsiB[i] ~ dnorm(0, sd = 1000)
+    lpsiC[i] ~ dnorm(0, sd = 1000)
+  }
+  # constrain the transitions such that their sum is < 1
+  for (i in 1:2){
+    psiA[i] <- exp(lpsiA[i]) / (1 + exp(lpsiA[1]) + exp(lpsiA[2]))
+    psiB[i] <- exp(lpsiB[i]) / (1 + exp(lpsiB[1]) + exp(lpsiB[2]))
+    psiC[i] <- exp(lpsiC[i]) / (1 + exp(lpsiC[1]) + exp(lpsiC[2]))
+  }
+  # last transition probability
+  psiA[3] <- 1 - psiA[1] - psiA[2]
+  psiB[3] <- 1 - psiB[1] - psiB[2]
+  psiC[3] <- 1 - psiC[1] - psiC[2]
+
+  # probabilities of state z(t+1) given z(t)
+  gamma[1,1] <- phiA * psiA[1]
+  gamma[1,2] <- phiA * psiA[2]
+  gamma[1,3] <- phiA * psiA[3]
+  gamma[1,4] <- 1 - phiA
+  gamma[2,1] <- phiB * psiB[1]
+  gamma[2,2] <- phiB * psiB[2]
+  gamma[2,3] <- phiB * psiB[3]
+  gamma[2,4] <- 1 - phiB
+  gamma[3,1] <- phiC * psiC[1]
+  gamma[3,2] <- phiC * psiC[2]
+  gamma[3,3] <- phiC * psiC[3]
+  gamma[3,4] <- 1 - phiC
+  gamma[4,1] <- 0
+  gamma[4,2] <- 0
+  gamma[4,3] <- 0
+  gamma[4,4] <- 1
+  
+  # probabilities of y(t) given z(t)
+  omega[1,1] <- 1 - pA     # Pr(alive A t -> non-detected t)
+  omega[1,2] <- pA         # Pr(alive A t -> detected A t)
+  omega[1,3] <- 0          # Pr(alive A t -> detected B t)
+  omega[1,4] <- 0          # Pr(alive A t -> detected C t)
+  omega[2,1] <- 1 - pB     # Pr(alive B t -> non-detected t)
+  omega[2,2] <- 0          # Pr(alive B t -> detected A t)
+  omega[2,3] <- pB         # Pr(alive B t -> detected B t)
+  omega[2,4] <- 0          # Pr(alive B t -> detected C t)
+  omega[3,1] <- 1 - pC     # Pr(alive C t -> non-detected t)
+  omega[3,2] <- 0          # Pr(alive C t -> detected A t)
+  omega[3,3] <- 0          # Pr(alive C t -> detected B t)
+  omega[3,4] <- pC         # Pr(alive C t -> detected C t)
+  omega[4,1] <- 1          # Pr(dead t -> non-detected t)
+  omega[4,2] <- 0          # Pr(dead t -> detected A t)
+  omega[4,3] <- 0          # Pr(dead t -> detected B t)
+  omega[4,4] <- 0          # Pr(dead t -> detected C t)
+  
+  # Likelihood 
+  for (i in 1:N){
+    # Define latent state at first capture
+    z[i,first[i]] <- y[i,first[i]] - 1
+    for (t in (first[i]+1):K){
+      # State process: draw S(t) given S(t-1)
+      z[i,t] ~ dcat(gamma[z[i,t-1],1:4])
+      # Observation process: draw O(t) given S(t)
+      y[i,t] ~ dcat(omega[z[i,t],1:4])
+    }
+  }
+})
+```
+
+
+```{r}
+my.data <- list(y = y + 1)
+```
+
+
+```{r}
+my.constants <- list(first = first, 
+                     K = ncol(y), 
+                     N = nrow(y))
+```
+
+
+```{r}
+zinits <- y
+zinits[zinits==0] <- sample(c(1,2,3), sum(zinits==0), replace = TRUE)
+initial.values <- function(){list(phiA = runif(1, 0, 1), 
+                                  phiB = runif(1, 0, 1), 
+                                  phiC = runif(1, 0, 1), 
+                                  lpsiA = rnorm(2, 0, 10),
+                                  lpsiB = rnorm(2, 0, 10),
+                                  lpsiC = rnorm(2, 0, 10),
+                                  pA = runif(1, 0, 1), 
+                                  pB = runif(1, 0, 1), 
+                                  pC = runif(1, 0, 1),
+                                  z = zinits)}
+```
+
+
+```{r}
+parameters.to.save <- c("phiA", "phiB", "phiC", "psiA", "psiB", "psiC","pA", "pB", "pC")
+parameters.to.save
+```
+
+
+```{r}
+n.iter <- 5000
+n.burnin <- 2500
+n.chains <- 2
+```
+
+
+```{r}
+mcmc.multisite <- nimbleMCMC(code = multisite, 
+                             constants = my.constants,
+                             data = my.data,              
+                             inits = initial.values,
+                             monitors = parameters.to.save,
+                             niter = n.iter,
+                             nburnin = n.burnin, 
+                             nchains = n.chains)
+```
+
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.multisite, round = 2)
+```
+
+
+```{r}
+MCMCplot(mcmc.multisite)
+```
+
+
+### Dirichlet prior
+
+```{r}
+geese <- read_csv(here::here("slides", "dat", "geese.csv"), col_names = TRUE)
+y <- geese %>%
+  as.matrix()
+```
+
+
+```{r}
+get.first <- function(x) min(which(x != 0))
+first <- apply(y, 1, get.first)
+first
+```
+
+
+```{r}
+multisite <- nimbleCode({
+  
+  # -------------------------------------------------
+  # Parameters:
+  # phiA: survival probability site A
+  # phiB: survival probability site B
+  # phiC: survival probability site B
+  # psiAA = psiA[1]: movement probability from site A to site A (reference)
+  # psiAB = psiA[2]: movement probability from site A to site B
+  # psiAC = psiA[3]: movement probability from site A to site C 
+  # psiBA = psiB[1]: movement probability from site B to site A
+  # psiBB = psiB[2]: movement probability from site B to site B (reference)
+  # psiBC = psiB[3]: movement probability from site B to site C
+  # psiCA = psiC[1]: movement probability from site C to site A
+  # psiCB = psiC[2]: movement probability from site C to site B
+  # psiCC = psiC[3]: movement probability from site C to site C (reference)
+  # pA: recapture probability site A
+  # pB: recapture probability site B
+  # pC: recapture probability site C
+  # -------------------------------------------------
+  # States (S):
+  # 1 alive at A
+  # 2 alive at B
+  # 2 alive at C
+  # 3 dead
+  # Observations (O):  
+  # 1 not seen
+  # 2 seen at A 
+  # 3 seen at B
+  # 3 seen at C
+  # -------------------------------------------------
+  
+  # Priors
+  phiA ~ dunif(0, 1)
+  phiB ~ dunif(0, 1)
+  phiC ~ dunif(0, 1)
+  pA ~ dunif(0, 1)
+  pB ~ dunif(0, 1)
+  pC ~ dunif(0, 1)
+  # transitions: Dirichlet priors
+  psiA[1:3] ~ ddirch(alpha[1:3])
+  psiB[1:3] ~ ddirch(alpha[1:3])
+  psiC[1:3] ~ ddirch(alpha[1:3])
+
+  # probabilities of state z(t+1) given z(t)
+  gamma[1,1] <- phiA * psiA[1]
+  gamma[1,2] <- phiA * psiA[2]
+  gamma[1,3] <- phiA * psiA[3]
+  gamma[1,4] <- 1 - phiA
+  gamma[2,1] <- phiB * psiB[1]
+  gamma[2,2] <- phiB * psiB[2]
+  gamma[2,3] <- phiB * psiB[3]
+  gamma[2,4] <- 1 - phiB
+  gamma[3,1] <- phiC * psiC[1]
+  gamma[3,2] <- phiC * psiC[2]
+  gamma[3,3] <- phiC * psiC[3]
+  gamma[3,4] <- 1 - phiC
+  gamma[4,1] <- 0
+  gamma[4,2] <- 0
+  gamma[4,3] <- 0
+  gamma[4,4] <- 1
+  
+  # probabilities of y(t) given z(t)
+  omega[1,1] <- 1 - pA     # Pr(alive A t -> non-detected t)
+  omega[1,2] <- pA         # Pr(alive A t -> detected A t)
+  omega[1,3] <- 0          # Pr(alive A t -> detected B t)
+  omega[1,4] <- 0          # Pr(alive A t -> detected C t)
+  omega[2,1] <- 1 - pB     # Pr(alive B t -> non-detected t)
+  omega[2,2] <- 0          # Pr(alive B t -> detected A t)
+  omega[2,3] <- pB         # Pr(alive B t -> detected B t)
+  omega[2,4] <- 0          # Pr(alive B t -> detected C t)
+  omega[3,1] <- 1 - pC     # Pr(alive C t -> non-detected t)
+  omega[3,2] <- 0          # Pr(alive C t -> detected A t)
+  omega[3,3] <- 0          # Pr(alive C t -> detected B t)
+  omega[3,4] <- pC         # Pr(alive C t -> detected C t)
+  omega[4,1] <- 1          # Pr(dead t -> non-detected t)
+  omega[4,2] <- 0          # Pr(dead t -> detected A t)
+  omega[4,3] <- 0          # Pr(dead t -> detected B t)
+  omega[4,4] <- 0          # Pr(dead t -> detected C t)
+  
+  # Likelihood 
+  for (i in 1:N){
+    # Define latent state at first capture
+    z[i,first[i]] <- y[i,first[i]] - 1
+    for (t in (first[i]+1):K){
+      # State process: draw S(t) given S(t-1)
+      z[i,t] ~ dcat(gamma[z[i,t-1],1:4])
+      # Observation process: draw O(t) given S(t)
+      y[i,t] ~ dcat(omega[z[i,t],1:4])
+    }
+  }
+})
+```
+
+
+```{r}
+my.data <- list(y = y + 1)
+```
+
+
+```{r}
+my.constants <- list(first = first, 
+                     K = ncol(y), 
+                     N = nrow(y),
+                     alpha = c(1, 1, 1))
+```
+
+
+```{r}
+zinits <- y
+zinits[zinits==0] <- sample(c(1,2,3), sum(zinits==0), replace = TRUE)
+initial.values <- function(){list(phiA = runif(1, 0, 1), 
+                                  phiB = runif(1, 0, 1), 
+                                  phiC = runif(1, 0, 1), 
+                                  psiA = rep(1/3, 3),
+                                  psiB = rep(1/3, 3),
+                                  psiC = rep(1/3, 3),
+                                  pA = runif(1, 0, 1), 
+                                  pB = runif(1, 0, 1), 
+                                  pC = runif(1, 0, 1),
+                                  z = zinits)}
+```
+
+
+```{r}
+parameters.to.save <- c("phiA", "phiB", "phiC", "psiA", "psiB", "psiC","pA", "pB", "pC")
+parameters.to.save
+```
+
+
+```{r}
+n.iter <- 5000
+n.burnin <- 2500
+n.chains <- 2
+```
+
+
+```{r}
+mcmc.multisite <- nimbleMCMC(code = multisite, 
+                             constants = my.constants,
+                             data = my.data,              
+                             inits = initial.values,
+                             monitors = parameters.to.save,
+                             niter = n.iter,
+                             nburnin = n.burnin, 
+                             nchains = n.chains)
+```
+
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.multisite, round = 2)
+```
+
+
+```{r}
+MCMCplot(mcmc.multisite)
+```
+
+
+## Multistate model
+
+```{r}
+titis <- read_csv2(here::here("slides", "dat", "titis.csv"), col_names = FALSE)
+y <- titis %>%
+  as.matrix()
+```
+
+
+```{r}
+multistate <- nimbleCode({
+  
+  # -------------------------------------------------
+  # Parameters:
+  # phiB: survival probability state B
+  # phiNB: survival probability state NB
+  # psiBNB: transition probability from B to NB
+  # psiNBB: transition probability from NB to B
+  # pB: recapture probability B
+  # pNB: recapture probability NB
+  # -------------------------------------------------
+  # States (S):
+  # 1 alive B
+  # 2 alive NB
+  # 3 dead
+  # Observations (O):  
+  # 1 not seen
+  # 2 seen as B 
+  # 3 seen as NB
+  # -------------------------------------------------
+  
+  # priors
+  phiB ~ dunif(0, 1)
+  phiNB ~ dunif(0, 1)
+  psiBNB ~ dunif(0, 1)
+  psiNBB ~ dunif(0, 1)
+  pB ~ dunif(0, 1)
+  pNB ~ dunif(0, 1)
+  
+  # probabilities of state z(t+1) given z(t)
+  gamma[1,1] <- phiB * (1 - psiBNB)
+  gamma[1,2] <- phiB * psiBNB
+  gamma[1,3] <- 1 - phiB
+  gamma[2,1] <- phiNB * psiNBB
+  gamma[2,2] <- phiNB * (1 - psiNBB)
+  gamma[2,3] <- 1 - phiNB
+  gamma[3,1] <- 0
+  gamma[3,2] <- 0
+  gamma[3,3] <- 1
+  
+  # probabilities of y(t) given z(t)
+  omega[1,1] <- 1 - pB    # Pr(alive B t -> non-detected t)
+  omega[1,2] <- pB        # Pr(alive B t -> detected B t)
+  omega[1,3] <- 0         # Pr(alive B t -> detected NB t)
+  omega[2,1] <- 1 - pNB   # Pr(alive NB t -> non-detected t)
+  omega[2,2] <- 0         # Pr(alive NB t -> detected B t)
+  omega[2,3] <- pNB       # Pr(alive NB t -> detected NB t)
+  omega[3,1] <- 1         # Pr(dead t -> non-detected t)
+  omega[3,2] <- 0         # Pr(dead t -> detected N t)
+  omega[3,3] <- 0         # Pr(dead t -> detected NB t)
+  
+  # Likelihood 
+  for (i in 1:N){
+    # Define latent state at first capture
+    z[i,first[i]] <- y[i,first[i]] - 1
+    for (t in (first[i]+1):K){
+      # State process: draw S(t) given S(t-1)
+      z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
+      # Observation process: draw O(t) given S(t)
+      y[i,t] ~ dcat(omega[z[i,t],1:3])
+    }
+  }
+})
+```
+
+
+```{r}
+my.data <- list(y = y + 1)
+```
+
+
+```{r}
+get.first <- function(x) min(which(x != 0))
+first <- apply(y, 1, get.first)
+first
+```
+
+
+```{r}
+my.constants <- list(first = first, 
+                     K = ncol(y), 
+                     N = nrow(y))
+```
+
+
+```{r}
+zinits <- y
+zinits[zinits == 0] <- sample(c(1,2), sum(zinits == 0), replace = TRUE)
+initial.values <- function(){list(phiNB = runif(1, 0, 1), 
+                                  phiB = runif(1, 0, 1), 
+                                  psiNBB = runif(1, 0, 1), 
+                                  psiBNB = runif(1, 0, 1), 
+                                  pNB = runif(1, 0, 1), 
+                                  pB = runif(1, 0, 1), 
+                                  z = zinits)}
+```
+
+
+```{r}
+parameters.to.save <- c("phiNB", "phiB","psiNBB", "psiBNB", "pNB", "pB")
+parameters.to.save
+```
+
+
+```{r}
+n.iter <- 5000
+n.burnin <- 2500
+n.chains <- 2
+```
+
+
+```{r}
+mcmc.multistate <- nimbleMCMC(code = multistate, 
+                             constants = my.constants,
+                             data = my.data,              
+                             inits = initial.values,
+                             monitors = parameters.to.save,
+                             niter = n.iter,
+                             nburnin = n.burnin, 
+                             nchains = n.chains)
+```
+
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.multistate, round = 2)
+```
+
+
+```{r}
+MCMCplot(mcmc.multistate)
+```
+
+
+## Local minima
+
+
+```{r}
+dat <- matrix(c(2, 0, 2, 1, 2, 0, 2, 
+                2, 0, 2, 1, 2, 0, 2,
+                2, 0, 2, 1, 2, 0, 2,
+                2, 0, 2, 1, 2, 0, 2,
+                1, 1, 1, 0, 1, 0, 1,
+                1, 1, 1, 0, 1, 0, 1,
+                1, 1, 1, 0, 1, 0, 1,
+                1, 1, 1, 0, 1, 0, 1,
+                2, 0, 2, 0, 2, 0, 1,
+                2, 0, 2, 0, 2, 0, 1,
+                2, 0, 2, 0, 2, 0, 1,
+                2, 0, 2, 0, 2, 0, 1,
+                1, 0, 1, 0, 1, 0, 1,
+                1, 0, 1, 0, 1, 0, 1,
+                1, 0, 1, 0, 1, 0, 1,
+                1, 0, 1, 0, 1, 0, 1,
+                2, 0, 2, 0, 2, 0, 2,
+                2, 0, 2, 0, 2, 0, 2,
+                2, 0, 2, 0, 2, 0, 2,
+                2, 0, 2, 0, 2, 0, 2,
+                1, 0, 1, 0, 1, 0, 2,
+                1, 0, 1, 0, 1, 0, 2,
+                1, 0, 1, 0, 1, 0, 2,
+                1, 0, 1, 0, 1, 0, 2,
+                2, 2, 0, 1, 0, 2, 1,
+                2, 2, 0, 1, 0, 2, 1,
+                2, 2, 0, 1, 0, 2, 1,
+                2, 2, 0, 1, 0, 2, 1,
+                2, 1, 0, 2, 0, 1, 1,
+                2, 1, 0, 2, 0, 1, 1,
+                2, 1, 0, 2, 0, 1, 1,
+                2, 1, 0, 2, 0, 1, 1),
+              byrow = T,
+              ncol = 7)
+```
+
+
+```{r}
+get.first <- function(x) min(which(x != 0))
+first <- apply(dat, 1, get.first)
+first
+```
+
+
+```{r}
+# Multistate model
+
+multistate <- nimbleCode({
+  
+  # -------------------------------------------------
+  # Parameters:
+  # phi: survival probability
+  # psiAB: movement probability from site A to site B
+  # psiBA: movement probability from site B to site A
+  # p: recapture probability
+  # -------------------------------------------------
+  # States (S):
+  # 1 alive at A
+  # 2 alive at B
+  # 3 dead
+  # Observations (O):  
+  # 1 not seen
+  # 2 seen at A 
+  # 3 seen at B
+  # -------------------------------------------------
+  
+  # priors
+  phi ~ dunif(0, 1)
+  psiAB ~ dunif(0, 1)
+  psiBA ~ dunif(0, 1)
+  p ~ dunif(0, 1)
+
+  # probabilities of state z(t+1) given z(t)
+  gamma[1,1] <- phi * (1 - psiAB)
+  gamma[1,2] <- phi * psiAB
+  gamma[1,3] <- 1 - phi
+  gamma[2,1] <- phi * psiBA
+  gamma[2,2] <- phi * (1 - psiBA)
+  gamma[2,3] <- 1 - phi
+  gamma[3,1] <- 0
+  gamma[3,2] <- 0
+  gamma[3,3] <- 1
+  
+  # probabilities of y(t) given z(t)
+  omega[1,1] <- 1 - p     # Pr(alive A t -> non-detected t)
+  omega[1,2] <- p         # Pr(alive A t -> detected A t)
+  omega[1,3] <- 0         # Pr(alive A t -> detected B t)
+  omega[2,1] <- 1 - p     # Pr(alive B t -> non-detected t)
+  omega[2,2] <- 0         # Pr(alive B t -> detected A t)
+  omega[2,3] <- p         # Pr(alive B t -> detected B t)
+  omega[3,1] <- 1         # Pr(dead t -> non-detected t)
+  omega[3,2] <- 0         # Pr(dead t -> detected A t)
+  omega[3,3] <- 0         # Pr(dead t -> detected B t)
+  
+  # Likelihood 
+  for (i in 1:N){
+    # Define latent state at first capture
+    z[i,first[i]] <- y[i,first[i]] - 1
+    for (t in (first[i]+1):K){
+      # State process: draw S(t) given S(t-1)
+      z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
+      # Observation process: draw O(t) given S(t)
+      y[i,t] ~ dcat(omega[z[i,t],1:3])
+    }
+  }
+})
+```
+
+
+```{r}
+my.data <- list(y = dat + 1)
+```
+
+
+```{r}
+my.constants <- list(first = first, 
+                    K = ncol(dat), 
+                    N = nrow(dat))
+```
+
+
+```{r}
+zinits <- dat
+zinits[zinits == 0] <- sample(c(1,2), sum(zinits == 0), replace = TRUE)
+initial.values <- function(){list(phi = runif(1, 0, 1), 
+                         psiAB = runif(1, 0, 1), 
+                         psiBA = runif(1, 0, 1), 
+                         p = runif(1, 0, 1), 
+                         z = zinits)}
+```
+
+
+```{r}
+parameters.to.save <- c("phi", "psiAB", "psiBA", "p")
+parameters.to.save
+```
+
+
+```{r}
+n.iter <- 5000
+n.burnin <- 2500
+n.chains <- 2
+```
+
+
+```{r}
+mcmc.multistate <- nimbleMCMC(code = multistate, 
+                              constants = my.constants,
+                              data = my.data,              
+                              inits = initial.values,
+                              monitors = parameters.to.save,
+                              niter = n.iter,
+                              nburnin = n.burnin, 
+                              nchains = n.chains)
+```
+
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.multistate, round = 2)
+```
+
+
+```{r, fig.width = 7.5, fig.asp = 0.818, dev = "svg"}
+MCMCtrace(mcmc.multistate, 
+          params = c("p", "psiBA"),
+          pdf = FALSE)
+```
+
+
+```{r, fig.width = 7.5, fig.asp = 0.818, dev = "svg"}
+psiBA <- c(mcmc.multistate$chain1[,"psiBA"], mcmc.multistate$chain2[,"psiBA"])
+psiBA %>%
+  as_tibble() %>%
+  ggplot() + 
+  aes(x = value) + 
+  geom_histogram(color = "white", binwidth = .03, fill = "gray70") + 
+  geom_density(aes(y = .03 * ..count..))
+```
+
+
+```{r, fig.width = 7.5, fig.asp = 0.818, dev = "svg"}
+psiAB <- c(mcmc.multistate$chain1[,"psiAB"], mcmc.multistate$chain2[,"psiAB"])
+psiAB %>%
+  as_tibble() %>%
+  ggplot() + 
+  aes(x = value) + 
+  geom_histogram(color = "white", binwidth = .03, fill = "gray70") + 
+  geom_density(aes(y = .03 * ..count..))
+```
+
+
+```{r, fig.width = 7.5, fig.asp = 0.818, dev = "svg"}
+det <- c(mcmc.multistate$chain1[,"p"], mcmc.multistate$chain2[,"p"])
+det %>%
+  as_tibble() %>%
+  ggplot() + 
+  aes(x = value) + 
+  geom_histogram(color = "white", binwidth = .03, fill = "gray70") + 
+  geom_density(aes(y = .03 * ..count..))
+```
 
