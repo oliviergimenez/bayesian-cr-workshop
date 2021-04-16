@@ -14,17 +14,13 @@ class: center, middle, title-slide
 
 # Known knowns, unknown knowns and unknowns: Uncertainty in state assignment
 ### The team
-### last updated: 2021-04-15
+### last updated: 2021-04-16
 
 ---
 
 
 
 
-
-
-
----
 
 ## Uncertainty in state assignment
 
@@ -50,20 +46,44 @@ Multievent models extend multistate models with uncertainty in state assignment
 
 + Dominance status in wolves is ascertained based on heterogeneity in detection
 
----
+--
 
-+ We will need to explicitely consider state assignment in a model
+We need to explicitly consider state assignment in a model
 
 --
 
-+ All capture-recapture models can be seen as special cases of multievent models
+HMMs to the rescue!
 
 ---
 ## Examples
 
-+ Breeding
-+ Disease
-+ Heterogeneity
+&lt;br&gt;
+
++ Testing life-history trade-offs while accounting for uncertainty in breeding status
+
++ Quantifying disease dynamics while accounting for uncertainty in disease status
+
++ Estimating survival while accounting for individual heterogeneity in detection
+
+
+---
+## Examples
+
+&lt;br&gt;
+
++ **Testing life-history trade-offs while accounting for uncertainty in breeding status**
+
++ Quantifying disease dynamics while accounting for uncertainty in disease status
+
++ Estimating survival while accounting for individual heterogeneity in detection
+
+
+---
+background-image: url("img/sooty.jpg")
+background-size: cover
+
+### &lt;span style="color: white;"&gt;Sooty shearwater (David Boyle)&lt;/span&gt;
+
 
 ---
 # Uncertainty in breeding status
@@ -71,17 +91,18 @@ Multievent models extend multistate models with uncertainty in state assignment
 + 3 states
     + breeding (B)
     + non-breeding (NB)
-    + Dead (†)
+    + dead (D)
+
 + 4 observations
-    + Not encountered (0)
-    + Found, ascertained as breeder (1)
-    + Found, ascertained as non-breeder (2)
-    + Found, status unknown (3)
+    + not encountered (0)
+    + found, ascertained as breeder (1)
+    + found, ascertained as non-breeder (2)
+    + found, status unknown (3)
 
 
 ---
 class: middle
-### The model construction: How we should think. 
+### How states generate observations
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-1-1.svg)&lt;!-- --&gt;
@@ -91,7 +112,7 @@ class: middle
 
 ---
 class: middle
-### The model construction: How we should think. 
+### How states generate observations
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-2-1.svg)&lt;!-- --&gt;
@@ -100,7 +121,7 @@ class: middle
 
 ---
 class: middle
-### The model construction: How we should think. 
+### How states generate observations
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-3-1.svg)&lt;!-- --&gt;
@@ -110,7 +131,7 @@ class: middle
 
 ---
 class: middle
-### The model construction: How we should think. 
+### How states generate observations
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-4-1.svg)&lt;!-- --&gt;
@@ -121,7 +142,7 @@ class: middle
 
 ---
 class: middle
-### The model construction: How we should think. 
+### How states generate observations
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-5-1.svg)&lt;!-- --&gt;
@@ -129,7 +150,7 @@ class: middle
 
 
 ---
-### HMM model for breeding states w/ uncertainty
+### HMM model for breeding states with uncertainty
 
 Vector of initial state probabilities
 
@@ -157,9 +178,9 @@ $$
 + `\(\pi_{NB} = 1 - \pi_B\)` is the probability that a newly encountered individual is a non-breeder
 
 ---
-### HMM model for breeding states w/ uncertainty
+### HMM model for breeding states with uncertainty
 
-Transition matrix:
+Transition matrix
 
 $$
 `\begin{matrix}
@@ -184,15 +205,17 @@ $$
 \end{matrix}`
 $$
 
-+ `\(\phi_B\)`
++ `\(\phi_B\)` is breeder survival, `\(\phi_{NB}\)` that of non-breeders.
 
-+ `\(\phi_{NB}\)`
++ `\(\psi_{BNB}\)` is the probability for an individual breeding a year to be a non-breeder the next year.
+
++ `\(\psi_{NBB}\)` is the probability for an non-breeder individual to breeder the next year.
 
 
 ---
-### HMM model for breeding states w/ uncertainty
+### HMM model for breeding states with uncertainty
 
-Observation matrix:
+Observation matrix
 
 $$
 `\begin{matrix}
@@ -203,9 +226,9 @@ $$
 \hspace{-1.2em}
 `\begin{matrix}
     y_t=0 &amp; y_t=1 &amp; y_t=2 &amp; y_t=3\\ \hdashline
-p_B \beta_B &amp; 0 &amp; p_B (1-\beta_B) &amp; 1-p_B\\ 
-0 &amp; p_{NB} \beta_{NB} &amp; p_{NB} (1-\beta_{NB}) &amp; 1-p_{NB}\\ 
-0 &amp; 0 &amp; 0 &amp; 1
+1 - p_B &amp; p_B \beta_B &amp; 0 &amp; p_B (1-\beta_B) \\ 
+1-p_{NB} &amp; 0 &amp; p_{NB} \beta_{NB} &amp; p_{NB} (1-\beta_{NB})\\ 
+1 &amp; 0 &amp; 0 &amp; 0
 \end{matrix}`
 \hspace{-0.2em}
 `\begin{matrix}
@@ -217,29 +240,30 @@ p_B \beta_B &amp; 0 &amp; p_B (1-\beta_B) &amp; 1-p_B\\
 \end{matrix}`
 $$
 
-+ `\(\beta_B\)` is the probability to assign an individual in state B to state B
++ `\(\beta_B\)` is the probability to assign an individual in state B to state B.
 
-+ `\(\beta_{NB}\)` is the probability to assign an individual in state NB to state NB
++ `\(\beta_{NB}\)` is the probability to assign an individual in state NB to state NB.
+
++ `\(p_B\)` is the detection probability of breeders, `\(p_{NB}\)` that of non-breeders.
 
 
 
 ---
-### HMM model for breeding states w/ uncertainty
+### HMM model for breeding states with uncertainty
 
 Because animals are all captured, `\(p_B = p_{NB} = 1\)` at first encounter:
 
 $$
 `\begin{matrix}
 &amp; \\
-\mathbf{\Omega.init} = 
     \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12\end{matrix} } \right .
 \end{matrix}`
 \hspace{-1.2em}
 `\begin{matrix}
     y_t=0 &amp; y_t=1 &amp; y_t=2 &amp; y_t=3\\ \hdashline
- \beta_B &amp; 0 &amp; (1-\beta_B) &amp; 0\\ 
-0 &amp; \beta_{NB} &amp; (1-\beta_{NB}) &amp; 0\\ 
-0 &amp; 0 &amp; 0 &amp; 1
+ 0 &amp; \beta_B &amp; 0 &amp; (1-\beta_B)\\ 
+0 &amp; 0 &amp; \beta_{NB} &amp; (1-\beta_{NB})\\ 
+1 &amp; 0 &amp; 0 &amp; 0
 \end{matrix}`
 \hspace{-0.2em}
 `\begin{matrix}
@@ -254,29 +278,33 @@ $$
 Note: Breeding assessment is unaffected.
 
 ---
-### Our model `\((\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)\)`
+### Our model `\((\phi_B, \phi_{NB}, \psi_{BNB}, \psi_{NBB}, p_B, p_{NB}, \beta_B, \beta_{NB}, \pi)\)`
 
 .tiny-font[
 
 ```r
-multisite &lt;- nimbleCode({
+multievent &lt;- nimbleCode({
   # -------------------------------------------------
   # Parameters:
-  # phiA: survival probability site A
-  # phiB: survival probability site B
-  # psiAB: movement probability from site A to site B
-  # psiBA: movement probability from site B to site A
-  # pA: recapture probability site A
-  # pB: recapture probability site B
+  # phiB: survival probability state B
+  # phiNB: survival probability state NB
+  # psiBNB: transition probability from B to NB
+  # psiNBB: transition probability from NB to B
+  # pB: recapture probability B
+  # pNB: recapture probability NB
+  # piB prob. of being in initial state breeder
+  # betaNB prob to ascertain the breeding status of an individual encountered as non-breeder
+  # betaB prob to ascertain the breeding status of an individual encountered as breeder
   # -------------------------------------------------
   # States (S):
-  # 1 alive at A
-  # 2 alive at B
+  # 1 alive B
+  # 2 alive NB
   # 3 dead
   # Observations (O):  
-  # 1 not seen
-  # 2 seen at A 
-  # 3 seen at B
+  # 1 = non-detected
+  # 2 = seen and ascertained as breeder
+  # 3 = seen and ascertained as non-breeder
+  # 4 = not ascertained
   # -------------------------------------------------
 ...
 ```
@@ -284,88 +312,139 @@ multisite &lt;- nimbleCode({
 
 
 ---
-### Our model `\((\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)\)`
+### Our model `\((\phi_B, \phi_{NB}, \psi_{BNB}, \psi_{NBB}, p_B, p_{NB}, \beta_B, \beta_{NB}, \pi)\)`
 
 .small-font[
 
 ```r
-multisite &lt;- nimbleCode({
+multievent &lt;- nimbleCode({
 ...
   # Priors
-  phiA ~ dunif(0, 1)
   phiB ~ dunif(0, 1)
-  psiAB ~ dunif(0, 1)
-  psiBA ~ dunif(0, 1)
-  pA ~ dunif(0, 1)
+  phiNB ~ dunif(0, 1)
+  psiBNB ~ dunif(0, 1)
+  psiNBB ~ dunif(0, 1)
   pB ~ dunif(0, 1)
+  pNB ~ dunif(0, 1)
+  piB ~ dunif(0, 1)
+  betaNB ~ dunif(0, 1)
+  betaB ~ dunif(0, 1)
 ...
 ```
 ]
 
 
 ---
-### Our model `\((\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)\)`
+### Our model `\((\phi_B, \phi_{NB}, \psi_{BNB}, \psi_{NBB}, p_B, p_{NB}, \beta_B, \beta_{NB}, \pi)\)`
 
 .small-font[
 
 ```r
-multisite &lt;- nimbleCode({
+multievent &lt;- nimbleCode({
 ...  
-  # Define probabilities of state z(t+1) given z(t)
-  gamma[1,1] &lt;- phiA * (1 - psiAB)
-  gamma[1,2] &lt;- phiA * psiAB
-  gamma[1,3] &lt;- 1 - phiA
-  gamma[2,1] &lt;- phiB * psiBA
-  gamma[2,2] &lt;- phiB * (1 - psiBA)
-  gamma[2,3] &lt;- 1 - phiB
+  # vector of initial stats probs
+  delta[1] &lt;- piB # prob. of being in initial state B
+  delta[2] &lt;- 1 - piB # prob. of being in initial state NB
+  delta[3] &lt;- 0 # prob. of being in initial state dead
+...  
+```
+]
+
+
+---
+### Our model `\((\phi_B, \phi_{NB}, \psi_{BNB}, \psi_{NBB}, p_B, p_{NB}, \beta_B, \beta_{NB}, \pi)\)`
+
+.small-font[
+
+```r
+multievent &lt;- nimbleCode({
+...  
+  # probabilities of state z(t+1) given z(t)
+  gamma[1,1] &lt;- phiB * (1 - psiBNB)
+  gamma[1,2] &lt;- phiB * psiBNB
+  gamma[1,3] &lt;- 1 - phiB
+  gamma[2,1] &lt;- phiNB * psiNBB
+  gamma[2,2] &lt;- phiNB * (1 - psiNBB)
+  gamma[2,3] &lt;- 1 - phiNB
   gamma[3,1] &lt;- 0
   gamma[3,2] &lt;- 0
   gamma[3,3] &lt;- 1
-...  
-```
-]
-
-
----
-### Our model `\((\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)\)`
-
-.small-font[
-
-```r
-multisite &lt;- nimbleCode({
-...  
-  # Define probabilities of y(t) given z(t)
-  omega[1,1] &lt;- 1 - pA     # Pr(alive A t -&gt; non-detected t)
-  omega[1,2] &lt;- pA         # Pr(alive A t -&gt; detected A t)
-  omega[1,3] &lt;- 0          # Pr(alive A t -&gt; detected B t)
-  omega[2,1] &lt;- 1 - pB     # Pr(alive B t -&gt; non-detected t)
-  omega[2,2] &lt;- 0          # Pr(alive B t -&gt; detected A t)
-  omega[2,3] &lt;- pB         # Pr(alive B t -&gt; detected B t)
-  omega[3,1] &lt;- 1          # Pr(dead t -&gt; non-detected t)
-  omega[3,2] &lt;- 0          # Pr(dead t -&gt; detected A t)
-  omega[3,3] &lt;- 0          # Pr(dead t -&gt; detected B t)
 ...
 ```
 ]
 
 
 ---
-### Our model `\((\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)\)`
+### Our model `\((\phi_B, \phi_{NB}, \psi_{BNB}, \psi_{NBB}, p_B, p_{NB}, \beta_B, \beta_{NB}, \pi)\)`
 
 .small-font[
 
 ```r
-multisite &lt;- nimbleCode({
+multievent &lt;- nimbleCode({
+...  
+  # probabilities of y(t) given z(t)
+  omega[1,1] &lt;- 1 - pB             # Pr(alive B t -&gt; non-detected t)
+  omega[1,2] &lt;- pB * betaB         # Pr(alive B t -&gt; detected B t)
+  omega[1,3] &lt;- 0                  # Pr(alive B t -&gt; detected NB t)
+  omega[1,4] &lt;- pB * (1 - betaB)   # Pr(alive B t -&gt; detected U t)
+  omega[2,1] &lt;- 1 - pNB            # Pr(alive NB t -&gt; non-detected t)
+  omega[2,2] &lt;- 0                  # Pr(alive NB t -&gt; detected B t)
+  omega[2,3] &lt;- pNB * betaNB       # Pr(alive NB t -&gt; detected NB t)
+  omega[2,4] &lt;- pNB * (1 - betaNB) # Pr(alive NB t -&gt; detected U t)
+  omega[3,1] &lt;- 1                  # Pr(dead t -&gt; non-detected t)
+  omega[3,2] &lt;- 0                  # Pr(dead t -&gt; detected N t)
+  omega[3,3] &lt;- 0                  # Pr(dead t -&gt; detected NB t)
+  omega[3,4] &lt;- 0                  # Pr(dead t -&gt; detected U t)
+...
+```
+]
+
+
+---
+### Our model `\((\phi_B, \phi_{NB}, \psi_{BNB}, \psi_{NBB}, p_B, p_{NB}, \beta_B, \beta_{NB}, \pi)\)`
+
+.small-font[
+
+```r
+multievent &lt;- nimbleCode({
+...  
+  # probabilities of y(first) given z(first)
+  omega.init[1,1] &lt;- 0          # Pr(alive B t = 1 -&gt; non-detected t = 1)
+  omega.init[1,2] &lt;- betaB      # Pr(alive B t = 1 -&gt; detected B t = 1)
+  omega.init[1,3] &lt;- 0          # Pr(alive B t = 1 -&gt; detected NB t = 1)
+  omega.init[1,4] &lt;- 1 - betaB  # Pr(alive B t = 1 -&gt; detected U t = 1)
+  omega.init[2,1] &lt;- 0          # Pr(alive NB t = 1 -&gt; non-detected t = 1)
+  omega.init[2,2] &lt;- 0          # Pr(alive NB t = 1 -&gt; detected B t = 1)
+  omega.init[2,3] &lt;- betaNB     # Pr(alive NB t = 1 -&gt; detected NB t = 1)
+  omega.init[2,4] &lt;- 1 - betaNB # Pr(alive NB t = 1 -&gt; detected U t = 1)
+  omega.init[3,1] &lt;- 1          # Pr(dead t = 1 -&gt; non-detected t = 1)
+  omega.init[3,2] &lt;- 0          # Pr(dead t = 1 -&gt; detected N t = 1)
+  omega.init[3,3] &lt;- 0          # Pr(dead t = 1 -&gt; detected NB t = 1)
+  omega.init[3,4] &lt;- 0          # Pr(dead t = 1 -&gt; detected U t = 1)
+...
+```
+]
+
+
+
+---
+### Our model `\((\phi_B, \phi_{NB}, \psi_{BNB}, \psi_{NBB}, p_B, p_{NB}, \beta_B, \beta_{NB}, \pi)\)`
+
+.small-font[
+
+```r
+multievent &lt;- nimbleCode({
 ...
   # Likelihood 
   for (i in 1:N){
     # Define latent state at first capture
-    z[i,first[i]] &lt;- y[i,first[i]] - 1
+    z[i,first[i]] ~ dcat(delta[1:3])
+    y[i,first[i]] ~ dcat(omega.init[z[i,first[i]],1:4])
     for (t in (first[i]+1):K){
       # State process: draw S(t) given S(t-1)
       z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
       # Observation process: draw O(t) given S(t)
-      y[i,t] ~ dcat(omega[z[i,t],1:3])
+      y[i,t] ~ dcat(omega[z[i,t],1:4])
     }
   }
 })
@@ -380,58 +459,20 @@ multisite &lt;- nimbleCode({
 .center[
 
 ```
-      mean   sd 2.5%  50% 97.5% Rhat n.eff
-pA    0.53 0.09 0.36 0.52  0.73 1.04   122
-pB    0.40 0.04 0.32 0.40  0.48 1.07   165
-phiA  0.60 0.05 0.50 0.60  0.71 1.01   195
-phiB  0.69 0.04 0.62 0.69  0.76 1.04   199
-psiAB 0.27 0.06 0.16 0.26  0.40 1.04   244
-psiBA 0.07 0.02 0.04 0.07  0.12 1.03   360
+       mean   sd 2.5%  50% 97.5% Rhat n.eff
+betaB  0.19 0.01 0.16 0.19  0.21 1.01   332
+betaNB 0.76 0.05 0.66 0.76  0.86 1.01    65
+pB     0.56 0.03 0.51 0.56  0.62 1.06   229
+pNB    0.60 0.04 0.53 0.60  0.67 1.03   142
+phiB   0.81 0.02 0.78 0.81  0.85 1.01   312
+phiNB  0.84 0.02 0.80 0.84  0.87 1.00   354
+piB    0.71 0.03 0.66 0.71  0.76 1.02   115
+psiBNB 0.23 0.02 0.18 0.22  0.27 1.00   214
+psiNBB 0.25 0.04 0.17 0.25  0.34 1.00    95
 ```
 ]
 
 ---
-
-.center.nogap[
-![](7_uncertainty_files/figure-html/unnamed-chunk-12-1.svg)&lt;!-- --&gt;
-]
-
-
-
----
-## Disease ecology 
-
-+ disease states; house finches Faustino et al. 2004 et Conn &amp; Cooch 2009
-
-
----
-# Animal epidemiology
-
-+ 3 states
-    + healthy (H)
-    + ill (I)
-    + Dead (†)
-+ 4 observations
-    + Not seen (0)
-    + Captured healthy (1)
-    + Captured ill (2)
-    + Health status unknown, i.e. seen at distance (3)
-
-
----
-class: middle
-### The model construction: How we should think. 
-
-.center.nogap[
-![](7_uncertainty_files/figure-html/unnamed-chunk-13-1.svg)&lt;!-- --&gt;
-]
-
-
-
-
----
-class: middle
-### The model construction: How we should think. 
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-14-1.svg)&lt;!-- --&gt;
@@ -440,8 +481,47 @@ class: middle
 
 
 ---
+## Animal epidemiology with uncertain disease states
+
++ We consider a system of an emerging pathogen *Mycoplasma gallisepticum* Edward and Kanarek and its host the house finch, *Carpodacus mexicanus* Müller. 
+
+
+---
+background-image: url("img/infectedhousefinch.jpg")
+background-size: cover
+
+### &lt;span style="color: white;"&gt;A house finch with a heavy infection (Jim Mondok).&lt;/span&gt;
+
+---
+## Animal epidemiology with uncertain disease states
+
++ We consider a system of an emerging pathogen *Mycoplasma gallisepticum* Edward and Kanarek and its host the house finch, *Carpodacus mexicanus* Müller. 
+
++ [Faustino et al. (2004)](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8790.2004.00840.x), and [Conn &amp; Cooch (2009)](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2664.2008.01597.x) studied impact of pathogen on host demographic rates.
+
++ Problem is true disease state for some encountered individuals is ambiguous because seen at distance.
+
++ In this context, how to study the dynamics of the disease?
+
+
+---
+# States and observations
+
++ 3 states
+    + healthy (H)
+    + ill (I)
+    + dead (D)
+    
++ 4 observations
+    + not seen (0)
+    + captured healthy (1)
+    + captured ill (2)
+    + health status unknown, i.e. seen at distance (3)
+
+
+---
 class: middle
-### The model construction: How we should think. 
+### How states generate observations.
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-15-1.svg)&lt;!-- --&gt;
@@ -449,9 +529,10 @@ class: middle
 
 
 
+
 ---
 class: middle
-### The model construction: How we should think. 
+### How states generate observations.
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
@@ -459,18 +540,38 @@ class: middle
 
 
 
-
 ---
 class: middle
-### The model construction: How we should think. 
+### How states generate observations.
 
 .center.nogap[
 ![](7_uncertainty_files/figure-html/unnamed-chunk-17-1.svg)&lt;!-- --&gt;
 ]
 
 
+
 ---
-### HMM model for disease states w/ uncertainty
+class: middle
+### How states generate observations.
+
+.center.nogap[
+![](7_uncertainty_files/figure-html/unnamed-chunk-18-1.svg)&lt;!-- --&gt;
+]
+
+
+
+
+---
+class: middle
+### How states generate observations.
+
+.center.nogap[
+![](7_uncertainty_files/figure-html/unnamed-chunk-19-1.svg)&lt;!-- --&gt;
+]
+
+
+---
+### HMM model for disease states with uncertainty
 
 Vector of initial state probabilities
 
@@ -494,14 +595,14 @@ $$
 \end{matrix}`
 $$
 
-+ `\(\pi_H\)` is the probability that a newly encountered individual is healthy
++ `\(\pi_H\)` is the probability that a newly encountered individual is healthy.
 
-+ `\(\pi_{I} = 1 - \pi_H\)` is the probability that a newly encountered individual is ill
++ `\(\pi_{I} = 1 - \pi_H\)` is the probability that a newly encountered individual is ill.
 
 ---
-### HMM model for disease ecology w/ uncertainty
+### HMM model for disease states with uncertainty
 
-Transition matrix:
+Transition matrix
 
 $$
 `\begin{matrix}
@@ -526,15 +627,15 @@ $$
 \end{matrix}`
 $$
 
-+ `\(\phi_H\)`
++ `\(\phi_H\)` is the survival probability of healthy individuals, `\(\phi_I\)` that of ill individuals.
 
-+ `\(\phi_{I}\)`
++ `\(\psi_{HI}\)` is the probability of getting sick, `\(\psi_{IH}\)` that of recovering from the disease.
 
 
 ---
-### HMM model for disease ecology w/ uncertainty
+### HMM model for disease states with uncertainty
 
-Observation matrix:
+Observation matrix
 
 $$
 `\begin{matrix}
@@ -545,9 +646,9 @@ $$
 \hspace{-1.2em}
 `\begin{matrix}
     y_t=0 &amp; y_t=1 &amp; y_t=2 &amp; y_t=3\\ \hdashline
-p_H \beta_H &amp; 0 &amp; p_H (1-\beta_H) &amp; 1-p_H\\ 
-0 &amp; p_{I} \beta_{I} &amp; p_{I} (1-\beta_{I}) &amp; 1-p_{I}\\ 
-0 &amp; 0 &amp; 0 &amp; 1
+1-p_H &amp; p_H \beta_H &amp; 0 &amp; p_H (1-\beta_H)\\ 
+1-p_I &amp; 0 &amp; p_{I} \beta_{I} &amp; p_{I} (1-\beta_{I})\\ 
+1 &amp; 0 &amp; 0 &amp; 0
 \end{matrix}`
 \hspace{-0.2em}
 `\begin{matrix}
@@ -559,28 +660,76 @@ p_H \beta_H &amp; 0 &amp; p_H (1-\beta_H) &amp; 1-p_H\\
 \end{matrix}`
 $$
 
-+ `\(\beta_H\)` is the probability to assign a healthy individual to state H
++ `\(\beta_H\)` is the probability to assign a healthy individual to state H.
 
-+ `\(\beta_{I}\)` is the probability to assign a sick individual to state I
++ `\(\beta_{I}\)` is the probability to assign a sick individual to state I.
+
++ `\(p_H\)` is the detection probability of healthy individuals, `\(p_I\)` that of sick individuals.
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+
+.center[
+
+```
+      mean   sd 2.5%  50% 97.5% Rhat n.eff
+betaH 0.99 0.01 0.97 0.99  1.00 1.01  1421
+betaI 0.05 0.01 0.03 0.05  0.08 1.00  6477
+pH    0.17 0.02 0.13 0.17  0.22 1.01   331
+pI    0.58 0.10 0.41 0.57  0.80 1.04   220
+phiH  0.88 0.02 0.84 0.88  0.92 1.01   360
+phiI  0.99 0.01 0.96 0.99  1.00 1.00  1004
+pi    0.96 0.01 0.93 0.96  0.98 1.00  4190
+psiHI 0.22 0.04 0.16 0.22  0.32 1.02   311
+psiIH 0.46 0.08 0.32 0.45  0.63 1.02   392
+```
+]
+
+---
+
+.center.nogap[
+![](7_uncertainty_files/figure-html/unnamed-chunk-21-1.svg)&lt;!-- --&gt;
+]
 
 
 
 ---
-## Individual heterogeneity w/ finite mixtures. 
+## Individual heterogeneity with finite mixtures. 
 
-+ Gray wolves case study with or without transition. 
++ Gray wolf is a social species with hierarchy in packs which may reflect in species demography.
 
+---
+background-image: url("img/wolfdominance.jpg")
+background-size: cover
+
+
+---
+## Individual heterogeneity with finite mixtures. 
+
++ Gray wolf is a social species with hierarchy in packs which may reflect in demography.
+
++ Shirley Pledger is a series of paper developed heterogeneity models in which individuals are assigned in two or more classes with class-specific survival/detection probabilities. 
+
++ [Cubaynes et al. (2010)](https://conbio.onlinelibrary.wiley.com/doi/abs/10.1111/j.1523-1739.2009.01431.x) used HMMs to account for heterogeneity in the detection process due to social status, see also [Pradel et al. (2009)](https://link.springer.com/chapter/10.1007%2F978-0-387-78151-8_36).
+
+???
+
+Dominant individuals tend to use path more often than others, and these paths are where we look for scats. 
 
 ---
 # Individual heterogeneity
 
 + 3 states
     + alive in class 1 (A1)
-    + alive in class 2 (A1)
-    + dead (†)
+    + alive in class 2 (A2)
+    + dead (D)
+    
 + 4 observations
-    + Not captured (0)
-    + Captured (1)
+    + not captured (0)
+    + captured (1)
 
 
 ---
@@ -608,9 +757,9 @@ $$
 \end{matrix}`
 $$
 
-+ `\(\pi\)` is the probability of being alive in class 1
++ `\(\pi\)` is the probability of being alive in class 1.
 
-+ `\(1 - \pi\)` is the probability of being in class 2
++ `\(1 - \pi\)` is the probability of being in class 2.
 
 
 ---
@@ -641,12 +790,12 @@ $$
 \end{matrix}`
 $$
 
-
++ `\(\phi\)` is the survival probability, which could be made heterogeneous. 
 
 ---
 ### HMM model for individual heterogeneity
 
-Transition matrix, with change in heterogeneity class:
+Transition matrix, with change in heterogeneity class
 
 $$
 `\begin{matrix}
@@ -671,11 +820,15 @@ $$
 \end{matrix}`
 $$
 
++ `\(\psi_{12}\)` is the probability for an individual to change class of heterogeneity, from 1 to 2. 
+
++ `\(\psi_{21}\)` is the probability for an individual to change class of heterogeneity, from 2 to 1. 
+
 
 ---
 ### HMM model for individual heterogeneity
 
-Observation matrix:
+Observation matrix
 
 $$
 `\begin{matrix}
@@ -700,30 +853,104 @@ $$
 \end{matrix}`
 $$
 
++ `\(p_1\)` is detection for individuals in class 1, and `\(p_2\)` that of individuals in class 2. 
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+
+.center[
+
+```
+    mean   sd 2.5%  50% 97.5% Rhat n.eff
+p1  0.38 0.09 0.23 0.38  0.56 1.04   210
+p2  0.50 0.12 0.25 0.50  0.73 1.01   229
+phi 0.81 0.05 0.71 0.81  0.91 1.04   317
+pi  0.62 0.12 0.36 0.63  0.83 1.02   164
+```
+]
+
+---
+
+.center.nogap[
+![](7_uncertainty_files/figure-html/unnamed-chunk-23-1.svg)&lt;!-- --&gt;
+]
 
 
 ---
-## Other examples
+### HMM model for individual heterogeneity
 
-+ Add matrices like in multistate slides for examples we will not cover
++ You may consider more classes, and select among models with `\(WAIC\)`, see [Cubaynes et al. (2012)](https://oliviergimenez.github.io/pubs/Cubaynesetal2011MEE.pdf).
 
-+ Trap-dependence
++ You may also go for a non-parametric approach and let the data tell you how many classes you need. This is relatively easy to do in Nimble, see [Turek et al. (2021)](https://arxiv.org/abs/2007.10163). 
+
+---
+class: middle, center
+## HMMs to analyse capture-recapture data
+
+With the same data, ask further questions, just consider different states.
+
+---
+background-image: url("https://media.giphy.com/media/3o8dFn5CXJlCV9ZEsg/source.gif")
+background-size: cover
+
+
+---
+background-image: url("img/archer.png")
+background-size: cover
+
+
+---
+### Further HMMs examples to make the best of capture-recapture data
+
+&lt;br&gt;
 
 + Memory model
 
-+ Sex
++ Sex uncertainty
+
+---
+## Other examples we won't go into details
+
++ Recruitment
+
++ Causes of mortality
+
++ Robust design
+
++ Extension to semi-Markov allows stop-over, flexibility in modelling patterns of senescence
+
++ Voir la prez de Roger et out-of-date curated list https://www.cefe.cnrs.fr/fr/recherche/bc/bbp/843-c/254-roger-pradel?start=3
+
+---
+
+Cole, D. J., B. J. T. Morgan, R. S. McCrea, R. Pradel, O. Gimenez, and R. Choquet. 2014. Does your species have memory? Analyzing capture-recapture data with memory models. Ecology and Evolution 4(11):2124–2133.
+
+Rouan, L., R. Choquet, et al. (2009). "A General Framework for Modeling Memory in Capture-Recapture Data." Journal of Agricultural Biological and Environmental Statistics 14(3): 338-355. 
 
 ---
 ## Further reading
 
-+ Seminal paper by Pradel (2005); see also Gimenez et al. (2012) for a review
-+ Dupuis (1995) had a similar idea, for the Arnason-Schwarz model
++ Seminal paper by Pradel (2005): Pradel, R. (2005), Multievent: An Extension of Multistate Capture–Recapture Models to Uncertain States. Biometrics, 61: 442-447. https://doi.org/10.1111/j.1541-0420.2005.00318.x
+
++ see also Gimenez et al. (2012) for a review: Gimenez, O., Lebreton, J.-D., Gaillard, J.-M., Choquet, R. and R. Pradel (2012). Estimating demographic parameters using hidden process dynamic models. Theoretical Population Biology 82: 307-316.
+
++ Dupuis (1995) had a similar idea, for the Arnason-Schwarz model: Dupuis, J. (1995) Bayesian estimation of movement and survival probabilities from capture-recapture data. Biometrika. Vol. 82, pp 761-772.
 
 + Turek, D., Wehrhahn, C. &amp; Gimenez, O. Bayesian non-parametric detection heterogeneity in ecological models. Environ Ecol Stat (2021). https://doi.org/10.1007/s10651-021-00489-1
 
++ Cubaynes, S., C. Lavergne, E. Marboutin, and O. Gimenez (2012). Assessing individual heterogeneity using model selection criteria: How many mixture components in capture-recapture models? Methods in Ecology and Evolution 3: 564-573. 
+
++ Gimenez O., E. Cam, J.-M. Gaillard (2018). [Individual heterogeneity and capture–recapture models: what, why and how?](https://oliviergimenez.github.io/pubs/GimenezCamGaillard2017Oikos.pdf) Oikos. 127: 664–686.
+
 + Conn, P.B. and Cooch, E.G. (2009), Multistate capture–recapture analysis under imperfect state observation: an application to disease models. Journal of Applied Ecology, 46: 486-492. https://doi.org/10.1111/j.1365-2664.2008.01597.x
 
-+ Sarah Cons Biol paper as well.
++ SCUBAYNES, S., PRADEL, R., CHOQUET, R., DUCHAMP, C., GAILLARD, J.‐M., LEBRETON, J.‐D., MARBOUTIN, E., MIQUEL, C., REBOULET, A.‐M., POILLOT, C., TABERLET, P. and GIMENEZ, O. (2010), Importance of Accounting for Detection Heterogeneity When Estimating Abundance: the Case of French Wolves. Conservation Biology, 24: 621-626. https://doi.org/10.1111/j.1523-1739.2009.01431.x
+
++ Pradel R. (2009) The Stakes of Capture–Recapture Models with State Uncertainty. In: Thomson D.L., Cooch E.G., Conroy M.J. (eds) Modeling Demographic Processes In Marked Populations. Environmental and Ecological Statistics, vol 3. Springer, Boston, MA. https://doi.org/10.1007/978-0-387-78151-8_36 
+
++ Faustino, C.R., Jennelle, C.S., Connolly, V., Davis, A.K., Swarthout, E.C., Dhondt, A.A. and Cooch, E.G. (2004), Mycoplasma gallisepticum infection dynamics in a house finch population: seasonal variation in survival, encounter and transmission rate. Journal of Animal Ecology, 73: 651-669. https://doi.org/10.1111/j.0021-8790.2004.00840.x
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
