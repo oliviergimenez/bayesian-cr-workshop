@@ -140,8 +140,7 @@ mcmc.output <- nimbleMCMC(code = naive.survival.model,
                           monitors = parameters.to.save,
                           niter = n.iter, 
                           nburnin = n.burnin, 
-                          nchains = n.chains,
-                          )
+                          nchains = n.chains)
 ```
 
 ```{r, cache = TRUE, echo = FALSE, warning=FALSE, message=FALSE}

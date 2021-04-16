@@ -1,0 +1,209 @@
+---
+title: "Class 4 live demo"
+author: "The team"
+date: "last updated: `r Sys.Date()`"
+output: html_document
+---
+
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+library(tidyverse)
+theme_set(theme_light(base_size = 14))
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+```
+
+
+## Markov chain 
+
+```{r echo = TRUE, message=FALSE, warning=FALSE}
+library(tidyverse)
+nind <- 57
+nocc <- 5
+first <- rep(1, nind) # single cohort
+z <- matrix(NA, nrow = nind, ncol = nocc)
+phi <- 0.8
+for (i in 1:nind){
+  z[i,first[i]] <- 1
+  for (t in (first[i]+1):nocc){
+    z[i,t] <- rbinom(1, 1, phi * z[i,t-1]) # once you're dead z = 0, you remain dead
+  }
+}
+z[z==0] <- 2 # 2 = dead, 1 = alive
+colnames(z) <- paste0("winter ", 1:nocc)
+z %>% 
+  as_tibble() %>% 
+  add_column(id = 1:nind, .before = "winter 1") %>%
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "400px")
+```
+
+
+```{r}
+library(nimble)
+```
+
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2])
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    }
+  }})
+```
+]
+
+```{r}
+my.constants <- list(N = 57, T = 5)
+my.constants
+```
+
+
+```{r}
+my.data <- list(z = z)
+my.data
+```
+
+```{r}
+initial.values <- function() list(phi = runif(1,0,1))
+initial.values()
+```
+
+```{r}
+parameters.to.save <- c("phi")
+parameters.to.save
+```
+
+```{r}
+n.iter <- 5000
+n.burnin <- 1000
+n.chains <- 2
+```
+
+```{r, message=FALSE, warning=FALSE, eval=TRUE}
+mcmc.output <- nimbleMCMC(code = markov.survival, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter, 
+                          nburnin = n.burnin, 
+                          nchains = n.chains)
+```
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.output, round = 2)
+```
+
+
+## Hiden Markov chain
+
+
+```{r}
+p <- 0.6
+y <- z
+y[z==2] <- 0
+y[y==1] <- rbinom(n = sum(y==1), 1, p)
+nobs <- sum(apply(y,1,sum) != 0)
+y <- y[apply(y,1,sum) !=0, ]
+first <- apply(y, 1, function(x) min(which(x !=0)))
+for (i in 1:nobs){
+  if(first[i] > 1) y[i, 1:(first[i]-1)] <- NA
+}
+y %>%
+  as_tibble() %>%
+  add_column(id = 1:nobs, .before = "winter 1") %>%
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
+```
+
+```{r}
+hmm.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior survival
+  p ~ dunif(0, 1) # prior detection
+  # likelihood
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+
+```{r}
+first <- apply(y, 1, function(x) min(which(x !=0)))
+my.constants <- list(N = nrow(y), T = 5, first = first)
+my.constants
+```
+
+
+```{r}
+my.data <- list(y = y + 1)
+```
+
+
+```{r}
+zinits <- y + 1 # non-detection -> alive
+zinits[zinits == 2] <- 1 # dead -> alive
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+```
+
+
+```{r}
+parameters.to.save <- c("phi", "p")
+parameters.to.save
+```
+
+
+```{r}
+n.iter <- 5000
+n.burnin <- 1000
+n.chains <- 2
+```
+
+```{r, message=FALSE, warning=FALSE}
+mcmc.output <- nimbleMCMC(code = hmm.survival, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter, 
+                          nburnin = n.burnin, 
+                          nchains = n.chains)
+```
+
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.output, round = 2)
+```
+
+
+

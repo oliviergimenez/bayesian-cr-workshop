@@ -1,0 +1,126 @@
+---
+title: "Class 3 live demo"
+author: "The team"
+date: "last updated: `r Sys.Date()`"
+output: html_document
+---
+
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+library(tidyverse)
+theme_set(theme_light(base_size = 14))
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+```
+
+
+```{r}
+library(nimble)
+```
+
+```{r}
+naive.survival.model <- nimbleCode({
+  # prior
+  phi ~ dunif(0, 1)
+  # likelihood
+  y ~ dbinom(phi, n)
+})
+```
+
+```{r}
+my.data <- list(n = 57, y = 19)
+```
+
+
+```{r}
+my.constants <- list(n = 57)
+my.data <- list(y = 19)
+```
+
+
+```{r}
+initial.values <- function() list(phi = runif(1,0,1))
+```
+
+
+```{r}
+initial.values()
+```
+
+
+
+```{r}
+parameters.to.save <- c("phi")
+```
+
+
+```{r}
+n.iter <- 5000
+n.burnin <- 1000
+n.chains <- 2
+```
+
+
+```{r, warning=FALSE, message=FALSE, eval = TRUE}
+mcmc.output <- nimbleMCMC(code = naive.survival.model,     
+                          data = my.data,  
+                          constants = my.constants,
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter, 
+                          nburnin = n.burnin, 
+                          nchains = n.chains)
+```
+
+
+```{r}
+str(mcmc.output)
+```
+
+
+```{r}
+head(mcmc.output$chain1)
+```
+
+
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+mcmc.output %>%
+  as_tibble() %>%
+  janitor::clean_names() %>%
+  ggplot() + 
+  geom_histogram(aes(x = chain1[,"phi"]), color = "white") + 
+  labs(x = "survival probability")
+```
+
+```{r}
+library(MCMCvis)
+MCMCsummary(mcmc.output, round = 2)
+```
+
+
+
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+MCMCtrace(mcmc.output,
+          pdf = FALSE) 
+```
+
+
+
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+MCMCtrace(mcmc.output,
+          pdf = FALSE,
+          ind = TRUE,
+          Rhat = TRUE,
+          n.eff = TRUE) 
+```
+
+
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+```
+
+
+
+

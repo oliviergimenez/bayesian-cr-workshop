@@ -1,0 +1,994 @@
+---
+title: "Class 5 live demo"
+author: "The team"
+date: "last updated: `r Sys.Date()`"
+output: html_document
+---
+
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+library(tidyverse)
+theme_set(theme_light(base_size = 14))
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+```
+
+```{r}
+library(nimble)
+```
+
+## Data
+
+```{r echo = TRUE, message=FALSE, warning=FALSE}
+dipper <- read_csv(here::here("slides", "dat", "dipper.csv"))
+dipper %>%  
+  kableExtra::kable() %>%
+  kableExtra::scroll_box(width = "100%", height = "400px")
+```
+
+
+```{r echo = TRUE, message=FALSE, warning=FALSE}
+y <- dipper %>%
+  select(year_1981:year_1987) %>%
+  as.matrix()
+y
+```
+
+
+
+
+```{r eval = FALSE}
+library(nimble)
+
+hmm.phip <- nimbleCode({
+  phi ~ dunif(0, 1) # prior survival
+  p ~ dunif(0, 1) # prior detection
+  # likelihood
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
+#  omega_init[1,1] <- 0    
+#  omega_init[1,2] <- 1        
+#  omega_init[2,1] <- 1        
+#  omega_init[2,2] <- 0        
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+#    y[i,first[i]] ~ dcat(omega_init[z[i,first[i]], 1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+
+first <- apply(y, 1, function(x) min(which(x !=0)))
+my.constants <- list(N = nrow(y), T = ncol(y), first = first)
+my.constants
+my.data <- list(y = y + 1)
+
+zinits <- y + 1 # non-detection -> alive
+zinits[zinits == 2] <- 1 # dead -> alive
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("phi", "p")
+parameters.to.save
+
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phip <- nimbleMCMC(code = hmm.phip, 
+                   constants = my.constants,
+                   data = my.data,              
+                   inits = initial.values,
+                   monitors = parameters.to.save,
+                   niter = n.iter,
+                   nburnin = n.burnin, 
+                   nchains = n.chains)
+
+library(MCMCvis)
+MCMCsummary(mcmc.phip, round = 2)
+
+#-------- (phi_t, p)
+
+hmm.phitp <- nimbleCode({
+  for (t in 1:(T-1)){
+    phi[t] ~ dunif(0, 1) # prior survival
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
+  }
+  p ~ dunif(0, 1) # prior detection
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+initial.values <- function() list(phi = runif(my.constants$T-1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("phi", "p")
+parameters.to.save
+
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phitp <- nimbleMCMC(code = hmm.phitp, 
+                   constants = my.constants,
+                   data = my.data,              
+                   inits = initial.values,
+                   monitors = parameters.to.save,
+                   niter = n.iter,
+                   nburnin = n.burnin, 
+                   nchains = n.chains)
+
+MCMCsummary(object = mcmc.phitp, round = 2)
+
+#-------- (phi, p_t)
+
+hmm.phipt <- nimbleCode({
+  phi ~ dunif(0, 1) # prior survival
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    p[t] ~ dunif(0, 1) # prior detection
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t)
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t)
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  }
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])
+    }
+  }
+})
+
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(my.constants$T-1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("phi", "p")
+parameters.to.save
+
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phipt <- nimbleMCMC(code = hmm.phipt, 
+                         constants = my.constants,
+                         data = my.data,              
+                         inits = initial.values,
+                         monitors = parameters.to.save,
+                         niter = n.iter,
+                         nburnin = n.burnin, 
+                         nchains = n.chains)
+
+MCMCsummary(object = mcmc.phipt, round = 2)
+
+#-------- (phi_t, p_t)
+
+hmm.phitpt <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    phi[t] ~ dunif(0, 1) # prior survival
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
+    p[t] ~ dunif(0, 1) # prior detection
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t)
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t)
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  }
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])
+    }
+  }
+})
+
+initial.values <- function() list(phi = runif(my.constants$T-1,0,1),
+                                  p = runif(my.constants$T-1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("phi", "p")
+parameters.to.save
+
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phitpt <- nimbleMCMC(code = hmm.phitpt, 
+                         constants = my.constants,
+                         data = my.data,              
+                         inits = initial.values,
+                         monitors = parameters.to.save,
+                         niter = n.iter,
+                         nburnin = n.burnin, 
+                         nchains = n.chains)
+
+MCMCsummary(object = mcmc.phitpt, round = 2)
+
+MCMCplot(object = mcmc.phitpt)
+
+priors <- runif(3000, 0, 1)
+MCMCtrace(object = mcmc.phitpt,
+          ISB = FALSE,
+          exact = TRUE, 
+          params = c("phi[6]"),
+          pdf = FALSE, 
+          priors = priors)
+
+
+#-------- (phi_flow, p_t)
+
+hmm.phiflowp <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    logit(phi[t]) <- beta[1] + beta[2] * flow[t]
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
+  }
+  p ~ dunif(0, 1) # prior detection
+  omega[1,1,t] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2,t] <- p        # Pr(alive t -> detected t)
+  omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  beta[1] ~ dnorm(0, 10) # prior intercept
+  beta[2] ~ dnorm(0, 10) # prior slope
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+# water flow in L/s
+water_flow <- c(443, 1114, 529, 434, 627, 466, 730) # 1981, 1982, ..., 1987
+water_flow <- water_flow[-7]
+water_flow_st <- (water_flow - mean(water_flow))/sd(water_flow)
+
+my.constants <- list(N = nrow(y), T = ncol(y), first = first, flow = water_flow_st)
+my.constants
+
+initial.values <- function() list(beta = rnorm(2,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("beta", "p", "phi")
+parameters.to.save
+
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phiflowpt <- nimbleMCMC(code = hmm.phiflowpt, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter,
+                          nburnin = n.burnin, 
+                          nchains = n.chains)
+
+# MCMCsummary(object = mcmc.phiflowpt, round = 2)
+
+MCMCplot(object = mcmc.phiflowpt, params = "beta", ISB = TRUE)
+MCMCplot(object = mcmc.phiflowpt, params = "phi", ISB = TRUE)
+
+
+#-------- (phi_flow+RE, p_t)
+
+hmm.phiflowREp <- nimbleCode({
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  for (t in 1:(T-1)){
+    logit(phi[t]) <- beta[1] + beta[2] * flow[t] + eps[t]
+    eps[t] ~ dnorm(0, sd = sdeps)
+    gamma[1,1,t] <- phi[t]      # Pr(alive t -> alive t+1)
+    gamma[1,2,t] <- 1 - phi[t]  # Pr(alive t -> dead t+1)
+    gamma[2,1,t] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
+    p[t] ~ dunif(0, 1) # prior detection
+    omega[1,1,t] <- 1 - p[t]    # Pr(alive t -> non-detected t)
+    omega[1,2,t] <- p[t]        # Pr(alive t -> detected t)
+    omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  }
+  beta[1] ~ dnorm(0, 10) # prior intercept
+  beta[2] ~ dnorm(0, 10) # prior slope
+  sdeps ~ dunif(0,10)
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, j-1])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])
+    }
+  }
+})
+
+# water flow in L/s
+water_flow <- c(443, 1114, 529, 434, 627, 466, 730) # 1981, 1982, ..., 1987
+water_flow <- water_flow[-7]
+water_flow_st <- (water_flow - mean(water_flow))/sd(water_flow)
+my.constants <- list(N = nrow(y), T = ncol(y), first = first, flow = water_flow_st)
+my.constants
+
+initial.values <- function() list(beta = rnorm(2,0,1),
+                                  p = runif(my.constants$T-1,0,1),
+                                  sdeps = runif(1,0,3),
+                                  z = zinits)
+parameters.to.save <- c("beta", "p", "phi", "sdeps")
+parameters.to.save
+
+n.iter <- 10000
+n.burnin <- 5000
+n.chains <- 2
+
+mcmc.phiflowREpt <- nimbleMCMC(code = hmm.phiflowREpt, 
+                             constants = my.constants,
+                             data = my.data,              
+                             inits = initial.values,
+                             monitors = parameters.to.save,
+                             niter = n.iter,
+                             nburnin = n.burnin, 
+                             nchains = n.chains)
+
+MCMCsummary(object = mcmc.phiflowREpt, round = 2)
+
+MCMCtrace(object = mcmc.phiflowREpt, params = "sdeps", pdf = FALSE)
+
+
+
+
+#------------ WAIC
+
+
+
+
+#-------- (phi, p)
+
+my.constants <- list(N = nrow(y), T = ncol(y), first = first)
+my.data <- list(y = y + 1)
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("phi", "p", "z")
+mcmc.phip <- nimbleMCMC(code = hmm.phip, 
+                        constants = my.constants,
+                        data = my.data,              
+                        inits = initial.values,
+                        monitors = parameters.to.save,
+                        niter = n.iter,
+                        nburnin = n.burnin, 
+                        nchains = n.chains,
+                        WAIC = TRUE)
+
+#-------- (phi_t, p)
+
+initial.values <- function() list(phi = runif(my.constants$T-1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+mcmc.phitp <- nimbleMCMC(code = hmm.phitp, 
+                         constants = my.constants,
+                         data = my.data,              
+                         inits = initial.values,
+                         monitors = parameters.to.save,
+                         niter = n.iter,
+                         nburnin = n.burnin, 
+                         nchains = n.chains,
+                         WAIC = TRUE)
+
+#-------- (phi, p_t)
+
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(my.constants$T-1,0,1),
+                                  z = zinits)
+mcmc.phipt <- nimbleMCMC(code = hmm.phipt, 
+                         constants = my.constants,
+                         data = my.data,              
+                         inits = initial.values,
+                         monitors = parameters.to.save,
+                         niter = n.iter,
+                         nburnin = n.burnin, 
+                         nchains = n.chains,
+                         WAIC = TRUE)
+
+#-------- (phi_t, p_t)
+
+initial.values <- function() list(phi = runif(my.constants$T-1,0,1),
+                                  p = runif(my.constants$T-1,0,1),
+                                  z = zinits)
+mcmc.phitpt <- nimbleMCMC(code = hmm.phitpt, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter,
+                          nburnin = n.burnin, 
+                          nchains = n.chains,
+                          WAIC = TRUE)
+
+#-------- (phi_flow, p_t)
+
+my.constants <- list(N = nrow(y), T = ncol(y), first = first, flow = water_flow_st)
+initial.values <- function() list(beta = rnorm(2,0,1),
+                                  p = runif(my.constants$T-1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("beta", "p", "phi", "z")
+mcmc.phiflowpt <- nimbleMCMC(code = hmm.phiflowpt, 
+                             constants = my.constants,
+                             data = my.data,              
+                             inits = initial.values,
+                             monitors = parameters.to.save,
+                             niter = n.iter,
+                             nburnin = n.burnin, 
+                             nchains = n.chains,
+                             WAIC = TRUE)
+
+data.frame(model = c("(phi,p)",
+                     "(phit,p)",
+                     "(phi,pt)",
+                     "(phit,pt)",
+                     "(phiflow,pt)"),
+           WAIC = c(mcmc.phip$WAIC, 
+             mcmc.phitp$WAIC, 
+             mcmc.phipt$WAIC, 
+             mcmc.phitpt$WAIC,
+             mcmc.phiflowpt$WAIC))
+
+# model     WAIC
+#1      (phi,p) 269.0246
+#2     (phit,p) 275.9124
+#3     (phi,pt) 272.5138
+#4    (phit,pt) 310.1335
+#5 (phiflow,pt) 268.8386
+
+
+###############
+### We are going to analyse real capture-recapture data.
+# The data concern the European Dipper (Cinclus cinclus). 
+# Captures were carried out for 7 years (1981-1987) in eastern France by G. Marzolin who kindly provided us with the data. 
+# They consist of initial markings and recaptures of 293 breeding adults each year during the March-June period. 
+# Birds were at least 1 year old when initially banded. 
+# Estimate sex-specific survival, assuming constant recapture probability.
+# Add temporal variance on top of survival in the model.
+# To get you started, we read in the data and clean up the data. 
+###########################
+
+
+
+#------------ SEX
+
+#-------- (phi_sex, p)
+
+hmm.phisexp <- nimbleCode({
+    p ~ dunif(0, 1) # prior detection
+    omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+    omega[1,2] <- p        # Pr(alive t -> detected t)
+    omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    logit(phi[i]) <- beta[1] + beta[2] * sex[i]
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1        # Pr(dead t -> dead t+1)
+  }
+  beta[1] ~ dnorm(mean = 0, sd = 1.5)
+  beta[2] ~ dnorm(mean = 0, sd = 1.5)
+  phi_male <- 1/(1+exp(-beta[1]))
+  phi_female <- 1/(1+exp(-(beta[1]+beta[2])))
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+my.constants <- list(N = nrow(y), 
+                     T = ncol(y), 
+                     first = first,
+                     sex = if_else(dipper$sex == "M", 0, 1))
+my.data <- list(y = y + 1)
+
+
+initial.values <- function() list(beta = rnorm(2,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("beta", "p", "phi_male", "phi_female")
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phisexp <- nimbleMCMC(code = hmm.phisexp, 
+                         constants = my.constants,
+                         data = my.data,              
+                         inits = initial.values,
+                         monitors = parameters.to.save,
+                         niter = n.iter,
+                         nburnin = n.burnin, 
+                         nchains = n.chains)
+save(mcmc.phisexp, file = "phisexp.RData")
+MCMCsummary(object = mcmc.phisexp, round = 2)
+
+
+#-------- (phi_sex, p) w nested indexing
+
+hmm.phisexpt.ni <- nimbleCode({
+    p ~ dunif(0, 1) # prior detection
+    omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+    omega[1,2] <- p        # Pr(alive t -> detected t)
+    omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    phi[i] <- beta[sex[i]]
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1        # Pr(dead t -> dead t+1)
+  }
+  beta[1] ~ dunif(0,1)
+  beta[2] ~ dunif(0,1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+my.constants <- list(N = nrow(y), 
+                     T = ncol(y), 
+                     first = first,
+                     sex = if_else(dipper$sex == "M", 1, 2)) # beta[1] male survival, beta[2] female survival 
+my.data <- list(y = y + 1)
+
+initial.values <- function() list(beta = runif(2,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("beta", "p")
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phisexp.ni <- nimbleMCMC(code = hmm.phisexpt.ni, 
+                            constants = my.constants,
+                            data = my.data,              
+                            inits = initial.values,
+                            monitors = parameters.to.save,
+                            niter = n.iter,
+                            nburnin = n.burnin, 
+                            nchains = n.chains)
+
+save(mcmc.phisexp.ni, file = "phisexpni.RData")
+
+MCMCsummary(object = mcmc.phisexp.ni, round = 2)
+
+
+#-------- (phi_wlength, p) 
+
+hmm.phiwlp <- nimbleCode({
+    p ~ dunif(0, 1) # prior detection
+    omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+    omega[1,2] <- p        # Pr(alive t -> detected t)
+    omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    logit(phi[i]) <- beta[1] + beta[2] * winglength[i]
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1        # Pr(dead t -> dead t+1)
+  }
+  beta[1] ~ dnorm(mean = 0, sd = 1.5)
+  beta[2] ~ dnorm(mean = 0, sd = 1.5)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+wing.length.st <- as.vector(scale(dipper$wing_length))
+my.constants <- list(N = nrow(y), 
+                     T = ncol(y), 
+                     first = first,
+                     winglength = wing.length.st)
+my.data <- list(y = y + 1)
+
+initial.values <- function() list(beta = rnorm(2,0,5),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("beta", "p")
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phiwlp <- nimbleMCMC(code = hmm.phiwlp, 
+                            constants = my.constants,
+                            data = my.data,              
+                            inits = initial.values,
+                            monitors = parameters.to.save,
+                            niter = n.iter,
+                            nburnin = n.burnin, 
+                            nchains = n.chains)
+
+MCMCsummary(mcmc.phiwlp, round = 2)
+save(mcmc.phiwlp, file = "phiwingp.RData")
+
+beta1 <- c(mcmc.phiwlp$chain1[,'beta[1]'], mcmc.phiwlp$chain2[,'beta[1]'])
+beta2 <- c(mcmc.phiwlp$chain1[,'beta[2]'], mcmc.phiwlp$chain2[,'beta[2]'])
+
+predicted_survival <- matrix(NA, nrow = length(beta1), ncol = length(my.constants$winglength))
+for (i in 1:length(beta1)){
+  for (j in 1:length(my.constants$winglength)){
+    predicted_survival[i,j] <- plogis(beta1[i] + beta2[i] * my.constants$winglength[j])
+  }
+}
+mean_survival <- apply(predicted_survival, 2, mean)
+lci <- apply(predicted_survival, 2, quantile, prob = 2.5/100)
+uci <- apply(predicted_survival, 2, quantile, prob = 97.5/100)
+ord <- order(my.constants$winglength)
+df <- data.frame(wing_length = my.constants$winglength[ord],
+                 survival = mean_survival[ord],
+                 lci = lci[ord],
+                 uci = uci[ord])
+df %>%
+  ggplot() + 
+  aes(x = wing_length, y = survival) + 
+  geom_line() + 
+  geom_ribbon(aes(ymin = lci, ymax = uci), fill = "grey70", alpha = 0.5) + 
+  ylim(0,1) + 
+  labs(x = "wing length", y = "estimated survival")
+
+
+
+#-------- (phi_sexwlength, p) 
+
+hmm.phisexwlp <- nimbleCode({
+  p ~ dunif(0, 1) # prior detection
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    logit(phi[i]) <- beta[sex[i]] + beta[3] * winglength[i]
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1        # Pr(dead t -> dead t+1)
+  }
+  beta[1] ~ dnorm(mean = 0, sd = 10) # intercept male
+  beta[2] ~ dnorm(mean = 0, sd = 10) # intercept female
+  beta[3] ~ dnorm(mean = 0, sd = 10) # slope wing length
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+wing.length.st <- as.vector(scale(dipper$wing_length))
+my.constants <- list(N = nrow(y), 
+                     T = ncol(y), 
+                     first = first,
+                     winglength = wing.length.st,
+                     sex = if_else(dipper$sex == "M", 1, 2))
+my.data <- list(y = y + 1)
+
+initial.values <- function() list(beta = rnorm(3,0,5),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("beta", "p")
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phisexwlp <- nimbleMCMC(code = hmm.phisexwlp, 
+                          constants = my.constants,
+                          data = my.data,              
+                          inits = initial.values,
+                          monitors = parameters.to.save,
+                          niter = n.iter,
+                          nburnin = n.burnin, 
+                          nchains = n.chains)
+
+MCMCsummary(mcmc.phisexwlp, round = 2)
+
+beta1 <- c(mcmc.phisexwlp$chain1[,'beta[1]'], mcmc.phisexwlp$chain2[,'beta[1]'])
+beta2 <- c(mcmc.phisexwlp$chain1[,'beta[2]'], mcmc.phisexwlp$chain2[,'beta[2]'])
+beta3 <- c(mcmc.phisexwlp$chain1[,'beta[3]'], mcmc.phisexwlp$chain2[,'beta[3]'])
+
+predicted_survivalM <- matrix(NA, nrow = length(beta1), ncol = length(my.constants$winglength))
+predicted_survivalF <- matrix(NA, nrow = length(beta1), ncol = length(my.constants$winglength))
+for (i in 1:length(beta1)){
+  for (j in 1:length(my.constants$winglength)){
+    predicted_survivalM[i,j] <- plogis(beta1[i] + beta3[i] * my.constants$winglength[j])
+    predicted_survivalF[i,j] <- plogis(beta2[i] + beta3[i] * my.constants$winglength[j])
+  }
+}
+mean_survivalM <- apply(predicted_survivalM, 2, mean)
+lciM <- apply(predicted_survivalM, 2, quantile, prob = 2.5/100)
+uciM <- apply(predicted_survivalM, 2, quantile, prob = 97.5/100)
+mean_survivalF <- apply(predicted_survivalF, 2, mean)
+lciF <- apply(predicted_survivalF, 2, quantile, prob = 2.5/100)
+uciF <- apply(predicted_survivalF, 2, quantile, prob = 97.5/100)
+ord <- order(my.constants$winglength)
+df <- data.frame(wing_length = c(my.constants$winglength[ord], my.constants$winglength[ord]),
+                 survival = c(mean_survivalM[ord], mean_survivalF[ord]),
+                 lci = c(lciM[ord],lciF[ord]),
+                 uci = c(uciM[ord],uciF[ord]),
+                 sex = c(rep("male", length(mean_survivalM)), rep("female", length(mean_survivalF))))
+df %>%
+  ggplot() + 
+  aes(x = wing_length, y = survival, color = sex) + 
+  geom_line() + 
+  geom_ribbon(aes(ymin = lci, ymax = uci, fill = sex), alpha = 0.5) + 
+  ylim(0,1) + 
+  labs(x = "wing length", y = "estimated survival", color = "", fill = "")
+
+
+#-------- (phi_wlength + RE, p) 
+
+hmm.phiwlrep <- nimbleCode({
+    p ~ dunif(0, 1) # prior detection
+    omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+    omega[1,2] <- p        # Pr(alive t -> detected t)
+    omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    logit(phi[i]) <- beta[1] + beta[2] * winglength[i] + eps[i]
+    eps[i] ~ dnorm(mean = 0, sd = sdeps)
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0        # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1        # Pr(dead t -> dead t+1)
+  }
+  beta[1] ~ dnorm(mean = 0, sd = 10)
+  beta[2] ~ dnorm(mean = 0, sd = 10)
+  sdeps ~ dunif(0, 10)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+my.constants <- list(N = nrow(y), 
+                     T = ncol(y), 
+                     first = first,
+                     winglength = wing.length.st)
+
+my.data <- list(y = y + 1)
+
+initial.values <- function() list(beta = rnorm(2,0,1.5),
+                                  sdeps = runif(1,0,3),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("beta", "sdeps", "p")
+n.iter <- 10000
+n.burnin <- 2500
+n.chains <- 2
+
+mcmc.phiwlrep <- nimbleMCMC(code = hmm.phiwlrep, 
+                             constants = my.constants,
+                             data = my.data,              
+                             inits = initial.values,
+                             monitors = parameters.to.save,
+                             niter = n.iter,
+                             nburnin = n.burnin, 
+                             nchains = n.chains)
+
+MCMCsummary(mcmc.phiwlrep, round = 2)
+
+sdeps <- c(mcmc.phiwlrep$chain1[,"sdeps"], mcmc.phiwlrep$chain2[,"sdeps"])
+sdeps %>%
+  as_tibble() %>%
+  ggplot() + 
+  aes(x = value) + 
+  geom_histogram(color = "white", binwidth = .03, fill = "gray70") + 
+  geom_density(aes(y = .03 * ..count..))
+
+
+## MENTIONNER VARIABLE AGE
+
+# soit avec du nested indexing et matrice age, soit avec equals
+
+
+
+
+#### PRIOR
+
+#-------- (phi, p)
+
+library(nimble)
+
+hmm.phipriorp <- nimbleCode({
+  phi ~ dnorm(mean = 0.57, sd = 0.073) # prior survival
+  p ~ dunif(0, 1) # prior detection
+  # likelihood
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
+  #  omega_init[1,1] <- 0    
+  #  omega_init[1,2] <- 1        
+  #  omega_init[2,1] <- 1        
+  #  omega_init[2,2] <- 0        
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    #    y[i,first[i]] ~ dcat(omega_init[z[i,first[i]], 1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+hmm.phip <- nimbleCode({
+  phi ~ dunif(0, 1) # prior survival
+  p ~ dunif(0, 1) # prior detection
+  # likelihood
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
+  #  omega_init[1,1] <- 0    
+  #  omega_init[1,2] <- 1        
+  #  omega_init[2,1] <- 1        
+  #  omega_init[2,2] <- 0        
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    #    y[i,first[i]] ~ dcat(omega_init[z[i,first[i]], 1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+
+yshort <- y[,1:3]
+mask <- apply(yshort, 1, sum)
+yshort <- yshort[mask!=0,]
+first <- apply(yshort, 1, function(x) min(which(x !=0)))
+
+my.constants <- list(N = nrow(yshort), T = ncol(yshort), first = first)
+my.constants
+my.data <- list(y = yshort + 1)
+
+zinits <- yshort + 1 # non-detection -> alive
+zinits[zinits == 2] <- 1 # dead -> alive
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("phi", "p")
+parameters.to.save
+
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phip <- nimbleMCMC(code = hmm.phip, 
+                        constants = my.constants,
+                        data = my.data,              
+                        inits = initial.values,
+                        monitors = parameters.to.save,
+                        niter = n.iter,
+                        nburnin = n.burnin, 
+                        nchains = n.chains)
+save(mcmc.phip, file = "phip3y.RData")
+library(MCMCvis)
+MCMCsummary(mcmc.phip, round = 2)
+
+
+
+
+first <- apply(y, 1, function(x) min(which(x !=0)))
+my.constants <- list(N = nrow(y), T = ncol(y), first = first)
+my.constants
+my.data <- list(y = y + 1)
+
+zinits <- y + 1 # non-detection -> alive
+zinits[zinits == 2] <- 1 # dead -> alive
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("phi", "p")
+parameters.to.save
+
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+
+mcmc.phip <- nimbleMCMC(code = hmm.phip, 
+                        constants = my.constants,
+                        data = my.data,              
+                        inits = initial.values,
+                        monitors = parameters.to.save,
+                        niter = n.iter,
+                        nburnin = n.burnin, 
+                        nchains = n.chains)
+save(mcmc.phip, file = "phipriorp.RData")
+library(MCMCvis)
+MCMCsummary(mcmc.phip, round = 2)
+```
+
