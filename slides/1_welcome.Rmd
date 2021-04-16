@@ -26,6 +26,8 @@ library(nimble)
 ```
 
 
+
+
 class: middle
 background-image: url(img/montpellier.png)
 background-size: cover
@@ -114,17 +116,34 @@ background-size: cover
 
 
 ---
-## The team 
+### The team 
 
-+ [Chloe Rebecca Nater](https://twitter.com/chloe_nater)
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.718, dev = "svg", message = FALSE, warning = FALSE}
+library(cowplot)
+p1 <- ggdraw() + 
+  draw_image(here::here("slides","img","chloe.jpg"), scale = 0.9) + 
+  draw_label(label = "Chloe Rebecca Nater", hjust = -.4)
 
-+ [Sarah Cubaynes](https://twitter.com/sarahcubaynes)
+p2 <- ggdraw() + 
+  draw_image(here::here("slides","img","chloe.jpg"), scale = 0.9) + 
+  draw_label(label = "Sarah Cubaynes", hjust = -.5)
 
-+ [Perry de Valpine](https://twitter.com/r_nimble)
+p3 <- ggdraw() + 
+  draw_image(here::here("slides","img","chloe.jpg"), scale = 0.9) + 
+  draw_label(label = "Maud Quéroué", hjust = -.5)
 
-+ [Maud Quéroué](https://twitter.com/maudqueroue)    
+p4 <- ggdraw() + 
+  draw_image(here::here("slides","img","chloe.jpg"), scale = 0.9) + 
+  draw_label(label = "Perry de Valpine", hjust = -.5)
 
-+ [Olivier Gimenez](https://twitter.com/oaggimenez)
+p5 <- ggdraw() + 
+  draw_image(here::here("slides","img","olivier.jpg"), scale = 0.85) + 
+  draw_label(label = "Olivier Gimenez", hjust = -.5)
+
+library(patchwork)
+
+p1 / p2 / p3 / p4 / p5
+```
 
 
 ---
