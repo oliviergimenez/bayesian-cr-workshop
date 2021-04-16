@@ -1131,6 +1131,8 @@ MCMCplot(mcmc.phipmix)
 
 + You may also go for a non-parametric approach and let the data tell you how many classes you need. This is relatively easy to do in Nimble, see [Turek et al. (2021)](https://arxiv.org/abs/2007.10163). 
 
++ More about individual heterogeneity in this review by [Gimenez et al. (2018)](https://oliviergimenez.github.io/pubs/GimenezCamGaillard2017Oikos.pdf).
+
 ---
 class: middle, center
 ## HMMs to analyse capture-recapture data
@@ -1148,52 +1150,27 @@ background-size: cover
 
 
 ---
-### Further HMMs examples to make the best of capture-recapture data
+### How to make our models remember?
 
-<br>
++ So far, the dynamics of the states are first-order Makovian.
 
-+ Memory model
++ The site where you will be depends only on the site where you are, and not on the sites you were previously. 
 
-+ Sex uncertainty
++ How to relax this assumption, and go second-order Markovian?
+
++ Models were initially proposed by [Hestbeck et al. (1991)](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.2307/2937193) and [Brownie et al. (1993)](https://www.jstor.org/stable/2532259?origin=crossref&seq=1#metadata_info_tab_contents), then formulated as HMMs in [Rouan et al. (2009)](https://link.springer.com/article/10.1198/jabes.2009.06108). See also [Cole et al. (2014)](https://onlinelibrary.wiley.com/doi/10.1002/ece3.1037). 
+
 
 ---
 ## Other examples we won't go into details
 
-+ Recruitment
-
-+ Causes of mortality
-
-+ Robust design
-
-+ Extension to semi-Markov allows stop-over, flexibility in modelling patterns of senescence
-
-+ Voir la prez de Roger et out-of-date curated list https://www.cefe.cnrs.fr/fr/recherche/bc/bbp/843-c/254-roger-pradel?start=3
-
----
-
-Cole, D. J., B. J. T. Morgan, R. S. McCrea, R. Pradel, O. Gimenez, and R. Choquet. 2014. Does your species have memory? Analyzing capture-recapture data with memory models. Ecology and Evolution 4(11):2124–2133.
-
-Rouan, L., R. Choquet, et al. (2009). "A General Framework for Modeling Memory in Capture-Recapture Data." Journal of Agricultural Biological and Environmental Statistics 14(3): 338-355. 
-
 ---
 ## Further reading
 
-+ Seminal paper by Pradel (2005): Pradel, R. (2005), Multievent: An Extension of Multistate Capture–Recapture Models to Uncertain States. Biometrics, 61: 442-447. https://doi.org/10.1111/j.1541-0420.2005.00318.x
++ Seminal paper by Pradel (2005) Multievent: An Extension of Multistate Capture–Recapture Models to Uncertain States. Biometrics, 61: 442-447.
 
-+ see also Gimenez et al. (2012) for a review: Gimenez, O., Lebreton, J.-D., Gaillard, J.-M., Choquet, R. and R. Pradel (2012). Estimating demographic parameters using hidden process dynamic models. Theoretical Population Biology 82: 307-316.
++ See also Gimenez et al. (2012) Estimating demographic parameters using hidden process dynamic models. Theoretical Population Biology 82: 307-316.
 
-+ Dupuis (1995) had a similar idea, for the Arnason-Schwarz model: Dupuis, J. (1995) Bayesian estimation of movement and survival probabilities from capture-recapture data. Biometrika. Vol. 82, pp 761-772.
++ Dupuis (1995) had a similar idea for the Arnason-Schwarz model: Dupuis, J. (1995) Bayesian estimation of movement and survival probabilities from capture-recapture data. Biometrika. Vol. 82, pp 761-772.
 
-+ Turek, D., Wehrhahn, C. & Gimenez, O. Bayesian non-parametric detection heterogeneity in ecological models. Environ Ecol Stat (2021). https://doi.org/10.1007/s10651-021-00489-1
 
-+ Cubaynes, S., C. Lavergne, E. Marboutin, and O. Gimenez (2012). Assessing individual heterogeneity using model selection criteria: How many mixture components in capture-recapture models? Methods in Ecology and Evolution 3: 564-573. 
-
-+ Gimenez O., E. Cam, J.-M. Gaillard (2018). [Individual heterogeneity and capture–recapture models: what, why and how?](https://oliviergimenez.github.io/pubs/GimenezCamGaillard2017Oikos.pdf) Oikos. 127: 664–686.
-
-+ Conn, P.B. and Cooch, E.G. (2009), Multistate capture–recapture analysis under imperfect state observation: an application to disease models. Journal of Applied Ecology, 46: 486-492. https://doi.org/10.1111/j.1365-2664.2008.01597.x
-
-+ SCUBAYNES, S., PRADEL, R., CHOQUET, R., DUCHAMP, C., GAILLARD, J.‐M., LEBRETON, J.‐D., MARBOUTIN, E., MIQUEL, C., REBOULET, A.‐M., POILLOT, C., TABERLET, P. and GIMENEZ, O. (2010), Importance of Accounting for Detection Heterogeneity When Estimating Abundance: the Case of French Wolves. Conservation Biology, 24: 621-626. https://doi.org/10.1111/j.1523-1739.2009.01431.x
-
-+ Pradel R. (2009) The Stakes of Capture–Recapture Models with State Uncertainty. In: Thomson D.L., Cooch E.G., Conroy M.J. (eds) Modeling Demographic Processes In Marked Populations. Environmental and Ecological Statistics, vol 3. Springer, Boston, MA. https://doi.org/10.1007/978-0-387-78151-8_36 
-
-+ Faustino, C.R., Jennelle, C.S., Connolly, V., Davis, A.K., Swarthout, E.C., Dhondt, A.A. and Cooch, E.G. (2004), Mycoplasma gallisepticum infection dynamics in a house finch population: seasonal variation in survival, encounter and transmission rate. Journal of Animal Ecology, 73: 651-669. https://doi.org/10.1111/j.0021-8790.2004.00840.x
