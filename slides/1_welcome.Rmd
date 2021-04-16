@@ -129,11 +129,11 @@ p2 <- ggdraw() +
   draw_label(label = "Sarah Cubaynes", hjust = -.5)
 
 p3 <- ggdraw() + 
-  draw_image(here::here("slides","img","chloe.jpg"), scale = 0.9) + 
+  draw_image(here::here("slides","img","maud.png"), scale = 0.9) + 
   draw_label(label = "Maud Quéroué", hjust = -.5)
 
 p4 <- ggdraw() + 
-  draw_image(here::here("slides","img","chloe.jpg"), scale = 0.9) + 
+  draw_image(here::here("slides","img","perry.jpg"), scale = 0.9) + 
   draw_label(label = "Perry de Valpine", hjust = -.5)
 
 p5 <- ggdraw() + 
