@@ -60,6 +60,8 @@ library(nimble)
 ---
 ## Further reading
 
++ Turek, D., de Valpine, P. & Paciorek, C.J. Efficient Markov chain Monte Carlo sampling for hierarchical hidden Markov models. Environ Ecol Stat 23, 549–564 (2016). https://doi.org/10.1007/s10651-016-0353-z
+
 + Nimble workshop to come !
 
 + Nimble workshop material online
