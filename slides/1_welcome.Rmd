@@ -81,7 +81,7 @@ background-size: cover
 
 --
 
-+ Estimating demographic parameters .
++ Estimating demographic parameters.
 
 --
 
@@ -92,7 +92,7 @@ background-size: cover
 + Within the Bayesian framework.
 
 ---
-## Credits
+## Credits and inspiration
 
 --
 
@@ -112,7 +112,11 @@ background-size: cover
 
 --
 
-+ Books by Marc Kéry, Michael Schaub, Andy Royle and others <span>&#8212;</span> check out [curated list](https://www.mbr-pwrc.usgs.gov/pubanalysis/roylebook/)
++ Books by Marc Kéry, Michael Schaub, Andy Royle and others <span>&#8212;</span> check out [curated list](https://www.mbr-pwrc.usgs.gov/pubanalysis/roylebook/).
+
+--
+
++ Daniel Turek's sabbatical in the team.
 
 
 ---
@@ -187,7 +191,7 @@ p1 / p2 / p3 / p4 / p5
 
 --
 
-+ All material on website <https://oliviergimenez.github.io/bayesian-cr-workshop/>.
++ All material (including videos) on website <https://oliviergimenez.github.io/bayesian-cr-workshop/>.
 
 ???
 
@@ -200,11 +204,7 @@ Let's take a minute to have a look to the website.
 
 --
 
-+ The workshop is organized in modules.
-
---
-
-+ Each module is a combination of lectures and live demos.
++ The workshop is organized in modules, each module is a combination of lectures and live demos.
 
 ---
 
@@ -220,4 +220,4 @@ Let's take a minute to have a look to the website.
 
 --
 
-+ Questions and answers via Slack; a specific chanel per module.
++ Questions and answers via Slack, with a specific chanel per module.

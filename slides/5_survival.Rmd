@@ -144,24 +144,6 @@ knitr::include_graphics("img/king.png")
 
 + Accounts for variation in e.g. environmental conditions (survival) or sampling effort (detection). 
 
----
-## The famous Dipper example
-
-.center[
-.pull-left[
-```{r, echo=FALSE, out.width="60%", fig.cap="White-throated Dipper (Cinclus cinclus)"}
-knitr::include_graphics("img/Marzo_BaguesMance.jpg")
-```
-]
-]
-
---
-
-.pull-right[
-```{r, echo=FALSE, fig.cap="Gilbert Marzolin", out.width="60%"}
-knitr::include_graphics("img/Marzocuissardes.jpg")
-```
-]
 
 ---
 ### Capture, mark and recapture
@@ -198,6 +180,25 @@ knitr::include_graphics("img/bearscat.png")
 
 Natural marks
 
+
+---
+## The famous Dipper example
+
+.center[
+.pull-left[
+```{r, echo=FALSE, out.width="60%", fig.cap="White-throated Dipper (Cinclus cinclus)"}
+knitr::include_graphics("img/Marzo_BaguesMance.jpg")
+```
+]
+]
+
+--
+
+.pull-right[
+```{r, echo=FALSE, fig.cap="Gilbert Marzolin", out.width="60%"}
+knitr::include_graphics("img/Marzocuissardes.jpg")
+```
+]
 
 ---
 ## 294 dippers captured and recaptured between 1981 and 1987 with known sex and wing length
@@ -654,11 +655,15 @@ class: middle
 
 --
 
-+ Include temporal covariates, say $x_t$
++ Include temporal covariates, say $x_t$.
 
 --
 
-+ $\text{logit}(\phi_t) = \beta_1 + \beta_2 x_t$
++ $\text{logit}(\phi_t) = \beta_1 + \beta_2 x_t$.
+
+--
+
++ Let's investigate the effect of water flow on dipper survival.
 
 ---
 
@@ -949,23 +954,23 @@ df %>%
 
 --
 
-+ Think of age for example; covariate or nested indexing works fine <span>&#8212;</span> see live demo
++ Think of age for example; covariate or nested indexing works fine.
 
 --
 
-+ Now, think of body size across life
++ Now, think of body size across life.
 
 --
 
-+ Problem is we cannot record size when animal is non-detected
++ Problem is we cannot record size when animal is non-detected.
 
 --
 
-+ Discretize in small, medium and large and treat as a state <span>&#8212;</span> more later
++ Discretize in small, medium and large and treat as a state <span>&#8212;</span> more later.
 
 --
 
-+ Assume a model for covariate and fill in missing values (imputation)
++ Assume a model for covariate and fill in missing values (imputation).
 
 ---
 class: middle
@@ -1165,7 +1170,8 @@ df %>%
   as_tibble() %>%
   ggplot(aes(x = value)) + 
   geom_density(size = 2) + 
-  labs(x = "Height (m)")
+  labs(x = "Height (m)") +
+  theme_light(base_size = 20)
 ```
 ]
 ]
@@ -1183,7 +1189,8 @@ df %>%
   as_tibble() %>%
   ggplot(aes(x = value)) + 
   geom_density(size = 2) + 
-  labs(x = "Height (m)")
+  labs(x = "Height (m)") +
+  theme_light(base_size = 20)
 ```
 ]
 ]
@@ -1204,7 +1211,8 @@ df %>%
   as_tibble() %>%
   ggplot(aes(x = value)) + 
   geom_density(size = 2) + 
-  labs(x = "survival")
+  labs(x = "survival") +
+  theme_light(base_size = 20)
 ```
 ]
 ]
@@ -1222,7 +1230,8 @@ df %>%
   as_tibble() %>%
   ggplot(aes(x = value)) + 
   geom_density(size = 2) + 
-  labs(x = "survival")
+  labs(x = "survival") +
+  theme_light(base_size = 20)
 ```
 ]
 ]
@@ -1281,10 +1290,10 @@ ggplot() +
 
 --
 
-+ Problem w/ MCMC mixing.
++ Poor mixing of the chains.
 
 ---
-## Parameter identifiability
+## Parameter redundancy
 
 --
 
@@ -1292,13 +1301,13 @@ ggplot() +
 
 --
 
-+ Intrinsic non-identifiability
++ Intrinsic redundancy
     + Likelihood can be expressed by a smaller number of parameters
     + Feature of the model
 
 --
 
-+ Extrinsic non-identifiability
++ Extrinsic redundancy
     + Model structure is fine
     + But lack of data makes a parameter non-estimable
     + Feature of the data
@@ -1308,7 +1317,7 @@ ggplot() +
 
 .pull-left[
 .center[
-```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.818, dev = "svg"}
 load(here::here("slides","dat","dipper.RData"))
 PR <- runif(1500, 0, 1)
 MCMCtrace(mcmc.phitpt, 
@@ -1326,14 +1335,19 @@ MCMCtrace(mcmc.phitpt,
           col_pr = "gray70",
           lty_pr = 2,
           main_den = "",
-          xlab_den = "survival prob. between years 1984 and 1985")
+          xlab_den = "survival prob. between years 1984 and 1985",
+          sz_txt = 1.8,
+          sz_ax = 1.8,
+          sz_ax_txt = 1.8,
+          sz_tick_txt = 1.8,
+          sz_main_txt = 1.8)
 ```
 ]
 ]
 
 .pull-right[
 .center[
-```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.818, dev = "svg"}
 load(here::here("slides","dat","dipper.RData"))
 PR <- runif(1500, 0, 1)
 MCMCtrace(mcmc.phitpt, 
@@ -1351,7 +1365,13 @@ MCMCtrace(mcmc.phitpt,
           col_pr = "gray70",
           lty_pr = 2,
           main_den = "",
-          xlab_den = "survival prob. between years 1986 and 1987")
+          xlab_den = "survival prob. between years 1986 and 1987",
+          sz_txt = 1.8,
+          sz_ax = 1.8,
+          sz_ax_txt = 1.8,
+          sz_tick_txt = 1.8,
+          sz_main_txt = 1.8)
+
 ```
 ]
 ]
@@ -1361,7 +1381,7 @@ MCMCtrace(mcmc.phitpt,
 
 .pull-left[
 .center[
-```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.818, dev = "svg"}
 load(here::here("slides","dat","dipper.RData"))
 PR <- runif(1500, 0, 1)
 MCMCtrace(mcmc.phitpt, 
@@ -1379,14 +1399,20 @@ MCMCtrace(mcmc.phitpt,
           col_pr = "gray70",
           lty_pr = 2,
           main_den = "",
-          xlab_den = "recapture prob. at year 1983")
+          xlab_den = "recapture prob. at year 1983",
+          sz_txt = 1.8,
+          sz_ax = 1.8,
+          sz_ax_txt = 1.8,
+          sz_tick_txt = 1.8,
+          sz_main_txt = 1.8)
+
 ```
 ]
 ]
 
 .pull-right[
 .center[
-```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.width = 7.5, fig.asp = 0.818, dev = "svg"}
 load(here::here("slides","dat","dipper.RData"))
 PR <- runif(1500, 0, 1)
 MCMCtrace(mcmc.phitpt, 
@@ -1404,7 +1430,13 @@ MCMCtrace(mcmc.phitpt,
           col_pr = "gray70",
           lty_pr = 2,
           main_den = "",
-          xlab_den = "recapture prob. at year 1987")
+          xlab_den = "recapture prob. at year 1987",
+          sz_txt = 1.8,
+          sz_ax = 1.8,
+          sz_ax_txt = 1.8,
+          sz_tick_txt = 1.8,
+          sz_main_txt = 1.8)
+
 ```
 ]
 ]
@@ -1448,4 +1480,4 @@ MCMCtrace(mcmc.phitpt,
 
 + Combine live recapture w/ dead recoveries by [Lebreton et al. (1999)](https://www.tandfonline.com/doi/pdf/10.1080/00063659909477230) and go spatial to account for emigration [Gilroy et al. (2012)](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/12-0124.1) and [Schaub & Royle (2014)](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12134).
 
-+ Non-identifiability in a Bayesian framework by [Gimenez et al. (2009)](https://oliviergimenez.github.io/pubs/Gimenezetal2009-weakidentifiability.pdf) and [book by Cole (2020)](https://www.routledge.com/Parameter-Redundancy-and-Identifiability/Cole/p/book/9781498720878). 
++ Non-identifiability in a Bayesian framework, see [Gimenez et al. (2009)](https://oliviergimenez.github.io/pubs/Gimenezetal2009-weakidentifiability.pdf) and [book by Cole (2020)](https://www.routledge.com/Parameter-Redundancy-and-Identifiability/Cole/p/book/9781498720878). 

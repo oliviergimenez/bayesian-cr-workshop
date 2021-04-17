@@ -16,7 +16,7 @@ class: center, middle, title-slide
 
 # Dead or alive: Survival estimation
 ### The team
-### last updated: 2021-04-11
+### last updated: 2021-04-17
 
 ---
 
@@ -80,26 +80,6 @@ class: center, middle, title-slide
 
 + Accounts for variation in e.g. environmental conditions (survival) or sampling effort (detection). 
 
----
-## The famous Dipper example
-
-.center[
-.pull-left[
-&lt;div class="figure"&gt;
-&lt;img src="img/Marzo_BaguesMance.jpg" alt="White-throated Dipper (Cinclus cinclus)" width="60%" /&gt;
-&lt;p class="caption"&gt;White-throated Dipper (Cinclus cinclus)&lt;/p&gt;
-&lt;/div&gt;
-]
-]
-
---
-
-.pull-right[
-&lt;div class="figure"&gt;
-&lt;img src="img/Marzocuissardes.jpg" alt="Gilbert Marzolin" width="60%" /&gt;
-&lt;p class="caption"&gt;Gilbert Marzolin&lt;/p&gt;
-&lt;/div&gt;
-]
 
 ---
 ### Capture, mark and recapture
@@ -128,6 +108,27 @@ Artificial marks
 
 Natural marks
 
+
+---
+## The famous Dipper example
+
+.center[
+.pull-left[
+&lt;div class="figure"&gt;
+&lt;img src="img/Marzo_BaguesMance.jpg" alt="White-throated Dipper (Cinclus cinclus)" width="60%" /&gt;
+&lt;p class="caption"&gt;White-throated Dipper (Cinclus cinclus)&lt;/p&gt;
+&lt;/div&gt;
+]
+]
+
+--
+
+.pull-right[
+&lt;div class="figure"&gt;
+&lt;img src="img/Marzocuissardes.jpg" alt="Gilbert Marzolin" width="60%" /&gt;
+&lt;p class="caption"&gt;Gilbert Marzolin&lt;/p&gt;
+&lt;/div&gt;
+]
 
 ---
 ## 294 dippers captured and recaptured between 1981 and 1987 with known sex and wing length
@@ -3861,11 +3862,15 @@ class: middle
 
 --
 
-+ Include temporal covariates, say `\(x_t\)`
++ Include temporal covariates, say `\(x_t\)`.
 
 --
 
-+ `\(\text{logit}(\phi_t) = \beta_1 + \beta_2 x_t\)`
++ `\(\text{logit}(\phi_t) = \beta_1 + \beta_2 x_t\)`.
+
+--
+
++ Let's investigate the effect of water flow on dipper survival.
 
 ---
 
@@ -7383,23 +7388,23 @@ p       0.90 0.03 0.83 0.90  0.95 1.10   229
 
 --
 
-+ Think of age for example; covariate or nested indexing works fine &lt;span&gt;&amp;#8212;&lt;/span&gt; see live demo
++ Think of age for example; covariate or nested indexing works fine.
 
 --
 
-+ Now, think of body size across life
++ Now, think of body size across life.
 
 --
 
-+ Problem is we cannot record size when animal is non-detected
++ Problem is we cannot record size when animal is non-detected.
 
 --
 
-+ Discretize in small, medium and large and treat as a state &lt;span&gt;&amp;#8212;&lt;/span&gt; more later
++ Discretize in small, medium and large and treat as a state &lt;span&gt;&amp;#8212;&lt;/span&gt; more later.
 
 --
 
-+ Assume a model for covariate and fill in missing values (imputation)
++ Assume a model for covariate and fill in missing values (imputation).
 
 ---
 class: middle
@@ -7643,10 +7648,10 @@ Reasonable prior `\(\text{logit}(\phi) = \beta \sim N(0, 1.5^2)\)`
 
 --
 
-+ Problem w/ MCMC mixing.
++ Poor mixing of the chains.
 
 ---
-## Parameter identifiability
+## Parameter redundancy
 
 --
 
@@ -7654,13 +7659,13 @@ Reasonable prior `\(\text{logit}(\phi) = \beta \sim N(0, 1.5^2)\)`
 
 --
 
-+ Intrinsic non-identifiability
++ Intrinsic redundancy
     + Likelihood can be expressed by a smaller number of parameters
     + Feature of the model
 
 --
 
-+ Extrinsic non-identifiability
++ Extrinsic redundancy
     + Model structure is fine
     + But lack of data makes a parameter non-estimable
     + Feature of the data
@@ -7734,7 +7739,7 @@ Reasonable prior `\(\text{logit}(\phi) = \beta \sim N(0, 1.5^2)\)`
 
 + Combine live recapture w/ dead recoveries by [Lebreton et al. (1999)](https://www.tandfonline.com/doi/pdf/10.1080/00063659909477230) and go spatial to account for emigration [Gilroy et al. (2012)](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/12-0124.1) and [Schaub &amp; Royle (2014)](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12134).
 
-+ Non-identifiability in a Bayesian framework by [Gimenez et al. (2009)](https://oliviergimenez.github.io/pubs/Gimenezetal2009-weakidentifiability.pdf) and [book by Cole (2020)](https://www.routledge.com/Parameter-Redundancy-and-Identifiability/Cole/p/book/9781498720878). 
++ Non-identifiability in a Bayesian framework, see [Gimenez et al. (2009)](https://oliviergimenez.github.io/pubs/Gimenezetal2009-weakidentifiability.pdf) and [book by Cole (2020)](https://www.routledge.com/Parameter-Redundancy-and-Identifiability/Cole/p/book/9781498720878). 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

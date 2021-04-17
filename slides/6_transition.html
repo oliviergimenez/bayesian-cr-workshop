@@ -16,7 +16,7 @@ class: center, middle, title-slide
 
 # On the move: Transition estimation
 ### The team
-### last updated: 2021-04-14
+### last updated: 2021-04-17
 
 ---
 
@@ -4306,6 +4306,35 @@ multisite &lt;- nimbleCode({
 ```r
 multisite &lt;- nimbleCode({
 ...  
+  # initial state probabilities
+  delta[1] &lt;- piA          # Pr(alive in A t = 1)
+  delta[2] &lt;- 1 - piA      # Pr(alive in B t = 1)
+  delta[3] &lt;- 0            # Pr(dead t = 1) = 0
+...  
+```
+]
+
+--
+
++ Actually, initial state is known exactly. It is alive at site of initial capture, and `\(\pi_A\)` is just the proportion of individuals first captured in site A, no need to estimate it. 
+
+--
+
++ Instead of `z[i,first[i]] ~ dcat(delta[1:3])`, use `z[i,first[i]] &lt;- y[i,first[i]]-1` instead in the likelihood. 
+
+--
+
++ Same trick applies to CJS models. 
+
+
+---
+### Our model `\((\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)\)`
+
+.small-font[
+
+```r
+multisite &lt;- nimbleCode({
+...  
   # Define probabilities of state z(t+1) given z(t)
   gamma[1,1] &lt;- phiA * (1 - psiAB)
   gamma[1,2] &lt;- phiA * psiAB
@@ -4388,7 +4417,7 @@ psiBA 0.07 0.02 0.04 0.07  0.12 1.03   360
 ---
 
 .center.nogap[
-![](6_transition_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
+![](6_transition_files/figure-html/unnamed-chunk-17-1.svg)&lt;!-- --&gt;
 ]
 
 ---
@@ -4413,7 +4442,7 @@ psiBA 0.07 0.02 0.04 0.07  0.12 1.03   360
 &lt;center&gt;Dirichlet prior with parameter alpha&lt;/center&gt;
 
 .center.nogap[
-![Dirichlet prior with parameter alpha](6_transition_files/figure-html/unnamed-chunk-17-1.svg)
+![Dirichlet prior with parameter alpha](6_transition_files/figure-html/unnamed-chunk-18-1.svg)
 ]
 
 
@@ -4491,7 +4520,7 @@ psiC[3] 0.77 0.06 0.64 0.77  0.86 1.02   419
 ---
 
 .center.nogap[
-![](6_transition_files/figure-html/unnamed-chunk-21-1.svg)&lt;!-- --&gt;
+![](6_transition_files/figure-html/unnamed-chunk-22-1.svg)&lt;!-- --&gt;
 ]
 
 
@@ -4607,7 +4636,7 @@ psiC[3] 0.78 0.06 0.65 0.78  0.88 1.00   270
 ---
 
 .center.nogap[
-![](6_transition_files/figure-html/unnamed-chunk-25-1.svg)&lt;!-- --&gt;
+![](6_transition_files/figure-html/unnamed-chunk-26-1.svg)&lt;!-- --&gt;
 ]
 
 ---
@@ -4622,7 +4651,7 @@ class: middle, center
 
 + Morphological states: small/medium/big, light/medium/heavy.
 
-+ Breeding states.
++ Breeding states, e.g. breeder/non-breeder, failed breeder, first-time breeder. 
 
 + States are individual, time-specific categorical covariates.
 
@@ -14010,7 +14039,7 @@ psiNBB 0.24 0.02 0.20 0.24  0.29 1.03   478
 ---
 
 .center.nogap[
-![Dirichlet prior with parameter alpha](6_transition_files/figure-html/unnamed-chunk-33-1.svg)
+![Dirichlet prior with parameter alpha](6_transition_files/figure-html/unnamed-chunk-34-1.svg)
 ]
 
 ---
@@ -14053,6 +14082,10 @@ $$
 \end{matrix}`
 $$
 
++ First-year and second-year individuals breed with probabilities `\(\alpha_1\)` and `\(\alpha_2\)`.
+
++ Then, everybody breeds from age 3.
+
 ---
 ### Access to reproduction
 
@@ -14083,7 +14116,7 @@ y_t = 0 &amp; y_t = 1 &amp; y_t = 2 &amp; y_t = 3\\ \hdashline
 \end{matrix}`
 $$
 
-
++ Juveniles are never detected. 
 
 ---
 ## Temporary emigration
@@ -14098,9 +14131,9 @@ $$
 \end{matrix}`
 \hspace{-1.2em}
 `\begin{matrix}
-    z_t=I &amp; z_t=O &amp; z_t=D \\ \hdashline
-\phi (1-\psi_{IO}) &amp; \phi \psi_{IO} &amp; 1 - \phi\\ 
-\phi \psi_{OI} &amp; \phi (1-\psi_{OI}) &amp; 1 - \phi\\ 
+    z_t=\text{in} &amp; z_t=\text{out} &amp; z_t=\text{D} \\ \hdashline
+\phi (1-\psi_{\text{in} \rightarrow \text{out}}) &amp; \phi \psi_{\text{in} \rightarrow \text{out}} &amp; 1 - \phi\\ 
+\phi \psi_{\text{out} \rightarrow \text{in}} &amp; \phi (1-\psi_{\text{out} \rightarrow \text{in}}) &amp; 1 - \phi\\ 
 0 &amp; 0 &amp; 1
 \end{matrix}`
 \hspace{-0.2em}
@@ -14108,7 +14141,7 @@ $$
 &amp; \\
 \left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
     \begin{matrix}
-    z_{t-1}=I \\ z_{t-1}=O \\ z_{t-1}=D
+    z_{t-1}=\text{in} \\ z_{t-1}=\text{out} \\ z_{t-1}=\text{D}
     \end{matrix}
 \end{matrix}`
 $$
@@ -14133,16 +14166,15 @@ $$
 &amp; \\
 \left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
     \begin{matrix}
-    z_{t}=I \\ z_{t}=O \\ z_{t}=D
+    z_{t}=\text{in} \\ z_{t}=\text{out} \\ z_{t}=\text{D}
     \end{matrix}
 \end{matrix}`
 $$
 
 ---
-## Combination of life and dead encounters
+### Combination of life and dead encounters
 
-
-Transition matrix:
+Transition matrix
 
 $$
 `\begin{matrix}
@@ -14162,12 +14194,12 @@ s &amp; 1-s &amp; 0\\
 &amp; \\
 \left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
     \begin{matrix}
-    z_{t-1}=A \\ z_{t-1}=JD \\ z_{t-1}=D
+    z_{t-1}=\text{alive} \\ z_{t-1}=\text{just dead} \\ z_{t-1}=\text{dead for good}
     \end{matrix}
 \end{matrix}`
 $$
 
-Observation matrix:
+Observation matrix
 
 $$
 `\begin{matrix}
@@ -14579,14 +14611,14 @@ $$
 ---
 
 .center.nogap[
-![](6_transition_files/figure-html/unnamed-chunk-35-1.svg)&lt;!-- --&gt;
+![](6_transition_files/figure-html/unnamed-chunk-36-1.svg)&lt;!-- --&gt;
 ]
 
 
 ---
 
 .center.nogap[
-![](6_transition_files/figure-html/unnamed-chunk-36-1.svg)&lt;!-- --&gt;
+![](6_transition_files/figure-html/unnamed-chunk-37-1.svg)&lt;!-- --&gt;
 ]
 
 

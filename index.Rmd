@@ -1,5 +1,5 @@
 ---
-title: "Bayesian capture-recapture inference"
+title: "Bayesian capture-recapture inference with HMMs"
 description: "A two-day workshop with `R` and `Nimble`"
 site: distill::distill_website
 ---
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **For whom**: This is a workshop for ecologists. No previous experience with `Nimble` or Bayesian statistics is assumed, but knowledge of `R` is required. 
 
-**How**: Through a combination of lectures and live demonstrations, you will get acquainted with the Bayesian approach, MCMC methods and the `R` `Nimble` package to fit single-site, multi-site, multi-state and multi-event models to capture-recapture data. 
+**How**: Through a combination of lectures and live demonstrations, you will get acquainted with the Bayesian approach, MCMC methods and the `R` `Nimble` package to fit single-site, multi-site, multi-state and multi-event models to capture-recapture data within the hidden Markov modeling (HMM) framework. 
 
 **Who**: [O. Gimenez](https://twitter.com/oaggimenez), [C. R. Nater](https://twitter.com/chloe_nater), [S. Cubaynes](https://twitter.com/sarahcubaynes), [P. de Valpine](https://twitter.com/r_nimble), [M. Quéroué](https://twitter.com/maudqueroue)    
 
@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Where**: Online     
 
-## Program
+### Program
 
 1. Welcoming words
 2. Crash course on Bayesian statistics and MCMC algorithms
@@ -32,7 +32,7 @@ knitr::opts_chunk$set(echo = FALSE)
 8. Skip your coffee break: Speed up MCMC convergence 
 9. Take-home messages
 
-## Requirements
+### Requirements
 
 * Install [`R`](https://cloud.r-project.org/) and [`RStudio`](https://rstudio.com/products/rstudio/download/#download)
 
@@ -45,7 +45,7 @@ install.packages(c("tidyverse", "MCMCvis", "here"))
 ```
 
 
-## Reuse {.appendix}
+### Reuse {.appendix}
 
 Text and figures are licensed under Creative Commons Attribution [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Any computer code (R, HTML, CSS, etc.) in slides and worksheets, including in slide and worksheet sources, is also licensed under [MIT](https://github.com/oliviergimenez/bayesian-cr-workshop/blob/master/LICENSE.md). 
 

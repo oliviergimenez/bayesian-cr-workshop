@@ -366,14 +366,14 @@ $$
                 &= \Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\
 \end{align*}
 
----
-# Matrix formulation of the likelihood
+<!-- --- -->
+<!-- # Matrix formulation of the likelihood -->
 
-\begin{align*}
-\Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
-                &= \Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\
-                &= \mathbf{\delta} \; \mathbf{\Gamma} \cdots \mathbf{\Gamma}
-\end{align*}
+<!-- \begin{align*} -->
+<!-- \Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\ -->
+<!--                 &= \Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\ -->
+<!--                 &= \mathbf{\delta} \; \mathbf{\Gamma} \cdots \mathbf{\Gamma} -->
+<!-- \end{align*} -->
 
 ---
 # Example
@@ -422,6 +422,23 @@ $$
 + In Nimble, we will use the categorical distribution `dcat()`.
 
 + The categorical distribution is a multinomial distribution with a single draw. 
+
+--
+
+.tiny-font[
+```{r}
+nimble::rcat(n = 20, prob = c(0.1, 0.3, 0.6))
+```
+]
+
+--
+
+.tiny-font[
+```{r}
+nimble::rcat(n = 20, prob = c(0.1, 0.1, 0.4, 0.2, 0.2))
+```
+]
+
 
 ???
 
@@ -837,7 +854,7 @@ $$
 ---
 # Example 
 
-+ Let assume an animal is detected, missed then detected again. 
++ Let assume an animal is detected, then missed. 
 
 --
 
@@ -853,7 +870,7 @@ $$
 ---
 # Example 
 
-+ Let assume an animal is detected, missed then detected again. 
++ Let assume an animal is detected, then missed. 
 
 + We have $\mathbf{y} = (2, 1)$. What is the contribution of this animal to the likelihood?
 
@@ -865,7 +882,7 @@ $$
 ---
 # Example 
 
-+ Let assume an animal is detected, missed then detected again. 
++ Let assume an animal is detected, then missed. 
 
 + We have $\mathbf{y} = (2, 1)$. What is the contribution of this animal to the likelihood?
 
@@ -878,7 +895,7 @@ $$
 ---
 # Example 
 
-+ Let assume an animal is detected, missed then detected again. 
++ Let assume an animal is detected, then missed. 
 
 + We have $\mathbf{y} = (2, 1)$. What is the contribution of this animal to the likelihood?
 
@@ -889,7 +906,34 @@ $$
 &= (1 - p) \phi
 \end{align*}
 
-Note: $w_{z1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition on first capture. 
+Note: $w_{z_1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition on first capture. 
+
+---
+### Estimating the latent states $z$ or not?
+
+--
+
++ In previous example, we got rid of the states, so that likelihood was a function of $\phi$ and $p$ only. This is the function we would maximize in a Frequentist approach. 
+
+--
+
++ The Bayesian approach with MCMC methods allows treating the latent states as if they were parameters, and to be estimated as such. 
+
+--
+
++ Infering the latent states $z$ can be useful to estimate the prevalence of a states, e.g. in animal epidemiology and [the prevalence of a disease](https://veterinaryresearch.biomedcentral.com/articles/10.1186/1297-9716-45-39), in evolutionary ecology and the [sex ratio](https://onlinelibrary.wiley.com/doi/abs/10.1002/cjs.5550360105) or in conservation biology with  [the prevalence of hybrids](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4819?af=R).  
+
+--
+
++ Estimating the latent states is costly though, and if not required, marginalisation may speed up computations. Actually, you can estimate the states afterwards (Viterbi). 
+
+--
+
++ More about so-called marginalisation in [Yackulic et al. (2020)](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.2112). 
+
+--
+
++ The neat thing with Nimble is that it provides marginalised models through NimbleEcology, we'll get back to it in Class 8.
 
 ---
 # Our model
@@ -1081,4 +1125,5 @@ The data is simulated, with true survival $\phi = 0.8$ and detection $p = 0.6$.
 
 + McClintock, B.T., Langrock, R., Gimenez, O., Cam, E., Borchers, D.L., Glennie, R. and Patterson, T.A. (2020), [Uncovering ecological state dynamics with hidden Markov models](https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13610). Ecology Letters, 23: 1878-1903. 
 
++  Yackulic, C. B. Dodrill, M., Dzul, M., Sanderlin, J. S., and Reid, J. A.. (2020). [A need for speed in Bayesian population models: a practical guide to marginalizing and recovering discrete latent states](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.2112). Ecological Applications 30:e02112.
 

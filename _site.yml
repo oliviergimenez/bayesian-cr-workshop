@@ -1,5 +1,5 @@
-name: "Bayesian capture-recapture inference"
-title: "Bayesian capture-recapture inference"
+name: "Bayesian capture-recapture inference with HMMs"
+title: "Bayesian capture-recapture inference with HMMs"
 output_dir: "docs"
 theme: "theme.css"
 repository_url: https://oliviergimenez.github.io/bayesian-cr-workshop/
