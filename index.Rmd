@@ -1,5 +1,5 @@
 ---
-title: "Bayesian capture-recapture inference with HMMs"
+title: "Bayesian capture-recapture inference with hidden Markov models"
 description: "A two-day workshop with `R` and `Nimble`"
 site: distill::distill_website
 ---
