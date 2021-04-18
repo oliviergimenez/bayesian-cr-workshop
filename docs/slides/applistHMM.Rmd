@@ -1,6 +1,5 @@
 ---
 title: "Curated list of papers using hidden Markov models to analyse capture-recapture data"
-author: "Olivier Gimenez"
 date: "last updated: `r Sys.Date()`"
 output: html_document
 ---
@@ -308,10 +307,9 @@ df <- data.frame(
 
 ```{r echo = FALSE}
 datatable(data = df, 
-          filter = 'top', 
+#          filter = 'top', 
           escape = 3, 
-#          width = "1500px",
-          options = list(columnDefs = list(list(targets = 1, searchable = FALSE)),
+          options = list(#columnDefs = list(list(targets = c(1,2,3), searchable = FALSE)),
                          autoWidth = TRUE,
                          scrollX = TRUE,
                          initComplete = JS(
