@@ -1417,11 +1417,6 @@ $$
 \end{matrix}
 $$
 
----
-# Make the best of your capture-recapture data
-## Non-exhaustive list of HMMs applications 
-
-+ HMMs are everywhere: SCR models (which can be seen as HMMs), robust design, sojour time, semi-Markov, pop size Jolly-Seber, IPMs (Besbeas and Morgan)...
 
 ---
 ## Further reading
