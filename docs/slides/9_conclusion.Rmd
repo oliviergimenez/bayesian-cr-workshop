@@ -38,7 +38,7 @@ library(nimble)
 + Start simple, all parameters constant for example. 
 + Use simulations!!
 + Do not try to optimize your code. Make it work first. Then think of optimization.
-+ Workflow by Gelman et al. 
++ [Workflow by Gelman et al. (2021)](https://arxiv.org/abs/2011.01808).
 + Sensitivity analyses.
 
 ---
