@@ -896,6 +896,37 @@ $$
 ---
 ### HMM model for disease states with uncertainty
 
+Transition matrix, incurable disease
+
+$$
+\begin{matrix}
+& \\
+\mathbf{\Gamma} = 
+    \left ( \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right .
+\end{matrix}
+\hspace{-1.2em}
+\begin{matrix}
+    z_t=H & z_t=I & z_t=D \\ \hdashline
+\phi_H (1-\psi_{HI}) & \phi_H \psi_{HI} & 1 - \phi_H\\ 
+0 & \phi_{I}  & 1 - \phi_{I}\\ 
+0 & 0 & 1
+\end{matrix}
+\hspace{-0.2em}
+\begin{matrix}
+& \\
+\left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
+    \begin{matrix}
+    z_{t-1}=H \\ z_{t-1}=I \\ z_{t-1}=D
+    \end{matrix}
+\end{matrix}
+$$
+
++ No possibility of recovering from the disease, that is $\psi_{IH} = 0$. Once you get sick, you remain sick $\psi_{II} = 1 - \psi_{IH} = 1$.
+
+
+---
+### HMM model for disease states with uncertainty
+
 Observation matrix
 
 $$
@@ -1390,14 +1421,15 @@ $$
 # Make the best of your capture-recapture data
 ## Non-exhaustive list of HMMs applications 
 
++ HMMs are everywhere: SCR models (which can be seen as HMMs), robust design, sojour time, semi-Markov, pop size Jolly-Seber, IPMs (Besbeas and Morgan)...
 
 ---
 ## Further reading
 
-+ Seminal paper by Pradel (2005) Multievent: An Extension of Multistate Capture–Recapture Models to Uncertain States. Biometrics, 61: 442-447.
++ Seminal paper by Pradel (2005) [Multievent: An Extension of Multistate Capture–Recapture Models to Uncertain States](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1541-0420.2005.00318.x). Biometrics, 61: 442-447.
 
-+ See also Gimenez et al. (2012) Estimating demographic parameters using hidden process dynamic models. Theoretical Population Biology 82: 307-316.
++ See also Gimenez et al. (2012) [Estimating demographic parameters using hidden process dynamic models](https://oliviergimenez.github.io/pubs/Gimenezetal2012TPB.pdf). Theoretical Population Biology 82: 307-316.
 
-+ Dupuis (1995) had a similar idea for the Arnason-Schwarz model: Dupuis, J. (1995) Bayesian estimation of movement and survival probabilities from capture-recapture data. Biometrika. Vol. 82, pp 761-772.
++ Dupuis (1995) had a similar idea for the Arnason-Schwarz model: Dupuis, J. (1995) [Bayesian estimation of movement and survival probabilities from capture-recapture data](https://academic.oup.com/biomet/article-abstract/82/4/761/252161). Biometrika. Vol. 82, pp 761-772.
 
 

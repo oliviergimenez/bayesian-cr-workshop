@@ -14,7 +14,7 @@ output:
       titleSlideClass: [center, middle]
 ---
 
-```{r setup, include=FALSE, echo=FALSE}
+```{r setup, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(comment = "")
 
@@ -23,47 +23,252 @@ theme_set(theme_light())
 update_geom_defaults("point", list(size = 2)) 
 library(here)
 library(nimble)
+library(MCMCvis)
 ```
 
 
-## Simple pieces of advice
+---
+## Our `nimble` workflow so far
 
-+ good inits
+![](img/nimble_workflow_sofar.png)
 
-+ simpler models
-
-+ simulations
-
-+ etc
 
 ---
-## Vectorise to speed up
+## But `nimble` gives full access to the MCMC engine
+
+--
+
+![](img/nimble_workflow.png)
+
+---
+## Steps to use NIMBLE at full capacity
+
+1. Build the model. It is an R object.
+2. Build the MCMC.
+3. Compile the model and MCMC.
+4. Run the MCMC.
+5. Extract the samples.
+
+- `nimbleMCMC` does all of this at once.
+
+---
+class: middle, center
+
+# Back to CJS models with Dipper data. 
+
+---
+### Define model
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+dipper <- read_csv(here::here("slides", "dat", "dipper.csv"))
+y <- dipper %>%
+  select(year_1981:year_1987) %>%
+  as.matrix()
+first <- apply(y, 1, function(x) min(which(x !=0)))
+my.constants <- list(N = nrow(y), T = ncol(y), first = first)
+my.data <- list(y = y + 1)
+zinits <- y + 1 # non-detection -> alive
+zinits[zinits == 2] <- 1 # dead -> alive
+initial.values <- function() list(phi = runif(1,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("phi", "p")
+n.iter <- 2500
+n.burnin <- 1000
+n.chains <- 2
+```
+
+.tiny-font[
+```{r, eval = TRUE, echo = TRUE, message = FALSE, warning=FALSE}
+hmm.phip <- nimbleCode({
+  delta[1] <- 1              # Pr(alive t = 1) = 1
+  delta[2] <- 0              # Pr(dead t = 1) = 0
+    phi ~ dunif(0, 1)     # prior survival
+    gamma[1,1] <- phi        # Pr(alive t -> alive t+1)
+    gamma[1,2] <- 1 - phi    # Pr(alive t -> dead t+1)
+    gamma[2,1] <- 0          # Pr(dead t -> alive t+1)
+    gamma[2,2] <- 1          # Pr(dead t -> dead t+1)
+    p ~ dunif(0, 1)       # prior detection
+    omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+    omega[1,2] <- p        # Pr(alive t -> detected t)
+    omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2] <- 0        # Pr(dead t -> detected t)
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+]
+
+---
+### Run and summarise
+
+.tiny-font[
+```{r, eval = TRUE, echo = TRUE, warning=FALSE, message=FALSE}
+mcmc.phip <- nimbleMCMC(code = hmm.phip, 
+                         constants = my.constants,
+                         data = my.data,              
+                         inits = initial.values,
+                         monitors = parameters.to.save,
+                         niter = n.iter,
+                         nburnin = n.burnin, 
+                         nchains = n.chains)
+```
+]
+
+.tiny-font[
+```{r, eval = TRUE, echo=TRUE}
+MCMCsummary(object = mcmc.phip, round = 2)
+```
+]
+
+---
+class: middle, center
+
+# Detailed Nimble workflow
+
+---
+## 1. Build the model (R object)
+
+.tiny-font[
+```{r, eval = TRUE, echo = TRUE}
+hmm.phip <- nimbleModel(code = hmm.phip,
+                        constants = my.constants,
+                        data = my.data,
+                        inits = initial.values())
+```
+]
+
+---
+## 2. Build the MCMC
+
+.small-font[
+```{r, eval = TRUE, echo = TRUE, message = TRUE}
+phip.mcmc <- buildMCMC(hmm.phip)
+```
+]
+
+---
+## 3. Compile the model and MCMC
+
+.small-font[
+```{r, eval = TRUE, echo = TRUE, message = TRUE}
+phip.model <- compileNimble(hmm.phip) 
+c.phip.mcmc <- compileNimble(phip.mcmc, project = phip.model)
+```
+]
+
+---
+## 4. Run the MCMC
+
+.small-font[
+```{r, eval = TRUE, echo = TRUE, message = TRUE}
+c.phip.mcmc$run(1000)
+```
+]
+
+---
+## 5. Extract samples and summarise
+
+.small-font[
+```{r, eval = TRUE, echo = TRUE, message = TRUE}
+samples <- as.matrix(c.phip.mcmc$mvSamples)
+summary(samples[,"phi"])
+summary(samples[,"p"])
+```
+]
+
+---
+class: middle, center
+
+# Why is it useful? 
+
+---
+## Open the hood, and change samplers
+
++ Slice samplers instead of Metropolis-Hastings.
+
++ Blocking correlated parameters.
+
++ To know all samplers available in Nimble, type in `help(samplers)`.
+
++ Use [`compareMCMCs` package](https://github.com/nimble-dev/compareMCMCs) to compare options (including Stan and Jags!).
 
 ---
 ## Block sampling
 
++ [TO BE DONE] 
+
 ---
 ## Change samplers
 
----
-## Marginalization 
-
-+ use dHMM w/ NimbleEcology and Turek's 2016 paper. 
-
-+ Redo some of the previous examples. 
++ [TO BE DONE] 
 
 ---
-## 
+## Summary of strategies for improving MCMC 
 
-+ Encounter histories pooling (weighted likelihood w/ unique capture history)
+--
+
++ Choose better initial values.
+
+--
+
++ Customize sampler choice.
+
+--
+
++ Reparameterize, e.g. standardize covariates, deal with parameter redundancy.
+
+--
+
++ Rewrite the model.
+
+    + Vectorize to improve computational efficiency
+    + Marginalize to remove parameters
+
+--
+
++ Write new samplers that take advantage of particular model structures (advanced, not covered).
+
+---
+## Vectorization
+
++ [TO BE DONE] 
+
+---
+## Marginalization
+
++ User-defined distributions is another neat feature of Nimble.
+
++ Integrate over latent states if those are not the focus of ecological inference (marginalization).
+
++ In general, marginalization improves MCMC. 
+
++ The [NimbleEcology](https://cran.r-project.org/web/packages/nimbleEcology/vignettes/Introduction_to_nimbleEcology.html) implements capture-recapture models and HMMs with marginalization. 
+
++ [TO BE DONE] Re-run a CJS example and a multistate/multievent example.
+
+---
+## Weighted likelihood w/ unique capture history
+
++ [TO BE DONE] Try Perry's suggestions.
+
++ [TO BE DONE] Show Chloe's code for CJS model.
+
++ [TO BE DONE] Adapt Chloe's code for dHMM and re-run multistate/multievent example we run before.
 
 ---
 ## Further reading
 
-+ Turek, D., de Valpine, P. & Paciorek, C.J. Efficient Markov chain Monte Carlo sampling for hierarchical hidden Markov models. Environ Ecol Stat 23, 549–564 (2016). https://doi.org/10.1007/s10651-016-0353-z
++ Turek, D., de Valpine, P. & Paciorek, C.J. [Efficient Markov chain Monte Carlo sampling for hierarchical hidden Markov models](https://doi.org/10.1007/s10651-016-0353-z). Environ Ecol Stat 23, 549–564 (2016).
 
-+ Nimble workshop to come !
++ Nimble workshop to come 26-28 May, check out [here](https://r-nimble.org/nimble-virtual-short-course-may-26-28).
 
-+ Nimble workshop material online
++ Nimble workshop material online available [here](https://github.com/nimble-training).
 
-+ Nimble manual
++ Nimble [manual](https://r-nimble.org/html_manual/cha-welcome-nimble.html) and [cheatsheet](https://r-nimble.org/cheatsheets/NimbleCheatSheet.pdf). 

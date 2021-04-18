@@ -16,7 +16,7 @@ class: center, middle, title-slide
 
 # Dead or alive: Survival estimation
 ### The team
-### last updated: 2021-04-17
+### last updated: 2021-04-18
 
 ---
 
@@ -3800,6 +3800,10 @@ with `\(L\)` the likelihood and `\(K\)` the number of parameters `\(\theta_i\)`.
 --
 
 + More in this video &lt;https://www.youtube.com/watch?v=vSjL2Zc-gEQ&gt; by R. McElreath.
+
+--
+
++ Nimble provides the conditional WAIC, where all parameters directly involved in the likelihood are considered. If you would want to calculate the marginal WAIC, integrating over latent variables, you could monitor the relevant nodes and carry out the calculations yourself based on the MCMC output.
 
 ---
 ## How to compute WAIC in Nimble?

@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # Skip your coffee break: Speed up MCMC convergence
 ### The team
-### last updated: 2021-04-15
+### last updated: 2021-04-18
 
 ---
 
@@ -22,45 +22,324 @@ class: center, middle, title-slide
 
 
 
-## Simple pieces of advice
+---
+## Our `nimble` workflow so far
 
-+ good inits
+![](img/nimble_workflow_sofar.png)
 
-+ simpler models
-
-+ simulations
-
-+ etc
 
 ---
-## Vectorise to speed up
+## But `nimble` gives full access to the MCMC engine
+
+--
+
+![](img/nimble_workflow.png)
+
+---
+## Steps to use NIMBLE at full capacity
+
+1. Build the model. It is an R object.
+2. Build the MCMC.
+3. Compile the model and MCMC.
+4. Run the MCMC.
+5. Extract the samples.
+
+- `nimbleMCMC` does all of this at once.
+
+---
+class: middle, center
+
+# Back to CJS models with Dipper data. 
+
+---
+### Define model
+
+
+
+.tiny-font[
+
+```r
+hmm.phip &lt;- nimbleCode({
+  delta[1] &lt;- 1              # Pr(alive t = 1) = 1
+  delta[2] &lt;- 0              # Pr(dead t = 1) = 0
+    phi ~ dunif(0, 1)     # prior survival
+    gamma[1,1] &lt;- phi        # Pr(alive t -&gt; alive t+1)
+    gamma[1,2] &lt;- 1 - phi    # Pr(alive t -&gt; dead t+1)
+    gamma[2,1] &lt;- 0          # Pr(dead t -&gt; alive t+1)
+    gamma[2,2] &lt;- 1          # Pr(dead t -&gt; dead t+1)
+    p ~ dunif(0, 1)       # prior detection
+    omega[1,1] &lt;- 1 - p    # Pr(alive t -&gt; non-detected t)
+    omega[1,2] &lt;- p        # Pr(alive t -&gt; detected t)
+    omega[2,1] &lt;- 1        # Pr(dead t -&gt; non-detected t)
+    omega[2,2] &lt;- 0        # Pr(dead t -&gt; detected t)
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+]
+
+---
+### Run and summarise
+
+.tiny-font[
+
+```r
+mcmc.phip &lt;- nimbleMCMC(code = hmm.phip, 
+                         constants = my.constants,
+                         data = my.data,              
+                         inits = initial.values,
+                         monitors = parameters.to.save,
+                         niter = n.iter,
+                         nburnin = n.burnin, 
+                         nchains = n.chains)
+```
+
+```
+|-------------|-------------|-------------|-------------|
+|-------------------------------------------------------|
+|-------------|-------------|-------------|-------------|
+|-------------------------------------------------------|
+```
+]
+
+.tiny-font[
+
+```r
+MCMCsummary(object = mcmc.phip, round = 2)
+```
+
+```
+    mean   sd 2.5%  50% 97.5% Rhat n.eff
+p   0.90 0.03 0.85 0.90  0.95 1.01   288
+phi 0.56 0.03 0.51 0.56  0.61 1.01   602
+```
+]
+
+---
+class: middle, center
+
+# Detailed Nimble workflow
+
+---
+## 1. Build the model (R object)
+
+.tiny-font[
+
+```r
+hmm.phip &lt;- nimbleModel(code = hmm.phip,
+                        constants = my.constants,
+                        data = my.data,
+                        inits = initial.values())
+```
+
+```
+defining model...
+```
+
+```
+building model...
+```
+
+```
+setting data and initial values...
+```
+
+```
+running calculate on model (any error reports that follow may simply reflect missing values in model variables) ... 
+checking model sizes and dimensions...
+model building finished.
+```
+]
+
+---
+## 2. Build the MCMC
+
+.small-font[
+
+```r
+phip.mcmc &lt;- buildMCMC(hmm.phip)
+```
+
+```
+===== Monitors =====
+thin = 1: phi, p, z
+===== Samplers =====
+RW sampler (2)
+  - phi
+  - p
+posterior_predictive sampler (39)
+  - z[]  (39 elements)
+categorical sampler (1103)
+  - z[]  (1103 elements)
+```
+]
+
+---
+## 3. Compile the model and MCMC
+
+.small-font[
+
+```r
+phip.model &lt;- compileNimble(hmm.phip) 
+```
+
+```
+compiling... this may take a minute. Use 'showCompilerOutput = TRUE' to see C++ compilation details.
+```
+
+```
+compilation finished.
+```
+
+```r
+c.phip.mcmc &lt;- compileNimble(phip.mcmc, project = phip.model)
+```
+
+```
+compiling... this may take a minute. Use 'showCompilerOutput = TRUE' to see C++ compilation details.
+compilation finished.
+```
+]
+
+---
+## 4. Run the MCMC
+
+.small-font[
+
+```r
+c.phip.mcmc$run(1000)
+```
+
+```
+|-------------|-------------|-------------|-------------|
+|-------------------------------------------------------|
+```
+
+```
+NULL
+```
+]
+
+---
+## 5. Extract samples and summarise
+
+.small-font[
+
+```r
+samples &lt;- as.matrix(c.phip.mcmc$mvSamples)
+summary(samples[,"phi"])
+```
+
+```
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.5020  0.5527  0.5675  0.5684  0.5971  0.6268 
+```
+
+```r
+summary(samples[,"p"])
+```
+
+```
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.7040  0.8659  0.8896  0.8714  0.9090  0.9589 
+```
+]
+
+---
+class: middle, center
+
+# Why is it useful? 
+
+---
+## Open the hood, and change samplers
+
++ Slice samplers instead of Metropolis-Hastings.
+
++ Blocking correlated parameters.
+
++ To know all samplers available in Nimble, type in `help(samplers)`.
+
++ Use [`compareMCMCs` package](https://github.com/nimble-dev/compareMCMCs) to compare options (including Stan and Jags!).
 
 ---
 ## Block sampling
 
++ [TO BE DONE] 
+
 ---
 ## Change samplers
 
----
-## Marginalization 
-
-+ use dHMM) w/ NimbleEcology and Turek's 2016 paper. 
-
-+ Redo some of the previous examples. 
++ [TO BE DONE] 
 
 ---
-## 
+## Summary of strategies for improving MCMC 
 
-+ Encounter histories pooling (weighted likelihood w/ unique capture history)
+--
+
++ Choose better initial values.
+
+--
+
++ Customize sampler choice.
+
+--
+
++ Reparameterize, e.g. standardize covariates, deal with parameter redundancy.
+
+--
+
++ Rewrite the model.
+
+    + Vectorize to improve computational efficiency
+    + Marginalize to remove parameters
+
+--
+
++ Write new samplers that take advantage of particular model structures (advanced, not covered).
+
+---
+## Vectorization
+
++ [TO BE DONE] 
+
+---
+## Marginalization
+
++ User-defined distributions is another neat feature of Nimble.
+
++ Integrate over latent states if those are not the focus of ecological inference (marginalization).
+
++ In general, marginalization improves MCMC. 
+
++ The [NimbleEcology](https://cran.r-project.org/web/packages/nimbleEcology/vignettes/Introduction_to_nimbleEcology.html) implements capture-recapture models and HMMs with marginalization. 
+
++ [TO BE DONE] Re-run a CJS example and a multistate/multievent example.
+
+---
+## Weighted likelihood w/ unique capture history
+
++ [TO BE DONE] Try Perry's suggestions.
+
++ [TO BE DONE] Show Chloe's code for CJS model.
+
++ [TO BE DONE] Adapt Chloe's code for dHMM and re-run multistate/multievent example we run before.
 
 ---
 ## Further reading
 
-+ Nimble workshop to come !
++ Turek, D., de Valpine, P. &amp; Paciorek, C.J. [Efficient Markov chain Monte Carlo sampling for hierarchical hidden Markov models](https://doi.org/10.1007/s10651-016-0353-z). Environ Ecol Stat 23, 549–564 (2016).
 
-+ Nimble workshop material online
++ Nimble workshop to come 26-28 May, check out [here](https://r-nimble.org/nimble-virtual-short-course-may-26-28).
 
-+ Nimble manual
++ Nimble workshop material online available [here](https://github.com/nimble-training).
+
++ Nimble [manual](https://r-nimble.org/html_manual/cha-welcome-nimble.html) and [cheatsheet](https://r-nimble.org/cheatsheets/NimbleCheatSheet.pdf). 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

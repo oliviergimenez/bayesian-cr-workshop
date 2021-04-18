@@ -915,7 +915,7 @@ titis %>%
 ---
 ### HMM model for transition between states
 
-Transition matrix:
+Transition matrix
 
 $$
 \begin{matrix}
@@ -940,7 +940,12 @@ $$
 \end{matrix}
 $$
 
-Observation matrix:
++ Costs or reproduction would reflect in future reproduction $\psi_{BB} = 1 - \psi_{BNB} < \psi_{NBB}$ or survival $\phi_B < \phi_{NB}$.
+
+---
+### HMM model for transition between states
+
+Observation matrix
 
 $$
 \begin{matrix}

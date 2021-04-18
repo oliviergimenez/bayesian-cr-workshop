@@ -593,6 +593,10 @@ $$\textrm{WAIC} = -2 \sum_{i = 1}^n \log E[\Pr(y_i \mid \theta)] +
 
 + More in this video <https://www.youtube.com/watch?v=vSjL2Zc-gEQ> by R. McElreath.
 
+--
+
++ Nimble provides the conditional WAIC, where all parameters directly involved in the likelihood are considered. If you would want to calculate the marginal WAIC, integrating over latent variables, you could monitor the relevant nodes and carry out the calculations yourself based on the MCMC output.
+
 ---
 ## How to compute WAIC in Nimble?
 
