@@ -20,7 +20,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Where**: Online via Zoom/Slack
 
-### Program (all times are Paris time UTC+1)
+### Program 
+
+All times are Paris time UTC+2
 
 + **Day 1, May 17**
 1. Welcoming words (9am-9:30am)
