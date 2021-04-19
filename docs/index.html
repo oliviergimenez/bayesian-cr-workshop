@@ -2456,31 +2456,51 @@ Live demos
 <p><strong>How</strong>: Through a combination of lectures and live demonstrations, you will get acquainted with the Bayesian approach, MCMC methods and the <code>R</code> <code>Nimble</code> package to fit single-site, multi-site, multi-state and multi-event models to capture-recapture data within the hidden Markov modeling (HMM) framework.</p>
 <p><strong>Who</strong>: <a href="https://twitter.com/oaggimenez">O. Gimenez</a>, <a href="https://twitter.com/chloe_nater">C. R. Nater</a>, <a href="https://twitter.com/sarahcubaynes">S. Cubaynes</a>, <a href="https://twitter.com/r_nimble">P. de Valpine</a>, <a href="https://twitter.com/maudqueroue">M. Quéroué</a></p>
 <p><strong>When</strong>: May 17-18, 2021</p>
-<p><strong>Where</strong>: Online</p>
-<h3 id="program">Program</h3>
+<p><strong>Where</strong>: Online via Zoom/Slack</p>
+<h3 id="program-all-times-are-paris-time-utc1">Program (all times are Paris time UTC+1)</h3>
+<ul>
+<li><strong>Day 1, May 17</strong></li>
+</ul>
 <ol type="1">
-<li>Welcoming words</li>
-<li>Crash course on Bayesian statistics and MCMC algorithms</li>
-<li>Free the modeler in you: Introduction to Nimble</li>
-<li>What you see is not what you get: Hidden Markov models and capture-recapture data</li>
-<li>Dead or alive: Survival estimation</li>
-<li>On the move: Transition estimation</li>
-<li>Known knowns, unknown knowns and unknowns: Uncertainty in state assignment</li>
-<li>Skip your coffee break: Speed up MCMC convergence</li>
-<li>Take-home messages</li>
+<li>Welcoming words (9am-9:30am)</li>
+<li>Crash course on Bayesian statistics and MCMC algorithms (9:30am-11am)</li>
+<li>Free the modeler in you: Introduction to Nimble (11:30am-12:30pm)</li>
+<li>What you see is not what you get: Hidden Markov models and capture-recapture data (2pm-3:30pm)</li>
+<li>Dead or alive: Survival estimation (4pm-5pm)</li>
+</ol>
+<ul>
+<li><strong>Day 2, May 18</strong></li>
+</ul>
+<ol start="5" type="1">
+<li>Dead or alive: Survival estimation (9am-10:30am)</li>
+<li>On the move: Transition estimation (11am-12:30pm)</li>
+<li>Known knowns, unknown knowns and unknowns: Uncertainty in state assignment (2pm-3:30pm)</li>
+<li>Skip your coffee break: Speed up MCMC convergence (4pm-5pm)</li>
+<li>Take-home messages (5pm-5:30pm)</li>
 </ol>
 <h3 id="requirements">Requirements</h3>
 <ul>
-<li><p>Install <a href="https://cloud.r-project.org/"><code>R</code></a> and <a href="https://rstudio.com/products/rstudio/download/#download"><code>RStudio</code></a></p></li>
-<li><p>Install <code>Nimble</code> following <a href="https://r-nimble.org/download">these guidelines</a>.</p></li>
-<li><p>Install the following <code>R</code> packages: <code>tidyverse</code>, <code>MCMCvis</code>, <code>here</code>. You can install them all at once by running the following code in the <code>R</code> command line:</p></li>
-</ul>
+<li><p>Install <a href="https://cloud.r-project.org/"><code>R</code></a> and <a href="https://rstudio.com/products/rstudio/download/#download"><code>RStudio</code></a>.</p></li>
+<li><p>Install <code>Nimble</code> following <a href="https://r-nimble.org/download">these guidelines</a>. Then run the following code in <code>R</code>. If that runs without error, you’re all set. If not, please get in touch with us.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"tidyverse"</span>, <span class='st'>"MCMCvis"</span>, <span class='st'>"here"</span><span class='op'>)</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://r-nimble.org'>nimble</a></span><span class='op'>)</span>
+  <span class='va'>code</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/nimble/man/nimbleCode.html'>nimbleCode</a></span><span class='op'>(</span><span class='op'>{</span>
+  <span class='va'>y</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span>
+  <span class='op'>}</span><span class='op'>)</span>
+  <span class='va'>model</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/nimble/man/nimbleModel.html'>nimbleModel</a></span><span class='op'>(</span><span class='va'>code</span><span class='op'>)</span>
+  <span class='va'>cModel</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/nimble/man/compileNimble.html'>compileNimble</a></span><span class='op'>(</span><span class='va'>model</span><span class='op'>)</span>
+  </code></pre>
 </div>
+</div></li>
+<li><p>Install the following <code>R</code> packages: <code>tidyverse</code>, <code>MCMCvis</code>, <code>here</code> and <code>nimbleEcology</code>. You can install them all at once by running the following code in <code>R</code>:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/nimble/man/nimble-R-functions.html'>c</a></span><span class='op'>(</span><span class='st'>"tidyverse"</span>, <span class='st'>"MCMCvis"</span>, <span class='st'>"here"</span>, <span class='st'>"nimbleEcology"</span><span class='op'>)</span><span class='op'>)</span>
+  </code></pre>
 </div>
+</div></li>
+</ul>
 <h3 class="appendix" id="reuse">Reuse</h3>
 <p>Text and figures are licensed under Creative Commons Attribution <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Any computer code (R, HTML, CSS, etc.) in slides and worksheets, including in slide and worksheet sources, is also licensed under <a href="https://github.com/oliviergimenez/bayesian-cr-workshop/blob/master/LICENSE.md">MIT</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

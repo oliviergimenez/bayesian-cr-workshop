@@ -18,32 +18,44 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **When**: May 17-18, 2021     
 
-**Where**: Online     
+**Where**: Online via Zoom/Slack
 
-### Program
+### Program (all times are Paris time UTC+1)
 
-1. Welcoming words
-2. Crash course on Bayesian statistics and MCMC algorithms
-3. Free the modeler in you: Introduction to Nimble
-4. What you see is not what you get: Hidden Markov models and capture-recapture data
-5. Dead or alive: Survival estimation
-6. On the move: Transition estimation
-7. Known knowns, unknown knowns and unknowns: Uncertainty in state assignment
-8. Skip your coffee break: Speed up MCMC convergence 
-9. Take-home messages
++ **Day 1, May 17**
+1. Welcoming words (9am-9:30am)
+2. Crash course on Bayesian statistics and MCMC algorithms (9:30am-11am)
+3. Free the modeler in you: Introduction to Nimble (11:30am-12:30pm)
+4. What you see is not what you get: Hidden Markov models and capture-recapture data (2pm-3:30pm)
+5. Dead or alive: Survival estimation (4pm-5pm)
+
++ **Day 2, May 18**
+5. Dead or alive: Survival estimation (9am-10:30am)
+6. On the move: Transition estimation (11am-12:30pm)
+7. Known knowns, unknown knowns and unknowns: Uncertainty in state assignment (2pm-3:30pm)
+8. Skip your coffee break: Speed up MCMC convergence (4pm-5pm)
+9. Take-home messages (5pm-5:30pm)
 
 ### Requirements
 
-* Install [`R`](https://cloud.r-project.org/) and [`RStudio`](https://rstudio.com/products/rstudio/download/#download)
++ Install [`R`](https://cloud.r-project.org/) and [`RStudio`](https://rstudio.com/products/rstudio/download/#download). 
 
-* Install `Nimble` following [these guidelines](https://r-nimble.org/download).
++ Install `Nimble` following [these guidelines](https://r-nimble.org/download). Then run the following code in `R`. If that runs without error, you're all set. If not, please get in touch with us.
 
-* Install the following `R` packages: `tidyverse`, `MCMCvis`, `here`. You can install them all at once by running the following code in the `R` command line:
+    ```{r eval = FALSE, echo = TRUE}
+    library(nimble)
+    code <- nimbleCode({
+    y ~ dnorm(0,1)
+    })
+    model <- nimbleModel(code)
+    cModel <- compileNimble(model)
+    ```
+    
++ Install the following `R` packages: `tidyverse`, `MCMCvis`, `here` and `nimbleEcology`. You can install them all at once by running the following code in `R`:
 
-```{r eval = FALSE, echo = TRUE}
-install.packages(c("tidyverse", "MCMCvis", "here"))
-```
-
+    ```{r eval = FALSE, echo = TRUE}
+    install.packages(c("tidyverse", "MCMCvis", "here", "nimbleEcology"))
+    ```
 
 ### Reuse {.appendix}
 
