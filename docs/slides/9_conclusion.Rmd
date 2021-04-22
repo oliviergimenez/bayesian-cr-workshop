@@ -17,30 +17,17 @@ output:
 ```{r setup, include=FALSE, echo=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(comment = "")
-library(tidyverse)
-theme_set(theme_light())
-update_geom_defaults("point", list(size = 2)) 
-library(here)
-library(nimble)
 ```
 
 
-# Make the best of your capture-recapture data
+## Make the best of your data with HMMs
 
-+ Here is [a searchable list](applistHMM.html) of HMM applications to the analysis of capture-recapture data.
++ Here is [a searchable list](applistHMM.html) of HMM analyses of capture-recapture data.
 
-+ This list is far from being exhaustive, please get in touch wih us if you'd like to add a reference.
-
----
-class: middle, center
-
-## Bags of tricks for HMM analyses, and Nimble.
-
++ This list is not exhaustive, please get in touch with us if you'd like to add a reference.
 
 ---
 ## Bayesian capture-recapture analysis with HMMs
-
-+ [TO BE COMPLETED BY ALL]
 
 + Make your ecological question explicit. 
 
@@ -48,25 +35,35 @@ class: middle, center
 
 + Then write down the observation and transition matrices on paper. 
 
-+ Start simple, all parameters constant for example.
++ Start simple, all parameters constant for example. Make sure convergence is reached.
+
++ Add complexity one step at a time. 
+
+---
+## Bayesian capture-recapture analysis with HMMs
+
 
 + Use simulations to better understand your model. 
 
-+ Do not try to optimize your code. Make it work first. Then think of optimization.
++ Do not try to optimize your code. Make it work first, then think of optimization. 
+
+> "Premature optimization is the root of all evil" -Donald Knuth (creator of TeX and author of "The Art of Computer Programming") (e.g. <https://stackify.com/premature-optimization-evil/>)
 
 + Read [Bayesian workflow](https://arxiv.org/abs/2011.01808) by Gelman et al. (2021).
 
----
-## Nimble
+<!-- --- -->
+<!-- ## Nimble -->
 
-+ [TO BE COMPLETED BY ALL]
+<!-- + [TO BE COMPLETED BY ALL] -->
 
-+ Go for `nimbleMCMC()` if standard needs. 
+<!-- + Go for `nimbleMCMC()` if standard needs.  -->
 
-+ Unleash full `Nimble` potential for improving MCMC or implementing new distributions. 
+<!-- + Unleash full `Nimble` potential for improving MCMC or implementing new distributions.  -->
 
 ---
 ## Till next time
+
++ The Slack space will remain for some time. Happy to answer questions you might have related to the workshop. 
 
 + Website will be updated with
 
@@ -74,7 +71,4 @@ class: middle, center
     + your feedbacks
     + a FAQ section based on your questions
 
----
-## Further reading
-
-+ A book is on its way. Release date: Some time in 2022.
++ A book is on its way. More in 2022 hopefully.

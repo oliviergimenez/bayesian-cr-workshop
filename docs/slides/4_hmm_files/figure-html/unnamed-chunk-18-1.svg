@@ -12,13 +12,13 @@
 <font-face font-family='cmsy7' units-per-em='1000' ascent='782' descent='951'/>
 <glyph unicode='−' horiz-adv-x='892' vert-adv-y='892' glyph-name='minus' d='M744 226C760 226 784 226 784 250C784 275 761 275 744 275H148C132 275 108 275 108 251C108 226 131 226 148 226H744Z'/>
 </font>
-<font id='cmmi7' horiz-adv-x='0'>
-<font-face font-family='cmmi7' units-per-em='1000' ascent='750' descent='250'/>
-<glyph unicode='t' horiz-adv-x='431' vert-adv-y='431' glyph-name='t' d='M246 395H348C367 395 380 395 380 417C380 431 367 431 350 431H255L292 579C293 584 295 589 295 593C295 611 281 625 261 625C236 625 221 608 214 582C207 557 220 605 176 431H74C55 431 42 431 42 409C42 395 54 395 72 395H167L108 159C102 134 93 98 93 85C93 26 143 -10 200 -10C311 -10 374 130 374 143S361 156 358 156C346 156 345 154 337 137C309 74 258 18 203 18C182 18 168 31 168 67C168 77 172 98 174 108L246 395Z'/>
-</font>
 <font id='cmsy10' horiz-adv-x='0'>
 <font-face font-family='cmsy10' units-per-em='1000' ascent='775' descent='960'/>
 <glyph unicode='·' horiz-adv-x='277' vert-adv-y='277' glyph-name='periodcentered' d='M192 250C192 279 168 303 139 303S86 279 86 250S110 197 139 197S192 221 192 250Z'/>
+</font>
+<font id='cmmi7' horiz-adv-x='0'>
+<font-face font-family='cmmi7' units-per-em='1000' ascent='750' descent='250'/>
+<glyph unicode='t' horiz-adv-x='431' vert-adv-y='431' glyph-name='t' d='M246 395H348C367 395 380 395 380 417C380 431 367 431 350 431H255L292 579C293 584 295 589 295 593C295 611 281 625 261 625C236 625 221 608 214 582C207 557 220 605 176 431H74C55 431 42 431 42 409C42 395 54 395 72 395H167L108 159C102 134 93 98 93 85C93 26 143 -10 200 -10C311 -10 374 130 374 143S361 156 358 156C346 156 345 154 337 137C309 74 258 18 203 18C182 18 168 31 168 67C168 77 172 98 174 108L246 395Z'/>
 </font>
 <font id='cmmi10' horiz-adv-x='0'>
 <font-face font-family='cmmi10' units-per-em='1000' ascent='750' descent='250'/>

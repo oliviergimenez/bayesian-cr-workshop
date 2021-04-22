@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # ‘Free the modeler in you’: Intro to Nimble
 ### The team (citation by Marc Kéry)
-### last updated: 2021-04-11
+### last updated: 2021-04-22
 
 ---
 
@@ -29,11 +29,11 @@ class: center, middle, title-slide
 
 --
 
-+ A framework for hierarchical statistical models and methods.
++ A framework for hierarchical statistical models and algorithms. 
 
 --
 
-+ A nearly drop-in alternative to WinBUGS, OpenBUGS and JAGS.
++ Uses almost the same model code as WinBUGS, OpenBUGS, and JAGS. 
 
 --
 
@@ -91,6 +91,14 @@ my.data &lt;- list(n = 57, y = 19)
 ---
 ## Distinguish constants and data
 
++ Constants can never be changed and must be provided when a model is defined. E.g., a vector of known index values, variables used in the index ranges of for-loops, etc. 
+
++ Data can be changed. This allows an algorithm to be applied to many data sets in the same model without re-creating the model each time. It also allows simulation of data in a model.
+
++ When deciding between data and constants, no reason to use data unless you want the flexibility to change values during your work with the model.
+
++ For computational efficiency, better to specify as much as possible as constants.
+
 
 ```r
 my.constants &lt;- list(n = 57)
@@ -115,7 +123,7 @@ initial.values()
 
 ```
 $phi
-[1] 0.5334034
+[1] 0.8589696
 ```
 
 
@@ -150,8 +158,7 @@ mcmc.output &lt;- nimbleMCMC(code = naive.survival.model,
                           monitors = parameters.to.save,
                           niter = n.iter, 
                           nburnin = n.burnin, 
-                          nchains = n.chains,
-                          )
+                          nchains = n.chains)
 ```
 
 
@@ -291,7 +298,7 @@ background-color: black
 
 + Official website [https://r-nimble.org](https://r-nimble.org)
 
-+ User Manual [https://r-nimble.org/html_manual/cha-welcome-nimble.html](https://r-nimble.org/html_manual/cha-welcome-nimble.html)
++ User Manual [https://r-nimble.org/html_manual/cha-welcome-nimble.html](https://r-nimble.org/html_manual/cha-welcome-nimble.html) and [cheatsheet](https://r-nimble.org/cheatsheets/NimbleCheatSheet.pdf).
 
 + Users mailing list [https://groups.google.com/forum/#!forum/nimble-users](https://groups.google.com/forum/#!forum/nimble-users)
 

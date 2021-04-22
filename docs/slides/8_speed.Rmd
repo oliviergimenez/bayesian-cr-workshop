@@ -17,7 +17,6 @@ output:
 ```{r setup, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(comment = "")
-
 library(tidyverse)
 theme_set(theme_light())
 update_geom_defaults("point", list(size = 2)) 
@@ -189,7 +188,25 @@ class: middle, center
 # Why is it useful? 
 
 ---
-## Open the hood, and change samplers
+## Use and debug model in `R`
+
++ Makes your life easier when it comes to debugging
+
++ Inspect variables
+
+```{r}
+hmm.phip$gamma
+```
+
++ Calculate likelihood
+
+```{r}
+hmm.phip$calculate()
+```
+
+
+---
+## Open the hood, and change/modify/write samplers
 
 + Slice samplers instead of Metropolis-Hastings.
 
@@ -197,7 +214,14 @@ class: middle, center
 
 + To know all samplers available in Nimble, type in `help(samplers)`.
 
-+ Use [`compareMCMCs` package](https://github.com/nimble-dev/compareMCMCs) to compare options (including Stan and Jags!).
++ Source code for samplers and distributions is **in R** and can be copied and modified.
+
++ Use [`compareMCMCs` package](https://github.com/nimble-dev/compareMCMCs) to compare options (including Stan and Jags!). 
+
+???
+
+compareMCMCs status: It has been in waiting zone for release as its own package. It is pretty much ready and we need to get it out, maybe by the workshop. It is no longer a function in nimble.
+
 
 ---
 ## Block sampling
@@ -228,17 +252,17 @@ class: middle, center
 
 + Rewrite the model.
 
-    + Vectorize to improve computational efficiency
+    + Vectorize to improve computational efficiency (not covered).
     + Marginalize to remove parameters
 
 --
 
-+ Write new samplers that take advantage of particular model structures (advanced, not covered).
++ Write new samplers that take advantage of particular model structures (not covered).
 
----
-## Vectorization
+--
 
-+ [TO BE DONE] 
++ Using multiple cores with parallelization: see how-to at <https://r-nimble.org/nimbleExamples/parallelizing_NIMBLE.html>
+
 
 ---
 ## Marginalization
@@ -251,16 +275,14 @@ class: middle, center
 
 + The [NimbleEcology](https://cran.r-project.org/web/packages/nimbleEcology/vignettes/Introduction_to_nimbleEcology.html) implements capture-recapture models and HMMs with marginalization. 
 
-+ [TO BE DONE] Re-run a CJS example and a multistate/multievent example.
+---
+
++ [Olivier to add Geese example].
 
 ---
 ## Weighted likelihood w/ unique capture history
 
-+ [TO BE DONE] Try Perry's suggestions.
-
-+ [TO BE DONE] Show Chloe's code for CJS model.
-
-+ [TO BE DONE] Adapt Chloe's code for dHMM and re-run multistate/multievent example we run before.
++ [Olivier to add Geese example]
 
 ---
 ## Further reading

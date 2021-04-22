@@ -870,10 +870,11 @@ MCMCsummary(object = mcmc.phisexp, round = 2)
 
 --
 
-+ Let's use a covariate $\text{sex}$ that takes value 1 if male, and 2 if female
++ Let's use a covariate $\text{sex}$ that contains 1s and 2s, indicating the sex of each individual: 1 if male, and 2 if female
 
 --
 
+.tiny-font[
 ```{r eval = FALSE}
 ...
 for (i in 1:N){
@@ -887,6 +888,9 @@ beta[1] ~ dunif(0,1) # male survival #<<
 beta[2] ~ dunif(0,1) # female survival #<<
 ...
 ```
+]
+
++ E.g. for individual $i = 2$, `beta[sex[i]]` gives `beta[sex[2]]` which will be `beta[1]` or `beta[2]` depending on whether sex[2] is 1 or 2.
 
 ---
 class: middle
@@ -1262,6 +1266,7 @@ df %>%
     + These assumptions should be valid, whatever inferential framework
     + Use goodness-of-fit tests <span>&#8212;</span> Pradel et al. (2005)
     + `R` implementation with [package `R2ucare`](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13014)
+    + Posterior predictive checks can also be used (not covered; [Gelman et al. 2020](https://arxiv.org/pdf/2011.01808.pdf))
 
 ---
 ### Parameter-redundancy issue

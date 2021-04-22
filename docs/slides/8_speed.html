@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # Skip your coffee break: Speed up MCMC convergence
 ### The team
-### last updated: 2021-04-18
+### last updated: 2021-04-22
 
 ---
 
@@ -116,8 +116,8 @@ MCMCsummary(object = mcmc.phip, round = 2)
 
 ```
     mean   sd 2.5%  50% 97.5% Rhat n.eff
-p   0.90 0.03 0.84 0.90  0.95 1.00   258
-phi 0.56 0.02 0.51 0.56  0.61 1.01   543
+p   0.90 0.03 0.84 0.90  0.95 1.02   205
+phi 0.56 0.03 0.51 0.56  0.61 1.04   512
 ```
 ]
 
@@ -238,7 +238,7 @@ summary(samples[,"phi"])
 
 ```
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.4921  0.5457  0.5692  0.5768  0.5917  0.8356 
+ 0.5033  0.5409  0.5667  0.6116  0.5909  0.9534 
 ```
 
 ```r
@@ -247,7 +247,7 @@ summary(samples[,"p"])
 
 ```
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.5351  0.8532  0.8861  0.8730  0.9146  0.9609 
+ 0.1022  0.8460  0.8840  0.8033  0.9112  0.9493 
 ```
 ]
 
@@ -257,7 +257,37 @@ class: middle, center
 # Why is it useful? 
 
 ---
-## Open the hood, and change samplers
+## Use and debug model in `R`
+
++ Makes your life easier when it comes to debugging
+
++ Inspect variables
+
+
+```r
+hmm.phip$gamma
+```
+
+```
+          [,1]      [,2]
+[1,] 0.2858073 0.7141927
+[2,] 0.0000000 1.0000000
+```
+
++ Calculate likelihood
+
+
+```r
+hmm.phip$calculate()
+```
+
+```
+[1] -1642.462
+```
+
+
+---
+## Open the hood, and change/modify/write samplers
 
 + Slice samplers instead of Metropolis-Hastings.
 
@@ -265,7 +295,14 @@ class: middle, center
 
 + To know all samplers available in Nimble, type in `help(samplers)`.
 
-+ Use [`compareMCMCs` package](https://github.com/nimble-dev/compareMCMCs) to compare options (including Stan and Jags!).
++ Source code for samplers and distributions is **in R** and can be copied and modified.
+
++ Use [`compareMCMCs` package](https://github.com/nimble-dev/compareMCMCs) to compare options (including Stan and Jags!). 
+
+???
+
+compareMCMCs status: It has been in waiting zone for release as its own package. It is pretty much ready and we need to get it out, maybe by the workshop. It is no longer a function in nimble.
+
 
 ---
 ## Block sampling
@@ -296,17 +333,17 @@ class: middle, center
 
 + Rewrite the model.
 
-    + Vectorize to improve computational efficiency
+    + Vectorize to improve computational efficiency (not covered).
     + Marginalize to remove parameters
 
 --
 
-+ Write new samplers that take advantage of particular model structures (advanced, not covered).
++ Write new samplers that take advantage of particular model structures (not covered).
 
----
-## Vectorization
+--
 
-+ [TO BE DONE] 
++ Using multiple cores with parallelization: see how-to at &lt;https://r-nimble.org/nimbleExamples/parallelizing_NIMBLE.html&gt;
+
 
 ---
 ## Marginalization
@@ -319,16 +356,14 @@ class: middle, center
 
 + The [NimbleEcology](https://cran.r-project.org/web/packages/nimbleEcology/vignettes/Introduction_to_nimbleEcology.html) implements capture-recapture models and HMMs with marginalization. 
 
-+ [TO BE DONE] Re-run a CJS example and a multistate/multievent example.
+---
+
++ [Olivier to add Geese example].
 
 ---
 ## Weighted likelihood w/ unique capture history
 
-+ [TO BE DONE] Try Perry's suggestions.
-
-+ [TO BE DONE] Show Chloe's code for CJS model.
-
-+ [TO BE DONE] Adapt Chloe's code for dHMM and re-run multistate/multievent example we run before.
++ [Olivier to add Geese example]
 
 ---
 ## Further reading

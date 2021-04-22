@@ -16,7 +16,7 @@ class: center, middle, title-slide
 
 # Dead or alive: Survival estimation
 ### The team
-### last updated: 2021-04-18
+### last updated: 2021-04-22
 
 ---
 
@@ -7327,10 +7327,11 @@ phi_male    0.57 0.03  0.50  0.57  0.64 1.01   237
 
 --
 
-+ Let's use a covariate `\(\text{sex}\)` that takes value 1 if male, and 2 if female
++ Let's use a covariate `\(\text{sex}\)` that contains 1s and 2s, indicating the sex of each individual: 1 if male, and 2 if female
 
 --
 
+.tiny-font[
 
 ```r
 ...
@@ -7345,6 +7346,9 @@ for (i in 1:N){
 *beta[2] ~ dunif(0,1) # female survival
 ...
 ```
+]
+
++ E.g. for individual `\(i = 2\)`, `beta[sex[i]]` gives `beta[sex[2]]` which will be `beta[1]` or `beta[2]` depending on whether sex[2] is 1 or 2.
 
 ---
 class: middle
@@ -7638,6 +7642,7 @@ Reasonable prior `\(\text{logit}(\phi) = \beta \sim N(0, 1.5^2)\)`
     + These assumptions should be valid, whatever inferential framework
     + Use goodness-of-fit tests &lt;span&gt;&amp;#8212;&lt;/span&gt; Pradel et al. (2005)
     + `R` implementation with [package `R2ucare`](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13014)
+    + Posterior predictive checks can also be used (not covered; [Gelman et al. 2020](https://arxiv.org/pdf/2011.01808.pdf))
 
 ---
 ### Parameter-redundancy issue
