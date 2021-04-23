@@ -39,7 +39,7 @@ navbar:
         - text: "Class 3 live demo"
           href: worksheets/2_demo.html
         - text: "Class 3 live demo - R source"
-          href: worksheets/2_demo.Rmd
+          href: worksheets/2_demo.R
         - text: "Class 4 live demo"
           href: worksheets/3_demo.html
         - text: "Class 4 live demo - R source"
