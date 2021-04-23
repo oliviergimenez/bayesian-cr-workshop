@@ -1,5 +1,5 @@
 ---
-title: "Class 2 live demo"
+title: "Class 2 live demo: Crash course on Bayesian statistics and MCMC algorithms"
 author: "The team"
 date: "last updated: `r Sys.Date()`"
 output: html_document
@@ -8,7 +8,7 @@ output: html_document
 
 ```{r setup, include=FALSE, echo=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(comment = "")
+knitr::opts_chunk$set(comment = "", message = FALSE, warning = FALSE)
 library(tidyverse)
 theme_set(theme_light(base_size = 14))
 update_geom_defaults("point", list(size = 2)) 
@@ -16,16 +16,29 @@ library(here)
 library(nimble)
 ```
 
+## Introduction
+
+In this demo, we show how to implement the Bayes theorem by brute force with numerical integration, then we use a Metropolis algorithm. We use the survival example with $y = 19$ alive individuals out of $n = 57$ released. A binomial likelihood is assumed, with a beta prior on survival. 
+
+Load the packages we will need. 
+```{r}
+library(tidyverse)
+```
+
+The data.
+```{r}
+y <- 19 # nb of success
+n <- 57 # nb of attempts
+```
 
 ## Brute force via numerical integration
 
+First we defined the prior. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-y <- 19 # nb of success
-n <- 57 # nb of attempts
-a <- 1
-b <- 1
-p <- seq(0,1,.002)
-prior <- dbeta(p,a,b)
+a <- 1 # param of the prior
+b <- 1 # param of the prior
+p <- seq(0,1,.002) # grid
+prior <- dbeta(p,a,b) # eval beta prior
 dfprior <- data.frame(p = p, prior = prior) 
 dfprior %>%
   ggplot() + 
@@ -34,9 +47,10 @@ dfprior %>%
             color = wesanderson::wes_palettes$Royal1[1])
 ```
 
+Now we form the numerator and denominator of the Bayes formula. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-numerator <- function(p) dbinom(y,n,p) * dbeta(p,a,b)
-denominator <- integrate(numerator,0,1)$value
+numerator <- function(p) dbinom(y,n,p) * dbeta(p,a,b) # likelihood x prior
+denominator <- integrate(numerator,0,1)$value # denominator
 numerical_posterior <- data.frame(p = p, posterior = numerator(p)/denominator) 
 numerical_posterior %>%
   ggplot() + 
@@ -46,8 +60,9 @@ numerical_posterior %>%
             alpha = 0.5)
 ```
 
+Now we compare the posterior distribution we obtained by numerical integration to the explicit distribution we get through conjugacy (binomial likelihood and beta prior gives beta posterior). 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-explicit_posterior <- dbeta(p, y + a, n - y + b)
+explicit_posterior <- dbeta(p, y + a, n - y + b) # beta posterior
 dfexpposterior <- data.frame(p = p, explicit_posterior = explicit_posterior)
 ggplot() + 
   geom_line(data = numerical_posterior, 
@@ -62,7 +77,7 @@ ggplot() +
             linetype = "dashed")
 ```
 
-
+Last, we put everything on the same plot. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 ggplot() + 
   geom_line(data = numerical_posterior, 
@@ -84,28 +99,40 @@ ggplot() +
 
 ## Implement the Metropolis algorithm
 
+In this section, we implement the Metropolis algorithm. 
+
+First the data. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # survival data, 19 "success" out of 57 "attempts"
 survived <- 19
 released <- 57
+```
 
+Then we define the log-likelihood function, which is binomial. Note that we use the log. 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # log-likelihood function
 loglikelihood <- function(x, p){
   dbinom(x = x, size = released, prob = p, log = TRUE)
 }
+```
 
+We then define the prior, a uniform distribution between 0 and 1, or a beta distribution with parameters 1 and 1.  
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # prior density
 logprior <- function(p){
   dunif(x = p, min = 0, max = 1, log = TRUE)
 }
+```
 
+Eventually, we form the posterior density distribution, on the log scale. Note that we commented out the denominator because we won't need it in the Metropolis algorithm (it cancels out when we form the acceptance ratio. 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # posterior density function (log scale)
 posterior <- function(x, p){
   loglikelihood(x, p) + logprior(p) # - log(Pr(data))
 }
 ```
 
-
+Now we need to propose a candidate value for survival at each iteration of the algorithm. To do so, we work on the logit scale, and use a normal distribution to jump away from the current value. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # propose candidate value
 move <- function(x, away = .2){ 
@@ -114,18 +141,24 @@ move <- function(x, away = .2){
   candidate <- plogis(logit_candidate)
   return(candidate)
 }
+```
 
+We pick 100 iterations, pre-allocate some memory to store the results and set the seed for reproducibility.
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # set up the scene
 steps <- 100
 theta.post <- rep(NA, steps)
 set.seed(1234)
+```
 
+To start the algorithm, we also need an initial value for survival. It's going to be 0.5 here. This is our first value stored. When running several chains, pick different initial values. 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # pick starting value (step 1)
 inits <- 0.5
 theta.post[1] <- inits
 ```
 
-
+Now we run the Metropolis algorithm. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 for (t in 2:steps){ # repeat steps 2-4 (step 5)
   
@@ -133,9 +166,11 @@ for (t in 2:steps){ # repeat steps 2-4 (step 5)
   theta_star <- move(theta.post[t-1])
   
   # calculate ratio R (step 3)
-  pstar <- posterior(survived, p = theta_star)  
+  pstar <- posterior(survived, p = theta_star) 
   pprev <- posterior(survived, p = theta.post[t-1])
-  logR <- pstar - pprev
+  logR <- pstar - pprev # here we see that the denominator log(Pr(data)) cancels out
+                        # logR = loglikelihood(survived, theta_star) + logprior(theta_star) - log(Pr(data)) -          
+                        #        (loglikelihood(survived, theta.post[t-1]) + logprior(theta.post[t-1]) - log(Pr(data)))
   R <- exp(logR)
   
   # decide to accept candidate value or to keep current value (step 4)
@@ -144,12 +179,13 @@ for (t in 2:steps){ # repeat steps 2-4 (step 5)
 }
 ```
 
-
+Let's have a look to the values we generated from the posterior distribution. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 head(theta.post)
 tail(theta.post)
 ```
 
+And now, the trace of the chain.
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 df <- data.frame(x = 1:steps, y = theta.post)
 df %>%
@@ -159,6 +195,7 @@ df %>%
   ylim(0.1, 0.6)
 ```
 
+Let's run another chain, now with initial value 0.2 for survival, and visualise the trace of the two chains.
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # pick starting value (step 1)
 inits <- 0.2
@@ -187,6 +224,8 @@ df2 <- data.frame(x = 1:steps, y = theta.post2)
   ylim(0.1, 0.6)
 ```
 
+
+Last, we re-run these two chains with more iterations, say 5000. We also add the posterior mean in yellow, and the maximum likelihood estimate in red. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 # set up the scene
 steps <- 5000
@@ -227,177 +266,5 @@ df %>%
              size = 1.2)
 ```
 
-## Mixing and autocorrelation
 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-# from https://bookdown.org/content/3686/markov-chain-monte-carlo.html
-# specify the data, to be used in the likelihood function.
-my_data <- c(rep(0, 38), rep(1, 19))
-
-# define the Bernoulli likelihood function, p(D|theta).
-# the argument theta could be a vector, not just a scalar
-likelihood <- function(theta, data) {
-  z <- sum(data)
-  n <- length(data)
-  p_data_given_theta <- theta^z * (1 - theta)^(n - z)
-  # the theta values passed into this function are generated at random,
-  # and therefore might be inadvertently greater than 1 or less than 0.
-  # the likelihood for theta > 1 or for theta < 0 is zero
-  p_data_given_theta[theta > 1 | theta < 0] <- 0
-  return(p_data_given_theta)
-}
-
-# define the prior density function. 
-prior_d <- function(theta) {
-  p_theta <- dbeta(theta, 1, 1)
-  # the theta values passed into this function are generated at random,
-  # and therefore might be inadvertently greater than 1 or less than 0.
-  # the prior for theta > 1 or for theta < 0 is zero
-  p_theta[theta > 1 | theta < 0] = 0
-  return(p_theta)
-}
-
-# define the relative probability of the target distribution, 
-# as a function of vector theta. for our application, this
-# target distribution is the unnormalized posterior distribution
-target_rel_prob <- function(theta, data) {
-  target_rel_prob <- likelihood(theta, data) * prior_d(theta)
-  return(target_rel_prob)
-}
-
-# specify the length of the trajectory, i.e., the number of jumps to try:
-traj_length <- 10000 # this is just an arbitrary large number
-
-# initialize the vector that will store the results
-trajectory <- rep(0, traj_length)
-
-# specify where to start the trajectory:
-trajectory[1] <- 0.01 # another arbitrary value
-
-# specify the burn-in period
-burn_in <- ceiling(0.0 * traj_length) # arbitrary number, less than `traj_length`
-
-# initialize accepted, rejected counters, just to monitor performance:
-n_accepted <- 0
-n_rejected <- 0
-
-my_metropolis <- function(proposal_sd) {
-  
-  # now generate the random walk. the 't' index is time or trial in the walk.
-  # specify seed to reproduce same random walk
-  set.seed(47405)
-  
-  
-  ## I'm taking this section out and will replace it
-  
-  # # specify standard deviation of proposal distribution
-  # proposal_sd <- c(0.02, 0.2, 2.0)[2]
-  
-  ## end of the section I took out
-  
-  
-  for (t in 1:(traj_length - 1)) {
-    current_position <- trajectory[t]
-    # use the proposal distribution to generate a proposed jump
-    proposed_jump <- rnorm(1, mean = 0, sd = proposal_sd)
-    # compute the probability of accepting the proposed jump
-    prob_accept <- min(1,
-                       target_rel_prob(current_position + proposed_jump, my_data)
-                       / target_rel_prob(current_position, my_data))
-    # generate a random uniform value from the interval [0, 1] to
-    # decide whether or not to accept the proposed jump
-    if (runif(1) < prob_accept) {
-      # accept the proposed jump
-      trajectory[t + 1] <- current_position + proposed_jump
-      # increment the accepted counter, just to monitor performance
-      if (t > burn_in) {n_accepted <- n_accepted + 1}
-    } else {
-      # reject the proposed jump, stay at current position
-      trajectory[t + 1] <- current_position
-      # increment the rejected counter, just to monitor performance
-      if (t > burn_in) {n_rejected <- n_rejected + 1}
-    }
-  }
-  
-  # extract the post-burn_in portion of the trajectory
-  accepted_traj <- trajectory[(burn_in + 1) : length(trajectory)]
-  
-  tibble(accepted_traj = accepted_traj,
-         n_accepted    = n_accepted, 
-         n_rejected    = n_rejected)
-  # end of Metropolis algorithm
-  
-}
-
-d <-
-  tibble(proposal_sd = c(0.02, 0.2, 2.0)) %>% 
-  mutate(accepted_traj = map(proposal_sd, my_metropolis)) %>% 
-  unnest(accepted_traj)
-
-d <-
-  d %>% 
-  mutate(proposal_sd = str_c("Proposal SD = ", proposal_sd),
-         iter        = rep(1:traj_length, times = 3))
-
-trace <- d %>% 
-  ggplot(aes(y = accepted_traj, x = iter)) +
-  geom_path(size = 1/4, color = "steelblue") +
-  geom_point(size = 1/2, alpha = 1/2, color = "steelblue") +
-  scale_y_continuous(expression(theta), breaks = 0:5 * 0.1, limits = c(0.15, 0.5)) +
-  scale_x_continuous("", breaks = seq(traj_length-traj_length*10/100,traj_length,by = 600), limits = c(traj_length-traj_length*10/100, traj_length)) +
-  facet_wrap(~proposal_sd, ncol = 3) +
-  theme_light(base_size = 14)
-library(forecast)
-plot1 <- ggAcf(x = d$accepted_traj[d$proposal_sd=="Proposal SD = 0.02"], main = "") + 
-  theme_light(base_size = 14)
-plot2 <- ggAcf(x = d$accepted_traj[d$proposal_sd=="Proposal SD = 0.2"], main = "") + 
-  theme_light(base_size = 14)
-plot3 <- ggAcf(x = d$accepted_traj[d$proposal_sd=="Proposal SD = 2"], main = "") + 
-  theme_light(base_size = 14)
-library(patchwork)
-trace / (plot1 + plot2 + plot3)
-```
-
-## Burnin
-
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
-# set up the scene
-steps <- 1000
-theta.post <- rep(NA, steps)
-set.seed(1234)
-
-# pick starting value (step 1)
-inits <- 0.99
-theta.post[1] <- inits
-
-for (t in 2:steps){ # repeat steps 2-4 (step 5)
-  
-  # propose candidate value for prob of success (step 2)
-  theta_star <- move(theta.post[t-1], away = 0.1)
-  
-  # calculate ratio R (step 3)
-  pstar <- posterior(survived, p = theta_star)  
-  pprev <- posterior(survived, p = theta.post[t-1])
-  logR <- pstar - pprev
-  R <- exp(logR)
-  
-  # decide to accept candidate value or to keep current value (step 4)
-  accept <- rbinom(1, 1, prob = min(R, 1))
-  theta.post[t] <- ifelse(accept == 1, theta_star, theta.post[t-1])
-}
-
-df <- data.frame(x = 1:steps, y = theta.post)
-df %>%
-  ggplot() +
-  geom_line(aes(x = x, y = y), size = 1.2, color = wesanderson::wes_palettes$Zissou1[1]) + 
-  labs(x = "iterations", y = "values from posterior distribution") + 
-  theme_light(base_size = 14) + 
-  annotate("rect", 
-           xmin = 0, 
-           xmax = 500, 
-           ymin = 0.1, 
-           ymax = 1, 
-           alpha = .3) +
-  scale_y_continuous(expand = c(0,0))
-```
-
+<!-- knitr::purl(here::here("worksheets","1_demo.Rmd"), documentation = 2) -->
