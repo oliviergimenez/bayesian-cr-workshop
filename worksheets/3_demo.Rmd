@@ -251,7 +251,7 @@ Now the data in a list. Note that we add 1 to the data to have 1 for non-detecti
 my.data <- list(y = y + 1)
 ```
 
-Specify initial values. For the latent states, we go for the easy way, and say that all individuals are alive throught the study period. 
+Specify initial values. For the latent states, we go for the easy way, and say that all individuals are alive through the study period. 
 ```{r}
 zinits <- y + 1 # non-detection -> alive
 zinits[zinits == 2] <- 1 # dead -> alive
@@ -266,7 +266,7 @@ parameters.to.save <- c("phi", "p")
 parameters.to.save
 ```
 
-MCMC detaisl. 
+MCMC details. 
 ```{r}
 n.iter <- 5000
 n.burnin <- 1000

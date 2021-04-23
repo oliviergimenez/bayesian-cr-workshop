@@ -32,29 +32,31 @@ navbar:
           href: slides/9_conclusion.html
     - text: "Live demos"
       menu:
-        - text: "Class 2 live demo"
+        - text: "Download all datasets at once"
+          href: worksheets/data.zip
+        - text: "Class 2 live demo: Crash course on Bayesian statistics and MCMC algorithms"
           href: worksheets/1_demo.html
-        - text: "Class 2 live demo - R source"
+        - text: "Class 2 live demo - R script"
           href: worksheets/1_demo.R
-        - text: "Class 3 live demo"
+        - text: "Class 3 live demo: Free the modeler in you: Introduction to Nimble"
           href: worksheets/2_demo.html
-        - text: "Class 3 live demo - R source"
+        - text: "Class 3 live demo - R script"
           href: worksheets/2_demo.R
-        - text: "Class 4 live demo"
+        - text: "Class 4 live demo: What you see is not what you get: Hidden Markov models and capture-recapture data"
           href: worksheets/3_demo.html
-        - text: "Class 4 live demo - R source"
-          href: worksheets/3_demo.Rmd
-        - text: "Class 5 live demo"
+        - text: "Class 4 live demo - R script"
+          href: worksheets/3_demo.R
+        - text: "Class 5 live demo: Dead or alive: Survival estimation"
           href: worksheets/4_demo.html
-        - text: "Class 5 live demo - R source"
-          href: worksheets/4_demo.Rmd
+        - text: "Class 5 live demo - R script"
+          href: worksheets/4_demo.R
         - text: "Class 6 live demo"
           href: worksheets/5_demo.html
-        - text: "Class 6 live demo - R source"
+        - text: "Class 6 live demo - R script"
           href: worksheets/5_demo.Rmd
         - text: "Class 7 live demo"
           href: worksheets/6_demo.html
-        - text: "Class 7 live demo - R source"
+        - text: "Class 7 live demo - R script"
           href: worksheets/6_demo.Rmd
     - icon: fab fa-github
       href: https://github.com/oliviergimenez/bayesian-cr-workshop
