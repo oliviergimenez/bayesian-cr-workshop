@@ -1,12 +1,12 @@
----
-title: "Class 6 live demo: Transition estimation"
-author: "The team"
-date: "last updated: `r Sys.Date()`"
-output: html_document
----
-
-
-```{r setup, include=FALSE, echo=FALSE}
+#' ---
+#' title: "Class 6 live demo: Transition estimation"
+#' author: "The team"
+#' date: "last updated: `r Sys.Date()`"
+#' output: html_document
+#' ---
+#' 
+#' 
+## ----setup, include=FALSE, echo=FALSE--------------------------
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(comment = "", echo = TRUE, warning = FALSE, message = FALSE)
 library(tidyverse)
@@ -14,48 +14,48 @@ theme_set(theme_light(base_size = 14))
 update_geom_defaults("point", list(size = 2)) 
 library(here)
 library(nimble)
-```
 
-## Introduction
-
-In this demo, we illustrate how to fit multistate models to capture-recapture data. We first consider states as sites and estimate movements, then states are breeding states and we study life-history trade-offs. 
-
-```{r}
+#' 
+#' ## Introduction
+#' 
+#' In this demo, we illustrate how to fit multistate models to capture-recapture data. We first consider states as sites and estimate movements, then states are breeding states and we study life-history trade-offs. 
+#' 
+## --------------------------------------------------------------
 library(tidyverse)
 library(nimble)
 library(MCMCvis)
-```
 
-
-## Multiste model with 2 sites
-
-We are going to analyze real capture-recapture data on > 20,000 Canada geese (Branta canadensis) marked and resighted in the east coast of the US in the mid-Atlantic (New York, Pennsylvania, New Jersey), Chesapeake (Delaware, Maryland, Virginia), and Carolinas (North and South Carolina). The data were kindly provided by Jay Hestbeck. We analyse a subset of 500 geese from the original dataset, we'll get back to the whole dataset in the last live demo. 
-
-Read in the data. 
-```{r}
+#' 
+#' 
+#' ## Multiste model with 2 sites
+#' 
+#' We are going to analyze real capture-recapture data on > 20,000 Canada geese (Branta canadensis) marked and resighted in the east coast of the US in the mid-Atlantic (New York, Pennsylvania, New Jersey), Chesapeake (Delaware, Maryland, Virginia), and Carolinas (North and South Carolina). The data were kindly provided by Jay Hestbeck. We analyse a subset of 500 geese from the original dataset, we'll get back to the whole dataset in the last live demo. 
+#' 
+#' Read in the data. 
+## --------------------------------------------------------------
 geese <- read_csv("geese.csv", col_names = TRUE)
 y <- as.matrix(geese)
 head(y)
-```
 
-For simplicity, we start by considering only 2 sites, dropping Carolinas. 
-```{r}
+#' 
+#' For simplicity, we start by considering only 2 sites, dropping Carolinas. 
+## --------------------------------------------------------------
 y2 <- y
 y2[y2==3] <- 0 # act as if there was no detection in site 3 Carolinas
 mask <- apply(y2, 1, sum)
 y2 <- y2[mask!=0,] # remove rows w/ 0s only
 head(y2)
-```
 
-Get occasion of first capture.
-```{r}
+#' 
+#' Get occasion of first capture.
+## --------------------------------------------------------------
 get.first <- function(x) min(which(x != 0))
 first <- apply(y2, 1, get.first)
 first
-```
 
-Write the model. 
-```{r}
+#' 
+#' Write the model. 
+## --------------------------------------------------------------
 multisite <- nimbleCode({
   
   # -------------------------------------------------
@@ -125,22 +125,22 @@ multisite <- nimbleCode({
     }
   }
 })
-```
 
-Data in a list. Remember to add 1. 
-```{r}
+#' 
+#' Data in a list. Remember to add 1. 
+## --------------------------------------------------------------
 my.data <- list(y = y2 + 1)
-```
 
-Constants in a list. 
-```{r}
+#' 
+#' Constants in a list. 
+## --------------------------------------------------------------
 my.constants <- list(first = first, 
                      K = ncol(y2), 
                      N = nrow(y2))
-```
 
-Initial values. 
-```{r}
+#' 
+#' Initial values. 
+## --------------------------------------------------------------
 zinits <- y2 # say states are observations, detections in A or B are taken as alive in same sites 
 zinits[zinits==0] <- sample(c(1,2), sum(zinits==0), replace = TRUE) # non-detections become alive in site A or B
 initial.values <- function(){list(phiA = runif(1, 0, 1), 
@@ -151,23 +151,23 @@ initial.values <- function(){list(phiA = runif(1, 0, 1),
                                   pB = runif(1, 0, 1), 
                                   piA = runif(1, 0, 1),
                                   z = zinits)}
-```
 
-Parameters to monitor.
-```{r}
+#' 
+#' Parameters to monitor.
+## --------------------------------------------------------------
 parameters.to.save <- c("phiA", "phiB","psiAB", "psiBA", "pA", "pB", "piA")
 parameters.to.save
-```
 
-MCMC settings.
-```{r}
+#' 
+#' MCMC settings.
+## --------------------------------------------------------------
 n.iter <- 10000
 n.burnin <- 5000
 n.chains <- 2
-```
 
-Run nimble.
-```{r}
+#' 
+#' Run nimble.
+## --------------------------------------------------------------
 mcmc.multisite <- nimbleMCMC(code = multisite, 
                              constants = my.constants,
                              data = my.data,              
@@ -176,20 +176,20 @@ mcmc.multisite <- nimbleMCMC(code = multisite,
                              niter = n.iter,
                              nburnin = n.burnin, 
                              nchains = n.chains)
-```
 
-Let's inspect the results. First the numerical summaries. 
-```{r}
+#' 
+#' Let's inspect the results. First the numerical summaries. 
+## --------------------------------------------------------------
 MCMCsummary(mcmc.multisite, round = 2)
-```
 
-Second, a caterpillar plot of the parameter estimates. 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+#' 
+#' Second, a caterpillar plot of the parameter estimates. 
+## ---- echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"----
 MCMCplot(mcmc.multisite)
-```
 
-Actually, the initial state of a goose is known exactly. It is alive at site of initial capture. Therefore, we don't need to try and estimate the probability of initial states. Let's rewrite the model. 
-```{r}
+#' 
+#' Actually, the initial state of a goose is known exactly. It is alive at site of initial capture. Therefore, we don't need to try and estimate the probability of initial states. Let's rewrite the model. 
+## --------------------------------------------------------------
 multisite <- nimbleCode({
   
   # -------------------------------------------------
@@ -253,10 +253,10 @@ multisite <- nimbleCode({
     }
   }
 })
-```
 
-Initial values without $p_A$. 
-```{r}
+#' 
+#' Initial values without $p_A$. 
+## --------------------------------------------------------------
 zinits <- y2
 zinits[zinits==0] <- sample(c(1,2), sum(zinits==0), replace = TRUE)
 initial.values <- function(){list(phiA = runif(1, 0, 1), 
@@ -266,16 +266,16 @@ initial.values <- function(){list(phiA = runif(1, 0, 1),
                                   pA = runif(1, 0, 1), 
                                   pB = runif(1, 0, 1), 
                                   z = zinits)}
-```
 
-Parameters to monitor. 
-```{r}
+#' 
+#' Parameters to monitor. 
+## --------------------------------------------------------------
 parameters.to.save <- c("phiA", "phiB","psiAB", "psiBA", "pA", "pB")
 parameters.to.save
-```
 
-Run nimble.
-```{r}
+#' 
+#' Run nimble.
+## --------------------------------------------------------------
 mcmc.multisite <- nimbleMCMC(code = multisite, 
                              constants = my.constants,
                              data = my.data,              
@@ -284,27 +284,27 @@ mcmc.multisite <- nimbleMCMC(code = multisite,
                              niter = n.iter,
                              nburnin = n.burnin, 
                              nchains = n.chains)
-```
 
-Have a look to the results. Note that convergence is better. 
-```{r}
+#' 
+#' Have a look to the results. Note that convergence is better. 
+## --------------------------------------------------------------
 MCMCsummary(mcmc.multisite, round = 2)
-```
 
-## Multisite model with 3 sites
-
-Now we proceed with the analysis of the 3 sites. Two methods exist to force the movement probabilities from a site to sum to 1 and to be between 0 and 1 at the same time. 
-
-### Multinomial logit link
-
-Get the date of first capture. 
-```{r}
+#' 
+#' ## Multisite model with 3 sites
+#' 
+#' Now we proceed with the analysis of the 3 sites. Two methods exist to force the movement probabilities from a site to sum to 1 and to be between 0 and 1 at the same time. 
+#' 
+#' ### Multinomial logit link
+#' 
+#' Get the date of first capture. 
+## --------------------------------------------------------------
 get.first <- function(x) min(which(x != 0))
 first <- apply(y, 1, get.first)
-```
 
-Write the model. 
-```{r}
+#' 
+#' Write the model. 
+## --------------------------------------------------------------
 multisite <- nimbleCode({
   
   # -------------------------------------------------
@@ -410,22 +410,22 @@ multisite <- nimbleCode({
     }
   }
 })
-```
 
-List of data. 
-```{r}
+#' 
+#' List of data. 
+## --------------------------------------------------------------
 my.data <- list(y = y + 1)
-```
 
-List of constants.
-```{r}
+#' 
+#' List of constants.
+## --------------------------------------------------------------
 my.constants <- list(first = first, 
                      K = ncol(y), 
                      N = nrow(y))
-```
 
-Initial values. 
-```{r}
+#' 
+#' Initial values. 
+## --------------------------------------------------------------
 zinits <- y
 zinits[zinits==0] <- sample(c(1,2,3), sum(zinits==0), replace = TRUE)
 initial.values <- function(){list(phiA = runif(1, 0, 1), 
@@ -438,16 +438,16 @@ initial.values <- function(){list(phiA = runif(1, 0, 1),
                                   pB = runif(1, 0, 1), 
                                   pC = runif(1, 0, 1),
                                   z = zinits)}
-```
 
-Parameters to minitor.
-```{r}
+#' 
+#' Parameters to minitor.
+## --------------------------------------------------------------
 parameters.to.save <- c("phiA", "phiB", "phiC", "psiA", "psiB", "psiC","pA", "pB", "pC")
 parameters.to.save
-```
 
-Run nimble. 
-```{r}
+#' 
+#' Run nimble. 
+## --------------------------------------------------------------
 mcmc.multisite <- nimbleMCMC(code = multisite, 
                              constants = my.constants,
                              data = my.data,              
@@ -456,23 +456,23 @@ mcmc.multisite <- nimbleMCMC(code = multisite,
                              niter = n.iter,
                              nburnin = n.burnin, 
                              nchains = n.chains)
-```
 
-Inspect the results. 
-```{r}
+#' 
+#' Inspect the results. 
+## --------------------------------------------------------------
 MCMCsummary(mcmc.multisite, round = 2)
-```
 
-Caterpillar plot. 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+#' 
+#' Caterpillar plot. 
+## ---- echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"----
 MCMCplot(mcmc.multisite)
-```
 
-
-### Dirichlet prior
-
-Another method is to use Dirichlet priors for the movement parameters. Let's write the model. 
-```{r}
+#' 
+#' 
+#' ### Dirichlet prior
+#' 
+#' Another method is to use Dirichlet priors for the movement parameters. Let's write the model. 
+## --------------------------------------------------------------
 multisite <- nimbleCode({
   
   # -------------------------------------------------
@@ -565,23 +565,23 @@ multisite <- nimbleCode({
     }
   }
 })
-```
 
-Data in a list. 
-```{r}
+#' 
+#' Data in a list. 
+## --------------------------------------------------------------
 my.data <- list(y = y + 1)
-```
 
-Constants in a list. 
-```{r}
+#' 
+#' Constants in a list. 
+## --------------------------------------------------------------
 my.constants <- list(first = first, 
                      K = ncol(y), 
                      N = nrow(y),
                      alpha = c(1, 1, 1))
-```
 
-Initial values. 
-```{r}
+#' 
+#' Initial values. 
+## --------------------------------------------------------------
 zinits <- y
 zinits[zinits==0] <- sample(c(1,2,3), sum(zinits==0), replace = TRUE)
 initial.values <- function(){list(phiA = runif(1, 0, 1), 
@@ -594,10 +594,10 @@ initial.values <- function(){list(phiA = runif(1, 0, 1),
                                   pB = runif(1, 0, 1), 
                                   pC = runif(1, 0, 1),
                                   z = zinits)}
-```
 
-Run nimble.
-```{r}
+#' 
+#' Run nimble.
+## --------------------------------------------------------------
 mcmc.multisite <- nimbleMCMC(code = multisite, 
                              constants = my.constants,
                              data = my.data,              
@@ -606,30 +606,30 @@ mcmc.multisite <- nimbleMCMC(code = multisite,
                              niter = n.iter,
                              nburnin = n.burnin, 
                              nchains = n.chains)
-```
 
-Inspect results. Compare to the estimates we obtained with the multinomial logit link method. 
-```{r}
+#' 
+#' Inspect results. Compare to the estimates we obtained with the multinomial logit link method. 
+## --------------------------------------------------------------
 MCMCsummary(mcmc.multisite, round = 2)
-```
 
-Caterpillar plots. 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+#' 
+#' Caterpillar plots. 
+## ---- echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"----
 MCMCplot(mcmc.multisite)
-```
 
-
-## Multistate model
-
-Now we illustrate how one can replace site by state and address another question in evolution ecology about life-history tradeoffs. We use data on Soory shearwaters that were kindly provided by David Fletcher. Birds are seen as breeders or non-breeders. 
-```{r}
+#' 
+#' 
+#' ## Multistate model
+#' 
+#' Now we illustrate how one can replace site by state and address another question in evolution ecology about life-history tradeoffs. We use data on Soory shearwaters that were kindly provided by David Fletcher. Birds are seen as breeders or non-breeders. 
+## --------------------------------------------------------------
 titis <- read_csv2("titis.csv", col_names = FALSE)
 y <-  as.matrix(titis)
 head(y)
-```
 
-The code is exactly the same as that for the model above with two sites. 
-```{r}
+#' 
+#' The code is exactly the same as that for the model above with two sites. 
+## --------------------------------------------------------------
 multistate <- nimbleCode({
   
   # -------------------------------------------------
@@ -693,28 +693,28 @@ multistate <- nimbleCode({
     }
   }
 })
-```
 
-Data in a list. 
-```{r}
+#' 
+#' Data in a list. 
+## --------------------------------------------------------------
 my.data <- list(y = y + 1)
-```
 
-Get data of first capture. 
-```{r}
+#' 
+#' Get data of first capture. 
+## --------------------------------------------------------------
 get.first <- function(x) min(which(x != 0))
 first <- apply(y, 1, get.first)
-```
 
-Constants in a list. 
-```{r}
+#' 
+#' Constants in a list. 
+## --------------------------------------------------------------
 my.constants <- list(first = first, 
                      K = ncol(y), 
                      N = nrow(y))
-```
 
-Initial values. Same as before, we initialize the latent states with the detections and non-detections. Then non-detections are replaced by a 1 or a 2 for breeder on non-breeder. 
-```{r}
+#' 
+#' Initial values. Same as before, we initialize the latent states with the detections and non-detections. Then non-detections are replaced by a 1 or a 2 for breeder on non-breeder. 
+## --------------------------------------------------------------
 zinits <- y
 zinits[zinits == 0] <- sample(c(1,2), sum(zinits == 0), replace = TRUE)
 initial.values <- function(){list(phiNB = runif(1, 0, 1), 
@@ -724,23 +724,23 @@ initial.values <- function(){list(phiNB = runif(1, 0, 1),
                                   pNB = runif(1, 0, 1), 
                                   pB = runif(1, 0, 1), 
                                   z = zinits)}
-```
 
-Parameters to be monitored. 
-```{r}
+#' 
+#' Parameters to be monitored. 
+## --------------------------------------------------------------
 parameters.to.save <- c("phiNB", "phiB","psiNBB", "psiBNB", "pNB", "pB")
 parameters.to.save
-```
 
-MCMC details. 
-```{r}
+#' 
+#' MCMC details. 
+## --------------------------------------------------------------
 n.iter <- 5000
 n.burnin <- 2500
 n.chains <- 2
-```
 
-Run nimble.
-```{r}
+#' 
+#' Run nimble.
+## --------------------------------------------------------------
 mcmc.multistate <- nimbleMCMC(code = multistate, 
                              constants = my.constants,
                              data = my.data,              
@@ -749,36 +749,36 @@ mcmc.multistate <- nimbleMCMC(code = multistate,
                              niter = n.iter,
                              nburnin = n.burnin, 
                              nchains = n.chains)
-```
 
-Let's inspect the results. 
-```{r}
+#' 
+#' Let's inspect the results. 
+## --------------------------------------------------------------
 MCMCsummary(mcmc.multistate, round = 2)
-```
 
-Caterpillar plot of the parameter estimates. 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+#' 
+#' Caterpillar plot of the parameter estimates. 
+## ---- echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"----
 MCMCplot(mcmc.multistate)
-```
 
-Non-breeder individuals seem to have a survival higher than breeder individuals, suggesting a trade-off between reproduction and survival. Let's compare graphically the survival of breeder and non-breeder individuals. First we gather the values generated for $\phi_B$ and $\phi_{NB}$ for the two chains. 
-```{r}
+#' 
+#' Non-breeder individuals seem to have a survival higher than breeder individuals, suggesting a trade-off between reproduction and survival. Let's compare graphically the survival of breeder and non-breeder individuals. First we gather the values generated for $\phi_B$ and $\phi_{NB}$ for the two chains. 
+## --------------------------------------------------------------
 phiB <- c(mcmc.multistate$chain1[,"phiB"], mcmc.multistate$chain2[,"phiB"])
 phiNB <- c(mcmc.multistate$chain1[,"phiNB"], mcmc.multistate$chain2[,"phiNB"])
 df <- data.frame(param = c(rep("phiB", length(phiB)), rep("phiNB", length(phiB))), 
                  value = c(phiB, phiNB))
 head(df)
-```
 
-Then, we plot a histogram of the two posterior distributions. 
-```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
+#' 
+#' Then, we plot a histogram of the two posterior distributions. 
+## ---- echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"----
 df %>%
   ggplot() + 
   aes(x = value, group = param, fill = param) + 
   geom_histogram(color = "white") + 
   labs(fill = "", x = "survival")
-```
 
-To formally test this difference, one could fit a model with no state effect on survival and compare the two models with WAIC. 
-
-<!-- knitr::purl(here::here("worksheets","5_demo.Rmd"), documentation = 2) -->
+#' 
+#' To formally test this difference, one could fit a model with no state effect on survival and compare the two models with WAIC. 
+#' 
+#' <!-- knitr::purl(here::here("worksheets","5_demo.Rmd"), documentation = 2) -->

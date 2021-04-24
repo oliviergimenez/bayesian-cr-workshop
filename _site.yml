@@ -53,7 +53,7 @@ navbar:
         - text: "Class 6 live demo"
           href: worksheets/5_demo.html
         - text: "Class 6 live demo - R script"
-          href: worksheets/5_demo.Rmd
+          href: worksheets/5_demo.R
         - text: "Class 7 live demo"
           href: worksheets/6_demo.html
         - text: "Class 7 live demo - R script"
