@@ -27,7 +27,7 @@ library(MCMCvis)
 ```
 
 
-## Multiste model with 2 sites
+## Multisite model with 2 sites
 
 We are going to analyze real capture-recapture data on > 20,000 Canada geese (Branta canadensis) marked and resighted in the east coast of the US in the mid-Atlantic (New York, Pennsylvania, New Jersey), Chesapeake (Delaware, Maryland, Virginia), and Carolinas (North and South Carolina). The data were kindly provided by Jay Hestbeck. We analyse a subset of 500 geese from the original dataset, we'll get back to the whole dataset in the last live demo. 
 

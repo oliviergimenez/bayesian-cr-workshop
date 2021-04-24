@@ -1,5 +1,5 @@
 ---
-title: "Class 7 live demo"
+title: "Class 7 live demo: Uncertainty in state assignment"
 author: "The team"
 date: "last updated: `r Sys.Date()`"
 output: html_document
@@ -16,15 +16,26 @@ library(here)
 library(nimble)
 ```
 
-## Breeding state uncertainty
+## Introduction
+
+In this demo, we illustrate how to fit models with several states in which the assignment of individuals to states is difficult to make with certainty. We start by breeding states then continue with disease states and end by illustrating how to incorporate individual heterogeneity in capture-recapture models. 
 
 ```{r}
-titis <- read_csv2(here::here("slides", "dat", "titis_with_uncertainty.csv"), col_names = FALSE)
-y <- titis %>%
-  as.matrix()
+library(tidyverse)
+library(nimble)
+library(MCMCvis)
 ```
 
+## Breeding state uncertainty
 
+Let's get back to the analysis of the Sooty shearwater data. For some individuals, we have some uncertainty in assigning individuals in the breeding or non-breeding state (code 3 in the data). 
+```{r}
+titis <- read_csv2("titis_with_uncertainty.csv", col_names = FALSE)
+y <- as.matrix(titis)
+head(y)
+```
+
+Let's write down the model code. 
 ```{r}
 multievent <- nimbleCode({
   
@@ -40,11 +51,11 @@ multievent <- nimbleCode({
   # betaNB prob to ascertain the breeding status of an individual encountered as non-breeder
   # betaB prob to ascertain the breeding status of an individual encountered as breeder
   # -------------------------------------------------
-  # States (S):
+  # States (z):
   # 1 alive B
   # 2 alive NB
   # 3 dead
-  # Observations (O):  
+  # Observations (y):  
   # 1 = non-detected
   # 2 = seen and ascertained as breeder
   # 3 = seen and ascertained as non-breeder
@@ -63,9 +74,9 @@ multievent <- nimbleCode({
   betaB ~ dunif(0, 1)
   
   # vector of initial stats probs
-  delta[1] <- piB # prob. of being in initial state B
-  delta[2] <- 1 - piB # prob. of being in initial state NB
-  delta[3] <- 0 # prob. of being in initial state dead
+  delta[1] <- piB      # prob. of being in initial state B
+  delta[2] <- 1 - piB  # prob. of being in initial state NB
+  delta[3] <- 0        # prob. of being in initial state dead
   
   # probabilities of state z(t+1) given z(t)
   gamma[1,1] <- phiB * (1 - psiBNB)
@@ -105,40 +116,40 @@ multievent <- nimbleCode({
   omega.init[3,3] <- 0                  # Pr(dead t = 1 -> detected NB t = 1)
   omega.init[3,4] <- 0                  # Pr(dead t = 1 -> detected U t = 1)
   
-  # Likelihood 
+  # likelihood 
   for (i in 1:N){
-    # Define latent state at first capture
+    # latent state at first capture
     z[i,first[i]] ~ dcat(delta[1:3])
     y[i,first[i]] ~ dcat(omega.init[z[i,first[i]],1:4])
     for (t in (first[i]+1):K){
-      # State process: draw S(t) given S(t-1)
+      # z(t) given z(t-1)
       z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
-      # Observation process: draw O(t) given S(t)
+      # y(t) given z(t)
       y[i,t] ~ dcat(omega[z[i,t],1:4])
     }
   }
 })
 ```
 
-
+Get the data of first capture. 
 ```{r}
 get.first <- function(x) min(which(x != 0))
 first <- apply(y, 1, get.first)
 ```
 
-
+Constants in a list. 
 ```{r}
 my.constants <- list(first = first, 
                      K = ncol(y), 
                      N = nrow(y))
 ```
 
-
+Data in a list. 
 ```{r}
 my.data <- list(y = y + 1)
 ```
 
-
+Initial values. 
 ```{r}
 zinit <- y
 zinit[zinit==3] <- sample(c(1,2), sum(zinit==3), replace = TRUE)
@@ -161,7 +172,7 @@ initial.values <- function(){list(phiNB = runif(1, 0, 1),
                                   z = zinit)}
 ```
 
-
+Parameters to be monitored. 
 ```{r}
 parameters.to.save <- c("phiB", 
                         "phiNB", 
@@ -174,14 +185,14 @@ parameters.to.save <- c("phiB",
                         "betaB")
 ```
 
-
+MCMC details. 
 ```{r}
 n.iter <- 5000
 n.burnin <- 2500
 n.chains <- 2
 ```
 
-
+Run nimble. 
 ```{r}
 mcmc.multievent <- nimbleMCMC(code = multievent, 
                               constants = my.constants,
@@ -193,36 +204,37 @@ mcmc.multievent <- nimbleMCMC(code = multievent,
                               nchains = n.chains)
 ```
 
-
+Let's have a look to the results. Breeders were mostly assigned as uncertain, while non-breeders were positively assigned.
 ```{r}
-library(MCMCvis)
 MCMCsummary(mcmc.multievent, round = 2)
 ```
 
-
-```{r}
+Caterpillar plot of the parameter estimates. 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 MCMCplot(mcmc.multievent)
 ```
 
 
 ## Disease state uncertainty
 
+We now turn to the analysis of data from a study of the dynamics of conjunctivitis in the house finch (Carpodacus mexicanus Müller). A challenge in modeling disease dynamics involves the estimation of recovery and infection rates, which can be complicated when disease state is uncertain (seen at distance in the house finch case study). In the data we have 0 for a non-detection, 1 for a detection of a healthy individual, 2 for the detection of a sick individual and 3 for an individual for which we cannot say whether it is sane or ill. 
 ```{r}
-y <- as.matrix(read.table(here::here("slides", "dat", "hofi_2000.txt")))
+y <- as.matrix(read.table("hofi_2000.txt"))
+head(y)
 ```
 
-
+Write the model. The model is similar to the model of the previous section. 
 ```{r}
 hmm.disease <- nimbleCode({
   
   # priors
-  phiH ~ dunif(0, 1) # prior survival healthy
-  phiI ~ dunif(0, 1) # prior survival ill
-  psiIH ~ dunif(0, 1) # prior transition ill -> healthy
-  psiHI ~ dunif(0, 1) # prior transition healthy -> ill
-  pH ~ dunif(0, 1) # prior detection healthy
-  pI ~ dunif(0, 1) # prior detection ill
-  pi ~ dunif(0, 1) # prob init state healthy
+  phiH ~ dunif(0, 1)   # prior survival healthy
+  phiI ~ dunif(0, 1)   # prior survival ill
+  psiIH ~ dunif(0, 1)  # prior transition ill -> healthy
+  psiHI ~ dunif(0, 1)  # prior transition healthy -> ill
+  pH ~ dunif(0, 1)     # prior detection healthy
+  pI ~ dunif(0, 1)     # prior detection ill
+  pi ~ dunif(0, 1)     # prob init state healthy
   betaH ~ dunif(0,1)
   betaI ~ dunif(0,1)
 
@@ -279,18 +291,22 @@ hmm.disease <- nimbleCode({
 })
 ```
 
-
+Get the date of first capture. 
 ```{r}
 first <- apply(y, 1, function(x) min(which(x !=0)))
+```
+
+Constants in a list. 
+```{r}
 my.constants <- list(N = nrow(y), K = ncol(y), first = first)
 ```
 
-
+Data in a list. 
 ```{r}
 my.data <- list(y = y + 1)
 ```
 
-
+Initial values. 
 ```{r}
 zinit <- y
 zinit[zinit==3] <- sample(c(1,2), sum(zinit==3), replace = TRUE)
@@ -313,7 +329,7 @@ initial.values <- function() list(phiH = runif(1, 0, 1),
                                   z = zinit)
 ```
 
-
+Parameters to be monitored. 
 ```{r}
 parameters.to.save <- c("phiH", 
                         "phiI", 
@@ -326,15 +342,15 @@ parameters.to.save <- c("phiH",
                         "psiIH")
 ```
 
-
+MCMC details. 
 ```{r}
 n.iter <- 40000
 n.burnin <- 25000
 n.chains <- 2
 ```
 
-
-```{r}
+Run nimble. 
+```{r eval = FALSE}
 out <- nimbleMCMC(code = hmm.disease, 
                            constants = my.constants,
                            data = my.data,              
@@ -343,52 +359,54 @@ out <- nimbleMCMC(code = hmm.disease,
                            niter = n.iter,
                            nburnin = n.burnin, 
                            nchains = n.chains)
+save(out, file = "house_finch.RData")
 ```
 
-
-```{r}
-library(MCMCvis)
+```{r echo=FALSE}
+load("house_finch.RData")
 ```
 
-
+Inspect the results. 
 ```{r}
 MCMCsummary(out, round = 2)
 ```
 
-
-```{r}
+Let's have a look to the trace plots, and the estimated posterior distribution of the detection probabilities in healthy and ill states. 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 MCMCtrace(out, pdf = FALSE, params = c("pH", "pI"))
 ```
 
-
-```{r}
+What about the assignment probabilities? The non‐infected birds were positively identified, while most infected encounters were classified as unknown.
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 MCMCtrace(out, pdf = FALSE, params = c("betaH", "betaI"))
 ```
 
-
-```{r}
+And survival?
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 MCMCtrace(out, pdf = FALSE, params = c("phiH", "phiI"))
 ```
 
-
-```{r}
+What about the infection and recovery rates? 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 MCMCtrace(out, pdf = FALSE, params = c("psiHI", "psiIH"))
 ```
 
-
-```{r}
+Last, the proportion of new marked individuals that are in the healthy state. 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 MCMCtrace(out, pdf = FALSE, params = c("pi"))
 ```
 
+
 ## Individual heterogeneity
 
+For our last example, we will see how to incorporate individual heterogeneity in capture-recapture models using finite mixtures. We will use a case study on gray wolves. The data were kindly provided by the French Office for Biodiversity. 
 ```{r}
-y <- as.matrix(read.table(here::here("slides", "dat", "wolf.txt")))
+y <- as.matrix(read.table("wolf.txt"))
 # 1 seen
 # 0 not seen
 ```
 
-
+Let's write the model. Only thing to notice is that we have two alive states to represent two classes of individuals. We choose to have the detection probabilities dependent on the states and constant survival. 
 ```{r}
 hmm.phipmix <- nimbleCode({
   
@@ -418,11 +436,11 @@ hmm.phipmix <- nimbleCode({
   omega[3,1] <- 1        # Pr(dead t -> non-detected t)
   omega[3,2] <- 0        # Pr(dead t -> detected t)
   omega.init[1,1] <- 0   # Pr(alive state 1 t -> non-detected t)
-  omega.init[1,2] <- 1       # Pr(alive state 1 t -> detected t)
+  omega.init[1,2] <- 1   # Pr(alive state 1 t -> detected t)
   omega.init[2,1] <- 0   # Pr(alive state 2 t -> non-detected t)
-  omega.init[2,2] <- 1       # Pr(alive state 2 t -> detected t)
-  omega.init[3,1] <- 1        # Pr(dead t -> non-detected t)
-  omega.init[3,2] <- 0        # Pr(dead t -> detected t)
+  omega.init[2,2] <- 1   # Pr(alive state 2 t -> detected t)
+  omega.init[3,1] <- 1   # Pr(dead t -> non-detected t)
+  omega.init[3,2] <- 0   # Pr(dead t -> detected t)
   
   # likelihood
   for (i in 1:N){
@@ -436,18 +454,24 @@ hmm.phipmix <- nimbleCode({
 })
 ```
 
-
+Get the date of first capture. 
 ```{r}
 first <- apply(y, 1, function(x) min(which(x != 0)))
-my.constants <- list(N = nrow(y), K = ncol(y), first = first)
 ```
 
+Constants in a list. 
+```{r}
+my.constants <- list(N = nrow(y), 
+                     K = ncol(y), 
+                     first = first)
+```
 
+Data in a list. 
 ```{r}
 my.data <- list(y = y + 1)
 ```
 
-
+Initial values. 
 ```{r}
 zinit <- y
 for (i in 1:nrow(y)) {
@@ -464,19 +488,19 @@ initial.values <- function() list(phi = runif(1,0,1),
                                   z = zinit)
 ```
 
-
+Parameters to be monitored. 
 ```{r}
 parameters.to.save <- c("phi", "p1", "p2", "pi")
 ```
 
-
+MCMC details. 
 ```{r}
 n.iter <- 10000
 n.burnin <- 5000
 n.chains <- 2
 ```
 
-
+Run nimble.
 ```{r}
 mcmc.phipmix <- nimbleMCMC(code = hmm.phipmix, 
                            constants = my.constants,
@@ -488,22 +512,21 @@ mcmc.phipmix <- nimbleMCMC(code = hmm.phipmix,
                            nchains = n.chains)
 ```
 
-
-```{r}
-library(MCMCvis)
-```
-
-
+Numerical summaries. 
 ```{r}
 MCMCsummary(mcmc.phipmix, round = 2)
 ```
 
-
-```{r}
+Let's have a look to the trace and posterior distribution of the proportion of individuals in each class, as well as the detection probabilities. 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 MCMCtrace(mcmc.phipmix, pdf = FALSE, params = c("pi", "p1", "p2"))
 ```
 
-
-```{r}
+Last, survival. 
+```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 MCMCtrace(mcmc.phipmix, pdf = FALSE, params = c("phi"))
 ```
+
+
+<!-- knitr::purl(here::here("worksheets","6_demo.Rmd"), documentation = 2) -->
+
