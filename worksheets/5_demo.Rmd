@@ -440,7 +440,7 @@ initial.values <- function(){list(phiA = runif(1, 0, 1),
                                   z = zinits)}
 ```
 
-Parameters to minitor.
+Parameters to monitor.
 ```{r}
 parameters.to.save <- c("phiA", "phiB", "phiC", "psiA", "psiB", "psiC","pA", "pB", "pC")
 parameters.to.save

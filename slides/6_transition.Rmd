@@ -870,6 +870,16 @@ MCMCplot(mcmc.multisite)
 ]
 
 ---
+background-color: #234f66
+## <span style="color:white">Live demo</span>
+
+.center[
+![](img/b5b086f9cc403008ba7be5dd508cfed2.gif)
+]
+
+
+
+---
 class: middle, center
 
 ## Sites may be states.
@@ -1549,4 +1559,17 @@ plotdet / (plotpsiAB + plotpsiBA)
 ## Further reading
 
 + Lebreton, J.-D., J. D. Nichols, R. J. Barker, R. Pradel and J. A. Spendelow (2009). [Modeling Individual Animal Histories with Multistate Capture–Recapture Models](https://multievent.sciencesconf.org/conference/multievent/pages/Lebretonetal2009AER.pdf). Advances in Ecological Research, 41:87-173.
+
+
+---
+background-color: black
+# <span style="color:white">Live demo</span>
+
+<br>
+<br>
+
+.center[
+![](img/r_1051694_ifmHZ.gif)
+]
+
 

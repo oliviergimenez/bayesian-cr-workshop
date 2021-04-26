@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # Skip your coffee break: Speed up MCMC convergence
 ### The team
-### last updated: 2021-04-22
+### last updated: 2021-04-26
 
 ---
 
@@ -116,8 +116,8 @@ MCMCsummary(object = mcmc.phip, round = 2)
 
 ```
     mean   sd 2.5%  50% 97.5% Rhat n.eff
-p   0.90 0.03 0.84 0.90  0.95 1.02   205
-phi 0.56 0.03 0.51 0.56  0.61 1.04   512
+p   0.89 0.03 0.82 0.90  0.95 1.08   217
+phi 0.56 0.03 0.51 0.56  0.61 1.01   459
 ```
 ]
 
@@ -238,7 +238,7 @@ summary(samples[,"phi"])
 
 ```
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.5033  0.5409  0.5667  0.6116  0.5909  0.9534 
+ 0.2324  0.5450  0.5627  0.5587  0.5745  0.7120 
 ```
 
 ```r
@@ -247,7 +247,7 @@ summary(samples[,"p"])
 
 ```
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.1022  0.8460  0.8840  0.8033  0.9112  0.9493 
+ 0.3853  0.8768  0.8950  0.8881  0.9148  0.9714 
 ```
 ]
 
@@ -270,7 +270,7 @@ hmm.phip$gamma
 
 ```
           [,1]      [,2]
-[1,] 0.2858073 0.7141927
+[1,] 0.2324027 0.7675973
 [2,] 0.0000000 1.0000000
 ```
 
@@ -282,7 +282,7 @@ hmm.phip$calculate()
 ```
 
 ```
-[1] -1642.462
+[1] -1755.241
 ```
 
 
@@ -364,6 +364,17 @@ compareMCMCs status: It has been in waiting zone for release as its own package.
 ## Weighted likelihood w/ unique capture history
 
 + [Olivier to add Geese example]
+
+
+---
+background-color: #234f66
+## &lt;span style="color:white"&gt;No live demo, but there is a worksheet.&lt;/span&gt;
+
+.center[
+![](img/b5b086f9cc403008ba7be5dd508cfed2.gif)
+]
+
+
 
 ---
 ## Further reading

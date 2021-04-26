@@ -579,6 +579,16 @@ MCMCsummary(mcmc.output, round = 2)
 
 + Cool! The data was simulated, with (true) survival $\phi = 0.8$. 
 
+
+---
+background-color: #234f66
+## <span style="color:white">Live demo</span>
+
+.center[
+![](img/b5b086f9cc403008ba7be5dd508cfed2.gif)
+]
+
+
 ---
 
 <br><br>
@@ -1159,3 +1169,15 @@ The data is simulated, with true survival $\phi = 0.8$ and detection $p = 0.6$.
 +  Yackulic, C. B. Dodrill, M., Dzul, M., Sanderlin, J. S., and Reid, J. A.. (2020). [A need for speed in Bayesian population models: a practical guide to marginalizing and recovering discrete latent states](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.2112). Ecological Applications 30:e02112.
 
 + L. R. Rabiner (1989). [A tutorial on hidden Markov models and selected applications in speech recognition](https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/Reprints/tutorial%20on%20hmm%20and%20applications.pdf). Proceedings of the IEEE, 77:257-286.
+
+
+---
+background-color: black
+# <span style="color:white">Live demo</span>
+
+<br>
+<br>
+
+.center[
+![](img/r_1051694_ifmHZ.gif)
+]

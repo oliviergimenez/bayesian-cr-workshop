@@ -597,6 +597,16 @@ MCMCplot(mcmc.multievent)
 
 
 ---
+background-color: #234f66
+## <span style="color:white">Live demo</span>
+
+.center[
+![](img/b5b086f9cc403008ba7be5dd508cfed2.gif)
+]
+
+
+
+---
 ## Examples
 
 <br>
@@ -981,6 +991,19 @@ load(here::here("slides","dat","disease.RData"))
 MCMCplot(out)
 ```
 ]
+
+
+---
+background-color: black
+# <span style="color:white">Live demo</span>
+
+<br>
+<br>
+
+.center[
+![](img/r_1051694_ifmHZ.gif)
+]
+
 
 
 ---
@@ -1427,4 +1450,13 @@ $$
 
 + Dupuis (1995) had a similar idea for the Arnason-Schwarz model: Dupuis, J. (1995) [Bayesian estimation of movement and survival probabilities from capture-recapture data](https://academic.oup.com/biomet/article-abstract/82/4/761/252161). Biometrika. Vol. 82, pp 761-772.
 
+
+
+---
+background-color: #234f66
+## <span style="color:white">Live demo</span>
+
+.center[
+![](img/b5b086f9cc403008ba7be5dd508cfed2.gif)
+]
 

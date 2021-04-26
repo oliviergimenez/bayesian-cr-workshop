@@ -284,6 +284,17 @@ compareMCMCs status: It has been in waiting zone for release as its own package.
 
 + [Olivier to add Geese example]
 
+
+---
+background-color: #234f66
+## <span style="color:white">No live demo, but there is a worksheet.</span>
+
+.center[
+![](img/b5b086f9cc403008ba7be5dd508cfed2.gif)
+]
+
+
+
 ---
 ## Further reading
 

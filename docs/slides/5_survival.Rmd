@@ -650,6 +650,16 @@ data.frame(model = c("(phi,p)",
 ```
 
 ---
+background-color: #234f66
+## <span style="color:white">Live demo</span>
+
+.center[
+![](img/b5b086f9cc403008ba7be5dd508cfed2.gif)
+]
+
+
+
+---
 class: middle
 
 ## Can we explain time variation?
@@ -667,7 +677,7 @@ class: middle
 
 --
 
-+ Let's investigate the effect of water flow on dipper survival.
++ Let's investigate the effect of water flow on dipper survival ([Marzolin 2002](https://doi.org/10.2307/3802934)).
 
 ---
 
@@ -979,6 +989,20 @@ df %>%
 --
 
 + Assume a model for covariate and fill in missing values (imputation).
+
+
+---
+background-color: black
+# <span style="color:white">Live demo</span>
+
+<br>
+<br>
+
+.center[
+![](img/r_1051694_ifmHZ.gif)
+]
+
+
 
 ---
 class: middle

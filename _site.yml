@@ -58,6 +58,10 @@ navbar:
           href: worksheets/6_demo.html
         - text: "Class 7 live demo - R script"
           href: worksheets/6_demo.R
+        - text: "Class 8 live demo: Skip your coffee break: Speed up MCMC convergence"
+          href: worksheets/7_demo.html
+        - text: "Class 8 live demo - R script"
+          href: worksheets/7_demo.R
     - icon: fab fa-github
       href: https://github.com/oliviergimenez/bayesian-cr-workshop
 
