@@ -62,6 +62,10 @@ navbar:
           href: worksheets/7_demo.html
         - text: "Class 8 live demo - R script"
           href: worksheets/7_demo.R
+        - text: "Exercises"
+          href: worksheets/exercises.html
+        - text: "Exercises - R script"
+          href: worksheets/exercises.R
     - icon: fab fa-github
       href: https://github.com/oliviergimenez/bayesian-cr-workshop
 

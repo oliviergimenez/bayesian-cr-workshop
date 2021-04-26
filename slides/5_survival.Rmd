@@ -967,12 +967,16 @@ df %>%
 ```
 ]
 
+--
+
++ You may test an effect of both sex and wing length, see exercise in Worksheets. 
+
 ---
 ## What if covariates vary with individual and time?
 
 --
 
-+ Think of age for example; covariate or nested indexing works fine.
++ Think of age for example (see exercises in Worksheets); covariate or nested indexing works fine.
 
 --
 
