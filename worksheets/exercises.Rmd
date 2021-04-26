@@ -89,6 +89,7 @@ my.constants <- list(N = nrow(y),
                      first = first,
                      winglength = wing.length.st,
                      sex = if_else(dipper$sex == "M", 1, 2))
+my.data <- list(y = y + 1)
 ```
 
 Data in a list. 

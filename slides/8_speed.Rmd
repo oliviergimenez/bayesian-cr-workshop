@@ -224,14 +224,191 @@ compareMCMCs status: It has been in waiting zone for release as its own package.
 
 
 ---
-## Block sampling
+class: middle, center
 
-+ [TO BE DONE] 
+## Consider a model with wing length and individual random effect on survival.  
+
+---
+
+```{r echo = FALSE, message = FALSE, warning=FALSE}
+dipper <- read_csv(here::here("slides", "dat", "dipper.csv"))
+y <- dipper %>%
+  select(year_1981:year_1987) %>%
+  as.matrix()
+first <- apply(y, 1, function(x) min(which(x !=0)))
+wing.length.st <- as.vector(scale(dipper$wing_length))
+my.constants <- list(N = nrow(y), 
+                     T = ncol(y), 
+                     first = first,
+                     winglength = wing.length.st)
+zinits <- y + 1 # non-detection -> alive
+zinits[zinits == 2] <- 1 # dead -> alive
+initial.values <- function() list(beta = rnorm(2,0,1.5),
+                                  sdeps = runif(1,0,3),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+parameters.to.save <- c("beta", "sdeps", "p")
+n.iter <- 10000
+n.burnin <- 2500
+n.chains <- 2
+```
+
+.tiny-font[
+```{r}
+hmm.phiwlrep <- nimbleCode({
+    p ~ dunif(0, 1) # prior detection
+    omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+    omega[1,2] <- p        # Pr(alive t -> detected t)
+    omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    logit(phi[i]) <- beta[1] + beta[2] * winglength[i] + eps[i] #<<
+    eps[i] ~ dnorm(mean = 0, sd = sdeps) #<<
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0           # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1           # Pr(dead t -> dead t+1)
+  }
+  beta[1] ~ dnorm(mean = 0, sd = 1.5)
+  beta[2] ~ dnorm(mean = 0, sd = 1.5)
+  sdeps ~ dunif(0, 10)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i]) #<<
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+]
+
+```{r echo = FALSE, eval = FALSE}
+mcmc.phiwlrep <- nimbleMCMC(code = hmm.phiwlrep, 
+                            constants = my.constants,
+                            data = my.data,              
+                            inits = initial.values,
+                            monitors = parameters.to.save,
+                            niter = n.iter,
+                            nburnin = n.burnin, 
+                            nchains = n.chains)
+save(mcmc.phiwlrep, file = here::here("slides", "dat", "wl.RData"))
+```
+
+
+---
+## Standard deviation of the random effect
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+load(here::here("slides", "dat", "wl.RData"))
+```
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.718, dev = "svg", message=FALSE, warning=FALSE, fig.align="center"}
+MCMCtrace(mcmc.phiwlrep, params = "sdeps", pdf = FALSE)
+```
 
 ---
 ## Change samplers
 
-+ [TO BE DONE] 
++ What are the samplers used by default?
+
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+hmm.phiwlrep <- nimbleModel(code = hmm.phiwlrep,
+                            constants = my.constants,
+                            data = my.data,
+                            inits = initial.values())
+```
+
+.tiny-font[
+```{r}
+mcmcConf <- configureMCMC(hmm.phiwlrep)
+```
+]
+
+---
+## Remove default sampler, and use slice sampler
+
+.tiny-font[
+```{r}
+mcmcConf$removeSamplers('sdeps')
+mcmcConf$addSampler(target = 'sdeps',
+                    type = "slice") #<<
+mcmcConf
+```
+]
+
+<br>
+<br>
+
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg", warning=FALSE, message=FALSE, fig.align="center"}
+Rmcmc <- buildMCMC(mcmcConf)
+Cmodel <- compileNimble(hmm.phiwlrep)
+Cmcmc <- compileNimble(Rmcmc, project=hmm.phiwlrep)
+Cmcmc$run(10000)
+samples1 <- as.matrix(Cmcmc$mvSamples)
+Cmcmc$run(10000)
+samples2 <- as.matrix(Cmcmc$mvSamples)
+df <- data.frame(iter = c(2501:10000, 2501:10000),
+                 samples = c(samples1[2501:10000,"sdeps"], samples2[2501:10000,"sdeps"]), 
+                 chain = c(rep("chain 1", length(samples1[2501:10000,"sdeps"])),
+                           rep("chain 2", length(samples2[2501:10000,"sdeps"]))))
+df.beta <- data.frame(iter = c(2501:10000, 2501:10000),
+                 beta1 = c(samples1[2501:10000,"beta[1]"], samples2[2501:10000,"beta[1]"]), 
+                 beta2 = c(samples1[2501:10000,"beta[2]"], samples2[2501:10000,"beta[2]"]), 
+                 chain = c(rep("chain 1", length(samples1[2501:10000,"sdeps"])),
+                           rep("chain 2", length(samples2[2501:10000,"sdeps"]))))
+```
+
+---
+## Trace plot
+
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg", warning=FALSE, message=FALSE, fig.align="center"}
+df %>%
+  ggplot() + 
+  aes(x = iter, y = samples, group = chain, color = chain) + 
+  geom_line() + 
+  labs(x = "iterations", y = "random effect standard deviation", color = "")
+```
+
+
+---
+## Block sampling
+
++ High correlation in (regression) parameters may make independent samplers inefficient.
+
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.418, dev = "svg", fig.align="center"}
+df.beta %>%
+  ggplot() + 
+  aes(x = beta1, y = beta2, group = chain, color = chain) +
+  geom_point(alpha = .2) + 
+  labs(x = "beta1", y = "beta2", color = "")
+```
+
++ Block sampling (propose candidate values from multivariate distribution) might help.
+
+---
+## Block sampling
+
++ Remove and replace independent RW samples by block sampling. Then proceed as usual.
+
+.tiny-font[
+```{r message = FALSE, warning=FALSE}
+mcmcConf$removeSamplers(c('beta[1]','beta[2]'))
+mcmcConf$addSampler(target = c('beta[1]','beta[2]'),
+                    type = "RW_block") #<<
+```
+]
+
+---
+## Block sampling
+
+.tiny-font[
+```{r message = FALSE, warning=FALSE}
+mcmcConf
+```
+]
 
 ---
 ## Summary of strategies for improving MCMC 

@@ -116,8 +116,8 @@ MCMCsummary(object = mcmc.phip, round = 2)
 
 ```
     mean   sd 2.5%  50% 97.5% Rhat n.eff
-p   0.89 0.03 0.82 0.90  0.95 1.08   217
-phi 0.56 0.03 0.51 0.56  0.61 1.01   459
+p   0.90 0.03 0.84 0.90  0.95 1.02   254
+phi 0.56 0.03 0.51 0.56  0.61 1.00   525
 ```
 ]
 
@@ -238,7 +238,7 @@ summary(samples[,"phi"])
 
 ```
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.2324  0.5450  0.5627  0.5587  0.5745  0.7120 
+ 0.4828  0.5478  0.5706  0.5845  0.5949  0.8383 
 ```
 
 ```r
@@ -247,7 +247,7 @@ summary(samples[,"p"])
 
 ```
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.3853  0.8768  0.8950  0.8881  0.9148  0.9714 
+ 0.3642  0.8571  0.8863  0.8469  0.9131  0.9735 
 ```
 ]
 
@@ -270,7 +270,7 @@ hmm.phip$gamma
 
 ```
           [,1]      [,2]
-[1,] 0.2324027 0.7675973
+[1,] 0.8268413 0.1731587
 [2,] 0.0000000 1.0000000
 ```
 
@@ -282,7 +282,7 @@ hmm.phip$calculate()
 ```
 
 ```
-[1] -1755.241
+[1] -917.2099
 ```
 
 
@@ -305,14 +305,195 @@ compareMCMCs status: It has been in waiting zone for release as its own package.
 
 
 ---
-## Block sampling
+class: middle, center
 
-+ [TO BE DONE] 
+## Consider a model with wing length and individual random effect on survival.  
+
+---
+
+
+
+.tiny-font[
+
+```r
+hmm.phiwlrep &lt;- nimbleCode({
+    p ~ dunif(0, 1) # prior detection
+    omega[1,1] &lt;- 1 - p    # Pr(alive t -&gt; non-detected t)
+    omega[1,2] &lt;- p        # Pr(alive t -&gt; detected t)
+    omega[2,1] &lt;- 1        # Pr(dead t -&gt; non-detected t)
+    omega[2,2] &lt;- 0        # Pr(dead t -&gt; detected t)
+  for (i in 1:N){
+*   logit(phi[i]) &lt;- beta[1] + beta[2] * winglength[i] + eps[i]
+*   eps[i] ~ dnorm(mean = 0, sd = sdeps)
+    gamma[1,1,i] &lt;- phi[i]      # Pr(alive t -&gt; alive t+1)
+    gamma[1,2,i] &lt;- 1 - phi[i]  # Pr(alive t -&gt; dead t+1)
+    gamma[2,1,i] &lt;- 0           # Pr(dead t -&gt; alive t+1)
+    gamma[2,2,i] &lt;- 1           # Pr(dead t -&gt; dead t+1)
+  }
+  beta[1] ~ dnorm(mean = 0, sd = 1.5)
+  beta[2] ~ dnorm(mean = 0, sd = 1.5)
+  sdeps ~ dunif(0, 10)
+  delta[1] &lt;- 1          # Pr(alive t = 1) = 1
+  delta[2] &lt;- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+*     z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+]
+
+
+
+
+---
+## Standard deviation of the random effect
+
+
+&lt;img src="8_speed_files/figure-html/unnamed-chunk-16-1.svg" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Change samplers
 
-+ [TO BE DONE] 
++ What are the samplers used by default?
+
+
+
+.tiny-font[
+
+```r
+mcmcConf &lt;- configureMCMC(hmm.phiwlrep)
+```
+
+```
+===== Monitors =====
+thin = 1: p, beta, sdeps, z
+===== Samplers =====
+RW sampler (259)
+  - p
+  - beta[]  (2 elements)
+  - sdeps
+  - eps[]  (255 elements)
+posterior_predictive sampler (78)
+  - eps[]  (39 elements)
+  - z[]  (39 elements)
+categorical sampler (1103)
+  - z[]  (1103 elements)
+```
+]
+
+---
+## Remove default sampler, and use slice sampler
+
+.tiny-font[
+
+```r
+mcmcConf$removeSamplers('sdeps')
+mcmcConf$addSampler(target = 'sdeps',
+*                   type = "slice")
+mcmcConf
+```
+
+```
+===== Monitors =====
+thin = 1: p, beta, sdeps, z
+===== Samplers =====
+slice sampler (1)
+  - sdeps
+RW sampler (258)
+  - p
+  - beta[]  (2 elements)
+  - eps[]  (255 elements)
+posterior_predictive sampler (78)
+  - eps[]  (39 elements)
+  - z[]  (39 elements)
+categorical sampler (1103)
+  - z[]  (1103 elements)
+```
+]
+
+&lt;br&gt;
+&lt;br&gt;
+
+
+```
+|-------------|-------------|-------------|-------------|
+|-------------------------------------------------------|
+```
+
+```
+NULL
+```
+
+```
+|-------------|-------------|-------------|-------------|
+|-------------------------------------------------------|
+```
+
+```
+NULL
+```
+
+---
+## Trace plot
+
+&lt;img src="8_speed_files/figure-html/unnamed-chunk-21-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Block sampling
+
++ High correlation in (regression) parameters may make independent samplers inefficient.
+
+&lt;img src="8_speed_files/figure-html/unnamed-chunk-22-1.svg" style="display: block; margin: auto;" /&gt;
+
++ Block sampling (propose candidate values from multivariate distribution) might help.
+
+---
+## Block sampling
+
++ Remove and replace independent RW samples by block sampling. Then proceed as usual.
+
+.tiny-font[
+
+```r
+mcmcConf$removeSamplers(c('beta[1]','beta[2]'))
+mcmcConf$addSampler(target = c('beta[1]','beta[2]'),
+*                   type = "RW_block")
+```
+]
+
+---
+## Block sampling
+
+.tiny-font[
+
+```r
+mcmcConf
+```
+
+```
+===== Monitors =====
+thin = 1: p, beta, sdeps, z
+===== Samplers =====
+slice sampler (1)
+  - sdeps
+RW_block sampler (1)
+  - beta[1], beta[2] 
+RW sampler (256)
+  - p
+  - eps[]  (255 elements)
+posterior_predictive sampler (78)
+  - eps[]  (39 elements)
+  - z[]  (39 elements)
+categorical sampler (1103)
+  - z[]  (1103 elements)
+```
+]
 
 ---
 ## Summary of strategies for improving MCMC 
