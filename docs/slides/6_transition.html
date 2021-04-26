@@ -4309,11 +4309,11 @@ multisite &lt;- nimbleCode({
   # pA: recapture probability site A
   # pB: recapture probability site B
   # -------------------------------------------------
-  # States (S):
+  # States (z):
   # 1 alive at A
   # 2 alive at B
   # 3 dead
-  # Observations (O):  
+  # Observations (y):  
   # 1 not seen
   # 2 seen at A 
   # 3 seen at B
@@ -4380,7 +4380,7 @@ multisite &lt;- nimbleCode({
 ```r
 multisite &lt;- nimbleCode({
 ...  
-  # Define probabilities of state z(t+1) given z(t)
+  # probabilities of state z(t+1) given z(t)
   gamma[1,1] &lt;- phiA * (1 - psiAB)
   gamma[1,2] &lt;- phiA * psiAB
   gamma[1,3] &lt;- 1 - phiA
@@ -4403,7 +4403,7 @@ multisite &lt;- nimbleCode({
 ```r
 multisite &lt;- nimbleCode({
 ...  
-  # Define probabilities of y(t) given z(t)
+  # probabilities of y(t) given z(t)
   omega[1,1] &lt;- 1 - pA     # Pr(alive A t -&gt; non-detected t)
   omega[1,2] &lt;- pA         # Pr(alive A t -&gt; detected A t)
   omega[1,3] &lt;- 0          # Pr(alive A t -&gt; detected B t)
@@ -4426,14 +4426,14 @@ multisite &lt;- nimbleCode({
 ```r
 multisite &lt;- nimbleCode({
 ...
-  # Likelihood 
+  # likelihood 
   for (i in 1:N){
-    # Define latent state at first capture
+    # latent state at first capture
     z[i,first[i]] &lt;- y[i,first[i]] - 1
     for (t in (first[i]+1):K){
-      # State process: draw S(t) given S(t-1)
+      # z(t) given z(t-1)
       z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
-      # Observation process: draw O(t) given S(t)
+      # y(t) given z(t)
       y[i,t] ~ dcat(omega[z[i,t],1:3])
     }
   }
@@ -4517,7 +4517,7 @@ multisite &lt;- nimbleCode({
 ```r
 multisite &lt;- nimbleCode({
 ...
-  # Define probabilities of state z(t+1) given z(t)
+  # probabilities of state z(t+1) given z(t)
   gamma[1,1] &lt;- phiA * psiA[1]
   gamma[1,2] &lt;- phiA * psiA[2]
   gamma[1,3] &lt;- phiA * psiA[3]
@@ -4633,7 +4633,7 @@ multisite &lt;- nimbleCode({
 ```r
 multisite &lt;- nimbleCode({
 ...
-  # Define probabilities of state z(t+1) given z(t)
+  # probabilities of state z(t+1) given z(t)
   gamma[1,1] &lt;- phiA * psiA[1]
   gamma[1,2] &lt;- phiA * psiA[2]
   gamma[1,3] &lt;- phiA * psiA[3]
@@ -13975,11 +13975,11 @@ multistate &lt;- nimbleCode({
   # pB: recapture probability B
   # pNB: recapture probability NB
   # -------------------------------------------------
-  # States (S):
+  # States (z):
   # 1 alive B
   # 2 alive NB
   # 3 dead
-  # Observations (O):  
+  # Observations (y):  
   # 1 not seen
   # 2 seen as B 
   # 3 seen as NB
@@ -14016,7 +14016,7 @@ multistate &lt;- nimbleCode({
 ```r
 multistate &lt;- nimbleCode({
 ...  
-  # Define probabilities of state z(t+1) given z(t)
+  # probabilities of state z(t+1) given z(t)
   gamma[1,1] &lt;- phiB * (1 - psiBNB)
   gamma[1,2] &lt;- phiB * psiBNB
   gamma[1,3] &lt;- 1 - phiB
@@ -14039,7 +14039,7 @@ multistate &lt;- nimbleCode({
 ```r
 multistate &lt;- nimbleCode({
 ...  
-  # Define probabilities of y(t) given z(t)
+  # probabilities of y(t) given z(t)
   omega[1,1] &lt;- 1 - pB    # Pr(alive B t -&gt; non-detected t)
   omega[1,2] &lt;- pB        # Pr(alive B t -&gt; detected B t)
   omega[1,3] &lt;- 0         # Pr(alive B t -&gt; detected NB t)
@@ -14062,14 +14062,14 @@ multistate &lt;- nimbleCode({
 ```r
 multistate &lt;- nimbleCode({
 ...
-  # Likelihood 
+  # likelihood 
   for (i in 1:N){
-    # Define latent state at first capture
+    # latent state at first capture
     z[i,first[i]] &lt;- y[i,first[i]] - 1
     for (t in (first[i]+1):K){
-      # State process: draw S(t) given S(t-1)
+      # z(t) given z(t-1)
       z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
-      # Observation process: draw O(t) given S(t)
+      # y(t) given z(t)
       y[i,t] ~ dcat(omega[z[i,t],1:3])
     }
   }

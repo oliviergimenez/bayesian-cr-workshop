@@ -62,6 +62,8 @@ navbar:
           href: worksheets/7_demo.html
         - text: "Class 8 live demo - R script"
           href: worksheets/7_demo.R
+    - text: "Exercises"
+      menu:
         - text: "Exercises"
           href: worksheets/exercises.html
         - text: "Exercises - R script"

@@ -116,8 +116,8 @@ MCMCsummary(object = mcmc.phip, round = 2)
 
 ```
     mean   sd 2.5%  50% 97.5% Rhat n.eff
-p   0.90 0.03 0.84 0.90  0.95 1.02   254
-phi 0.56 0.03 0.51 0.56  0.61 1.00   525
+p   0.90 0.03 0.84 0.90  0.95 1.04   284
+phi 0.56 0.02 0.52 0.56  0.61 1.01   626
 ```
 ]
 
@@ -238,7 +238,7 @@ summary(samples[,"phi"])
 
 ```
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.4828  0.5478  0.5706  0.5845  0.5949  0.8383 
+ 0.4344  0.5453  0.5697  0.5716  0.5821  0.7882 
 ```
 
 ```r
@@ -247,7 +247,7 @@ summary(samples[,"p"])
 
 ```
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.3642  0.8571  0.8863  0.8469  0.9131  0.9735 
+ 0.4179  0.8718  0.8890  0.8699  0.9053  0.9681 
 ```
 ]
 
@@ -270,7 +270,7 @@ hmm.phip$gamma
 
 ```
           [,1]      [,2]
-[1,] 0.8268413 0.1731587
+[1,] 0.1519331 0.8480669
 [2,] 0.0000000 1.0000000
 ```
 
@@ -282,7 +282,7 @@ hmm.phip$calculate()
 ```
 
 ```
-[1] -917.2099
+[1] -2192.907
 ```
 
 
@@ -504,7 +504,7 @@ categorical sampler (1103)
 
 --
 
-+ Customize sampler choice.
++ Customize sampler choice (more in [Chapter 7 of the User's manual](https://r-nimble.org/html_manual/cha-mcmc.html)).
 
 --
 
@@ -538,14 +538,79 @@ categorical sampler (1103)
 + The [NimbleEcology](https://cran.r-project.org/web/packages/nimbleEcology/vignettes/Introduction_to_nimbleEcology.html) implements capture-recapture models and HMMs with marginalization. 
 
 ---
+### Our model `\((\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)\)`
 
-+ [Olivier to add Geese example].
+.small-font[
+
+```r
+multisite &lt;- nimbleCode({
+...
+  # Likelihood 
+  for (i in 1:N){
+    # Define latent state at first capture
+    z[i,first[i]] &lt;- y[i,first[i]] - 1
+    for (t in (first[i]+1):K){
+      # State process: draw S(t) given S(t-1)
+      z[i,t] ~ dcat(gamma[z[i,t-1],1:3])
+      # Observation process: draw O(t) given S(t)
+      y[i,t] ~ dcat(omega[z[i,t],1:3])
+    }
+  }
+})
+```
+]
 
 ---
-## Weighted likelihood w/ unique capture history
+### Same model with nimbleEcology
 
-+ [Olivier to add Geese example]
+.tiny-font[
 
+```r
+multisite &lt;- nimbleCode({
+...
+# initial state probs
+for(i in 1:N) {
+  init[i, 1:4] &lt;- gamma[ y[i, first[i] ] - 1, 1:4 ] # first state propagation
+}
+    
+# likelihood 
+for (i in 1:N){
+  y[i,(first[i]+1):K] ~ dHMM(init = init[i,1:4],           # count data from first[i] + 1
+                             probObs = omega[1:4,1:4],     # observation matrix
+                             probTrans = gamma[1:4,1:4],   # transition matrix
+                             len = K - first[i],           # nb of occasions
+                             checkRowSums = 0)             # do not check whether elements in a row sum tp 1
+}
+...
+```
+]
+
++ Twice as fast as the standard formulation with explicit latent states. 
+
+---
+### Weighted likelihood
+
++ So far, a row of the dataset is an individual. However, several individuals may share the same encounter history. 
+
+--
+
++ The contribution of `\(M\)` individuals with the same encounter history is the likelihood of this particular encounter history raised to the power `\(M\)`.
+
+--
+
++ Using this so-called weighted likelihood greatly decreases the computational burden.
+
+--
+
++ This idea is used in most computer programs that implement maximum likelihood. In the Bayesian framework, the same idea was proposed in [Turek et al. (2016)](https://doi.org/10.1007/s10651-016-0353-z). 
+
+--
+
++ Cannot be done in Jags. Can be done in nimble thanks to nimble functions! 
+
+--
+
++ The run is damn fast. Also allows fitting models to big datasets. More details in dedicated Worksheet.
 
 ---
 background-color: #234f66
