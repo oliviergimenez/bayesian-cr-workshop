@@ -1188,6 +1188,8 @@ $$\beta = \alpha \bigg(\frac{1}{\mu}-1\bigg)$$
 + Now use $\phi_{prior} \sim \text{Beta}(\alpha = 25.6,\beta = 19.3)$ instead of $\phi_{prior} \sim \text{Normal}(0.57,0.073^2)$
 
 ---
+class: middle, center
+
 # Prior predictive checks
 
 ---
@@ -1329,25 +1331,25 @@ ggplot() +
 
 + Poor mixing of the chains.
 
----
-## Parameter redundancy
+<!-- --- -->
+<!-- ## Parameter redundancy -->
 
---
+<!-- -- -->
 
-+ Two issues
+<!-- + Two issues -->
 
---
+<!-- -- -->
 
-+ Intrinsic redundancy
-    + Likelihood can be expressed by a smaller number of parameters
-    + Feature of the model
+<!-- + Intrinsic redundancy -->
+<!--     + Likelihood can be expressed by a smaller number of parameters -->
+<!--     + Feature of the model -->
 
---
+<!-- -- -->
 
-+ Extrinsic redundancy
-    + Model structure is fine
-    + But lack of data makes a parameter non-estimable
-    + Feature of the data
+<!-- + Extrinsic redundancy -->
+<!--     + Model structure is fine -->
+<!--     + But lack of data makes a parameter non-estimable -->
+<!--     + Feature of the data -->
 
 ---
 ## Prior-posterior overlap for $\phi_4$ and $\phi_6$
