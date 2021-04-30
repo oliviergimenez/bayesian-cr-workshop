@@ -773,9 +773,9 @@ head(df)
 Then, we plot a histogram of the two posterior distributions. 
 ```{r, echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"}
 df %>%
-  ggplot() + 
-  aes(x = value, group = param, fill = param) + 
-  geom_histogram(color = "white") + 
+  ggplot(aes(x = value, fill = param)) +
+  geom_density(color = "white", alpha = 0.6, position = 'identity') +
+  scale_fill_manual(values = c("#69b3a2", "#404080")) +
   labs(fill = "", x = "survival")
 ```
 
