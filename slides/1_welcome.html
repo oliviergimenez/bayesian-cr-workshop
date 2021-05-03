@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # Welcoming words
 ### The team
-### last updated: 2021-04-17
+### last updated: 2021-05-03
 
 ---
 
@@ -30,12 +30,11 @@ background-size: cover
 
 ???
 
-+ Welcome to the workshop blabla
-+ My name is Olivier Gimenez, I am blabla
-+ Wish it was in Montpellier
-+ But hey, some advantages, not sure we could have fit 500 people in our meeting room at the lab
-+ Before I start, I'd like to show you a few pictures of what you’re missing. This is a bit cruel, I know. 
-+ Meeting altogether in Montpellier would have been like a family reunion. 
++ Welcome. My name is Olivier Gimenez
++ I am a scientist working in statistical ecology and population dynamics in particular. 
++ I am based in Montpellier in southern France.
++ I thought I'd share some a few pictures of what you’re missing. It's a bit cruel I know. 
++ I really wish the workshop would be in Montpellier to show you the city wonders and its surroundings.  
 
 ---
 class: center, middle
@@ -44,7 +43,9 @@ background-size: cover
 
 ???
 
-+ Instead, we're spending quality time on Zoom. 
++ Instead, we'll be spending quality time on Zoom, and Slack as well. 
++ It has its advantages, not sure we could have fit you all in our conference room. 
+
 
 ---
 .pull-left[
@@ -53,6 +54,10 @@ background-size: cover
 &lt;center&gt;&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;📢📅🪤 Inference about animal demographic parameters: Bayesian analysis of capture-recapture data using Jags/Nimble. May 17-18, 2021. Remote workshop. Free of charge. Video-recorded. 🥳&lt;br&gt;➡️ Registration is up and running &lt;a href="https://t.co/wB94IWtBKY"&gt;https://t.co/wB94IWtBKY&lt;/a&gt;&lt;br&gt;➡️ Details in the thread. &lt;a href="https://t.co/mP3tuleIkZ"&gt;https://t.co/mP3tuleIkZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1355068873746362368?ref_src=twsrc%5Etfw"&gt;January 29, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/center&gt;
 
 ]
+
+???
+
++ Everything started in January this year, on Twitter, when I asked who would be interested in a workshop on Bayesian capture-recapture. 
 
 --
 
@@ -67,52 +72,104 @@ background-size: cover
 
 ???
 
-+ Running workshop for 15 years
-+ Daniel Turek in sabbatical who taught us Nimble and convinced us to switch from Jags to Nimble
-+ Science should be open
-+ A tweet that blew up in my face
++ The number of responses blew my mind. 
++ And here we're are, a few months later, with near 600 folks who registered. 
 
 ---
 ## What this workshop is about
 
---
+???
 
-+ Estimating demographic parameters.
-
---
-
-+ Using a class of models called hidden Markov models.
++ So why are we here altogether? 
 
 --
 
-+ Within the Bayesian framework.
++ Estimating demographic parameters with capture-recapture.
+
+???
+
++ Well this is a workshop about the estimation of demographic parameters, like survival, recruitment or dispersal. 
++ To do so, we will use capture-recapture data. 
+
+--
+
++ Using a family of models called hidden Markov models (HMM).
+
+???
+
++ We will use a family of models called hidden Markov models (HMMs in short).
++ Why? Because HMMs are quite awesome as we will see, because with the same model structure we'll be able to fit all sorts of capture-recapture models and estimate key demographic parameters. 
+
+--
+
++ Within the Bayesian framework implemented with Markov chain Monte Carlo methods (MCMC).
+
+???
+
++ We'll work within the Bayesian framework for many reasons we will develop, but mainly because Bayesian statistics make it easy to manage uncertainty, and also because with MCMC, we can fit pretty much fit any models. 
 
 ---
 ## Credits and inspiration
+
+???
+
++ This workshop does not come from nowhere, and I'd like to spend a minute or two on credits and to thank those who inspired me to organise this event. 
 
 --
 
 + Past workshops on capture-recapture models w/ Roger Pradel, Rémi Choquet and Jean-Dominique Lebreton.
 
+???
+
++ We've been running workshops on capture-recapture models in Montpellier for 10-15 years now with my colleagues Roger, Rémi and Jean-Dominique. 
++ I learnt so much from them, I owe them a lot. 
+
 --
 
 + Past workshops on Bayesian analyses for population ecology with Ruth King, Steve Brooks and Byron Morgan.
+
+???
+
++ We also run a few workshops on Bayesian analyses for population ecology with Ruth, Steve and Byron. 
++ Again, I learnt so much much from these folks, I owe them a lot. 
+
 
 --
 
 + Workshops on Nimble by Chris Paciorek, Daniel Turek and Perry de Valpine.
 
+???
+
++ We will use Nimble to run our Bayesian analyses during this workshop. 
++ There are several slides that we borrow from workshops run by the Nimble team Chris, Daniel and Perry. 
++ Perry will be with us tomorrow. 
+
 --
 
 + Workshops on integrated population modeling with Michael Schaub and Marc Kéry.
+
+???
+
++ We also contributed recently to a workshop organised by Michael and Marc.
++ With some material on capture-recapture models that I have recycled here. 
 
 --
 
 + Books by Marc Kéry, Michael Schaub, Andy Royle and others &lt;span&gt;&amp;#8212;&lt;/span&gt; check out [curated list](https://www.mbr-pwrc.usgs.gov/pubanalysis/roylebook/).
 
+???
+
++ We have also been much inspired by several books by Marc, Michael, Andy Royle and many others, check out this curated list for more details. 
+
 --
 
 + Daniel Turek's sabbatical in the team.
+
+???
+
++ Last, but not least, this is Daniel Turek's sabbatical in our team which triggers my conversion to nimble. 
++ Daniel wish he was with us but he was busy with other commitments. 
++ I would like to tell him many thanks for everything he did for us. 
 
 
 ---
@@ -120,9 +177,19 @@ background-size: cover
 
 ![](1_welcome_files/figure-html/unnamed-chunk-1-1.svg)&lt;!-- --&gt;
 
+???
+
++ With 600 attendees, I was feeling a bit alone to run this workshop on my own.
++ Several friends have agreed on joining the venture.
++ We will be 5 teachers with you today and tomorrow.  
++ Time for introductions I guess. 
 
 ---
 ## On our plate
+
+???
+
++ OK, what's on our plate? 
 
 --
 
@@ -132,6 +199,12 @@ background-size: cover
 + What you see is not what you get: Hidden Markov models and capture-recapture
 + Dead or alive: Survival estimation
 
+???
+
++ First day is about introductions. Introduction to Bayesian stats and MCMC methods. 
++ Introduction to hidden Markov models. 
++ And introduction to standard capture-recapture models. 
+
 --
 
 ### Day 2
@@ -140,25 +213,53 @@ background-size: cover
 + Skip your coffee break: Speed up MCMC convergence 
 + Take-home messages
 
+???
+
++ Second day will be about advanced stuff. 
++ Advanced capture-recapture models to estimate transition between states (geographical sites or breeding states for example).
++ How to account for uncertainty in the assignment of these states to individuals. 
++ Also how to save time when running long analyses on your computer. 
++ We'll close the workshop with some recommendations and take-home messages. 
+
 ---
 ## Philosophy of teaching
+
+???
+
++ Before we start, a few words about our teaching philosophy. 
 
 --
 
 + Lots of attendees, with huge heterogeneity in knowledge of capture-recapture models, Bayesian methods, `R` and `Nimble`.
 
+???
+
++ You'll be several hundreds folks attending today and tomorrow, there is heterogeneity in knowledge of the methods we will cover. 
+
 --
 
 + It is our hope that everyone will find something to take home. 
 
+???
+
++ It is our hope however that everyone will find something to take home. 
 
 --
 
 + We've packed a lot of things in two days.
 
+???
+
++ We'll be covering a lot of things in two days. 
+
 --
 
 + We do not expect you to digest everything.
+
+???
+
++ Do not feel like you have to fully understand everything at once. 
++ Took us years to be comfortable with the material we will cover. 
 
 --
 
@@ -166,16 +267,25 @@ background-size: cover
 
 ???
 
-Let's take a minute to have a look to the website.
++ To help, we have made all material available on a website. 
++ Let's take a minute to have a look to the website.
 
 
 --
 
 + Feel free to play around with material while we walk through it, and afterwards.
 
+???
+
++ Feel free to play around with the material we provide. 
+
 --
 
 + The workshop is organized in modules, each module is a combination of lectures and live demos.
+
+???
+
++ We will have lectures, and live demos. 
 
 ---
 
@@ -183,15 +293,34 @@ Let's take a minute to have a look to the website.
 
 --
 
-+ Lectures and live coding demos will happen on Zoom, same link for both days.
++ Lectures and live coding demos will happen in Zoom, same link for both days.
+
+???
+
++ Lectures and live demos will happen in Zoom. 
++ We will use the same link for both days. 
 
 --
 
 + Everything is video recorded.
 
+???
+
++ Everything is video recorded.
++ The recordings will be made available on the website. 
+
 --
 
-+ Questions and answers via Slack, with a specific chanel per module.
++ Questions and answers via Slack, with a specific channel per module.
+
+???
+
++ Feel free to ask questions in Slack. We'll do our best to answer live or soon after the workshop. 
++ The idea would be to gather questions and answers in a Frequently Asked Questions section of the website. 
++ Try to use Slack for questions, and not the Zoom chat. 
++ It will easier for us to save questions and answers from Slack than Zoom. 
++ Let's have a look to the Slack we've created for the workshop. 
++ There is a specific channel for each module.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
