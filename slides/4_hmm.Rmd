@@ -35,6 +35,11 @@ library(MCMCvis)
 
 + We have $z$ survivors out of $n$ released animals with winter survival probability $\phi$
 
+???
+
++ Let's get back to our survival example. 
++ We had z survivors out of n released individuals, which survived with probability phi. 
+
 --
 
 + Our model so far:
@@ -44,6 +49,12 @@ library(MCMCvis)
    \\
   \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
 \end{align*}
+
+???
+
++ Our model so far has been a combination
++ Of a binomial likelihood
++ And a Beta prior with param 1 and 1, which is a uniform between 0 and 1. 
 
 --
 
@@ -55,9 +66,20 @@ library(MCMCvis)
   \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
 \end{align*}
 
+???
+
++ The binomial is just a sum of Bernoulli outcomes
++ Like flipping a coin for each individual and get a survivor with prob phi. 
+
 --
 
 + What if we had several winters? Say $T = 5$ winters.
+
+???
+
++ In this design, we have a single winter. 
+But for many species, we'll need to collect data on the long term to get a representative estimate of survival. 
++ Therefore what if we had say big T five winters? 
 
 ---
 # Longitudinal data
@@ -93,7 +115,9 @@ z %>%
 
 ???
 
-+ Once you're dead, you remain dead.
++ This is what we call longitudinal data. 
++ Each row is an individual i, and columns are for winters t, or sampling occasions. 
++ z is indexed by both i and t, and takes value 1 if ind i is alive in winter t, and 2 otherwise. 
 
 ---
 # A model for longitudinal survival data
@@ -102,11 +126,34 @@ z %>%
 
 + A model relies on assumptions.
 
+???
+
++ Let's think of a model for these data. 
++ The objective remains the same, estimating survival. 
++ To build this model, we'll make assumptions. 
+
 --
 
 + The state of an animal at a given winter, alive or dead, is only dependent on its state the winter before. 
 
+???
+
++ First, we assume that the state of an animal in a given winter, alive or dead, is only dependent on its state the winter before. 
+
 --
+
++ The future depends only on the present, not the past: Markov process.
+
+???
+
++ In others words, he future depends only on the present, not the past
++ This is a Markov process.
+
+--
+
++ If an animal is alive in a given winter, the probability it survives to the next winter is $\phi$. 
+
+???
 
 + If an animal is alive in a given winter, the probability it survives to the next winter is $\phi$. 
 
@@ -114,13 +161,18 @@ z %>%
 
 + The probability it dies is $1 - \phi$.
 
+???
+
++ The probability it dies is $1 - \phi$.
+
 --
 
 + If an animal is dead a winter, it remains dead, unless you believe in zombies. 
 
---
+???
 
-+ This defines a Markov process.
++ If an animal is dead a winter, it remains dead, unless you believe in zombies. 
+
 
 ---
 # Markov process
@@ -150,6 +202,11 @@ z %>%
 ```
 ]
 
+???
+
++ A markov process can be represented this way. 
++ The state at t+1 only depends on the state at t. 
+
 ---
 # Markov process
 
@@ -178,6 +235,12 @@ z %>%
 ```
 ]
 
+???
+
++ In our model, going from a winter to the next is driven by survival and mortality processes. 
++ The probability of going from alive or 1 to alive or 1 is phi. 
++ Then from alive 1 to dead 2 is 1 - phi.
++ And the probability to remain dead is 1, that is to go from state 2 dead to state 2 for dead. 
 
 ---
 # Transition matrix
@@ -186,17 +249,36 @@ z %>%
 
 + The core of the Markov process is made of the transition probabilities.
 
+???
+
++ The engine of a Markov model is the transition matrix. 
++ This matrix or table gathers the probabilities of transition between states from one occasion to the next. 
+
 --
 
 + For example, the probability of transitioning from state alive at $t-1$ to state alive at $t$ is $\Pr(z_t = 1 | z_{t-1} = 1) = \gamma_{1,1}$. It is the survival probability $\phi$. 
 
+???
+
++ For example, the probability of transitioning from state alive at $t-1$ to state alive at $t$ is $\Pr(z_t = 1 | z_{t-1} = 1) = \gamma_{1,1}$. It is the survival probability $\phi$. 
+
+
 --
+
++ The probability of dying over the interval $(t-1, t)$ is $\Pr(z_t = 2 | z_{t-1} = 1) = \gamma_{1,2} = 1 - \phi$.
+
+???
 
 + The probability of dying over the interval $(t-1, t)$ is $\Pr(z_t = 2 | z_{t-1} = 1) = \gamma_{1,2} = 1 - \phi$.
 
 --
 
 + Now if an animal is dead at $t-1$, then $\Pr(z_t = 1 | z_{t-1} = 2) = 0$ and $\Pr(z_t = 2 | z_{t-1} = 2) = 1$.
+
+???
+
++ Now if an animal is dead at $t-1$, then $\Pr(z_t = 1 | z_{t-1} = 2) = 0$ and $\Pr(z_t = 2 | z_{t-1} = 2) = 1$.
+
 
 --
 
@@ -216,7 +298,7 @@ z %>%
 
 ???
 
-+ Add by hand column and row names w/ states and time
++ These probabilities can be packed in a transition matrix $\mathbf{\Gamma}$:
 
 ---
 class: middle, center
@@ -244,7 +326,11 @@ $$
     \end{matrix}
 \end{matrix}
 $$
+???
 
++ Take some time to navigate through this matrix. 
++ From in rows, the origin, to in columns, the destination. 
++ For example...
 
 ---
 # Initial states
@@ -253,17 +339,39 @@ $$
 
 + A Markov process has to start somewhere. 
 
+???
+
++ A Markov process has to start somewhere. 
+
 --
 
 + We need the probabilities of initial states, i.e. states at $t = 1$. 
+
+???
+
++ In other words, we need the probabilities of initial states
++ i.e. states at $t = 1$. 
+
 
 --
 
 + We will use $\mathbf{\delta} = \left(\Pr(z_1 = 1), \Pr(z_1 = 2)\right)$.
 
+???
+
++ We will denote delta this vector. 
++ It gathers the probability of being in each initial states.
++ Here alive 1 and dead 2.
+
 --
 
 + Here we assume that all animals are alive at first winter, i.e. $\Pr(z_1 = 1) = 1$ and $\Pr(z_1 = 2) = 0$. 
+
+???
+
++ All individuals are marked and release in first winter.
++ Therefore alive when first captured.
++ Which means that they are all in state 1 alive for sure. 
 
 ---
 # Likelihood 
