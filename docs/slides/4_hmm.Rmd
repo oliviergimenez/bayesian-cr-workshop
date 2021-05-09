@@ -380,6 +380,11 @@ $$
 \Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)} \\
 \end{align*}
 
+???
+
++ OK now that we've defined a Markov model, we need its likelihood to apply the Bayes theorem. 
++ The likelihood is the probability of the data, given the model. Here the data are the z. 
+
 ---
 # Likelihood 
 
@@ -387,6 +392,11 @@ $$
 \Pr(\mathbf{z}) &= \Pr(z_T, z_{T-1}, z_{T-2}, \ldots, z_1) \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)}\\
                 &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
 \end{align*}
+
+???
+
++ We're gonna work backward, starting from the last sampling occasion. 
++ Now the likelihood can be written as the product of the probability of zT ie you're alive or not on the last occasion given your past history, that is the states at previous occasions, times the prob of your past history, y definition of cond prob. 
 
 ---
 # Likelihood 
@@ -396,6 +406,10 @@ $$
                 &= \Pr(z_T | z_{T-1}, z_{T-2},\ldots, z_1) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
                 &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
 \end{align*}
+
+???
+
++ Then because we have a Markov model, we're memory less, that is prob of next state, here zT, depends only on the current state, that is zT-1, and not the previous states. 
 
 ---
 # Likelihood 
@@ -406,6 +420,11 @@ $$
                 &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1}, z_{T-2},\ldots, z_1) \\
                 &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}, \ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)\\
 \end{align*}
+
+???
+
++ You can apply the same reasoning to T-1. 
++ First conditional prob.
 
 ---
 # Likelihood 
@@ -417,6 +436,10 @@ $$
                 &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}, \ldots, z_1) \Pr(z_{T-2}, \ldots, z_1)\\
                 &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \Pr(z_{T-2}, \ldots, z_1)\\
 \end{align*}
+
+???
+
++ Then markovian property.
 
 ---
 # Likelihood 
@@ -429,6 +452,10 @@ $$
                 &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \Pr(z_{T-2}, \ldots, z_1)\\
                 &= \ldots \\
 \end{align*}
+
+???
+
++ And so on.
 
 ---
 # Likelihood 
@@ -442,6 +469,10 @@ $$
                 &= \ldots \\
                 &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \ldots \Pr(z_{2} | z_{1}) \Pr(z_{1})\\
 \end{align*}
+
+???
+
++ You end up with this expression for the likelihood. 
 
 
 ---
@@ -457,6 +488,10 @@ $$
                 &= \Pr(z_T | z_{T-1}) \Pr(z_{T-1} | z_{T-2}) \ldots \Pr(z_{2} | z_{1}) \Pr(z_{1})\\
                 &= \Pr(z_{1}) \prod_{t=2}^T{\Pr(z_{t} | z_{t-1})}\\
 \end{align*}
+
+???
+
++ A product of cond probabilities. And the prob of initial states Pr(z1). 
 
 
 ---
@@ -474,6 +509,12 @@ $$
                 &= \Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\\
 \end{align*}
 
+???
+
++ We recognize the gammas we defined earlier. 
++ The transition probabilities. 
+
+
 <!-- --- -->
 <!-- # Matrix formulation of the likelihood -->
 
@@ -488,9 +529,19 @@ $$
 
 + Let's assume an animal is alive, alive then dies. 
 
+???
+
++ I realise these calculations are a bit difficult to follow. 
++ Let's take an example. 
+
 --
 
 + We have $\mathbf{z} = (1, 1, 2)$. What is the contribution of this animal to the likelihood?
+
+???
+
++ We have $\mathbf{z} = (1, 1, 2)$. What is the contribution of this animal to the likelihood?
++ Let's apply the formula we have just derived. 
 
 --
 
@@ -498,6 +549,12 @@ $$
 \Pr(\mathbf{z} = (1, 1, 2)) &= \Pr(z_1 = 1) \; \gamma_{z_{1} = 1, z_{2} = 1} \; \gamma_{z_{2} = 1, z_{3} = 2}\\
                             &= 1 \; \phi \; (1 - \phi).
 \end{align*}
+
+???
+
++ The prob of having the sequence alive, alive and dead is
++ The prob of being alive first, the to stay alive, then to die. 
++ The prob of being alive at first occasion being 1, we have that the contribution of this individual to the likelihood is phi times 1 - phi. 
 
 --
 
@@ -525,11 +582,74 @@ $$
   \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
 \end{align*}
 
---
+\begin{align*}
+\mathbf{\Gamma} = 
+\left(\begin{array}{cc} 
+\color{blue}{\phi} & \color{blue}{1 - \phi}\\ 
+0 & 1
+\end{array}\right)
+\end{align*}
+
+
+???
+
++ OK let's wrap it up. 
++ Our model so far is that one. 
+
++ Initial state is multinomial with one trial, and probability delta. 
++ That is you have a dice with two faces, a coin, and you have some prob to be alive, and 1 - that prob to be dead. Of course, it you want your Markov chain to start, you'd better say it's alive so that delta is just (1,0). 
+
++ Then your state at t depends only on your state at t-1, and it is a multinomial random variable, with one trial, and the probabilities are given by the rows of the transition matrix. 
++ If z at t-1 is alive, it is the first row, that is phi and 1-phi. 
++ Otherwise, if z at t-1 is dead that is 2, then it is the second row of gamma, 0 and 1. If dead you remain dead. 
+
++ Last we need a prior on survival, as usual we take a uniform distribution between 0 and 1, or a beta with parameters 1 and 1.
+
+---
+# Our model
+
+\begin{align*}
+   z_1 &\sim \text{Multinomial}(1, \delta) &\text{[likelihood, }t = 1 \text{]}\\
+   z_t | z_{t-1} &\sim \text{Multinomial}(1, \gamma_{z_{t-1},z_{t}}) &\text{[likelihood, }t > 1 \text{]}\\
+  \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
+\end{align*}
+
+\begin{align*}
+\mathbf{\Gamma} = 
+\left(\begin{array}{cc} 
+\phi & 1 - \phi\\ 
+\color{blue}{0} & \color{blue}{1}
+\end{array}\right)
+\end{align*}
+
+
+???
+
++ OK let's wrap it up. 
++ Our model so far is that one. 
+
++ Initial state is multinomial with one trial, and probability delta. 
++ That is you have a dice with two faces, a coin, and you have some prob to be alive, and 1 - that prob to be dead. Of course, it you want your Markov chain to start, you'd better say it's alive so that delta is just (1,0). 
+
++ Then your state at t depends only on your state at t-1, and it is a multinomial random variable, with one trial, and the probabilities are given by the rows of the transition matrix. 
++ If z at t-1 is alive, it is the first row, that is phi and 1-phi. 
++ Otherwise, if z at t-1 is dead that is 2, then it is the second row of gamma, 0 and 1. If dead you remain dead. 
+
++ Last we need a prior on survival, as usual we take a uniform distribution between 0 and 1, or a beta with parameters 1 and 1.
+
+---
+# Nimble implementation
 
 + In Nimble, we will use the categorical distribution `dcat()`.
 
 + The categorical distribution is a multinomial distribution with a single draw. 
+
+???
+
++ In Nimble, we will use the categorical distribution `dcat()`.
+
++ The categorical distribution is a multinomial distribution with a single draw. 
+
 
 --
 
@@ -582,6 +702,186 @@ markov.survival <- nimbleCode({
 
 
 ---
+### Nimble code
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(nimble)
+```
+.small-font[
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior #<<
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2])
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    }
+  }})
+```
+]
+
+---
+### Nimble code
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(nimble)
+```
+.small-font[
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1) #<<
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1) #<<
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1) #<<
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1) #<<
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2])
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    }
+  }})
+```
+]
+
+---
+### Nimble code
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(nimble)
+```
+.small-font[
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1 #<<
+  delta[2] <- 0          # Pr(dead t = 1) = 0 #<<
+  # likelihood
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2])
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    }
+  }})
+```
+]
+
+
+---
+### Nimble code
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(nimble)
+```
+.small-font[
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){ #<<
+    z[i,1] ~ dcat(delta[1:2]) 
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    } 
+  } #<<
+  })
+```
+]
+
+
+---
+### Nimble code
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(nimble)
+```
+.small-font[
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2]) #<<
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    }
+  }})
+```
+]
+
+---
+### Nimble code
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(nimble)
+```
+.small-font[
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2])
+    for (j in 2:T){ #<<
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])
+    } #<<
+  }})
+```
+]
+
+
+---
+### Nimble code
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(nimble)
+```
+.small-font[
+```{r}
+markov.survival <- nimbleCode({
+  phi ~ dunif(0, 1) # prior
+  gamma[1,1] <- phi      # Pr(alive t -> alive t+1)
+  gamma[1,2] <- 1 - phi  # Pr(alive t -> dead t+1)
+  gamma[2,1] <- 0        # Pr(dead t -> alive t+1)
+  gamma[2,2] <- 1        # Pr(dead t -> dead t+1)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,1] ~ dcat(delta[1:2])
+    for (j in 2:T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2]) #<<
+    }
+  }})
+```
+]
+
+
+---
 ### Nimble awesomness
 
 You should be able to define vectors and matrices like you do in `R`.  
@@ -590,8 +890,8 @@ You should be able to define vectors and matrices like you do in `R`.
 ```{r, eval = FALSE}
 markov.survival <- nimbleCode({
   phi ~ dunif(0, 1) # prior
-  gamma[1:2,1:2] <- matrix( c(phi, 0, 1 - phi, 1), nrow = 2)
-  delta[1:2] <- c(1, 0)
+  gamma[1:2,1:2] <- matrix( c(phi, 0, 1 - phi, 1), nrow = 2) #<<
+  delta[1:2] <- c(1, 0) #<<
   # likelihood
   for (i in 1:N){
     z[i,1] ~ dcat(delta[1:2])
@@ -605,7 +905,9 @@ markov.survival <- nimbleCode({
 ---
 ### Converting to Nimble from Jags, OpenBUGS or WinBUGS
 
-+ Main difference is that Nimble does not guess, we need to specify dimensions of vectors and matrices. 
++ Main difference is that Nimble does not guess. 
+
++ We need to specify dimensions of vectors and matrices. 
 
 + You cannot write `x[]` or `x[i,]`. Just provide index ranges `x[1:n]` or `x[i,1:m]`.
 
@@ -699,16 +1001,9 @@ background-color: #234f66
 
 ---
 
-<br><br>
-
-<font size="10">Unfortunately, this is the data we wish we had.</font>
-
----
 class: middle, center
-background-color: #13080C
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/tyX79mPm2xY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+## Unfortunately, this is the data we wish we had. 
 
 ---
 # In real life
@@ -726,6 +1021,29 @@ background-color: #13080C
 + Then, these animals may be detected again, or go undetected <span>&#8212;</span> **capture-recapture** 
 
 --
+
++ Whenever animals go undetected, it might be that they were alive but missed, or because they were dead and therefore could not be detected <span>&#8212;</span> **imperfect detection**. 
+
+
+---
+class: middle, center
+background-color: #13080C
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/tyX79mPm2xY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+# In real life
+
+
++ Animals cannot be monitored exhaustively, like humans in a medical trial.
+
+
++ Animals are captured, marked or identified then released alive. 
+
+
++ Then, these animals may be detected again, or go undetected <span>&#8212;</span> **capture-recapture** 
+
 
 + Whenever animals go undetected, it might be that they were alive but missed, or because they were dead and therefore could not be detected <span>&#8212;</span> **imperfect detection**. 
 
@@ -811,9 +1129,19 @@ y %>%
 ```
 ]
 
+???
+
++ Compare with previous table
++ Some 1s have become 0s. 
+
 --
 
 + This table $y$ is what we observe in real life.
+
+???
+
++ To make the connection between the observations, the y, and the true states, the z
++ We need to describe how observations are made from the states
 
 ---
 # Observation matrix
@@ -901,6 +1229,10 @@ $$
 
 + States $z$ are in gray.
 
+???
+
++ Remember the graphical repres of a Markov model.
+
 ---
 # Hidden Markov model
 
@@ -940,6 +1272,12 @@ $$
 
 + Observations $y$ are in white.
 
+???
+
++ A hidden Markov model is just two time series. 
++ One for the states with a Markovian property.
++ The other of observations generated from the states. 
++ Run in parallel. 
 
 ---
 # Hidden Markov model for survival
@@ -980,6 +1318,12 @@ $$
 
 + For observations (in white), $y = 1$ is non-detected, $y = 2$ is detected
 
+???
+
++ Now add the states alive and dead, 1 and 2s. 
++ The observations, non-detected and detected, 1 and 2s. 
++ And the parameters, phi for transition from 1 to 1.
++ And p for prob of y being 2 detected given z is 1 alive. 
 
 ---
 # HMM likelihood 
@@ -991,6 +1335,17 @@ $$
                 &= \sum_{z_1} \cdots \sum_{z_T} \Pr(y_1, y_{2}, \ldots, y_T | z_1, z_{2}, \ldots, z_T) \Pr(z_1, z_{2}, \ldots, z_T)\\
                 &= \sum_{z_1} \cdots \sum_{z_T} \left(\prod_{t=1}^T{\omega_{z_{t}, y_t}}\right) \left(\Pr(z_{1}) \prod_{t=2}^T{\gamma_{z_{t-1},z_{t}}}\right)\\
 \end{align*}
+
+???
+
++ What is the likelihood of a HMM.
++ The thing here is that we don't know the states. 
++ So we have to go through all possibilities, and sum over the possible states. 
++ Hence these sums here. 
++ Then this term is the likelihood of a Markov chain, we saw that before. 
++ And this component are the elements of the observation matrix.
++ The likelihood has a matrix formulation that can be useful. 
++ It is delta, initial states, then observation, then transitions, and so on. There is a vector of ones at the end to get the sum all the terms.  
 
 --
 
@@ -1038,7 +1393,7 @@ $$
 \begin{align*}
 \Pr(\mathbf{y} = (2, 1)) &= \sum_{z_1 = 1}^2 \; \sum_{z_2 = 1}^2 w_{z_1, y_1 = 2} w_{z_2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2} \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1, z_1, z_1, z_1)}\\
 &= \sum_{z_1 = 1}^2 \left( w_{z_1, y_1 = 2} w_{z_2 = 1, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 1} + w_{z_1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 2} \right) \\
-&= w_{z_1 = 1, y_1 = 2} w_{z_2 = 1, y_1 = 1}\delta_1 \gamma_{z_1 = 1, z_2 = 1} + w_{z_1 = 1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \delta_1 \gamma_{z_1 = 1, z_2 = 2}
+&= w_{z_1 = 1, y_1 = 2} w_{z_2 = 1, y_2 = 1}\delta_1 \gamma_{z_1 = 1, z_2 = 1} + w_{z_1 = 1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \delta_1 \gamma_{z_1 = 1, z_2 = 2}
 \end{align*}
 
 ---
@@ -1060,6 +1415,10 @@ Note: $w_{z_1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition o
 ---
 ### Estimating the latent states $z$ or not?
 
+???
+
++ Next question is, shall we estimate the latent states or not? 
+
 --
 
 + In previous example, we got rid of the states, so that likelihood was a function of $\phi$ and $p$ only. This is the function we would maximize in a Frequentist approach. 
@@ -1070,7 +1429,7 @@ Note: $w_{z_1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition o
 
 --
 
-+ Infering the latent states $z$ can be useful to estimate the prevalence of a states, e.g. in animal epidemiology and [the prevalence of a disease](https://veterinaryresearch.biomedcentral.com/articles/10.1186/1297-9716-45-39), in evolutionary ecology and the [sex ratio](https://onlinelibrary.wiley.com/doi/abs/10.1002/cjs.5550360105) or in conservation biology with  [the prevalence of hybrids](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4819?af=R).  
++ Infering the latent states $z$ can be useful to estimate prevalence, e.g. in animal epidemiology with [prevalence of a disease](https://veterinaryresearch.biomedcentral.com/articles/10.1186/1297-9716-45-39), in evolutionary ecology with [sex ratio](https://onlinelibrary.wiley.com/doi/abs/10.1002/cjs.5550360105) or in conservation biology with [prevalence of hybrids](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4819?af=R).  
 
 --
 
@@ -1082,7 +1441,7 @@ Note: $w_{z_1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition o
 
 --
 
-+ The neat thing with Nimble is that it provides marginalised models through NimbleEcology, we'll get back to it in Class 8.
++ The neat thing with Nimble is that it provides marginalised models through nimbleEcology, we'll get back to it in Class 8.
 
 ---
 # Our model
@@ -1095,6 +1454,10 @@ Note: $w_{z_1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition o
   p &\sim \text{Beta}(1, 1) &\text{[prior for }p \text{]} \\ 
 \end{align*}
 
+???
+
++ Now our model has an observation layer for the ys, conditional on the z. 
++ And we need a prior for the detection probability. 
 
 ---
 
@@ -1102,6 +1465,9 @@ Note: $w_{z_1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition o
 
 <font size="8">Nimble implementation</font>
 
+???
+
++ How to implement this model in Nimble? 
 
 ---
 ## Priors
