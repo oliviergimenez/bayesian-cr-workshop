@@ -578,6 +578,55 @@ $$
 
 \begin{align*}
    z_1 &\sim \text{Multinomial}(1, \delta) &\text{[likelihood, }t = 1 \text{]}\\
+   \color{white}{z_t | z_{t-1}} & \color{white}{\sim} \color{white}{\text{Multinomial}(1, \gamma_{z_{t-1},z_{t}})} & \color{white}{\text{[likelihood, }t > 1 \text{]}}\\
+  \color{white}{\phi} & \color{white}{\sim} \color{white}{\text{Beta}(1, 1)} & \color{white}{\text{[prior for }\phi \text{]}} \\ 
+\end{align*}
+
+???
+
++ OK let's wrap it up. 
++ Our model so far is that one. 
+
++ Initial state is multinomial with one trial, and probability delta. 
++ That is you have a dice with two faces, a coin, and you have some prob to be alive, and 1 - that prob to be dead. + Of course, it you want your Markov chain to start, you'd better say it's alive so that delta is just (1,0). 
+
+---
+# Our model
+
+\begin{align*}
+   z_1 &\sim \text{Multinomial}(1, \delta) &\text{[likelihood, }t = 1 \text{]}\\
+   \color{white}{z_t | z_{t-1}} & \color{white}{\sim} \color{white}{\text{Multinomial}(1, \gamma_{z_{t-1},z_{t}})} & \color{white}{\text{[likelihood, }t > 1 \text{]}}\\
+  \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
+\end{align*}
+
+???
+
++ We also need a prior on survival.
++ As usual we take a uniform distribution between 0 and 1, or a beta with parameters 1 and 1.
+
+---
+# Our model
+
+\begin{align*}
+   z_1 &\sim \text{Multinomial}(1, \delta) &\text{[likelihood, }t = 1 \text{]}\\
+   z_t | z_{t-1} &\sim \text{Multinomial}(1, \gamma_{z_{t-1},z_{t}}) &\text{[likelihood, }t > 1 \text{]}\\
+  \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
+\end{align*}
+
+
+???
+
++ Now the main part is the dynamic of the states.
++ Our state at t depends only on your state at t-1, and it is a multinomial random variable, with one trial. 
++ And the probabilities are given by the rows of the transition matrix.
+
+
+
+---
+# Our model
+
+\begin{align*}
+   z_1 &\sim \text{Multinomial}(1, \delta) &\text{[likelihood, }t = 1 \text{]}\\
    z_t | z_{t-1} &\sim \text{Multinomial}(1, \gamma_{z_{t-1},z_{t}}) &\text{[likelihood, }t > 1 \text{]}\\
   \phi &\sim \text{Beta}(1, 1) &\text{[prior for }\phi \text{]} \\ 
 \end{align*}
@@ -590,20 +639,12 @@ $$
 \end{array}\right)
 \end{align*}
 
+$$\color{blue}{\gamma_{z_{t-1} = 1,z_{t}} = (\phi, 1-\phi)}$$
+
 
 ???
 
-+ OK let's wrap it up. 
-+ Our model so far is that one. 
-
-+ Initial state is multinomial with one trial, and probability delta. 
-+ That is you have a dice with two faces, a coin, and you have some prob to be alive, and 1 - that prob to be dead. Of course, it you want your Markov chain to start, you'd better say it's alive so that delta is just (1,0). 
-
-+ Then your state at t depends only on your state at t-1, and it is a multinomial random variable, with one trial, and the probabilities are given by the rows of the transition matrix. 
 + If z at t-1 is alive, it is the first row, that is phi and 1-phi. 
-+ Otherwise, if z at t-1 is dead that is 2, then it is the second row of gamma, 0 and 1. If dead you remain dead. 
-
-+ Last we need a prior on survival, as usual we take a uniform distribution between 0 and 1, or a beta with parameters 1 and 1.
 
 ---
 # Our model
@@ -622,20 +663,12 @@ $$
 \end{array}\right)
 \end{align*}
 
+$$\color{blue}{\gamma_{z_{t-1} = 2,z_{t}} = (0, 1)}$$
 
 ???
 
-+ OK let's wrap it up. 
-+ Our model so far is that one. 
-
-+ Initial state is multinomial with one trial, and probability delta. 
-+ That is you have a dice with two faces, a coin, and you have some prob to be alive, and 1 - that prob to be dead. Of course, it you want your Markov chain to start, you'd better say it's alive so that delta is just (1,0). 
-
-+ Then your state at t depends only on your state at t-1, and it is a multinomial random variable, with one trial, and the probabilities are given by the rows of the transition matrix. 
-+ If z at t-1 is alive, it is the first row, that is phi and 1-phi. 
-+ Otherwise, if z at t-1 is dead that is 2, then it is the second row of gamma, 0 and 1. If dead you remain dead. 
-
-+ Last we need a prior on survival, as usual we take a uniform distribution between 0 and 1, or a beta with parameters 1 and 1.
++ Otherwise, if z at t-1 is dead that is 2, then it is the second row of gamma, 0 and 1. 
++ If dead you remain dead. 
 
 ---
 # Nimble implementation
