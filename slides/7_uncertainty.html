@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # Known knowns, unknown knowns and unknowns: Uncertainty in state assignment
 ### The team
-### last updated: 2021-04-26
+### last updated: 2021-05-10
 
 ---
 
@@ -25,6 +25,13 @@ class: center, middle, title-slide
 ## Uncertainty in state assignment
 
 Multievent models extend multistate models with uncertainty in state assignment
+
+???
+
++ In this module, we're going to talk about multievent models.
++ Multievent models extend multistate models with uncertainty in state assignment.
++ Let's see some examples to fix ideas. 
++ These examples are from published papers which used multievent models. 
 
 --
 
@@ -50,9 +57,18 @@ Multievent models extend multistate models with uncertainty in state assignment
 
 We need to explicitly consider state assignment in a model
 
+???
+
++ The common thing to all these examples is that.
++ We need to explicitly consider state assignment in a model.
+
 --
 
 HMMs to the rescue!
+
+???
+
++ And to do that, we'll use HMMs again! 
 
 ---
 ## Examples
@@ -65,6 +81,12 @@ HMMs to the rescue!
 
 + Estimating survival while accounting for individual heterogeneity in detection
 
+???
+
++ In this module, I'll go through 3 examples. 
++ Testing life-history trade-offs while accounting for uncertainty in breeding status.
++ Quantifying disease dynamics while accounting for uncertainty in disease status.
++ Estimating survival while accounting for individual heterogeneity in detection.
 
 ---
 ## Examples
@@ -99,6 +121,14 @@ background-size: cover
     + found, ascertained as non-breeder (2)
     + found, status unknown (3)
 
+???
+
++ We still have 3 states, breeding, non-breeding and dead.
++ With regard to observations, a bird may be not encountered.
++ It may also be encountered, but in contrast with multistate CR data, we don't know its state for sure. 
++ It may be found and ascertained or classified as breeder. 
++ It may be found and ascertained or classified as non-breeder. 
++ It may be found be we are unable to determine whether it's breeding or non-breeding.  
 
 ---
 class: middle
@@ -108,7 +138,9 @@ class: middle
 ![](7_uncertainty_files/figure-html/unnamed-chunk-1-1.svg)&lt;!-- --&gt;
 ]
 
+???
 
++ Now how do the states generate the observations?
 
 ---
 class: middle
@@ -148,6 +180,11 @@ class: middle
 ![](7_uncertainty_files/figure-html/unnamed-chunk-5-1.svg)&lt;!-- --&gt;
 ]
 
+???
+
++ To wrap up each live state can generate 3 observations. 
++ The only deterministic link is that between the dead state and the observation non-encountered.
++ Cause if you're dead, you cannot be detected for sure. 
 
 ---
 ### HMM model for breeding states with uncertainty
@@ -176,6 +213,14 @@ $$
 + `\(\pi_B\)` is the probability that a newly encountered individual is a breeder
 
 + `\(\pi_{NB} = 1 - \pi_B\)` is the probability that a newly encountered individual is a non-breeder
+
+???
+
++ OK now let’s specify the model. 
++ First thing we need, and it’s a big difference with multistate models, we need initial state probabilities cause we cannot assign states to individuals w/ certainty. 
++ Let's define pi_B the prob that a newly encountered individual is a breeding individual.
++ We write down the prob for each state at first encounter. We have pi_B, then the prob of being a NB is the complementary. And the prob of being dead at first encounter is 0 of course. 
+
 
 ---
 ### HMM model for breeding states with uncertainty
@@ -211,6 +256,9 @@ $$
 
 + `\(\psi_{NBB}\)` is the probability for an non-breeder individual to breeder the next year.
 
+???
+
++ The transition parameters are in a matrix similar to the one we used for multistate models.  
 
 ---
 ### HMM model for breeding states with uncertainty
@@ -246,6 +294,19 @@ $$
 
 + `\(p_B\)` is the detection probability of breeders, `\(p_{NB}\)` that of non-breeders.
 
+???
+
++ The main difference between multistate and multievent models is here, in the observation parameters. 
++ We introduce two new parameters. 
++ deltaB: prob. to correctly assign an indiv. that is in state B to state B
++ deltaNB: prob. to correctly assign an indiv. that is in state NB to state NB
+
++ We put everything in a matrix, as usual. The observation matrix. 
+
++ In rows we have the states, breeding, non-breeding and dead. 
++ In columns, at the same occasion, we have the observation, detected and ascertained B, 
+detected and ascertained NB, detected and state unknown, and not detected. 
++ For example, the prob of being detected and assigned to the state B, given that you’re in state B is the product of the detection prob in B and delta the prob of correctly assigning a B individual to state B. 
 
 
 ---
@@ -276,6 +337,13 @@ $$
 $$
 
 Note: Breeding assessment is unaffected.
+
+???
+
++ Then at first encounter, what happens is that step 1 of encounter is degenerate because individuals are all captured. Just set all the p’s to 1 in the encounter matrix. 
+
++ The breeding assessment matrix remains unchanged. 
+
 
 ---
 ### Our model `\((\phi_B, \phi_{NB}, \psi_{BNB}, \psi_{NBB}, p_B, p_{NB}, \beta_B, \beta_{NB}, \pi)\)`
@@ -452,9 +520,7 @@ multievent &lt;- nimbleCode({
 ]
 
 ---
-
-&lt;br&gt;
-&lt;br&gt;
+## Results
 
 .center[
 
@@ -471,6 +537,10 @@ psiBNB 0.23 0.02 0.18 0.22  0.27 1.00   214
 psiNBB 0.25 0.04 0.17 0.25  0.34 1.00    95
 ```
 ]
+
++ Breeders are difficult to assigned to the correct state.
++ Non-breeders are relatively well classified as non-breeders. 
++ No cost of breeding, neither on survival, nor on future reproduction.
 
 ---
 
@@ -500,7 +570,10 @@ background-color: #234f66
 
 + Estimating survival while accounting for individual heterogeneity in detection
 
+???
 
++ Let's have a look to another example. 
++ Very similar to the previous example. 
 
 ---
 ## Animal epidemiology with uncertain disease states
@@ -519,7 +592,7 @@ background-size: cover
 
 + We consider a system of an emerging pathogen *Mycoplasma gallisepticum* Edward and Kanarek and its host the house finch, *Carpodacus mexicanus* Müller. 
 
-+ [Faustino et al. (2004)](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8790.2004.00840.x), and [Conn &amp; Cooch (2009)](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2664.2008.01597.x) studied impact of pathogen on host demographic rates.
++ [Faustino et al. (2004)](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.0021-8790.2004.00840.x) and [Conn &amp; Cooch (2009)](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2664.2008.01597.x) studied impact of pathogen on host demographic rates.
 
 + Problem is true disease state for some encountered individuals is ambiguous because seen at distance.
 
@@ -721,9 +794,7 @@ $$
 
 
 ---
-
-&lt;br&gt;
-&lt;br&gt;
+### Results
 
 .center[
 
@@ -740,6 +811,10 @@ psiHI 0.22 0.04 0.16 0.22  0.32 1.02   311
 psiIH 0.46 0.08 0.32 0.45  0.63 1.02   392
 ```
 ]
+
++ Healthy individuals are correctly assigned, while infected individuals are difficult to ascertain. 
++ Sounds like being infected has an effect on detection and survival. Run models without effects and compare with WAIC for formal testing. 
++ Infection rate is 22%, recovery rate is 46%.
 
 ---
 
@@ -772,12 +847,19 @@ background-color: black
 
 + **Estimating survival while accounting for individual heterogeneity in detection**
 
+???
 
++ Our last example is about individual heterogeneity and how to account for it with HMMs. 
 
 ---
 ## Individual heterogeneity with finite mixtures. 
 
 + Gray wolf is a social species with hierarchy in packs which may reflect in species demography.
+
+
+???
+
++ As an example, we'll work with gray wolves. 
 
 ---
 background-image: url("img/wolfdominance.jpg")
@@ -789,7 +871,7 @@ background-size: cover
 
 + Gray wolf is a social species with hierarchy in packs which may reflect in demography.
 
-+ Shirley Pledger is a series of papers developed heterogeneity models in which individuals are assigned in two or more classes with class-specific survival/detection probabilities. 
++ Shirley Pledger in a series of papers developed heterogeneity models in which individuals are assigned in two or more classes with class-specific survival/detection probabilities. 
 
 + [Cubaynes et al. (2010)](https://conbio.onlinelibrary.wiley.com/doi/abs/10.1111/j.1523-1739.2009.01431.x) used HMMs to account for heterogeneity in the detection process due to social status, see also [Pradel et al. (2009)](https://link.springer.com/chapter/10.1007%2F978-0-387-78151-8_36).
 
@@ -935,8 +1017,7 @@ $$
 
 ---
 
-&lt;br&gt;
-&lt;br&gt;
+## Results
 
 .center[
 
@@ -948,6 +1029,14 @@ phi 0.81 0.05 0.71 0.81  0.91 1.04   317
 pi  0.62 0.12 0.36 0.63  0.83 1.02   164
 ```
 ]
+
++ We have lowly detectable individuals (class A1 with `\(p_1\)`) in proportion 62%.
+
++ And highly (or so) detectable individuals (class A2 with `\(p_2\)`) in proportion 38%.
+
++ N ote that interpretation of classes is made a posteriori. 
+
++ Survival is 81%. 
 
 ---
 
@@ -1200,9 +1289,9 @@ $$
 
 + Seminal paper by Pradel (2005) [Multievent: An Extension of Multistate Capture–Recapture Models to Uncertain States](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1541-0420.2005.00318.x). Biometrics, 61: 442-447.
 
-+ See also Gimenez et al. (2012) [Estimating demographic parameters using hidden process dynamic models](https://oliviergimenez.github.io/pubs/Gimenezetal2012TPB.pdf). Theoretical Population Biology 82: 307-316.
-
 + Dupuis (1995) had a similar idea for the Arnason-Schwarz model: Dupuis, J. (1995) [Bayesian estimation of movement and survival probabilities from capture-recapture data](https://academic.oup.com/biomet/article-abstract/82/4/761/252161). Biometrika. Vol. 82, pp 761-772.
+
++ See also for a review Gimenez et al. (2012) [Estimating demographic parameters using hidden process dynamic models](https://oliviergimenez.github.io/pubs/Gimenezetal2012TPB.pdf). Theoretical Population Biology 82: 307-316.
 
 
 
