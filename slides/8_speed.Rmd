@@ -25,8 +25,6 @@ library(nimble)
 library(MCMCvis)
 ```
 
-
----
 ## Our `nimble` workflow so far
 
 ![](img/nimble_workflow_sofar.png)
@@ -148,7 +146,8 @@ hmm.phip <- nimbleModel(code = hmm.phip,
 
 .small-font[
 ```{r, eval = TRUE, echo = TRUE, message = TRUE}
-phip.mcmc <- buildMCMC(hmm.phip)
+phip.mcmc.configuration <- configureMCMC(hmm.phip)
+phip.mcmc <- buildMCMC(phip.mcmc.configuration)
 ```
 ]
 
@@ -167,16 +166,18 @@ c.phip.mcmc <- compileNimble(phip.mcmc, project = phip.model)
 
 .small-font[
 ```{r, eval = TRUE, echo = TRUE, message = TRUE}
-c.phip.mcmc$run(1000)
+samples <- runMCMC(c.phip.mcmc, niter = 1000)
+# Alternative:
+# c.phip.mcmc$run(1000)
+# samples <- as.matrix(c.phip.mcmc$mvSamples)
 ```
 ]
 
 ---
-## 5. Extract samples and summarise
+## 5. Look at results
 
 .small-font[
 ```{r, eval = TRUE, echo = TRUE, message = TRUE}
-samples <- as.matrix(c.phip.mcmc$mvSamples)
 summary(samples[,"phi"])
 summary(samples[,"p"])
 ```
@@ -204,11 +205,38 @@ hmm.phip$gamma
 hmm.phip$calculate()
 ```
 
+---
+## Example of debugging a model in `R`
+
++ Pretend an impossible state was given in inits, making a dead bird alive again.
+
+```{r echo=FALSE}
+# Pretend that inits for the 6th bird are invalid, going from dead to alive.
+saved_z_6 <- phip.model$z[6,]
+phip.model$z[6,] <- c(1, 1, 2, 1, 2, 2, 2)
+```
+
+.small-font[
+```{r, eval = TRUE, echo = TRUE, message = TRUE}
+phip.model$calculate("z")   # We can see there is a problem in z (states).
+c(phip.model$calculate("z[5,]"), # Bird 5 is valid.
+  phip.model$calculate("z[6,]")) # Bird 6 isn't.
+phip.model$z[6,]            # We have found the problem
+```
+]
+
+```{r echo=FALSE}
+# Restore to valid valies
+phip.model$z[6,] <- saved_z_6
+```
+
 
 ---
 ## Open the hood, and change/modify/write samplers
 
 + Slice samplers instead of Metropolis-Hastings.
+
++ Samplers on a log scale, especially for a variance, standard deviation, or precision parameter.
 
 + Blocking correlated parameters.
 
@@ -217,11 +245,6 @@ hmm.phip$calculate()
 + Source code for samplers and distributions is **in R** and can be copied and modified.
 
 + Use [`compareMCMCs` package](https://github.com/nimble-dev/compareMCMCs) to compare options (including Stan and Jags!). 
-
-???
-
-compareMCMCs status: It has been in waiting zone for release as its own package. It is pretty much ready and we need to get it out, maybe by the workshop. It is no longer a function in nimble.
-
 
 ---
 class: middle, center
@@ -287,24 +310,38 @@ hmm.phiwlrep <- nimbleCode({
 ]
 
 ```{r echo = FALSE, eval = FALSE}
-mcmc.phiwlrep <- nimbleMCMC(code = hmm.phiwlrep, 
-                            constants = my.constants,
-                            data = my.data,              
-                            inits = initial.values,
-                            monitors = parameters.to.save,
-                            niter = n.iter,
-                            nburnin = n.burnin, 
-                            nchains = n.chains)
-save(mcmc.phiwlrep, file = here::here("slides", "dat", "wl.RData"))
+# mcmc.phiwlrep <- nimbleMCMC(code = hmm.phiwlrep, 
+#                             constants = my.constants,
+#                             data = my.data,              
+#                             inits = initial.values,
+#                             monitors = parameters.to.save,
+#                             niter = n.iter,
+#                             nburnin = n.burnin, 
+#                             nchains = n.chains)
+hmm.phiwlrep.m <- nimbleModel(code = hmm.phiwlrep,
+                              constants = my.constants,
+                              data = my.data,
+                              inits = initial.values())
+Rmcmc <- buildMCMC(hmm.phiwlrep.m)
+Cmodel <- compileNimble(hmm.phiwlrep.m)
+Cmcmc <- compileNimble(Rmcmc, project=hmm.phiwlrep.m)
+times.phiwlrep <- system.time( mcmc.phiwlrep <- runMCMC(Cmcmc, niter = 10000, nchains = 2) )
+# Alternative:
+# Cmcmc$run(10000)
+# samples1 <- as.matrix(Cmcmc$mvSamples)
+# Cmcmc$run(10000)
+# samples2 <- as.matrix(Cmcmc$mvSamples)
+save(times.phiwlrep, mcmc.phiwlrep, file = here::here("slides", "dat", "wl.RData"))
 ```
 
 
 ---
-## Standard deviation of the random effect
+## Trace plot for standard deviation of the random effect (default sampler)
 
-```{r echo = FALSE, message=FALSE, warning=FALSE}
+```{r echo = FALSE, message=FALSE, warning=FALSE} 
 load(here::here("slides", "dat", "wl.RData"))
 ```
+
 ```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.718, dev = "svg", message=FALSE, warning=FALSE, fig.align="center"}
 MCMCtrace(mcmc.phiwlrep, params = "sdeps", pdf = FALSE)
 ```
@@ -312,18 +349,18 @@ MCMCtrace(mcmc.phiwlrep, params = "sdeps", pdf = FALSE)
 ---
 ## Change samplers
 
-+ What are the samplers used by default?
++ Good sampling strategies depend on the model and data.  What are the samplers used by default?
 
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
-hmm.phiwlrep <- nimbleModel(code = hmm.phiwlrep,
-                            constants = my.constants,
-                            data = my.data,
-                            inits = initial.values())
+hmm.phiwlrep.m <- nimbleModel(code = hmm.phiwlrep,
+                              constants = my.constants,
+                              data = my.data,
+                              inits = initial.values())
 ```
 
 .tiny-font[
 ```{r}
-mcmcConf <- configureMCMC(hmm.phiwlrep)
+mcmcConf <- configureMCMC(hmm.phiwlrep.m)
 ```
 ]
 
@@ -344,34 +381,72 @@ mcmcConf
 
 ```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg", warning=FALSE, message=FALSE, fig.align="center"}
 Rmcmc <- buildMCMC(mcmcConf)
-Cmodel <- compileNimble(hmm.phiwlrep)
-Cmcmc <- compileNimble(Rmcmc, project=hmm.phiwlrep)
-Cmcmc$run(10000)
-samples1 <- as.matrix(Cmcmc$mvSamples)
-Cmcmc$run(10000)
-samples2 <- as.matrix(Cmcmc$mvSamples)
+Cmodel <- compileNimble(hmm.phiwlrep.m)
+Cmcmc <- compileNimble(Rmcmc, project=hmm.phiwlrep.m)
+times.phiwlrep.with.slice <- system.time( mcmc.phiwlrep.with.slice <- runMCMC(Cmcmc, niter = 10000, nchains = 2))
+samples1 <- mcmc.phiwlrep.with.slice[[1]]
+samples2 <- mcmc.phiwlrep.with.slice[[2]]
+iUse <- 2501:10000
+ESS.with.slice <- coda::effectiveSize(list(coda::as.mcmc(samples1[iUse, 'sdeps']),
+                                           coda::as.mcmc(samples2[iUse, 'sdeps'])))
+# Cmcmc$run(10000)
+# samples1 <- as.matrix(Cmcmc$mvSamples)
+# Cmcmc$run(10000)
+# samples2 <- as.matrix(Cmcmc$mvSamples)
 df <- data.frame(iter = c(2501:10000, 2501:10000),
-                 samples = c(samples1[2501:10000,"sdeps"], samples2[2501:10000,"sdeps"]), 
+                 samples = c(samples1[2501:10000,"sdeps"], samples2[2501:10000,"sdeps"]),
                  chain = c(rep("chain 1", length(samples1[2501:10000,"sdeps"])),
                            rep("chain 2", length(samples2[2501:10000,"sdeps"]))))
 df.beta <- data.frame(iter = c(2501:10000, 2501:10000),
-                 beta1 = c(samples1[2501:10000,"beta[1]"], samples2[2501:10000,"beta[1]"]), 
-                 beta2 = c(samples1[2501:10000,"beta[2]"], samples2[2501:10000,"beta[2]"]), 
+                 beta1 = c(samples1[2501:10000,"beta[1]"], samples2[2501:10000,"beta[1]"]),
+                 beta2 = c(samples1[2501:10000,"beta[2]"], samples2[2501:10000,"beta[2]"]),
                  chain = c(rep("chain 1", length(samples1[2501:10000,"sdeps"])),
                            rep("chain 2", length(samples2[2501:10000,"sdeps"]))))
 ```
 
 ---
-## Trace plot
+## Trace plot for standard deviation of the random effect (slice sampler)
 
-```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg", warning=FALSE, message=FALSE, fig.align="center"}
-df %>%
-  ggplot() + 
-  aes(x = iter, y = samples, group = chain, color = chain) + 
-  geom_line() + 
-  labs(x = "iterations", y = "random effect standard deviation", color = "")
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.718, dev = "svg", message=FALSE, warning=FALSE, fig.align="center"}
+MCMCtrace(mcmc.phiwlrep.with.slice, params = "sdeps", pdf = FALSE)
 ```
 
+```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.618, dev = "svg", warning=FALSE, message=FALSE, fig.align="center"}
+# df %>%
+#   ggplot() + 
+#   aes(x = iter, y = samples, group = chain, color = chain) + 
+#   geom_line() + 
+#   labs(x = "iterations", y = "random effect standard deviation", color = "")
+```
+
+---
+## Which is better?
+
++ MCMC efficiency depends on both mixing and computation time.
+
++ MCMC efficiency = Effective Sample Size (ESS) / computation time.
+
++ MCMC efficiency is the number of effectively independent posterior samples generated per second.
+
++ ESS is different for each parameter.  (Computation time is the same for each parameter.)
+
++ ESS can be estimated from packages `coda` or `mcmcse`. These give statistical estimates, so different runs will give different estimates.
+
+```{r echo = FALSE}
+iUse <- 2501:10000
+time_frac <- 0.75 # Include 75% of the time to count sampling of recorded sampled, which is not the only valid option.
+ESS <- coda::effectiveSize(list(coda::as.mcmc(mcmc.phiwlrep[[1]][iUse, 'sdeps']),
+                                        coda::as.mcmc(mcmc.phiwlrep[[2]][iUse, 'sdeps'])))
+t1 <- (time_frac * times.phiwlrep[3])
+efficiency <- ESS / t1
+t.with.slice <- (time_frac * times.phiwlrep.with.slice[3])
+efficiency.with.slice <- ESS.with.slice / t.with.slice
+rd2 <- function(x) round(x, digits = 2)
+```
+
++ Efficiency with default sampler = `r rd2(ESS)` / `r rd2(t1)` = `r rd2(efficiency)`.
+
++ Efficiency with slice sampler = `r rd2(ESS.with.slice)` / `r rd2(t.with.slice)` = `r rd2(efficiency.with.slice)`.
 
 ---
 ## Block sampling
@@ -382,7 +457,7 @@ df %>%
 df.beta %>%
   ggplot() + 
   aes(x = beta1, y = beta2, group = chain, color = chain) +
-  geom_point(alpha = .2) + 
+  geom_point(alpha = .05) + 
   labs(x = "beta1", y = "beta2", color = "")
 ```
 
@@ -430,7 +505,9 @@ mcmcConf
 + Rewrite the model.
 
     + Vectorize to improve computational efficiency (not covered).
+    + Avoid long chains of deterministic dependencies.
     + Marginalize to remove parameters
+    + Use new functions and new distributions written as nimbleFunctions.
 
 --
 
@@ -448,9 +525,9 @@ mcmcConf
 
 + Integrate over latent states if those are not the focus of ecological inference (marginalization).
 
-+ In general, marginalization improves MCMC. 
++ Marginalization often (but not always) improves MCMC. See [Ponisio et al. 2020](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.6053) for examples.
 
-+ The [NimbleEcology](https://cran.r-project.org/web/packages/nimbleEcology/vignettes/Introduction_to_nimbleEcology.html) implements capture-recapture models and HMMs with marginalization. 
++ The [nimbleEcology](https://cran.r-project.org/web/packages/nimbleEcology/vignettes/Introduction_to_nimbleEcology.html) package implements capture-recapture models and HMMs with marginalization. 
 
 ---
 ### Our model $(\phi_A, \phi_B, \psi_{AB}, \psi_{BA}, p_A, p_B)$
@@ -498,10 +575,12 @@ for (i in 1:N){
 ```
 ]
 
-+ Twice as fast as the standard formulation with explicit latent states. 
++ This runs twice as fast as the standard formulation with explicit latent states.
+
++ Marginalizing typically gives better mixing.
 
 ---
-### Weighted likelihood
+### Reducing redundant calculations
 
 + So far, a row of the dataset is an individual. However, several individuals may share the same encounter history. 
 
@@ -511,7 +590,7 @@ for (i in 1:N){
 
 --
 
-+ Using this so-called weighted likelihood greatly decreases the computational burden.
++ Using this so-called **weighted likelihood** greatly decreases the computational burden.
 
 --
 
@@ -523,7 +602,7 @@ for (i in 1:N){
 
 --
 
-+ The run is damn fast. Also allows fitting models to big datasets. More details in dedicated Worksheet.
++ The run is *much* faster. Also allows fitting models to big datasets. More details in dedicated Worksheet.
 
 ---
 background-color: #234f66
@@ -534,11 +613,23 @@ background-color: #234f66
 ]
 
 
+---
+## Future directions for NIMBLE
+
++ NIMBLE is under active development.  Contributors are welcome, including those who want to get involved but don't know where.
+
++ Faster building of models and algorithms.  Ability to save and re-load compiled work.
+
++ Automatic differentiation of model calculations, enabling Hamiltonian Monte Carlo, other sampling strategies, and Laplace approximation.
+
++ Tools for building packages that use NIMBLE "under the hood".
 
 ---
 ## Further reading
 
-+ Turek, D., de Valpine, P. & Paciorek, C.J. [Efficient Markov chain Monte Carlo sampling for hierarchical hidden Markov models](https://doi.org/10.1007/s10651-016-0353-z). Environ Ecol Stat 23, 549–564 (2016).
++ Turek, D., de Valpine, P. & Paciorek, C.J. [Efficient Markov chain Monte Carlo sampling for hierarchical hidden Markov models](https://doi.org/10.1007/s10651-016-0353-z) *Environ Ecol Stat* 23: 549–564 (2016).
+
++ Ponisio, L.C., de Valpine, P., Michaud, N., and Turek, D. [One size does not fit all: Customizing MCMC methods for hierarchical models using NIMBLE](https://doi.org/10.1002/ece3.6053) *Ecol Evol.* 10: 2385–2416 (2020).
 
 + Nimble workshop to come 26-28 May, check out [here](https://r-nimble.org/nimble-virtual-short-course-may-26-28).
 
