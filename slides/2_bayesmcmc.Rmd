@@ -41,8 +41,6 @@ background-size: cover
 
 ]
 
---
-
 .pull-right[
 .title-font[]
 
@@ -87,6 +85,11 @@ $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{h
 How plausible is some hypothesis given the data?
 
 $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{hypothesis}) \; \Pr(\text{hypothesis})}{\Pr(\text{data})} $$
+???
+
++ The Bayesian reasoning echoes the scientific reasoning. 
++ You might ask then, why is Bayesian statistics not the default?
+
 
 ---
 # Why is Bayesian statistics not the default?
@@ -113,7 +116,7 @@ $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{h
 
 --
 
-+ Classical estimates generally provide a point estimate of the parameter of interest.
++ Classical estimates are generally point estimates of the parameters of interest.
 
 --
 
@@ -125,6 +128,10 @@ $$ \Pr(\text{hypothesis} \mid \text{data}) = \frac{ \Pr(\text{data} \mid \text{h
 --
 
 + The approach is based upon the idea that the experimenter begins with some prior beliefs about the system.
+
+???
+
++ You never start from scratch. 
 
 --
 
@@ -166,7 +173,7 @@ $${\color{red}{\Pr(\theta \mid \text{data})}} = \frac{\color{blue}{\Pr(\text{dat
 
 --
 
-+ $\color{blue}{\text{Likelihood}}$: We know that quantity, same as in the MLE approach.
++ $\color{blue}{\text{Likelihood}}$: This quantity is the same as in the MLE approach.
 
 --
 
@@ -357,7 +364,11 @@ background-size: cover
 
 --
 
-+ Converge to equilibrium (aka stationary) distribution.
++ A Markov chain is a discrete sequence of states, in which the probability of an event depends only on the state in the previous event.
+
+--
+
++ A Markov chain has an equilibrium (aka stationary) distribution.
 
 --
 
@@ -595,13 +606,11 @@ background-color: #FCFCFF
 ]
 
 ---
-# The MCMC Interactive Gallery
+## The MCMC Interactive Gallery (more [here](https://chi-feng.github.io/mcmc-demo/))
 
 .center[
 ![](img/galery.png)
 ]
-
-Visit <https://chi-feng.github.io/mcmc-demo/>
 
 ---
 # Assessing convergence
@@ -880,7 +889,11 @@ If simulations cheap, be conservative.
 
 --
 
-+ Measures the ratio of the total variability combining multiple chains (between-chain plus within-chain) to the within-chain variability. Asks the question is there a chain effect? Very much alike the $F$ test in an ANOVA. 
++ Measures the ratio of the total variability combining multiple chains (between-chain plus within-chain) to the within-chain variability. 
+
+--
+
++ Asks the question is there a chain effect? Very much alike the $F$ test in an ANOVA. 
 
 --
 
