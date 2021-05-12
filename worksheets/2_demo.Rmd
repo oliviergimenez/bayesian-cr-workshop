@@ -18,7 +18,7 @@ library(nimble)
 
 ## Introduction
 
-In this demo, we show a simple example of how to use nimble. We use the survival example with $y = 19$ alive individuals out of $n = 57$ released. A binomial likelihood is assumed, with a beta prior on survival. 
+In this demo, we show a simple example of how to use nimble. We use the survival example with $y = 19$ alive individuals out of $n = 57$ released. A binomial likelihood is assumed, with a uniform prior on survival. 
 
 ## Prepare everything 
 
@@ -63,17 +63,19 @@ Set the details of the MCMC run. Here we will use 5000 iterations, including 100
 n.iter <- 5000
 n.burnin <- 1000
 n.chains <- 2
+n.thin <- 1
 ```
 
 ## Run nimble
 
-Run nimme. 
+Run nimble. 
 ```{r, warning=FALSE, message=FALSE, eval = TRUE}
 mcmc.output <- nimbleMCMC(code = naive.survival.model,     # model code  
                           data = my.data,                  # data
                           constants = my.constants,        # constants
                           inits = initial.values,          # initial values
                           monitors = parameters.to.save,   # parameters to monitor
+                          thin = n.thin,                   # thinning interval (default = 1)
                           niter = n.iter,                  # nb iterations
                           nburnin = n.burnin,              # length of the burn-in
                           nchains = n.chains)              # nb of chains
@@ -122,6 +124,50 @@ MCMCtrace(mcmc.output,
           ind = TRUE,
           Rhat = TRUE,
           n.eff = TRUE) 
+```
+
+## Reproducibility for trouble-shooting and publishing
+Being able to reproduce the exactly same initial values and MCMC chains can be very useful for pinpointing the source of errors, and also when publishing your code/workflows.
+
+Here are three easy steps to make your workflow more reproducible: 
+
+**1) Setting a defined initial seed at the start of your code**
+```{r, echo = TRUE, eval = FALSE}
+mySeed <- 0
+set.seed(mySeed)
+```
+
+**2) Using "pre-sampled" initial values**
+```{r, echo = TRUE, eval = FALSE}
+initVals <- c(initial.values(), initial.values())
+```
+
+```{r, echo = TRUE, eval = FALSE}
+mcmc.output <- nimbleMCMC(code = naive.survival.model,       
+                          data = my.data,                  
+                          constants = my.constants,        
+                          inits = initVals,                # pre-sampled initial values
+                          monitors = parameters.to.save,   
+                          thin = n.thin,                   
+                          niter = n.iter,                  
+                          nburnin = n.burnin,              
+                          nchains = n.chains)              
+
+```
+
+**3) Setting the MCMC seed**
+```{r, echo = TRUE, eval = FALSE}
+mcmc.output <- nimbleMCMC(code = naive.survival.model,       
+                          data = my.data,                  
+                          constants = my.constants,        
+                          inits = initVals,                # pre-sampled initial values
+                          monitors = parameters.to.save,   
+                          thin = n.thin,                   
+                          niter = n.iter,                  
+                          nburnin = n.burnin,              
+                          nchains = n.chains,
+                          setSeed = mySeed)                # defined seed              
+
 ```
 
 

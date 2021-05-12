@@ -1,0 +1,174 @@
+#' ---
+#' title: "Class 3 live demo: Intro to Nimble"
+#' author: "The team"
+#' date: "last updated: `r Sys.Date()`"
+#' output: html_document
+#' ---
+#' 
+#' 
+## ----setup, include=FALSE, echo=FALSE--------------------------------------------
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+library(tidyverse)
+theme_set(theme_light(base_size = 14))
+update_geom_defaults("point", list(size = 2)) 
+library(here)
+library(nimble)
+
+#' 
+#' ## Introduction
+#' 
+#' In this demo, we show a simple example of how to use nimble. We use the survival example with $y = 19$ alive individuals out of $n = 57$ released. A binomial likelihood is assumed, with a uniform prior on survival. 
+#' 
+#' ## Prepare everything 
+#' 
+#' First load the nimble package. 
+## --------------------------------------------------------------------------------
+library(nimble)
+
+#' 
+#' Then define the model, likelihood and prior. 
+## --------------------------------------------------------------------------------
+naive.survival.model <- nimbleCode({
+  # prior
+  phi ~ dunif(0, 1)
+  # likelihood
+  y ~ dbinom(phi, n)
+})
+
+#' 
+#' Store the constants and data in lists.
+## --------------------------------------------------------------------------------
+my.constants <- list(n = 57)
+my.data <- list(y = 19)
+
+#' 
+#' Write a function to pick initial values for survival probability. 
+## --------------------------------------------------------------------------------
+initial.values <- function() list(phi = runif(1,0,1))
+
+#' 
+#' Try the function.
+## --------------------------------------------------------------------------------
+initial.values()
+
+#' 
+#' Specify the parameter you'd like to monitor, and for which you'd like to carry out posterior inference. 
+## --------------------------------------------------------------------------------
+parameters.to.save <- c("phi")
+
+#' 
+#' Set the details of the MCMC run. Here we will use 5000 iterations, including 1000 for the burn-in period, and run two chains. 
+## --------------------------------------------------------------------------------
+n.iter <- 5000
+n.burnin <- 1000
+n.chains <- 2
+n.thin <- 1
+
+#' 
+#' ## Run nimble
+#' 
+#' Run nimble. 
+## ---- warning=FALSE, message=FALSE, eval = TRUE----------------------------------
+mcmc.output <- nimbleMCMC(code = naive.survival.model,     # model code  
+                          data = my.data,                  # data
+                          constants = my.constants,        # constants
+                          inits = initial.values,          # initial values
+                          monitors = parameters.to.save,   # parameters to monitor
+                          thin = n.thin,                   # thinning interval (default = 1)
+                          niter = n.iter,                  # nb iterations
+                          nburnin = n.burnin,              # length of the burn-in
+                          nchains = n.chains)              # nb of chains
+
+#' 
+#' ## Post-process results
+#' 
+#' First, we have a look to the structure of the outputs. We have a list with two elements, each one is a chain with 4000 values (number of iterations minus the iterations we used for the burn-in) for survival. 
+## --------------------------------------------------------------------------------
+str(mcmc.output)
+
+#' 
+#' Let's have a look to the first chain.
+## --------------------------------------------------------------------------------
+head(mcmc.output$chain1)
+
+#' 
+#' We build a histogram of the values of the first chain, generated from the survival posterior distribution. 
+## ---- echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"-----------------
+mcmc.output %>%
+  as_tibble() %>%
+  janitor::clean_names() %>%
+  ggplot() + 
+  geom_histogram(aes(x = chain1[,"phi"]), color = "white") + 
+  labs(x = "survival probability")
+
+#' 
+#' There are several packages that can take care of the post-processing for you. We will use [`MCMCvis`](https://joss.theoj.org/papers/10.21105/joss.00640) developed by Casey Youngflesh. 
+#' 
+#' Let's get the numerical summaries of the posterior distribution, along with the R-hat and the effective sample size. 
+## --------------------------------------------------------------------------------
+library(MCMCvis)
+MCMCsummary(mcmc.output, round = 2)
+
+#' 
+#' Now the trace plots and (a kernel density estimate of) the posterior distribution of survival. 
+## ---- echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"-----------------
+MCMCtrace(mcmc.output,
+          pdf = FALSE) 
+
+#' 
+#' You may add the value of R-hat and the effective sample size on the graph. 
+## ---- echo = TRUE, fig.width = 7.5, fig.asp = 0.618, dev = "svg"-----------------
+MCMCtrace(mcmc.output,
+          pdf = FALSE,
+          ind = TRUE,
+          Rhat = TRUE,
+          n.eff = TRUE) 
+
+#' 
+#' ## Reproducibility for trouble-shooting and publishing
+#' Being able to reproduce the exactly same initial values and MCMC chains can be very useful for pinpointing the source of errors, and also when publishing your code/workflows.
+#' 
+#' Here are three easy steps to make your workflow more reproducible: 
+#' 
+#' **1) Setting a defined initial seed at the start of your code**
+## ---- echo = TRUE, eval = FALSE--------------------------------------------------
+mySeed <- 0
+set.seed(mySeed)
+
+#' 
+#' **2) Using "pre-sampled" initial values**
+## ---- echo = TRUE, eval = FALSE--------------------------------------------------
+initVals <- c(initial.values(), initial.values())
+
+#' 
+## ---- echo = TRUE, eval = FALSE--------------------------------------------------
+mcmc.output <- nimbleMCMC(code = naive.survival.model,       
+                          data = my.data,                  
+                          constants = my.constants,        
+                          inits = initVals,                # pre-sampled initial values
+                          monitors = parameters.to.save,   
+                          thin = n.thin,                   
+                          niter = n.iter,                  
+                          nburnin = n.burnin,              
+                          nchains = n.chains)              
+
+
+#' 
+#' **3) Setting the MCMC seed**
+## ---- echo = TRUE, eval = FALSE--------------------------------------------------
+mcmc.output <- nimbleMCMC(code = naive.survival.model,       
+                          data = my.data,                  
+                          constants = my.constants,        
+                          inits = initVals,                # pre-sampled initial values
+                          monitors = parameters.to.save,   
+                          thin = n.thin,                   
+                          niter = n.iter,                  
+                          nburnin = n.burnin,              
+                          nchains = n.chains,
+                          setSeed = mySeed)                # defined seed              
+
+
+#' 
+#' 
+#' <!-- knitr::purl(here::here("worksheets","2_demo.Rmd"), documentation = 2) -->
