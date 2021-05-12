@@ -27,6 +27,14 @@ library(nimble)
 
 # What is Nimble?
 
+```{r pressure, echo=FALSE, fig.show='hold',fig.align='center', fig.cap="(Meme created by Todd Arnold's wonderful students)", out.width = c('24%', '60%')}
+knitr::include_graphics(c(here::here("slides/img","ToddStudents_Meme.jpg"), here::here("slides/img","RobRob_Comment_edited.png")))
+```
+
+---
+
+# What is Nimble?
+
 --
 
 + **N**umerical **I**nference for statistical **M**odels using **B**ayesian and **L**ikelihood **E**stimation.
@@ -41,7 +49,7 @@ library(nimble)
 
 --
 
-+ An extension of the BUGS language for writing new functions and distributions.
++ An extension of the BUGS language: additional syntax, custom functions and distributions.
 
 --
 
@@ -81,8 +89,83 @@ naive.survival.model <- nimbleCode({
 })
 ```
 
+
+---
+## Syntax: what's new/better/different?
+
++ Vectorization
+```{r, eval = FALSE}
+# JAGS (& Nimble)
+for(t in 1:Tmax){
+  x[t] <- Mu.x + epsilon[t]
+}
+
+# Nimble
+x[1:Tmax] <- Mu.x + epsilon[1:Tmax]
+```
+--
+
+---
+## Syntax: what's new/better/different?
+
++ More flexible specification of distributions
+```{r, eval = FALSE}
+# JAGS (& Nimble)
+for(t in 1:Tmax){
+  epsilon[t] ~ dnorm(0, tau)
+}
+tau <- pow(sigma, -2)
+sigma ~ dunif(0, 5)
+
+# Nimble
+for(t in 1:Tmax){
+  epsilon[t] ~ dnorm(0, sd = sigma)
+}
+sigma ~ dunif(0, 5)
+```
+
+---
+## Syntax: what's new/better/different?
+
++ Your own functions and distributions
+```{r, eval = FALSE}
+x[1:Tmax] <- myNimbleFunction(a = Mu.x, b = epsilon[1:Tmax])
+```
+
+```{r, eval = FALSE}
+sigma ~ dCustomDistr(c = 0.5, z = 10)
+```
+
+---
+## Syntax: what's new/better/different?
+
++ The end of empty indices
+```{r, eval = FALSE}
+# JAGS
+sum.x <- sum(x[])
+
+# Nimble
+sum.x <- sum(x[1:Tmax])
+```
+
+--
+
++ & more...
+
+
 ---
 ## Read in data
+
+Back to our naive survival model:
+
+```{r}
+naive.survival.model <- nimbleCode({
+  # prior
+  phi ~ dunif(0, 1)
+  # likelihood
+  y ~ dbinom(phi, n)
+})
+```
 
 ```{r}
 my.data <- list(n = 57, y = 19)
@@ -92,19 +175,40 @@ my.data <- list(n = 57, y = 19)
 ---
 ## Distinguish constants and data
 
-+ Constants can never be changed and must be provided when a model is defined. E.g., a vector of known index values, variables used in the index ranges of for-loops, etc. 
-
-+ Data can be changed. This allows an algorithm to be applied to many data sets in the same model without re-creating the model each time. It also allows simulation of data in a model.
-
-+ When deciding between data and constants, no reason to use data unless you want the flexibility to change values during your work with the model.
-
-+ For computational efficiency, better to specify as much as possible as constants.
-
+To Nimble, not all "data" is data...
 ```{r}
 my.constants <- list(n = 57)
 my.data <- list(y = 19)
 ```
 
+--
+
+**Constants**:
++ Can never be changed 
++ Must be provided when a model is defined (part of the model structure)
++ E.g. vector of known index values, variables used to define for-loops, etc. 
+
+---
+## Distinguish constants and data
+
+To Nimble, not all "data" is data...
+```{r}
+my.constants <- list(n = 57)
+my.data <- list(y = 19)
+```
+
+**Data**:
++ Can be changed without re-building the model 
++ Can be (re-)simulated within a model
++ E.g. stuff that *only* appears to the left of a "~" 
+
+--
+
+For computational efficiency, better to specify as much as possible as constants.
+
+--
+
+Nimble will help you with this!
 
 ---
 ## Specify initial values
@@ -134,7 +238,14 @@ parameters.to.save <- c("phi")
 n.iter <- 5000
 n.burnin <- 1000
 n.chains <- 2
+n.thin <- 1
 ```
+
+--
+
+Number of posterior samples per chain: 
+
+$$n.posterior = \frac{n.iter - n.burnin}{n.thin}$$
 
 
 ---
@@ -146,6 +257,7 @@ mcmc.output <- nimbleMCMC(code = naive.survival.model,
                           constants = my.constants,
                           inits = initial.values,
                           monitors = parameters.to.save,
+                          thin = n.thin,
                           niter = n.iter, 
                           nburnin = n.burnin, 
                           nchains = n.chains)

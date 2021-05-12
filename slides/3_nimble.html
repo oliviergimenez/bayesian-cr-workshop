@@ -14,12 +14,21 @@ class: center, middle, title-slide
 
 # ‘Free the modeler in you’: Intro to Nimble
 ### The team (citation by Marc Kéry)
-### last updated: 2021-04-22
+### last updated: 2021-05-12
 
 ---
 
 
 
+
+# What is Nimble?
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="/Users/oliviergimenez/Dropbox/OG/GITHUB/bayesian-cr-workshop/slides/img/ToddStudents_Meme.jpg" alt="(Meme created by Todd Arnold's wonderful students)" width="24%" /&gt;&lt;img src="/Users/oliviergimenez/Dropbox/OG/GITHUB/bayesian-cr-workshop/slides/img/RobRob_Comment_edited.png" alt="(Meme created by Todd Arnold's wonderful students)" width="60%" /&gt;
+&lt;p class="caption"&gt;(Meme created by Todd Arnold's wonderful students)&lt;/p&gt;
+&lt;/div&gt;
+
+---
 
 # What is Nimble?
 
@@ -37,7 +46,7 @@ class: center, middle, title-slide
 
 --
 
-+ An extension of the BUGS language for writing new functions and distributions.
++ An extension of the BUGS language: additional syntax, custom functions and distributions.
 
 --
 
@@ -79,8 +88,89 @@ naive.survival.model &lt;- nimbleCode({
 })
 ```
 
+
+---
+## Syntax: what's new/better/different?
+
++ Vectorization
+
+```r
+# JAGS (&amp; Nimble)
+for(t in 1:Tmax){
+  x[t] &lt;- Mu.x + epsilon[t]
+}
+
+# Nimble
+x[1:Tmax] &lt;- Mu.x + epsilon[1:Tmax]
+```
+--
+
+---
+## Syntax: what's new/better/different?
+
++ More flexible specification of distributions
+
+```r
+# JAGS (&amp; Nimble)
+for(t in 1:Tmax){
+  epsilon[t] ~ dnorm(0, tau)
+}
+tau &lt;- pow(sigma, -2)
+sigma ~ dunif(0, 5)
+
+# Nimble
+for(t in 1:Tmax){
+  epsilon[t] ~ dnorm(0, sd = sigma)
+}
+sigma ~ dunif(0, 5)
+```
+
+---
+## Syntax: what's new/better/different?
+
++ Your own functions and distributions
+
+```r
+x[1:Tmax] &lt;- myNimbleFunction(a = Mu.x, b = epsilon[1:Tmax])
+```
+
+
+```r
+sigma ~ dCustomDistr(c = 0.5, z = 10)
+```
+
+---
+## Syntax: what's new/better/different?
+
++ The end of empty indices
+
+```r
+# JAGS
+sum.x &lt;- sum(x[])
+
+# Nimble
+sum.x &lt;- sum(x[1:Tmax])
+```
+
+--
+
++ &amp; more...
+
+
 ---
 ## Read in data
+
+Back to our naive survival model:
+
+
+```r
+naive.survival.model &lt;- nimbleCode({
+  # prior
+  phi ~ dunif(0, 1)
+  # likelihood
+  y ~ dbinom(phi, n)
+})
+```
 
 
 ```r
@@ -91,20 +181,42 @@ my.data &lt;- list(n = 57, y = 19)
 ---
 ## Distinguish constants and data
 
-+ Constants can never be changed and must be provided when a model is defined. E.g., a vector of known index values, variables used in the index ranges of for-loops, etc. 
-
-+ Data can be changed. This allows an algorithm to be applied to many data sets in the same model without re-creating the model each time. It also allows simulation of data in a model.
-
-+ When deciding between data and constants, no reason to use data unless you want the flexibility to change values during your work with the model.
-
-+ For computational efficiency, better to specify as much as possible as constants.
-
+To Nimble, not all "data" is data...
 
 ```r
 my.constants &lt;- list(n = 57)
 my.data &lt;- list(y = 19)
 ```
 
+--
+
+**Constants**:
++ Can never be changed 
++ Must be provided when a model is defined (part of the model structure)
++ E.g. vector of known index values, variables used to define for-loops, etc. 
+
+---
+## Distinguish constants and data
+
+To Nimble, not all "data" is data...
+
+```r
+my.constants &lt;- list(n = 57)
+my.data &lt;- list(y = 19)
+```
+
+**Data**:
++ Can be changed without re-building the model 
++ Can be (re-)simulated within a model
++ E.g. stuff that *only* appears to the left of a "~" 
+
+--
+
+For computational efficiency, better to specify as much as possible as constants.
+
+--
+
+Nimble will help you with this!
 
 ---
 ## Specify initial values
@@ -123,7 +235,7 @@ initial.values()
 
 ```
 $phi
-[1] 0.8589696
+[1] 0.5115033
 ```
 
 
@@ -143,7 +255,14 @@ parameters.to.save &lt;- c("phi")
 n.iter &lt;- 5000
 n.burnin &lt;- 1000
 n.chains &lt;- 2
+n.thin &lt;- 1
 ```
+
+--
+
+Number of posterior samples per chain: 
+
+`$$n.posterior = \frac{n.iter - n.burnin}{n.thin}$$`
 
 
 ---
@@ -156,6 +275,7 @@ mcmc.output &lt;- nimbleMCMC(code = naive.survival.model,
                           constants = my.constants,
                           inits = initial.values,
                           monitors = parameters.to.save,
+                          thin = n.thin,
                           niter = n.iter, 
                           nburnin = n.burnin, 
                           nchains = n.chains)
@@ -176,11 +296,11 @@ str(mcmc.output)
 
 ```
 List of 2
- $ chain1: num [1:4000, 1] 0.345 0.345 0.345 0.217 0.217 ...
+ $ chain1: num [1:4000, 1] 0.406 0.43 0.264 0.264 0.297 ...
   ..- attr(*, "dimnames")=List of 2
   .. ..$ : NULL
   .. ..$ : chr "phi"
- $ chain2: num [1:4000, 1] 0.39 0.408 0.408 0.408 0.452 ...
+ $ chain2: num [1:4000, 1] 0.274 0.274 0.389 0.389 0.389 ...
   ..- attr(*, "dimnames")=List of 2
   .. ..$ : NULL
   .. ..$ : chr "phi"
@@ -197,19 +317,19 @@ head(mcmc.output$chain1)
 
 ```
            phi
-[1,] 0.3449223
-[2,] 0.3449223
-[3,] 0.3449223
-[4,] 0.2174584
-[5,] 0.2174584
-[6,] 0.2771901
+[1,] 0.4057891
+[2,] 0.4297459
+[3,] 0.2644534
+[4,] 0.2644534
+[5,] 0.2971877
+[6,] 0.2971877
 ```
 
 ---
 ## Explore MCMC outputs
 
 .center.nogap[
-![](3_nimble_files/figure-html/unnamed-chunk-13-1.svg)&lt;!-- --&gt;
+![](3_nimble_files/figure-html/unnamed-chunk-20-1.svg)&lt;!-- --&gt;
 ]
 
 ---
@@ -223,7 +343,7 @@ MCMCsummary(mcmc.output, round = 2)
 
 ```
     mean   sd 2.5%  50% 97.5% Rhat n.eff
-phi 0.34 0.06 0.23 0.34  0.46    1  1854
+phi 0.34 0.06 0.23 0.34  0.47    1  1793
 ```
 
 ---
@@ -243,7 +363,7 @@ MCMCtrace(mcmc.output,
 .pull-right[
 
 .center.nogap[
-![](3_nimble_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
+![](3_nimble_files/figure-html/unnamed-chunk-23-1.svg)&lt;!-- --&gt;
 ]
 ]
 
@@ -270,7 +390,7 @@ MCMCtrace(mcmc.output,
 .pull-right[
 
 .center.nogap[
-![](3_nimble_files/figure-html/unnamed-chunk-18-1.svg)&lt;!-- --&gt;
+![](3_nimble_files/figure-html/unnamed-chunk-25-1.svg)&lt;!-- --&gt;
 ]
 ]
 
