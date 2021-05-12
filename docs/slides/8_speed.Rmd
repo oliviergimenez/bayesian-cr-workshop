@@ -218,10 +218,10 @@ phip.model$z[6,] <- c(1, 1, 2, 1, 2, 2, 2)
 
 .small-font[
 ```{r, eval = TRUE, echo = TRUE, message = TRUE}
-phip.model$calculate("z")   # We can see there is a problem in z (states).
+phip.model$calculate("z")        # We can see there is a problem in z (states).
 c(phip.model$calculate("z[5,]"), # Bird 5 is valid.
   phip.model$calculate("z[6,]")) # Bird 6 isn't.
-phip.model$z[6,]            # We have found the problem
+phip.model$z[6,]                 # We have found the problem
 ```
 ]
 
