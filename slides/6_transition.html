@@ -16,7 +16,7 @@ class: center, middle, title-slide
 
 # On the move: Transition estimation
 ### The team
-### last updated: 2021-04-26
+### last updated: 2021-05-14
 
 ---
 
@@ -4143,7 +4143,6 @@ class: middle
 ]
 
 
-
 ---
 class: middle
 ### Biological inference
@@ -4210,7 +4209,7 @@ $$
 \end{matrix}`
 \hspace{-1.2em}
 `\begin{matrix}
-    z_t=1 &amp; z_t=2 &amp; z_t=3 \\ \hdashline
+    z_{t}=1 &amp; z_{t}=2 &amp; z_{t}=3 \\ \hdashline
 \phi_A (1-\psi_{AB}) &amp; \phi_A \psi_{AB} &amp; 1 - \phi_A\\ 
 \phi_B \psi_{BA} &amp; \phi_B (1-\psi_{BA}) &amp; 1 - \phi_B\\ 
 0 &amp; 0 &amp; 1
@@ -4381,6 +4380,8 @@ multisite &lt;- nimbleCode({
 multisite &lt;- nimbleCode({
 ...  
   # probabilities of state z(t+1) given z(t)
+  # (read as gamma[z(t),z(t+1)] = gamma[fromState,toState])
+  
   gamma[1,1] &lt;- phiA * (1 - psiAB)
   gamma[1,2] &lt;- phiA * psiAB
   gamma[1,3] &lt;- 1 - phiA
@@ -4404,6 +4405,8 @@ multisite &lt;- nimbleCode({
 multisite &lt;- nimbleCode({
 ...  
   # probabilities of y(t) given z(t)
+  # (read as omega[y(t),z(t)] = omega[Observation,State])
+
   omega[1,1] &lt;- 1 - pA     # Pr(alive A t -&gt; non-detected t)
   omega[1,2] &lt;- pA         # Pr(alive A t -&gt; detected A t)
   omega[1,3] &lt;- 0          # Pr(alive A t -&gt; detected B t)
@@ -4466,7 +4469,7 @@ psiBA 0.07 0.02 0.04 0.07  0.12 1.03   360
 ]
 
 ---
-# What if three sites?
+# What if there are three sites?
 
 --
 
@@ -4474,7 +4477,7 @@ psiBA 0.07 0.02 0.04 0.07  0.12 1.03   360
 
 --
 
-+ Another constraint is that the sum of three probabilities of departure rom a given site should be one. 
++ Another constraint is that the sum of three probabilities of departure from a given site should be one. 
 
 --
 
@@ -4702,13 +4705,33 @@ class: middle, center
 ---
 ## Examples of multistate models
 
-+ Epidemiological or disease states: sick/sane.
++ *Epidemiological or disease states*: sick/healthy, uninfected/infected/recovered.
 
-+ Morphological states: small/medium/big, light/medium/heavy.
+--
 
-+ Breeding states, e.g. breeder/non-breeder, failed breeder, first-time breeder. 
++ *Morphological states*: small/medium/big,  light/medium/heavy.
 
-+ States are individual, time-specific categorical covariates.
+--
+
++ *Breeding states*: e.g. breeder/non-breeder,  failed breeder, first-time breeder. 
+
+--
+
++ *Developmental or life-history states*: e.g. juvenile/subadult/adult.
+
+--
+
++ *Social states*: e.g. solitary/group-living,  subordinate/dominant.
+
+--
+
++ *Death states*: e.g. alive, dead from harvest, dead from natural causes. 
+
+--
+
+&amp;nbsp;
+
+**States = individual, time-specific categorical covariates.**
 
 ---
 background-image: url("img/sooty.jpg")
@@ -4754,7 +4777,7 @@ background-size: cover
 
 --
 
-+ Does breeding affect survival? Does breeding a year affect breeding next year?
++ Does breeding affect survival? Does breeding in current year affect breeding next year?
 
 
 ---
