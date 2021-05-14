@@ -163,7 +163,9 @@ ggplot() +
   ylim(0.5, 3) + 
   annotate('text', x = 1, y = 2.6, label = 'Observations', size = 10) + 
   annotate('text', x = 2, y = 2.6, label = 'States', size = 10) +
-  geom_segment(aes(x = 1, y = 1.5, xend = 2, yend = 2), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
+    geom_segment(aes(x = 1, y = 2, xend = 2, yend = 2), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
+  geom_segment(aes(x = 1, y = 2, xend = 2, yend = 1.5), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
+  geom_segment(aes(x = 1, y = 2, xend = 2, yend = 1), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
   theme_void()
 ```
 ]
@@ -192,11 +194,14 @@ ggplot() +
   ylim(0.5, 3) + 
   annotate('text', x = 1, y = 2.6, label = 'Observations', size = 10) + 
   annotate('text', x = 2, y = 2.6, label = 'States', size = 10) +
+    geom_segment(aes(x = 1, y = 2, xend = 2, yend = 2), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
+  geom_segment(aes(x = 1, y = 2, xend = 2, yend = 1.5), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
+  geom_segment(aes(x = 1, y = 2, xend = 2, yend = 1), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
   geom_segment(aes(x = 1, y = 1.5, xend = 2, yend = 2), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
-  geom_segment(aes(x = 1, y = 1, xend = 2, yend = 1.5), alpha = 0.7, arrow = arrow(length = unit(0.02, "npc"))) + 
   theme_void()
 ```
 ]
+
 
 
 ---
@@ -374,7 +379,7 @@ $$
 \end{matrix}
 \hspace{-1.2em}
 \begin{matrix}
-    z_{t}=1 & z_{t}=2 & z_{t}=3 \\ \hdashline
+    z_t=1 & z_t=2 & z_t=3 \\ \hdashline
 \phi_A (1-\psi_{AB}) & \phi_A \psi_{AB} & 1 - \phi_A\\ 
 \phi_B \psi_{BA} & \phi_B (1-\psi_{BA}) & 1 - \phi_B\\ 
 0 & 0 & 1
@@ -541,8 +546,6 @@ multisite <- nimbleCode({
 multisite <- nimbleCode({
 ...  
   # probabilities of state z(t+1) given z(t)
-  # (read as gamma[z(t),z(t+1)] = gamma[fromState,toState])
-  
   gamma[1,1] <- phiA * (1 - psiAB)
   gamma[1,2] <- phiA * psiAB
   gamma[1,3] <- 1 - phiA
@@ -565,8 +568,6 @@ multisite <- nimbleCode({
 multisite <- nimbleCode({
 ...  
   # probabilities of y(t) given z(t)
-  # (read as omega[y(t),z(t)] = omega[Observation,State])
-
   omega[1,1] <- 1 - pA     # Pr(alive A t -> non-detected t)
   omega[1,2] <- pA         # Pr(alive A t -> detected A t)
   omega[1,3] <- 0          # Pr(alive A t -> detected B t)
@@ -627,7 +628,7 @@ MCMCplot(mcmc.multisite)
 ]
 
 ---
-# What if there are three sites?
+# What if three sites?
 
 --
 
@@ -635,7 +636,7 @@ MCMCplot(mcmc.multisite)
 
 --
 
-+ Another constraint is that the sum of three probabilities of departure from a given site should be one. 
++ Another constraint is that the sum of three probabilities of departure rom a given site should be one. 
 
 --
 
@@ -649,7 +650,7 @@ MCMCplot(mcmc.multisite)
 
 .center.nogap[
 ```{r, echo = FALSE, fig.width = 7.5, fig.asp = 0.818, dev = "svg", message = FALSE, warning = FALSE, fig.cap = "Dirichlet prior with parameter alpha"}
-library(gtools)
+library(dirichlet)
 library(ggtern)
 set.seed(123)
 n <- 500
@@ -886,33 +887,13 @@ class: middle, center
 ---
 ## Examples of multistate models
 
-+ *Epidemiological or disease states*: sick/healthy, uninfected/infected/recovered.
++ Epidemiological or disease states: sick/sane.
 
---
++ Morphological states: small/medium/big, light/medium/heavy.
 
-+ *Morphological states*: small/medium/big,  light/medium/heavy.
++ Breeding states, e.g. breeder/non-breeder, failed breeder, first-time breeder. 
 
---
-
-+ *Breeding states*: e.g. breeder/non-breeder,  failed breeder, first-time breeder. 
-
---
-
-+ *Developmental or life-history states*: e.g. juvenile/subadult/adult.
-
---
-
-+ *Social states*: e.g. solitary/group-living,  subordinate/dominant.
-
---
-
-+ *Death states*: e.g. alive, dead from harvest, dead from natural causes. 
-
---
-
-&nbsp;
-
-**States = individual, time-specific categorical covariates.**
++ States are individual, time-specific categorical covariates.
 
 ---
 background-image: url("img/sooty.jpg")
@@ -958,7 +939,7 @@ background-size: cover
 
 --
 
-+ Does breeding affect survival? Does breeding in current year affect breeding next year?
++ Does breeding affect survival? Does breeding a year affect breeding next year?
 
 
 ---
