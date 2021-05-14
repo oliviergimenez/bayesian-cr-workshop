@@ -33,7 +33,7 @@ navbar:
     - text: "Live demos"
       menu:
         - text: "Download all datasets at once"
-          href: worksheets/data.zip
+          href: https://github.com/oliviergimenez/bayesian-cr-workshop/raw/master/worksheets/data.zip
         - text: "Class 2 live demo: Crash course on Bayesian statistics and MCMC algorithms"
           href: worksheets/1_demo.html
         - text: "Class 2 live demo - R script"

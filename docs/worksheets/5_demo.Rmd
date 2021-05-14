@@ -18,7 +18,7 @@ library(nimble)
 
 ## Introduction
 
-In this demo, we illustrate how to fit multistate models to capture-recapture data. We first consider states as sites and estimate movements, then states are breeding states and we study life-history trade-offs. 
+In this demo, we illustrate how to fit multistate models to capture-recapture data. We first consider states as sites and estimate movements. Next we treat states as breeding states for studying life-history trade-offs. 
 
 ```{r}
 library(tidyverse)
@@ -621,14 +621,14 @@ MCMCplot(mcmc.multisite)
 
 ## Multistate model
 
-Now we illustrate how one can replace site by state and address another question in evolution ecology about life-history tradeoffs. We use data on Soory shearwaters that were kindly provided by David Fletcher. Birds are seen as breeders or non-breeders. 
+Now we illustrate how one can replace site by breeding state and address another question in evolution ecology: life-history trade-offs. We use data on Soory shearwaters that were kindly provided by David Fletcher. Birds are seen as breeders or non-breeders. 
 ```{r}
 titis <- read_csv2("titis.csv", col_names = FALSE)
 y <-  as.matrix(titis)
 head(y)
 ```
 
-The code is exactly the same as that for the model above with two sites. 
+The code is very similar to that for the model above with two sites, i.e. the structure is the same, but the transition probabilities have different interpretations. 
 ```{r}
 multistate <- nimbleCode({
   
