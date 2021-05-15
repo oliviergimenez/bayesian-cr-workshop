@@ -12,6 +12,8 @@ navbar:
       href: index.html
     - text: "Slides"
       menu:
+        - text: "Download all slides in PDF"
+          href: slides/BayesCRlectureslides.pdf
         - text: "Class 1: Welcoming words"
           href: slides/1_welcome.html
         - text: "Class 2: Crash course on Bayesian statistics and MCMC algorithms"
@@ -34,6 +36,8 @@ navbar:
       menu:
         - text: "Download all datasets at once"
           href: https://github.com/oliviergimenez/bayesian-cr-workshop/raw/master/worksheets/data.zip
+        - text: "Download all worksheets in PDF"
+          href: worksheets/BayesCRworksheets.pdf
         - text: "Class 2 live demo: Crash course on Bayesian statistics and MCMC algorithms"
           href: worksheets/1_demo.html
         - text: "Class 2 live demo - R script"
