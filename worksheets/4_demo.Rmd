@@ -102,6 +102,8 @@ initial.values <- function() list(phi = runif(1,0,1),
 initial.values()
 ```
 
+Some information that we now pass as initial value info (observations of alive) are actually known states, and could also be passed as data – in which case the initial values have to be 0.
+
 Specify the parameters we wish to monitor. 
 ```{r}
 parameters.to.save <- c("phi", "p")
@@ -551,7 +553,7 @@ sex <- if_else(dipper$sex == "M", 0, 1)
 sex
 ```
 
-Now we write the model, and write the survival as a function of the covariate sex on the logit scale $\logit(\phi_i) <- \beta_1 + \beta_2 * \text{sex}_i$. We need to make the matrix $\Gamma$ individual specific. For convenience we also define $\phi_{\text{male}} = \beta_1$ with $\text{sex}_i = 0$ and $\phi_{\text{female}} = \beta_1 + \beta_2$ with $\text{sex}_i = 1$. 
+Now we write the model, and write the survival as a function of the covariate sex on the logit scale $\text{logit}(\phi_i) = \beta_1 + \beta_2 * \text{sex}_i$. We need to make the matrix $\Gamma$ individual specific. For convenience we also define $\phi_{\text{male}} = \beta_1$ with $\text{sex}_i = 0$ and $\phi_{\text{female}} = \beta_1 + \beta_2$ with $\text{sex}_i = 1$. 
 ```{r}
 hmm.phisexp <- nimbleCode({
     p ~ dunif(0, 1) # prior detection
@@ -674,7 +676,7 @@ my.constants <- list(N = nrow(y),
                      T = ncol(y), 
                      first = first,
                      sex = sex) # beta[1] male survival
-                                                             # beta[2] female survival
+                                # beta[2] female survival
 ```
 
 
@@ -683,16 +685,23 @@ Parameters to monitor.
 parameters.to.save <- c("beta", "p")
 ```
 
+Initial values. 
+```{r}
+initial.values <- function() list(beta = runif(2,0,1),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+```
+
 Run nimble.
 ```{r}
 mcmc.phisexp.ni <- nimbleMCMC(code = hmm.phisexpt.ni, 
-                            constants = my.constants,
-                            data = my.data,              
-                            inits = initial.values,
-                            monitors = parameters.to.save,
-                            niter = n.iter,
-                            nburnin = n.burnin, 
-                            nchains = n.chains)
+                              constants = my.constants,
+                              data = my.data,              
+                              inits = initial.values,
+                              monitors = parameters.to.save,
+                              niter = n.iter,
+                              nburnin = n.burnin, 
+                              nchains = n.chains)
 ```
 
 Dislpay results. Compare with the other method above, the estimates are very similar.  
@@ -878,6 +887,75 @@ mcmc.phiwlrep <- nimbleMCMC(code = hmm.phiwlrep,
 ```
 
 Numerical summaries. 
+```{r}
+MCMCsummary(mcmc.phiwlrep, round = 2)
+```
+
+Let's try something else. We reparameterize by non-centering. 
+```{r}
+hmm.phiwlrep <- nimbleCode({
+    p ~ dunif(0, 1) # prior detection
+    omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+    omega[1,2] <- p        # Pr(alive t -> detected t)
+    omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+    omega[2,2] <- 0        # Pr(dead t -> detected t)
+  for (i in 1:N){
+    logit(phi[i]) <- beta[1] + beta[2] * winglength[i] + sdeps * eps[i]
+    eps[i] ~ dnorm(mean = 0, sd = 1)
+    gamma[1,1,i] <- phi[i]      # Pr(alive t -> alive t+1)
+    gamma[1,2,i] <- 1 - phi[i]  # Pr(alive t -> dead t+1)
+    gamma[2,1,i] <- 0           # Pr(dead t -> alive t+1)
+    gamma[2,2,i] <- 1           # Pr(dead t -> dead t+1)
+  }
+  beta[1] ~ dnorm(mean = 0, sd = 1.5)
+  beta[2] ~ dnorm(mean = 0, sd = 1.5)
+  sdeps ~ dunif(0, 10)
+  delta[1] <- 1          # Pr(alive t = 1) = 1
+  delta[2] <- 0          # Pr(dead t = 1) = 0
+  # likelihood
+  for (i in 1:N){
+    z[i,first[i]] ~ dcat(delta[1:2])
+    for (j in (first[i]+1):T){
+      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2, i])
+      y[i,j] ~ dcat(omega[z[i,j], 1:2])
+    }
+  }
+})
+```
+
+Initial values.
+```{r}
+initial.values <- function() list(beta = rnorm(2,0,1.5),
+                                  sdeps = runif(1,0,3),
+                                  p = runif(1,0,1),
+                                  z = zinits)
+```
+
+Parameters to be monitored. 
+```{r}
+parameters.to.save <- c("beta", "sdeps", "p")
+```
+
+MCMC details. Note that we increase the number of iterations and the length of the burn-in period.
+```{r}
+n.iter <- 10000
+n.burnin <- 5000
+n.chains <- 2
+```
+
+Run nimble. 
+```{r}
+mcmc.phiwlrep <- nimbleMCMC(code = hmm.phiwlrep, 
+                            constants = my.constants,
+                            data = my.data,              
+                            inits = initial.values,
+                            monitors = parameters.to.save,
+                            niter = n.iter,
+                            nburnin = n.burnin, 
+                            nchains = n.chains)
+```
+
+Numerical summaries. Much better. 
 ```{r}
 MCMCsummary(mcmc.phiwlrep, round = 2)
 ```
