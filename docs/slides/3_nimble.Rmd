@@ -28,7 +28,7 @@ library(nimble)
 # What is Nimble?
 
 ```{r pressure, echo=FALSE, fig.show='hold',fig.align='center', fig.cap="(Meme created by Todd Arnold's wonderful students)", out.width = c('24%', '60%')}
-knitr::include_graphics(c(here::here("slides/img","ToddStudents_Meme.jpg"), here::here("slides/img","RobRob_Comment_edited.png")))
+knitr::include_graphics(c("img/ToddStudents_Meme.jpg","img/RobRob_Comment_edited.png"))
 ```
 
 ---
