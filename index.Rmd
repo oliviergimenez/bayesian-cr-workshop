@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Who**: [O. Gimenez](https://twitter.com/oaggimenez), [C. R. Nater](https://twitter.com/chloe_nater), [S. Cubaynes](https://twitter.com/sarahcubaynes), [P. de Valpine](https://twitter.com/r_nimble), [M. Quéroué](https://twitter.com/maudqueroue)    
 
-**When**: May 17-18, 2021     
+**When**: May 17-18, 2021
 
 **Where**: Online via Zoom/Slack
 
@@ -29,10 +29,10 @@ All times are Paris time UTC+2
 2. Crash course on Bayesian statistics and MCMC algorithms (9:30am-11am)
 3. Free the modeler in you: Introduction to Nimble (11:30am-12:30pm)
 4. What you see is not what you get: Hidden Markov models and capture-recapture data (2pm-3:30pm)
-5. Dead or alive: Survival estimation (4pm-5pm)
+5. Dead or alive: Survival estimation - part 1 (4pm-5pm)
 
 + **Day 2, May 18**
-5. Dead or alive: Survival estimation (9am-10:30am)
+5. Dead or alive: Survival estimation - part 2 (9am-10:30am)
 6. On the move: Transition estimation (11am-12:30pm)
 7. Known knowns, unknown knowns and unknowns: Uncertainty in state assignment (2pm-3:30pm)
 8. Skip your coffee break: Speed up MCMC convergence (4pm-5pm)
