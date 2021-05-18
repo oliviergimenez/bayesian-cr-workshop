@@ -10,6 +10,18 @@ navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Video recordings"
+      menu:
+        - text: "Playlist of all classes"
+          href: https://youtube.com/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL
+        - text: "Classes 1, 2 and 3"
+          href: https://youtu.be/2qeCQoZizuU
+        - text: "Classes 4 and 5 (part 1)"
+          href: https://youtu.be/Mpd1Axo3xpw
+        - text: "Classes 5 (part 2) and 6"
+          href: https://youtu.be/sB11CDlN79g
+        - text: "Classes 7, 8 and 9"
+          href: https://youtu.be/OKXGedobGM0
     - text: "Slides"
       menu:
         - text: "Download all slides in PDF"
