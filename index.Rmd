@@ -59,6 +59,15 @@ All times are Paris time UTC+2
     install.packages(c("tidyverse", "MCMCvis", "here", "nimbleEcology"))
     ```
 
+### To-do list
+
++ Add examples of sensitivity analyses.
++ Make class number match name of live demos html and R scripts files. 
++ Add messages in the video recordings about typos in the slides. 
++ In Nimble code for multievent models, change observation matrix at first encounter omega.init into omega.firste to avoid confusion with vector of initial state probabilities. 
++ Add a FAQ section to the website synthesizing questions/answers in the Slack.
++ More suggestions from attendees in feedback forms.
+
 ### Reuse {.appendix}
 
 Text and figures are licensed under Creative Commons Attribution [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Any computer code (R, HTML, CSS, etc.) in slides and worksheets, including in slide and worksheet sources, is also licensed under [MIT](https://github.com/oliviergimenez/bayesian-cr-workshop/blob/master/LICENSE.md). 

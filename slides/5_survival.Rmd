@@ -694,10 +694,10 @@ hmm.phiflowp <- nimbleCode({
     gamma[2,2,t] <- 1        # Pr(dead t -> dead t+1)
   }
   p ~ dunif(0, 1) # prior detection
-  omega[1,1,t] <- 1 - p    # Pr(alive t -> non-detected t)
-  omega[1,2,t] <- p        # Pr(alive t -> detected t)
-  omega[2,1,t] <- 1        # Pr(dead t -> non-detected t)
-  omega[2,2,t] <- 0        # Pr(dead t -> detected t)
+  omega[1,1] <- 1 - p    # Pr(alive t -> non-detected t)
+  omega[1,2] <- p        # Pr(alive t -> detected t)
+  omega[2,1] <- 1        # Pr(dead t -> non-detected t)
+  omega[2,2] <- 0        # Pr(dead t -> detected t)
   beta[1] ~ dnorm(0, 1.5) # prior intercept #<<
   beta[2] ~ dnorm(0, 1.5) # prior slope #<<
   # likelihood

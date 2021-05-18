@@ -16,7 +16,7 @@ class: center, middle, title-slide
 
 # Dead or alive: Survival estimation
 ### The team
-### last updated: 2021-04-29
+### last updated: 2021-05-18
 
 ---
 
@@ -3902,10 +3902,10 @@ hmm.phiflowp &lt;- nimbleCode({
     gamma[2,2,t] &lt;- 1        # Pr(dead t -&gt; dead t+1)
   }
   p ~ dunif(0, 1) # prior detection
-  omega[1,1,t] &lt;- 1 - p    # Pr(alive t -&gt; non-detected t)
-  omega[1,2,t] &lt;- p        # Pr(alive t -&gt; detected t)
-  omega[2,1,t] &lt;- 1        # Pr(dead t -&gt; non-detected t)
-  omega[2,2,t] &lt;- 0        # Pr(dead t -&gt; detected t)
+  omega[1,1] &lt;- 1 - p    # Pr(alive t -&gt; non-detected t)
+  omega[1,2] &lt;- p        # Pr(alive t -&gt; detected t)
+  omega[2,1] &lt;- 1        # Pr(dead t -&gt; non-detected t)
+  omega[2,2] &lt;- 0        # Pr(dead t -&gt; detected t)
 * beta[1] ~ dnorm(0, 1.5) # prior intercept
 * beta[2] ~ dnorm(0, 1.5) # prior slope
   # likelihood

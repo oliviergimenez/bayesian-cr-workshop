@@ -7,7 +7,7 @@ output:
     css: [default, "slides-theme.css"]
     lib_dir: libs
     nature:
-      ratio: '16:9'
+      ratio: '16:9' 
       highlightStyle: github
       highlightLines: true
       slideNumberFormat: ''
@@ -913,6 +913,13 @@ markov.survival <- nimbleCode({
 ```
 ]
 
+---
+### Note
+
++ Vector $\delta$ is used as a placeholder for more complex models to come in Class 7.
+
++ Here, you could write `z[i,1] <- 1`. 
+
 
 ---
 ### Nimble awesomness
@@ -1138,7 +1145,7 @@ z %>%
 ---
 ## Alive animals may be detected or not
 
-+ If animal is alive $z = 1$, it is detected $y = 1$ w/ prob $p$ or not w/ prob $1-p$. 
++ If animal is alive $z = 1$, it is detected $y = 1$ w/ prob $p$ or not $y = 0$ w/ prob $1-p$. 
 
 + Before **first** detection, we know nothing, and we proceed conditional on it.
 
@@ -1181,7 +1188,7 @@ y %>%
 
 --
 
-+ The observation process probabilities can be packed in a transition matrix $\mathbf{\Omega}$.
++ The observation probabilities can be packed in an observation matrix $\mathbf{\Omega}$.
 
 --
 
@@ -1189,7 +1196,7 @@ y %>%
 
 --
 
-+ In columns: the observations non-detected $y = 1$ and detected $y = 2$. 
++ In columns: the observations non-detected $y = 1$ and detected $y = 2$ (previously coded 0 and 1 respectively). 
 
 \begin{align*}
 \mathbf{\Omega} = 
@@ -1215,7 +1222,7 @@ $$
 \end{matrix}
 \hspace{-1.2em}
 \begin{matrix}
-    y_t=0 & y_t=1 \\ \hdashline
+    y_t=1 & y_t=2 \\ \hdashline
 1 - p & p\\ 
 1 & 0\\
 \end{matrix}
@@ -1429,6 +1436,9 @@ $$
 &= w_{z_1 = 1, y_1 = 2} w_{z_2 = 1, y_2 = 1}\delta_1 \gamma_{z_1 = 1, z_2 = 1} + w_{z_1 = 1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \delta_1 \gamma_{z_1 = 1, z_2 = 2}
 \end{align*}
 
+Note: $\Pr(z_1 = 1) = \delta_1 = 1$ and $\Pr(z_1 = 2) = 0$. 
+
+
 ---
 # Example 
 
@@ -1440,7 +1450,7 @@ $$
 \Pr(\mathbf{y} = (2, 1)) &= \sum_{z_1 = 1}^2 \; \sum_{z_2 = 1}^2 w_{z_1, y_1 = 2} w_{z_2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2} \color{white}{\Pr(z_{T-1}, z_{T-2},\ldots, z_1, z_1, z_1, z_1)}\\
 &= \sum_{z_1 = 1}^2 \left( w_{z_1, y_1 = 2} w_{z_2 = 1, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 1} + w_{z_1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \Pr(z_1) \gamma_{z_1, z_2 = 2} \right) \\
 &= w_{z_1 = 1, y_1 = 2} w_{z_2 = 1, y_2 = 1} \delta_1 \gamma_{z_1 = 1, z_2 = 1} + w_{z_1 = 1, y_1 = 2} w_{z_2 = 2, y_2 = 1} \delta_1 \gamma_{z_1 = 1, z_2 = 2}\\
-&= (1 - p) \phi
+&= (1 - p) \phi + (1-\phi)
 \end{align*}
 
 Note: $w_{z_1 = 1, y_1 = 2} = \Pr(y_1 = 2 | z_1 = 1) = 1$ because we condition on first capture. 
@@ -1590,7 +1600,7 @@ my.constants
 
 --
 
-+ We cannot use a null index in Nimble.
++ To use the categorical distribution, we need to code 1, 2, etc. Value 0 is not accepted. 
 
 --
 

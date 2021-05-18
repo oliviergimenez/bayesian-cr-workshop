@@ -14,7 +14,7 @@ class: center, middle, title-slide
 
 # Known knowns, unknown knowns and unknowns: Uncertainty in state assignment
 ### The team
-### last updated: 2021-05-10
+### last updated: 2021-05-18
 
 ---
 
@@ -757,6 +757,8 @@ $$
 
 + No possibility of recovering from the disease, that is `\(\psi_{IH} = 0\)`. Once you get sick, you remain sick `\(\psi_{II} = 1 - \psi_{IH} = 1\)`.
 
++ For analysing the house finch data, we allow recovering from the disease, and we will use transition matrix from previous slide. 
+
 
 ---
 ### HMM model for disease states with uncertainty
@@ -1094,7 +1096,7 @@ $$
 \end{matrix}`
 \hspace{-1.2em}
 `\begin{matrix}
-    z_t=1 &amp; z_t=2 &amp; z_t=3 \\ \hdashline
+    z_t=A &amp; z_t=B &amp; z_t=D \\ \hdashline
 \phi_A (1-\psi_{AB}) &amp; \phi_A \psi_{AB} &amp; 1 - \phi_A\\ 
 \phi_B \psi_{BA} &amp; \phi_B (1-\psi_{BA}) &amp; 1 - \phi_B\\ 
 0 &amp; 0 &amp; 1
@@ -1104,7 +1106,7 @@ $$
 &amp; \\
 \left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
     \begin{matrix}
-    z_{t-1}=1 \\ z_{t-1}=2 \\ z_{t-1}=3
+    z_{t-1}=A \\ z_{t-1}=B \\ z_{t-1}=D
     \end{matrix}
 \end{matrix}`
 $$
@@ -1121,7 +1123,7 @@ $$
 `\begin{matrix}
     y_t=0 &amp; y_t=1 &amp; y_t=2 \\ \hdashline
 1 - p_A &amp; p_A &amp; 0\\ 
-1 - p_B &amp; 0 &amp; p_A\\ 
+1 - p_B &amp; 0 &amp; p_B\\ 
 1 &amp; 0 &amp; 0
 \end{matrix}`
 \hspace{-0.2em}
@@ -1129,7 +1131,7 @@ $$
 &amp; \\
 \left . \vphantom{ \begin{matrix} 12 \\ 12 \\ 12 \end{matrix} } \right )
     \begin{matrix}
-    z_{t}=1 \\ z_{t}=2 \\ z_{t}=3
+    z_{t}=A \\ z_{t}=B \\ z_{t}=D
     \end{matrix}
 \end{matrix}`
 $$
