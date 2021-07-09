@@ -78,7 +78,7 @@ navbar:
           href: worksheets/7_demo.html
         - text: "Class 8 live demo - R script"
           href: worksheets/7_demo.R
-    - text: "Frequently Asked Questions"
+    - text: "Questions and answers"
       menu:
         - text: "Class 2: Crash course on Bayesian statistics and MCMC algorithms"
           href: faq/crashcourse.html
