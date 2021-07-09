@@ -78,6 +78,24 @@ navbar:
           href: worksheets/7_demo.html
         - text: "Class 8 live demo - R script"
           href: worksheets/7_demo.R
+    - text: "Frequently Asked Questions"
+      menu:
+        - text: "Class 2: Crash course on Bayesian statistics and MCMC algorithms"
+          href: faq/crashcourse.html
+        - text: "Class 3: Free the modeler in you: Introduction to Nimble"
+          href: faq/intronimble.html
+        - text: "Class 4: What you see is not what you get: Hidden Markov models and capture-recapture data"
+          href: faq/hmmcmr.html
+        - text: "Class 5: Dead or alive: Survival estimation"
+          href: faq/survival.html
+        - text: "Class 6: On the move: Transition estimation"
+          href: faq/transition.html
+        - text: "Class 7: Known knowns, unknown knowns and unknowns: Uncertainty in state assignment"
+          href: faq/uncertainty.html
+        - text: "Class 8: Skip your coffee break: Speed up MCMC convergence"
+          href: faq/speedup.html
+        - text: "Class 9: Take-home messages"
+          href: faq/takehome.html
     - text: "Exercises"
       menu:
         - text: "Exercises"
