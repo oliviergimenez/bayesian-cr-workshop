@@ -1,0 +1,133 @@
+[
+    {
+        "client_msg_id": "807ab88d-1eeb-47f3-9620-b3ece258e964",
+        "type": "message",
+        "text": "Thanks! Last question (I hope). I am not sure about the goal and the interpretation of the histogram (I am begginer on bayesien method sorry)",
+        "user": "U0203L8NKE2",
+        "ts": "1623404669.175100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g830b7c598b6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/830b7c598b64700d091bd215e65d01f4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-72.png",
+            "first_name": "SAUNIER",
+            "real_name": "SAUNIER Merlène",
+            "display_name": "Merlène Saunier",
+            "team": "T01UVLT5RS8",
+            "name": "merlene.saunier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Nnk=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks! Last question (I hope). I am not sure about the goal and the interpretation of the histogram (I am begginer on bayesien method sorry)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    },
+    {
+        "client_msg_id": "e626d8da-72af-4dd4-968a-13866fc59356",
+        "type": "message",
+        "text": "No pb. It tells you that a normal prior with mean = 0 and sd = 1.5 on beta induces a uniform prior between 0 and 1 for `p = 1\/(1+exp(-beta))`.",
+        "user": "U01ULDNCVKP",
+        "ts": "1623405467.175300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s0FdO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No pb. It tells you that a normal prior with mean = 0 and sd = 1.5 on beta induces a uniform prior between 0 and 1 for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p = 1\/(1+exp(-beta))",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    },
+    {
+        "client_msg_id": "a8de95b3-45ca-4882-abaf-c55dc77be65b",
+        "type": "message",
+        "text": "Ah yes, perfect ! Thank you very much for your help",
+        "user": "U0203L8NKE2",
+        "ts": "1623407081.175500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g830b7c598b6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/830b7c598b64700d091bd215e65d01f4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-72.png",
+            "first_name": "SAUNIER",
+            "real_name": "SAUNIER Merlène",
+            "display_name": "Merlène Saunier",
+            "team": "T01UVLT5RS8",
+            "name": "merlene.saunier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TfaO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah yes, perfect ! Thank you very much for your help"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    }
+]

@@ -1,0 +1,215 @@
+[
+    {
+        "client_msg_id": "0c0232a4-60c6-4d36-8bd3-71a150403462",
+        "type": "message",
+        "text": "Thank you ! But when I do the both options a have the same problem that for my first code : I have 10 p bu 8 are the same ( for the years with surveys) and 2 are equal to zero (for the years without surveys)... I tried others solutions",
+        "user": "U0203L8NKE2",
+        "ts": "1622792047.140000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g830b7c598b6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/830b7c598b64700d091bd215e65d01f4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-72.png",
+            "first_name": "SAUNIER",
+            "real_name": "SAUNIER Merlène",
+            "display_name": "Merlène Saunier",
+            "team": "T01UVLT5RS8",
+            "name": "merlene.saunier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "y8t",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you ! But when I do the both options a have the same problem that for my first code : I have 10 p bu 8 are the same ( for the years with surveys) and 2 are equal to zero (for the years without surveys)... I tried others solutions"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    },
+    {
+        "client_msg_id": "b33c02f5-b335-4a5a-9775-7f361eb9a479",
+        "type": "message",
+        "text": "Almost there :wink: My bad, I forgot to include time-dependent detection probabilities. With the second option, try `p[t] &lt;- beta[t] * equals(survey[t], 1)` with a loop for `beta[t] ~ dunif(0,1)`. If not, email me your code and data, I'm happy to help.",
+        "user": "U01ULDNCVKP",
+        "ts": "1622808484.140200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WuS3z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Almost there "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            },
+                            {
+                                "type": "text",
+                                "text": " My bad, I forgot to include time-dependent detection probabilities. With the second option, try "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p[t] <- beta[t] * equals(survey[t], 1) ",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "with a loop for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "beta[t] ~ dunif(0,1)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". If not, email me your code and data, I'm happy to help."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    },
+    {
+        "client_msg_id": "265072d8-e174-4019-bef2-0480f7e33dd9",
+        "type": "message",
+        "text": "Thank you very much for your help! After some attempts, it perfectly works with\n\n\"survey&lt;-c(1,1,1,1,0,1,1,0,1,1)\n\nhmm.phip.t &lt;- nimbleCode({\n  delta[1] &lt;- 1\n  delta[2] &lt;- 0\n  for (t in 1:(10)\n  {\n    beta[t]~dunif(0,1)\n    p[t]&lt;- (1\/(1+exp(-beta[t])))*survey[t]\n    omega[1,1,t] &lt;- 1 - p[t]\n    omega[1,2,t] &lt;- p[t]\n    omega[2,1,t] &lt;- 1\n    omega[2,2,t] &lt;- 0\n\n  } etc...\"",
+        "user": "U0203L8NKE2",
+        "ts": "1622813251.140400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g830b7c598b6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/830b7c598b64700d091bd215e65d01f4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-72.png",
+            "first_name": "SAUNIER",
+            "real_name": "SAUNIER Merlène",
+            "display_name": "Merlène Saunier",
+            "team": "T01UVLT5RS8",
+            "name": "merlene.saunier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pjAX+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you very much for your help! After some attempts, it perfectly works with\n\n\"survey<-c(1,1,1,1,0,1,1,0,1,1)\n\nhmm.phip.t <- nimbleCode({\n  delta[1] <- 1\n  delta[2] <- 0\n  for (t in 1:(10)\n  {\n    beta[t]~dunif(0,1)\n    p[t]<- (1\/(1+exp(-beta[t])))*survey[t]\n    omega[1,1,t] <- 1 - p[t]\n    omega[1,2,t] <- p[t]\n    omega[2,1,t] <- 1\n    omega[2,2,t] <- 0\n\n  } etc...\""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    },
+    {
+        "client_msg_id": "07A86B65-1ECA-4B36-BEEE-EF92016B7057",
+        "type": "message",
+        "text": "Ha of course, just use survey as an indicator :wink: Instead of the uniform prior, i would rather use a normal prior. The parameter is not necessarily positive and lower than 1. You may use prior predictive checks to see what prior you imply on pt. E.g. `hist(1\/(1+exp(-(rnorm(1000,0,sd=1.5)))))`.",
+        "user": "U01ULDNCVKP",
+        "ts": "1622816025.145600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1622820130.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OCxRg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ha of course, just use survey as an indicator "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Instead of the uniform prior, i would rather use a normal prior. The parameter is not necessarily positive and lower than 1. You may use prior predictive checks to see what prior you imply on pt. E.g. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "hist(1\/(1+exp(-(rnorm(1000,0,sd=1.5)))))",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    }
+]

@@ -1,0 +1,273 @@
+[
+    {
+        "client_msg_id": "916bc265-f7f3-4bd0-85b3-44e5c1f81638",
+        "type": "message",
+        "text": "Thanks <@U01UMBR0K38> yes the survival component is a pure mark-recovery model - we did consider multistate but decided against it this time. Cool I thought so, its just not having seen a specific example to assess the differences\/conversion myself! Ha perhaps in one of the remaining sessions as I've been to busy afterwards to attend so far but I do plan on doing todays and at least one of the remaining ones!",
+        "user": "U022EA0060H",
+        "ts": "1623142111.166400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jIEwN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " yes the survival component is a pure mark-recovery model - we did consider multistate but decided against it this time. Cool I thought so, its just not having seen a specific example to assess the differences\/conversion myself! Ha perhaps in one of the remaining sessions as I've been to busy afterwards to attend so far but I do plan on doing todays and at least one of the remaining ones!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "Hi again <@U022EA0060H>. So attached the code for my IPM, which includes a Brownie mark-recovery model in NIMBLE. It's a bit of a special case though, since we assume perfect detection of hunting recoveries here, and it may be more confusing than it is helpful...",
+        "files": [
+            {
+                "id": "F024HK2UNR2",
+                "created": 1623142253,
+                "timestamp": 1623142253,
+                "name": "ArcticFox_IPM.R",
+                "title": "ArcticFox_IPM.R",
+                "mimetype": "text\/plain",
+                "filetype": "r",
+                "pretty_type": "R",
+                "user": "U01UMBR0K38",
+                "editable": true,
+                "size": 10425,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F024HK2UNR2\/arcticfox_ipm.r?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F024HK2UNR2\/download\/arcticfox_ipm.r?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UMBR0K38\/F024HK2UNR2\/arcticfox_ipm.r",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F024HK2UNR2-8238337052",
+                "edit_link": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UMBR0K38\/F024HK2UNR2\/arcticfox_ipm.r\/edit",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aZd4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi again "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U022EA0060H"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". So attached the code for my IPM, which includes a Brownie mark-recovery model in NIMBLE. It's a bit of a special case though, since we assume perfect detection of hunting recoveries here, and it may be more confusing than it is helpful..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U01UMBR0K38",
+        "display_as_bot": false,
+        "ts": "1623142351.168100"
+    },
+    {
+        "client_msg_id": "a0eedfaa-08a0-4b5f-906c-e2a4a7210613",
+        "type": "message",
+        "text": "Basically, if your model is implemented in JAGS already, the conversion should be straightforward. The workshop lecture, as well as the tutorial for conversion on the R-nimble website should help with that.",
+        "user": "U01UMBR0K38",
+        "ts": "1623142434.169400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "W1v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Basically, if your model is implemented in JAGS already, the conversion should be straightforward. The workshop lecture, as well as the tutorial for conversion on the R-nimble website should help with that."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b91c280d-2cc1-43af-9de4-fc907e3c66aa",
+        "type": "message",
+        "text": "That being said: if it's major increases in speed\/efficiency you are after, you will want to look into the options for marginalized likelihoods.\nTwo options here:\n1. Reformulate your model as a multistate model (i.e. with states alive, newly dead, and dead) and use the \"plug and play\" dDHMM() distributions from nimbleEcology. (The Butterfly book illustrates nicely how to phrase mark-recapture-recovery data as a multistate model. But note that there is no need to follow their advice to put recovery probabilities into the transition matrix. That's not necessary)\n2. Start from the dCJS() family of functions in the nimbleEcology package (= distribution for marginalized CJS capture histories) and use them as a template to build your own custom distribution for a mark-recovery\/Brownie type capture history. Starting from the template, it should not be too complicated, I would think. ",
+        "user": "U01UMBR0K38",
+        "ts": "1623142701.173900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "j9B",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That being said: if it's major increases in speed\/efficiency you are after, you will want to look into the options for marginalized likelihoods.\nTwo options here:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Reformulate your model as a multistate model (i.e. with states alive, newly dead, and dead) and use the \"plug and play\" dDHMM() distributions from nimbleEcology. (The Butterfly book illustrates nicely how to phrase mark-recapture-recovery data as a multistate model. But note that there is no need to follow their advice to put recovery probabilities into the transition matrix. That's not necessary)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Start from the dCJS() family of functions in the nimbleEcology package (= distribution for marginalized CJS capture histories) and use them as a template to build your own custom distribution for a mark-recovery\/Brownie type capture history. Starting from the template, it should not be too complicated, I would think. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022EA0060H"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fd933444-6119-4d00-97ae-c7ca758c8224",
+        "type": "message",
+        "text": "Thanks <@U01UMBR0K38> I will check it out!",
+        "user": "U022EA0060H",
+        "ts": "1623143885.174300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UCB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I will check it out!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

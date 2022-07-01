@@ -1,0 +1,108 @@
+name: "Bayesian capture-recapture inference with hidden Markov models"
+title: "Bayesian capture-recapture inference with hidden Markov models"
+output_dir: "docs"
+theme: "theme.css"
+repository_url: https://oliviergimenez.github.io/bayesian-cr-workshop/
+include: [".nojekyll"]
+navbar:
+  source_url: true
+  left:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Video recordings"
+      menu:
+        - text: "Playlist of all classes"
+          href: https://youtube.com/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL
+        - text: "Classes 1, 2 and 3"
+          href: https://youtu.be/2qeCQoZizuU
+        - text: "Classes 4 and 5 (part 1)"
+          href: https://youtu.be/Mpd1Axo3xpw
+        - text: "Classes 5 (part 2) and 6"
+          href: https://youtu.be/sB11CDlN79g
+        - text: "Classes 7, 8 and 9"
+          href: https://youtu.be/N2gilFwD-V0
+    - text: "Slides"
+      menu:
+        - text: "Download all slides in PDF"
+          href: slides/BayesCRlectureslides.pdf
+        - text: "Class 1: Welcoming words"
+          href: slides/1_welcome.html
+        - text: "Class 2: Crash course on Bayesian statistics and MCMC algorithms"
+          href: slides/2_bayesmcmc.html
+        - text: "Class 3: Free the modeler in you: Introduction to Nimble"
+          href: slides/3_nimble.html
+        - text: "Class 4: What you see is not what you get: Hidden Markov models and capture-recapture data"
+          href: slides/4_hmm.html
+        - text: "Class 5: Dead or alive: Survival estimation"
+          href: slides/5_survival.html
+        - text: "Class 6: On the move: Transition estimation"
+          href: slides/6_transition.html
+        - text: "Class 7: Known knowns, unknown knowns and unknowns: Uncertainty in state assignment"
+          href: slides/7_uncertainty.html
+        - text: "Class 8: Skip your coffee break: Speed up MCMC convergence"
+          href: slides/8_speed.html
+        - text: "Class 9: Take-home messages"
+          href: slides/9_conclusion.html
+    - text: "Live demos"
+      menu:
+        - text: "Download all datasets at once"
+          href: https://github.com/oliviergimenez/bayesian-cr-workshop/raw/master/worksheets/data.zip
+        - text: "Download all worksheets in PDF"
+          href: worksheets/BayesCRworksheets.pdf
+        - text: "Class 2 live demo: Crash course on Bayesian statistics and MCMC algorithms"
+          href: worksheets/1_demo.html
+        - text: "Class 2 live demo - R script"
+          href: worksheets/1_demo.R
+        - text: "Class 3 live demo: Free the modeler in you - Introduction to Nimble"
+          href: worksheets/2_demo.html
+        - text: "Class 3 live demo - R script"
+          href: worksheets/2_demo.R
+        - text: "Class 4 live demo: What you see is not what you get - Hidden Markov models and capture-recapture data"
+          href: worksheets/3_demo.html
+        - text: "Class 4 live demo - R script"
+          href: worksheets/3_demo.R
+        - text: "Class 5 live demo: Dead or alive - Survival estimation"
+          href: worksheets/4_demo.html
+        - text: "Class 5 live demo - R script"
+          href: worksheets/4_demo.R
+        - text: "Class 6 live demo: On the move - Transition estimation"
+          href: worksheets/5_demo.html
+        - text: "Class 6 live demo - R script"
+          href: worksheets/5_demo.R
+        - text: "Class 7 live demo: Known knowns, unknown knowns and unknowns - Uncertainty in state assignment"
+          href: worksheets/6_demo.html
+        - text: "Class 7 live demo - R script"
+          href: worksheets/6_demo.R
+        - text: "Class 8 live demo: Skip your coffee break: Speed up MCMC convergence"
+          href: worksheets/7_demo.html
+        - text: "Class 8 live demo - R script"
+          href: worksheets/7_demo.R
+    - text: "Questions and answers"
+      menu:
+        - text: "Class 2: Crash course on Bayesian statistics and MCMC algorithms"
+          href: faq/crashcourse.html
+        - text: "Class 3: Free the modeler in you: Introduction to Nimble"
+          href: faq/intronimble.html
+        - text: "Class 4: What you see is not what you get: Hidden Markov models and capture-recapture data"
+          href: faq/hmmcmr.html
+        - text: "Class 5: Dead or alive: Survival estimation"
+          href: faq/survival.html
+        - text: "Class 6: On the move: Transition estimation"
+          href: faq/transition.html
+        - text: "Class 7: Known knowns, unknown knowns and unknowns: Uncertainty in state assignment"
+          href: faq/uncertainty.html
+        - text: "Class 8: Skip your coffee break: Speed up MCMC convergence"
+          href: faq/speedup.html
+        - text: "Class 9: Take-home messages"
+          href: faq/takehome.html
+    - text: "Exercises"
+      menu:
+        - text: "Exercises"
+          href: worksheets/exercises.html
+        - text: "Exercises - R script"
+          href: worksheets/exercises.R
+    - icon: fab fa-github
+      href: https://github.com/oliviergimenez/bayesian-cr-workshop
+
+output: distill::distill_article

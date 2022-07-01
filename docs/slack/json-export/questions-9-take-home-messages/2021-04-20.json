@@ -1,0 +1,86 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618902034.000800",
+        "user": "U01UU6DLJ4A",
+        "text": "<@U01UU6DLJ4A> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618902142.001000",
+        "user": "U01UDD8PE2K",
+        "text": "<@U01UDD8PE2K> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618902825.001200",
+        "user": "U02041RP600",
+        "text": "<@U02041RP600> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618902888.001400",
+        "user": "U02041USZ96",
+        "text": "<@U02041USZ96> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618903024.001600",
+        "user": "U020421P0P2",
+        "text": "<@U020421P0P2> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618903564.001800",
+        "user": "U01UUEU6N03",
+        "text": "<@U01UUEU6N03> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618905942.001900",
+        "user": "U01UDBUETM5",
+        "text": "<@U01UDBUETM5> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618906317.002100",
+        "user": "U01UUD6E2JE",
+        "text": "<@U01UUD6E2JE> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618909639.002300",
+        "user": "U01UDRQ0JQ7",
+        "text": "<@U01UDRQ0JQ7> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618912806.002500",
+        "user": "U01UN1DLELE",
+        "text": "<@U01UN1DLELE> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618913265.002700",
+        "user": "U0204K8GCGG",
+        "text": "<@U0204K8GCGG> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618917640.002900",
+        "user": "U01V7L10QL9",
+        "text": "<@U01V7L10QL9> has joined the channel"
+    }
+]

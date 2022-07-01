@@ -1,0 +1,262 @@
+[
+    {
+        "client_msg_id": "14114087-a1a2-4c7b-aedc-a8e48bf2e234",
+        "type": "message",
+        "text": "Testing a question in Slack. How many instructors are there? (or the smallest CR study ever)",
+        "user": "U021GG5HHMH",
+        "ts": "1621236040.027700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7Nlb0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Testing a question in Slack. How many instructors are there? (or the smallest CR study ever)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b2d4fc40-8de6-4316-81a8-399c3fcd25bd",
+        "type": "message",
+        "text": "I'm there",
+        "user": "U01ULDNCVKP",
+        "ts": "1621236119.028000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uHkIp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm there"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021GG5HHMH",
+                    "U022RRJ8KLY",
+                    "U01UQ29DG3C"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "bffa1590-d107-4c1e-bd17-b39f5d5bfa68",
+        "type": "message",
+        "text": "How is different a uniform to a beta distribution?",
+        "user": "U0220681GLS",
+        "ts": "1621237510.031200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3ff4cc0d166",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-14\/2061435367030_b3ff4cc0d166ec265a69_72.png",
+            "first_name": "",
+            "real_name": "alepietrek",
+            "display_name": "alepietrek",
+            "team": "T01UVLT5RS8",
+            "name": "alepietrek",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HOl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How is different a uniform to a beta distribution?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621237510.031200",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621237975.031700",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U01UQ29DG3C"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621237767.031400"
+            },
+            {
+                "user": "U01UQ29DG3C",
+                "ts": "1621237975.031700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "3b50acf0-21d6-4a0a-9ede-947b32c5f025",
+        "type": "message",
+        "text": "<@U0220681GLS> this question has been asked in the questions-2 channel. Please check there :slightly_smiling_face:",
+        "user": "U01UMBR0K38",
+        "ts": "1621237767.031400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Y4t5o",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0220681GLS"
+                            },
+                            {
+                                "type": "text",
+                                "text": " this question has been asked in the questions-2 channel. Please check there "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621237510.031200",
+        "parent_user_id": "U0220681GLS"
+    },
+    {
+        "client_msg_id": "1998b673-9daa-4a05-bdf7-87cea5077ba4",
+        "type": "message",
+        "text": "here: <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNP18LE\/p1621237323025000>",
+        "user": "U01UQ29DG3C",
+        "ts": "1621237975.031700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "417549c44871",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1973010614613_417549c448719bc2a57e_72.jpg",
+            "first_name": "",
+            "real_name": "Maud Quéroué",
+            "display_name": "Maud Quéroué",
+            "team": "T01UVLT5RS8",
+            "name": "maud.queroue",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNP18LE\/p1621237323025000",
+                "fallback": "[May 17th, 2021 12:42 AM] dominik.dachs: why choose dbeta(1,1) instead of dunif(0,1)?",
+                "ts": "1621237323.025000",
+                "author_id": "U021ZHS9821",
+                "author_subname": "Dominik Dachs",
+                "channel_id": "C01UGNP18LE",
+                "channel_name": "questions-2-crash-course-bayes-mcmc",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "why choose dbeta(1,1) instead of dunif(0,1)?",
+                "author_name": "Dominik Dachs",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U021ZHS9821",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/0b1b7282ede6bfe97b103d45a15cf37d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0005-48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNP18LE\/p1621237323025000",
+                "footer": "Thread in #questions-2-crash-course-bayes-mcmc"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b\/pR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNP18LE\/p1621237323025000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621237510.031200",
+        "parent_user_id": "U0220681GLS"
+    }
+]

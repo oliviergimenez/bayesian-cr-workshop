@@ -1,0 +1,45 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618821770.000600",
+        "user": "U01UQ29DG3C",
+        "text": "<@U01UQ29DG3C> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1618861575.000700",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Feel free to introduce yourself here: your name, your field\/organization, what you use capture-recapture models for, and what you hope to learn from the workshop.",
+        "purpose": "Feel free to introduce yourself here: your name, your field\/organization, what you use capture-recapture models for, and what you hope to learn from the workshop."
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618864555.000900",
+        "user": "U0202MQV9JL",
+        "text": "<@U0202MQV9JL> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618864567.001100",
+        "user": "U01UC4TNYG7",
+        "text": "<@U01UC4TNYG7> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618871050.000200",
+        "user": "U01UCEJPHL7",
+        "text": "<@U01UCEJPHL7> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618897475.000200",
+        "user": "U01UQUERHLM",
+        "text": "<@U01UQUERHLM> has joined the channel"
+    }
+]

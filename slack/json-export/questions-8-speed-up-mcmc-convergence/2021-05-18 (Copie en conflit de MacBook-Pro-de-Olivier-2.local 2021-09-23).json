@@ -1,0 +1,2269 @@
+[
+    {
+        "type": "message",
+        "text": "and now is time ...",
+        "files": [
+            {
+                "id": "F0225NA9Y85",
+                "created": 1621346659,
+                "timestamp": 1621346659,
+                "name": "Screenshot 2021-05-18 at 16.04.16.png",
+                "title": "Screenshot 2021-05-18 at 16.04.16.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U01UDBUETM5",
+                "editable": false,
+                "size": 242653,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0225NA9Y85\/screenshot_2021-05-18_at_16.04.16.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0225NA9Y85\/download\/screenshot_2021-05-18_at_16.04.16.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225NA9Y85-36c1c6a783\/screenshot_2021-05-18_at_16.04.16_64.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225NA9Y85-36c1c6a783\/screenshot_2021-05-18_at_16.04.16_80.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225NA9Y85-36c1c6a783\/screenshot_2021-05-18_at_16.04.16_360.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_360_w": 360,
+                "thumb_360_h": 226,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225NA9Y85-36c1c6a783\/screenshot_2021-05-18_at_16.04.16_480.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_480_w": 480,
+                "thumb_480_h": 301,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225NA9Y85-36c1c6a783\/screenshot_2021-05-18_at_16.04.16_160.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "original_w": 492,
+                "original_h": 309,
+                "thumb_tiny": "AwAeADCDy37irEUIC5fqegFSeXlsnoO1OT7+SOegrOpUdtAjFdRvkkjOSB9KDHgfOpIp+9Hcc4dOMZx+lKoXJCjAJye9ZtpLcr5FN4yMkD5TTBG+eB+tW8qGxuHPGKbviB++oxx1rZVHsQ4laCSRZ9jFsnIwfXtVmFUVFG8tIpyec4qdolc5ZFY+9RCMGQ+WiLtOD78VDSZQ\/wAvJ3H74\/ipVQqgVWzz354pwU5OcY7D0pojxgDgDsD1qeTo2O5SluY3lVjH9w9QarZy341qfZ48f6tPyoNrETkxqMelaaCP\/9k=",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UDBUETM5\/F0225NA9Y85\/screenshot_2021-05-18_at_16.04.16.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F0225NA9Y85-57d7b03c8e",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "F1Y=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and now is time ..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U01UDBUETM5",
+        "display_as_bot": false,
+        "ts": "1621346670.001100"
+    },
+    {
+        "client_msg_id": "4463e5ce-137c-400d-919e-879a3f2e3b85",
+        "type": "message",
+        "text": "Is Nimble based on Python? The call to the methods using object$method(arg) looks not like standard R synthax.",
+        "user": "U021QB26LLB",
+        "ts": "1621347285.002200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd924269ecd8",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d924269ecd84a49a01050577d5070f39.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "",
+            "real_name": "Lionel Hertzog",
+            "display_name": "Lionel Hertzog",
+            "team": "T01UVLT5RS8",
+            "name": "lionel.hertzog",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iz0g",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is Nimble based on Python? The call to the methods using object$method(arg) looks not like standard R synthax."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347285.002200",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621350261.014900",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U0203USKJRE"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621347444.002300"
+            },
+            {
+                "user": "U0203USKJRE",
+                "ts": "1621350261.014900"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621350261.014900"
+    },
+    {
+        "client_msg_id": "362a4e9c-60a3-4de1-b0df-0399f4814f36",
+        "type": "message",
+        "text": "No Python involved as far as I know.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621347444.002300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Tpnjx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No Python involved as far as I know."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347285.002200",
+        "parent_user_id": "U021QB26LLB"
+    },
+    {
+        "client_msg_id": "99f5c288-e68d-40d2-b9dc-99f7b70b8d92",
+        "type": "message",
+        "text": "compareMCMCs is an awesome package. You can compare the fitting of your model in Nimble vs. Jags, Stan and other BUGS programs in a few lines of code. See <https:\/\/github.com\/nimble-dev\/compareMCMCs>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621347608.003200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1621347658.000000"
+        },
+        "attachments": [
+            {
+                "fallback": "nimble-dev\/compareMCMCs",
+                "text": "Tools for comparing MCMC efficiency from nimble and\/or other engines",
+                "title": "nimble-dev\/compareMCMCs",
+                "id": 1,
+                "color": "24292f",
+                "fields": [
+                    {
+                        "title": "Stars",
+                        "value": "1",
+                        "short": true
+                    },
+                    {
+                        "title": "Language",
+                        "value": "R",
+                        "short": true
+                    }
+                ],
+                "bot_id": "B022QMWDLFJ",
+                "app_unfurl_url": "https:\/\/github.com\/nimble-dev\/compareMCMCs",
+                "is_app_unfurl": true
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "x39",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "compareMCMCs is an awesome package. You can compare the fitting of your model in Nimble vs. Jags, Stan and other BUGS programs in a few lines of code. See "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/nimble-dev\/compareMCMCs"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U021NFFDJAX"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022EG3UKDX",
+                    "U022EA0060H",
+                    "U0205U97A64",
+                    "U0228RCCZ7E"
+                ],
+                "count": 4
+            }
+        ]
+    },
+    {
+        "client_msg_id": "3fc99dfe-cb49-48c5-9300-869da811663c",
+        "type": "message",
+        "text": "For an example on non-centering, see the end of the live demo on class 5 <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/4_demo.html>.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621347755.004900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1621347995.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4lm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For an example on non-centering, see the end of the live demo on class 5 "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/4_demo.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "eaf0a88d-3d33-4753-8973-7720397a52ed",
+        "type": "message",
+        "text": "For CMR models expressed as HMMs, is the model likelihood exactly the same for Stan and nimble? I heard that there are subtle differences with Stan, but I may be wrong.",
+        "user": "U021MSK4PPH",
+        "ts": "1621347848.006200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sHV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For CMR models expressed as HMMs, is the model likelihood exactly the same for Stan and nimble? I heard that there are subtle differences with Stan, but I may be wrong."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347848.006200",
+        "reply_count": 7,
+        "reply_users_count": 2,
+        "latest_reply": "1621349724.012900",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U021MSK4PPH"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621348107.006400"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621348432.007000"
+            },
+            {
+                "user": "U021MSK4PPH",
+                "ts": "1621348821.007300"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621348990.008000"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621349017.008300"
+            },
+            {
+                "user": "U021MSK4PPH",
+                "ts": "1621349297.009900"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621349724.012900"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621349724.012900",
+        "reactions": [
+            {
+                "name": "star-struck",
+                "users": [
+                    "U021MSK4PPH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "bdb24e7e-3c9e-4893-828f-da9782b6fac3",
+        "type": "message",
+        "text": "Same I'd say from I understand it from here <https:\/\/mc-stan.org\/docs\/2_26\/stan-users-guide\/hmms-section.html>. Stan also has the marginalized likelihood for CMR models which is available in Nimble through nimbleEcology, which <@U0203USKJRE> will cover soon. See also Yackulic et al. awesome paper <https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/10.1002\/eap.2112>.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621348107.006400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1621348330.000000"
+        },
+        "attachments": [
+            {
+                "title": "2.6 Hidden Markov models | Stan User’s Guide",
+                "title_link": "https:\/\/mc-stan.org\/docs\/2_26\/stan-users-guide\/hmms-section.html",
+                "text": "Stan user’s guide with examples and programming techniques.",
+                "fallback": "2.6 Hidden Markov models | Stan User’s Guide",
+                "from_url": "https:\/\/mc-stan.org\/docs\/2_26\/stan-users-guide\/hmms-section.html",
+                "service_name": "mc-stan.org",
+                "id": 1,
+                "original_url": "https:\/\/mc-stan.org\/docs\/2_26\/stan-users-guide\/hmms-section.html"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sqFJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Same I'd say from I understand it from here "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/mc-stan.org\/docs\/2_26\/stan-users-guide\/hmms-section.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Stan also has the marginalized likelihood for CMR models which is available in Nimble through nimbleEcology, which "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0203USKJRE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " will cover soon. See also Yackulic et al. awesome paper "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/10.1002\/eap.2112"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347848.006200",
+        "parent_user_id": "U021MSK4PPH"
+    },
+    {
+        "client_msg_id": "337cd526-8acc-4651-baea-2c9a6b7ff094",
+        "type": "message",
+        "text": "But you'd better double check with a Stan expert, which I'm definitely not !",
+        "user": "U01ULDNCVKP",
+        "ts": "1621348432.007000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hkVg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But you'd better double check with a Stan expert, which I'm definitely not !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347848.006200",
+        "parent_user_id": "U021MSK4PPH"
+    },
+    {
+        "client_msg_id": "853052f8-179a-42ef-b954-221a1e0e387a",
+        "type": "message",
+        "text": "<https:\/\/statmodeling.stat.columbia.edu\/2016\/01\/21\/kery-and-schaubs-bayesian-population-analysis-translated-to-stan\/>",
+        "user": "U021MSK4PPH",
+        "ts": "1621348821.007300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tZyii",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/statmodeling.stat.columbia.edu\/2016\/01\/21\/kery-and-schaubs-bayesian-population-analysis-translated-to-stan\/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347848.006200",
+        "parent_user_id": "U021MSK4PPH"
+    },
+    {
+        "client_msg_id": "5d32fda3-886f-4a42-baba-029ad525ee76",
+        "type": "message",
+        "text": "nimbleEcology is great, give it a try :slightly_smiling_face: <https:\/\/cran.r-project.org\/web\/packages\/nimbleEcology\/vignettes\/Introduction_to_nimbleEcology.html>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621348941.007800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "w4B9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "nimbleEcology is great, give it a try "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/cran.r-project.org\/web\/packages\/nimbleEcology\/vignettes\/Introduction_to_nimbleEcology.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U0228RCCZ7E"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "54b89a49-2a81-4c44-840e-2030f70bb6f3",
+        "type": "message",
+        "text": "Counter offer <https:\/\/github.com\/nimble-dev\/AHMnimble> :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621348990.008000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "fallback": "nimble-dev\/AHMnimble",
+                "text": "Examples from Kéry &amp; Royle's \"Applied Hierarchical Modeling in Ecology (Volume I)\" converted to NIMBLE",
+                "title": "nimble-dev\/AHMnimble",
+                "id": 1,
+                "color": "24292f",
+                "fields": [
+                    {
+                        "title": "Stars",
+                        "value": "12",
+                        "short": true
+                    },
+                    {
+                        "title": "Language",
+                        "value": "R",
+                        "short": true
+                    }
+                ],
+                "bot_id": "B022QMWDLFJ",
+                "app_unfurl_url": "https:\/\/github.com\/nimble-dev\/AHMnimble",
+                "is_app_unfurl": true
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rmyh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Counter offer "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/nimble-dev\/AHMnimble"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347848.006200",
+        "parent_user_id": "U021MSK4PPH",
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U021ZJQ81EG"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "494a895d-fb35-4699-8230-03b4d81c0d17",
+        "type": "message",
+        "text": "And <https:\/\/github.com\/nimble-dev\/nimble-demos>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621349017.008300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "fallback": "nimble-dev\/nimble-demos",
+                "text": "Demos for the NIMBLE project",
+                "title": "nimble-dev\/nimble-demos",
+                "id": 1,
+                "color": "24292f",
+                "fields": [
+                    {
+                        "title": "Website",
+                        "value": "<http:\/\/r-nimble.org>",
+                        "short": true
+                    },
+                    {
+                        "title": "Stars",
+                        "value": "2",
+                        "short": true
+                    }
+                ],
+                "bot_id": "B022QMWDLFJ",
+                "app_unfurl_url": "https:\/\/github.com\/nimble-dev\/nimble-demos",
+                "is_app_unfurl": true
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YEY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/nimble-dev\/nimble-demos"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347848.006200",
+        "parent_user_id": "U021MSK4PPH"
+    },
+    {
+        "client_msg_id": "b4b2a9ad-9549-4eac-a51b-ea5fac8db847",
+        "type": "message",
+        "text": "Check out the live demos for an example or a weighted likelihood with the geese example <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.html>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621349140.009100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lT8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Check out the live demos for an example or a weighted likelihood with the geese example "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "1f782d84-137e-486b-845d-d9559a9b9d21",
+        "type": "message",
+        "text": "Am I the only one with issues for downloading the R script of Demo 8?",
+        "user": "U01UXJ46T6W",
+        "ts": "1621349244.009800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a1cc2bbc62a3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2076149179892_a1cc2bbc62a397c2a582_72.jpg",
+            "first_name": "Carlos",
+            "real_name": "Carlos A. Gaitán",
+            "display_name": "Carlos A. Gaitán",
+            "team": "T01UVLT5RS8",
+            "name": "gaitansantos.carlos",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7h4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Am I the only one with issues for downloading the R script of Demo 8?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349244.009800",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621349475.011700",
+        "reply_users": [
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621349475.011700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621349475.011700"
+    },
+    {
+        "client_msg_id": "8a8dc88c-4313-4566-8a11-2c82e50d52c7",
+        "type": "message",
+        "text": "Couldn't find \"Kery and Schaub\" translated to Python...nobody has done it yet",
+        "user": "U021MSK4PPH",
+        "ts": "1621349297.009900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2rHOO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Couldn't find \"Kery and Schaub\" translated to Python...nobody has done it yet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347848.006200",
+        "parent_user_id": "U021MSK4PPH"
+    },
+    {
+        "client_msg_id": "cf2ca992-02a0-428b-80f0-b383e322d470",
+        "type": "message",
+        "text": "No I have the same problem (Demo 7 ?)",
+        "user": "U022FA345J5",
+        "ts": "1621349414.010600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "af4d254b5832",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2083343196785_af4d254b58322c7e1ce8_72.png",
+            "first_name": "",
+            "real_name": "Daniel Gaertner",
+            "display_name": "Daniel Gaertner",
+            "team": "T01UVLT5RS8",
+            "name": "daniel.gaertner56",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uVm+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No I have the same problem (Demo 7 ?)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349414.010600",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621349771.013400",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U01UDBUETM5"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621349485.012200"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621349771.013400"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621349771.013400"
+    },
+    {
+        "client_msg_id": "159d9a7d-1105-46a0-b761-d3441326bbf1",
+        "type": "message",
+        "text": "it's called 7 instead of 8?",
+        "user": "U021NFFDJAX",
+        "ts": "1621349435.011000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pIQrx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it's called 7 instead of 8?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349435.011000",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621349772.013600",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U021NFFDJAX"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621349751.013100"
+            },
+            {
+                "user": "U021NFFDJAX",
+                "ts": "1621349772.013600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "250ed799-f0af-42c9-b562-df9c7a0b96cf",
+        "type": "message",
+        "text": "<https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621349475.011700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RtM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349244.009800",
+        "parent_user_id": "U01UXJ46T6W"
+    },
+    {
+        "client_msg_id": "efa65e67-dd91-40d4-9592-45959924d458",
+        "type": "message",
+        "text": "The Demos names are changed, but the link for downloading the Demo 8 (named Demo 7), is not available i think.",
+        "user": "U01UXJ46T6W",
+        "ts": "1621349484.012100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a1cc2bbc62a3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2076149179892_a1cc2bbc62a397c2a582_72.jpg",
+            "first_name": "Carlos",
+            "real_name": "Carlos A. Gaitán",
+            "display_name": "Carlos A. Gaitán",
+            "team": "T01UVLT5RS8",
+            "name": "gaitansantos.carlos",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tz174",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The Demos names are changed, but the link for downloading the Demo 8 (named Demo 7), is not available i think."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349484.012100",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621349569.012600",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U01UXJ46T6W"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621349541.012400"
+            },
+            {
+                "user": "U01UXJ46T6W",
+                "ts": "1621349569.012600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621349569.012600"
+    },
+    {
+        "client_msg_id": "9726f595-178f-40ba-a6a8-6819a0c51e2b",
+        "type": "message",
+        "text": "<https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621349485.012200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dlxV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349414.010600",
+        "parent_user_id": "U022FA345J5"
+    },
+    {
+        "client_msg_id": "ab291afe-b015-4754-8ae5-35a34d7111b3",
+        "type": "message",
+        "text": "There is indeed a discrepancy between the class number and the name of the files for live demos. But the links are working I think, see <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621349541.012400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nUG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There is indeed a discrepancy between the class number and the name of the files for live demos. But the links are working I think, see "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349484.012100",
+        "parent_user_id": "U01UXJ46T6W"
+    },
+    {
+        "client_msg_id": "aa9b501b-2cd7-45cf-b1e9-9a9c6abd744f",
+        "type": "message",
+        "text": "Thanks, this link is working!",
+        "user": "U01UXJ46T6W",
+        "ts": "1621349569.012600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a1cc2bbc62a3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2076149179892_a1cc2bbc62a397c2a582_72.jpg",
+            "first_name": "Carlos",
+            "real_name": "Carlos A. Gaitán",
+            "display_name": "Carlos A. Gaitán",
+            "team": "T01UVLT5RS8",
+            "name": "gaitansantos.carlos",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eMHx=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, this link is working!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349484.012100",
+        "parent_user_id": "U01UXJ46T6W",
+        "reactions": [
+            {
+                "name": "wink",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "ed4ecff7-e831-45ce-b917-5f0359a73ccd",
+        "type": "message",
+        "text": "Chris Fonnesbeck might know :wink:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621349724.012900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cb4Z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Chris Fonnesbeck might know "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347848.006200",
+        "parent_user_id": "U021MSK4PPH"
+    },
+    {
+        "client_msg_id": "8ac26dca-6cac-4062-814a-b7c653b9b37a",
+        "type": "message",
+        "text": "should be working now see : <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNSF2TY\/p1621349541012400?thread_ts=1621349484.012100&amp;cid=C01UGNSF2TY>",
+        "user": "U01UDBUETM5",
+        "ts": "1621349751.013100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNSF2TY\/p1621349541012400?thread_ts=1621349484.012100&amp;cid=C01UGNSF2TY",
+                "fallback": "[May 18th, 2021 7:52 AM] olivier.gimenez: There is indeed a discrepancy between the class number and the name of the files for live demos. But the links are working I think, see <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R>",
+                "ts": "1621349541.012400",
+                "author_id": "U01ULDNCVKP",
+                "author_subname": "Olivier Gimenez",
+                "channel_id": "C01UGNSF2TY",
+                "channel_name": "questions-8-speed-up-mcmc-convergence",
+                "is_msg_unfurl": true,
+                "is_reply_unfurl": true,
+                "text": "There is indeed a discrepancy between the class number and the name of the files for live demos. But the links are working I think, see <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R>",
+                "author_name": "Olivier Gimenez",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U01ULDNCVKP",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNSF2TY\/p1621349541012400?thread_ts=1621349484.012100&amp;cid=C01UGNSF2TY",
+                "footer": "From a thread in #questions-8-speed-up-mcmc-convergence"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HqZE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "should be working now see : "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNSF2TY\/p1621349541012400?thread_ts=1621349484.012100&cid=C01UGNSF2TY"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349435.011000",
+        "parent_user_id": "U021NFFDJAX"
+    },
+    {
+        "client_msg_id": "1107194d-da50-4865-ad1e-82afdb856071",
+        "type": "message",
+        "text": "should be working fine now, see : <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNSF2TY\/p1621349541012400?thread_ts=1621349484.012100&amp;cid=C01UGNSF2TY>",
+        "user": "U01UDBUETM5",
+        "ts": "1621349771.013400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNSF2TY\/p1621349541012400?thread_ts=1621349484.012100&amp;cid=C01UGNSF2TY",
+                "fallback": "[May 18th, 2021 7:52 AM] olivier.gimenez: There is indeed a discrepancy between the class number and the name of the files for live demos. But the links are working I think, see <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R>",
+                "ts": "1621349541.012400",
+                "author_id": "U01ULDNCVKP",
+                "author_subname": "Olivier Gimenez",
+                "channel_id": "C01UGNSF2TY",
+                "channel_name": "questions-8-speed-up-mcmc-convergence",
+                "is_msg_unfurl": true,
+                "is_reply_unfurl": true,
+                "text": "There is indeed a discrepancy between the class number and the name of the files for live demos. But the links are working I think, see <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/7_demo.R>",
+                "author_name": "Olivier Gimenez",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U01ULDNCVKP",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNSF2TY\/p1621349541012400?thread_ts=1621349484.012100&amp;cid=C01UGNSF2TY",
+                "footer": "From a thread in #questions-8-speed-up-mcmc-convergence"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lWVz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "should be working fine now, see : "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01UGNSF2TY\/p1621349541012400?thread_ts=1621349484.012100&cid=C01UGNSF2TY"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349414.010600",
+        "parent_user_id": "U022FA345J5"
+    },
+    {
+        "client_msg_id": "1e636d41-e51c-40f3-847b-7f8a4f88a899",
+        "type": "message",
+        "text": "it worked for me before thanks :slightly_smiling_face:",
+        "user": "U021NFFDJAX",
+        "ts": "1621349772.013600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EpsS7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it worked for me before thanks "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621349435.011000",
+        "parent_user_id": "U021NFFDJAX"
+    },
+    {
+        "client_msg_id": "fcd7e2da-8b6b-4d50-ab41-b0456c3c4010",
+        "type": "message",
+        "text": "Thanks Perry, the marginalization and weighted likelihood are super cool features!",
+        "user": "U0220681GLS",
+        "ts": "1621350238.014800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3ff4cc0d166",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-14\/2061435367030_b3ff4cc0d166ec265a69_72.png",
+            "first_name": "",
+            "real_name": "alepietrek",
+            "display_name": "alepietrek",
+            "team": "T01UVLT5RS8",
+            "name": "alepietrek",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sHrL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks Perry, the marginalization and weighted likelihood are super cool features!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6da33cef-e0cd-4b71-a0e6-4a46bfadfcbf",
+        "type": "message",
+        "text": "Something like `object$method(arg)` is also R syntax for reference classes, for example.",
+        "user": "U0203USKJRE",
+        "ts": "1621350261.014900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nOF5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Something like "
+                            },
+                            {
+                                "type": "text",
+                                "text": "object$method(arg)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is also R syntax for reference classes, for example."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621347285.002200",
+        "parent_user_id": "U021QB26LLB"
+    },
+    {
+        "client_msg_id": "0e9abb59-31b1-4361-ad3b-d7bf7d3f6d95",
+        "type": "message",
+        "text": "Thanks you a lot",
+        "user": "U022FA345J5",
+        "ts": "1621350670.015300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "af4d254b5832",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2083343196785_af4d254b58322c7e1ce8_72.png",
+            "first_name": "",
+            "real_name": "Daniel Gaertner",
+            "display_name": "Daniel Gaertner",
+            "team": "T01UVLT5RS8",
+            "name": "daniel.gaertner56",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kVE0q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks you a lot"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "Fen tuned in for speed.",
+        "files": [
+            {
+                "id": "F021WJ8JHTR",
+                "created": 1621386992,
+                "timestamp": 1621386992,
+                "name": "20210519_102914.jpg",
+                "title": "20210519_102914.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U022EL2S7BK",
+                "editable": false,
+                "size": 1266491,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F021WJ8JHTR\/20210519_102914.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F021WJ8JHTR\/download\/20210519_102914.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_64.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_80.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_360.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_360_w": 166,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_480.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_480_w": 222,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_160.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_720.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_720_w": 333,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_800.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1731,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_960.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_960_w": 444,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021WJ8JHTR-b891e6b025\/20210519_102914_1024.jpg?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_1024_w": 473,
+                "thumb_1024_h": 1024,
+                "original_w": 1908,
+                "original_h": 4128,
+                "thumb_tiny": "AwAwABaeOBZU3uCHJOcGmtbAdJJB+NI1xJCxVUDDOc0xryQ\/8sh+tIBY9xjXdye9OqsJHjRQcjij7QfU\/lTAdc7ihbcBjpjOagFw4ABOfrSCUurKenWo+nWkBZRpJc7SoA9afsm\/vJVeGUICO3WpPtA9B+dJ3GVs9femng1OVAXioSKoQgpaBRQB\/9k=",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U022EL2S7BK\/F021WJ8JHTR\/20210519_102914.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F021WJ8JHTR-71f49ebb4d",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "691n",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Fen tuned in for speed."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U022EL2S7BK",
+        "display_as_bot": false,
+        "ts": "1621387043.015800",
+        "reactions": [
+            {
+                "name": "boom",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "edbdf8d1-c699-4535-b9e1-360b21ed1b5b",
+        "type": "message",
+        "text": "I definitely need to run my chains in parallel, and my model is very touchy about inits. What is the best way to ensure different inits for each chain and also that I can save these inits to reproduce the same results?",
+        "user": "U022EL2S7BK",
+        "ts": "1621387149.017400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KibC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I definitely need to run my chains in parallel, and my model is very touchy about inits. What is the best way to ensure different inits for each chain and also that I can save these inits to reproduce the same results?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621387149.017400",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1621405650.020600",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U022EL2S7BK"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621402884.019500"
+            },
+            {
+                "user": "U022EL2S7BK",
+                "ts": "1621403391.019700"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621404174.020200"
+            },
+            {
+                "user": "U022EL2S7BK",
+                "ts": "1621405191.020400"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621405650.020600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "5742167b-e2bc-4e9c-b010-fe04532afccb",
+        "type": "message",
+        "text": "<@U0203USKJRE> wrote something on parallelization in Nimble <https:\/\/r-nimble.org\/nimbleExamples\/parallelizing_NIMBLE.html> and <@U01UMBR0K38> had a nice example of how to ensure reproducibility when picking initial values at the end of the live demo on Nimble <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/2_demo.html>. Hope this helps.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621401644.018800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ICd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0203USKJRE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " wrote something on parallelization in Nimble "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/r-nimble.org\/nimbleExamples\/parallelizing_NIMBLE.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " had a nice example of how to ensure reproducibility when picking initial values at the end of the live demo on Nimble "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/2_demo.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Hope this helps."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621401644.018800",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1621403417.019900",
+        "reply_users": [
+            "U022EL2S7BK",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U022EL2S7BK",
+                "ts": "1621402559.019000"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621402691.019300"
+            },
+            {
+                "user": "U022EL2S7BK",
+                "ts": "1621403417.019900"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621403417.019900"
+    },
+    {
+        "client_msg_id": "71060566-0c3b-4e0c-99eb-352c8e272ffc",
+        "type": "message",
+        "text": "yes, I was struggling to put the two together plus custom distributions, samplers... but I think I'm getting somewhere with a very, very long `foreach()`call and a function for inits, hopefully they are saved in the final output. Merci beaucoup",
+        "user": "U022EL2S7BK",
+        "ts": "1621402559.019000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mkz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes, I was struggling to put the two together plus custom distributions, samplers... but I think I'm getting somewhere with a very, very long "
+                            },
+                            {
+                                "type": "text",
+                                "text": "foreach()",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "call and a function for inits, hopefully they are saved in the final output. Merci beaucoup"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621401644.018800",
+        "parent_user_id": "U01ULDNCVKP",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "f2869a74-8115-4d5d-9a65-b12ef5fc6f77",
+        "type": "message",
+        "text": "Awesome! Feel free to share your workflow :wink:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621402691.019300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rUPUT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Awesome! Feel free to share your workflow "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621401644.018800",
+        "parent_user_id": "U01ULDNCVKP"
+    },
+    {
+        "client_msg_id": "ab275692-c084-4443-ac9c-cb9f672dc127",
+        "type": "message",
+        "text": "Hi <@U022EL2S7BK> I think you figured this out by now but yes, if your model is \"touchy\" about inits, it's best to write a tailored function to draw reasonable initial values.\n\nI always \"pre-sample\" initial values (as I have shown in demo 2) and then \"test\" that they are \"good\" by running my model with 2 (sometimes 10) iterations, no burnin. If initialization problems occur, you'll get corresponding warnings with 2 iterations as well, but it goes much quicker. Plus, if warnings happen for only 2 (instead of several 1000s of iterations) you can actually read\/backtrack them :wink:\n\nHope this helps!",
+        "user": "U01UMBR0K38",
+        "ts": "1621402884.019500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hcA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U022EL2S7BK"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I think you figured this out by now but yes, if your model is \"touchy\" about inits, it's best to write a tailored function to draw reasonable initial values.\n\nI always \"pre-sample\" initial values (as I have shown in demo 2) and then \"test\" that they are \"good\" by running my model with 2 (sometimes 10) iterations, no burnin. If initialization problems occur, you'll get corresponding warnings with 2 iterations as well, but it goes much quicker. Plus, if warnings happen for only 2 (instead of several 1000s of iterations) you can actually read\/backtrack them "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nHope this helps!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621387149.017400",
+        "parent_user_id": "U022EL2S7BK"
+    },
+    {
+        "client_msg_id": "50ca0a8d-c33b-419e-bbc5-b64bdb537c31",
+        "type": "message",
+        "text": "I was struggling combining using this with running chains in parallel, but I think I've fixed it now :crossed_fingers: it's still working away, hopefully on the 10 iterations and not the compiling :chains:",
+        "user": "U022EL2S7BK",
+        "ts": "1621403391.019700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WKDkF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I was struggling combining using this with running chains in parallel, but I think I've fixed it now "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "crossed_fingers"
+                            },
+                            {
+                                "type": "text",
+                                "text": " it's still working away, hopefully on the 10 iterations and not the compiling "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "chains"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621387149.017400",
+        "parent_user_id": "U022EL2S7BK"
+    },
+    {
+        "client_msg_id": "052e0984-73d8-4085-a21e-7c2053fa19dc",
+        "type": "message",
+        "text": "We'll see if it works first :sweat_smile:",
+        "user": "U022EL2S7BK",
+        "ts": "1621403417.019900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jE3X",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We'll see if it works first "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "sweat_smile"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621401644.018800",
+        "parent_user_id": "U01ULDNCVKP",
+        "reactions": [
+            {
+                "name": "yum",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "30cd795d-cc95-4ee6-b84f-d79b066dbb0d",
+        "type": "message",
+        "text": "Great! Also remember to use the setSeed argument for running the MCMC :wink:\nAs a side-note: I don't usually parallelize nimble. If you run chains sequentially, you only need to build, calculate, and compile once, irrespective of how many chains you are going to run. So often for me, the hassle is not worth the time.\n\n(But then again, I send most of my models to run on a cluster....)",
+        "user": "U01UMBR0K38",
+        "ts": "1621404174.020200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ocxv+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great! Also remember to use the setSeed argument for running the MCMC "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nAs a side-note: I don't usually parallelize nimble. If you run chains sequentially, you only need to build, calculate, and compile once, irrespective of how many chains you are going to run. So often for me, the hassle is not worth the time.\n\n(But then again, I send most of my models to run on a cluster....)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621387149.017400",
+        "parent_user_id": "U022EL2S7BK"
+    },
+    {
+        "client_msg_id": "195ce276-c55e-4e60-adaf-bd7a7a2a103d",
+        "type": "message",
+        "text": "I'm using a cluster too but these ones are spatial capture-recapture models in a really large area with many years of data :exploding_head:",
+        "user": "U022EL2S7BK",
+        "ts": "1621405191.020400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TfiLX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm using a cluster too but these ones are spatial capture-recapture models in a really large area with many years of data "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "exploding_head"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621387149.017400",
+        "parent_user_id": "U022EL2S7BK"
+    },
+    {
+        "client_msg_id": "db9bc328-88c2-4c95-992e-2eb91d06ee2b",
+        "type": "message",
+        "text": "Ah I see!\nI have not done any SCR myself, but check out nimble magic for SCR done by awesome colleagues very recently: <https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/full\/10.1002\/ecs2.3385>\n\nMay be useful to you :wink:",
+        "user": "U01UMBR0K38",
+        "ts": "1621405650.020600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01UMBR0K38",
+            "ts": "1621405682.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "m73",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah I see!\nI have not done any SCR myself, but check out nimble magic for SCR done by awesome colleagues very recently: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/full\/10.1002\/ecs2.3385"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nMay be useful to you "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621387149.017400",
+        "parent_user_id": "U022EL2S7BK",
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U022EL2S7BK"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

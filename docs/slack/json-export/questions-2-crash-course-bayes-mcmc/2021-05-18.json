@@ -1,0 +1,86 @@
+[
+    {
+        "client_msg_id": "686c74b4-c8fa-4f89-9b2e-083fb5d0082a",
+        "type": "message",
+        "text": "<@U01ULDNCVKP> I didn't change the code in your 1_demo... Do you still want me to send it over?",
+        "user": "U0222LD8JCA",
+        "ts": "1621327496.000400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "3fc199d9fc15",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2070693352850_3fc199d9fc1558b00fce_72.jpg",
+            "first_name": "",
+            "real_name": "Ailidh Barnes",
+            "display_name": "Ailidh Barnes",
+            "team": "T01UVLT5RS8",
+            "name": "ailidh.barnes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "y44xs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I didn't change the code in your 1_demo... Do you still want me to send it over?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621243724.059400",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "189acc51-ebdf-4acc-9fcf-a6c1a8431586",
+        "type": "message",
+        "text": "Yes, please. I'd really like to figure out what happens as several of you got the same issue.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621328072.000600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IKc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, please. I'd really like to figure out what happens as several of you got the same issue."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621243724.059400",
+        "parent_user_id": "U021GG5HHMH"
+    }
+]

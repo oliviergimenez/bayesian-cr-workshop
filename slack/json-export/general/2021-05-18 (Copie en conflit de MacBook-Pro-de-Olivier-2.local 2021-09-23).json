@@ -1,0 +1,1538 @@
+[
+    {
+        "client_msg_id": "fceb3248-0905-48c7-b7d7-4b1193d3b7f8",
+        "type": "message",
+        "text": "Hi!  This might be a daft question, but is there any particular reason for the order of the code, i.e. making the matrices and then stating the data to go in and not beforehand? If that makes sense?",
+        "user": "U0222LD8JCA",
+        "ts": "1621328539.002900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "3fc199d9fc15",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2070693352850_3fc199d9fc1558b00fce_72.jpg",
+            "first_name": "",
+            "real_name": "Ailidh Barnes",
+            "display_name": "Ailidh Barnes",
+            "team": "T01UVLT5RS8",
+            "name": "ailidh.barnes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uccVs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi!  This might be a daft question, but is there any particular reason for the order of the code, i.e. making the matrices and then stating the data to go in and not beforehand? If that makes sense?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621328539.002900",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621330157.003400",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U0222LD8JCA"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621328718.003100"
+            },
+            {
+                "user": "U0222LD8JCA",
+                "ts": "1621330157.003400"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621330157.003400"
+    },
+    {
+        "client_msg_id": "046e2a84-3f80-47ee-a639-d5f5d0969724",
+        "type": "message",
+        "text": "You may use the order you prefer :wink:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621328718.003100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "j5l=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You may use the order you prefer "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621328539.002900",
+        "parent_user_id": "U0222LD8JCA",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0222LD8JCA",
+                    "U0208H4AQGG"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "dd219247-e461-4f49-a7a1-4ffeeeb87f8e",
+        "type": "message",
+        "text": "Thanks, I've seen done like that but it's a bit backwards for me :zany_face:",
+        "user": "U0222LD8JCA",
+        "ts": "1621330157.003400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "3fc199d9fc15",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2070693352850_3fc199d9fc1558b00fce_72.jpg",
+            "first_name": "",
+            "real_name": "Ailidh Barnes",
+            "display_name": "Ailidh Barnes",
+            "team": "T01UVLT5RS8",
+            "name": "ailidh.barnes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VBJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, I've seen done like that but it's a bit backwards for me "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "zany_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621328539.002900",
+        "parent_user_id": "U0222LD8JCA"
+    },
+    {
+        "client_msg_id": "fd7175de-6973-4287-8992-c95081cc27e4",
+        "type": "message",
+        "text": "Link to survey <https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLScdxCjAvDA_Ft-FladsG2b_chJe2a1lyhRTb29pAvjoxr-u3Q\/viewform>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621333324.006600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "M2C",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Link to survey "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLScdxCjAvDA_Ft-FladsG2b_chJe2a1lyhRTb29pAvjoxr-u3Q\/viewform"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "98cf235c-fef1-422e-aabe-7a537c215263",
+        "type": "message",
+        "text": "Hi to everyone, as far as I can see, the program does not include an approach for a type of data set where the encounter histories of individuals have different lengths. In my study system, we visit\/observe colour ringed individuals in our area \"by chance\", meaning that if we are in the area, we visit the points and record whether we saw the birds expected to be there or not. The result is that the number of visits per point\/bird is different. Following an advice of someone more experiences, I created one data set with 1 and 0 for \"point visited\" and one for \"bird observed\" for each day of my field season. Is it possible to overlap these two data tables, or is there another easier better way to deal with this kind of resighting data?\n\nThanks! Maria",
+        "user": "U021VVA17NJ",
+        "ts": "1621333548.010000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "adf5f9344ad5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2067694166741_adf5f9344ad5c48f7d48_72.jpg",
+            "first_name": "",
+            "real_name": "Martha Maria Sander",
+            "display_name": "Martha Maria Sander",
+            "team": "T01UVLT5RS8",
+            "name": "marthamaria.sander",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "phX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi to everyone, as far as I can see, the program does not include an approach for a type of data set where the encounter histories of individuals have different lengths. In my study system, we visit\/observe colour ringed individuals in our area \"by chance\", meaning that if we are in the area, we visit the points and record whether we saw the birds expected to be there or not. The result is that the number of visits per point\/bird is different. Following an advice of someone more experiences, I created one data set with 1 and 0 for \"point visited\" and one for \"bird observed\" for each day of my field season. Is it possible to overlap these two data tables, or is there another easier better way to deal with this kind of resighting data?\n\nThanks! Maria"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333548.010000",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1621345965.019800",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U021VVA17NJ"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621335758.010100"
+            },
+            {
+                "user": "U021VVA17NJ",
+                "ts": "1621339860.015900"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621345965.019800"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621345965.019800"
+    },
+    {
+        "client_msg_id": "6f3a9436-58ed-4a03-8d7a-e616d01bebf7",
+        "type": "message",
+        "text": "Let's see if we can help. What are the points? My idea would be to have a model working at the point-level, so that you can treat points as a random effect on survival, and account for heterogeneity in the search effort (visits) in the observation by fixing the recapture probability to 0 for the point\/day when there is no visit. Does it make some sense?",
+        "user": "U01ULDNCVKP",
+        "ts": "1621335758.010100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uJ8+3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Let's see if we can help. What are the points? My idea would be to have a model working at the point-level, so that you can treat points as a random effect on survival, and account for heterogeneity in the search effort (visits) in the observation by fixing the recapture probability to 0 for the point\/day when there is no visit. Does it make some sense?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333548.010000",
+        "parent_user_id": "U021VVA17NJ"
+    },
+    {
+        "client_msg_id": "9757981e-30b2-4d9d-9de3-466e4b752fca",
+        "type": "message",
+        "text": "Video recording of this morning session is on YouTube <https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621336930.010500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "service_name": "YouTube",
+                "title": "Bayesian capture-recapture inference with hidden Markov models",
+                "title_link": "https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL",
+                "text": "Share your videos with friends, family, and the world",
+                "fallback": "YouTube: Bayesian capture-recapture inference with hidden Markov models",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/2qeCQoZizuU\/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLDCS0sIX_fKOYX0BHTCO1iLmwNA6Q&days_since_epoch=18765",
+                "from_url": "https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL",
+                "thumb_width": 168,
+                "thumb_height": 94,
+                "service_icon": "https:\/\/www.youtube.com\/s\/desktop\/fa04d5dd\/img\/favicon.ico",
+                "id": 1,
+                "original_url": "https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AoK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Video recording of this morning session is on YouTube "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "f36723d6-451b-4873-a07d-df9e8400353b",
+        "type": "message",
+        "text": "Are we back on now?",
+        "user": "U021NFFDJAX",
+        "ts": "1621337628.010900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zifI7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are we back on now?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "e5798d37-3312-42f1-ad3e-246da711b4dd",
+        "type": "message",
+        "text": "or in an hour?",
+        "user": "U021NFFDJAX",
+        "ts": "1621337653.011200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "V7O",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "or in an hour?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "14383e4a-c171-436a-8ad8-fba598059459",
+        "type": "message",
+        "text": "oh no, I think is in 30 minutes xD I am so lost with the timings... sorry!",
+        "user": "U021NFFDJAX",
+        "ts": "1621337715.012000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9BOL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oh no, I think is in 30 minutes xD I am so lost with the timings... sorry!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "e2fd1c1f-8186-475c-8f52-4f64c1415ad2",
+        "type": "message",
+        "text": "At 2pm, in 25 minutes :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621337718.012200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1KBRr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "At 2pm, in 25 minutes "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d4ce39d4-106b-4cd7-b85d-b84ca67f3dad",
+        "type": "message",
+        "text": "yea cool thanks!",
+        "user": "U021NFFDJAX",
+        "ts": "1621337725.012500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YmKKC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yea cool thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "74754b47-ee37-4172-9c22-837a27e8b030",
+        "type": "message",
+        "text": "No problem.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621337729.012600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tfP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No problem."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d0207f67-4bf9-4e63-9658-fbc9d6d42109",
+        "type": "message",
+        "text": "Besides JAGS and BUGS, would you have experience or advice (or literature) about how Nimble compares to the other probabilistic programming frameworks in other languages like <https:\/\/mc-stan.org\/|Stan> (C++), <https:\/\/docs.pymc.io\/|PyMC3> (Python), <https:\/\/turing.ml\/stable\/|Turing.jl> (Julia) or others?",
+        "user": "U021WUS37HC",
+        "ts": "1621339058.015500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1a8a2e5dba4",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1a8a2e5dba496d1db19f38fec2a6efea.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "",
+            "real_name": "Virgile Andreani",
+            "display_name": "Virgile Andreani",
+            "team": "T01UVLT5RS8",
+            "name": "virgile.andreani",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6ksiw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Besides JAGS and BUGS, would you have experience or advice (or literature) about how Nimble compares to the other probabilistic programming frameworks in other languages like "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/mc-stan.org\/",
+                                "text": "Stan"
+                            },
+                            {
+                                "type": "text",
+                                "text": " (C++), "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.pymc.io\/",
+                                "text": "PyMC3"
+                            },
+                            {
+                                "type": "text",
+                                "text": " (Python), "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/turing.ml\/stable\/",
+                                "text": "Turing.jl"
+                            },
+                            {
+                                "type": "text",
+                                "text": " (Julia) or others?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621339058.015500",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1621345739.017700",
+        "reply_users": [
+            "U0216SM0TPX"
+        ],
+        "replies": [
+            {
+                "user": "U0216SM0TPX",
+                "ts": "1621345491.017400"
+            },
+            {
+                "user": "U0216SM0TPX",
+                "ts": "1621345739.017700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U022EH7TE81"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "699b39d3-1e85-4991-a6ef-2ad089f2e5ab",
+        "type": "message",
+        "text": "Yes, I think I understood. But I don't see the practical application. There are also many many \"points\", as each point is basically a nest location, having several individuals for one nest. It would be maybe possible to group several nest locations into one point, that is an area then (to reduce the number of levels for the random effect).",
+        "user": "U021VVA17NJ",
+        "ts": "1621339860.015900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "adf5f9344ad5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2067694166741_adf5f9344ad5c48f7d48_72.jpg",
+            "first_name": "",
+            "real_name": "Martha Maria Sander",
+            "display_name": "Martha Maria Sander",
+            "team": "T01UVLT5RS8",
+            "name": "marthamaria.sander",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MwrR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, I think I understood. But I don't see the practical application. There are also many many \"points\", as each point is basically a nest location, having several individuals for one nest. It would be maybe possible to group several nest locations into one point, that is an area then (to reduce the number of levels for the random effect)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333548.010000",
+        "parent_user_id": "U021VVA17NJ"
+    },
+    {
+        "client_msg_id": "dd61f2af-a66f-4346-b9ee-4b43893076a0",
+        "type": "message",
+        "text": "Hi panel and attendees,\nI'm afraid I have to leave.\nThank you all for a very interesting workshop and for making it so available and accessible. I look forward to using HMMs and nimble more and more in my work.\nThanks again, Stephen",
+        "user": "U021W7G8Y14",
+        "ts": "1621344621.016900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "bd1368c03ab7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2094834061184_bd1368c03ab7d8bfefdb_72.png",
+            "first_name": "",
+            "real_name": "Stephen Gregory",
+            "display_name": "Stephen Gregory",
+            "team": "T01UVLT5RS8",
+            "name": "stephendavidgregory",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bJq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi panel and attendees,\nI'm afraid I have to leave.\nThank you all for a very interesting workshop and for making it so available and accessible. I look forward to using HMMs and nimble more and more in my work.\nThanks again, Stephen"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344621.016900",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621345916.019000",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621344661.017100"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621345916.019000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621345916.019000",
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U0228RFP1V2"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "02a939ca-b241-4a1d-b730-af3002a34ccf",
+        "type": "message",
+        "text": "Thanks for joining us Stephen! Great to have you :slightly_smiling_face:",
+        "user": "U01UMBR0K38",
+        "ts": "1621344661.017100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3V3+f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for joining us Stephen! Great to have you "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344621.016900",
+        "parent_user_id": "U021W7G8Y14",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021W7G8Y14"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "f9c081a0-50c3-4dae-981b-2ab0c1ac45d4",
+        "type": "message",
+        "text": "I'd love to hear others take on this. Though to start it off. Stan has a huge development team and quite a bit of funding, but similar to PyMC3 and greta, Stan uses HMC and NUTS samplers for the MCMC chains. As a result you have to use marginalized models. Although I think Vianey Leos Barajas has done some work with Michael Betancourt to make this easier especially in the context of HMMs.",
+        "user": "U0216SM0TPX",
+        "ts": "1621345491.017400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "547be2373a95",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-07\/2044194065491_547be2373a95ec872548_72.png",
+            "first_name": "",
+            "real_name": "Matt Weldy",
+            "display_name": "Matt Weldy",
+            "team": "T01UVLT5RS8",
+            "name": "matthewjweldy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ABn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'd love to hear others take on this. Though to start it off. Stan has a huge development team and quite a bit of funding, but similar to PyMC3 and greta, Stan uses HMC and NUTS samplers for the MCMC chains. As a result you have to use marginalized models. Although I think Vianey Leos Barajas has done some work with Michael Betancourt to make this easier especially in the context of HMMs."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621339058.015500",
+        "parent_user_id": "U021WUS37HC",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U022RH7HAN4"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "7c67a148-aa84-4a70-8559-a2be424d3fe5",
+        "type": "message",
+        "text": "NIMBLE and JAGs allow for the direct estimation of latent discreet parameters which seems to make these model classes more accessible to ecologists. Turing.jl (I dont have much experience with it) seems to be a hybrid of sorts, which allows you to assign different samplers to specific parameters in the model. So you can use Gibbs sampling on latent discreet parameters and HMC or NUTS on other parameters. Turning is also interesting because the structure of the Julia language allows you to access other packages directly within the model, so you can use neural networks, graphs, or spatial packages directly in the model.",
+        "user": "U0216SM0TPX",
+        "ts": "1621345739.017700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "547be2373a95",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-07\/2044194065491_547be2373a95ec872548_72.png",
+            "first_name": "",
+            "real_name": "Matt Weldy",
+            "display_name": "Matt Weldy",
+            "team": "T01UVLT5RS8",
+            "name": "matthewjweldy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fH4Su",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "NIMBLE and JAGs allow for the direct estimation of latent discreet parameters which seems to make these model classes more accessible to ecologists. Turing.jl (I dont have much experience with it) seems to be a hybrid of sorts, which allows you to assign different samplers to specific parameters in the model. So you can use Gibbs sampling on latent discreet parameters and HMC or NUTS on other parameters. Turning is also interesting because the structure of the Julia language allows you to access other packages directly within the model, so you can use neural networks, graphs, or spatial packages directly in the model."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621339058.015500",
+        "parent_user_id": "U021WUS37HC"
+    },
+    {
+        "client_msg_id": "29f4869a-24ae-4f8e-a9cb-0c07b6240ea3",
+        "type": "message",
+        "text": "Thanks for being with us. Cheers!",
+        "user": "U01ULDNCVKP",
+        "ts": "1621345916.019000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "x0s",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for being with us. Cheers!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344621.016900",
+        "parent_user_id": "U021W7G8Y14"
+    },
+    {
+        "client_msg_id": "077553e0-3cb0-4b8a-8279-b2deca1a6e3f",
+        "type": "message",
+        "text": "I guess so yes.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621345965.019800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Mg4KW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I guess so yes."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333548.010000",
+        "parent_user_id": "U021VVA17NJ"
+    },
+    {
+        "client_msg_id": "1c3309f3-2de5-46b6-aded-cc2664655d57",
+        "type": "message",
+        "text": "Quick announcement, to improve materials for next time it would be great if you can take a few minutes to fill this in this feedback form <https:\/\/forms.gle\/1yfYYQwmdebzVVry5>. Thanks in advance. Thanks a lot <@U021GG5HHMH> for the template.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621346133.023500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1621346164.000000"
+        },
+        "attachments": [
+            {
+                "service_name": "Google Docs",
+                "title": "Bayesian CR HMM workshop participant feedback",
+                "title_link": "https:\/\/forms.gle\/1yfYYQwmdebzVVry5",
+                "text": "To improve materials and delivery for next time it would be great if you can take a few minutes to fill this in. The data will only be used by us to evaluate the course, please don't enter any information that could be used to identify you. Thanks for taking the time to fill this in and thanks for attending the workshop! Olivier, Sarah, Chloé, Maud and Perry",
+                "fallback": "Google Docs: Bayesian CR HMM workshop participant feedback",
+                "image_url": "https:\/\/lh5.googleusercontent.com\/Gl5Turgh5xZ7Mctsxh80TgON1786dEAejeVahiySWDWtuVbYWhojuZRHJoU6FoeJRe0iitsQG_M",
+                "image_width": 333,
+                "image_height": 250,
+                "from_url": "https:\/\/forms.gle\/1yfYYQwmdebzVVry5",
+                "image_bytes": 37650,
+                "service_icon": "http:\/\/ssl.gstatic.com\/docs\/forms\/device_home\/ios_120.png",
+                "id": 1,
+                "original_url": "https:\/\/forms.gle\/1yfYYQwmdebzVVry5"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ijFdi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Quick announcement, to improve materials for next time it would be great if you can take a few minutes to fill this in this feedback form "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/forms.gle\/1yfYYQwmdebzVVry5"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Thanks in advance. Thanks a lot "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U021GG5HHMH"
+                            },
+                            {
+                                "type": "text",
+                                "text": " for the template."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U020E0D34F2"
+                ],
+                "count": 1
+            },
+            {
+                "name": "i_love_you_hand_sign",
+                "users": [
+                    "U021GG5HHMH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a9efef9c-6c20-460c-9ba0-1170dc35d64d",
+        "type": "message",
+        "text": "At the risk of putting a link to this out too early... I recently started a PhD program and as a framework for learning a wide variety of models I have started developing an online collection of standard ecological models fit using multiple MCMC engines side-by-side. If anyone else is interested in working through some examples or contributing, please feel free to contact me and I will send over a link to the github repository.  Please be warned, this is a new project and I havent settled on formatting or presentation approaches. But, I would like to present the algebra and primary citations for each model, along with code to simulate representative data and fit the model with JAGS, NIMBLE, Stan, greta, PyMC3, and Turing,<https:\/\/quantitative-ecology.netlify.app\/abundance.html>",
+        "user": "U0216SM0TPX",
+        "ts": "1621346136.023700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "547be2373a95",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-07\/2044194065491_547be2373a95ec872548_72.png",
+            "first_name": "",
+            "real_name": "Matt Weldy",
+            "display_name": "Matt Weldy",
+            "team": "T01UVLT5RS8",
+            "name": "matthewjweldy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U0216SM0TPX",
+            "ts": "1621361933.000000"
+        },
+        "attachments": [
+            {
+                "title": "Chapter 3 Abundance | Quantitative Ecology",
+                "title_link": "https:\/\/quantitative-ecology.netlify.app\/abundance.html",
+                "text": "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.",
+                "fallback": "Chapter 3 Abundance | Quantitative Ecology",
+                "from_url": "https:\/\/quantitative-ecology.netlify.app\/abundance.html",
+                "service_name": "quantitative-ecology.netlify.app",
+                "id": 1,
+                "original_url": "https:\/\/quantitative-ecology.netlify.app\/abundance.html"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FWv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "At the risk of putting a link to this out too early... I recently started a PhD program and as a framework for learning a wide variety of models I have started developing an online collection of standard ecological models fit using multiple MCMC engines side-by-side. If anyone else is interested in working through some examples or contributing, please feel free to contact me and I will send over a link to the github repository.  Please be warned, this is a new project and I havent settled on formatting or presentation approaches. But, I would like to present the algebra and primary citations for each model, along with code to simulate representative data and fit the model with JAGS, NIMBLE, Stan, greta, PyMC3, and Turing,"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/quantitative-ecology.netlify.app\/abundance.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U021NFFDJAX"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "47B9C819-07D3-4961-B87A-EDB401DE918D",
+        "type": "message",
+        "text": "Hi, thanks for a brilliant course, I’m looking forward to working on my own data however I seem to have fallen at the first hurdle as I can’t get the test script to run without the error Failed to create the shared library. Has anyone had and fixed this problem? Thank you ",
+        "user": "U021N5WF339",
+        "ts": "1621346337.026600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae628906d799",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2083587878081_ae628906d799e85d95f7_72.png",
+            "first_name": "",
+            "real_name": "Josephine Pegg",
+            "display_name": "Josephine Pegg",
+            "team": "T01UVLT5RS8",
+            "name": "j.pegg",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=sHIG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, thanks for a brilliant course, I’m looking forward to working on my own data however I seem to have fallen at the first hurdle as I can’t get the test script to run without the error Failed to create the shared library. Has anyone had and fixed this problem? Thank you "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346337.026600",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621348658.027600",
+        "reply_users": [
+            "U0203L8NKE2",
+            "U01UQ29DG3C"
+        ],
+        "replies": [
+            {
+                "user": "U0203L8NKE2",
+                "ts": "1621347149.027300"
+            },
+            {
+                "user": "U01UQ29DG3C",
+                "ts": "1621348658.027600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "277c97c9-9527-4f98-addb-846db66d5d01",
+        "type": "message",
+        "text": "Hi, I have the same problem and do not really understand what's wrong... If you find the solution i am interested. I'm trying to find it too.",
+        "user": "U0203L8NKE2",
+        "ts": "1621347149.027300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g830b7c598b6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/830b7c598b64700d091bd215e65d01f4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-72.png",
+            "first_name": "SAUNIER",
+            "real_name": "SAUNIER Merlène",
+            "display_name": "Merlène Saunier",
+            "team": "T01UVLT5RS8",
+            "name": "merlene.saunier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "O9dIK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, I have the same problem and do not really understand what's wrong... If you find the solution i am interested. I'm trying to find it too."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346337.026600",
+        "parent_user_id": "U021N5WF339"
+    },
+    {
+        "client_msg_id": "f5d263c7-4a59-4262-b744-c5aaea957f4a",
+        "type": "message",
+        "text": "some solutions here: <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621324483045100>",
+        "user": "U01UQ29DG3C",
+        "ts": "1621348658.027600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "417549c44871",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1973010614613_417549c448719bc2a57e_72.jpg",
+            "first_name": "",
+            "real_name": "Maud Quéroué",
+            "display_name": "Maud Quéroué",
+            "team": "T01UVLT5RS8",
+            "name": "maud.queroue",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621324483045100",
+                "fallback": "[May 18th, 2021 12:54 AM] sunbinwong: &gt; mcmc.phip &lt;- nimbleMCMC(code = hmm.phip,\n+                         constants = my.constants,\n+                         data = my.data,\n+                         inits = initial.values,\n+                         monitors = <http:\/\/parameters.to|parameters.to>.save,\n+                         niter = n.iter,\n+                         nburnin = n.burnin,\n+                         nchains = n.chains)\ndefining model...\nbuilding model...\nsetting data and initial values...\nrunning calculate on model (any error reports that follow may simply reflect missing values in model variables) ...\nchecking model sizes and dimensions...\nchecking model calculations...\nmodel building finished.\ncompiling... this may take a minute. Use 'showCompilerOutput = TRUE' to see C++ compilation details.\nError: Failed to create the shared library. Run 'printErrors()' to see the compilation errors.",
+                "ts": "1621324483.045100",
+                "author_id": "U021V4EBQR4",
+                "author_subname": "Sunbin Wong",
+                "channel_id": "C01U8NUE06T",
+                "channel_name": "questions-5-survival-estimation",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "&gt; mcmc.phip &lt;- nimbleMCMC(code = hmm.phip,\n+                         constants = my.constants,\n+                         data = my.data,\n+                         inits = initial.values,\n+                         monitors = <http:\/\/parameters.to|parameters.to>.save,\n+                         niter = n.iter,\n+                         nburnin = n.burnin,\n+                         nchains = n.chains)\ndefining model...\nbuilding model...\nsetting data and initial values...\nrunning calculate on model (any error reports that follow may simply reflect missing values in model variables) ...\nchecking model sizes and dimensions...\nchecking model calculations...\nmodel building finished.\ncompiling... this may take a minute. Use 'showCompilerOutput = TRUE' to see C++ compilation details.\nError: Failed to create the shared library. Run 'printErrors()' to see the compilation errors.",
+                "author_name": "Sunbin Wong",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U021V4EBQR4",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2082542663185_b814f0a292bfc5f516d3_48.jpg",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621324483045100",
+                "footer": "Thread in #questions-5-survival-estimation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sMK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "some solutions here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621324483045100"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346337.026600",
+        "parent_user_id": "U021N5WF339",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c4b40858-59a7-44df-85bd-d448ea28a292",
+        "type": "message",
+        "text": "This was such a great workshop, thank you all so much for all your sessions, website and additional materials as well as your help during the sessions!",
+        "user": "U021VSHD9QE",
+        "ts": "1621350683.028600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "dc6ce22770b4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2063901525382_dc6ce22770b473b052af_72.png",
+            "first_name": "",
+            "real_name": "Tara Pirie",
+            "display_name": "Tara Pirie",
+            "team": "T01UVLT5RS8",
+            "name": "tjpirie",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U021VSHD9QE",
+            "ts": "1621350738.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "oG5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This was such a great workshop, thank you all so much for all your sessions, website and additional materials as well as your help during the sessions!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "00906dd3-9c2b-4417-8b0c-8c35265f24c9",
+        "type": "message",
+        "text": "Thank you so much for the workshop, it has been awesome!.",
+        "user": "U021ZLD497F",
+        "ts": "1621350727.028900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1ed575a2c75",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1ed575a2c751114d530daba54960f755.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0020-72.png",
+            "first_name": "",
+            "real_name": "Xabi Cabodevilla",
+            "display_name": "Xabi Cabodevilla",
+            "team": "T01UVLT5RS8",
+            "name": "xabier.cabodevilla",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Eu98",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you so much for the workshop, it has been awesome!."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "4b9501de-b6ea-405c-88d1-e7a8016c2bdd",
+        "type": "message",
+        "text": "All video recordinds are now on YouTube :slightly_smiling_face: <https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621357106.030300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "service_name": "YouTube",
+                "title": "Bayesian capture-recapture inference with hidden Markov models",
+                "title_link": "https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL",
+                "text": "Video recordings of a workshop on Bayesian capture-recapture inference with hidden Markov models with R and Nimble. Check out dedicated website <https:\/\/olivi>...",
+                "fallback": "YouTube: Bayesian capture-recapture inference with hidden Markov models",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/2qeCQoZizuU\/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLDCS0sIX_fKOYX0BHTCO1iLmwNA6Q&days_since_epoch=18765",
+                "from_url": "https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL",
+                "thumb_width": 168,
+                "thumb_height": 94,
+                "service_icon": "https:\/\/www.youtube.com\/s\/desktop\/09255fbe\/img\/favicon.ico",
+                "id": 1,
+                "original_url": "https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PQ2L",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "All video recordinds are now on YouTube "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/youtube.com\/playlist?list=PL5CiXbb9zgjRTp8L4452vU2febW-ECKkL"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "smiley",
+                "users": [
+                    "U0202MQV9JL",
+                    "U021W7G8Y14",
+                    "U022RH7HAN4",
+                    "U021NFFDJAX"
+                ],
+                "count": 4
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U021NCM1RFZ",
+                    "U0205U97A64",
+                    "U01UMBR0K38",
+                    "U020J4MDZU0",
+                    "U021GG5HHMH",
+                    "U0227VC8A76"
+                ],
+                "count": 6
+            }
+        ]
+    }
+]

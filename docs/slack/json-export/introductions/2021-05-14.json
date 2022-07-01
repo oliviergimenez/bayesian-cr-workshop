@@ -1,0 +1,126 @@
+[
+    {
+        "client_msg_id": "f5530741-b4da-46ef-8e55-0d60bc85abaf",
+        "type": "message",
+        "text": "Hi everyone ! My name is Justine Le Vaillant and I am working at the Estacion Biologica de Doñana, in Sevilla (Spain). I am currently finishing my PhD on plasticity and evolution of the laying date in the pied flycatcher.\nI am used to work with long-term dataset and CMR models and in a previous project, I worked a little bit on dynamic models using E-Surge and JAGS. But I still want to better understand Bayesian statistics and the implication in demographic analysis. I was also supposed to include Integral Projection Model in my PhD, but diverse circumstances made that impossible. Because I still want to complete my knowledge in evolutionary biology with dynamic of population, and I am welcome to learn more about it during this workshop and to speak with people experienced in such field (and working with IPM !!).\nI hope this workshop will bring me new tools for future projects ! Looking forward to (virtually) see you all !",
+        "user": "U021Y2G74H1",
+        "ts": "1620998493.087900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "88ad5349cf58",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-14\/2089830929904_88ad5349cf5825af801c_72.jpg",
+            "first_name": "Justine",
+            "real_name": "Justine Le Vaillant",
+            "display_name": "Justine Le Vaillant",
+            "team": "T01UVLT5RS8",
+            "name": "justine0le.vaillant",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RG1jZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone ! My name is Justine Le Vaillant and I am working at the Estacion Biologica de Doñana, in Sevilla (Spain). I am currently finishing my PhD on plasticity and evolution of the laying date in the pied flycatcher.\nI am used to work with long-term dataset and CMR models and in a previous project, I worked a little bit on dynamic models using E-Surge and JAGS. But I still want to better understand Bayesian statistics and the implication in demographic analysis. I was also supposed to include Integral Projection Model in my PhD, but diverse circumstances made that impossible. Because I still want to complete my knowledge in evolutionary biology with dynamic of population, and I am welcome to learn more about it during this workshop and to speak with people experienced in such field (and working with IPM !!).\nI hope this workshop will bring me new tools for future projects ! Looking forward to (virtually) see you all !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C",
+                    "U020D3400HW"
+                ],
+                "count": 3
+            },
+            {
+                "name": "eyes",
+                "users": [
+                    "U022F8ZNV41"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b613e59e-fc1e-4eaf-be96-e3021579c0cf",
+        "type": "message",
+        "text": "Hi everyone :slightly_smiling_face: I'm Michael Roast and I'm just about to start a post-doc with the Seabird Ecology Lab at University of Barcelona, Spain. I'll be analysing CMR data and combining it with bycatch data to make demographic models of seabird populations around the Canary Current Large Marine Ecosystem. I think this course will be incredibly helpful! Thanks to all those contributing :pray:",
+        "user": "U022AJN2J81",
+        "ts": "1620999006.092300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g4204da4251d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/4204da4251de1d372da5888b2bf236bd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Michael Roast",
+            "display_name": "Michael Roast",
+            "team": "T01UVLT5RS8",
+            "name": "michaeljroast",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7Qzz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I'm Michael Roast and I'm just about to start a post-doc with the Seabird Ecology Lab at University of Barcelona, Spain. I'll be analysing CMR data and combining it with bycatch data to make demographic models of seabird populations around the Canary Current Large Marine Ecosystem. I think this course will be incredibly helpful! Thanks to all those contributing "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP",
+                    "U021KUK5D40"
+                ],
+                "count": 3
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U021NFFDJAX"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

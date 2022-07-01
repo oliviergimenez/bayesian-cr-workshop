@@ -1,0 +1,190 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618902034.000800",
+        "user": "U01UU6DLJ4A",
+        "text": "<@U01UU6DLJ4A> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618902141.001000",
+        "user": "U01UDD8PE2K",
+        "text": "<@U01UDD8PE2K> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618902825.001200",
+        "user": "U02041RP600",
+        "text": "<@U02041RP600> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618902887.001400",
+        "user": "U02041USZ96",
+        "text": "<@U02041USZ96> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618903023.001600",
+        "user": "U020421P0P2",
+        "text": "<@U020421P0P2> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618903564.001800",
+        "user": "U01UUEU6N03",
+        "text": "<@U01UUEU6N03> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618905941.001900",
+        "user": "U01UDBUETM5",
+        "text": "<@U01UDBUETM5> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618906317.002100",
+        "user": "U01UUD6E2JE",
+        "text": "<@U01UUD6E2JE> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618909639.002300",
+        "user": "U01UDRQ0JQ7",
+        "text": "<@U01UDRQ0JQ7> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618912806.002500",
+        "user": "U01UN1DLELE",
+        "text": "<@U01UN1DLELE> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618913264.002700",
+        "user": "U0204K8GCGG",
+        "text": "<@U0204K8GCGG> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618917639.002900",
+        "user": "U01V7L10QL9",
+        "text": "<@U01V7L10QL9> has joined the channel"
+    },
+    {
+        "client_msg_id": "b5c625cb-445f-4fd6-bef0-772ffccfb81a",
+        "type": "message",
+        "text": "Hi all,\nMy name is Maxime. I am a PhD student at UQAM based in Montréal, Québec, Canada. My research focuses on predator-prey interactions, and how specialisation in hunting tactics affects prey capture. I have never used capture-recapture models before, however, I love Bayesian stats and modelling, so I am really excited to learn. Looking forward to see you all (virtually).",
+        "user": "U01UVRAEHH9",
+        "ts": "1618927447.007000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g4541d0b73fe",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/4541d0b73fe741edb8eb87d367cdad08.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "",
+            "real_name": "Maxime Fraser Franco",
+            "display_name": "Maxime Fraser Franco",
+            "team": "T01UVLT5RS8",
+            "name": "fraser_franco.maxime",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rUP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all,\nMy name is Maxime. I am a PhD student at UQAM based in Montréal, Québec, Canada. My research focuses on predator-prey interactions, and how specialisation in hunting tactics affects prey capture. I have never used capture-recapture models before, however, I love Bayesian stats and modelling, so I am really excited to learn. Looking forward to see you all (virtually)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01UNUU4Y14",
+                    "U01ULDNCVKP",
+                    "U01UWAUMLR0",
+                    "U01UMBR0K38",
+                    "U01V7L10QL9",
+                    "U0227MDF1AQ"
+                ],
+                "count": 7
+            }
+        ]
+    },
+    {
+        "client_msg_id": "48580280-4083-4917-aafc-748a99260a07",
+        "type": "message",
+        "text": "Hello!\nMy name is Hugo Ferreira.\nI am a PhD student at CESAM group from University of Aveiro (Portugal), but also from Tour du Valat Resaerch Institute (France).\nMy thesis focuses on Eurasian Spoonbill migration and local movements.\nI started with Marine Biology, macroalgae and macroinvertebrate communities to be more precise, but since the start of my PhD (last year), I been doing my best learn this exciting new field.\nI hope I can learn more on how to improve my research.\nSee you all in the course.\nCheers,",
+        "user": "U01UWAUMLR0",
+        "ts": "1618942567.008500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g7d08f3753b4",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/7d08f3753b46afdd3f779fa4d3de79e2.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-72.png",
+            "first_name": "",
+            "real_name": "Hugo Ferreira",
+            "display_name": "Hugo Ferreira",
+            "team": "T01UVLT5RS8",
+            "name": "hr.ferreira",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MKqV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello!\nMy name is Hugo Ferreira.\nI am a PhD student at CESAM group from University of Aveiro (Portugal), but also from Tour du Valat Resaerch Institute (France).\nMy thesis focuses on Eurasian Spoonbill migration and local movements.\nI started with Marine Biology, macroalgae and macroinvertebrate communities to be more precise, but since the start of my PhD (last year), I been doing my best learn this exciting new field.\nI hope I can learn more on how to improve my research.\nSee you all in the course.\nCheers,"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01UVRAEHH9",
+                    "U01ULDNCVKP",
+                    "U01UMBR0K38",
+                    "U0205U97A64"
+                ],
+                "count": 5
+            }
+        ]
+    }
+]

@@ -1,0 +1,283 @@
+[
+    {
+        "client_msg_id": "c8cbdada-6ec2-4c2f-a133-ac8d5b937267",
+        "type": "message",
+        "text": "<@U01UDD8PE2K> great to hear that this was useful to you! I'm working with a model where I use different (dummy) variables to capture variation in sampling effort, but it's not published yet. I am also sure that there are many other published analyses that use this approach.",
+        "user": "U01UMBR0K38",
+        "ts": "1625814460.175900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kC9O",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01UDD8PE2K"
+                            },
+                            {
+                                "type": "text",
+                                "text": " great to hear that this was useful to you! I'm working with a model where I use different (dummy) variables to capture variation in sampling effort, but it's not published yet. I am also sure that there are many other published analyses that use this approach."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621325038.052000",
+        "parent_user_id": "U021Y2G74H1"
+    },
+    {
+        "client_msg_id": "ec87b4ea-276d-4e26-890f-bffe0b1e23cf",
+        "type": "message",
+        "text": "That being said: using a dummy variable is not really a \"method\", it's just one way to parameterize a model including variation in sampling effort. If you look at a cake recipe, it will say \"add sugar\", but it usually will not specify if the sugar is to be added by spoon, by hand, or in a different way. Because at the end of the day, that does not matter :wink:",
+        "user": "U01UMBR0K38",
+        "ts": "1625814549.176100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "z2eQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That being said: using a dummy variable is not really a \"method\", it's just one way to parameterize a model including variation in sampling effort. If you look at a cake recipe, it will say \"add sugar\", but it usually will not specify if the sugar is to be added by spoon, by hand, or in a different way. Because at the end of the day, that does not matter "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621325038.052000",
+        "parent_user_id": "U021Y2G74H1"
+    },
+    {
+        "client_msg_id": "44c8c590-515c-4efd-811c-b0eca923caaa",
+        "type": "message",
+        "text": "You still have to answer to that reviewer though. My suggestion would be to explain that it's a common approach (maybe plus a reference to one or too examples, and maybe the butterfly book - I do think they introduce dummy variables there too, even if not exactly in this context, check!), then illustrate it to the reviewer with an example.\n\nSomething like:\nThe equation for recapture probability is\n\np.eff[t] = dummy[t]*p[t]\n\nIn years when there was sampling (recaptures of individuals), dummy[t] = 1, so\n\np.eff[t] = 1*p[t] = p[t]\n\nIn years when there was no sampling, dummy[t] = 0, so",
+        "user": "U01UMBR0K38",
+        "ts": "1625814856.176300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1RpqZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You still have to answer to that reviewer though. My suggestion would be to explain that it's a common approach (maybe plus a reference to one or too examples, and maybe the butterfly book - I do think they introduce dummy variables there too, even if not exactly in this context, check!), then illustrate it to the reviewer with an example.\n\nSomething like:\nThe equation for recapture probability is\n\np.eff[t] = dummy[t]*p[t]\n\nIn years when there was sampling (recaptures of individuals), dummy[t] = 1, so\n\np.eff[t] = 1*p[t] = p[t]\n\nIn years when there was no sampling, dummy[t] = 0, so"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621325038.052000",
+        "parent_user_id": "U021Y2G74H1"
+    },
+    {
+        "client_msg_id": "511b2a47-a8ab-4f30-8e9e-897fc96a5e32",
+        "type": "message",
+        "text": "p.eff[t] = 0*p[t] = 0",
+        "user": "U01UMBR0K38",
+        "ts": "1625814881.176500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "J=A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "p.eff[t] = 0*p[t] = 0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621325038.052000",
+        "parent_user_id": "U021Y2G74H1"
+    },
+    {
+        "client_msg_id": "1d35dcf3-40f3-4939-bb04-c39346dfcc88",
+        "type": "message",
+        "text": "I also ping <@U01ULDNCVKP>. Maybe he knows something good to cite here!\n\nOlivier, please check above :arrow_up:",
+        "user": "U01UMBR0K38",
+        "ts": "1625814945.176700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ovk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I also ping "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Maybe he knows something good to cite here!\n\nOlivier, please check above "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "arrow_up"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621325038.052000",
+        "parent_user_id": "U021Y2G74H1"
+    },
+    {
+        "client_msg_id": "6c5b00c4-6803-4c5d-a12a-977eb42ea303",
+        "type": "message",
+        "text": "As it is often the case, there is something in the Gentle introduction to Mark <http:\/\/www.phidot.org\/software\/mark\/docs\/book\/>, see pages 2-6 and 4-25. Beware of the identifiability issue on survival when setting recap prob to 0.",
+        "user": "U01ULDNCVKP",
+        "ts": "1625823591.176900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "title": "Program MARK - 'A Gentle Introduction'",
+                "title_link": "http:\/\/www.phidot.org\/software\/mark\/docs\/book\/",
+                "text": "Program MARK - A Gentle Introduction (20th Edition).",
+                "fallback": "Program MARK - 'A Gentle Introduction'",
+                "from_url": "http:\/\/www.phidot.org\/software\/mark\/docs\/book\/",
+                "service_icon": "http:\/\/www.phidot.org\/software\/mark\/favicon.ico",
+                "service_name": "phidot.org",
+                "id": 1,
+                "original_url": "http:\/\/www.phidot.org\/software\/mark\/docs\/book\/"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zG=o",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "As it is often the case, there is something in the Gentle introduction to Mark "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/www.phidot.org\/software\/mark\/docs\/book\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", see pages 2-6 and 4-25. Beware of the identifiability issue on survival when setting recap prob to 0."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621325038.052000",
+        "parent_user_id": "U021Y2G74H1"
+    }
+]

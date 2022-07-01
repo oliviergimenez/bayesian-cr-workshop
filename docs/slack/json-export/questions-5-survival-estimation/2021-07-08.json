@@ -1,0 +1,50 @@
+[
+    {
+        "client_msg_id": "5f48e864-f380-4f87-bede-70ce3fb5acc3",
+        "type": "message",
+        "text": "Hi <@U01UMBR0K38>, sorry for coming back so late after the course but I have recently used the dummy variable option in my models and one of the reviewer is asking for published papers describing this method. I know I have read it on various occasion before but I cannot find an example. Would you have such papers in mind? Thanks a lot",
+        "user": "U01UDD8PE2K",
+        "ts": "1625754052.175700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gb9324b7e8dc",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/b9324b7e8dcd0e07d03859962c4141fa.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0019-72.png",
+            "first_name": "",
+            "real_name": "Philippe Verborgh",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "philippeverborgh",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/nrS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", sorry for coming back so late after the course but I have recently used the dummy variable option in my models and one of the reviewer is asking for published papers describing this method. I know I have read it on various occasion before but I cannot find an example. Would you have such papers in mind? Thanks a lot"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621325038.052000",
+        "parent_user_id": "U021Y2G74H1"
+    }
+]

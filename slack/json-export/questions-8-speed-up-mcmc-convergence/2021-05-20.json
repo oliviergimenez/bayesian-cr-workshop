@@ -1,0 +1,80 @@
+[
+    {
+        "client_msg_id": "2142d029-bf4f-43ab-a83b-ce5cd5fe209e",
+        "type": "message",
+        "text": "Update for those interested in parallelisation and maybe also struggling. I've now managed to have success with `parLapply` to both compile and run in one call.\n```my_seed &lt;- 2122\nset.seed(my_seed)\n\ninits &lt;- function(){list(...)}\n\nall_data &lt;- function(){list(data = data, constants = constants, \ninits = inits(), code = code_no_lam0_covs)}\n\ndata_list &lt;- list(all_data(), all_data(), all_data(), all_data())\n\ncomp_run_mcmc &lt;- function(data_list, niter, my_seed, nburnin){\n  model &lt;- nimbleModel(code=data_list$code, \n             constants=data_list$constants,\n             data=data_list$data, inits=data_list$inits)\n    ... \n  # code for custom distributions and samplers\n  # assign dist'ns and samplers to global env't\n  assign('dpois_matrix_by_row', dpois_matrix_by_row, \n          envir = .GlobalEnv)\n  ...\n  # more compiling steps\n  ...\n  compiled_model &lt;- compileNimble(...)\n  results &lt;- runMCMC(compiled_model, niter = niter, \n               nburnin = nburnin, summary = TRUE,\n               samples = TRUE, samplesAsCodaMCMC = TRUE, \n               setSeed = my_seed)\n  return(results)\n}\n\nlibrary(parallel)\nn_cores &lt;- length(data_list) + 1\ncl &lt;- makeCluster(n_cores)\n\nclusterCall(cl, function()library(nimble))\n\nstart &lt;- Sys.time()\ntest &lt;- parLapply(cl, data_list, comp_run_mcmc, niter, \n                  my_seed, nburnin)\nend &lt;- Sys.time() \nend - start\n\nstopCluster(cl)```",
+        "user": "U022EL2S7BK",
+        "ts": "1621565768.042000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U022EL2S7BK",
+            "ts": "1621567966.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Zv0\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Update for those interested in parallelisation and maybe also struggling. I've now managed to have success with "
+                            },
+                            {
+                                "type": "text",
+                                "text": "parLapply",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to both compile and run in one call.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "my_seed <- 2122\nset.seed(my_seed)\n\ninits <- function(){list(...)}\n\nall_data <- function(){list(data = data, constants = constants, \ninits = inits(), code = code_no_lam0_covs)}\n\ndata_list <- list(all_data(), all_data(), all_data(), all_data())\n\ncomp_run_mcmc <- function(data_list, niter, my_seed, nburnin){\n  model <- nimbleModel(code=data_list$code, \n             constants=data_list$constants,\n             data=data_list$data, inits=data_list$inits)\n    ... \n  # code for custom distributions and samplers\n  # assign dist'ns and samplers to global env't\n  assign('dpois_matrix_by_row', dpois_matrix_by_row, \n          envir = .GlobalEnv)\n  ...\n  # more compiling steps\n  ...\n  compiled_model <- compileNimble(...)\n  results <- runMCMC(compiled_model, niter = niter, \n               nburnin = nburnin, summary = TRUE,\n               samples = TRUE, samplesAsCodaMCMC = TRUE, \n               setSeed = my_seed)\n  return(results)\n}\n\nlibrary(parallel)\nn_cores <- length(data_list) + 1\ncl <- makeCluster(n_cores)\n\nclusterCall(cl, function()library(nimble))\n\nstart <- Sys.time()\ntest <- parLapply(cl, data_list, comp_run_mcmc, niter, \n                  my_seed, nburnin)\nend <- Sys.time() \nend - start\n\nstopCluster(cl)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "star-struck",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U0221SR3R45"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

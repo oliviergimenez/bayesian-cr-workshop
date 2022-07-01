@@ -1,0 +1,28 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1621161912.009200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “questions-hmm-capture-recapture” to “questions-3-hmm-capture-recapture”",
+        "old_name": "questions-hmm-capture-recapture",
+        "name": "questions-3-hmm-capture-recapture"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1621161920.009300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class\/worksheet on \"What you see is not what you get: Hidden Markov models and capture-recapture data\".",
+        "purpose": "Questions for class\/worksheet on \"What you see is not what you get: Hidden Markov models and capture-recapture data\"."
+    },
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1621161948.009400",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “questions-3-hmm-capture-recapture” to “questions-4-hmm-capture-recapture”",
+        "old_name": "questions-3-hmm-capture-recapture",
+        "name": "questions-4-hmm-capture-recapture"
+    }
+]

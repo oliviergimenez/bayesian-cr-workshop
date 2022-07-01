@@ -1,0 +1,2853 @@
+[
+    {
+        "client_msg_id": "40ba8468-e699-4d63-94a1-2954bf1c5c06",
+        "type": "message",
+        "text": "Amazing workshop! Thank you everyone!!!!!",
+        "user": "U021RJQBBGS",
+        "ts": "1621350180.001400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gbdb2118e7a3",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/bdb2118e7a3a5904ba468a0de66967cd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "",
+            "real_name": "David McGeachy",
+            "display_name": "David McGeachy",
+            "team": "T01UVLT5RS8",
+            "name": "david.mcgeachy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RjHv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Amazing workshop! Thank you everyone!!!!!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "polar_bear",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            },
+            {
+                "name": "clap",
+                "users": [
+                    "U0228RFP1V2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6516a5a8-1afa-417e-93ba-daf699999a29",
+        "type": "message",
+        "text": "This workshop was awesome!",
+        "user": "U020D3400HW",
+        "ts": "1621350238.001900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WQD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This workshop was awesome!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "4e683691-2e52-4341-9cef-b5c54319ed23",
+        "type": "message",
+        "text": "so many new things to digest :star-struck:",
+        "user": "U022F9QE5LH",
+        "ts": "1621350357.004100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g5467176ef5b",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/5467176ef5b248c6afb0f529631ef0f9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "Ali",
+            "real_name": "Ali Güncan",
+            "display_name": "Ali Güncan",
+            "team": "T01UVLT5RS8",
+            "name": "guncan.ali",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rbJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so many new things to digest "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "star-struck"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U0222V0ABQT",
+                    "U020J4MDZU0"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "0c852aaa-1f9f-43d1-b3ce-207726152ea9",
+        "type": "message",
+        "text": "Thank you, Team - the workshop was fantastic!",
+        "user": "U022SQVS6GY",
+        "ts": "1621350363.004300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8PyL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you, Team - the workshop was fantastic!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022F9QE5LH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "ad49308f-8e16-4022-8405-32a3b886a316",
+        "type": "message",
+        "text": "Thanks a lot for this great workshop! As a 3rd year bachelor student I was afraid of being overwhelmed with information and totally lost very fast, but it was not the case at all, it allowed me to learn a lot more than I hoped. So thanks a lot!!! :smiley:",
+        "user": "U021ZJC52QM",
+        "ts": "1621350478.005900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gb4748bbbc40",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/b4748bbbc4022a7a5d4dac55eca70764.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "",
+            "real_name": "Yakov Uzan",
+            "display_name": "Yakov Uzan",
+            "team": "T01UVLT5RS8",
+            "name": "yakov.uzan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "V\/lf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks a lot for this great workshop! As a 3rd year bachelor student I was afraid of being overwhelmed with information and totally lost very fast, but it was not the case at all, it allowed me to learn a lot more than I hoped. So thanks a lot!!! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smiley"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart_eyes",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "7c8e9c40-29cc-4a99-8b77-4a5ffdeafba3",
+        "type": "message",
+        "text": "Perry, can you share the link to nimble workshop? thanks!",
+        "user": "U022SQVS6GY",
+        "ts": "1621350509.006900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6OGgW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Perry, can you share the link to nimble workshop? thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350509.006900",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621350628.013100",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U0203USKJRE"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621350544.008100"
+            },
+            {
+                "user": "U0203USKJRE",
+                "ts": "1621350628.013100"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "bf1d9135-d2c0-4e29-93a0-7ec57bab74dd",
+        "type": "message",
+        "text": "the searchable list is not working...",
+        "user": "U021VQ6LEP8",
+        "ts": "1621350527.007500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "df17812ee5a2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2055827652631_df17812ee5a2d17bee0a_72.png",
+            "first_name": "",
+            "real_name": "Shuzhan Lai",
+            "display_name": "Shuzhan Lai",
+            "team": "T01UVLT5RS8",
+            "name": "shirolsz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lbf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the searchable list is not working..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350527.007500",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621350578.010200",
+        "reply_users": [
+            "U01UDBUETM5"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621350578.010200"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "e26efe7d-4cdd-4556-bcf6-3fbd117c983b",
+        "type": "message",
+        "text": "Really outstanding workshop, so much information and resources presented\/discussed\/shared. A big thanks to the entire team for donating their time to educate the community!",
+        "user": "U021GG5HHMH",
+        "ts": "1621350531.007700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "E2+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Really outstanding workshop, so much information and resources presented\/discussed\/shared. A big thanks to the entire team for donating their time to educate the community!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            },
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U0202MQV9JL"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "589310dc-3be4-4d87-95c4-753c21a25462",
+        "type": "message",
+        "text": "<https:\/\/r-nimble.org\/nimble-virtual-short-course-may-26-28>",
+        "user": "U01UDBUETM5",
+        "ts": "1621350544.008100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Tym",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/r-nimble.org\/nimble-virtual-short-course-may-26-28"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350509.006900",
+        "parent_user_id": "U022SQVS6GY"
+    },
+    {
+        "client_msg_id": "5c46d314-157a-42ce-96c3-c98d8f1cdbeb",
+        "type": "message",
+        "text": "GitHub organization with all nimble-team workshop content: <https:\/\/github.com\/nimble-training>",
+        "user": "U0203USKJRE",
+        "ts": "1621350550.008500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "id": 1,
+                "thumb_height": 420,
+                "thumb_width": 420,
+                "thumb_url": "https:\/\/avatars.githubusercontent.com\/u\/56270540?v&#x3D;4",
+                "color": "24292f",
+                "fields": [
+                    {
+                        "title": "Repositories",
+                        "value": "15",
+                        "short": true
+                    }
+                ],
+                "bot_id": "B022QMWDLFJ",
+                "app_unfurl_url": "https:\/\/github.com\/nimble-training",
+                "is_app_unfurl": true
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HfkM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "GitHub organization with all nimble-team workshop content: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/nimble-training"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "5fd18a0f-b4a3-4b95-a884-70920c224c03",
+        "type": "message",
+        "text": "Thanks! Looking forward to it.",
+        "user": "U022SQVS6GY",
+        "ts": "1621350572.009900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1FX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks! Looking forward to it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "0a6a9bed-854c-49fb-8453-164659e7ec1c",
+        "type": "message",
+        "text": "here : <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html>",
+        "user": "U01UDBUETM5",
+        "ts": "1621350578.010200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01UDBUETM5",
+            "ts": "1621350586.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1Fw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "here : "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350527.007500",
+        "parent_user_id": "U021VQ6LEP8"
+    },
+    {
+        "client_msg_id": "5a7477b3-92f4-47bd-94dc-fcfd6dfe867d",
+        "type": "message",
+        "text": "Pretty amazing workshop!! Many thanks guys!",
+        "user": "U021NFFDJAX",
+        "ts": "1621350584.010700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WMn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Pretty amazing workshop!! Many thanks guys!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fb32e8c5-4309-4e34-9572-17955c30d91e",
+        "type": "message",
+        "text": "It is also linked from our web site Documentation page: <https:\/\/r-nimble.org\/documentation-2>",
+        "user": "U0203USKJRE",
+        "ts": "1621350591.011400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l6K8k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It is also linked from our web site Documentation page: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/r-nimble.org\/documentation-2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0228RCCZ7E"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "7d35a1cb-5c54-486f-9a29-3bc2da03316e",
+        "type": "message",
+        "text": "Thank you for this fantastic workshop ! Really clear and well structured :smile:",
+        "user": "U021VSPGLSJ",
+        "ts": "1621350618.012800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "414730171a0a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2076881318228_414730171a0abb9b7e4f_72.jpg",
+            "first_name": "",
+            "real_name": "Morgane Gicquel",
+            "display_name": "Morgane Gicquel",
+            "team": "T01UVLT5RS8",
+            "name": "gicquel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OmGHi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you for this fantastic workshop ! Really clear and well structured "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            },
+            {
+                "name": "hand",
+                "users": [
+                    "U02041USZ96"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "0026cdf5-b8da-475b-820c-d0f8b46bb882",
+        "type": "message",
+        "text": "Oops I replied in the main thread and gave the wrong information!  Thanks Sarah.",
+        "user": "U0203USKJRE",
+        "ts": "1621350628.013100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gpcye",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oops I replied in the main thread and gave the wrong information!  Thanks Sarah."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350509.006900",
+        "parent_user_id": "U022SQVS6GY"
+    },
+    {
+        "client_msg_id": "aa54e88b-0fac-48b8-b5c7-6327f8e36f2c",
+        "type": "message",
+        "text": "Amazing workshop and excelent resources. Thank you very much!:blush:",
+        "user": "U0222V0ABQT",
+        "ts": "1621350640.014200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g7c30aad5895",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/7c30aad5895dcb006a0de0eb5e56227a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-72.png",
+            "first_name": "",
+            "real_name": "Pablo Palencia",
+            "display_name": "Pablo Palencia",
+            "team": "T01UVLT5RS8",
+            "name": "palencia.pablo.m",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kutuL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Amazing workshop and excelent resources. Thank you very much!"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "blush"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "pray",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "dd44804c-7715-4621-b7aa-932b913462a9",
+        "type": "message",
+        "text": "Incredible workshop!!! Many thanks to the entire team!!!",
+        "user": "U020E0D34F2",
+        "ts": "1621350642.014600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "f7c80b1312f6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-22\/1990421115827_f7c80b1312f67e6a5c9a_72.jpg",
+            "first_name": "",
+            "real_name": "Ana Morales González",
+            "display_name": "Ana Morales González",
+            "team": "T01UVLT5RS8",
+            "name": "moralesglezana",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "j03MJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Incredible workshop!!! Many thanks to the entire team!!!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "87d05cd0-1e93-4652-828c-dbd836106c8d",
+        "type": "message",
+        "text": "That has been brilliant! thanks so much!",
+        "user": "U022SE3F7KJ",
+        "ts": "1621350655.015800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "f58bed1b7704",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2094479555312_f58bed1b7704e402af50_72.jpg",
+            "first_name": "",
+            "real_name": "Ana Payo Payo",
+            "display_name": "Ana Payo Payo",
+            "team": "T01UVLT5RS8",
+            "name": "anapayopayo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uqZYH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That has been brilliant! thanks so much!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b1d033ac-05dc-45b6-b2ce-75f268ed2f93",
+        "type": "message",
+        "text": "Fantastic workshop, many thanks to presenters \/ organizers, even for non-specialists, looking forward to more!! :wink:",
+        "user": "U021K37JWHM",
+        "ts": "1621350655.015900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga7d570184aa",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a7d570184aab29b52758cd43099bd9e3.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "",
+            "real_name": "Sylvain Gatti",
+            "display_name": "Sylvain Gatti",
+            "team": "T01UVLT5RS8",
+            "name": "sgatti.lynx",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OT2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Fantastic workshop, many thanks to presenters \/ organizers, even for non-specialists, looking forward to more!! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "adc5197a-0b1c-4072-9726-b74750ea1e67",
+        "type": "message",
+        "text": "Thanks a bunch, it was great.",
+        "user": "U021VPQ5AMC",
+        "ts": "1621350662.016500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1b331ed53bb",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1b331ed53bb9e74ff35ca27da9d93c08.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "",
+            "real_name": "Filippo Marolla",
+            "display_name": "Filippo Marolla",
+            "team": "T01UVLT5RS8",
+            "name": "filippo.marolla",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KtOw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks a bunch, it was great."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "27990095-68cf-421d-b4de-d7df2523fdc8",
+        "type": "message",
+        "text": "Thank you all for running this workshop - as others have said this is really well structured and I have many new ideas for my analyses! :slightly_smiling_face:",
+        "user": "U020J4MDZU0",
+        "ts": "1621350682.018100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae716ebe3268",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1994354335826_ae716ebe3268a5447e90_72.jpg",
+            "first_name": "",
+            "real_name": "Katharine Bowgen",
+            "display_name": "Katharine Bowgen",
+            "team": "T01UVLT5RS8",
+            "name": "katharine.bowgen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8lT0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you all for running this workshop - as others have said this is really well structured and I have many new ideas for my analyses! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "51d5c2f1-f5d0-46cd-a417-71a9e9d6c575",
+        "type": "message",
+        "text": "Thank you for the awesome two days! Really helpful. Looking forward to the book!",
+        "user": "U0228RCCZ7E",
+        "ts": "1621350688.018700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "5d17d0dfb517",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2071358041762_5d17d0dfb517dc541ca0_72.jpg",
+            "first_name": "",
+            "real_name": "Yi-Hsiu Chen",
+            "display_name": "Yi-Hsiu Chen",
+            "team": "T01UVLT5RS8",
+            "name": "yihsiu0402",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sb4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you for the awesome two days! Really helpful. Looking forward to the book!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "ffed2442-4b12-459a-8ebe-b464d34cf495",
+        "type": "message",
+        "text": "This was great. Very well done. Thank you.",
+        "user": "U021YE7D5MK",
+        "ts": "1621350698.019400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g75024cf068f",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/75024cf068f7e5561a30d2b65287ecb7.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0019-72.png",
+            "first_name": "",
+            "real_name": "Adrienne Contasti",
+            "display_name": "Adrienne Contasti",
+            "team": "T01UVLT5RS8",
+            "name": "alc1173",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hzX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This was great. Very well done. Thank you."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "67b7e33b-59bc-432f-a892-f96e0e77701a",
+        "type": "message",
+        "text": "thanks for the wonderful workshop. Learnt a lot in these two days...",
+        "user": "U021VQ6LEP8",
+        "ts": "1621350700.019900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "df17812ee5a2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2055827652631_df17812ee5a2d17bee0a_72.png",
+            "first_name": "",
+            "real_name": "Shuzhan Lai",
+            "display_name": "Shuzhan Lai",
+            "team": "T01UVLT5RS8",
+            "name": "shirolsz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NH=8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for the wonderful workshop. Learnt a lot in these two days..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c5f2b5b5-368e-4712-9dc4-c3c246438430",
+        "type": "message",
+        "text": "Great workshop thank you! Lots of ideas to progress in the future!",
+        "user": "U022EA0060H",
+        "ts": "1621350704.020300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZIQT7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great workshop thank you! Lots of ideas to progress in the future!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "cfe7696a-8a5b-470d-b0cc-0ad8fc1d46b4",
+        "type": "message",
+        "text": "Thank you all! I learned a lot! :slightly_smiling_face:",
+        "user": "U0208H4AQGG",
+        "ts": "1621350718.022300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "e07911b5b986",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-20\/1984779414354_e07911b5b98694557264_72.jpg",
+            "first_name": "Desamarie",
+            "real_name": "Desamarie Antonette P. Fernandez",
+            "display_name": "Dez Fernandez",
+            "team": "T01UVLT5RS8",
+            "name": "dpfernandez1",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "g28",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you all! I learned a lot! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "645e8618-2be1-4f05-839c-afe1494ae2a5",
+        "type": "message",
+        "text": "Merci à toute l'équipe!! A une prochaine .",
+        "user": "U021MTZRY4X",
+        "ts": "1621350722.023400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g2e7d750409c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/2e7d750409c0cc2583b77d4fa85cf5c8.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0023-72.png",
+            "first_name": "",
+            "real_name": "Cedric Juillet",
+            "display_name": "Cedric Juillet",
+            "team": "T01UVLT5RS8",
+            "name": "cedric.juillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rik",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Merci à toute l'équipe!! A une prochaine ."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "21dce357-b03a-4b6c-8fde-0e1985b33026",
+        "type": "message",
+        "text": "Thanks to you all for a great workshop",
+        "user": "U0225K54L7K",
+        "ts": "1621350725.023900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g9d8104be315",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/9d8104be315375ce3dfeedb856da078a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Sam Cruickshank",
+            "display_name": "Sam Cruickshank",
+            "team": "T01UVLT5RS8",
+            "name": "sam.cruickshank",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tV2Yv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks to you all for a great workshop"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "04d87744-1046-4bdd-8361-9df7cc7411ab",
+        "type": "message",
+        "text": "Thank you a lot for these 2 days. Really helpful.",
+        "user": "U022FSB1MBK",
+        "ts": "1621350729.024600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g86fdcc5a3f0",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/86fdcc5a3f0812078c10d5640aa32cee.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "celine",
+            "display_name": "celine",
+            "team": "T01UVLT5RS8",
+            "name": "cartero",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4WIhe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you a lot for these 2 days. Really helpful."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "e0a4f3b4-de11-405f-9a82-20aa87b99ab7",
+        "type": "message",
+        "text": "Thank you, \"The Team\"! outstanding workshop!",
+        "user": "U021MSK4PPH",
+        "ts": "1621350748.027500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dVbH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you, \"The Team\"! outstanding workshop!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart_eyes",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "5129832e-c839-4b5e-88d8-1fe5fa152d6e",
+        "type": "message",
+        "text": "A great workshop, thanks a lot!!",
+        "user": "U021V4EBQR4",
+        "ts": "1621350748.027600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b814f0a292bf",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2082542663185_b814f0a292bfc5f516d3_72.jpg",
+            "first_name": "",
+            "real_name": "Sunbin Wong",
+            "display_name": "Sunbin Wong",
+            "team": "T01UVLT5RS8",
+            "name": "sunbinwong",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZGaXv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "A great workshop, thanks a lot!!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "51493be6-8161-47d5-ac95-652a89263f1a",
+        "type": "message",
+        "text": "thanks all of you! it was a really nice workshop : )",
+        "user": "U01V17E8VFW",
+        "ts": "1621350752.028300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gf4fe5d1a1a8",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/f4fe5d1a1a8ed621ec8421237be4a018.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-72.png",
+            "first_name": "",
+            "real_name": "Ismael Reyes",
+            "display_name": "Ismael Reyes",
+            "team": "T01UVLT5RS8",
+            "name": "ismaelrymy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XbG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks all of you! it was a really nice workshop : )"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "1812160b-1a3b-4f85-928b-8a88b0f479eb",
+        "type": "message",
+        "text": "Thank you so much!",
+        "user": "U022SGS1DJ4",
+        "ts": "1621350760.029300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd918c0ee171",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d918c0ee171f892c4416bf56c489518c.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "",
+            "real_name": "adrien_tableau",
+            "display_name": "adrien_tableau",
+            "team": "T01UVLT5RS8",
+            "name": "adrien.tableau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XN3KK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you so much!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fcb3f427-f5de-4423-a321-4be91496fa73",
+        "type": "message",
+        "text": "Many thanks for the great workshop. It was really helpful!",
+        "user": "U022F8YTATB",
+        "ts": "1621350761.029400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g6748bd1f97d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6748bd1f97d7b8ac365345d2efc4d983.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0021-72.png",
+            "first_name": "",
+            "real_name": "Frederik Sachser",
+            "display_name": "Frederik Sachser",
+            "team": "T01UVLT5RS8",
+            "name": "frederik.s",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VNr5N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Many thanks for the great workshop. It was really helpful!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "241deb08-f1d7-4a99-b575-50e9bda76248",
+        "type": "message",
+        "text": "Great workshop: well-structured, well-thought-out, and really great presenters! Thank you!",
+        "user": "U021YD0USER",
+        "ts": "1621350768.030200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a465261b88e5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2075683978292_a465261b88e573d13ebd_72.png",
+            "first_name": "",
+            "real_name": "Alexander Scheuerlein",
+            "display_name": "Alexander Scheuerlein",
+            "team": "T01UVLT5RS8",
+            "name": "scheuerleinalexander",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8qUE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great workshop: well-structured, well-thought-out, and really great presenters! Thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "47e19dab-545b-4544-87d4-050bc79e7554",
+        "type": "message",
+        "text": "Two questions ... How you manage to create this amazing workshop?! How much time did you spend preparing it? :stuck_out_tongue:  #Respect #congrats and #gratitude Thanks a lot !",
+        "user": "U0228RFP1V2",
+        "ts": "1621350785.031900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "546ebe6cfaf1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063926819798_546ebe6cfaf18db7530d_72.jpg",
+            "first_name": "",
+            "real_name": "Colin Bouchard",
+            "display_name": "Colin Bouchard",
+            "team": "T01UVLT5RS8",
+            "name": "colin.bcd",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sZVs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Two questions ... How you manage to create this amazing workshop?! How much time did you spend preparing it? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "stuck_out_tongue"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  #Respect #congrats and #gratitude Thanks a lot !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350785.031900",
+        "reply_count": 4,
+        "reply_users_count": 4,
+        "latest_reply": "1621351090.046300",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U01ULDNCVKP",
+            "U0228RFP1V2",
+            "U021MSK4PPH"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621350812.034200"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621350933.041400"
+            },
+            {
+                "user": "U0228RFP1V2",
+                "ts": "1621351007.045400"
+            },
+            {
+                "user": "U021MSK4PPH",
+                "ts": "1621351090.046300"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621351090.046300"
+    },
+    {
+        "client_msg_id": "1e4d5bbe-6b6b-45dc-b95d-7bd9f22147a5",
+        "type": "message",
+        "text": "Great workshop, many thanks! I've learnt a lot even if I'm a non-specialists in Bayesian, looking forward to more!! :slightly_smiling_face:",
+        "user": "U021JAGFEM8",
+        "ts": "1621350786.032200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g47f09d2eba6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/47f09d2eba6261540883a7aa936ed2f6.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-72.png",
+            "first_name": "",
+            "real_name": "Patrizia Zamberletti",
+            "display_name": "Patrizia Zamberletti",
+            "team": "T01UVLT5RS8",
+            "name": "patrizia.zamberletti",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dn=RL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Great workshop, many thanks! I've learnt a lot even if I'm a non-specialists in Bayesian, looking forward to more!! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d16d0810-a1ae-411f-952c-d2fdd27a9fdf",
+        "type": "message",
+        "text": "Many thanks to all of you for this illuminating workshop! your time, support and care is sooo much appreciated :smiling_face_with_3_hearts:",
+        "user": "U0218E0HVPC",
+        "ts": "1621350802.033600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g8e0f314896e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/8e0f314896edfe8bd389cb6b6c4b7546.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "",
+            "real_name": "Marie",
+            "display_name": "Marie",
+            "team": "T01UVLT5RS8",
+            "name": "marie.nevoux",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FbWoM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Many thanks to all of you for this illuminating workshop! your time, support and care is sooo much appreciated "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smiling_face_with_3_hearts"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "e21c57f6-d5c8-40a0-a521-29470d022ec6",
+        "type": "message",
+        "text": "Thanks so much to the organizers!!! Kudos for making this so accessible to ecologists around the world! Very cool experience.",
+        "user": "U01UNUU4Y14",
+        "ts": "1621350812.034100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b49188a07cdd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-20\/1994371493361_b49188a07cdd96bf3dbd_72.jpg",
+            "first_name": "",
+            "real_name": "Megan Thompson",
+            "display_name": "Megan Thompson",
+            "team": "T01UVLT5RS8",
+            "name": "thompsonjoymegan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bLpl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks so much to the organizers!!! Kudos for making this so accessible to ecologists around the world! Very cool experience."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "41cd76c8-95d9-4440-b5cc-a5d44f24336f",
+        "type": "message",
+        "text": "Olivier did most of it !!",
+        "user": "U01UDBUETM5",
+        "ts": "1621350812.034200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "j+gAC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Olivier did most of it !!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350785.031900",
+        "parent_user_id": "U0228RFP1V2"
+    },
+    {
+        "client_msg_id": "266cb4ea-7fde-47f4-964c-fa81209154d3",
+        "type": "message",
+        "text": "Thank you for this great workshop:facepunch:",
+        "user": "U0229C0V12Q",
+        "ts": "1621350839.036000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a025cf0049b5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2068168036149_a025cf0049b5dd3d1522_72.png",
+            "first_name": "",
+            "real_name": "Fabio Daura",
+            "display_name": "Fabio Daura",
+            "team": "T01UVLT5RS8",
+            "name": "daurajorge",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rRin",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you for this great workshop"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "facepunch"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "7713b836-d026-45dd-a620-a65a14ea0039",
+        "type": "message",
+        "text": "Thank you very much for this great workshop ! I learned a lot but I’ll have to read it again and put it into practice to fully digest it :smile: Lots of fun and very informative, thanks again !",
+        "user": "U022EG3UKDX",
+        "ts": "1621350839.036200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "328ad34c2614",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2093735453904_328ad34c2614af411a62_72.jpg",
+            "first_name": "",
+            "real_name": "Hervé Rogissart",
+            "display_name": "Hervé Rogissart",
+            "team": "T01UVLT5RS8",
+            "name": "contact.rogissart",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Wmg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you very much for this great workshop ! I learned a lot but I’ll have to read it again and put it into practice to fully digest it "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Lots of fun and very informative, thanks again !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "8298e046-f6e4-4611-a7b0-d91a5675ac25",
+        "type": "message",
+        "text": "Thank you for the workshop ! I understand better some dynamic models ! Many work to do now",
+        "user": "U021Y2G74H1",
+        "ts": "1621350848.036700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "88ad5349cf58",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-14\/2089830929904_88ad5349cf5825af801c_72.jpg",
+            "first_name": "Justine",
+            "real_name": "Justine Le Vaillant",
+            "display_name": "Justine Le Vaillant",
+            "team": "T01UVLT5RS8",
+            "name": "justine0le.vaillant",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ydSo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you for the workshop ! I understand better some dynamic models ! Many work to do now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "1bc91daf-f078-4101-92ee-d97089677adf",
+        "type": "message",
+        "text": "Feel like I have to repeat what everyone is saying but this workshop was truly great! Very helpful tips, it never felt too slow or too fast, you all are great teachers and the materials you provided are outstanding! Many thanks for this!",
+        "user": "U0205U97A64",
+        "ts": "1621350849.036900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "9df714e080c0",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2055818788231_9df714e080c0122962d8_72.jpg",
+            "first_name": "Rita",
+            "real_name": "Rita Fortuna",
+            "display_name": "Rita Fortuna",
+            "team": "T01UVLT5RS8",
+            "name": "ritafortuna",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PIgvj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Feel like I have to repeat what everyone is saying but this workshop was truly great! Very helpful tips, it never felt too slow or too fast, you all are great teachers and the materials you provided are outstanding! Many thanks for this!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart_eyes",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "44fd043c-9bc0-4c5a-8779-186575073aab",
+        "type": "message",
+        "text": "Thanks so much for putting this altogether and delivering it so smoothly, clearly and slowly. Having not worked with mark recapture data for a while, I still understood what you were teaching, so thank you! I just hope I can use it now, let me at the data! :smile:",
+        "user": "U0222LD8JCA",
+        "ts": "1621350911.040400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "3fc199d9fc15",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2070693352850_3fc199d9fc1558b00fce_72.jpg",
+            "first_name": "",
+            "real_name": "Ailidh Barnes",
+            "display_name": "Ailidh Barnes",
+            "team": "T01UVLT5RS8",
+            "name": "ailidh.barnes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LH3DI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks so much for putting this altogether and delivering it so smoothly, clearly and slowly. Having not worked with mark recapture data for a while, I still understood what you were teaching, so thank you! I just hope I can use it now, let me at the data! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smile"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart_eyes",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "054d27db-dc23-4cec-b754-bd298f996772",
+        "type": "message",
+        "text": "Started working on the material 2 months ago, but I've been thinking about it for some time now, hence the book which is on its way :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621350933.041400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mLX1g",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Started working on the material 2 months ago, but I've been thinking about it for some time now, hence the book which is on its way "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350785.031900",
+        "parent_user_id": "U0228RFP1V2",
+        "reactions": [
+            {
+                "name": "clap",
+                "users": [
+                    "U020421P0P2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "416b0401-6c1d-4b1e-b1d4-7bfafa6a855d",
+        "type": "message",
+        "text": "Thank you very much for organizing this great workshop! It was really informative, clear and well-structured.",
+        "user": "U022SEENZKJ",
+        "ts": "1621350950.042100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "61a14eb47f86",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2067630993621_61a14eb47f86bef4bee8_72.jpg",
+            "first_name": "",
+            "real_name": "Magali Frauendorf",
+            "display_name": "Magali Frauendorf",
+            "team": "T01UVLT5RS8",
+            "name": "m.frauendorf",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FeQjP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you very much for organizing this great workshop! It was really informative, clear and well-structured."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fcef4cae-671e-44c7-8be2-69b2ac8886ad",
+        "type": "message",
+        "text": ":clap:",
+        "user": "U0228RFP1V2",
+        "ts": "1621351007.045400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "546ebe6cfaf1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063926819798_546ebe6cfaf18db7530d_72.jpg",
+            "first_name": "",
+            "real_name": "Colin Bouchard",
+            "display_name": "Colin Bouchard",
+            "team": "T01UVLT5RS8",
+            "name": "colin.bcd",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=F2y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "clap"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350785.031900",
+        "parent_user_id": "U0228RFP1V2"
+    },
+    {
+        "client_msg_id": "4924342f-eb7d-4f93-9a09-8b7c35fb374e",
+        "type": "message",
+        "text": ":star-struck:",
+        "user": "U021MSK4PPH",
+        "ts": "1621351090.046300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "U4r",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "star-struck"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621350785.031900",
+        "parent_user_id": "U0228RFP1V2"
+    },
+    {
+        "client_msg_id": "512baa23-30ab-40ed-8026-f34de1e54f26",
+        "type": "message",
+        "text": "Such a well though-out work shop with fantastic tutoring, website and materials! Thanks so much!",
+        "user": "U022AJN2J81",
+        "ts": "1621351147.047700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g4204da4251d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/4204da4251de1d372da5888b2bf236bd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Michael Roast",
+            "display_name": "Michael Roast",
+            "team": "T01UVLT5RS8",
+            "name": "michaeljroast",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3nKL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Such a well though-out work shop with fantastic tutoring, website and materials! Thanks so much!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "22005094-4bec-4fa4-b2f1-bda72080f9b6",
+        "type": "message",
+        "text": "It was an outstanding workshop, very well organized and explained in a way that was easy to follow. A big thanks to all of you that dedicated your time to organize it and to patiently answer all our questions and thank you also for making it free and all the material and videos available by YouTube and thus available to everyone. You are amazing!!",
+        "user": "U021KUK5D40",
+        "ts": "1621351175.048100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "cbfb5e4aba5e",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-04\/2053971255248_cbfb5e4aba5e2463df7a_72.png",
+            "first_name": "",
+            "real_name": "Teresa Militão",
+            "display_name": "Teresa Militão",
+            "team": "T01UVLT5RS8",
+            "name": "tetecaloirinha",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ii97Q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It was an outstanding workshop, very well organized and explained in a way that was easy to follow. A big thanks to all of you that dedicated your time to organize it and to patiently answer all our questions and thank you also for making it free and all the material and videos available by YouTube and thus available to everyone. You are amazing!!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "innocent",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "eab6fc73-2e21-4b90-af07-a31e214b7b24",
+        "type": "message",
+        "text": "Just received this message from a post-doc of mine: \"Hi Simon. Hope you're well. I've been dealing with cmr analysis quite a bit since being back from the bush and now started to play with the zebra data in the past few days just for fun. I'm using RMark as R interface to Mark.\" Now I know what to do...let's see how Nimble compare :wink:! Thanks for the workshop",
+        "user": "U0222N7JBPC",
+        "ts": "1621351231.049200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Lgy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just received this message from a post-doc of mine: \"Hi Simon. Hope you're well. I've been dealing with cmr analysis quite a bit since being back from the bush and now started to play with the zebra data in the past few days just for fun. I'm using RMark as R interface to Mark.\" Now I know what to do...let's see how Nimble compare "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            },
+                            {
+                                "type": "text",
+                                "text": "! Thanks for the workshop"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621351231.049200",
+        "reply_count": 4,
+        "reply_users_count": 3,
+        "latest_reply": "1621365505.050100",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U0222N7JBPC",
+            "U021MSK4PPH"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621351283.049300"
+            },
+            {
+                "user": "U0222N7JBPC",
+                "ts": "1621351304.049500"
+            },
+            {
+                "user": "U021MSK4PPH",
+                "ts": "1621352452.049900"
+            },
+            {
+                "user": "U0222N7JBPC",
+                "ts": "1621365505.050100"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "reactions": [
+            {
+                "name": "wink",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6dfb67d2-7d86-46da-9694-a48abc5c50e2",
+        "type": "message",
+        "text": "thanks for good jokes <@U0222N7JBPC> ;-)",
+        "user": "U01UDBUETM5",
+        "ts": "1621351283.049300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iv+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "thanks for good jokes "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0222N7JBPC"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ;-)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621351231.049200",
+        "parent_user_id": "U0222N7JBPC"
+    },
+    {
+        "client_msg_id": "6b6c7f42-5b0d-48b3-a94d-2525f0747a02",
+        "type": "message",
+        "text": ":yum:",
+        "user": "U0222N7JBPC",
+        "ts": "1621351304.049500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8lP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "yum"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621351231.049200",
+        "parent_user_id": "U0222N7JBPC"
+    },
+    {
+        "client_msg_id": "0ab7a165-d3b5-428a-afb8-08bf5858b564",
+        "type": "message",
+        "text": "zebra data? Are you using artifical or \"natural\" marks? It's fantastic to have zebra data!",
+        "user": "U021MSK4PPH",
+        "ts": "1621352452.049900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+Wk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "zebra data? Are you using artifical or \"natural\" marks? It's fantastic to have zebra data!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621351231.049200",
+        "parent_user_id": "U0222N7JBPC"
+    },
+    {
+        "client_msg_id": "6c75e269-fcae-4a1b-940e-3af43fb913df",
+        "type": "message",
+        "text": "REAL zebra data !",
+        "user": "U0222N7JBPC",
+        "ts": "1621365505.050100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BlW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "REAL zebra data !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621351231.049200",
+        "parent_user_id": "U0222N7JBPC"
+    }
+]

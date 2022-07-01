@@ -1,0 +1,26 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618810206.000200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1618810448.000300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “uncertainty-in-state-assignment” to “questions-uncertainty-in-state-assignment”",
+        "old_name": "uncertainty-in-state-assignment",
+        "name": "questions-uncertainty-in-state-assignment"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1618810814.000400",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class on \"Known knowns, unknown knowns and unknowns: Uncertainty in state assignment\".",
+        "purpose": "Questions for class on \"Known knowns, unknown knowns and unknowns: Uncertainty in state assignment\"."
+    }
+]

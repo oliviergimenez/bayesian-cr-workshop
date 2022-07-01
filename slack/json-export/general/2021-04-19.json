@@ -1,0 +1,46 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618821770.001000",
+        "user": "U01UQ29DG3C",
+        "text": "<@U01UQ29DG3C> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1618861519.001200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “général” to “general”",
+        "old_name": "général",
+        "name": "general"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618864555.001400",
+        "user": "U0202MQV9JL",
+        "text": "<@U0202MQV9JL> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618864567.001600",
+        "user": "U01UC4TNYG7",
+        "text": "<@U01UC4TNYG7> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618871050.000200",
+        "user": "U01UCEJPHL7",
+        "text": "<@U01UCEJPHL7> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618897475.000200",
+        "user": "U01UQUERHLM",
+        "text": "<@U01UQUERHLM> has joined the channel"
+    }
+]

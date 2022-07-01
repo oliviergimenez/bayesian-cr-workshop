@@ -1,0 +1,11 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1621162031.009200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “questions-take-home-messages” to “questions-9-take-home-messages”",
+        "old_name": "questions-take-home-messages",
+        "name": "questions-9-take-home-messages"
+    }
+]

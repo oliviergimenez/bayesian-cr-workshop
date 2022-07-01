@@ -1,0 +1,256 @@
+[
+    {
+        "client_msg_id": "F36B0B53-C78A-4EA2-A77A-17F6A823FD04",
+        "type": "message",
+        "text": "Hi!! I am Aurora and I am a PhD student at the university of Gloucestershire (England). I am looking at how bird communities in the Peruvian Amazon react to different levels of rainforest modification (e.g. selecting logging). I have 10k records of bird ringing (capture-recapture) that needs to be analysed at some point! I can’t wait to attend to this workshop! ",
+        "user": "U021NFFDJAX",
+        "ts": "1620806817.046900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "F5lDp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi!! I am Aurora and I am a PhD student at the university of Gloucestershire (England). I am looking at how bird communities in the Peruvian Amazon react to different levels of rainforest modification (e.g. selecting logging). I have 10k records of bird ringing (capture-recapture) that needs to be analysed at some point! I can’t wait to attend to this workshop! "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "3d5e5614-09b7-4d8d-9e30-96ffe9743339",
+        "type": "message",
+        "text": "Hi! My name is Pauline. I'm a Ph.D. student at Agrocampus Ouest, Rennes. My research focuses on host-pathogen interactions, and how host genetic diversity can decrease selection pressure on pathogen populations. I am a total novice in Bayesian models and I'm excited to discover its different applications!",
+        "user": "U021NH0HELA",
+        "ts": "1620811773.049300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g8cccb22a340",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/8cccb22a340bb6e3f5364bfa226be02e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Pauline CLin",
+            "display_name": "Pauline CLin",
+            "team": "T01UVLT5RS8",
+            "name": "clin.pauline",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rK+Dh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi! My name is Pauline. I'm a Ph.D. student at Agrocampus Ouest, Rennes. My research focuses on host-pathogen interactions, and how host genetic diversity can decrease selection pressure on pathogen populations. I am a total novice in Bayesian models and I'm excited to discover its different applications!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6747af5d-3bb8-4104-89cc-2d46a9932a59",
+        "type": "message",
+        "text": "Hello! My name is Natalia. I'm a postdoc at Biogeco UMR at Bordeaux. I am a forest ecologist with a particular interest in the ecological and evolutionary aspects of  populations. My main research interest is to understand the capacity of keystone plant species to adapt range-wide to the rapid changes deriving from climate change using forest tree species as models. My research approach is to investigate variation in fitness-related traits at different stages of development and integrate two mechanisms, local adaptation and phenotypic plasticity, in conjunction with other abiotic and biotic drivers. In the past; I learnt a bit of WinBugs, but I've already forgotten this :disappointed: . Soon I will be modeling natural regeneration of tree species to understand the effect of intraspecific genetic variation on above and belowground interactions to devise assisted migration plans for naturally regenerating forest stands in the face of climate change. I would like to shift to incorporate the bayesian approach.",
+        "user": "U021VKN37C4",
+        "ts": "1620827340.053800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1e465d2559a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1e465d2559a5cb22a7285fac74072902.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Natalia",
+            "display_name": "Natalia",
+            "team": "T01UVLT5RS8",
+            "name": "natalia.vizcaino.palo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U021VKN37C4",
+            "ts": "1620827552.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2L=Q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! My name is Natalia. I'm a postdoc at Biogeco UMR at Bordeaux. I am a forest ecologist with a particular interest in the ecological and evolutionary aspects of  populations. My main research interest is to understand the capacity of keystone plant species to adapt range-wide to the rapid changes deriving from climate change using forest tree species as models. My research approach is to investigate variation in fitness-related traits at different stages of development and integrate two mechanisms, local adaptation and phenotypic plasticity, in conjunction with other abiotic and biotic drivers. In the past; I learnt a bit of WinBugs, but I've already forgotten this "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "disappointed"
+                            },
+                            {
+                                "type": "text",
+                                "text": " . Soon I will be modeling natural regeneration of tree species to understand the effect of intraspecific genetic variation on above and belowground interactions to devise assisted migration plans for naturally regenerating forest stands in the face of climate change. I would like to shift to incorporate the bayesian approach."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "bb197969-33b8-494d-afa6-e4f011a66610",
+        "type": "message",
+        "text": "Hi! I am Ujjwal currently postdoc in tiger monitoring cell (Wildlife Institute of India)of Government of India. I am basically a tiger biologist worked on tiger &amp; leopard Population dynamics (demography) for my PhD just awarded few months back &amp; hoping to publish soon. My current work is to estimate and model  carnivore population (tiger &amp; leopard)  &amp; Ungulate (prey base estimation).",
+        "user": "U0222GJDNKT",
+        "ts": "1620834502.057600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "3992ef5ae473",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2057947043794_3992ef5ae4736248c985_72.jpg",
+            "first_name": "",
+            "real_name": "Ujjwal Kumar",
+            "display_name": "Ujjwal Kumar",
+            "team": "T01UVLT5RS8",
+            "name": "ujjwalsinha00",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xjDRL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi! I am Ujjwal currently postdoc in tiger monitoring cell (Wildlife Institute of India)of Government of India. I am basically a tiger biologist worked on tiger & leopard Population dynamics (demography) for my PhD just awarded few months back & hoping to publish soon. My current work is to estimate and model  carnivore population (tiger & leopard)  & Ungulate (prey base estimation)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C",
+                    "U022EGWE00Z"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "92d76613-07bc-45ef-be86-eed7b758c1c8",
+        "type": "message",
+        "text": "Hello everyone! My name is David McGeachy and I am a polar bear biologist with the Government of Canada. I just started my PhD at the University of Alberta focusing on population dynamics of polar bears in relation to sea ice dynamics. I have previously built multi-state mark\/recapture models using program MARK to estimate survival, movement and abundance of polar bears but my favourite parameter to estimate is the probability of detection. Increase the p! Greatly appreciate the workshop being offered and excited to be introduced to mark\/recapture analysis in a Bayesian framework. Thanks in advance to everyone involved in offering this workshop!",
+        "user": "U021RJQBBGS",
+        "ts": "1620854878.064000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gbdb2118e7a3",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/bdb2118e7a3a5904ba468a0de66967cd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "",
+            "real_name": "David McGeachy",
+            "display_name": "David McGeachy",
+            "team": "T01UVLT5RS8",
+            "name": "david.mcgeachy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GRWB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone! My name is David McGeachy and I am a polar bear biologist with the Government of Canada. I just started my PhD at the University of Alberta focusing on population dynamics of polar bears in relation to sea ice dynamics. I have previously built multi-state mark\/recapture models using program MARK to estimate survival, movement and abundance of polar bears but my favourite parameter to estimate is the probability of detection. Increase the p! Greatly appreciate the workshop being offered and excited to be introduced to mark\/recapture analysis in a Bayesian framework. Thanks in advance to everyone involved in offering this workshop!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C",
+                    "U022EGWE00Z"
+                ],
+                "count": 3
+            }
+        ]
+    }
+]

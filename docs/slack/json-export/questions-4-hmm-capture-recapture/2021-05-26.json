@@ -1,0 +1,73 @@
+[
+    {
+        "client_msg_id": "b65bc302-6d5b-4e37-aebb-bd017edc5fa0",
+        "type": "message",
+        "text": "Hi hi, I don't know if there is still somewhere there - in case... I am trying to replicate section 4 and 5 with my own data, and I keep getting the following error:                            &lt;defining model...\n&lt;building model...\n&lt;setting data and initial values...\n&lt;running calculate on model (any error reports that follow may simply reflect missing values in model variables) ...\n&lt;checking model sizes and dimensions...Error in is.nan(value) : default method not implemented for type 'list'\nI am like 99.9999% sure it's a dumb issue coming from something very dumb I am doing (or not doing). But in case that's a classic beginner issue and someone can hint at things I should check I would be most grateful. Thanks.",
+        "user": "U0222N7JBPC",
+        "ts": "1622053283.010600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "33k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi hi, I don't know if there is still somewhere there - in case... I am trying to replicate section 4 and 5 with my own data, and I keep getting the following error:                            <defining model...\n<building model...\n<setting data and initial values...\n<running calculate on model (any error reports that follow may simply reflect missing values in model variables) ...\n<checking model sizes and dimensions...Error in is.nan(value) : default method not implemented for type 'list'\nI am like 99.9999% sure it's a dumb issue coming from something very dumb I am doing (or not doing). But in case that's a classic beginner issue and someone can hint at things I should check I would be most grateful. Thanks."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622053283.010600",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1622435363.011600",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U0222N7JBPC"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1622099528.010700"
+            },
+            {
+                "user": "U0222N7JBPC",
+                "ts": "1622112486.010900"
+            },
+            {
+                "user": "U0222N7JBPC",
+                "ts": "1622112522.011100"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1622119517.011300"
+            },
+            {
+                "user": "U0222N7JBPC",
+                "ts": "1622435363.011600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1622435363.011600"
+    }
+]

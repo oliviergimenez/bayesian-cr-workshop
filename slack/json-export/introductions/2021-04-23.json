@@ -1,0 +1,196 @@
+[
+    {
+        "client_msg_id": "2c2189c9-44b7-4de3-9e30-35765163d5d5",
+        "type": "message",
+        "text": "Hello! My name is Katharine and I'm a research ecologist at the British Trust for Ornithology. I work with a range of population and tracking datasets for mainly wetland and marine bird species to understand factor influencing their population dynamics and habitat uses. I have used capture-recapture models before but not with Bayesian statistics so am very excited to learn more about using them on this course! See you all in May!",
+        "user": "U020J4MDZU0",
+        "ts": "1619168823.018600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae716ebe3268",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1994354335826_ae716ebe3268a5447e90_72.jpg",
+            "first_name": "",
+            "real_name": "Katharine Bowgen",
+            "display_name": "Katharine Bowgen",
+            "team": "T01UVLT5RS8",
+            "name": "katharine.bowgen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kFX+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! My name is Katharine and I'm a research ecologist at the British Trust for Ornithology. I work with a range of population and tracking datasets for mainly wetland and marine bird species to understand factor influencing their population dynamics and habitat uses. I have used capture-recapture models before but not with Bayesian statistics so am very excited to learn more about using them on this course! See you all in May!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01UMBR0K38",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "eac59fb0-ec92-4d6f-b2c3-8f7434c923b5",
+        "type": "message",
+        "text": "Hello !",
+        "user": "U0207AP0RG9",
+        "ts": "1619185482.019700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g6fa25c73b4c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6fa25c73b4c834b705a4274a70947094.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "",
+            "real_name": "Randrianarimanana Rivoharifara",
+            "display_name": "Randrianarimanana Rivoharifara",
+            "team": "T01UVLT5RS8",
+            "name": "randriarhf7",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q3L",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a12cd63f-4b14-4be4-8649-bfa8ad5b3746",
+        "type": "message",
+        "text": "Hello! My name is Rivo. I am a master student from The University of Antananarivo. I'm currently working on community ecology, and I'm very excited to attend the workshop.",
+        "user": "U0207AP0RG9",
+        "ts": "1619185987.022400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g6fa25c73b4c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6fa25c73b4c834b705a4274a70947094.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-72.png",
+            "first_name": "",
+            "real_name": "Randrianarimanana Rivoharifara",
+            "display_name": "Randrianarimanana Rivoharifara",
+            "team": "T01UVLT5RS8",
+            "name": "randriarhf7",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "H+Y3N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! My name is Rivo. I am a master student from The University of Antananarivo. I'm currently working on community ecology, and I'm very excited to attend the workshop."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01UMBR0K38",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "32713861-d2c7-4cf2-939c-b7d6d5dcd49f",
+        "type": "message",
+        "text": "Hello everyone! My name is Heitor and I am a PhD student at the Federal University of Tocantins, Brazil. My PhD thesis intends to predict the lizard responses to different fire regimes and climate change in the Cerrado savannas, integrating demography and IPMs (Integral Projection Models). I had some experience with mark-recapture models before (mainly with program Mark), but I am gradually migrating to bayesian framework in JAGS, because it is much more flexible.",
+        "user": "U020E4LNAN4",
+        "ts": "1619188086.027700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "0b3d4788207d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/2001633530756_0b3d4788207d672fb7eb_72.jpg",
+            "first_name": "Heitor",
+            "real_name": "Heitor Campos de Sousa",
+            "display_name": "Heitor Campos de Sousa",
+            "team": "T01UVLT5RS8",
+            "name": "heitor.sousa",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dbPv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone! My name is Heitor and I am a PhD student at the Federal University of Tocantins, Brazil. My PhD thesis intends to predict the lizard responses to different fire regimes and climate change in the Cerrado savannas, integrating demography and IPMs (Integral Projection Models). I had some experience with mark-recapture models before (mainly with program Mark), but I am gradually migrating to bayesian framework in JAGS, because it is much more flexible."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01UMBR0K38",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    }
+]

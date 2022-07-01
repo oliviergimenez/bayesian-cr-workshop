@@ -1,0 +1,106 @@
+[
+    {
+        "client_msg_id": "ee9e7011-77f9-4ad8-a717-c16bc4b791ab",
+        "type": "message",
+        "text": "Hello!! nice to see a lot of people in such a nice workshop!! I am Gisela Giardino, researcher form Argentina focused in marine mammals, mark recpature and bioacustic. I also teach at Mar del Plata University. Big Hug and nice week! :)",
+        "user": "U022594LACD",
+        "ts": "1621341223.008200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ff4a39fb5110",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-18\/2076601321779_ff4a39fb51101b71d975_72.jpg",
+            "first_name": "",
+            "real_name": "Gisela Giardino",
+            "display_name": "Gisela Giardino",
+            "team": "T01UVLT5RS8",
+            "name": "oflavescens",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8hNe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello!! nice to see a lot of people in such a nice workshop!! I am Gisela Giardino, researcher form Argentina focused in marine mammals, mark recpature and bioacustic. I also teach at Mar del Plata University. Big Hug and nice week! :)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U021NFFDJAX",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            },
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "99165CCB-EF9D-40FD-A0E4-F8CAFFC22B08",
+        "type": "message",
+        "text": "Hi everyone, I’m a statistician at NOAA Fisheries and most of my work on capture-recapture has been in JAGS or with maximum likelihood. Looking to level up with Nimble to avoid slow runtimes with latent state chaos!",
+        "user": "U022TBQHXSL",
+        "ts": "1621345013.010800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1556f3d5f076",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2095462455216_1556f3d5f076f06bfa54_72.jpg",
+            "first_name": "Dan",
+            "real_name": "Dan Linden",
+            "display_name": "Dan Linden",
+            "team": "T01UVLT5RS8",
+            "name": "daniel.linden",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=KA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone, I’m a statistician at NOAA Fisheries and most of my work on capture-recapture has been in JAGS or with maximum likelihood. Looking to level up with Nimble to avoid slow runtimes with latent state chaos!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    }
+]

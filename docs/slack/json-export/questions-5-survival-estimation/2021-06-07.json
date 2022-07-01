@@ -1,0 +1,370 @@
+[
+    {
+        "client_msg_id": "da0ef50c-8634-434c-815b-c6c178439c39",
+        "type": "message",
+        "text": "Hi hopefully not too late! These survival analysis examples were all mark-recapture datasets but could you direct me towards any examples of mark-(dead)recovery survival analysis using Nimble or even just advise on converting from rjags please <@U01ULDNCVKP> <@U01UDBUETM5>? I'm trying to build IPMs (working with Rob Robinson and partially following on <https:\/\/besjournals.onlinelibrary.wiley.com\/doi\/full\/10.1111\/2041-210X.12204|from his 2014 IPM paper>) with a habitat specific survival\/recovery component but while the models seem to work and in some cases look promising, they're taking far far too long to run in rjags!  I know it shouldn't be that difficult to convert, I just haven't seen any examples to help get me started! Even better if they involve incorporating them into an IPM... Thanks.",
+        "user": "U022EA0060H",
+        "ts": "1623074198.154400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "OAxZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi hopefully not too late! These survival analysis examples were all mark-recapture datasets but could you direct me towards any examples of mark-(dead)recovery survival analysis using Nimble or even just advise on converting from rjags please "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UDBUETM5"
+                            },
+                            {
+                                "type": "text",
+                                "text": "? I'm trying to build IPMs (working with Rob Robinson and partially following on "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/besjournals.onlinelibrary.wiley.com\/doi\/full\/10.1111\/2041-210X.12204",
+                                "text": "from his 2014 IPM paper"
+                            },
+                            {
+                                "type": "text",
+                                "text": ") with a habitat specific survival\/recovery component but while the models seem to work and in some cases look promising, they're taking far far too long to run in rjags!  I know it shouldn't be that difficult to convert, I just haven't seen any examples to help get me started! Even better if they involve incorporating them into an IPM... Thanks."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b3a07edc-febd-4cdd-929c-4b66a040b346",
+        "type": "message",
+        "text": "<@U01UMBR0K38> might have examples of dead-recovery data analyses in Nimble (trouts?). In any case, the translation Jags -&gt; Nimble shouldn't be too difficult, check out some advices here <https:\/\/r-nimble.org\/quick-guide-for-converting-from-jags-or-bugs-to-nimble>. Happy to help if you bump into problems. As for IPMs, <@U01UQ29DG3C> in her recent paper <https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/abs\/10.1002\/ecm.1459> has made her Nimble code available <https:\/\/github.com\/maudqueroue\/MultispeciesIPM_SkuaPetrel> :wink: See also <https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/abs\/10.1002\/ecm.1364> and probably other resources. Hope this helps.",
+        "user": "U01ULDNCVKP",
+        "ts": "1623086856.156800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "fallback": "maudqueroue\/MultispeciesIPM_SkuaPetrel",
+                "text": "This repository contains all codes and data to run the model presented in our manuscript about the skua-petrel multispecies integrated population model. Please contact me if something goes wrong with the code or for any question.",
+                "title": "maudqueroue\/MultispeciesIPM_SkuaPetrel",
+                "id": 1,
+                "color": "24292f",
+                "fields": [
+                    {
+                        "title": "Stars",
+                        "value": "4",
+                        "short": true
+                    },
+                    {
+                        "title": "Last updated",
+                        "value": "2 months ago",
+                        "short": true
+                    }
+                ],
+                "bot_id": "B022QMWDLFJ",
+                "app_unfurl_url": "https:\/\/github.com\/maudqueroue\/MultispeciesIPM_SkuaPetrel",
+                "is_app_unfurl": true
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u280j",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " might have examples of dead-recovery data analyses in Nimble (trouts?). In any case, the translation Jags -> Nimble shouldn't be too difficult, check out some advices here "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/r-nimble.org\/quick-guide-for-converting-from-jags-or-bugs-to-nimble"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Happy to help if you bump into problems. As for IPMs, "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UQ29DG3C"
+                            },
+                            {
+                                "type": "text",
+                                "text": " in her recent paper "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/abs\/10.1002\/ecm.1459"
+                            },
+                            {
+                                "type": "text",
+                                "text": " has made her Nimble code available "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/maudqueroue\/MultispeciesIPM_SkuaPetrel"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            },
+                            {
+                                "type": "text",
+                                "text": " See also "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/abs\/10.1002\/ecm.1364"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and probably other resources. Hope this helps."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1623086856.156800",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1623089313.157000",
+        "reply_users": [
+            "U022EA0060H"
+        ],
+        "replies": [
+            {
+                "user": "U022EA0060H",
+                "ts": "1623089313.157000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1623089313.157000"
+    },
+    {
+        "client_msg_id": "ee214291-6b74-4354-9528-c0dd16c77004",
+        "type": "message",
+        "text": "Thanks, I'll check them out - having been influenced by this workshop my plan was to switch to Nimble after finishing this work as it was already well advanced having learnt jags over the last few months but it looks like I need to do it during it! Also btw great EURING talks <@U01UQ29DG3C> and <@U01UMBR0K38> and potentially will inform some of the stuff I'm doing!",
+        "user": "U022EA0060H",
+        "ts": "1623089313.157000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U022EA0060H",
+            "ts": "1623089332.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PBQz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, I'll check them out - having been influenced by this workshop my plan was to switch to Nimble after finishing this work as it was already well advanced having learnt jags over the last few months but it looks like I need to do it during it! Also btw great EURING talks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UQ29DG3C"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and potentially will inform some of the stuff I'm doing!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1623086856.156800",
+        "parent_user_id": "U01ULDNCVKP",
+        "reactions": [
+            {
+                "name": "wink",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "8166fc06-c7c6-47c4-b8fe-953d1bfdf084",
+        "type": "message",
+        "text": "Hi <@U022EA0060H>!  What kind of model are you hoping to fit? Is it a pure mark-recovery model (Brownie model), or is it a mark-recapture-recovery = multistate model?\n\nIn general, transitioning from JAGS to NIMBLE is the same irrespective of whether or not your model includes dead recoveries. If it's a Brownie model, I have worked on an IPM that includes a standard implementation (= latent state) and can share that code. If it's a multistate model... well, everything we covered on mutlistate models applies in that case, and the dDHMM() distribution (marginalized likelihood) from the nimbleEcology package will be your friend.\n(unless you have individual- and time-varying covariates. In which case I can recommend checking out my trout paper here: <https:\/\/besjournals.onlinelibrary.wiley.com\/doi\/10.1111\/1365-2656.13269>)",
+        "user": "U01UMBR0K38",
+        "ts": "1623089679.161500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AiZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U022EA0060H"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!  What kind of model are you hoping to fit? Is it a pure mark-recovery model (Brownie model), or is it a mark-recapture-recovery = multistate model?\n\nIn general, transitioning from JAGS to NIMBLE is the same irrespective of whether or not your model includes dead recoveries. If it's a Brownie model, I have worked on an IPM that includes a standard implementation (= latent state) and can share that code. If it's a multistate model... well, everything we covered on mutlistate models applies in that case, and the dDHMM() distribution (marginalized likelihood) from the nimbleEcology package will be your friend.\n(unless you have individual- and time-varying covariates. In which case I can recommend checking out my trout paper here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/besjournals.onlinelibrary.wiley.com\/doi\/10.1111\/1365-2656.13269"
+                            },
+                            {
+                                "type": "text",
+                                "text": ")"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U022EA0060H"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "4fb68b0c-f897-4d6f-9eea-5b4b4937f011",
+        "type": "message",
+        "text": "Also, feel free to catch me on EURING gather too :blush:",
+        "user": "U01UMBR0K38",
+        "ts": "1623089719.162100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Bo5Hr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, feel free to catch me on EURING gather too "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "blush"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

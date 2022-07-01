@@ -1,0 +1,19 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1621162008.009200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “questions-survival-estimation” to “questions-5-survival-estimation”",
+        "old_name": "questions-survival-estimation",
+        "name": "questions-5-survival-estimation"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1621162018.009300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class\/worksheet on \"Dead or alive: Survival estimation\".",
+        "purpose": "Questions for class\/worksheet on \"Dead or alive: Survival estimation\"."
+    }
+]

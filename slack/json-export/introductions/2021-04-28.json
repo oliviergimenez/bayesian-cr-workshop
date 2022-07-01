@@ -1,0 +1,51 @@
+[
+    {
+        "client_msg_id": "599ae2d0-8ccd-4209-ac66-74fd5db2f999",
+        "type": "message",
+        "text": "Hello! My name is Merlène. I am a PhD student at the university of Reunion Island. I am working on the population dynamics of the tropical seabird in the western Indian ocean for conservation biology. I have experience with mark-recaptured analysis only with MARK but currently I have to build Integrated Population Models, which used bayesian statistics, to improve my analysis. I am so very enthusiastic to learn more about bayesian statistic with this workshop!",
+        "user": "U0203L8NKE2",
+        "ts": "1619621209.032800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g830b7c598b6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/830b7c598b64700d091bd215e65d01f4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-72.png",
+            "first_name": "SAUNIER",
+            "real_name": "SAUNIER Merlène",
+            "display_name": "Merlène Saunier",
+            "team": "T01UVLT5RS8",
+            "name": "merlene.saunier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "k4B",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! My name is Merlène. I am a PhD student at the university of Reunion Island. I am working on the population dynamics of the tropical seabird in the western Indian ocean for conservation biology. I have experience with mark-recaptured analysis only with MARK but currently I have to build Integrated Population Models, which used bayesian statistics, to improve my analysis. I am so very enthusiastic to learn more about bayesian statistic with this workshop!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP",
+                    "U01UMBR0K38"
+                ],
+                "count": 3
+            }
+        ]
+    }
+]

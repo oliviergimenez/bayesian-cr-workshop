@@ -1,0 +1,3547 @@
+[
+    {
+        "client_msg_id": "830881bd-81b7-4cea-b258-74b87780a02b",
+        "type": "message",
+        "text": "Very good advice by <@U01UMBR0K38> Take some time to write your obs\/states and transition\/observation matrices on paper before working in R\/Nimble.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621329430.001400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SSir",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Very good advice by "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Take some time to write your obs\/states and transition\/observation matrices on paper before working in R\/Nimble."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329430.001400",
+        "reply_count": 3,
+        "reply_users_count": 3,
+        "latest_reply": "1621331405.016000",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U01ULDNCVKP",
+            "U022RRJ8KLY"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621330100.003800"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621330261.005000"
+            },
+            {
+                "user": "U022RRJ8KLY",
+                "ts": "1621331405.016000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621331405.016000",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0222LD8JCA",
+                    "U020421P0P2",
+                    "U022EG3UKDX",
+                    "U021NFFDJAX",
+                    "U021Y2G74H1",
+                    "U021VSPGLSJ",
+                    "U021K37JWHM",
+                    "U0228RCCZ7E",
+                    "U0222LE4N5Q",
+                    "U0227VC8A76",
+                    "U020D3400HW",
+                    "U021ZH38E6R",
+                    "U0221UEL8RZ",
+                    "U01UDBUETM5",
+                    "U021GG5HHMH",
+                    "U0222M1S8SE",
+                    "U022TBQHXSL"
+                ],
+                "count": 17
+            }
+        ]
+    },
+    {
+        "client_msg_id": "03acb58b-2d95-46d5-add1-4d494c98c972",
+        "type": "message",
+        "text": "What about situations when the number of sites is large and not all of them were sampled to mark the individuals?",
+        "user": "U021QB26LLB",
+        "ts": "1621329970.003700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd924269ecd8",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d924269ecd84a49a01050577d5070f39.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "",
+            "real_name": "Lionel Hertzog",
+            "display_name": "Lionel Hertzog",
+            "team": "T01UVLT5RS8",
+            "name": "lionel.hertzog",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IEeq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What about situations when the number of sites is large and not all of them were sampled to mark the individuals?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329970.003700",
+        "reply_count": 5,
+        "reply_users_count": 3,
+        "latest_reply": "1621331416.016500",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U021QB26LLB",
+            "U01UDBUETM5"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621330229.004300"
+            },
+            {
+                "user": "U021QB26LLB",
+                "ts": "1621330340.005900"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621330587.006800"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621331152.012100"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621331416.016500"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621331416.016500"
+    },
+    {
+        "type": "message",
+        "text": "",
+        "files": [
+            {
+                "id": "F022XHPAW48",
+                "created": 1621330097,
+                "timestamp": 1621330097,
+                "name": "Screenshot 2021-05-18 at 11.28.09.png",
+                "title": "Screenshot 2021-05-18 at 11.28.09.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U01UDBUETM5",
+                "editable": false,
+                "size": 512512,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022XHPAW48\/screenshot_2021-05-18_at_11.28.09.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022XHPAW48\/download\/screenshot_2021-05-18_at_11.28.09.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_64.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_80.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_360.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 285,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_480.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 380,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_160.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "original_w": 473,
+                "original_h": 597,
+                "thumb_tiny": "AwAwACa+0ijIJqDec8E\/p\/jT7kYXcOuRVBp3BIBGP90UAW97ep68dP8AGo5d7INp5PuB\/WokmcqScf8AfIqWJHKM+Rnt8ooAbB5iE7icfXNTeZ7moY1YyEsBnHYVNtpDJnG5WBrLZDuOBmtKUlcYBPPNUZflyVZsZzxQAtunzDfnrwKtK4zjNUhLtHGfxoEu3knmmhFsECQ\/Sn7xVONmMmfUVNk0DLjZ5HasmQBR1yc5I9K0WlRXIyM+5qJuhwYue\/pSAzzgd+PUU1Rhs7s1fTCyNzFzzg9P88U2RBMu0NEm1uo70xEUJy\/4Gp6gt1xIR1wDzVnbSGf\/2Q==",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UDBUETM5\/F022XHPAW48\/screenshot_2021-05-18_at_11.28.09.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F022XHPAW48-640c3fba78",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "user": "U01UDBUETM5",
+        "display_as_bot": false,
+        "ts": "1621330100.003800",
+        "thread_ts": "1621329430.001400",
+        "parent_user_id": "U01ULDNCVKP"
+    },
+    {
+        "client_msg_id": "ac82408e-a4a7-4030-9652-3348728cea06",
+        "type": "message",
+        "text": "Two questions in one I guess. If you have many sites, then it gets difficult to estimate all transition parameters, unless some transitions can be assumed never to happen and the transition matrix simplified. If some sites are not sampled in some years, then the corresponding detection probability can be fixed to 0, it will affect the estimation of survival\/transition though. Does it help?",
+        "user": "U01ULDNCVKP",
+        "ts": "1621330229.004300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IHYX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Two questions in one I guess. If you have many sites, then it gets difficult to estimate all transition parameters, unless some transitions can be assumed never to happen and the transition matrix simplified. If some sites are not sampled in some years, then the corresponding detection probability can be fixed to 0, it will affect the estimation of survival\/transition though. Does it help?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329970.003700",
+        "parent_user_id": "U021QB26LLB"
+    },
+    {
+        "client_msg_id": "d7bfb0c4-bfd8-4dcb-8b03-cab94f48a83b",
+        "type": "message",
+        "text": "OK, the war of memes is open :hugging_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621330261.005000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "337R",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "OK, the war of memes is open "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "hugging_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329430.001400",
+        "parent_user_id": "U01ULDNCVKP",
+        "reactions": [
+            {
+                "name": "pirate_flag",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c87fe4b7-c1dd-4a7b-aa67-9eed1feb8002",
+        "type": "message",
+        "text": "Are there obvious (or non obvious) advantages \/ disadvantages of the Dirichelet vs multinomial implementation that <@U01UMBR0K38> just showed us?",
+        "user": "U021GG5HHMH",
+        "ts": "1621330293.005700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jaa6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are there obvious (or non obvious) advantages \/ disadvantages of the Dirichelet vs multinomial implementation that "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " just showed us?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330293.005700",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621330438.006100",
+        "reply_users": [
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621330438.006100"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621330438.006100"
+    },
+    {
+        "client_msg_id": "1105722f-8327-4ff7-b5de-cdc497b415ac",
+        "type": "message",
+        "text": "Yep! Thx.",
+        "user": "U021QB26LLB",
+        "ts": "1621330340.005900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd924269ecd8",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d924269ecd84a49a01050577d5070f39.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "",
+            "real_name": "Lionel Hertzog",
+            "display_name": "Lionel Hertzog",
+            "team": "T01UVLT5RS8",
+            "name": "lionel.hertzog",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TAf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yep! Thx."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329970.003700",
+        "parent_user_id": "U021QB26LLB"
+    },
+    {
+        "client_msg_id": "0391419a-8f9e-4837-ae54-bda8bb90e772",
+        "type": "message",
+        "text": "When it gets to include covariates, the multinomial logit is easier to use.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621330438.006100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7x+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "When it gets to include covariates, the multinomial logit is easier to use."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330293.005700",
+        "parent_user_id": "U021GG5HHMH",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021GG5HHMH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "65b640ed-48f0-494a-9088-7df14d625680",
+        "type": "message",
+        "text": "This paper by a former student of mine suggests a solution when you have many sites to deal with <https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/abs\/10.1890\/13-1564.1>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621330587.006800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RZ7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This paper by a former student of mine suggests a solution when you have many sites to deal with "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/esajournals.onlinelibrary.wiley.com\/doi\/abs\/10.1890\/13-1564.1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329970.003700",
+        "parent_user_id": "U021QB26LLB"
+    },
+    {
+        "client_msg_id": "e12143a9-fde2-4173-b89e-2cfc73891d2e",
+        "type": "message",
+        "text": "Are dirichlet priors the priors of choice for multistate param? There is no such things as multi-logit?",
+        "user": "U022SQVS6GY",
+        "ts": "1621330680.008500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=Eig",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are dirichlet priors the priors of choice for multistate param? There is no such things as multi-logit?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330680.008500",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621331056.010500",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U022SQVS6GY"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621330917.010300"
+            },
+            {
+                "user": "U022SQVS6GY",
+                "ts": "1621331056.010500"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "364f6bce-7d8e-4258-b3b7-ffbf47a0c164",
+        "type": "message",
+        "text": "Could it cause problems that the zinits==0 are assigned to either of the 2 sites outside of the initial.values function? It seems that this random assignation could potentially assign observations to implausible states, and this sampling process won't be regenerated (ie like the other initial values) when the model is rerun.",
+        "user": "U0225K54L7K",
+        "ts": "1621330830.010200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g9d8104be315",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/9d8104be315375ce3dfeedb856da078a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Sam Cruickshank",
+            "display_name": "Sam Cruickshank",
+            "team": "T01UVLT5RS8",
+            "name": "sam.cruickshank",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "p9W",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Could it cause problems that the zinits==0 are assigned to either of the 2 sites outside of the initial.values function? It seems that this random assignation could potentially assign observations to implausible states, and this sampling process won't be regenerated (ie like the other initial values) when the model is rerun."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330830.010200",
+        "reply_count": 3,
+        "reply_users_count": 3,
+        "latest_reply": "1621331408.016200",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U0225K54L7K",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621331139.011900"
+            },
+            {
+                "user": "U0225K54L7K",
+                "ts": "1621331279.014300"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621331408.016200"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621331408.016200"
+    },
+    {
+        "client_msg_id": "75aec6be-d03d-4bcb-9668-d3a283e6f9be",
+        "type": "message",
+        "text": "you can use the multinomial logit (it can be understood as logit for each category of the multinomial). It might be  personal choice, but some people find it easier to use multinomial than Dirichlet when we want to use covariates. Does it answer your question ?",
+        "user": "U01UDBUETM5",
+        "ts": "1621330917.010300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WFM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "you can use the multinomial logit (it can be understood as logit for each category of the multinomial). It might be  personal choice, but some people find it easier to use multinomial than Dirichlet when we want to use covariates. Does it answer your question ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330680.008500",
+        "parent_user_id": "U022SQVS6GY"
+    },
+    {
+        "client_msg_id": "dc7767cb-fd8d-4c92-a7fd-91f045c8cd76",
+        "type": "message",
+        "text": "yep, thanks",
+        "user": "U022SQVS6GY",
+        "ts": "1621331056.010500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "y9Fh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yep, thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330680.008500",
+        "parent_user_id": "U022SQVS6GY"
+    },
+    {
+        "client_msg_id": "2eea4671-1397-4326-9c4a-306df2756289",
+        "type": "message",
+        "text": "When creating the zinits we want to make sure to avoid impossible transitions - which can be painful if you have several sites, and some impossible transitions among them... in this case, you have to generate the zinits making sure to avoid impossible transitions. But apparently Nimble has a way aournd this issue (see later Perry’s class about marginalization)",
+        "user": "U01UDBUETM5",
+        "ts": "1621331139.011900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "T56Q7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "When creating the zinits we want to make sure to avoid impossible transitions - which can be painful if you have several sites, and some impossible transitions among them... in this case, you have to generate the zinits making sure to avoid impossible transitions. But apparently Nimble has a way aournd this issue (see later Perry’s class about marginalization)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330830.010200",
+        "parent_user_id": "U0225K54L7K"
+    },
+    {
+        "client_msg_id": "faf265a9-b7f2-4ecb-be0b-c2b739466843",
+        "type": "message",
+        "text": "If you're interested in, check out follow-up work by Hugo Cayuela.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621331152.012100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "biu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you're interested in, check out follow-up work by Hugo Cayuela."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329970.003700",
+        "parent_user_id": "U021QB26LLB"
+    },
+    {
+        "type": "message",
+        "text": "Chloe mentioned that nimble might offer a way around the ‘impossible transition in the zinits’ issue - Perry will tell us about this later, in the meantime...",
+        "files": [
+            {
+                "id": "F022E0SJXLL",
+                "created": 1621331208,
+                "timestamp": 1621331208,
+                "name": "Screenshot 2021-05-18 at 11.46.40.png",
+                "title": "Screenshot 2021-05-18 at 11.46.40.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U01UDBUETM5",
+                "editable": false,
+                "size": 371029,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022E0SJXLL\/screenshot_2021-05-18_at_11.46.40.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022E0SJXLL\/download\/screenshot_2021-05-18_at_11.46.40.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E0SJXLL-f9e037fdca\/screenshot_2021-05-18_at_11.46.40_64.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E0SJXLL-f9e037fdca\/screenshot_2021-05-18_at_11.46.40_80.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E0SJXLL-f9e037fdca\/screenshot_2021-05-18_at_11.46.40_360.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 324,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E0SJXLL-f9e037fdca\/screenshot_2021-05-18_at_11.46.40_480.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 432,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E0SJXLL-f9e037fdca\/screenshot_2021-05-18_at_11.46.40_160.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "original_w": 493,
+                "original_h": 548,
+                "thumb_tiny": "AwAwACuSK32kE8+xqbGOij8DSndgnB4pyxKwDbsg1KKYz5um3nHrSNvA+7+tTeUmKiaHnhjTuIheYZwBgj3pFlJFDKvm7ACTn5vapAqAdP0qblDkuST8xA+lMgu41g+ckbTiqa59RUMvyllz1OaaEzWFwssW5Scd89qgabByD+tVrSdIUffk56AUik3EnZUpMESeYTlicE1MgBUfOPypBbDqXGPapViAGAwx9KVxkH2N+zriq13CYWUMQcjtVqKRPLUF48gc5XmlaWLgM8XH95c1STEzNHJArQFo6jAdOOwpI3izgtDk8\/c6e1Shxz8yc+q0MER+RL1LAfU1IqyY+\/8A+PUeanPzxj8DUJPJwcjJ5FKwz\/\/Z",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UDBUETM5\/F022E0SJXLL\/screenshot_2021-05-18_at_11.46.40.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F022E0SJXLL-7a340e81a1",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YEm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Chloe mentioned that nimble might offer a way around the ‘impossible transition in the zinits’ issue - Perry will tell us about this later, in the meantime..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U01UDBUETM5",
+        "display_as_bot": false,
+        "ts": "1621331257.014200",
+        "reactions": [
+            {
+                "name": "joy",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U0218E0HVPC",
+                    "U0228RCCZ7E",
+                    "U01UMBR0K38"
+                ],
+                "count": 4
+            },
+            {
+                "name": "laughing",
+                "users": [
+                    "U022EG3UKDX",
+                    "U01ULDNCVKP",
+                    "U020E0D34F2"
+                ],
+                "count": 3
+            },
+            {
+                "name": "rolling_on_the_floor_laughing",
+                "users": [
+                    "U021GG5HHMH",
+                    "U022RRJ8KLY"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "af8d046d-027b-4afd-8905-ccc503147bb9",
+        "type": "message",
+        "text": "great, thanks",
+        "user": "U0225K54L7K",
+        "ts": "1621331279.014300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g9d8104be315",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/9d8104be315375ce3dfeedb856da078a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Sam Cruickshank",
+            "display_name": "Sam Cruickshank",
+            "team": "T01UVLT5RS8",
+            "name": "sam.cruickshank",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PBll0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "great, thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330830.010200",
+        "parent_user_id": "U0225K54L7K"
+    },
+    {
+        "client_msg_id": "f0222e81-941f-4515-85d5-39861de44d1b",
+        "type": "message",
+        "text": ":rolling_on_the_floor_laughing::rolling_on_the_floor_laughing::rolling_on_the_floor_laughing:",
+        "user": "U022RRJ8KLY",
+        "ts": "1621331405.016000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "41e330567ecd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2093891956048_41e330567ecd820f0ab1_72.jpg",
+            "first_name": "Chloé",
+            "real_name": "Chloé Warret Rodrigues",
+            "display_name": "Chloé",
+            "team": "T01UVLT5RS8",
+            "name": "warretrc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5WH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "rolling_on_the_floor_laughing"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rolling_on_the_floor_laughing"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rolling_on_the_floor_laughing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329430.001400",
+        "parent_user_id": "U01ULDNCVKP"
+    },
+    {
+        "client_msg_id": "39b228da-229a-40ed-985e-75192996d575",
+        "type": "message",
+        "text": "The idea is that with marginalisation, you get rid of the latent states in the likelihood of the HMM, so no need to initialize them anymore. NimbleEcology implements the marginalized likelihood for HMM, more in lecture 8 this afternoon with <@U0203USKJRE>. More about nimbleEcology <https:\/\/cran.r-project.org\/web\/packages\/nimbleEcology\/vignettes\/Introduction_to_nimbleEcology.html>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621331408.016200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Buj5A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The idea is that with marginalisation, you get rid of the latent states in the likelihood of the HMM, so no need to initialize them anymore. NimbleEcology implements the marginalized likelihood for HMM, more in lecture 8 this afternoon with "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0203USKJRE"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". More about nimbleEcology "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/cran.r-project.org\/web\/packages\/nimbleEcology\/vignettes\/Introduction_to_nimbleEcology.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621330830.010200",
+        "parent_user_id": "U0225K54L7K",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0225K54L7K"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "899ae6e4-42b1-4d67-89e5-704fb3092461",
+        "type": "message",
+        "text": "There is also the possibility to include ‘unobersvable states’ we  use it when we know birds\/animals can be elsewhere but we can’t sample there, for eg wintering areas for birds",
+        "user": "U01UDBUETM5",
+        "ts": "1621331416.016500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01UDBUETM5",
+            "ts": "1621331458.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fU6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There is also the possibility to include ‘unobersvable states’ we  use it when we know birds\/animals can be elsewhere but we can’t sample there, for eg wintering areas for birds"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621329970.003700",
+        "parent_user_id": "U021QB26LLB"
+    },
+    {
+        "client_msg_id": "1524d914-72f8-496d-9a3c-de2c3fc5e89d",
+        "type": "message",
+        "text": "Can I ask why we need to specify initial state probabilities (i.e. delta)? I’ve been using CJS\/multistate models in JAGS using base scripts from the Kery &amp; Schaub 2012 book, which don’t require initial state probabilities to be specified, so I’m not clear on what we gain by doing so? Sorry if this is something I missed yesterday!",
+        "user": "U0222M1S8SE",
+        "ts": "1621331460.017400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gb131caca709",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/b131caca7090e79666e18bf5bbc32950.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Stephanie Harris",
+            "display_name": "Stephanie Harris",
+            "team": "T01UVLT5RS8",
+            "name": "stephanie.harris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PV0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can I ask why we need to specify initial state probabilities (i.e. delta)? I’ve been using CJS\/multistate models in JAGS using base scripts from the Kery & Schaub 2012 book, which don’t require initial state probabilities to be specified, so I’m not clear on what we gain by doing so? Sorry if this is something I missed yesterday!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621331460.017400",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1621332022.020000",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U0222M1S8SE"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621331674.018800"
+            },
+            {
+                "user": "U0222M1S8SE",
+                "ts": "1621331823.019400"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621332022.020000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621332022.020000"
+    },
+    {
+        "client_msg_id": "8e037e71-4da6-4bb0-8f3a-a0d0b46e1f38",
+        "type": "message",
+        "text": "shouldn't the (2,1) entry of the transition matrix not be phi?",
+        "user": "U022SQVS6GY",
+        "ts": "1621331569.018700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "e58",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "shouldn't the (2,1) entry of the transition matrix not be phi?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621331569.018700",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621331710.019000",
+        "reply_users": [
+            "U01UDBUETM5"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621331710.019000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "0b187f84-0888-42dc-97f3-96ff55bd022c",
+        "type": "message",
+        "text": "Sorry for the confusion. We use delta as a placeholder for more complex models to come this afternoon in lecture 7. For future workshops, we might decide to forget about that as it generates confusion.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621331674.018800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6gB3l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sorry for the confusion. We use delta as a placeholder for more complex models to come this afternoon in lecture 7. For future workshops, we might decide to forget about that as it generates confusion."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621331460.017400",
+        "parent_user_id": "U0222M1S8SE"
+    },
+    {
+        "client_msg_id": "5876fc9b-42c8-4b04-b688-90c66053664e",
+        "type": "message",
+        "text": "it corresponds to the probability of remaining alive and coming back from state 2 to state 1, so survive and back to state 1, phi * psi(comes in again)",
+        "user": "U01UDBUETM5",
+        "ts": "1621331710.019000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01UDBUETM5",
+            "ts": "1621331759.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "K04V",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it corresponds to the probability of remaining alive and coming back from state 2 to state 1, so survive and back to state 1, phi * psi(comes in again)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621331569.018700",
+        "parent_user_id": "U022SQVS6GY"
+    },
+    {
+        "client_msg_id": "87c73e7a-88f1-4a6a-99b3-87da4276d02e",
+        "type": "message",
+        "text": "Ah okay! No problem :slightly_smiling_face:  So we can in theory remove it in the models covered so far with no effect?",
+        "user": "U0222M1S8SE",
+        "ts": "1621331823.019400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gb131caca709",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/b131caca7090e79666e18bf5bbc32950.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Stephanie Harris",
+            "display_name": "Stephanie Harris",
+            "team": "T01UVLT5RS8",
+            "name": "stephanie.harris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aGg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ah okay! No problem "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            },
+                            {
+                                "type": "text",
+                                "text": "  So we can in theory remove it in the models covered so far with no effect?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621331460.017400",
+        "parent_user_id": "U0222M1S8SE"
+    },
+    {
+        "client_msg_id": "2cd46d53-843d-401c-ade4-fde700f688c7",
+        "type": "message",
+        "text": "Sure.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621332022.020000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "UkNr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sure."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621331460.017400",
+        "parent_user_id": "U0222M1S8SE",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0222M1S8SE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "05214d23-018e-4218-84c5-71d32ae9f75e",
+        "type": "message",
+        "text": "Brilliant lecture <@U01UMBR0K38> :slightly_smiling_face:",
+        "user": "U020D3400HW",
+        "ts": "1621332217.021000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "rC0T",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Brilliant lecture "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "Another one of Chloe’s excellent advices :",
+        "files": [
+            {
+                "id": "F022E2J1HM2",
+                "created": 1621332195,
+                "timestamp": 1621332195,
+                "name": "Screenshot 2021-05-18 at 12.03.10.png",
+                "title": "Screenshot 2021-05-18 at 12.03.10.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U01UDBUETM5",
+                "editable": false,
+                "size": 455086,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022E2J1HM2\/screenshot_2021-05-18_at_12.03.10.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022E2J1HM2\/download\/screenshot_2021-05-18_at_12.03.10.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E2J1HM2-0ff100e83e\/screenshot_2021-05-18_at_12.03.10_64.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E2J1HM2-0ff100e83e\/screenshot_2021-05-18_at_12.03.10_80.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E2J1HM2-0ff100e83e\/screenshot_2021-05-18_at_12.03.10_360.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 286,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E2J1HM2-0ff100e83e\/screenshot_2021-05-18_at_12.03.10_480.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 381,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E2J1HM2-0ff100e83e\/screenshot_2021-05-18_at_12.03.10_160.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "original_w": 495,
+                "original_h": 624,
+                "thumb_tiny": "AwAwACaFYvNIAdehPNTRW5iLMGjb\/ZNVJGy27gN2xSCPDEZDfTuKYjRwTgARioWgbfu8xMZyB6U3oD83bpiogUBPGT2yKlMqSsh6xF3LDG360\/yD6r+dRKwZvu9B2p2B\/daqJK5zuC4Gc1YcowG7kZ6dKiMEpbIABHvT5I3JBKqAOwbrSY07EayMz7Yx1PANMYskpEgwR1xTcFTuHGD61M8Ulwxl+X5vegGSW0oVm28571Y88+9VYYHRznB47GpvLPp\/49QA5WcfKDkUjODxsOevSp9qYB3nIphkQL5ZnIGMEben40xIoyB9u3Y35U1ZZYlHUDtkVe88K4HnnbjrsqNxDKoR5mwvI+X\/AOtSGMhuN7fPwcVN5qetQNFEmDC7Oe4IpuG\/un8qYH\/\/2Q==",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UDBUETM5\/F022E2J1HM2\/screenshot_2021-05-18_at_12.03.10.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F022E2J1HM2-f0d4ba5231",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tvo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Another one of Chloe’s excellent advices :"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U01UDBUETM5",
+        "display_as_bot": false,
+        "ts": "1621332225.021200",
+        "reactions": [
+            {
+                "name": "rolling_on_the_floor_laughing",
+                "users": [
+                    "U021NFFDJAX",
+                    "U020D3400HW",
+                    "U0222M1S8SE",
+                    "U0228RFP1V2",
+                    "U022SDPT3LY",
+                    "U0228RCCZ7E",
+                    "U022EL2S7BK",
+                    "U022RRJ8KLY",
+                    "U01UMBR0K38"
+                ],
+                "count": 9
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022AJN2J81",
+                    "U01ULDNCVKP",
+                    "U01UNUU4Y14"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "48b5157e-76c3-4225-8cf0-46685a693984",
+        "type": "message",
+        "text": "Titi song for Chloe <https:\/\/www.youtube.com\/watch?v=gF48b-FxZ8Y>",
+        "user": "U021MSK4PPH",
+        "ts": "1621332250.021600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/",
+                "title": "Noisy sooty shearwaters or titi.",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=gF48b-FxZ8Y",
+                "author_name": "UC Science",
+                "author_link": "https:\/\/www.youtube.com\/user\/UCScienceOutreach",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/gF48b-FxZ8Y\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "fallback": "YouTube Video: Noisy sooty shearwaters or titi.",
+                "video_html": "<iframe width=\"400\" height=\"300\" src=\"https:\/\/www.youtube.com\/embed\/gF48b-FxZ8Y?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 300,
+                "from_url": "https:\/\/www.youtube.com\/watch?v=gF48b-FxZ8Y",
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/youtube.png",
+                "id": 1,
+                "original_url": "https:\/\/www.youtube.com\/watch?v=gF48b-FxZ8Y"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Kijh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Titi song for Chloe "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.youtube.com\/watch?v=gF48b-FxZ8Y"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332250.021600",
+        "reply_count": 5,
+        "reply_users_count": 4,
+        "latest_reply": "1621333554.033600",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U0208H4AQGG",
+            "U021MSK4PPH",
+            "U01UMBR0K38"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621332320.022100"
+            },
+            {
+                "user": "U0208H4AQGG",
+                "ts": "1621332561.024700"
+            },
+            {
+                "user": "U021MSK4PPH",
+                "ts": "1621332633.025300"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621333490.033100"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621333554.033600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U01UDBUETM5",
+                    "U01UMBR0K38"
+                ],
+                "count": 2
+            },
+            {
+                "name": "tada",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            },
+            {
+                "name": "astonished",
+                "users": [
+                    "U0228RFP1V2",
+                    "U0222LD8JCA"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d04145fd-aaec-449b-acd3-4623f9f457c5",
+        "type": "message",
+        "text": "hearing Manu’s bird songs is the best moment of every workshop :heart:",
+        "user": "U01UDBUETM5",
+        "ts": "1621332320.022100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2Vhn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hearing Manu’s bird songs is the best moment of every workshop "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "heart"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332250.021600",
+        "parent_user_id": "U021MSK4PPH"
+    },
+    {
+        "client_msg_id": "8ba171cc-7979-4053-bd20-c9d07c809a31",
+        "type": "message",
+        "text": "Here is <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html|a searchable list> of HMM analyses of capture-recapture data. I'll refer to that list again in the last lecture <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621332386.023500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jsC3j",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Here is "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html",
+                                "text": "a searchable list"
+                            },
+                            {
+                                "type": "text",
+                                "text": " of HMM analyses of capture-recapture data. I'll refer to that list again in the last lecture "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332386.023500",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621333132.030000",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U022SQVS6GY"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621332583.024900"
+            },
+            {
+                "user": "U022SQVS6GY",
+                "ts": "1621333132.030000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621333132.030000",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U021NFFDJAX",
+                    "U022F8YTATB",
+                    "U0203L8NKE2",
+                    "U0222M1S8SE",
+                    "U022EG3UKDX",
+                    "U020D3400HW",
+                    "U0228RFP1V2",
+                    "U0218E0HVPC",
+                    "U0228RCCZ7E",
+                    "U021W7G8Y14"
+                ],
+                "count": 11
+            },
+            {
+                "name": "star-struck",
+                "users": [
+                    "U01UMBR0K38",
+                    "U021W7G8Y14"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "5fae337d-dbd5-49fb-9554-1cabd811a3fe",
+        "type": "message",
+        "text": "Random fact: In Filipino, \"titi\" means penis! :joy:",
+        "user": "U0208H4AQGG",
+        "ts": "1621332561.024700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "e07911b5b986",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-20\/1984779414354_e07911b5b98694557264_72.jpg",
+            "first_name": "Desamarie",
+            "real_name": "Desamarie Antonette P. Fernandez",
+            "display_name": "Dez Fernandez",
+            "team": "T01UVLT5RS8",
+            "name": "dpfernandez1",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l\/i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Random fact: In Filipino, \"titi\" means penis! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "joy"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332250.021600",
+        "parent_user_id": "U021MSK4PPH",
+        "reactions": [
+            {
+                "name": "joy",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            },
+            {
+                "name": "rolling_on_the_floor_laughing",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "ee374e5e-55d6-49a0-a486-8340373d5320",
+        "type": "message",
+        "text": "Email me if you'd like me to add references to the list, it's far from exhaustive :wink:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621332583.024900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fqP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Email me if you'd like me to add references to the list, it's far from exhaustive "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332386.023500",
+        "parent_user_id": "U01ULDNCVKP"
+    },
+    {
+        "client_msg_id": "279d2c43-c870-4137-8ac0-aa19baa9f500",
+        "type": "message",
+        "text": "we are on a slippery slope here!",
+        "user": "U021MSK4PPH",
+        "ts": "1621332633.025300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hXL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "we are on a slippery slope here!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332250.021600",
+        "parent_user_id": "U021MSK4PPH",
+        "reactions": [
+            {
+                "name": "laughing",
+                "users": [
+                    "U0208H4AQGG"
+                ],
+                "count": 1
+            },
+            {
+                "name": "rolling_on_the_floor_laughing",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "1bf2ef2d-fe56-4c8e-9143-f9884b3d0ff7",
+        "type": "message",
+        "text": "Sorry if I missed this, is there a repository with all the datasets?",
+        "user": "U0220681GLS",
+        "ts": "1621332935.026800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3ff4cc0d166",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-14\/2061435367030_b3ff4cc0d166ec265a69_72.png",
+            "first_name": "",
+            "real_name": "alepietrek",
+            "display_name": "alepietrek",
+            "team": "T01UVLT5RS8",
+            "name": "alepietrek",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sgHf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sorry if I missed this, is there a repository with all the datasets?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332935.026800",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621333022.027600",
+        "reply_users": [
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621333022.027600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621333022.027600"
+    },
+    {
+        "client_msg_id": "ff14d614-5170-4caa-83cb-c00b151faf82",
+        "type": "message",
+        "text": "Yes, from the website in the live demos pull-down menu, \"Download all datasets at once\". Direct link <https:\/\/github.com\/oliviergimenez\/bayesian-cr-workshop\/raw\/master\/worksheets\/data.zip>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621333022.027600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lSC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, from the website in the live demos pull-down menu, \"Download all datasets at once\". Direct link "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/oliviergimenez\/bayesian-cr-workshop\/raw\/master\/worksheets\/data.zip"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332935.026800",
+        "parent_user_id": "U0220681GLS",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0220681GLS"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "1510d9b3-739a-4c70-bab7-f5413850d895",
+        "type": "message",
+        "text": "Will you keep traces of all questions\/answers of each session ?",
+        "user": "U022FA345J5",
+        "ts": "1621333051.028200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "af4d254b5832",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2083343196785_af4d254b58322c7e1ce8_72.png",
+            "first_name": "",
+            "real_name": "Daniel Gaertner",
+            "display_name": "Daniel Gaertner",
+            "team": "T01UVLT5RS8",
+            "name": "daniel.gaertner56",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4z2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Will you keep traces of all questions\/answers of each session ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333051.028200",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621333163.031500",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U022FA345J5"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621333093.028600"
+            },
+            {
+                "user": "U022FA345J5",
+                "ts": "1621333163.031500"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621333163.031500"
+    },
+    {
+        "client_msg_id": "a48199ce-d0ff-4239-903b-7c0d7a92caa3",
+        "type": "message",
+        "text": "Yes. We'll organise them in a FAQ section in the website. Also the Slack will remain open for some time after the workshop.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621333093.028600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IVpq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes. We'll organise them in a FAQ section in the website. Also the Slack will remain open for some time after the workshop."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333051.028200",
+        "parent_user_id": "U022FA345J5",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U020421P0P2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "0c821050-622c-4378-a285-beed034f9675",
+        "type": "message",
+        "text": "That was really cool <@U01UMBR0K38>",
+        "user": "U021NFFDJAX",
+        "ts": "1621333099.029000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VKq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That was really cool "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0222LD8JCA"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "154c4094-1a40-4584-9210-ca633defb784",
+        "type": "message",
+        "text": "Thanks <@U01UMBR0K38> - brilliant lecture",
+        "user": "U022SQVS6GY",
+        "ts": "1621333124.029800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fB9Z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " - brilliant lecture"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0222LD8JCA"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fcd7eae4-6f77-4761-a305-b5ef3e8e2792",
+        "type": "message",
+        "text": "yes please",
+        "user": "U022SQVS6GY",
+        "ts": "1621333132.030000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bDAXo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yes please"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332386.023500",
+        "parent_user_id": "U01ULDNCVKP"
+    },
+    {
+        "client_msg_id": "58b7acd1-8b10-41cc-bc0f-a646a66d4de8",
+        "type": "message",
+        "text": "In the last example, how would you test for a difference between breeders and non-breeder to 'confirm' a trade-off?!",
+        "user": "U022AJN2J81",
+        "ts": "1621333146.030700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g4204da4251d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/4204da4251de1d372da5888b2bf236bd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Michael Roast",
+            "display_name": "Michael Roast",
+            "team": "T01UVLT5RS8",
+            "name": "michaeljroast",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "g+UCQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In the last example, how would you test for a difference between breeders and non-breeder to 'confirm' a trade-off?!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333146.030700",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1621333512.033400",
+        "reply_users": [
+            "U01UDBUETM5"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621333462.032900"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621333512.033400"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "4c01d713-3a50-4751-b5d6-0189176cf272",
+        "type": "message",
+        "text": ":clap: <@U01UMBR0K38>",
+        "user": "U022EL2S7BK",
+        "ts": "1621333162.031300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jk0MI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "clap"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U022AJN2J81",
+                    "U0228RCCZ7E",
+                    "U021N133Q87",
+                    "U0222M1S8SE",
+                    "U0222LD8JCA"
+                ],
+                "count": 5
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U01UMBR0K38"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6b811e78-6cc9-4536-aa07-aec06a6601d6",
+        "type": "message",
+        "text": "Thanks",
+        "user": "U022FA345J5",
+        "ts": "1621333163.031500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "af4d254b5832",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2083343196785_af4d254b58322c7e1ce8_72.png",
+            "first_name": "",
+            "real_name": "Daniel Gaertner",
+            "display_name": "Daniel Gaertner",
+            "team": "T01UVLT5RS8",
+            "name": "daniel.gaertner56",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LDw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333051.028200",
+        "parent_user_id": "U022FA345J5"
+    },
+    {
+        "client_msg_id": "6aae6a61-08b8-47e8-9c7f-b9fad012f726",
+        "type": "message",
+        "text": "Thanks <@U01UMBR0K38>. Very nice explanations",
+        "user": "U022FSB1MBK",
+        "ts": "1621333170.031900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g86fdcc5a3f0",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/86fdcc5a3f0812078c10d5640aa32cee.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "celine",
+            "display_name": "celine",
+            "team": "T01UVLT5RS8",
+            "name": "cartero",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zO9Ll",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Very nice explanations"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "99526a7d-bacf-4c2e-a651-0cb0aeacf976",
+        "type": "message",
+        "text": "<https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621333087110500>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621333271.032500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621333087110500",
+                "fallback": "[May 18th, 2021 3:18 AM] stephendavidgregory: Thanks <@U01UMBR0K38> - good advice to limit unnecessary estimation:\nTo reduce the need to estimate states after the animal is definitely dead, i.e, after 10 years for an animal that lives (on average) 3 years, limit the likelihood to estimate between first[i] and last[i] where in R:\n```first &lt;- apply(y, 1, get.first)\nlast &lt;- first + 10 # animals will never live over 10 years```\nAnd in the nimble likelihood:\n```for (t in (first[i]+1):last[i]){```",
+                "ts": "1621333087.110500",
+                "author_id": "U021W7G8Y14",
+                "author_subname": "Stephen Gregory",
+                "channel_id": "C01U8NUE06T",
+                "channel_name": "questions-5-survival-estimation",
+                "is_msg_unfurl": true,
+                "text": "Thanks <@U01UMBR0K38> - good advice to limit unnecessary estimation:\nTo reduce the need to estimate states after the animal is definitely dead, i.e, after 10 years for an animal that lives (on average) 3 years, limit the likelihood to estimate between first[i] and last[i] where in R:\n```first &lt;- apply(y, 1, get.first)\nlast &lt;- first + 10 # animals will never live over 10 years```\nAnd in the nimble likelihood:\n```for (t in (first[i]+1):last[i]){```",
+                "author_name": "Stephen Gregory",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U021W7G8Y14",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2094834061184_bd1368c03ab7d8bfefdb_48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621333087110500",
+                "footer": "Posted in #questions-5-survival-estimation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9kfZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621333087110500"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U020E0D34F2",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U0228RFP1V2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "1c749f35-69fd-45ff-8f3a-bfe609dcfdfc",
+        "type": "message",
+        "text": "you can look at the estimates for both states and see they overlap, or you can monitor directly the difference between the two parameters and look at its posterior (do this by monitoring the difference as an additional parameter)",
+        "user": "U01UDBUETM5",
+        "ts": "1621333462.032900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "D25",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "you can look at the estimates for both states and see they overlap, or you can monitor directly the difference between the two parameters and look at its posterior (do this by monitoring the difference as an additional parameter)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333146.030700",
+        "parent_user_id": "U022AJN2J81",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0205U97A64",
+                    "U022AJN2J81"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "51ac8ce6-a472-4a4b-a375-8847d310b33b",
+        "type": "message",
+        "text": "Omg that is fantastic. Birds are such weirdos!:exploding_head:",
+        "user": "U01UMBR0K38",
+        "ts": "1621333490.033100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "I12pp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Omg that is fantastic. Birds are such weirdos!"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "exploding_head"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332250.021600",
+        "parent_user_id": "U021MSK4PPH"
+    },
+    {
+        "client_msg_id": "8cf88620-25ee-4cf7-ba80-8c7ce7fc0a1a",
+        "type": "message",
+        "text": "another option would be to compare a model constraining the survival to be equal among the two states, with a model in which survival is different among these two states, and see which one is best supported by the data",
+        "user": "U01UDBUETM5",
+        "ts": "1621333512.033400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HP1K3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "another option would be to compare a model constraining the survival to be equal among the two states, with a model in which survival is different among these two states, and see which one is best supported by the data"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333146.030700",
+        "parent_user_id": "U022AJN2J81",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U022AJN2J81"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "7b757f2e-44d1-4ea2-825f-80b4559dadde",
+        "type": "message",
+        "text": "<@U0208H4AQGG> I purposely avoided saying titis because a little voice in my head goes \"Haha, titties, titties, titties...\" :sweat_smile:",
+        "user": "U01UMBR0K38",
+        "ts": "1621333554.033600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iWOTc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0208H4AQGG"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I purposely avoided saying titis because a little voice in my head goes \"Haha, titties, titties, titties...\" "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "sweat_smile"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621332250.021600",
+        "parent_user_id": "U021MSK4PPH",
+        "reactions": [
+            {
+                "name": "laughing",
+                "users": [
+                    "U0208H4AQGG"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "caaeece3-f6e9-44d4-9a3c-567570a508a9",
+        "type": "message",
+        "text": "You guys are awesome, I'm loving all the impromtu memes that have been popping up all over the workshop :heart_eyes::rolling_on_the_floor_laughing:",
+        "user": "U01UMBR0K38",
+        "ts": "1621333619.034500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6a0f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You guys are awesome, I'm loving all the impromtu memes that have been popping up all over the workshop "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "heart_eyes"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rolling_on_the_floor_laughing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "Random fact, we thought our focal species', eastern barred bandicoots, maximum age was about 3 years, then we translocated them to new sites, we captured one at 5 years old last year, approaching ages seen in captivity.",
+        "files": [
+            {
+                "id": "F022E4VU26Q",
+                "created": 1621333717,
+                "timestamp": 1621333717,
+                "name": "Francois standing.jpg",
+                "title": "Francois standing.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U022EL2S7BK",
+                "editable": false,
+                "size": 1383483,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022E4VU26Q\/francois_standing.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022E4VU26Q\/download\/francois_standing.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_64.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_80.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_360.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 360,
+                "thumb_360_h": 239,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_480.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 480,
+                "thumb_480_h": 319,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_160.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_720.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720_w": 720,
+                "thumb_720_h": 478,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_800.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_800_w": 800,
+                "thumb_800_h": 532,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_960.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_960_w": 960,
+                "thumb_960_h": 638,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022E4VU26Q-d00ee227e4\/francois_standing_1024.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 680,
+                "original_w": 4672,
+                "original_h": 3104,
+                "thumb_tiny": "AwAfADCqacFzg+nWl+8celAJCH070hAkZIbb27U0rjr1NWoAdhz3NNKbkJAwfegZWxz0NOIxIQePShgwweoPQipCQSCOaYhgIGcfTNOAOCD3P9ajAOOMdak6qCOvU0DLsQGB6Gm3J2rlRk0kUm9VGSAR1pJeInHftQBB05AGD26im8Bc+h6Um7AH50p4O0k85oEf\/9k=",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U022EL2S7BK\/F022E4VU26Q\/francois_standing.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F022E4VU26Q-43e2d49da4",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aSZXv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Random fact, we thought our focal species', eastern barred bandicoots, maximum age was about 3 years, then we translocated them to new sites, we captured one at 5 years old last year, approaching ages seen in captivity."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U022EL2S7BK",
+        "display_as_bot": false,
+        "ts": "1621333762.035200",
+        "thread_ts": "1621333762.035200",
+        "reply_count": 5,
+        "reply_users_count": 2,
+        "latest_reply": "1621334057.036900",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U022EL2S7BK"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621333823.035500"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621333869.035700"
+            },
+            {
+                "user": "U022EL2S7BK",
+                "ts": "1621333923.035900"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621334002.036500"
+            },
+            {
+                "user": "U022EL2S7BK",
+                "ts": "1621334057.036900"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "reactions": [
+            {
+                "name": "sunglasses",
+                "users": [
+                    "U0222LD8JCA"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022RRJ8KLY",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            },
+            {
+                "name": "hushed",
+                "users": [
+                    "U0208H4AQGG"
+                ],
+                "count": 1
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U01UDBUETM5",
+                    "U0222LE4N5Q"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "52eefad2-c26b-4c2e-a4a8-387b18767f5b",
+        "type": "message",
+        "text": "Oh his name is Francois? :rolling_on_the_floor_laughing: Love it!",
+        "user": "U01UMBR0K38",
+        "ts": "1621333823.035500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7eSN9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh his name is Francois? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rolling_on_the_floor_laughing"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Love it!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333762.035200",
+        "parent_user_id": "U022EL2S7BK"
+    },
+    {
+        "client_msg_id": "bba56c42-2cbf-47f5-ab3e-9c612b76d167",
+        "type": "message",
+        "text": "But about the topic: when I set the \"last\" occasion, I always am quite generous. Usually i make it something like: last observation + 2*max observed age",
+        "user": "U01UMBR0K38",
+        "ts": "1621333869.035700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Vulc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But about the topic: when I set the \"last\" occasion, I always am quite generous. Usually i make it something like: last observation + 2*max observed age"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333762.035200",
+        "parent_user_id": "U022EL2S7BK",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U022EL2S7BK",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "431f2cb6-dc5f-498c-8984-f9327bffe161",
+        "type": "message",
+        "text": "Yes, this is from my masters in an earlier translocation to an island called French Island in Victoria, I don't think the name has anything to do with the country, the bandicoots mostly had French names :flag-fr:",
+        "user": "U022EL2S7BK",
+        "ts": "1621333923.035900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U022EL2S7BK",
+            "ts": "1621334009.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KTGC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, this is from my masters in an earlier translocation to an island called French Island in Victoria, I don't think the name has anything to do with the country, the bandicoots mostly had French names "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "flag-fr"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333762.035200",
+        "parent_user_id": "U022EL2S7BK"
+    },
+    {
+        "client_msg_id": "d99d9f88-1f7d-413d-970d-4810e71b3cd4",
+        "type": "message",
+        "text": "Very cute. I actually think we may have met at a conference not too long ago (BES?). I remember talking to someone about CMR of banded bandicoots...",
+        "user": "U01UMBR0K38",
+        "ts": "1621334002.036500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+tBem",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Very cute. I actually think we may have met at a conference not too long ago (BES?). I remember talking to someone about CMR of banded bandicoots..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333762.035200",
+        "parent_user_id": "U022EL2S7BK",
+        "reactions": [
+            {
+                "name": "smiley",
+                "users": [
+                    "U022EL2S7BK"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "3df75714-d588-45cf-976b-996099ca8ae6",
+        "type": "message",
+        "text": ":laughing: there's only me",
+        "user": "U022EL2S7BK",
+        "ts": "1621334057.036900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l=\/d1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "laughing"
+                            },
+                            {
+                                "type": "text",
+                                "text": " there's only me"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621333762.035200",
+        "parent_user_id": "U022EL2S7BK"
+    },
+    {
+        "client_msg_id": "2bccdbf9-f7a8-47c8-88a2-047b65e89546",
+        "type": "message",
+        "text": "One comment and a couple of questions. Much of what we have learned so far can be easily implemented in MARK\/RMark or ESURGE. I am looking forward to learning about Bayesian magic that can cannot be done in a frequentist framework. Second, is there is framework for handling missing encounter history data? E.g., when a survey was missed.",
+        "user": "U022SQVS6GY",
+        "ts": "1621339271.038900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44c42faf897",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44c42faf8973845e61ad9416435754b0.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "madan oli",
+            "display_name": "madan oli",
+            "team": "T01UVLT5RS8",
+            "name": "olim",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "m2A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "One comment and a couple of questions. Much of what we have learned so far can be easily implemented in MARK\/RMark or ESURGE. I am looking forward to learning about Bayesian magic that can cannot be done in a frequentist framework. Second, is there is framework for handling missing encounter history data? E.g., when a survey was missed."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621339271.038900",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1621339753.040300",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U01UMBR0K38"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621339389.039200"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621339518.039400"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621339555.039800"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621339753.040300"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021NFFDJAX"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "9fb2decc-78ce-4bdd-8e63-cfc41ea7ed61",
+        "type": "message",
+        "text": "On that note I did show in class 5 how to implement time random effect which is hard in max. likelihood because of the integrals. More about the hard stuff coming in the afternoon :smiley:",
+        "user": "U01UDBUETM5",
+        "ts": "1621339389.039200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RO4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "On that note I did show in class 5 how to implement time random effect which is hard in max. likelihood because of the integrals. More about the hard stuff coming in the afternoon "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smiley"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621339271.038900",
+        "parent_user_id": "U022SQVS6GY"
+    },
+    {
+        "client_msg_id": "3b5260fe-7071-4c4b-b710-6482019c300c",
+        "type": "message",
+        "text": "See here about Bayesian magic: <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621326406074100>",
+        "user": "U01UMBR0K38",
+        "ts": "1621339518.039400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621326406074100",
+                "fallback": "[May 18th, 2021 1:26 AM] ricardo.simon: First of all, great workshop, thanks! I understand the issue of Bayesian vs. frequentist modelling is not the topic here, but I was wondering: let's say were are in a CMR applied context, unconcerned about using elegant, \"fashionable\" methods and maximising the probablity of producing a high-impact paper, why would we opt for a Bayesian approach? Particularly if we don't have informative priors?",
+                "ts": "1621326406.074100",
+                "author_id": "U0228P4R9PE",
+                "author_subname": "Ricardo SIMON",
+                "channel_id": "C01U8NUE06T",
+                "channel_name": "questions-5-survival-estimation",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "First of all, great workshop, thanks! I understand the issue of Bayesian vs. frequentist modelling is not the topic here, but I was wondering: let's say were are in a CMR applied context, unconcerned about using elegant, \"fashionable\" methods and maximising the probablity of producing a high-impact paper, why would we opt for a Bayesian approach? Particularly if we don't have informative priors?",
+                "author_name": "Ricardo SIMON",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U0228P4R9PE",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/ac200efc89b8ed7b7e7bb8fd10dba878.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621326406074100",
+                "footer": "Thread in #questions-5-survival-estimation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JvVR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "See here about Bayesian magic: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621326406074100"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621339271.038900",
+        "parent_user_id": "U022SQVS6GY",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021NFFDJAX",
+                    "U01UDBUETM5",
+                    "U0228RCCZ7E"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "ee3de647-7b4c-4395-8b5d-37a0522c23e0",
+        "type": "message",
+        "text": "And here about missed surveys: <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621325038052000>",
+        "user": "U01UMBR0K38",
+        "ts": "1621339555.039800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621325038052000",
+                "fallback": "[May 18th, 2021 1:03 AM] justine0le.vaillant: Naive question, but there is a way to implement in the models the time effect directly on recapture data ? How we can deal with missing year or a decrease in sampling effort across year for example ?",
+                "ts": "1621325038.052000",
+                "author_id": "U021Y2G74H1",
+                "author_subname": "Justine Le Vaillant",
+                "channel_id": "C01U8NUE06T",
+                "channel_name": "questions-5-survival-estimation",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "Naive question, but there is a way to implement in the models the time effect directly on recapture data ? How we can deal with missing year or a decrease in sampling effort across year for example ?",
+                "author_name": "Justine Le Vaillant",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U021Y2G74H1",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2021-05-14\/2089830929904_88ad5349cf5825af801c_48.jpg",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621325038052000",
+                "footer": "Thread in #questions-5-survival-estimation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G0bmP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And here about missed surveys: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621325038052000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621339271.038900",
+        "parent_user_id": "U022SQVS6GY",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "abe10c7f-202c-4843-9685-0aa16d7c6261",
+        "type": "message",
+        "text": "Also, for more magic, wait for <@U0203USKJRE>’s lecture this afternoon!",
+        "user": "U01UMBR0K38",
+        "ts": "1621339753.040300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BHZ3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, for more magic, wait for "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0203USKJRE"
+                            },
+                            {
+                                "type": "text",
+                                "text": "’s lecture this afternoon!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621339271.038900",
+        "parent_user_id": "U022SQVS6GY",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U022SQVS6GY",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    }
+]

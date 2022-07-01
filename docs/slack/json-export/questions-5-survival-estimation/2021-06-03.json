@@ -1,0 +1,633 @@
+[
+    {
+        "client_msg_id": "e9784e3d-55ef-4e61-bcf8-165da0056a5f",
+        "type": "message",
+        "text": "me again...:zany_face: In live demo 5 you say \"The easiest way to cope with time-varying individual covariate is to discretize and treat levels of the covariates as states. More in the next live demo.\" and indeed in live demo 6 there are examples of this, where one tries to estimate probabilities of transition between states. But what about age (as classes\/states)? The transitions are not probabilistic (is this a word?, well ok they are in a way) and are known (linked to duration between survey). I think I would vaguely remember how to do this in mark (because I did 20 years ago, so how could have I forgotten?), but a nimble example would be great - any example to share? (you see, you provide amazing workshop and material, and people want even more).",
+        "user": "U0222N7JBPC",
+        "ts": "1622721053.132900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9qf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "me again..."
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "zany_face"
+                            },
+                            {
+                                "type": "text",
+                                "text": " In live demo 5 you say \"The easiest way to cope with time-varying individual covariate is to discretize and treat levels of the covariates as states. More in the next live demo.\" and indeed in live demo 6 there are examples of this, where one tries to estimate probabilities of transition between states. But what about age (as classes\/states)? The transitions are not probabilistic (is this a word?, well ok they are in a way) and are known (linked to duration between survey). I think I would vaguely remember how to do this in mark (because I did 20 years ago, so how could have I forgotten?), but a nimble example would be great - any example to share? (you see, you provide amazing workshop and material, and people want even more)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622721053.132900",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1622733519.133200",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U0222N7JBPC"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1622727298.133000"
+            },
+            {
+                "user": "U0222N7JBPC",
+                "ts": "1622733519.133200"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1622733519.133200"
+    },
+    {
+        "client_msg_id": "fcc3a70b-0c70-415e-8798-d0f2d5cac550",
+        "type": "message",
+        "text": "You can certainly treat age as a state, but it is easier to have it as a covariate (unless you have uncertainty in age assignation, in which case it is useful, see e.g. <https:\/\/esj-journals.onlinelibrary.wiley.com\/doi\/abs\/10.1007\/s10144-017-0587-0>. There is an example with age as a covariate in <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/exercises.html>. The corresponding R script is here <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/exercises.R>. Hope it helps.",
+        "user": "U01ULDNCVKP",
+        "ts": "1622727298.133000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2y4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You can certainly treat age as a state, but it is easier to have it as a covariate (unless you have uncertainty in age assignation, in which case it is useful, see e.g. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/esj-journals.onlinelibrary.wiley.com\/doi\/abs\/10.1007\/s10144-017-0587-0"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". There is an example with age as a covariate in "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/exercises.html"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". The corresponding R script is here "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/worksheets\/exercises.R"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Hope it helps."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622721053.132900",
+        "parent_user_id": "U0222N7JBPC"
+    },
+    {
+        "client_msg_id": "484d6ca7-3f0d-4785-883a-6fe6db65f20a",
+        "type": "message",
+        "text": "well yeah, that's what I would do, I was getting confused by the sentence. But thanks for the examples, that indeed will be useful. :pray:",
+        "user": "U0222N7JBPC",
+        "ts": "1622733519.133200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DUjl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "well yeah, that's what I would do, I was getting confused by the sentence. But thanks for the examples, that indeed will be useful. "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "pray"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622721053.132900",
+        "parent_user_id": "U0222N7JBPC",
+        "reactions": [
+            {
+                "name": "wink",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "7d0951e1-5196-4414-bb37-8ccbe13d6431",
+        "type": "message",
+        "text": "Hello,\nI don't know if the SLACK is still active but I'm trying...\nI use a data for which no capture has been done some years.\nI would like to run a phi(.)p(t) model by fixing the p to 0 for the years without capture. I tried to add a covariate (0 for years without capture and 1 with) but I do something wrong because after multiple attempts it still doesn't work. In fact my code do not really consider time effect but only consider a p for years \"without capture\" and a p for years \"with captures\". I'm not sure it's really clear, sorry ... Does anyone have a solution? My nimblecode is :\n\nsurvey&lt;-c(1,1,1,1,1,0,1,1,0,1,1) ##covariate\n\nhmm.phipt &lt;- nimbleCode({\n  delta[1] &lt;- 1\n  delta[2] &lt;- 0\n  for (t in 1:(T-1))\n    {\n    logit(p[t]) &lt;- beta[1] + beta[2] * survey[t]\n    omega[1,1,t]&lt;- 1-p[t]\n    omega[1,2,t] &lt;- p[t]\n    omega[2,1,t] &lt;- 1\n    omega[2,2,t] &lt;- 0\n  }\n  phi ~ dunif(0, 1)\n  gamma[1,1] &lt;- phi\n  gamma[1,2] &lt;- 1 - phi\n  gamma[2,1] &lt;- 0\n  gamma[2,2] &lt;- 1\n  beta[1] ~ dnorm(0, 1.5)\n  beta[2] ~ dnorm(0, 1.5)\n  # likelihood\n  for (i in 1:N){\n    z[i,first[i]] ~ dcat(delta[1:2])\n    for (j in (first[i]+1):T){\n      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])\n      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])\n    }\n  }\n})",
+        "user": "U0203L8NKE2",
+        "ts": "1622735396.139100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g830b7c598b6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/830b7c598b64700d091bd215e65d01f4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-72.png",
+            "first_name": "SAUNIER",
+            "real_name": "SAUNIER Merlène",
+            "display_name": "Merlène Saunier",
+            "team": "T01UVLT5RS8",
+            "name": "merlene.saunier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LfEG+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello,\nI don't know if the SLACK is still active but I'm trying...\nI use a data for which no capture has been done some years.\nI would like to run a phi(.)p(t) model by fixing the p to 0 for the years without capture. I tried to add a covariate (0 for years without capture and 1 with) but I do something wrong because after multiple attempts it still doesn't work. In fact my code do not really consider time effect but only consider a p for years \"without capture\" and a p for years \"with captures\". I'm not sure it's really clear, sorry ... Does anyone have a solution? My nimblecode is :\n\nsurvey<-c(1,1,1,1,1,0,1,1,0,1,1) ##covariate\n\nhmm.phipt <- nimbleCode({\n  delta[1] <- 1\n  delta[2] <- 0\n  for (t in 1:(T-1))\n    {\n    logit(p[t]) <- beta[1] + beta[2] * survey[t]\n    omega[1,1,t]<- 1-p[t]\n    omega[1,2,t] <- p[t]\n    omega[2,1,t] <- 1\n    omega[2,2,t] <- 0\n  }\n  phi ~ dunif(0, 1)\n  gamma[1,1] <- phi\n  gamma[1,2] <- 1 - phi\n  gamma[2,1] <- 0\n  gamma[2,2] <- 1\n  beta[1] ~ dnorm(0, 1.5)\n  beta[2] ~ dnorm(0, 1.5)\n  # likelihood\n  for (i in 1:N){\n    z[i,first[i]] ~ dcat(delta[1:2])\n    for (j in (first[i]+1):T){\n      z[i,j] ~ dcat(gamma[z[i,j-1], 1:2])\n      y[i,j] ~ dcat(omega[z[i,j], 1:2, j-1])\n    }\n  }\n})"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "reply_count": 9,
+        "reply_users_count": 2,
+        "latest_reply": "1623407081.175500",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U0203L8NKE2"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1622739985.139200"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1622743269.139500"
+            },
+            {
+                "user": "U0203L8NKE2",
+                "ts": "1622792047.140000"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1622808484.140200"
+            },
+            {
+                "user": "U0203L8NKE2",
+                "ts": "1622813251.140400"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1622816025.145600"
+            },
+            {
+                "user": "U0203L8NKE2",
+                "ts": "1623404669.175100"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1623405467.175300"
+            },
+            {
+                "user": "U0203L8NKE2",
+                "ts": "1623407081.175500"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1623407081.175500"
+    },
+    {
+        "client_msg_id": "8bb24a31-e297-4ef5-bdf6-12e85556a051",
+        "type": "message",
+        "text": "The slack is still active yes :wink: and I might have a clue. When `survey[t] = 0` for some `t`, `logit(p[t]) = beta[1]` and the prior on `beta[1]` being `dnorm(0,1.5)`, this won't give you `p[t] = 0`. Nested indexing might help. Try something like `p[t] &lt;- beta[survey[t]]` with `survey[t] = 1` when `t` is a year with survey, and `survey[t] = 2` when `t` is a survey with no survey. You'll need to redefine your covariate survey, 2 - survey where survey is your current covariate will do the job. Then assign `beta[1] ~ dunif(0,1)` and `beta[2] &lt;- 0`. Should work. If not, send me a fully reproducible example offline, and I'll try to debug it, then we'll report here in case it's useful to others.",
+        "user": "U01ULDNCVKP",
+        "ts": "1622739985.139200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1622748240.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "26uz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The slack is still active yes "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and I might have a clue. When "
+                            },
+                            {
+                                "type": "text",
+                                "text": "survey[t] = 0",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " for some "
+                            },
+                            {
+                                "type": "text",
+                                "text": "t",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", "
+                            },
+                            {
+                                "type": "text",
+                                "text": "logit(p[t]) = beta[1]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and the prior on "
+                            },
+                            {
+                                "type": "text",
+                                "text": "beta[1]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " being "
+                            },
+                            {
+                                "type": "text",
+                                "text": "dnorm(0,1.5)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", this won't give you "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p[t] = 0",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Nested indexing might help. Try something like "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p[t] <- beta[survey[t]]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with "
+                            },
+                            {
+                                "type": "text",
+                                "text": "survey[t] = 1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " when "
+                            },
+                            {
+                                "type": "text",
+                                "text": "t",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is a year with survey, and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "survey[t] = 2",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " when "
+                            },
+                            {
+                                "type": "text",
+                                "text": "t",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is a survey with no survey. You'll need to redefine your covariate survey, 2 - survey where survey is your current covariate will do the job. Then assign "
+                            },
+                            {
+                                "type": "text",
+                                "text": "beta[1] ~ dunif(0,1)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "beta[2] <- 0",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Should work. If not, send me a fully reproducible example offline, and I'll try to debug it, then we'll report here in case it's useful to others."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    },
+    {
+        "client_msg_id": "f031ec37-df6e-47c2-b269-e45909191d22",
+        "type": "message",
+        "text": "You could also use `p[t] &lt;- 1 \/ (1 + exp(-beta) * equals(survey[t], 1)` with `beta ~ dnorm(0,sd=1.5)`. When `t` is a year with survey, then `equals(survey[t], 1)` is 1 and `p[t]` is estimated. When `t` is a year without survey, then `equals(survey[t], 1)` is 0 and `p[t]` is 0 too. Note that you could use `step(1 - survey[t])` instead of `equals(survey[t], 1)`, I think. This solution is probably more practical when it comes to have other covariates on detection, with e.g. `p[t] &lt;- 1 \/ (1 + exp(-(beta[1] + beta[2] * x[t])) * equals(survey[t], 1)`.",
+        "user": "U01ULDNCVKP",
+        "ts": "1622743269.139500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1622743442.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ECOK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You could also use "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p[t] <- 1 \/ (1 + exp(-beta) * equals(survey[t], 1)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " with "
+                            },
+                            {
+                                "type": "text",
+                                "text": "beta ~ dnorm(0,sd=1.5)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ". When "
+                            },
+                            {
+                                "type": "text",
+                                "text": "t",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is a year with survey, then "
+                            },
+                            {
+                                "type": "text",
+                                "text": "equals(survey[t], 1)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is 1 and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p[t]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is estimated. When "
+                            },
+                            {
+                                "type": "text",
+                                "text": "t",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is a year without survey, then "
+                            },
+                            {
+                                "type": "text",
+                                "text": "equals(survey[t], 1)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is 0 and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p[t]",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is 0 too. Note that you could use "
+                            },
+                            {
+                                "type": "text",
+                                "text": "step(1 - survey[t])",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " instead of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "equals(survey[t], 1)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", I think. This solution is probably more practical when it comes to have other covariates on detection, with e.g. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "p[t] <- 1 \/ (1 + exp(-(beta[1] + beta[2] * x[t])) * equals(survey[t], 1)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622735396.139100",
+        "parent_user_id": "U0203L8NKE2"
+    }
+]

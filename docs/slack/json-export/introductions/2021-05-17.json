@@ -1,0 +1,1907 @@
+[
+    {
+        "client_msg_id": "3fc4affa-adcb-42bb-8969-ef11b0154802",
+        "type": "message",
+        "text": "Hello everyone ! I'm Jessica, future PhD student in France. I will work on wild boar population dynamic.",
+        "user": "U021ZH38E6R",
+        "ts": "1621234930.227800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g7fa350093d3",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/7fa350093d3006cad6578c90f14136c9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0002-72.png",
+            "first_name": "",
+            "real_name": "Jessica Cachelou",
+            "display_name": "Jessica Cachelou",
+            "team": "T01UVLT5RS8",
+            "name": "jessica.cachelou",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Vgr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone ! I'm Jessica, future PhD student in France. I will work on wild boar population dynamic."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c3ef942a-90a8-4179-ae53-ecd18b2813c9",
+        "type": "message",
+        "text": "Hello everyone! I'm Anthony Sévêque, a final year PhD candidate at Nottingham Trent University (UK), where I investigate the impacts of human disturbance on niche partitioning among carnivores (soon to be defended!). My interest is quite broad, mostly mammals and megafauna communities. Thanks again for the workshop to Olivier, who has been my number one Bayesian teacher during my PhD!",
+        "user": "U022F8ZNV41",
+        "ts": "1621235007.232800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b1c556f3ce7f",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2083305824289_b1c556f3ce7f6e7f2ba6_72.jpg",
+            "first_name": "",
+            "real_name": "Anthony S",
+            "display_name": "Anthony S",
+            "team": "T01UVLT5RS8",
+            "name": "anthony.seveque",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "c=MI4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone! I'm Anthony Sévêque, a final year PhD candidate at Nottingham Trent University (UK), where I investigate the impacts of human disturbance on niche partitioning among carnivores (soon to be defended!). My interest is quite broad, mostly mammals and megafauna communities. Thanks again for the workshop to Olivier, who has been my number one Bayesian teacher during my PhD!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "164ed967-416a-4a19-aaba-ccb578be1c79",
+        "type": "message",
+        "text": "Hi everyone! I'm Léa Bariod, a PhD student at VetAgro Sup, and also at Office Français de la Biodiversité and Laboratoire de Biométrie et Biologie Evolutive (LBBE, Lyon). I am working on the relationship among environment, roe deer and its parasites. With this Workshop, I hope to learn more about Bayesian approach and improve my skills in R for my thesis and others future projects. Thank you so much for organizing this workshop! Have a great day!",
+        "user": "U021ZHPD7EH",
+        "ts": "1621235013.233300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g9fdd95f2733",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/9fdd95f2733c98001fb09ace6ffaaef3.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "",
+            "real_name": "Léa BARIOD",
+            "display_name": "Léa BARIOD",
+            "team": "T01UVLT5RS8",
+            "name": "lea.bariod",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TTIe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone! I'm Léa Bariod, a PhD student at VetAgro Sup, and also at Office Français de la Biodiversité and Laboratoire de Biométrie et Biologie Evolutive (LBBE, Lyon). I am working on the relationship among environment, roe deer and its parasites. With this Workshop, I hope to learn more about Bayesian approach and improve my skills in R for my thesis and others future projects. Thank you so much for organizing this workshop! Have a great day!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U022SC3R3UY",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "59db81a7-fee0-4fbf-9fa9-0c16271ed1e9",
+        "type": "message",
+        "text": "Hello everyone! I am Morgane. I am a wildlife ecologist. I am doing my PhD in Berlin Leibniz-Institute for Zoo and Wildlife research on early-life effects in spotted hyenas in the Serengeti National Park, Tanzania. I would like to develop my modeling skills. Thank you for organising this workshop :slightly_smiling_face:",
+        "user": "U021VSPGLSJ",
+        "ts": "1621235048.235500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "414730171a0a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2076881318228_414730171a0abb9b7e4f_72.jpg",
+            "first_name": "",
+            "real_name": "Morgane Gicquel",
+            "display_name": "Morgane Gicquel",
+            "team": "T01UVLT5RS8",
+            "name": "gicquel",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Uqv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone! I am Morgane. I am a wildlife ecologist. I am doing my PhD in Berlin Leibniz-Institute for Zoo and Wildlife research on early-life effects in spotted hyenas in the Serengeti National Park, Tanzania. I would like to develop my modeling skills. Thank you for organising this workshop "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "16e6c8c8-bd9e-4a5f-851c-d50c162e1593",
+        "type": "message",
+        "text": "Morning! I'm Ailidh Barnes and I work for the BTO, and recently finished my PhD. I used ProgramMARK and RMArk a long time ago in my undergrad so I hope I can keep up!",
+        "user": "U0222LD8JCA",
+        "ts": "1621235072.236700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "3fc199d9fc15",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2070693352850_3fc199d9fc1558b00fce_72.jpg",
+            "first_name": "",
+            "real_name": "Ailidh Barnes",
+            "display_name": "Ailidh Barnes",
+            "team": "T01UVLT5RS8",
+            "name": "ailidh.barnes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TWgdB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Morning! I'm Ailidh Barnes and I work for the BTO, and recently finished my PhD. I used ProgramMARK and RMArk a long time ago in my undergrad so I hope I can keep up!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "7e1460fd-ebbf-487b-9ed9-33571305cb20",
+        "type": "message",
+        "text": "Good morning! I am working at the Institute of Wildlife Biology and Game Management at BOKU (Austria). My research focuses on small mammals in forest ecosystems and I am interested in hierarchical modeling (currently using JAGS). Looking forward to dive into IPMs in the near future. Thanks for organizing the workshop!",
+        "user": "U022F8YTATB",
+        "ts": "1621235133.238800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g6748bd1f97d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6748bd1f97d7b8ac365345d2efc4d983.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0021-72.png",
+            "first_name": "",
+            "real_name": "Frederik Sachser",
+            "display_name": "Frederik Sachser",
+            "team": "T01UVLT5RS8",
+            "name": "frederik.s",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YkMt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good morning! I am working at the Institute of Wildlife Biology and Game Management at BOKU (Austria). My research focuses on small mammals in forest ecosystems and I am interested in hierarchical modeling (currently using JAGS). Looking forward to dive into IPMs in the near future. Thanks for organizing the workshop!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c7050d2d-001e-4016-a8d1-a109482509a3",
+        "type": "message",
+        "text": "Hello everyone ! I'm Yakov, bachelor 3 student. I am now doing an internship where I'm working on southern elephant seal foraging habitat at the Centre d'études Biologique de Chizé (CEBC), but I am also very much interested in ungulate population dynamics for the future of my studies ! Thanks a lot for organising this workshop !",
+        "user": "U021ZJC52QM",
+        "ts": "1621235228.240300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gb4748bbbc40",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/b4748bbbc4022a7a5d4dac55eca70764.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "",
+            "real_name": "Yakov Uzan",
+            "display_name": "Yakov Uzan",
+            "team": "T01UVLT5RS8",
+            "name": "yakov.uzan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U021ZJC52QM",
+            "ts": "1621235561.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uprXt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone ! I'm Yakov, bachelor 3 student. I am now doing an internship where I'm working on southern elephant seal foraging habitat at the Centre d'études Biologique de Chizé (CEBC), but I am also very much interested in ungulate population dynamics for the future of my studies ! Thanks a lot for organising this workshop !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "raised_hands",
+                "users": [
+                    "U0203L8NKE2"
+                ],
+                "count": 1
+            },
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "571de0ac-cc5d-4808-be2c-bbb779237d36",
+        "type": "message",
+        "text": "Good morning! I'm Marie Nevoux, a resercher at INRAE (Rennes), working on population dynamics of migratory salmon. I'm working on the evolution of life history traits, migration decision, individual growth and age at maturation. Thanks a lot for this workshop :blush:",
+        "user": "U0218E0HVPC",
+        "ts": "1621235335.241800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g8e0f314896e",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/8e0f314896edfe8bd389cb6b6c4b7546.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0024-72.png",
+            "first_name": "",
+            "real_name": "Marie",
+            "display_name": "Marie",
+            "team": "T01UVLT5RS8",
+            "name": "marie.nevoux",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jZE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good morning! I'm Marie Nevoux, a resercher at INRAE (Rennes), working on population dynamics of migratory salmon. I'm working on the evolution of life history traits, migration decision, individual growth and age at maturation. Thanks a lot for this workshop "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "blush"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U0228RFP1V2",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "3787a126-8334-4acf-827e-25d7cc54beff",
+        "type": "message",
+        "text": "Good morning, I am Tara working as a post-doc at the University of Reading, UK.  My PhD was on leopard ecology and conservation in South Africa. Now I am working on domestic cats in the UK. Very much looking forward to this workshop!",
+        "user": "U021VSHD9QE",
+        "ts": "1621235497.244100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "dc6ce22770b4",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2063901525382_dc6ce22770b473b052af_72.png",
+            "first_name": "",
+            "real_name": "Tara Pirie",
+            "display_name": "Tara Pirie",
+            "team": "T01UVLT5RS8",
+            "name": "tjpirie",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U021VSHD9QE",
+            "ts": "1621236013.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MEo8E",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good morning, I am Tara working as a post-doc at the University of Reading, UK.  My PhD was on leopard ecology and conservation in South Africa. Now I am working on domestic cats in the UK. Very much looking forward to this workshop!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "e4e2107f-e9cd-4ef9-94ac-ee1c0dcdb3d7",
+        "type": "message",
+        "text": "Good morning everyone! I'm Colin Bouchard, a post-doc at INRAE and the University of Pau and Pays de l'Adour. I'm currently working on the breeding behavior of lampreys! Thanks a lot, Olivier and others, for this workshop! I hope the glass of wine would be later this year :smiley: I usually use Stan and Jags for my models :slightly_smiling_face:",
+        "user": "U0228RFP1V2",
+        "ts": "1621235617.248200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "546ebe6cfaf1",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063926819798_546ebe6cfaf18db7530d_72.jpg",
+            "first_name": "",
+            "real_name": "Colin Bouchard",
+            "display_name": "Colin Bouchard",
+            "team": "T01UVLT5RS8",
+            "name": "colin.bcd",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zMQA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good morning everyone! I'm Colin Bouchard, a post-doc at INRAE and the University of Pau and Pays de l'Adour. I'm currently working on the breeding behavior of lampreys! Thanks a lot, Olivier and others, for this workshop! I hope the glass of wine would be later this year "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smiley"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I usually use Stan and Jags for my models "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U022SDPT3LY",
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a607d205-a209-4dde-a215-65f89684f41f",
+        "type": "message",
+        "text": "Good morning everyone, I'ù Sandrine and I'm a first year PhD student. I work on porbeagle shark and I'm really happy to get some tips for parametrization of HMM. Thanks the team for this opportunity!",
+        "user": "U020421P0P2",
+        "ts": "1621235654.249600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd23558584f7",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d23558584f7c3454ed95e22f9c291a88.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "",
+            "real_name": "Sandrine Serre",
+            "display_name": "Sandrine Serre",
+            "team": "T01UVLT5RS8",
+            "name": "sandrine.serre",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nS4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good morning everyone, I'ù Sandrine and I'm a first year PhD student. I work on porbeagle shark and I'm really happy to get some tips for parametrization of HMM. Thanks the team for this opportunity!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U022SDPT3LY",
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b734479f-870d-4ceb-b2a1-620a69027d25",
+        "type": "message",
+        "text": "Hi I am Daniel  and I am a tuna fishery scientist at IRD. I work mainly on tropical tunas in the Atlantic and Indian oceans (tagging data, Catch rate standardization, etc).",
+        "user": "U022FA345J5",
+        "ts": "1621235700.250300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "af4d254b5832",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2083343196785_af4d254b58322c7e1ce8_72.png",
+            "first_name": "",
+            "real_name": "Daniel Gaertner",
+            "display_name": "Daniel Gaertner",
+            "team": "T01UVLT5RS8",
+            "name": "daniel.gaertner56",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WfuyD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi I am Daniel  and I am a tuna fishery scientist at IRD. I work mainly on tropical tunas in the Atlantic and Indian oceans (tagging data, Catch rate standardization, etc)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U022SDPT3LY",
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d2af378d-44b2-4be9-bc68-7ac298906f4a",
+        "type": "message",
+        "text": "Good Morning, I am senior researcher at IZW Berlin and curious of learning about RNimble. Biggest thanks to the organizers, it is great you make this possible to ateend for everyone, highly appreciated!",
+        "user": "U022RJ7UJ8Y",
+        "ts": "1621235930.254900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g3dfca949ec4",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/3dfca949ec4b78aadeaf42e1ff852372.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0005-72.png",
+            "first_name": "",
+            "real_name": "Steph K",
+            "display_name": "Steph K",
+            "team": "T01UVLT5RS8",
+            "name": "kramer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s=f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good Morning, I am senior researcher at IZW Berlin and curious of learning about RNimble. Biggest thanks to the organizers, it is great you make this possible to ateend for everyone, highly appreciated!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "de35137c-07a8-40e6-909a-074e940ff9cc",
+        "type": "message",
+        "text": "Hi from the Basque Country. Here another enthusiast on Bayesian stastistics working in Movement ecology and Quantitative ecology on his last year of PhD.",
+        "user": "U0222S24M0B",
+        "ts": "1621236182.260200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "57e0074de89a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2055902514151_57e0074de89acd23c10b_72.png",
+            "first_name": "",
+            "real_name": "Jon Morant Etxebarria",
+            "display_name": "Jon Morant Etxebarria",
+            "team": "T01UVLT5RS8",
+            "name": "jmorant",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xkSo6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi from the Basque Country. Here another enthusiast on Bayesian stastistics working in Movement ecology and Quantitative ecology on his last year of PhD."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U020D3400HW",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "f19cc126-c2fa-4f61-9631-f858ae47b343",
+        "type": "message",
+        "text": "Hello, I'm a PhD student at the Centre for Nature-based Climate Solutions at the National University of Singapore. I work on disease ecology between dogs and wildlife in Nepal Himalaya, and marine pathogens in urban coastal areas.",
+        "user": "U022F9DU4AD",
+        "ts": "1621236348.263500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gecd27a61374",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/ecd27a61374b5ba2a0eeb2bdcec12e2b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Debby Ng",
+            "display_name": "Debby Ng",
+            "team": "T01UVLT5RS8",
+            "name": "debby.ng",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gQj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, I'm a PhD student at the Centre for Nature-based Climate Solutions at the National University of Singapore. I work on disease ecology between dogs and wildlife in Nepal Himalaya, and marine pathogens in urban coastal areas."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "e64d85ba-9dd0-46f5-b9b7-162037631c0e",
+        "type": "message",
+        "text": "Morning, I'm Pablo Palencia, PhD student working with cameratraps, densities, abundances.... Some experience in unmarked populations, and newbie in SCR. Thanks a lot for the woorkshop :slightly_smiling_face:",
+        "user": "U0222V0ABQT",
+        "ts": "1621236465.265700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g7c30aad5895",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/7c30aad5895dcb006a0de0eb5e56227a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-72.png",
+            "first_name": "",
+            "real_name": "Pablo Palencia",
+            "display_name": "Pablo Palencia",
+            "team": "T01UVLT5RS8",
+            "name": "palencia.pablo.m",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xkOtn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Morning, I'm Pablo Palencia, PhD student working with cameratraps, densities, abundances.... Some experience in unmarked populations, and newbie in SCR. Thanks a lot for the woorkshop "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            },
+            {
+                "name": "i_love_you_hand_sign",
+                "users": [
+                    "U021GG5HHMH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "34ba1e81-c086-4e9f-bb9d-4b91b47d5400",
+        "type": "message",
+        "text": "Morning! I am a biologist working at Fisheries and Oceans Canada. I'll soon start to play with capture-recapture data of snow crabs from a projet started 3 years ago. The goal is to integrate this data in an IPM for the snow crab in some fishing areas here in Quebec. I am new to MCMC inference, capture data analysis and I'm curious to learn more about Nimble too. Thanks for this amazing opportunity :D",
+        "user": "U021VU5QUBG",
+        "ts": "1621236698.268400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g44de01a3c7a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/44de01a3c7a600ef14de5fe25a17f29b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0019-72.png",
+            "first_name": "",
+            "real_name": "Loboda Sarah",
+            "display_name": "Loboda Sarah",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.loboda",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DWRL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Morning! I am a biologist working at Fisheries and Oceans Canada. I'll soon start to play with capture-recapture data of snow crabs from a projet started 3 years ago. The goal is to integrate this data in an IPM for the snow crab in some fishing areas here in Quebec. I am new to MCMC inference, capture data analysis and I'm curious to learn more about Nimble too. Thanks for this amazing opportunity :D"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "38bbd8f6-6599-4827-b2e9-b74d6831c636",
+        "type": "message",
+        "text": "Hello, I am a teaching assistant in Metz, I work on ecotoxicological modelling (with an emphasis on ecology) and try to transition to full modelling in ecology.",
+        "user": "U0222TAQ4NP",
+        "ts": "1621236742.269200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ge961e5980e5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/e961e5980e5d2f4d5b74a9079cee4c14.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-72.png",
+            "first_name": "",
+            "real_name": "Vincent BAILLARD",
+            "display_name": "Vincent BAILLARD",
+            "team": "T01UVLT5RS8",
+            "name": "vincent.baillard",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VRIV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, I am a teaching assistant in Metz, I work on ecotoxicological modelling (with an emphasis on ecology) and try to transition to full modelling in ecology."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "16d79c5d-c1b4-48c5-8060-a2ee9aebbbc0",
+        "type": "message",
+        "text": "Hi! I'm Facundo Muñoz. Biostatistician at <https:\/\/umr-astre.cirad.fr\/|UMR Astre>, Cirad, Montpellier. Working mostly on animal epidemiology. I have not used capture-recapture models. But generally interested in HMM.",
+        "user": "U0228U7RE5A",
+        "ts": "1621236859.270800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g9e99c2555a3",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/9e99c2555a3981b5ced7ff6fe878d595.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-72.png",
+            "first_name": "",
+            "real_name": "Facundo Muñoz",
+            "display_name": "Facundo Muñoz",
+            "team": "T01UVLT5RS8",
+            "name": "facundo.munoz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "53e",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi! I'm Facundo Muñoz. Biostatistician at "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/umr-astre.cirad.fr\/",
+                                "text": "UMR Astre"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", Cirad, Montpellier. Working mostly on animal epidemiology. I have not used capture-recapture models. But generally interested in HMM."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "9e574470-e93d-425c-bc7f-0283ae7074a9",
+        "type": "message",
+        "text": "Hello everyone ! I am a researcher at Wildlife Institute of India. For my Ph.D. research, I am trying to understand the role of climatic factors, species competition, and resources in shaping the distribution range of snow leopard and co-occurring species in the Upper Bhagirathi basin, Western Himalaya, India. Thanks to the organizers for the workshop and I'm looking forward to learning with everyone!:)",
+        "user": "U0222LE4N5Q",
+        "ts": "1621237089.271300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d4f2750b1d9a",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2067615809429_d4f2750b1d9ac9af69a4_72.jpg",
+            "first_name": "",
+            "real_name": "Ranjana Pal",
+            "display_name": "Ranjana Pal",
+            "team": "T01UVLT5RS8",
+            "name": "ranjana.biocon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zb9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone ! I am a researcher at Wildlife Institute of India. For my Ph.D. research, I am trying to understand the role of climatic factors, species competition, and resources in shaping the distribution range of snow leopard and co-occurring species in the Upper Bhagirathi basin, Western Himalaya, India. Thanks to the organizers for the workshop and I'm looking forward to learning with everyone!:)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U022F9DU4AD",
+                    "U01ULDNCVKP"
+                ],
+                "count": 3
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022RRJ8KLY"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "2bf587de-f0c5-4df7-9c1f-671d3b469334",
+        "type": "message",
+        "text": "Hi everyone, I am a senior biologist at Fisheries and Oceans Canada and I work on different CMR and telemetry projects. Thanks to the organizers for offering the opportunity to discover new tools!",
+        "user": "U021MTZRY4X",
+        "ts": "1621239366.273900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g2e7d750409c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/2e7d750409c0cc2583b77d4fa85cf5c8.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0023-72.png",
+            "first_name": "",
+            "real_name": "Cedric Juillet",
+            "display_name": "Cedric Juillet",
+            "team": "T01UVLT5RS8",
+            "name": "cedric.juillet",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1gmu9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone, I am a senior biologist at Fisheries and Oceans Canada and I work on different CMR and telemetry projects. Thanks to the organizers for offering the opportunity to discover new tools!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "db4ddf1c-080b-423a-a88c-5d062467b2a7",
+        "type": "message",
+        "text": "Hi. My name is Stephen Gregory and I'm a fisheries scientist working for a research charity in southern England on salmon population dynamics under environmental change. I am a regular jags and stan user and I've played with nimble as a faster alternative to jags and a more flexible alternative to stan. I can't wait to learn more and become a regular nimble user... Thanks organisers!",
+        "user": "U021W7G8Y14",
+        "ts": "1621241163.279200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "bd1368c03ab7",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2094834061184_bd1368c03ab7d8bfefdb_72.png",
+            "first_name": "",
+            "real_name": "Stephen Gregory",
+            "display_name": "Stephen Gregory",
+            "team": "T01UVLT5RS8",
+            "name": "stephendavidgregory",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iddGI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi. My name is Stephen Gregory and I'm a fisheries scientist working for a research charity in southern England on salmon population dynamics under environmental change. I am a regular jags and stan user and I've played with nimble as a faster alternative to jags and a more flexible alternative to stan. I can't wait to learn more and become a regular nimble user... Thanks organisers!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U0228RFP1V2",
+                    "U01UQ29DG3C",
+                    "U0218E0HVPC",
+                    "U01ULDNCVKP"
+                ],
+                "count": 4
+            }
+        ]
+    },
+    {
+        "client_msg_id": "38d55c50-c3e9-4e05-8f2e-b00440b3c4ec",
+        "type": "message",
+        "text": "Hi all! I am PhD student at Animal Ecology group here at University of Ljubljana. We mostly work on large carnivores, whereas predatory soil invertebrates are also in the mix! I have heard of and even used Bayesian statistics but haven't had a thorough overview of the methodology yet. This course seems like a great opportunity for that matter. Cheers!",
+        "user": "U022329LNQK",
+        "ts": "1621243342.285700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "4ee57abaea81",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2094668900864_4ee57abaea81ab0538b6_72.png",
+            "first_name": "",
+            "real_name": "Žan Kuralt",
+            "display_name": "Žan Kuralt",
+            "team": "T01UVLT5RS8",
+            "name": "zan.kuralt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EnQE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all! I am PhD student at Animal Ecology group here at University of Ljubljana. We mostly work on large carnivores, whereas predatory soil invertebrates are also in the mix! I have heard of and even used Bayesian statistics but haven't had a thorough overview of the methodology yet. This course seems like a great opportunity for that matter. Cheers!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d8789503-10cf-4f1f-9577-6aab14845968",
+        "type": "message",
+        "text": "Good day to everyone. I am Shu Zhan Lai from Malaysia. I have no experience on recapture model. I did my MSc in Livestock Science. My previous dissertation is on monitoring animal behavior using tri-axial accelerometer. The reason to attend the workshop is to explore the possibility to use the Bayesian models in livestock  behavior projects for my future PhD proposal. Kudos to the organizers to set up this workshop FREE for everyone.",
+        "user": "U021VQ6LEP8",
+        "ts": "1621243577.289400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "df17812ee5a2",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2055827652631_df17812ee5a2d17bee0a_72.png",
+            "first_name": "",
+            "real_name": "Shuzhan Lai",
+            "display_name": "Shuzhan Lai",
+            "team": "T01UVLT5RS8",
+            "name": "shirolsz",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WwKT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good day to everyone. I am Shu Zhan Lai from Malaysia. I have no experience on recapture model. I did my MSc in Livestock Science. My previous dissertation is on monitoring animal behavior using tri-axial accelerometer. The reason to attend the workshop is to explore the possibility to use the Bayesian models in livestock  behavior projects for my future PhD proposal. Kudos to the organizers to set up this workshop FREE for everyone."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "bdc30a1f-648b-477a-9fed-747b520f630b",
+        "type": "message",
+        "text": "Hello folks, my name is Tiago Marques, have worked a lot with different animal abundance estimation methods, focusing on distance sampling and recently on passive acoustic density estimation, l and I just decided to learn a bit more about CR methods from a team that really knows about them. It's great to be back at school for a couple of days! :smiley:",
+        "user": "U021GG5HHMH",
+        "ts": "1621243952.291800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/w\/0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello folks, my name is Tiago Marques, have worked a lot with different animal abundance estimation methods, focusing on distance sampling and recently on passive acoustic density estimation, l and I just decided to learn a bit more about CR methods from a team that really knows about them. It's great to be back at school for a couple of days! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smiley"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U022RRJ8KLY",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            },
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "593d2cb0-9ca5-47d6-b022-d4c9948dfffd",
+        "type": "message",
+        "text": "Hi all! Sorry for being so late, my name is Valentina La Morgia, I am a researcher at the Italian Institute for Environmental Protection and Research. I am mainly interested in demographic models for mammals (ungulates, wolves, bears, but I work on small mammals too!) - unfortunately I could not join you this morning but I hope to catch up in some way. Thanks a lot for this opportunity!",
+        "user": "U0223HSRYBD",
+        "ts": "1621248654.296400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g3638b10d778",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/3638b10d778eba684b3e80cacf6279bd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "",
+            "real_name": "Valentina La Morgia",
+            "display_name": "Valentina La Morgia",
+            "team": "T01UVLT5RS8",
+            "name": "valentina.lamorgia",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GZBN2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all! Sorry for being so late, my name is Valentina La Morgia, I am a researcher at the Italian Institute for Environmental Protection and Research. I am mainly interested in demographic models for mammals (ungulates, wolves, bears, but I work on small mammals too!) - unfortunately I could not join you this morning but I hope to catch up in some way. Thanks a lot for this opportunity!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d71ab908-381d-47dc-833c-75eceaed7a3f",
+        "type": "message",
+        "text": "Hi all! I'm a Ph.D. student at Nottingham Trent University (UK), where my main focus is population dynamics of small and medium mammals. I've previously worked with classic CMR and SCR and am looking forward to using more sophisticated methods, particularly looking at survival estimation! I'm really enjoying the workshop so far!",
+        "user": "U021VT85ZEJ",
+        "ts": "1621249817.301400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g94ed74e9c6d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/94ed74e9c6d01f2ae4f3c7190960403f.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "",
+            "real_name": "Lauren Moore",
+            "display_name": "Lauren Moore",
+            "team": "T01UVLT5RS8",
+            "name": "lauren.moore",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BHreS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all! I'm a Ph.D. student at Nottingham Trent University (UK), where my main focus is population dynamics of small and medium mammals. I've previously worked with classic CMR and SCR and am looking forward to using more sophisticated methods, particularly looking at survival estimation! I'm really enjoying the workshop so far!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b9e853df-81df-4c75-9a76-6f7a5387b836",
+        "type": "message",
+        "text": "Hi everyone! My name is Steph Harris, I’m a postdoc at the Cornell Lab of Ornithology and I started using CR methods and Bayesian stats when I started my postdoc last summer. Thanks a lot to the organisers for this workshop, it’s my first introduction to Nimble and enjoying it so far!",
+        "user": "U0222M1S8SE",
+        "ts": "1621250041.303900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gb131caca709",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/b131caca7090e79666e18bf5bbc32950.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Stephanie Harris",
+            "display_name": "Stephanie Harris",
+            "team": "T01UVLT5RS8",
+            "name": "stephanie.harris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3g5U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone! My name is Steph Harris, I’m a postdoc at the Cornell Lab of Ornithology and I started using CR methods and Bayesian stats when I started my postdoc last summer. Thanks a lot to the organisers for this workshop, it’s my first introduction to Nimble and enjoying it so far!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a93c39ed-bfa1-433a-be83-e944065f7941",
+        "type": "message",
+        "text": "Hello everyone! My name is Hervé Rogissart, I am a recent MSc. graduate from the University of Montpellier (France). I am an aquatic ecologist, I am interested in acquiring new skills in CR analysis mainly on fish population. Thank you very much for organizing this workshop :grinning: !",
+        "user": "U022EG3UKDX",
+        "ts": "1621252269.306400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "328ad34c2614",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2093735453904_328ad34c2614af411a62_72.jpg",
+            "first_name": "",
+            "real_name": "Hervé Rogissart",
+            "display_name": "Hervé Rogissart",
+            "team": "T01UVLT5RS8",
+            "name": "contact.rogissart",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LAPG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone! My name is Hervé Rogissart, I am a recent MSc. graduate from the University of Montpellier (France). I am an aquatic ecologist, I am interested in acquiring new skills in CR analysis mainly on fish population. Thank you very much for organizing this workshop "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "grinning"
+                            },
+                            {
+                                "type": "text",
+                                "text": " !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "9481dddf-ae72-400f-878b-cf2559d2285f",
+        "type": "message",
+        "text": "Hi all, I'm an associate professor at Montana State University, where I and my students work on questions related to population and community ecology.  We work on diverse species and questions that often provide information to federal and state agencies for management and conservation.  Thanks so much for making this workshop accessible!",
+        "user": "U02213RPGS1",
+        "ts": "1621260820.309400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g144c2492611",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/144c24926111510144fffcdb2b64f790.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0009-72.png",
+            "first_name": "",
+            "real_name": "Andrea Litt",
+            "display_name": "Andrea Litt",
+            "team": "T01UVLT5RS8",
+            "name": "andrea.litt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G2cX0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all, I'm an associate professor at Montana State University, where I and my students work on questions related to population and community ecology.  We work on diverse species and questions that often provide information to federal and state agencies for management and conservation.  Thanks so much for making this workshop accessible!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "f201fa1c-235e-4ebd-a739-eb7a0908078e",
+        "type": "message",
+        "text": "Hello!  Thank you so much for hosting this workshop!  I will be viewing the videos as I am California.  I am a PhD student in Brice Semmens' lab at Scripps Institution of Oceanography, UC San Diego.  One of my dissertation chapters employs a multistate mark-recapture model using historical tagging data of Barred Sand Bass that spans different oceanographic periods and fishing intensities.  I have built up on the model in chapter 9.5 of Kery and Schaub's BPA text to incorporate tag loss and angler resightings using 5 states and 4 observation types.  I am most interested in how to convert this over to Nimble and learn any new tricks!",
+        "user": "U022H6VT3K3",
+        "ts": "1621265887.315600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d2859dd90c96",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2078780890612_d2859dd90c9688324798_72.jpg",
+            "first_name": "",
+            "real_name": "Erica Mason",
+            "display_name": "Erica Mason",
+            "team": "T01UVLT5RS8",
+            "name": "etmason",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "P0Z\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello!  Thank you so much for hosting this workshop!  I will be viewing the videos as I am California.  I am a PhD student in Brice Semmens' lab at Scripps Institution of Oceanography, UC San Diego.  One of my dissertation chapters employs a multistate mark-recapture model using historical tagging data of Barred Sand Bass that spans different oceanographic periods and fishing intensities.  I have built up on the model in chapter 9.5 of Kery and Schaub's BPA text to incorporate tag loss and angler resightings using 5 states and 4 observation types.  I am most interested in how to convert this over to Nimble and learn any new tricks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "166d13a3-a274-49c6-bbc9-ec47b150ac92",
+        "type": "message",
+        "text": "Hello everyone! My name is Julie Jenkins, I am a wildlife biologist with the US Forest Service and will be watching the videos from Corvallis Oregon USA. I work primarily with the Northern Spotted Owl (S_trix occidentallis occidentallis)_ monitoring program and I also with a lot of camera trap and acoustic recorder data. Thank you for making this workshop accessible!",
+        "user": "U021YP3LZ38",
+        "ts": "1621278080.320100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2884c7793d1c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2097366508048_2884c7793d1ca9076e06_72.jpg",
+            "first_name": "",
+            "real_name": "Julianna M. A. Jenkins",
+            "display_name": "Julianna M. A. Jenkins",
+            "team": "T01UVLT5RS8",
+            "name": "jma.jenkins",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vEf+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone! My name is Julie Jenkins, I am a wildlife biologist with the US Forest Service and will be watching the videos from Corvallis Oregon USA. I work primarily with the Northern Spotted Owl (S"
+                            },
+                            {
+                                "type": "text",
+                                "text": "trix occidentallis occidentallis)",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " monitoring program and I also with a lot of camera trap and acoustic recorder data. Thank you for making this workshop accessible!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "e9c4a9a3-ab2e-4bf5-9d23-3b339bc3360b",
+        "type": "message",
+        "text": "Hello everyone! I'm Gabby Palomo. I am in my last year as a PhD student at University of Nebraska Lincoln (US) and I'm originally from Guatemala. I work with carnivores and my dissertation is on ocelots, jaguars, and pumas in the Maya Biosphere Reserve in Guatemala. I have projects with other species too, and I'm very excited to learn from all of you. I mainly work with occupancy and SCR models, but I'm interested in Hierarchical models all around. Thank you Olivier, Chloé, Maud, Perry, Sarah for putting together this workshop!!",
+        "user": "U02269DF683",
+        "ts": "1621286790.323400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "001ee612d51c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2074165766418_001ee612d51cf651ba9b_72.png",
+            "first_name": "Gabriela",
+            "real_name": "Gabriela Palomo, MSc, MA",
+            "display_name": "Gabby Palomo",
+            "team": "T01UVLT5RS8",
+            "name": "gabriela.palomo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yXC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello everyone! I'm Gabby Palomo. I am in my last year as a PhD student at University of Nebraska Lincoln (US) and I'm originally from Guatemala. I work with carnivores and my dissertation is on ocelots, jaguars, and pumas in the Maya Biosphere Reserve in Guatemala. I have projects with other species too, and I'm very excited to learn from all of you. I mainly work with occupancy and SCR models, but I'm interested in Hierarchical models all around. Thank you Olivier, Chloé, Maud, Perry, Sarah for putting together this workshop!!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022RRJ8KLY"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "5EB4FC2E-7455-4DB2-BB65-52BFB5E54E84",
+        "type": "message",
+        "text": "Hi everyone, I am an assistant professor at George Mason University in Fairfax, VA USA (near Washington DC). I’m an urban ecologist with a strong focus on wildlife. Hoping to refresh myself on Bayes and MRC, learn how to use Nimble, and generally learn new tricks and tips from folks far smarter than me! ",
+        "user": "U022HQ6LSC9",
+        "ts": "1621288474.327200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d440886b4329",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2073207069522_d440886b432944659f46_72.jpg",
+            "first_name": "",
+            "real_name": "Travis Gallo",
+            "display_name": "Travis Gallo",
+            "team": "T01UVLT5RS8",
+            "name": "htravisgallo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Tg+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone, I am an assistant professor at George Mason University in Fairfax, VA USA (near Washington DC). I’m an urban ecologist with a strong focus on wildlife. Hoping to refresh myself on Bayes and MRC, learn how to use Nimble, and generally learn new tricks and tips from folks far smarter than me! "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "2c7996b7-5897-4c82-9426-da4bae126a8a",
+        "type": "message",
+        "text": "Hi all, I am currently a postdoc at the University of Alberta but in a couple of weeks I am heading off to do another postdoc at Patuxent with USGS. My work focuses on modeling population demography primarily for species of conservation concern (e.g., spectacled eiders, polar bears) and decision analysis for informing conservation and harvest management decisions. I have built many CMR models and IPMs in JAGs but I am looking forward to learning some new tricks. Specifically, I want to become more proficient in Nimble and dive a little deeper into CMR models. Thanks to the hosts for putting this together and making it accessible for folks all around the world!",
+        "user": "U0223BFL8AH",
+        "ts": "1621295728.004100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "bb23e22f1063",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2074680237859_bb23e22f1063a08afb35_72.jpg",
+            "first_name": "",
+            "real_name": "Kylee Dunham",
+            "display_name": "Kylee Dunham",
+            "team": "T01UVLT5RS8",
+            "name": "kylee583",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZPCrS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all, I am currently a postdoc at the University of Alberta but in a couple of weeks I am heading off to do another postdoc at Patuxent with USGS. My work focuses on modeling population demography primarily for species of conservation concern (e.g., spectacled eiders, polar bears) and decision analysis for informing conservation and harvest management decisions. I have built many CMR models and IPMs in JAGs but I am looking forward to learning some new tricks. Specifically, I want to become more proficient in Nimble and dive a little deeper into CMR models. Thanks to the hosts for putting this together and making it accessible for folks all around the world!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "Moss was studying with us yesterday, his brother Fen thinks he knows it all already.",
+        "files": [
+            {
+                "id": "F0226RM3FH9",
+                "created": 1621301326,
+                "timestamp": 1621301326,
+                "name": "20210517_191803.jpg",
+                "title": "20210517_191803.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U022EL2S7BK",
+                "editable": false,
+                "size": 605104,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0226RM3FH9\/20210517_191803.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0226RM3FH9\/download\/20210517_191803.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_64.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_80.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_360.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 166,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_480.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 222,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_160.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_720.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720_w": 332,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_800.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1733,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_960.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_960_w": 443,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0226RM3FH9-0108bcd525\/20210517_191803_1024.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_1024_w": 473,
+                "thumb_1024_h": 1024,
+                "original_w": 1204,
+                "original_h": 2608,
+                "thumb_tiny": "AwAwABaeQM+HGCpHHNVpseWCfXtUckjqqHsRUbS7hgZx70im9CxaQJI7b3bpxzjirX2OH++3\/fVUEkUYOWU4x0zT\/OH\/AD0P\/fNVYyuyXUo\/mTb0Axis\/OGGR\/8AXq\/NL5sRXvk4qhgk0mVF3RN5rYwpwPYUnmP6mogxQkGl82gVi7csNuNgVh1AGDVZsEg8cin3Eokmdx91jgfSo40Z1x265oLSsK0YMzZPFHkp6j8jT\/KyBuJ49DR5K+rfnQB\/\/9k=",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U022EL2S7BK\/F0226RM3FH9\/20210517_191803.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F0226RM3FH9-6aaf0878c6",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "loA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Moss was studying with us yesterday, his brother Fen thinks he knows it all already."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U022EL2S7BK",
+        "display_as_bot": false,
+        "ts": "1621301455.004900",
+        "reactions": [
+            {
+                "name": "heart_eyes",
+                "users": [
+                    "U02269DF683",
+                    "U0222LE4N5Q",
+                    "U0228RCCZ7E"
+                ],
+                "count": 3
+            },
+            {
+                "name": "cat",
+                "users": [
+                    "U01UQ29DG3C"
+                ],
+                "count": 1
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U022RRJ8KLY",
+                    "U0208H4AQGG"
+                ],
+                "count": 2
+            },
+            {
+                "name": "heart_eyes_cat",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            },
+            {
+                "name": "wink",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

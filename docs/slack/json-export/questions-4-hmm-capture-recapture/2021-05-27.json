@@ -1,0 +1,203 @@
+[
+    {
+        "client_msg_id": "ab42bc35-63ae-4aaa-8c43-1830fa612059",
+        "type": "message",
+        "text": "Happy to help, can you send me the data and code to reproduce the problem? We'll report back here.",
+        "user": "U01ULDNCVKP",
+        "ts": "1622099528.010700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "biY6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Happy to help, can you send me the data and code to reproduce the problem? We'll report back here."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622053283.010600",
+        "parent_user_id": "U0222N7JBPC"
+    },
+    {
+        "client_msg_id": "12eb934e-5730-40dc-8873-2d0bc94a862c",
+        "type": "message",
+        "text": "Thanks Olivier. Doing this asap.",
+        "user": "U0222N7JBPC",
+        "ts": "1622112486.010900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "E=P",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks Olivier. Doing this asap."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622053283.010600",
+        "parent_user_id": "U0222N7JBPC"
+    },
+    {
+        "client_msg_id": "253fce7a-7061-4e38-a822-e67456e6a780",
+        "type": "message",
+        "text": "Will we report even if I am veryyyy dumb? :sweat_smile:",
+        "user": "U0222N7JBPC",
+        "ts": "1622112522.011100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ol2+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Will we report even if I am veryyyy dumb? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "sweat_smile"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622053283.010600",
+        "parent_user_id": "U0222N7JBPC"
+    },
+    {
+        "type": "message",
+        "text": "Pick your character, I'll be the other one :slightly_smiling_face:",
+        "files": [
+            {
+                "id": "F0231D10TM4",
+                "created": 1622119499,
+                "timestamp": 1622119499,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U01ULDNCVKP",
+                "editable": false,
+                "size": 81434,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0231D10TM4\/image.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0231D10TM4\/download\/image.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0231D10TM4-9bcacfdd27\/image_64.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0231D10TM4-9bcacfdd27\/image_80.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0231D10TM4-9bcacfdd27\/image_360.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_360_w": 150,
+                "thumb_360_h": 200,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0231D10TM4-9bcacfdd27\/image_160.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "original_w": 150,
+                "original_h": 200,
+                "thumb_tiny": "AwAwACS1cicyDyt2Mc4NQxi6Ei7y2O+TVjzxuwfwAFOZGZSSefSjmCxVZbvd8u\/GeOabtu\/+mn51NBcqPlfgetWgQRkHIpqQNAudoz1xzS0ZHqKMj1pAULa4iDFnyG7d6ne7iK\/K+T9KzNjEEgdOtPaJhgkED6UhlyONUQhsHOSTUUKyNMyRthR1OajNyoiHJLDt61DbzOswIOMnmkkNs1DEGJJbHtR5I\/vmk5PeikBUfcAAcn+VSlgE6EDrwagUZGT1bk0fNx852jt6UFpCIFliZmUqVGMikt7dsq7cDPA7mp4sZUj05py7mJUAk57U7kNEoPFLmlS2G35yc+xpfsyerfnRZhc\/\/9k=",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01ULDNCVKP\/F0231D10TM4\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F0231D10TM4-3c071a74d8",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "72v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Pick your character, I'll be the other one "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U01ULDNCVKP",
+        "display_as_bot": false,
+        "ts": "1622119517.011300",
+        "thread_ts": "1622053283.010600",
+        "parent_user_id": "U0222N7JBPC",
+        "reactions": [
+            {
+                "name": "zany_face",
+                "users": [
+                    "U0222N7JBPC"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

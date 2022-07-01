@@ -1,0 +1,26 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618810221.000200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1618810417.000300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “speed-up-mcmc-convergence” to “questions-speed-up-mcmc-convergence”",
+        "old_name": "speed-up-mcmc-convergence",
+        "name": "questions-speed-up-mcmc-convergence"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1618810751.000400",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class on \"Skip your coffee break: Speed up MCMC convergence\".",
+        "purpose": "Questions for class on \"Skip your coffee break: Speed up MCMC convergence\"."
+    }
+]

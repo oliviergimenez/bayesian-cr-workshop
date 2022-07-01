@@ -1,0 +1,51 @@
+[
+    {
+        "client_msg_id": "26f7eed8-8055-4dc7-92e6-dde286781e28",
+        "type": "message",
+        "text": "Hi everyone! My name is Matt Weldy. I am a PhD Student at Oregon State University. I am working with Matt Betts and Damon Lesmeister to develop classification tools for use with a large scale terrestrial bioacoustic dataset.  I will then use datasets derived from classification models to explore both single species (marbled murrelet) and community (dawn chorus bird community) ecology. I have some experience with mark-recapture models using a variety of tools (Mark, RMark, JAGS), but (at least to me) these models are complex with many opportunities for missteps and I am looking forward to learning more!",
+        "user": "U0216SM0TPX",
+        "ts": "1620424015.039800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "547be2373a95",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-07\/2044194065491_547be2373a95ec872548_72.png",
+            "first_name": "",
+            "real_name": "Matt Weldy",
+            "display_name": "Matt Weldy",
+            "team": "T01UVLT5RS8",
+            "name": "matthewjweldy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GfnTu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone! My name is Matt Weldy. I am a PhD Student at Oregon State University. I am working with Matt Betts and Damon Lesmeister to develop classification tools for use with a large scale terrestrial bioacoustic dataset.  I will then use datasets derived from classification models to explore both single species (marbled murrelet) and community (dawn chorus bird community) ecology. I have some experience with mark-recapture models using a variety of tools (Mark, RMark, JAGS), but (at least to me) these models are complex with many opportunities for missteps and I am looking forward to learning more!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C",
+                    "U01UMBR0K38"
+                ],
+                "count": 3
+            }
+        ]
+    }
+]

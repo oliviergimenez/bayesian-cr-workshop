@@ -1,0 +1,8 @@
+[
+{"user_id":"U01UMBR0K38","user_name":"chloe.r.nater","date":"1621254573","change_type":"added","app_type":"Simple Poll","app_id":"A0HFW7MR6"},
+{"user_id":"U01UMBR0K38","user_name":"chloe.r.nater","date":"1621254572","change_type":"added","app_type":"Simple Poll","app_id":"A0HFW7MR6","scope":"identity.basic,identity.email"},
+{"user_id":"U01UMBR0K38","user_name":"chloe.r.nater","date":"1621254113","change_type":"added","app_type":"SurveyMonkey","app_id":"A4JEUJH4M","scope":"identify,bot,commands,users:read,users:read.email"},
+{"user_id":"U01UMBR0K38","user_name":"chloe.r.nater","date":"1621253399","change_type":"added","app_type":"Standup bot by Geekbot","app_id":"A0H67RAG0"},
+{"user_id":"U01UMBR0K38","user_name":"chloe.r.nater","date":"1621253398","change_type":"added","app_type":"Standup bot by Geekbot","app_id":"A0H67RAG0","scope":"identify,channels:write"},
+{"user_id":"U0203USKJRE","user_name":"pdevalpine","date":"1621101501","change_type":"added","app_type":"GitHub","app_id":"A01BP7R4KNY"}
+]

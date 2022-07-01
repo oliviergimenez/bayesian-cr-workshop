@@ -1,0 +1,53 @@
+[
+    {
+        "client_msg_id": "18d3019e-f93e-4ec1-ba79-5a091b7c9fac",
+        "type": "message",
+        "text": "Hi everybody! My name is Marta and I have just started a post-doc at the laboratory Littoral ENvironnement et Societés (University of la Rochelle) where I will analyze how different toxics affect the survival and reproduction of an Arctic species. During my thesis I modelled CMR data using E-Surge to answer ecological and evolutive questions. With this workshop I would like to go a step further for future studies. Thank you to the organizers!",
+        "user": "U021BPLHD7X",
+        "ts": "1621068664.094800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d5a97ff99f66",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061495149553_d5a97ff99f66f23ade8b_72.jpg",
+            "first_name": "",
+            "real_name": "Marta Cruz Flores",
+            "display_name": "Marta Cruz Flores",
+            "team": "T01UVLT5RS8",
+            "name": "martacruzflores",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X2us",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everybody! My name is Marta and I have just started a post-doc at the laboratory Littoral ENvironnement et Societés (University of la Rochelle) where I will analyze how different toxics affect the survival and reproduction of an Arctic species. During my thesis I modelled CMR data using E-Surge to answer ecological and evolutive questions. With this workshop I would like to go a step further for future studies. Thank you to the organizers!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U021KUK5D40",
+                    "U020D3400HW",
+                    "U01UQ29DG3C",
+                    "U0205U97A64"
+                ],
+                "count": 5
+            }
+        ]
+    }
+]

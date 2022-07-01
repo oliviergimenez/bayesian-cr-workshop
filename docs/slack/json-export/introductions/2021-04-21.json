@@ -1,0 +1,52 @@
+[
+    {
+        "client_msg_id": "13c12eae-f08b-480b-94ce-0a7b7519df9a",
+        "type": "message",
+        "text": "Hi everyone, nice to meet you! My name is Iraida. I am PhD student at Museo Nacional de Ciencias Naturales (Madrid, Spain). My thesis focused on studying the behaviour of floater individuals in a free ranging population of spotless starlings that are marked with PIT-tags. I am currently collaborating with Dr. Ana Payo-Payo who is helping me to develop multievent models to study differences in survival between floater and territorial individuals. However, I am just starting and my background in capture recapture is small but I am enthusiastic to learn more! Looking forward to see you all soon!",
+        "user": "U020D3400HW",
+        "ts": "1619073689.014600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jd\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi everyone, nice to meet you! My name is Iraida. I am PhD student at Museo Nacional de Ciencias Naturales (Madrid, Spain). My thesis focused on studying the behaviour of floater individuals in a free ranging population of spotless starlings that are marked with PIT-tags. I am currently collaborating with Dr. Ana Payo-Payo who is helping me to develop multievent models to study differences in survival between floater and territorial individuals. However, I am just starting and my background in capture recapture is small but I am enthusiastic to learn more! Looking forward to see you all soon!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP",
+                    "U01UMBR0K38",
+                    "U01UWAUMLR0"
+                ],
+                "count": 4
+            }
+        ]
+    }
+]

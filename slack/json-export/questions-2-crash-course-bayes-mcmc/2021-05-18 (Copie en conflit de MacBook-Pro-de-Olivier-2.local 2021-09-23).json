@@ -1,0 +1,247 @@
+[
+    {
+        "client_msg_id": "686c74b4-c8fa-4f89-9b2e-083fb5d0082a",
+        "type": "message",
+        "text": "<@U01ULDNCVKP> I didn't change the code in your 1_demo... Do you still want me to send it over?",
+        "user": "U0222LD8JCA",
+        "ts": "1621327496.000400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "3fc199d9fc15",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2070693352850_3fc199d9fc1558b00fce_72.jpg",
+            "first_name": "",
+            "real_name": "Ailidh Barnes",
+            "display_name": "Ailidh Barnes",
+            "team": "T01UVLT5RS8",
+            "name": "ailidh.barnes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "y44xs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " I didn't change the code in your 1_demo... Do you still want me to send it over?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621243724.059400",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "189acc51-ebdf-4acc-9fcf-a6c1a8431586",
+        "type": "message",
+        "text": "Yes, please. I'd really like to figure out what happens as several of you got the same issue.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621328072.000600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IKc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, please. I'd really like to figure out what happens as several of you got the same issue."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621243724.059400",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "type": "message",
+        "text": "One quick question about correlations when assessing convergence. The bottom plots show correlation between successive values of the chain. So the left bottom graph shows high correlation. Is it because each bar shows correlation so the more bars you have the more values were correlated? Is this the right way of seeing this graph?",
+        "files": [
+            {
+                "id": "F022PSX0ZND",
+                "created": 1621383926,
+                "timestamp": 1621383926,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U02269DF683",
+                "editable": false,
+                "size": 1074014,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022PSX0ZND\/image.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022PSX0ZND\/download\/image.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_64.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_80.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_360.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_360_w": 360,
+                "thumb_360_h": 220,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_480.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_480_w": 480,
+                "thumb_480_h": 293,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_160.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_720.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_720_w": 720,
+                "thumb_720_h": 440,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_800.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_800_w": 800,
+                "thumb_800_h": 489,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_960.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_960_w": 960,
+                "thumb_960_h": 587,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022PSX0ZND-797926e04c\/image_1024.png?t=xoxe-1981707195892-2250930395286-2270335791745-e34f4a51f6f7d635b76f3284165a61c6",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 626,
+                "original_w": 2097,
+                "original_h": 1282,
+                "thumb_tiny": "AwAdADDRKknIcj2pCMdZGp9NbPagBvH\/AD0b8v8A61O3r6\/pSbWGfnyKbtf+9+FAD96+v6U4EEZFJz60tADN9NaYKRnoeKg8w+lNZt3UfrQOzLRk4pd9VEOBgDg+9ODHPU8UCLAlBbb3pd9VGAJyc5+tPDEDFAH\/2Q==",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U02269DF683\/F022PSX0ZND\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F022PSX0ZND-64af0dcbbb",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "efu\/l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "One quick question about correlations when assessing convergence. The bottom plots show correlation between successive values of the chain. So the left bottom graph shows high correlation. Is it because each bar shows correlation so the more bars you have the more values were correlated? Is this the right way of seeing this graph?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U02269DF683",
+        "display_as_bot": false,
+        "ts": "1621384031.003500",
+        "thread_ts": "1621384031.003500",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621386538.003700",
+        "reply_users": [
+            "U022EL2S7BK"
+        ],
+        "replies": [
+            {
+                "user": "U022EL2S7BK",
+                "ts": "1621386538.003700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "67aee0b5-9410-47e4-9f69-cdc744761cb1",
+        "type": "message",
+        "text": "the y-axis shows the amount of correlation and the x a number of steps away in the chain. So we would expect a value to be more correlated with values closer in the chain and we want to see this correlation reduce relatively quickly, like in the middle. Hope that makes sense :simple_smile: and someone please correct me if that's not quite right",
+        "user": "U022EL2S7BK",
+        "ts": "1621386538.003700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U022EL2S7BK",
+            "ts": "1621386918.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aW1No",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the y-axis shows the amount of correlation and the x a number of steps away in the chain. So we would expect a value to be more correlated with values closer in the chain and we want to see this correlation reduce relatively quickly, like in the middle. Hope that makes sense "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "simple_smile"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and someone please correct me if that's not quite right"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621384031.003500",
+        "parent_user_id": "U02269DF683",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U02269DF683"
+                ],
+                "count": 2
+            },
+            {
+                "name": "100",
+                "users": [
+                    "U02269DF683"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

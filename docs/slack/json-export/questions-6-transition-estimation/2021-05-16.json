@@ -1,0 +1,19 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1621162044.009200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “questions-transition-estimation” to “questions-6-transition-estimation”",
+        "old_name": "questions-transition-estimation",
+        "name": "questions-6-transition-estimation"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1621162054.009300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class\/worksheet on \"On the move: Transition estimation\".",
+        "purpose": "Questions for class\/worksheet on \"On the move: Transition estimation\"."
+    }
+]

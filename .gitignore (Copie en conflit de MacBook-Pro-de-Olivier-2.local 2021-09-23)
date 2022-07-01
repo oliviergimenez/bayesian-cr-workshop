@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.gitignore
+.DS_Store
+matos
+bayesian-cr-workshop.Rproj
+Rscripts
+buildPDFs.R
+video-recordings
+slack

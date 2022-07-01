@@ -1,0 +1,19 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1621162063.009200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class\/worksheet on \"Known knowns, unknown knowns and unknowns: Uncertainty in state assignment\".",
+        "purpose": "Questions for class\/worksheet on \"Known knowns, unknown knowns and unknowns: Uncertainty in state assignment\"."
+    },
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1621162077.009300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “questions-uncertainty-in-state-assignment” to “questions-7-uncertainty-in-state-assignment”",
+        "old_name": "questions-uncertainty-in-state-assignment",
+        "name": "questions-7-uncertainty-in-state-assignment"
+    }
+]

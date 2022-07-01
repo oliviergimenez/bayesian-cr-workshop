@@ -1,0 +1,210 @@
+[
+    {
+        "client_msg_id": "2c3bbb79-e220-49f3-82d3-330f7d30a380",
+        "type": "message",
+        "text": "Thank you so much!  The pooled matrix now is reduced to just over 300 rows now.  I followed along with the demo and then received the following error message:  defining model...\nRegistering the following user-provided distributions: dHMMweighted\nError in FUN(X[[i]], ...) :\n  prepareDistributionInfo: types\/dimensions of parameters are not the same in density and simulation functions: 'dHMMweighted' and 'rHMMweighted'.\nIn addition: Warning message:\nIn FUN(X[[i]], ...) :\n  checkDistributionFunctions: parameter arguments not the same amongst density and simulation functions for dHMMweighted. Continuing anyway based on arguments to the density function; algorithms using the simulation function are unlikely to function properly.\nTiming stopped at: 0.19 0.03 0.22",
+        "user": "U022H6VT3K3",
+        "ts": "1621357659.005500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d2859dd90c96",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2078780890612_d2859dd90c9688324798_72.jpg",
+            "first_name": "",
+            "real_name": "Erica Mason",
+            "display_name": "Erica Mason",
+            "team": "T01UVLT5RS8",
+            "name": "etmason",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DAq",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you so much!  The pooled matrix now is reduced to just over 300 rows now.  I followed along with the demo and then received the following error message:  defining model...\nRegistering the following user-provided distributions: dHMMweighted\nError in FUN(X[[i]], ...) :\n  prepareDistributionInfo: types\/dimensions of parameters are not the same in density and simulation functions: 'dHMMweighted' and 'rHMMweighted'.\nIn addition: Warning message:\nIn FUN(X[[i]], ...) :\n  checkDistributionFunctions: parameter arguments not the same amongst density and simulation functions for dHMMweighted. Continuing anyway based on arguments to the density function; algorithms using the simulation function are unlikely to function properly.\nTiming stopped at: 0.19 0.03 0.22"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621283565.074100",
+        "parent_user_id": "U022H6VT3K3"
+    },
+    {
+        "client_msg_id": "27d89989-7656-4490-9805-e8e16d83449d",
+        "type": "message",
+        "text": "I see now that you've posted the videos...I will take a look and see if I can troubleshoot...",
+        "user": "U022H6VT3K3",
+        "ts": "1621357696.005700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d2859dd90c96",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2078780890612_d2859dd90c9688324798_72.jpg",
+            "first_name": "",
+            "real_name": "Erica Mason",
+            "display_name": "Erica Mason",
+            "team": "T01UVLT5RS8",
+            "name": "etmason",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "h5v",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I see now that you've posted the videos...I will take a look and see if I can troubleshoot..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621283565.074100",
+        "parent_user_id": "U022H6VT3K3"
+    },
+    {
+        "client_msg_id": "09558732-357e-4345-a16d-c61609b1d19c",
+        "type": "message",
+        "text": "300 rows, look promising! Can you run the live demo with the geese example without problem?",
+        "user": "U01ULDNCVKP",
+        "ts": "1621359079.005900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1621359116.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TLO7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "300 rows, look promising! Can you run the live demo with the geese example without problem?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621283565.074100",
+        "parent_user_id": "U022H6VT3K3"
+    },
+    {
+        "client_msg_id": "7bca9ba3-8ff8-48e2-9751-fde7c3563c49",
+        "type": "message",
+        "text": "If you send me your code\/data, I'm happy to help :wink:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621359337.006200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nj=sQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you send me your code\/data, I'm happy to help "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621283565.074100",
+        "parent_user_id": "U022H6VT3K3"
+    },
+    {
+        "client_msg_id": "f8ad4270-e773-4cb7-86d5-7563e70081ee",
+        "type": "message",
+        "text": "I am going through the video now and will test\/run the geese example next.  And yes!  I am happy to share my code\/data.  Thank you!",
+        "user": "U022H6VT3K3",
+        "ts": "1621360922.006400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d2859dd90c96",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2078780890612_d2859dd90c9688324798_72.jpg",
+            "first_name": "",
+            "real_name": "Erica Mason",
+            "display_name": "Erica Mason",
+            "team": "T01UVLT5RS8",
+            "name": "etmason",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Bz1+\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am going through the video now and will test\/run the geese example next.  And yes!  I am happy to share my code\/data.  Thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621283565.074100",
+        "parent_user_id": "U022H6VT3K3"
+    }
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "client_msg_id": "413142dc-2fff-4b87-a0fa-af5778e3a218",
+        "type": "message",
+        "text": "I've emailed you my code\/data...thanks!",
+        "user": "U022H6VT3K3",
+        "ts": "1621541129.006700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d2859dd90c96",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2078780890612_d2859dd90c9688324798_72.jpg",
+            "first_name": "",
+            "real_name": "Erica Mason",
+            "display_name": "Erica Mason",
+            "team": "T01UVLT5RS8",
+            "name": "etmason",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "N5SD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I've emailed you my code\/data...thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621283565.074100",
+        "parent_user_id": "U022H6VT3K3",
+        "reactions": [
+            {
+                "name": "wink",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618810140.000200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1618810399.000300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “intro-nimble” to “questions-intro-nimble”",
+        "old_name": "intro-nimble",
+        "name": "questions-intro-nimble"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1618810730.000400",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class on \"Free the modeler in you: Introduction to Nimble\".",
+        "purpose": "Questions for class on \"Free the modeler in you: Introduction to Nimble\"."
+    }
+]

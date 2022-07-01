@@ -1,0 +1,249 @@
+[
+    {
+        "client_msg_id": "b5b84a5c-d808-4e3a-a3b9-934be345f860",
+        "type": "message",
+        "text": "With my attempts at running in parallel I was having issues with paths for compiling the models with custom distributions. I ended up running the compilation and build steps in a normal loop for n.chains over my inits_list, then running runMCMC in a parallel foreach loop over each compiled model. Does this workflow look okay <@U0203USKJRE>?\n```library(nimble)\nlibrary(parallel)\n# library(foreach)\n# library(doParallel)\n\nmy_seed &lt;- 2122\n\n# make initial values\ninits &lt;- function(){list(...)}\ninits_list &lt;- list(inits(), inits(), inits(), inits())\n\n# setup cluster, settings\nnchains &lt;- 4\n# cl &lt;- makeCluster(nchains + 1)\n# registerDoParallel(cl)\nniter &lt;- 10000\nnburnin &lt;- 1000\n\n# loop for compilation\ncompiled_model &lt;- list()\nfor(i in 1:nchains) {\n  model &lt;- nimbleModel(code = code, data = data, \n  constants = constants, inits = inits_list[[i]], ...)\n  ... # more compiling steps\n  compiled_model[[i]] &lt;- compileNimble(...)\n}\n\n# parallel foreach runMCMC for each chain\n\n# run_mcmc_par &lt;- foreach(i = 1:ncores, .packages = \n# \"nimble\") %dopar% { \n#  results &lt;- runMCMC(compiled_model[[i]], \n#     niter = niter, nburnin = nburnin, \n#     samples = TRUE, samplesAsCodaMCMC = TRUE,\n#     setSeed = my_seed)\n#  results\n# }\n\nstart &lt;- Sys.time()\nrun_mcmc_par &lt;- mclapply(compiled_model, runMCMC, \n      niter = niter, nburnin = nburnin, samples = TRUE,\n      samplesAsCodaMCMC = TRUE, setSeed = my_seed, \n      mc.cores = nchains + 1)\nend &lt;- Sys.time()\nend - start\n\nstopCluster(cl)```\nEDIT: I had issues communicating with nodes I think (I'm not fully across these issues) using `foreach()` but it worked using `mclapply()`",
+        "user": "U022EL2S7BK",
+        "ts": "1621463523.031800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U022EL2S7BK",
+            "ts": "1621561691.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6ud",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "With my attempts at running in parallel I was having issues with paths for compiling the models with custom distributions. I ended up running the compilation and build steps in a normal loop for n.chains over my inits_list, then running runMCMC in a parallel foreach loop over each compiled model. Does this workflow look okay "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0203USKJRE"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "library(nimble)\nlibrary(parallel)\n# library(foreach)\n# library(doParallel)\n\nmy_seed <- 2122\n\n# make initial values\ninits <- function(){list(...)}\ninits_list <- list(inits(), inits(), inits(), inits())\n\n# setup cluster, settings\nnchains <- 4\n# cl <- makeCluster(nchains + 1)\n# registerDoParallel(cl)\nniter <- 10000\nnburnin <- 1000\n\n# loop for compilation\ncompiled_model <- list()\nfor(i in 1:nchains) {\n  model <- nimbleModel(code = code, data = data, \n  constants = constants, inits = inits_list[[i]], ...)\n  ... # more compiling steps\n  compiled_model[[i]] <- compileNimble(...)\n}\n\n# parallel foreach runMCMC for each chain\n\n# run_mcmc_par <- foreach(i = 1:ncores, .packages = \n# \"nimble\") %dopar% { \n#  results <- runMCMC(compiled_model[[i]], \n#     niter = niter, nburnin = nburnin, \n#     samples = TRUE, samplesAsCodaMCMC = TRUE,\n#     setSeed = my_seed)\n#  results\n# }\n\nstart <- Sys.time()\nrun_mcmc_par <- mclapply(compiled_model, runMCMC, \n      niter = niter, nburnin = nburnin, samples = TRUE,\n      samplesAsCodaMCMC = TRUE, setSeed = my_seed, \n      mc.cores = nchains + 1)\nend <- Sys.time()\nend - start\n\nstopCluster(cl)"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "EDIT: I had issues communicating with nodes I think (I'm not fully across these issues) using "
+                            },
+                            {
+                                "type": "text",
+                                "text": "foreach()",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " but it worked using "
+                            },
+                            {
+                                "type": "text",
+                                "text": "mclapply()",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "star-struck",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "19bd701e-1112-42cb-99dd-95525f54e28f",
+        "type": "message",
+        "text": "I think that should work.  The key is that each thread should have its own compiled MCMC and model, and it looks like you've arranged that.  A way to check would be to insert some different values somewhere in the models and then check them.  E.g. in the first loops you could do `compiled_model[[i]]$a &lt;- i` and in the `foreach` loop you could start with `cat(paste('thread i = ', compiled_model[[i]]$a))` That's just a way to check.  I'm not sure what went wrong with other trials you made, but you should be able to do the `nimbleModel`` ...`compileNimble` steps in separate threads too.  I am not a parallelization expert, so take it with a grain of salt!",
+        "user": "U0203USKJRE",
+        "ts": "1621469384.035300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fo1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think that should work.  The key is that each thread should have its own compiled MCMC and model, and it looks like you've arranged that.  A way to check would be to insert some different values somewhere in the models and then check them.  E.g. in the first loops you could do "
+                            },
+                            {
+                                "type": "text",
+                                "text": "compiled_model[[i]]$a <- i",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and in the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "foreach",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " loop you could start with "
+                            },
+                            {
+                                "type": "text",
+                                "text": "cat(paste('thread i = ', compiled_model[[i]]$a))",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " That's just a way to check.  I'm not sure what went wrong with other trials you made, but you should be able to do the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "nimbleModel`",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ..."
+                            },
+                            {
+                                "type": "text",
+                                "text": "compileNimble",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " steps in separate threads too.  I am not a parallelization expert, so take it with a grain of salt!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621469384.035300",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621469726.035400",
+        "reply_users": [
+            "U022EL2S7BK"
+        ],
+        "replies": [
+            {
+                "user": "U022EL2S7BK",
+                "ts": "1621469726.035400"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "76d8c689-761d-4276-af79-f27643412145",
+        "type": "message",
+        "text": "Thanks, it was failing to create a shared library, the time to compile not in parallel is probably less than the time that it will take for me to fix it, and as long as I can get chains running in parallel I'll be making big gains. :woman-running:",
+        "user": "U022EL2S7BK",
+        "ts": "1621469726.035400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "257d2ecc3d45",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2063310194550_257d2ecc3d45be2e5432_72.jpg",
+            "first_name": "Rebecca",
+            "real_name": "Rebecca Groenewegen",
+            "display_name": "Rebecca Groenewegen",
+            "team": "T01UVLT5RS8",
+            "name": "r.groenewegen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mw3qO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, it was failing to create a shared library, the time to compile not in parallel is probably less than the time that it will take for me to fix it, and as long as I can get chains running in parallel I'll be making big gains. "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "woman-running"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621469384.035300",
+        "parent_user_id": "U0203USKJRE"
+    }
+]

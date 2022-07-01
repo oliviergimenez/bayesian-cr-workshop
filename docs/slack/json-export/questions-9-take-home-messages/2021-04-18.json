@@ -1,0 +1,26 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618810232.000200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1618810425.000300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “take-home-messages” to “questions-take-home-messages”",
+        "old_name": "take-home-messages",
+        "name": "questions-take-home-messages"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1618810781.000400",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class on \"Take-home messages\".",
+        "purpose": "Questions for class on \"Take-home messages\"."
+    }
+]

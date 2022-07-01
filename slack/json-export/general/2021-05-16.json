@@ -1,0 +1,133 @@
+[
+    {
+        "client_msg_id": "71ec5c5d-0e43-478f-a947-099d5b54378f",
+        "type": "message",
+        "text": "Hi <@U01ULDNCVKP>\nthanks for running this workshop. I am really looking forward to it. I had not realized that it will be run on Paris time. I am in Pacific time (west coast of Candaa), so it is pretty clear I will not be attending the live sessions. I was wondering when you will make the zoom recordings available - I will have to watch the recorded sessions. Thanks!",
+        "user": "U0202MQV9JL",
+        "ts": "1621229004.015600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1d751d09e015",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2098253280752_1d751d09e01515867961_72.png",
+            "first_name": "Alejandro",
+            "real_name": "Alejandro Buren",
+            "display_name": "Alejandro",
+            "team": "T01UVLT5RS8",
+            "name": "aburen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "US\/la",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nthanks for running this workshop. I am really looking forward to it. I had not realized that it will be run on Paris time. I am in Pacific time (west coast of Candaa), so it is pretty clear I will not be attending the live sessions. I was wondering when you will make the zoom recordings available - I will have to watch the recorded sessions. Thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621229004.015600",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1621279559.068600",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U0202MQV9JL"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621232029.016500"
+            },
+            {
+                "user": "U0202MQV9JL",
+                "ts": "1621234962.020200"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621279559.068600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621279559.068600"
+    },
+    {
+        "client_msg_id": "a85457a8-4cf5-479e-9ae4-8036560e6ab8",
+        "type": "message",
+        "text": "Hi <@U0202MQV9JL>, I'll do my best to make them available short after the session so that folks in your situation can catch up, but I can't promise anything.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621232029.016500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fRorV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0202MQV9JL"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", I'll do my best to make them available short after the session so that folks in your situation can catch up, but I can't promise anything."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621229004.015600",
+        "parent_user_id": "U0202MQV9JL",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U022EL2S7BK",
+                    "U022SC3R3UY",
+                    "U0228QPFJ5S",
+                    "U0223FYHW02"
+                ],
+                "count": 4
+            }
+        ]
+    }
+]

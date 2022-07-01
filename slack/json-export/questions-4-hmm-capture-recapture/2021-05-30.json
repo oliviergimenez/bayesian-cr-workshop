@@ -1,0 +1,51 @@
+[
+    {
+        "client_msg_id": "9de6ff83-8acf-4530-9494-0d2867c6eb00",
+        "type": "message",
+        "text": "ok...so: my capture-recapture matrix (named y in the code provided during the workshop) was actually of class data.frame, and this was the problem. Thanks to Olivier for checking my code and pointing this out. Expertise lies in the details right? So a simple y &lt;- as.matrix(y) does the job. Thanks Olivier.",
+        "user": "U0222N7JBPC",
+        "ts": "1622435363.011600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g468f7dde51c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/468f7dde51c033f09186b59492208d97.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "SimonChamaille",
+            "display_name": "SimonChamaille",
+            "team": "T01UVLT5RS8",
+            "name": "simon.chamaille",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "otohw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok...so: my capture-recapture matrix (named y in the code provided during the workshop) was actually of class data.frame, and this was the problem. Thanks to Olivier for checking my code and pointing this out. Expertise lies in the details right? So a simple y <- as.matrix(y) does the job. Thanks Olivier."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1622053283.010600",
+        "parent_user_id": "U0222N7JBPC",
+        "reactions": [
+            {
+                "name": "wink",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

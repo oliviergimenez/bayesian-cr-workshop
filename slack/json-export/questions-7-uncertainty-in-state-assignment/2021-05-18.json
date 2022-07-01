@@ -1,0 +1,4361 @@
+[
+    {
+        "type": "message",
+        "text": "don’t forget ... even more essentiel with state uncertainty ! <https:\/\/workshoponbay-5ln5595.slack.com\/files\/U021W7G8Y14\/F0220VASMDL\/image.png>",
+        "files": [
+            {
+                "id": "F0220VASMDL",
+                "created": 1621329681,
+                "timestamp": 1621329681,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U021W7G8Y14",
+                "editable": false,
+                "size": 968309,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0220VASMDL\/image.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0220VASMDL\/download\/image.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0220VASMDL-f54ea691a6\/image_64.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0220VASMDL-f54ea691a6\/image_80.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0220VASMDL-f54ea691a6\/image_360.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 281,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0220VASMDL-f54ea691a6\/image_480.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 374,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0220VASMDL-f54ea691a6\/image_160.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0220VASMDL-f54ea691a6\/image_720.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720_w": 561,
+                "thumb_720_h": 720,
+                "original_w": 600,
+                "original_h": 770,
+                "thumb_tiny": "AwAwACWtHIikFhkd+M1bCqR90H8B\/jVJI26YNL5fJRhgjv6UhXLgVccKPrgf40xyig5VckccVHJB+7UovIOCKryR+XhT972ouMfto21EWY9STikzQFy55UoA+XOewPNISVOGBU+4q0l0gH3Oajupkfayod\/r6UtQFgbMDDuvQ1GPJWRZBu3Zyc9KW1+62enTNRT+WtyEjb5DjnrimNkkkkJYkQKcnJJNM3xf8+6fmafJamNsecnPrmmeV\/02j\/WloIbkjuPxpNwxSBgRzTjChAxKB7YqgBZPl2D8aTy0IPzFT9M04QpuP74fXFI\/yfdkD+2KSBhIzu2SQeMcUzDUxpG44xSeY1FkI\/\/Z",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U021W7G8Y14\/F0220VASMDL\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F0220VASMDL-c40f7437b7",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "U+H8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "don’t forget ... even more essentiel with state uncertainty ! "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U021W7G8Y14\/F0220VASMDL\/image.png"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U01UDBUETM5",
+        "display_as_bot": false,
+        "x_files": [
+            "F0220VASMDL"
+        ],
+        "ts": "1621339854.001100",
+        "client_msg_id": "3b906ddd-1330-4af3-837d-956833dcf35d",
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U020D3400HW",
+                    "U01UMBR0K38"
+                ],
+                "count": 2
+            },
+            {
+                "name": "rolling_on_the_floor_laughing",
+                "users": [
+                    "U021NFFDJAX",
+                    "U022SE3F7KJ"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "and this one too ! <https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UDBUETM5\/F022XHPAW48\/screenshot_2021-05-18_at_11.28.09.png>",
+        "files": [
+            {
+                "id": "F022XHPAW48",
+                "created": 1621330097,
+                "timestamp": 1621330097,
+                "name": "Screenshot 2021-05-18 at 11.28.09.png",
+                "title": "Screenshot 2021-05-18 at 11.28.09.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U01UDBUETM5",
+                "editable": false,
+                "size": 512512,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022XHPAW48\/screenshot_2021-05-18_at_11.28.09.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F022XHPAW48\/download\/screenshot_2021-05-18_at_11.28.09.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_64.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_80.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_360.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 285,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_480.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 380,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F022XHPAW48-c0f0cc3f16\/screenshot_2021-05-18_at_11.28.09_160.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "original_w": 473,
+                "original_h": 597,
+                "thumb_tiny": "AwAwACa+0ijIJqDec8E\/p\/jT7kYXcOuRVBp3BIBGP90UAW97ep68dP8AGo5d7INp5PuB\/WokmcqScf8AfIqWJHKM+Rnt8ooAbB5iE7icfXNTeZ7moY1YyEsBnHYVNtpDJnG5WBrLZDuOBmtKUlcYBPPNUZflyVZsZzxQAtunzDfnrwKtK4zjNUhLtHGfxoEu3knmmhFsECQ\/Sn7xVONmMmfUVNk0DLjZ5HasmQBR1yc5I9K0WlRXIyM+5qJuhwYue\/pSAzzgd+PUU1Rhs7s1fTCyNzFzzg9P88U2RBMu0NEm1uo70xEUJy\/4Gp6gt1xIR1wDzVnbSGf\/2Q==",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UDBUETM5\/F022XHPAW48\/screenshot_2021-05-18_at_11.28.09.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F022XHPAW48-640c3fba78",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s3QL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and this one too ! "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UDBUETM5\/F022XHPAW48\/screenshot_2021-05-18_at_11.28.09.png"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U01UDBUETM5",
+        "display_as_bot": false,
+        "x_files": [
+            "F022XHPAW48"
+        ],
+        "ts": "1621340025.002400",
+        "client_msg_id": "b496c094-1031-4b3b-9958-259ef01ebccf",
+        "reactions": [
+            {
+                "name": "grinning",
+                "users": [
+                    "U021NFFDJAX",
+                    "U01UMBR0K38",
+                    "U0228RCCZ7E"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c0332258-e7bc-4b57-a2e8-351c8a85e564",
+        "type": "message",
+        "text": "Anyone working on CMR for otters? Otters are great! :heart:",
+        "user": "U01UMBR0K38",
+        "ts": "1621340131.003300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Lef",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Anyone working on CMR for otters? Otters are great! "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "heart"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340131.003300",
+        "reply_count": 7,
+        "reply_users_count": 3,
+        "latest_reply": "1621347541.037600",
+        "reply_users": [
+            "U0228TE85EG",
+            "U01UMBR0K38",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U0228TE85EG",
+                "ts": "1621343214.025200"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621343243.025400"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621345058.031900"
+            },
+            {
+                "user": "U0228TE85EG",
+                "ts": "1621347056.036800"
+            },
+            {
+                "user": "U0228TE85EG",
+                "ts": "1621347100.037200"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621347235.037400"
+            },
+            {
+                "user": "U0228TE85EG",
+                "ts": "1621347541.037600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621347541.037600",
+        "reactions": [
+            {
+                "name": "blush",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            },
+            {
+                "name": "otter",
+                "users": [
+                    "U01UQ29DG3C"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c722e185-62f3-4e92-989b-a736b514abb8",
+        "type": "message",
+        "text": "I guess 'observation' here is synonym for 'event'?",
+        "user": "U020D3400HW",
+        "ts": "1621340262.004000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "er3O",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I guess 'observation' here is synonym for 'event'?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340262.004000",
+        "reply_count": 7,
+        "reply_users_count": 3,
+        "latest_reply": "1621340362.005600",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U01UMBR0K38",
+            "U020D3400HW"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621340276.004100"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621340290.004400"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621340300.004600"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621340326.004900"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621340332.005100"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621340334.005300"
+            },
+            {
+                "user": "U020D3400HW",
+                "ts": "1621340362.005600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "e45e280b-b979-4968-9b73-dd97a2185b5b",
+        "type": "message",
+        "text": "YES",
+        "user": "U01UDBUETM5",
+        "ts": "1621340276.004100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eGVj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "YES"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340262.004000",
+        "parent_user_id": "U020D3400HW"
+    },
+    {
+        "client_msg_id": "028ee680-38f5-40be-b48f-63be51a57b9e",
+        "type": "message",
+        "text": "you define events based on your field observations",
+        "user": "U01UDBUETM5",
+        "ts": "1621340290.004400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YWPFm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "you define events based on your field observations"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340262.004000",
+        "parent_user_id": "U020D3400HW"
+    },
+    {
+        "client_msg_id": "d01b7e1a-d106-432b-9e72-4e6e7fa005a0",
+        "type": "message",
+        "text": "Uh oh, <@U01UDBUETM5> going all caps now :stuck_out_tongue:",
+        "user": "U01UMBR0K38",
+        "ts": "1621340300.004600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Udni",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Uh oh, "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UDBUETM5"
+                            },
+                            {
+                                "type": "text",
+                                "text": " going all caps now "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "stuck_out_tongue"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340262.004000",
+        "parent_user_id": "U020D3400HW",
+        "reactions": [
+            {
+                "name": "laughing",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U021NFFDJAX"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "721d204c-b631-4b0f-b02a-7b9140500b85",
+        "type": "message",
+        "text": "hahaha on :fire:",
+        "user": "U01UDBUETM5",
+        "ts": "1621340326.004900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "o84k4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hahaha on "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "fire"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340262.004000",
+        "parent_user_id": "U020D3400HW"
+    },
+    {
+        "client_msg_id": "85f3f338-407d-4bdc-abb4-04ce3ff7ad49",
+        "type": "message",
+        "text": "call your firemen guysss",
+        "user": "U01UDBUETM5",
+        "ts": "1621340332.005100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WdxU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "call your firemen guysss"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340262.004000",
+        "parent_user_id": "U020D3400HW",
+        "reactions": [
+            {
+                "name": "fire_engine",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6a6dc75c-a951-43bc-8a98-ec9cfb9bd2fc",
+        "type": "message",
+        "text": "hahaha",
+        "user": "U01UDBUETM5",
+        "ts": "1621340334.005300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=+s3y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hahaha"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340262.004000",
+        "parent_user_id": "U020D3400HW"
+    },
+    {
+        "client_msg_id": "b9975370-7517-4f40-93ba-2a6592a979f4",
+        "type": "message",
+        "text": ":rolling_on_the_floor_laughing:",
+        "user": "U020D3400HW",
+        "ts": "1621340362.005600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "s+k",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "rolling_on_the_floor_laughing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340262.004000",
+        "parent_user_id": "U020D3400HW"
+    },
+    {
+        "client_msg_id": "a598c892-3803-4c82-9a04-453228e4a7e8",
+        "type": "message",
+        "text": "What if the individual is a breeder and I mistakenly mark it as a non-breeder  ? Why this probability is 0?",
+        "user": "U022EH7TE81",
+        "ts": "1621340560.006700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gbdf1cf579b2",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/bdf1cf579b2861e5ab8d286f2c61807e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "",
+            "real_name": "Andjela",
+            "display_name": "Andjela",
+            "team": "T01UVLT5RS8",
+            "name": "andela.davidovic",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5wWQg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What if the individual is a breeder and I mistakenly mark it as a non-breeder  ? Why this probability is 0?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "reply_count": 12,
+        "reply_users_count": 5,
+        "latest_reply": "1621343066.024700",
+        "reply_users": [
+            "U020D3400HW",
+            "U022EH7TE81",
+            "U01UQ29DG3C",
+            "U0203L8NKE2",
+            "U01UDBUETM5"
+        ],
+        "replies": [
+            {
+                "user": "U020D3400HW",
+                "ts": "1621341147.007600"
+            },
+            {
+                "user": "U020D3400HW",
+                "ts": "1621341185.007800"
+            },
+            {
+                "user": "U022EH7TE81",
+                "ts": "1621341514.010400"
+            },
+            {
+                "user": "U01UQ29DG3C",
+                "ts": "1621341516.010700"
+            },
+            {
+                "user": "U0203L8NKE2",
+                "ts": "1621341653.011700"
+            },
+            {
+                "user": "U020D3400HW",
+                "ts": "1621341756.012300"
+            },
+            {
+                "user": "U022EH7TE81",
+                "ts": "1621342203.014700"
+            },
+            {
+                "user": "U020D3400HW",
+                "ts": "1621342382.015600"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621342489.017900"
+            },
+            {
+                "user": "U020D3400HW",
+                "ts": "1621342706.022200"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621342746.022400"
+            },
+            {
+                "user": "U022EH7TE81",
+                "ts": "1621343066.024700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621343066.024700",
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U020D3400HW"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fe18940b-1b27-4c10-befe-1c88339f3bfc",
+        "type": "message",
+        "text": "<https:\/\/www.usgs.gov\/media\/images\/werc-sea-otter>",
+        "user": "U021MSK4PPH",
+        "ts": "1621340799.007000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Cj5Cu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.usgs.gov\/media\/images\/werc-sea-otter"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U01UMBR0K38",
+                    "U0228RFP1V2"
+                ],
+                "count": 2
+            },
+            {
+                "name": "heart_eyes",
+                "users": [
+                    "U01UDBUETM5"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "0bac2d7c-8c7d-4bf8-8e72-c1b010ba043f",
+        "type": "message",
+        "text": "I'm not quite sure, but I think is that model design there was not account for the error of mistakenly marking a breeders as non-breeder. I think it should be needed another parameter\/matrix. But I don't know a lot about this, I am just starting ^^U",
+        "user": "U020D3400HW",
+        "ts": "1621341147.007600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Bw8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm not quite sure, but I think is that model design there was not account for the error of mistakenly marking a breeders as non-breeder. I think it should be needed another parameter\/matrix. But I don't know a lot about this, I am just starting ^^U"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "8ddc7c10-1fc3-4fbf-a0ce-88a062fdedd3",
+        "type": "message",
+        "text": "*in that model",
+        "user": "U020D3400HW",
+        "ts": "1621341185.007800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R6=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "*in that model"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "34669a2a-fb1d-4630-bd28-137e12ca23cc",
+        "type": "message",
+        "text": "random question: where does the name multi-event come from to describe uncertainty on state assignment? why is that a multi-event?",
+        "user": "U021GG5HHMH",
+        "ts": "1621341430.009000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Wm=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "random question: where does the name multi-event come from to describe uncertainty on state assignment? why is that a multi-event?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341430.009000",
+        "reply_count": 5,
+        "reply_users_count": 4,
+        "latest_reply": "1621342235.015100",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U022TBQHXSL",
+            "U021GG5HHMH",
+            "U021MSK4PPH"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621341489.009900"
+            },
+            {
+                "user": "U022TBQHXSL",
+                "ts": "1621341772.012500"
+            },
+            {
+                "user": "U022TBQHXSL",
+                "ts": "1621341777.012900"
+            },
+            {
+                "user": "U021GG5HHMH",
+                "ts": "1621341943.014100"
+            },
+            {
+                "user": "U021MSK4PPH",
+                "ts": "1621342235.015100"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621342235.015100",
+        "reactions": [
+            {
+                "name": "rolling_on_the_floor_laughing",
+                "users": [
+                    "U021GG5HHMH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "cc042fa4-d360-45fc-baee-db214ec75f9a",
+        "type": "message",
+        "text": "I approve of this question <@U021GG5HHMH>! No idea, and not necessarily intuitive… where does it come from <@U01ULDNCVKP>?",
+        "user": "U01UMBR0K38",
+        "ts": "1621341489.009900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "j=L",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I approve of this question "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U021GG5HHMH"
+                            },
+                            {
+                                "type": "text",
+                                "text": "! No idea, and not necessarily intuitive… where does it come from "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": "?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341430.009000",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "5772bff8-202c-496f-b34a-a3c7d9327962",
+        "type": "message",
+        "text": "yeah... model knows betaB and betaNB parameters... but it seems that we might assign the status correctly or we might not be sure... but we can't make a mistake. I just wonder if this is a simplification assumption?",
+        "user": "U022EH7TE81",
+        "ts": "1621341514.010400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gbdf1cf579b2",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/bdf1cf579b2861e5ab8d286f2c61807e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "",
+            "real_name": "Andjela",
+            "display_name": "Andjela",
+            "team": "T01UVLT5RS8",
+            "name": "andela.davidovic",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "G=4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah... model knows betaB and betaNB parameters... but it seems that we might assign the status correctly or we might not be sure... but we can't make a mistake. I just wonder if this is a simplification assumption?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "0b219870-837f-42c7-8775-57059f9f67fe",
+        "type": "message",
+        "text": "it's possible to set an uncertain state at the first capture. It will be necessary to write the initial probs with a state assignment probability",
+        "user": "U01UQ29DG3C",
+        "ts": "1621341516.010700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "417549c44871",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1973010614613_417549c448719bc2a57e_72.jpg",
+            "first_name": "",
+            "real_name": "Maud Quéroué",
+            "display_name": "Maud Quéroué",
+            "team": "T01UVLT5RS8",
+            "name": "maud.queroue",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01UQ29DG3C",
+            "ts": "1621341868.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ge33",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it's possible to set an uncertain state at the first capture. It will be necessary to write the initial probs with a state assignment probability"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "f6aa9e80-de6b-4c40-83d9-17481ab4d34d",
+        "type": "message",
+        "text": "Can these multievent models also deal with different types of observation? Could you combine visual e.g. resight and recapture data or would this break the sampling assumption of the model?",
+        "user": "U022AJN2J81",
+        "ts": "1621341523.011000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g4204da4251d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/4204da4251de1d372da5888b2bf236bd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Michael Roast",
+            "display_name": "Michael Roast",
+            "team": "T01UVLT5RS8",
+            "name": "michaeljroast",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MCe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Can these multievent models also deal with different types of observation? Could you combine visual e.g. resight and recapture data or would this break the sampling assumption of the model?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341523.011000",
+        "reply_count": 6,
+        "reply_users_count": 3,
+        "latest_reply": "1621342213.014900",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U01UMBR0K38",
+            "U022AJN2J81"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621341588.011200"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621341608.011400"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621341721.011900"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621341777.012700"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621341791.013200"
+            },
+            {
+                "user": "U022AJN2J81",
+                "ts": "1621342213.014900"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "1cab2cf4-f4b3-48e4-81fb-0c9f42449158",
+        "type": "message",
+        "text": "Yes, you can include several events, eg resighted, recaptured, then even several more steps because you cannot always make all the measurements at each capture",
+        "user": "U01UDBUETM5",
+        "ts": "1621341588.011200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/oPnC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, you can include several events, eg resighted, recaptured, then even several more steps because you cannot always make all the measurements at each capture"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341523.011000",
+        "parent_user_id": "U022AJN2J81"
+    },
+    {
+        "client_msg_id": "46b50443-0ea6-412e-8459-cb0be9a6767c",
+        "type": "message",
+        "text": "so you can even decompose the observation matrix in several steps",
+        "user": "U01UDBUETM5",
+        "ts": "1621341608.011400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LqOR6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so you can even decompose the observation matrix in several steps"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341523.011000",
+        "parent_user_id": "U022AJN2J81",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021NFFDJAX",
+                    "U022AJN2J81"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "f368ed9b-f22b-4b15-a159-31223bf77472",
+        "type": "message",
+        "text": "Andjela, do you mean if an individual is considered non-breeder (because it was not breeding during capture occasion) but is in fact breeder during the same season but few days later? If it is your question sorry... i don't have the answer but i also ask to myself how to consider that.",
+        "user": "U0203L8NKE2",
+        "ts": "1621341653.011700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g830b7c598b6",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/830b7c598b64700d091bd215e65d01f4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-72.png",
+            "first_name": "SAUNIER",
+            "real_name": "SAUNIER Merlène",
+            "display_name": "Merlène Saunier",
+            "team": "T01UVLT5RS8",
+            "name": "merlene.saunier",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JlMBk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Andjela, do you mean if an individual is considered non-breeder (because it was not breeding during capture occasion) but is in fact breeder during the same season but few days later? If it is your question sorry... i don't have the answer but i also ask to myself how to consider that."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "96bae04b-370d-44db-b293-e3d3de02e013",
+        "type": "message",
+        "text": "For combining different types of observations, i.e. resightings and captures, you do not need a multi-event model. This can be included into a multi-state model, or even a CJS model. It will be an extension of your observation matrix.",
+        "user": "U01UMBR0K38",
+        "ts": "1621341721.011900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CMA0i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For combining different types of observations, i.e. resightings and captures, you do not need a multi-event model. This can be included into a multi-state model, or even a CJS model. It will be an extension of your observation matrix."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341523.011000",
+        "parent_user_id": "U022AJN2J81",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U022AJN2J81"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "ec58d820-4d31-412e-bf90-337b169d3408",
+        "type": "message",
+        "text": "In my case, for example, you may assign the status 'non breeder' for birds that are not nesting in a nest box. However, in our study area there are few natural cavities in which a little proportion of our 'non-breeders' may be actually breeding, so the assigment is not perfect.",
+        "user": "U020D3400HW",
+        "ts": "1621341756.012300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Iejy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In my case, for example, you may assign the status 'non breeder' for birds that are not nesting in a nest box. However, in our study area there are few natural cavities in which a little proportion of our 'non-breeders' may be actually breeding, so the assigment is not perfect."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "27de453f-baba-49d6-83af-1867505cb493",
+        "type": "message",
+        "text": "Roger has the answer:",
+        "user": "U022TBQHXSL",
+        "ts": "1621341772.012500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1556f3d5f076",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2095462455216_1556f3d5f076f06bfa54_72.jpg",
+            "first_name": "Dan",
+            "real_name": "Dan Linden",
+            "display_name": "Dan Linden",
+            "team": "T01UVLT5RS8",
+            "name": "daniel.linden",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sjU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Roger has the answer:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341430.009000",
+        "parent_user_id": "U021GG5HHMH",
+        "reactions": [
+            {
+                "name": "nerd_face",
+                "users": [
+                    "U022TBQHXSL",
+                    "U021GG5HHMH"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "5ac8855c-cafc-4d82-9df5-2a6cca3fc709",
+        "type": "message",
+        "text": "But, if there is uncertainty in those observations, e.g. you cannot assign breeding state with resightings, only with captures, then you need a multi-event.",
+        "user": "U01UMBR0K38",
+        "ts": "1621341777.012700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HG=q2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But, if there is uncertainty in those observations, e.g. you cannot assign breeding state with resightings, only with captures, then you need a multi-event."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341523.011000",
+        "parent_user_id": "U022AJN2J81",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U020D3400HW"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "774bba44-658e-4114-afec-4068d99e7422",
+        "type": "message",
+        "text": "<https:\/\/multievent.sciencesconf.org\/conference\/multievent\/pages\/Pradel2005Bcs.pdf>",
+        "user": "U022TBQHXSL",
+        "ts": "1621341777.012900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1556f3d5f076",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2095462455216_1556f3d5f076f06bfa54_72.jpg",
+            "first_name": "Dan",
+            "real_name": "Dan Linden",
+            "display_name": "Dan Linden",
+            "team": "T01UVLT5RS8",
+            "name": "daniel.linden",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6Tg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "url": "https:\/\/multievent.sciencesconf.org\/conference\/multievent\/pages\/Pradel2005Bcs.pdf"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341430.009000",
+        "parent_user_id": "U021GG5HHMH",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021GG5HHMH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "8072a0c2-4f16-4b18-846e-8235f0668652",
+        "type": "message",
+        "text": "multievent is useful if one type of obs leads to some uncertainty in status, eg if you can’t know sex from resight but only from recaptures that would lead to unknown status :smiley:",
+        "user": "U01UDBUETM5",
+        "ts": "1621341791.013200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Wqv4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "multievent is useful if one type of obs leads to some uncertainty in status, eg if you can’t know sex from resight but only from recaptures that would lead to unknown status "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "smiley"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341523.011000",
+        "parent_user_id": "U022AJN2J81",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U020D3400HW",
+                    "U022AJN2J81"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "ba3ecc7a-e25d-4327-bccc-85955ee42afa",
+        "type": "message",
+        "text": "Cool - so that is the rationale, stolen from the pdf: \"The main aim of this article is to show how uncertainty in the assessment of state can be incorporated into the analysis of “multistate” CR data. The solution I propose puts an emphasis on the real nature of the data. Conceptually, it is not states that are observed but rather something, say an “event,” which reflects to some extent the underlying state, which is the ultimate object of the study. The new models are called “multievent” to reflect the nature of the data.\"",
+        "user": "U021GG5HHMH",
+        "ts": "1621341943.014100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9Cl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Cool - so that is the rationale, stolen from the pdf: \"The main aim of this article is to show how uncertainty in the assessment of state can be incorporated into the analysis of “multistate” CR data. The solution I propose puts an emphasis on the real nature of the data. Conceptually, it is not states that are observed but rather something, say an “event,” which reflects to some extent the underlying state, which is the ultimate object of the study. The new models are called “multievent” to reflect the nature of the data.\""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341430.009000",
+        "parent_user_id": "U021GG5HHMH",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UMBR0K38",
+                    "U022TBQHXSL"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fba7e693-43b0-4d01-b98e-8aee66b56d6a",
+        "type": "message",
+        "text": "Yeah.. or now... we study healthy\/ill birds... we can clearly catch a bird that is ill and we don't notice... and we mark it as healthy. There is a \"measurement mistake\" let's say.\nIt seems in this model it is not considered. Or I missed something.",
+        "user": "U022EH7TE81",
+        "ts": "1621342203.014700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gbdf1cf579b2",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/bdf1cf579b2861e5ab8d286f2c61807e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "",
+            "real_name": "Andjela",
+            "display_name": "Andjela",
+            "team": "T01UVLT5RS8",
+            "name": "andela.davidovic",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+HCS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeah.. or now... we study healthy\/ill birds... we can clearly catch a bird that is ill and we don't notice... and we mark it as healthy. There is a \"measurement mistake\" let's say.\nIt seems in this model it is not considered. Or I missed something."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "97692479-c47f-4b08-a584-0a6d07d68347",
+        "type": "message",
+        "text": "That's great thanks :slightly_smiling_face:",
+        "user": "U022AJN2J81",
+        "ts": "1621342213.014900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g4204da4251d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/4204da4251de1d372da5888b2bf236bd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Michael Roast",
+            "display_name": "Michael Roast",
+            "team": "T01UVLT5RS8",
+            "name": "michaeljroast",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PBpY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That's great thanks "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341523.011000",
+        "parent_user_id": "U022AJN2J81"
+    },
+    {
+        "client_msg_id": "402a7815-1721-4e64-b7f7-52b522b6f5a8",
+        "type": "message",
+        "text": "I think that this is what Roger Pradel had in mind: 1 true state-&gt;2 possible obs (events, like in ESURGE) if the individuals is resighted\/recaptured.",
+        "user": "U021MSK4PPH",
+        "ts": "1621342235.015100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jymi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think that this is what Roger Pradel had in mind: 1 true state->2 possible obs (events, like in ESURGE) if the individuals is resighted\/recaptured."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621341430.009000",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "c1a24a1d-b613-403d-b0c0-96fd1eef6044",
+        "type": "message",
+        "text": "<@U01UMBR0K38> <@U01ULDNCVKP> <@U01UDBUETM5> any thoughts on this? :sweat_smile:",
+        "user": "U020D3400HW",
+        "ts": "1621342382.015600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bRgr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UDBUETM5"
+                            },
+                            {
+                                "type": "text",
+                                "text": " any thoughts on this? "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "sweat_smile"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "type": "message",
+        "text": "again curiosity: I wonder why would the survival be higher for infected individuals (from an ecological point of view I mean?)",
+        "files": [
+            {
+                "id": "F0225BZB4TX",
+                "created": 1621342476,
+                "timestamp": 1621342476,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U021GG5HHMH",
+                "editable": false,
+                "size": 134541,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0225BZB4TX\/image.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0225BZB4TX\/download\/image.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_64.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_80.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_360.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 360,
+                "thumb_360_h": 225,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_480.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 480,
+                "thumb_480_h": 300,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_160.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_720.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720_w": 720,
+                "thumb_720_h": 450,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_800.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_800_w": 800,
+                "thumb_800_h": 500,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_960.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_960_w": 960,
+                "thumb_960_h": 600,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225BZB4TX-d2266e93e2\/image_1024.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 640,
+                "original_w": 1102,
+                "original_h": 689,
+                "thumb_tiny": "AwAeADDSAwc5NBYClJAGT0pmQVyKAHbqN1No7GgB272paYeh+tPoAQsBTeuef0oYfNSc+tAC\/wCelHH+RSc+tOCn+8aAE45\/wp24UbfUmlAx60Af\/9k=",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U021GG5HHMH\/F0225BZB4TX\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F0225BZB4TX-cfa318afab",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aZh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "again curiosity: I wonder why would the survival be higher for infected individuals (from an ecological point of view I mean?)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U021GG5HHMH",
+        "display_as_bot": false,
+        "ts": "1621342478.017600",
+        "thread_ts": "1621342478.017600",
+        "reply_count": 6,
+        "reply_users_count": 5,
+        "latest_reply": "1621345294.032300",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U021GG5HHMH",
+            "U022EA0060H",
+            "U021MSK4PPH",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621342628.020300"
+            },
+            {
+                "user": "U021GG5HHMH",
+                "ts": "1621342816.022800"
+            },
+            {
+                "user": "U022EA0060H",
+                "ts": "1621342939.023400"
+            },
+            {
+                "user": "U022EA0060H",
+                "ts": "1621342997.024300"
+            },
+            {
+                "user": "U021MSK4PPH",
+                "ts": "1621344339.028100"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621345294.032300"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621345294.032300"
+    },
+    {
+        "client_msg_id": "411f02ae-d1e0-409c-90df-d90af4864e5f",
+        "type": "message",
+        "text": "Having a higher detection probability for infected birds will be related to them tending to hang around bird feeders due to more limited foraging abilities (and so be more detectable) whereas healthy birds will move around more and hence be more likely to be missed.",
+        "user": "U022EA0060H",
+        "ts": "1621342488.017800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U022EA0060H",
+            "ts": "1621343206.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6w1z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Having a higher detection probability for infected birds will be related to them tending to hang around bird feeders due to more limited foraging abilities (and so be more detectable) whereas healthy birds will move around more and hence be more likely to be missed."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021GG5HHMH",
+                    "U021NFFDJAX",
+                    "U01UDBUETM5"
+                ],
+                "count": 3
+            }
+        ]
+    },
+    {
+        "client_msg_id": "13695770-9484-45a2-b262-6c23baf2fad2",
+        "type": "message",
+        "text": "You can include ‘error of assignment’ for this you would need to decompose the observation matrix in several steps 1° prob of detection 2° prob of  correct status assignement, check the list of HMMs applications, there are some examples very similar to your question",
+        "user": "U01UDBUETM5",
+        "ts": "1621342489.017900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8dI46",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You can include ‘error of assignment’ for this you would need to decompose the observation matrix in several steps 1° prob of detection 2° prob of  correct status assignement, check the list of HMMs applications, there are some examples very similar to your question"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "5b15b229-a046-4809-9e35-21e24fd137b4",
+        "type": "message",
+        "text": "About the finches : I thought the probability of remain sick was 1 ? So why recovery rate is 46% ? Did I miss something ?",
+        "user": "U021N133Q87",
+        "ts": "1621342605.019800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g85a50e90ff9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/85a50e90ff9817aeab7db144f9215c21.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "",
+            "real_name": "Maxime PASSERAULT",
+            "display_name": "Maxime PASSERAULT",
+            "team": "T01UVLT5RS8",
+            "name": "maxime.passerault",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "D\/ydW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "About the finches : I thought the probability of remain sick was 1 ? So why recovery rate is 46% ? Did I miss something ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342605.019800",
+        "reply_count": 4,
+        "reply_users_count": 3,
+        "latest_reply": "1621346797.036600",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U01ULDNCVKP",
+            "U021N133Q87"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621342871.023000"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621342970.023600"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621345351.032500"
+            },
+            {
+                "user": "U021N133Q87",
+                "ts": "1621346797.036600"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621346797.036600",
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U021MSHLUT1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "f8e89cea-b039-4824-92f6-16208c83a2cd",
+        "type": "message",
+        "text": "I don’t know this particular study but maybe an element of answer here ? <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NVB7BR\/p1621342488017800>",
+        "user": "U01UDBUETM5",
+        "ts": "1621342628.020300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NVB7BR\/p1621342488017800",
+                "fallback": "[May 18th, 2021 5:54 AM] hugh.hanmer: Having a higher detection probability for infected birds will related to them tending to hang around bird feeders due to more limited foraging abilities whereas healthy birds will move around more and hence be more likely to be missed.",
+                "ts": "1621342488.017800",
+                "author_id": "U022EA0060H",
+                "author_subname": "Hugh Hanmer",
+                "channel_id": "C01U8NVB7BR",
+                "channel_name": "questions-7-uncertainty-in-state-assignment",
+                "is_msg_unfurl": true,
+                "text": "Having a higher detection probability for infected birds will related to them tending to hang around bird feeders due to more limited foraging abilities whereas healthy birds will move around more and hence be more likely to be missed.",
+                "author_name": "Hugh Hanmer",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U022EA0060H",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_48.jpg",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NVB7BR\/p1621342488017800",
+                "footer": "Posted in #questions-7-uncertainty-in-state-assignment"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wEYxF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I don’t know this particular study but maybe an element of answer here ? "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NVB7BR\/p1621342488017800"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342478.017600",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "e12ed4c3-f033-4825-b1a3-17cd285813f9",
+        "type": "message",
+        "text": "In the housefinch illness example, didn't we assume that the prob. of transition between ill and health is zero? Why do we have estimates of psiIH in the last row of the results? I think I am missing something.",
+        "user": "U021MSHLUT1",
+        "ts": "1621342685.021800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "64b9d29a63ff",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2067594897605_64b9d29a63ff3f9d7f98_72.jpg",
+            "first_name": "",
+            "real_name": "Fabiola Iannarilli",
+            "display_name": "Fabiola Iannarilli",
+            "team": "T01UVLT5RS8",
+            "name": "fabiola.iannarilli",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BgE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In the housefinch illness example, didn't we assume that the prob. of transition between ill and health is zero? Why do we have estimates of psiIH in the last row of the results? I think I am missing something."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342685.021800",
+        "reply_count": 3,
+        "reply_users_count": 3,
+        "latest_reply": "1621345377.032700",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U01UMBR0K38",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621342991.023800"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621342992.024000"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621345377.032700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621345377.032700"
+    },
+    {
+        "client_msg_id": "43eb2df9-6283-41ea-bb13-7dd49b51be0a",
+        "type": "message",
+        "text": ":smiling_face_with_3_hearts: thank you!",
+        "user": "U020D3400HW",
+        "ts": "1621342706.022200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "l5+ht",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "smiling_face_with_3_hearts"
+                            },
+                            {
+                                "type": "text",
+                                "text": " thank you!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "30c97d50-4e4c-4773-9fa9-16e9c14b8952",
+        "type": "message",
+        "text": "Here is the link to the HMMs examples : <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01ULDWM7AR\/p1621332386023500>",
+        "user": "U01UDBUETM5",
+        "ts": "1621342746.022400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01ULDWM7AR\/p1621332386023500",
+                "fallback": "[May 18th, 2021 3:06 AM] olivier.gimenez: Here is <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html|a searchable list> of HMM analyses of capture-recapture data. I'll refer to that list again in the last lecture <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html>",
+                "ts": "1621332386.023500",
+                "author_id": "U01ULDNCVKP",
+                "author_subname": "Olivier Gimenez",
+                "channel_id": "C01ULDWM7AR",
+                "channel_name": "questions-6-transition-estimation",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "Here is <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html|a searchable list> of HMM analyses of capture-recapture data. I'll refer to that list again in the last lecture <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/slides\/applistHMM.html>",
+                "author_name": "Olivier Gimenez",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U01ULDNCVKP",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01ULDWM7AR\/p1621332386023500",
+                "footer": "Thread in #questions-6-transition-estimation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/1vm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Here is the link to the HMMs examples : "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01ULDWM7AR\/p1621332386023500"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81",
+        "reactions": [
+            {
+                "name": "astonished",
+                "users": [
+                    "U020D3400HW"
+                ],
+                "count": 1
+            },
+            {
+                "name": "star-struck",
+                "users": [
+                    "U0203L8NKE2"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022EH7TE81"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "2c7a03cd-d124-4f2d-99b3-eb03173e4778",
+        "type": "message",
+        "text": "Thanks <@U01UDBUETM5>. (when you happen to take a break from talking, I wonder if) do you happen to know in this specific case <@U01ULDNCVKP> !",
+        "user": "U021GG5HHMH",
+        "ts": "1621342816.022800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dr40l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UDBUETM5"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". (when you happen to take a break from talking, I wonder if) do you happen to know in this specific case "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342478.017600",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "b5c05aae-66ac-427c-86a3-491044ea2320",
+        "type": "message",
+        "text": "I think the example in the coding tutorial assumes that ill individuals can become healthy again.",
+        "user": "U01UMBR0K38",
+        "ts": "1621342871.023000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "67rwP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think the example in the coding tutorial assumes that ill individuals can become healthy again."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342605.019800",
+        "parent_user_id": "U021N133Q87",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021MSHLUT1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "08ea4ba7-3b37-4a60-8dfe-46463b848e2c",
+        "type": "message",
+        "text": "I think so - but also I don't think it necessarily kills them directly (in the short term at least which I think this dataset is) but it does prevent them from doing much else.",
+        "user": "U022EA0060H",
+        "ts": "1621342939.023400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U022EA0060H",
+            "ts": "1621343066.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "i7X",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think so - but also I don't think it necessarily kills them directly (in the short term at least which I think this dataset is) but it does prevent them from doing much else."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342478.017600",
+        "parent_user_id": "U021GG5HHMH",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021GG5HHMH"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c1d6ca1b-6316-41b9-9452-2b2a36030475",
+        "type": "message",
+        "text": "If you check in the transition matrix (again!), you can see that it is not 0 in that example :slightly_smiling_face:\n\nThat being said: Olivier also talked about a case with an in-curable disease. In that case, you are absolutely correct that recovery rate should be set to 0.",
+        "user": "U01UMBR0K38",
+        "ts": "1621342970.023600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5ZsD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you check in the transition matrix (again!), you can see that it is not 0 in that example "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n\nThat being said: Olivier also talked about a case with an in-curable disease. In that case, you are absolutely correct that recovery rate should be set to 0."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342605.019800",
+        "parent_user_id": "U021N133Q87"
+    },
+    {
+        "client_msg_id": "3f1a8be4-865c-4aa1-807f-3c36cd3f3251",
+        "type": "message",
+        "text": "Hey Fabi :wave: you’re right there might be a problem here..maybe the results were from the model from the live demo assuming individuals can recover <@U01ULDNCVKP> an idea ?",
+        "user": "U01UDBUETM5",
+        "ts": "1621342991.023800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/eJ\/X",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey Fabi "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wave"
+                            },
+                            {
+                                "type": "text",
+                                "text": " you’re right there might be a problem here..maybe the results were from the model from the live demo assuming individuals can recover "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " an idea ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342685.021800",
+        "parent_user_id": "U021MSHLUT1",
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U021MSHLUT1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "99109f60-965c-4bb7-aba4-11dc44072bc5",
+        "type": "message",
+        "text": "See answers above: <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NVB7BR\/p1621342605019800>",
+        "user": "U01UMBR0K38",
+        "ts": "1621342992.024000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NVB7BR\/p1621342605019800",
+                "fallback": "[May 18th, 2021 5:56 AM] maxime.passerault: About the finches : I thought the probability of remain sick was 1 ? So why recovery rate is 46% ? Did I miss something ?",
+                "ts": "1621342605.019800",
+                "author_id": "U021N133Q87",
+                "author_subname": "Maxime PASSERAULT",
+                "channel_id": "C01U8NVB7BR",
+                "channel_name": "questions-7-uncertainty-in-state-assignment",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "About the finches : I thought the probability of remain sick was 1 ? So why recovery rate is 46% ? Did I miss something ?",
+                "author_name": "Maxime PASSERAULT",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U021N133Q87",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/85a50e90ff9817aeab7db144f9215c21.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NVB7BR\/p1621342605019800",
+                "footer": "Thread in #questions-7-uncertainty-in-state-assignment"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vJC1W",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "See answers above: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NVB7BR\/p1621342605019800"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342685.021800",
+        "parent_user_id": "U021MSHLUT1",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021MSHLUT1"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a51badbd-9087-46a2-be97-3874ca418e48",
+        "type": "message",
+        "text": "I've read some of the papers as I'm working on a vaguely similar system but can't remember the specifics off the top of head!",
+        "user": "U022EA0060H",
+        "ts": "1621342997.024300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "av6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I've read some of the papers as I'm working on a vaguely similar system but can't remember the specifics off the top of head!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342478.017600",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "5008a1f1-43c6-4ad4-925f-2799378dcdbe",
+        "type": "message",
+        "text": "Ok thanks.",
+        "user": "U022EH7TE81",
+        "ts": "1621343066.024700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gbdf1cf579b2",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/bdf1cf579b2861e5ab8d286f2c61807e.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-72.png",
+            "first_name": "",
+            "real_name": "Andjela",
+            "display_name": "Andjela",
+            "team": "T01UVLT5RS8",
+            "name": "andela.davidovic",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Fp=e",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok thanks."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340560.006700",
+        "parent_user_id": "U022EH7TE81"
+    },
+    {
+        "client_msg_id": "d6190e99-c766-44d8-8578-4e6fe21f6952",
+        "type": "message",
+        "text": "hopefully beginning next year !",
+        "user": "U0228TE85EG",
+        "ts": "1621343214.025200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g949b0e022e9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/949b0e022e9f28ffa75d1c1741a43ab2.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Cecile Richard-Hansen",
+            "display_name": "Cecile Richard-Hansen",
+            "team": "T01UVLT5RS8",
+            "name": "cecile.richard-hansen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jir4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hopefully beginning next year !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340131.003300",
+        "parent_user_id": "U01UMBR0K38"
+    },
+    {
+        "client_msg_id": "e259cdf2-61ed-424f-8a1e-77ac0243b44c",
+        "type": "message",
+        "text": "Oooh exciting :star-struck:",
+        "user": "U01UMBR0K38",
+        "ts": "1621343243.025400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kR3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oooh exciting "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "star-struck"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340131.003300",
+        "parent_user_id": "U01UMBR0K38"
+    },
+    {
+        "client_msg_id": "2a451ee1-326e-48bf-99b3-40fa574c06ab",
+        "type": "message",
+        "text": "woop woop <@U021MSK4PPH> <@U021ZJR0ZKP>",
+        "user": "U01UDBUETM5",
+        "ts": "1621343462.026400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KyjMw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "woop woop "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U021MSK4PPH"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U021ZJR0ZKP"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "clap",
+                "users": [
+                    "U021W7G8Y14",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "Thanks for the philosophic moment <@U01ULDNCVKP>",
+        "files": [
+            {
+                "id": "F021TPHPT5M",
+                "created": 1621343549,
+                "timestamp": 1621343549,
+                "name": "Screenshot 2021-05-18 at 15.12.25.png",
+                "title": "Screenshot 2021-05-18 at 15.12.25.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U01UDBUETM5",
+                "editable": false,
+                "size": 501416,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F021TPHPT5M\/screenshot_2021-05-18_at_15.12.25.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F021TPHPT5M\/download\/screenshot_2021-05-18_at_15.12.25.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021TPHPT5M-79acb96a3b\/screenshot_2021-05-18_at_15.12.25_64.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021TPHPT5M-79acb96a3b\/screenshot_2021-05-18_at_15.12.25_80.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021TPHPT5M-79acb96a3b\/screenshot_2021-05-18_at_15.12.25_360.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 313,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021TPHPT5M-79acb96a3b\/screenshot_2021-05-18_at_15.12.25_480.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 418,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021TPHPT5M-79acb96a3b\/screenshot_2021-05-18_at_15.12.25_160.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "original_w": 491,
+                "original_h": 564,
+                "thumb_tiny": "AwAwACmnH3q5bv5q7fLHGMtVVEGD8w59jViNxCg2EE96BFwwrIMAKPoKikDRrgQg47iojMz\/APLTAPTHGTSq4aIoxK88gZNICoVKj5iAfSl3U123PwMDtT8UwIlYqeDipijGIygcDqelRxMWkVexPpVi4b7qn7vTFICBZivQ4qaDMrP8w3EYyapsrKxHNWrBlSRi\/wB3GDmgZHJE8T4cfQ9jTqsu0cu+GME8blJ9arfgaAFtF3b8fe28f1pJd20+x5pbJclmyQyDIxV4MgJdMb8YyBTYijEk2A6oQBzlhwam+VgcpknlnXjmrLSoDhpQcjoRVVltgwdZsEHgClYZJaW3lyeYHDLjg96vZH9w\/lVFHhjGFk3A0\/7QP9r86QH\/2Q==",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U01UDBUETM5\/F021TPHPT5M\/screenshot_2021-05-18_at_15.12.25.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F021TPHPT5M-5cb2a550a0",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jAIM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for the philosophic moment "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U01UDBUETM5",
+        "display_as_bot": false,
+        "ts": "1621343573.027100",
+        "reactions": [
+            {
+                "name": "laughing",
+                "users": [
+                    "U022EG3UKDX",
+                    "U021NFFDJAX",
+                    "U021MSHLUT1",
+                    "U0228RCCZ7E",
+                    "U021GG5HHMH"
+                ],
+                "count": 5
+            },
+            {
+                "name": "grin",
+                "users": [
+                    "U022F9QE5LH"
+                ],
+                "count": 1
+            },
+            {
+                "name": "joy",
+                "users": [
+                    "U0228RFP1V2",
+                    "U021QB26LLB",
+                    "U021JAGFEM8",
+                    "U01UNUU4Y14",
+                    "U022RRJ8KLY"
+                ],
+                "count": 5
+            }
+        ]
+    },
+    {
+        "client_msg_id": "9a744205-2646-47b8-bc1e-11584e635638",
+        "type": "message",
+        "text": "Faustino et al. (2004) and Conn &amp; Cooch (2009) concluded that disease is associated with lower survival but they reached this conclusion based on model-averaged estimates. Their papers deal with weekly survival probability, and results differed according to year. I don't know which year is included in this workshop example, but in one year the Cornell team also found higher survival in infected birds...",
+        "user": "U021MSK4PPH",
+        "ts": "1621344339.028100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MCyCb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Faustino et al. (2004) and Conn & Cooch (2009) concluded that disease is associated with lower survival but they reached this conclusion based on model-averaged estimates. Their papers deal with weekly survival probability, and results differed according to year. I don't know which year is included in this workshop example, but in one year the Cornell team also found higher survival in infected birds..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342478.017600",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "bc4fc8b5-35a8-4f2f-97d9-3ab67ca05cd5",
+        "type": "message",
+        "text": "Is there a preferred\/standardised way to present outputs from these models for paper writing? I have been looking at how recent papers have presented them but as we're discussing things thought I'd ask!",
+        "user": "U020J4MDZU0",
+        "ts": "1621344690.030400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae716ebe3268",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1994354335826_ae716ebe3268a5447e90_72.jpg",
+            "first_name": "",
+            "real_name": "Katharine Bowgen",
+            "display_name": "Katharine Bowgen",
+            "team": "T01UVLT5RS8",
+            "name": "katharine.bowgen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Gsn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is there a preferred\/standardised way to present outputs from these models for paper writing? I have been looking at how recent papers have presented them but as we're discussing things thought I'd ask!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344690.030400",
+        "reply_count": 6,
+        "reply_users_count": 4,
+        "latest_reply": "1621350680.038800",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U01UMBR0K38",
+            "U020J4MDZU0",
+            "U022SEENZKJ"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621344770.030500"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621344900.030700"
+            },
+            {
+                "user": "U020J4MDZU0",
+                "ts": "1621344928.031000"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621344968.031500"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621344993.031700"
+            },
+            {
+                "user": "U022SEENZKJ",
+                "ts": "1621350680.038800"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "4a41710d-2fb2-4893-bc9a-7fb91d1dee6b",
+        "type": "message",
+        "text": "Good question, not that I am aware of... nice to have the posterior distrib of important parameters somewhere, or at least a summary of it.",
+        "user": "U01UDBUETM5",
+        "ts": "1621344770.030500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yRF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good question, not that I am aware of... nice to have the posterior distrib of important parameters somewhere, or at least a summary of it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344690.030400",
+        "parent_user_id": "U020J4MDZU0",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U020J4MDZU0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fa42b8c3-3212-4977-a7d5-5941bfb4fde0",
+        "type": "message",
+        "text": "There are no “official” guidelines. How you present results should depend on the question you want to answer \/ result you want to show.\nTwo things I think are important:\n\n1. ALWAYS plot uncertainty\n2. Have plots of posterior distributions, and a table with summary stats, of all important parameters in the Supplementary ",
+        "user": "U01UMBR0K38",
+        "ts": "1621344900.030700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PWbp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There are no “official” guidelines. How you present results should depend on the question you want to answer \/ result you want to show.\nTwo things I think are important:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "ALWAYS plot uncertainty"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Have plots of posterior distributions, and a table with summary stats, of all important parameters in the Supplementary "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344690.030400",
+        "parent_user_id": "U020J4MDZU0",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021NFFDJAX",
+                    "U020J4MDZU0",
+                    "U0228RCCZ7E",
+                    "U0228RFP1V2",
+                    "U022TBQHXSL",
+                    "U021W7G8Y14"
+                ],
+                "count": 6
+            }
+        ]
+    },
+    {
+        "client_msg_id": "5d631640-76b7-4d84-ab5e-d7c2210cc4c9",
+        "type": "message",
+        "text": "Thank you both !",
+        "user": "U020J4MDZU0",
+        "ts": "1621344928.031000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae716ebe3268",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1994354335826_ae716ebe3268a5447e90_72.jpg",
+            "first_name": "",
+            "real_name": "Katharine Bowgen",
+            "display_name": "Katharine Bowgen",
+            "team": "T01UVLT5RS8",
+            "name": "katharine.bowgen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dpJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you both !"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344690.030400",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "fdc1e08e-4582-4b63-a712-45b3638b687d",
+        "type": "message",
+        "text": "Also, in-text we typically present results as either:\n\nmean [95% CI]\n\nor\n\nmedian [95% CI]",
+        "user": "U01UMBR0K38",
+        "ts": "1621344968.031500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "q9O",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, in-text we typically present results as either:\n\nmean [95% CI]\n\nor\n\nmedian [95% CI]"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344690.030400",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "c8e3c56e-e4a0-426a-9fb8-539f3141228b",
+        "type": "message",
+        "text": "Depending on your results, you may also want to use a different CI (credible interval).",
+        "user": "U01UMBR0K38",
+        "ts": "1621344993.031700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ImmlR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Depending on your results, you may also want to use a different CI (credible interval)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344690.030400",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "b242f623-fba1-4119-9bee-1bb86ea0ba4c",
+        "type": "message",
+        "text": "Indeeeeeeeeeeeeeed neighbour :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621345058.031900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IO9m",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Indeeeeeeeeeeeeeed neighbour "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340131.003300",
+        "parent_user_id": "U01UMBR0K38"
+    },
+    {
+        "client_msg_id": "1de596b0-b35d-4da4-8ce8-05c510a497e4",
+        "type": "message",
+        "text": "It's the year with fewer data, and the results are not very convincing I'd say. Conn and Cooch got more reliable results with the other year, which we don't have. I might ask Paul or Evan :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621345294.032300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qgj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It's the year with fewer data, and the results are not very convincing I'd say. Conn and Cooch got more reliable results with the other year, which we don't have. I might ask Paul or Evan "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342478.017600",
+        "parent_user_id": "U021GG5HHMH",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U022EA0060H"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "29c26464-b96f-4cd0-a2ec-8ec6ffc25727",
+        "type": "message",
+        "text": "Sorry for the confusion. Recovery is possible in the house finch example. I showed the transition matrix for an incurable disease for the sake of illustration only.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621345351.032500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nWk1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sorry for the confusion. Recovery is possible in the house finch example. I showed the transition matrix for an incurable disease for the sake of illustration only."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342605.019800",
+        "parent_user_id": "U021N133Q87"
+    },
+    {
+        "client_msg_id": "4bda91f5-d741-4085-b8a1-f0a0d1014d5a",
+        "type": "message",
+        "text": "Sorry for the confusion. Recovery is possible in the house finch example. I showed the transition matrix for an incurable disease for the sake of illustration only.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621345377.032700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5GyxN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sorry for the confusion. Recovery is possible in the house finch example. I showed the transition matrix for an incurable disease for the sake of illustration only."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342685.021800",
+        "parent_user_id": "U021MSHLUT1"
+    },
+    {
+        "client_msg_id": "9ee88248-7445-4675-b0d5-866582d67c7e",
+        "type": "message",
+        "text": "I have not understood very well the meaning of \"pi\" in results. In the example of wolves we saw the following results. Do you mind to quickly define again what is the meaning of pi being equal to 0.62?",
+        "user": "U020E0D34F2",
+        "ts": "1621346057.035300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "f7c80b1312f6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-22\/1990421115827_f7c80b1312f67e6a5c9a_72.jpg",
+            "first_name": "",
+            "real_name": "Ana Morales González",
+            "display_name": "Ana Morales González",
+            "team": "T01UVLT5RS8",
+            "name": "moralesglezana",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1ev",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have not understood very well the meaning of \"pi\" in results. In the example of wolves we saw the following results. Do you mind to quickly define again what is the meaning of pi being equal to 0.62?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "",
+        "files": [
+            {
+                "id": "F0225LGFEDT",
+                "created": 1621346062,
+                "timestamp": 1621346062,
+                "name": "image.png",
+                "title": "image.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U020E0D34F2",
+                "editable": false,
+                "size": 35949,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0225LGFEDT\/image.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0225LGFEDT\/download\/image.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225LGFEDT-613ca47b45\/image_64.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225LGFEDT-613ca47b45\/image_80.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225LGFEDT-613ca47b45\/image_360.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 360,
+                "thumb_360_h": 93,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225LGFEDT-613ca47b45\/image_480.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 480,
+                "thumb_480_h": 124,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225LGFEDT-613ca47b45\/image_160.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225LGFEDT-613ca47b45\/image_720.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720_w": 720,
+                "thumb_720_h": 186,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0225LGFEDT-613ca47b45\/image_800.png?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_800_w": 800,
+                "thumb_800_h": 207,
+                "original_w": 870,
+                "original_h": 225,
+                "thumb_tiny": "AwAMADDRPI59aTnbj+lA6dutHb8PSmAd8\/XtQBjt3oPf8aOx+tABjilI5FJ\/B\/8AWpW6igD\/2Q==",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U020E0D34F2\/F0225LGFEDT\/image.png",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F0225LGFEDT-460f72443e",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "user": "U020E0D34F2",
+        "display_as_bot": false,
+        "ts": "1621346065.035400"
+    },
+    {
+        "client_msg_id": "01f08092-9e57-4c23-a0ed-35cdfe8b40f6",
+        "type": "message",
+        "text": "Thank you :slightly_smiling_face:",
+        "user": "U020E0D34F2",
+        "ts": "1621346098.035600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "f7c80b1312f6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-22\/1990421115827_f7c80b1312f67e6a5c9a_72.jpg",
+            "first_name": "",
+            "real_name": "Ana Morales González",
+            "display_name": "Ana Morales González",
+            "team": "T01UVLT5RS8",
+            "name": "moralesglezana",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fFVR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346098.035600",
+        "reply_count": 7,
+        "reply_users_count": 3,
+        "latest_reply": "1621349461.038500",
+        "reply_users": [
+            "U01UDBUETM5",
+            "U020E0D34F2",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621346315.035700"
+            },
+            {
+                "user": "U020E0D34F2",
+                "ts": "1621346543.036100"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621346703.036300"
+            },
+            {
+                "user": "U020E0D34F2",
+                "ts": "1621348810.037800"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621348875.038000"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621348957.038200"
+            },
+            {
+                "user": "U020E0D34F2",
+                "ts": "1621349461.038500"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621349461.038500"
+    },
+    {
+        "client_msg_id": "65c2a16d-bc94-4b90-bfc0-74be1971fd0f",
+        "type": "message",
+        "text": "here we considered two alive states - not sure what example it was but if it’s the wolves it might refer to dominant and subordinates. So here pi is the probability for an individual to belong to state dominant, 1-pi to belong to subordinate",
+        "user": "U01UDBUETM5",
+        "ts": "1621346315.035700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01UDBUETM5",
+            "ts": "1621346335.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nKmn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "here we considered two alive states - not sure what example it was but if it’s the wolves it might refer to dominant and subordinates. So here pi is the probability for an individual to belong to state dominant, 1-pi to belong to subordinate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346098.035600",
+        "parent_user_id": "U020E0D34F2"
+    },
+    {
+        "client_msg_id": "9b04f0e9-b11b-4896-b94e-15cee28e29c1",
+        "type": "message",
+        "text": "Thank you! I see it now",
+        "user": "U020E0D34F2",
+        "ts": "1621346543.036100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "f7c80b1312f6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-22\/1990421115827_f7c80b1312f67e6a5c9a_72.jpg",
+            "first_name": "",
+            "real_name": "Ana Morales González",
+            "display_name": "Ana Morales González",
+            "team": "T01UVLT5RS8",
+            "name": "moralesglezana",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "K9otC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you! I see it now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346098.035600",
+        "parent_user_id": "U020E0D34F2"
+    },
+    {
+        "client_msg_id": "cacf81d5-7f05-450c-b594-d116edf07826",
+        "type": "message",
+        "text": "Just bear in mind that the interpretation of the classes of heterogeneity is made a posteriori. The model doesn't know about dominant\/subordinate, just alive in class 1 or class 2.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621346703.036300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VcXR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just bear in mind that the interpretation of the classes of heterogeneity is made a posteriori. The model doesn't know about dominant\/subordinate, just alive in class 1 or class 2."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346098.035600",
+        "parent_user_id": "U020E0D34F2",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UDBUETM5",
+                    "U020E0D34F2"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "3127824f-1c2c-407d-a7e5-f8aa966a1724",
+        "type": "message",
+        "text": "ok. Thank you",
+        "user": "U021N133Q87",
+        "ts": "1621346797.036600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g85a50e90ff9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/85a50e90ff9817aeab7db144f9215c21.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png",
+            "first_name": "",
+            "real_name": "Maxime PASSERAULT",
+            "display_name": "Maxime PASSERAULT",
+            "team": "T01UVLT5RS8",
+            "name": "maxime.passerault",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Ywn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok. Thank you"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621342605.019800",
+        "parent_user_id": "U021N133Q87"
+    },
+    {
+        "client_msg_id": "d8e5dca3-ec83-49d0-893b-785f98b33100",
+        "type": "message",
+        "text": "Giant otters in Dam lake in French guiana..",
+        "user": "U0228TE85EG",
+        "ts": "1621347056.036800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g949b0e022e9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/949b0e022e9f28ffa75d1c1741a43ab2.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Cecile Richard-Hansen",
+            "display_name": "Cecile Richard-Hansen",
+            "team": "T01UVLT5RS8",
+            "name": "cecile.richard-hansen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6FO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Giant otters in Dam lake in French guiana.."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340131.003300",
+        "parent_user_id": "U01UMBR0K38"
+    },
+    {
+        "client_msg_id": "ee7485d9-a28d-46f5-ab30-c6476caa8082",
+        "type": "message",
+        "text": "Olivier, not neighbour for long time, coming back to French guiana in september",
+        "user": "U0228TE85EG",
+        "ts": "1621347100.037200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g949b0e022e9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/949b0e022e9f28ffa75d1c1741a43ab2.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Cecile Richard-Hansen",
+            "display_name": "Cecile Richard-Hansen",
+            "team": "T01UVLT5RS8",
+            "name": "cecile.richard-hansen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dyre",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Olivier, not neighbour for long time, coming back to French guiana in september"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340131.003300",
+        "parent_user_id": "U01UMBR0K38"
+    },
+    {
+        "client_msg_id": "2b05542c-4b23-4022-ac91-be529d6270bf",
+        "type": "message",
+        "text": "Bummer, I didn't know...",
+        "user": "U01ULDNCVKP",
+        "ts": "1621347235.037400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XQS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Bummer, I didn't know..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340131.003300",
+        "parent_user_id": "U01UMBR0K38"
+    },
+    {
+        "client_msg_id": "2f61e777-0784-4f3f-9715-145c44f4d6c4",
+        "type": "message",
+        "text": "will come back in Montpellier often",
+        "user": "U0228TE85EG",
+        "ts": "1621347541.037600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g949b0e022e9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/949b0e022e9f28ffa75d1c1741a43ab2.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Cecile Richard-Hansen",
+            "display_name": "Cecile Richard-Hansen",
+            "team": "T01UVLT5RS8",
+            "name": "cecile.richard-hansen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZAI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "will come back in Montpellier often"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621340131.003300",
+        "parent_user_id": "U01UMBR0K38",
+        "reactions": [
+            {
+                "name": "smile",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "98d401f0-20b1-4ae0-a04a-acc5a0c5f040",
+        "type": "message",
+        "text": "If p1 is telling us that the detection probability for individuals in class 1 is 0.38, pi is telling us the same, i.e., that a 62% of individuals belonging to class 1 is being non-detected? I am not sure if I got it right",
+        "user": "U020E0D34F2",
+        "ts": "1621348810.037800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "f7c80b1312f6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-22\/1990421115827_f7c80b1312f67e6a5c9a_72.jpg",
+            "first_name": "",
+            "real_name": "Ana Morales González",
+            "display_name": "Ana Morales González",
+            "team": "T01UVLT5RS8",
+            "name": "moralesglezana",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5qUE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If p1 is telling us that the detection probability for individuals in class 1 is 0.38, pi is telling us the same, i.e., that a 62% of individuals belonging to class 1 is being non-detected? I am not sure if I got it right"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346098.035600",
+        "parent_user_id": "U020E0D34F2"
+    },
+    {
+        "client_msg_id": "1d15724e-9796-4454-963e-5b4b5624fa0f",
+        "type": "message",
+        "text": "pi is telling us that 62% of individuals belong to class 1 so they have 0.38 detection rate",
+        "user": "U01UDBUETM5",
+        "ts": "1621348875.038000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kFry",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "pi is telling us that 62% of individuals belong to class 1 so they have 0.38 detection rate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346098.035600",
+        "parent_user_id": "U020E0D34F2"
+    },
+    {
+        "client_msg_id": "f4f2ddf9-7cdd-4bae-ae1b-e870c3eceddd",
+        "type": "message",
+        "text": "which also means here that 0.38% of individuals belong to class 2 with 0.5 detection rate",
+        "user": "U01UDBUETM5",
+        "ts": "1621348957.038200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NJGwl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "which also means here that 0.38% of individuals belong to class 2 with 0.5 detection rate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346098.035600",
+        "parent_user_id": "U020E0D34F2"
+    },
+    {
+        "client_msg_id": "7ab36949-dd9c-41aa-9697-c45bf2b256a2",
+        "type": "message",
+        "text": "Ok Sarah, thank you. I am just a bit confuse by the fact that the detection probability for ind at class 1 is 1 - the probability for an ind to belong to class 1",
+        "user": "U020E0D34F2",
+        "ts": "1621349461.038500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "f7c80b1312f6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-22\/1990421115827_f7c80b1312f67e6a5c9a_72.jpg",
+            "first_name": "",
+            "real_name": "Ana Morales González",
+            "display_name": "Ana Morales González",
+            "team": "T01UVLT5RS8",
+            "name": "moralesglezana",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jSb1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok Sarah, thank you. I am just a bit confuse by the fact that the detection probability for ind at class 1 is 1 - the probability for an ind to belong to class 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621346098.035600",
+        "parent_user_id": "U020E0D34F2"
+    },
+    {
+        "client_msg_id": "2da1f464-52d1-4205-a0d2-dd326b0957f3",
+        "type": "message",
+        "text": "Hi, a short follow-up question on the one from Katherine: If one of the parameters of interest is for instance phi[k,t,i] where k=9 states, t=10 time occasions, i=1000 individuals, would you need to provide traceplots &amp; Rhats for all combinations (9x10x1000)? Or would an alternative be to select randomly 20 combinations of phi and show those only?",
+        "user": "U022SEENZKJ",
+        "ts": "1621350680.038800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "61a14eb47f86",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2067630993621_61a14eb47f86bef4bee8_72.jpg",
+            "first_name": "",
+            "real_name": "Magali Frauendorf",
+            "display_name": "Magali Frauendorf",
+            "team": "T01UVLT5RS8",
+            "name": "m.frauendorf",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "z3Ba",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi, a short follow-up question on the one from Katherine: If one of the parameters of interest is for instance phi[k,t,i] where k=9 states, t=10 time occasions, i=1000 individuals, would you need to provide traceplots & Rhats for all combinations (9x10x1000)? Or would an alternative be to select randomly 20 combinations of phi and show those only?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621344690.030400",
+        "parent_user_id": "U020J4MDZU0"
+    }
+]

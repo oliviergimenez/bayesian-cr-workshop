@@ -1,0 +1,26 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618810124.000200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1618810385.000300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “crash-course-bayes-mcmc” to “questions-crash-course-bayes-mcmc”",
+        "old_name": "crash-course-bayes-mcmc",
+        "name": "questions-crash-course-bayes-mcmc"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1618810678.000400",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class on \"Crash course on Bayesian statistics and MCMC algorithms\".",
+        "purpose": "Questions for class on \"Crash course on Bayesian statistics and MCMC algorithms\"."
+    }
+]

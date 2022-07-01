@@ -1,0 +1,19 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_name",
+        "ts": "1621161957.009200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has renamed the channel from “questions-intro-nimble” to “questions-3-intro-nimble”",
+        "old_name": "questions-intro-nimble",
+        "name": "questions-3-intro-nimble"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1621161965.009300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class\/worksheet on \"Free the modeler in you: Introduction to Nimble\".",
+        "purpose": "Questions for class\/worksheet on \"Free the modeler in you: Introduction to Nimble\"."
+    }
+]

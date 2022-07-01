@@ -1,0 +1,729 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621161793.000200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1621161869.000300",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: Questions for class on \"Welcoming words\".",
+        "purpose": "Questions for class on \"Welcoming words\"."
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162451.000700",
+        "user": "U0202MQV9JL",
+        "text": "<@U0202MQV9JL> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162451.000900",
+        "user": "U01UFJNKPHD",
+        "text": "<@U01UFJNKPHD> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.001100",
+        "user": "U0220681GLS",
+        "text": "<@U0220681GLS> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.001300",
+        "user": "U020KNJ591N",
+        "text": "<@U020KNJ591N> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.001500",
+        "user": "U022375HF6Y",
+        "text": "<@U022375HF6Y> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.001700",
+        "user": "U020081M3D4",
+        "text": "<@U020081M3D4> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.001900",
+        "user": "U0227J5DB97",
+        "text": "<@U0227J5DB97> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.002100",
+        "user": "U01UU6DLJ4A",
+        "text": "<@U01UU6DLJ4A> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.002300",
+        "user": "U021UUYTE85",
+        "text": "<@U021UUYTE85> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.002500",
+        "user": "U021NFFDJAX",
+        "text": "<@U021NFFDJAX> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.002700",
+        "user": "U021ZJQ81EG",
+        "text": "<@U021ZJQ81EG> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162452.002900",
+        "user": "U022DE43V09",
+        "text": "<@U022DE43V09> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.003100",
+        "user": "U01UC4TNYG7",
+        "text": "<@U01UC4TNYG7> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.003300",
+        "user": "U01UQUERHLM",
+        "text": "<@U01UQUERHLM> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.003500",
+        "user": "U02068B4332",
+        "text": "<@U02068B4332> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.003700",
+        "user": "U01UMBR0K38",
+        "text": "<@U01UMBR0K38> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.003900",
+        "user": "U021NH0HELA",
+        "text": "<@U021NH0HELA> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.004100",
+        "user": "U021NLZRYC9",
+        "text": "<@U021NLZRYC9> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.004300",
+        "user": "U021RJQBBGS",
+        "text": "<@U021RJQBBGS> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.004500",
+        "user": "U0208H4AQGG",
+        "text": "<@U0208H4AQGG> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.004700",
+        "user": "U01V7L10QL9",
+        "text": "<@U01V7L10QL9> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162453.004900",
+        "user": "U01UVRAEHH9",
+        "text": "<@U01UVRAEHH9> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.005100",
+        "user": "U01UXJ46T6W",
+        "text": "<@U01UXJ46T6W> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.005300",
+        "user": "U0227JKFEDA",
+        "text": "<@U0227JKFEDA> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.005500",
+        "user": "U01UUD6E2JE",
+        "text": "<@U01UUD6E2JE> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.005700",
+        "user": "U0202HMNUFK",
+        "text": "<@U0202HMNUFK> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.005900",
+        "user": "U020E4LNAN4",
+        "text": "<@U020E4LNAN4> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.006100",
+        "user": "U01UDRQ0JQ7",
+        "text": "<@U01UDRQ0JQ7> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.006300",
+        "user": "U01UWAUMLR0",
+        "text": "<@U01UWAUMLR0> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.006500",
+        "user": "U020D3400HW",
+        "text": "<@U020D3400HW> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162454.006700",
+        "user": "U01V17E8VFW",
+        "text": "<@U01V17E8VFW> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162455.006900",
+        "user": "U021XSXM726",
+        "text": "<@U021XSXM726> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162455.007100",
+        "user": "U021Y2G74H1",
+        "text": "<@U021Y2G74H1> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162455.007300",
+        "user": "U021U3RM8P3",
+        "text": "<@U021U3RM8P3> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162455.007500",
+        "user": "U020J4MDZU0",
+        "text": "<@U020J4MDZU0> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162455.007700",
+        "user": "U0220Q2Q0R0",
+        "text": "<@U0220Q2Q0R0> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162455.007900",
+        "user": "U01UUEU6N03",
+        "text": "<@U01UUEU6N03> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162455.008100",
+        "user": "U021QB26LLB",
+        "text": "<@U021QB26LLB> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162455.008300",
+        "user": "U0221EBNQF5",
+        "text": "<@U0221EBNQF5> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162456.008500",
+        "user": "U021QL792VA",
+        "text": "<@U021QL792VA> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162456.008700",
+        "user": "U0218E0HVPC",
+        "text": "<@U0218E0HVPC> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162456.008900",
+        "user": "U021BPLHD7X",
+        "text": "<@U021BPLHD7X> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162456.009100",
+        "user": "U02041USZ96",
+        "text": "<@U02041USZ96> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162456.009300",
+        "user": "U022QPZUP7S",
+        "text": "<@U022QPZUP7S> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162456.009500",
+        "user": "U0216SM0TPX",
+        "text": "<@U0216SM0TPX> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162456.009700",
+        "user": "U01UQ29DG3C",
+        "text": "<@U01UQ29DG3C> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162457.009900",
+        "user": "U0203L8NKE2",
+        "text": "<@U0203L8NKE2> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162457.010100",
+        "user": "U022AJN2J81",
+        "text": "<@U022AJN2J81> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162457.010300",
+        "user": "U020D2X7UQ5",
+        "text": "<@U020D2X7UQ5> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162457.010500",
+        "user": "U020E0D34F2",
+        "text": "<@U020E0D34F2> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162457.010700",
+        "user": "U01UCEJPHL7",
+        "text": "<@U01UCEJPHL7> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162457.010900",
+        "user": "U02003S87CJ",
+        "text": "<@U02003S87CJ> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162458.011100",
+        "user": "U022E31M0TB",
+        "text": "<@U022E31M0TB> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162458.011300",
+        "user": "U021VKN37C4",
+        "text": "<@U021VKN37C4> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162458.011500",
+        "user": "U022D8NR4LQ",
+        "text": "<@U022D8NR4LQ> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162458.011700",
+        "user": "U022QG0SZ7A",
+        "text": "<@U022QG0SZ7A> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162458.011900",
+        "user": "U01UNTD483G",
+        "text": "<@U01UNTD483G> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162458.012100",
+        "user": "U01UE9JJN07",
+        "text": "<@U01UE9JJN07> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162458.012300",
+        "user": "U021JAGFEM8",
+        "text": "<@U021JAGFEM8> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162458.012500",
+        "user": "U0203USKJRE",
+        "text": "<@U0203USKJRE> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162459.012700",
+        "user": "U01UDD8PE2K",
+        "text": "<@U01UDD8PE2K> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162459.012900",
+        "user": "U0207AP0RG9",
+        "text": "<@U0207AP0RG9> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162459.013100",
+        "user": "U01UN1DLELE",
+        "text": "<@U01UN1DLELE> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162459.013300",
+        "user": "U0205U97A64",
+        "text": "<@U0205U97A64> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162459.013500",
+        "user": "U02294L436V",
+        "text": "<@U02294L436V> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162459.013700",
+        "user": "U0204K8GCGG",
+        "text": "<@U0204K8GCGG> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162459.013900",
+        "user": "U0225K54L7K",
+        "text": "<@U0225K54L7K> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.014100",
+        "user": "U02041RP600",
+        "text": "<@U02041RP600> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.014300",
+        "user": "U020421P0P2",
+        "text": "<@U020421P0P2> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.014500",
+        "user": "U01UDBUETM5",
+        "text": "<@U01UDBUETM5> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.014700",
+        "user": "U021K37JWHM",
+        "text": "<@U021K37JWHM> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.014900",
+        "user": "U021WBZKEJ0",
+        "text": "<@U021WBZKEJ0> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.015100",
+        "user": "U01V2HK4AG4",
+        "text": "<@U01V2HK4AG4> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.015300",
+        "user": "U01UVC4RTA6",
+        "text": "<@U01UVC4RTA6> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.015500",
+        "user": "U020UJ5DD8V",
+        "text": "<@U020UJ5DD8V> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162460.015700",
+        "user": "U02253E63SQ",
+        "text": "<@U02253E63SQ> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162461.015900",
+        "user": "U021KUK5D40",
+        "text": "<@U021KUK5D40> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162461.016100",
+        "user": "U01UNUU4Y14",
+        "text": "<@U01UNUU4Y14> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162461.016300",
+        "user": "U021GG5HHMH",
+        "text": "<@U021GG5HHMH> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162461.016500",
+        "user": "U01V31ZSQ58",
+        "text": "<@U01V31ZSQ58> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621162461.016700",
+        "user": "U0222GJDNKT",
+        "text": "<@U0222GJDNKT> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621185521.017300",
+        "user": "U021YE7D5MK",
+        "text": "<@U021YE7D5MK> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621185521.017500",
+        "user": "U022E3XE8MP",
+        "text": "<@U022E3XE8MP> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621185521.017700",
+        "user": "U0221GWKPJ6",
+        "text": "<@U0221GWKPJ6> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621185522.017900",
+        "user": "U022EA0060H",
+        "text": "<@U022EA0060H> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621185522.018100",
+        "user": "U021LPT42H5",
+        "text": "<@U021LPT42H5> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621185522.018300",
+        "user": "U0227MDF1AQ",
+        "text": "<@U0227MDF1AQ> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621185522.018500",
+        "user": "U021YD0USER",
+        "text": "<@U021YD0USER> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1621185522.018700",
+        "user": "U0221UEL8RZ",
+        "text": "<@U0221UEL8RZ> has joined the channel",
+        "inviter": "U01ULDNCVKP"
+    }
+]

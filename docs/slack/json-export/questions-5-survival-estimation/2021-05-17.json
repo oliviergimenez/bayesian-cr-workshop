@@ -1,0 +1,3599 @@
+[
+    {
+        "client_msg_id": "1c7a612d-6600-48f4-a357-720891e6003e",
+        "type": "message",
+        "text": "There was clearly no science twitter back in the days...",
+        "user": "U01UMBR0K38",
+        "ts": "1621260651.024900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jtpL7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "There was clearly no science twitter back in the days..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "yum",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U021GG5HHMH"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "56cf5db2-785f-4c82-b94f-4c9e3b8977e9",
+        "type": "message",
+        "text": "Sorry, I said something wrong during the HMM\/capture-recapture lecture, and <@U01UDBUETM5> \/ <@U01UMBR0K38> are right, it's because we use dcat that we recode observations 1 and 2 and do not use 0. sorry for the confusion.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621261038.026700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1621261125.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ENPK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sorry, I said something wrong during the HMM\/capture-recapture lecture, and "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UDBUETM5"
+                            },
+                            {
+                                "type": "text",
+                                "text": " \/ "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            },
+                            {
+                                "type": "text",
+                                "text": " are right, it's because we use dcat that we recode observations 1 and 2 and do not use 0. sorry for the confusion."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d0e0c683-19f8-46a3-92f0-cafb054b0d92",
+        "type": "message",
+        "text": "This dataset sounds familiar... :stuck_out_tongue_closed_eyes:",
+        "user": "U020D3400HW",
+        "ts": "1621261244.028300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b12b82419a9c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1993631690741_b12b82419a9c5a0da16e_72.jpg",
+            "first_name": "",
+            "real_name": "Iraida Redondo",
+            "display_name": "Iraida Redondo",
+            "team": "T01UVLT5RS8",
+            "name": "iraida.redondo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5YXw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This dataset sounds familiar... "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "stuck_out_tongue_closed_eyes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "0f95a4a3-d543-4180-a069-83a070d0a9ed",
+        "type": "message",
+        "text": "Always that dipper dataset... :rolling_on_the_floor_laughing:",
+        "user": "U022EA0060H",
+        "ts": "1621261247.028400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kMtv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Always that dipper dataset... "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rolling_on_the_floor_laughing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "rolling_on_the_floor_laughing",
+                "users": [
+                    "U020D3400HW"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "27ceda47-ea0b-45cd-867a-13ee047f710d",
+        "type": "message",
+        "text": "Gilbert is still doing the fieldwork every year :exploding_head:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621261289.029400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Zo5z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Gilbert is still doing the fieldwork every year "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "exploding_head"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621261289.029400",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621262049.042900",
+        "reply_users": [
+            "U022RRJ8KLY"
+        ],
+        "replies": [
+            {
+                "user": "U022RRJ8KLY",
+                "ts": "1621262049.042900"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621262049.042900",
+        "reactions": [
+            {
+                "name": "heart_eyes",
+                "users": [
+                    "U020D3400HW",
+                    "U0208H4AQGG"
+                ],
+                "count": 2
+            },
+            {
+                "name": "clap",
+                "users": [
+                    "U0228RFP1V2",
+                    "U020421P0P2",
+                    "U021W7G8Y14",
+                    "U0228RCCZ7E",
+                    "U022EG3UKDX",
+                    "U021GG5HHMH"
+                ],
+                "count": 6
+            },
+            {
+                "name": "open_mouth",
+                "users": [
+                    "U0227JKFEDA",
+                    "U022EA0060H",
+                    "U0222LD8JCA",
+                    "U0221NMLRKL",
+                    "U0222LE4N5Q",
+                    "U020J4MDZU0"
+                ],
+                "count": 6
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022F9QE5LH",
+                    "U022EH7TE81"
+                ],
+                "count": 2
+            },
+            {
+                "name": "star-struck",
+                "users": [
+                    "U02041USZ96"
+                ],
+                "count": 1
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U022RRJ8KLY"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "cc465f62-e516-41e5-aa1e-df97f9b1090c",
+        "type": "message",
+        "text": "Yeaaaahhh! I just saw one of our kittiwakes in the slide show!!! a 21 year old bird that I saw yesterday incubating eggs (White Black left-Yellow Light Green Blue right)! Still alive yesterday! Has been breeding on this nest since year 2004. 14 chicks raised so far....",
+        "user": "U021MSK4PPH",
+        "ts": "1621261606.032900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=f4MW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeaaaahhh! I just saw one of our kittiwakes in the slide show!!! a 21 year old bird that I saw yesterday incubating eggs (White Black left-Yellow Light Green Blue right)! Still alive yesterday! Has been breeding on this nest since year 2004. 14 chicks raised so far...."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "star-struck",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C",
+                    "U0218E0HVPC",
+                    "U020421P0P2",
+                    "U021GG5HHMH",
+                    "U0222LD8JCA"
+                ],
+                "count": 6
+            },
+            {
+                "name": "heart",
+                "users": [
+                    "U020D3400HW",
+                    "U022EA0060H",
+                    "U021NFFDJAX",
+                    "U0222LE4N5Q",
+                    "U021VSZTV7G",
+                    "U021Y2G74H1",
+                    "U0203L8NKE2",
+                    "U022SE3F7KJ",
+                    "U0228RFP1V2",
+                    "U021W7G8Y14",
+                    "U022RRJ8KLY",
+                    "U0222M1S8SE"
+                ],
+                "count": 12
+            }
+        ]
+    },
+    {
+        "client_msg_id": "42d7852d-9aab-4d32-be89-b7e1bcb0814f",
+        "type": "message",
+        "text": "Are there still confounding parameter estimates in a fully time dependent model in a Bayesian framework for CJS?",
+        "user": "U021RJQBBGS",
+        "ts": "1621261746.037500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gbdb2118e7a3",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/bdb2118e7a3a5904ba468a0de66967cd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "",
+            "real_name": "David McGeachy",
+            "display_name": "David McGeachy",
+            "team": "T01UVLT5RS8",
+            "name": "david.mcgeachy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xPef",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are there still confounding parameter estimates in a fully time dependent model in a Bayesian framework for CJS?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621261746.037500",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621261827.038800",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621261796.038500"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621261827.038800"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621261827.038800"
+    },
+    {
+        "client_msg_id": "49a308c7-8fe2-49e0-8054-a3634119b2a0",
+        "type": "message",
+        "text": "Yes, this is still the same. At least as long as time-variation in parameters is not constrained in any way.",
+        "user": "U01UMBR0K38",
+        "ts": "1621261796.038500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8CA+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, this is still the same. At least as long as time-variation in parameters is not constrained in any way."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621261746.037500",
+        "parent_user_id": "U021RJQBBGS"
+    },
+    {
+        "client_msg_id": "59C44BCF-8843-4F3C-ACD3-74525E063566",
+        "type": "message",
+        "text": "Are there tips for reusing as much code as possible to limit redundancy when writing many versions of models <http:\/\/phi.pt|phi.pt> phi.p. Phitpt etc and all the other covariates we may want to test??",
+        "user": "U020081M3D4",
+        "ts": "1621261807.038700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g8b56cddfe24",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/8b56cddfe24db1c2956ddcbcc109e306.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0002-72.png",
+            "first_name": "",
+            "real_name": "Angela Guglielmino",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "angelahonora",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "p0UA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Are there tips for reusing as much code as possible to limit redundancy when writing many versions of models "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/phi.pt",
+                                "text": "phi.pt"
+                            },
+                            {
+                                "type": "text",
+                                "text": " phi.p. Phitpt etc and all the other covariates we may want to test??"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621261807.038700",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1621262148.043900",
+        "reply_users": [
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621262070.043500"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621262148.043900"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621262148.043900"
+    },
+    {
+        "client_msg_id": "8bd76562-e0f2-4f48-aea1-e139d13832bf",
+        "type": "message",
+        "text": "<@U01UDBUETM5> will talk about param redundancy later on :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621261827.038800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xR=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U01UDBUETM5"
+                            },
+                            {
+                                "type": "text",
+                                "text": " will talk about param redundancy later on "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621261746.037500",
+        "parent_user_id": "U021RJQBBGS"
+    },
+    {
+        "client_msg_id": "2ceb7620-63d1-4bb4-bb35-ea35d3365004",
+        "type": "message",
+        "text": "is the prior for survival always between 0 and 1 or do you sometimes bound it based on previous research for the species i.e between 0.6 and 0.9?",
+        "user": "U021RJQBBGS",
+        "ts": "1621262021.042600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gbdb2118e7a3",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/bdb2118e7a3a5904ba468a0de66967cd.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "",
+            "real_name": "David McGeachy",
+            "display_name": "David McGeachy",
+            "team": "T01UVLT5RS8",
+            "name": "david.mcgeachy",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "L2pOP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "is the prior for survival always between 0 and 1 or do you sometimes bound it based on previous research for the species i.e between 0.6 and 0.9?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262021.042600",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621262113.043700",
+        "reply_users": [
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621262113.043700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621262113.043700"
+    },
+    {
+        "client_msg_id": "017071fe-3d2e-48c8-8d4a-f28fc4b4eacd",
+        "type": "message",
+        "text": "In nimble we support model-definition-time if-then-else statements.  What that means is that you can use if-then-else where the if condition uses a variable (or expression) evaluated in your *R environment* to decide which piece of code to include in the model definition.  It does not create if-then-else in the model, but rather creates different models depending on the if-then-else condition.  It would be cumbersome for many model variants but can be a handy way to support a few variants in the same model source code.",
+        "user": "U0203USKJRE",
+        "ts": "1621262026.042800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U0203USKJRE",
+            "ts": "1621262212.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+jl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In nimble we support model-definition-time if-then-else statements.  What that means is that you can use if-then-else where the if condition uses a variable (or expression) evaluated in your "
+                            },
+                            {
+                                "type": "text",
+                                "text": "R environment",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to decide which piece of code to include in the model definition.  It does not create if-then-else in the model, but rather creates different models depending on the if-then-else condition.  It would be cumbersome for many model variants but can be a handy way to support a few variants in the same model source code."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262026.042800",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621262064.043300",
+        "reply_users": [
+            "U0203USKJRE"
+        ],
+        "replies": [
+            {
+                "user": "U0203USKJRE",
+                "ts": "1621262064.043300"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U020081M3D4",
+                    "U01ULDNCVKP"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fa9d7c0f-da1b-4c8a-9853-3975512f8ed6",
+        "type": "message",
+        "text": "Field work is life! Good for him!",
+        "user": "U022RRJ8KLY",
+        "ts": "1621262049.042900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "41e330567ecd",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2093891956048_41e330567ecd820f0ab1_72.jpg",
+            "first_name": "Chloé",
+            "real_name": "Chloé Warret Rodrigues",
+            "display_name": "Chloé",
+            "team": "T01UVLT5RS8",
+            "name": "warretrc",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eKW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Field work is life! Good for him!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621261289.029400",
+        "parent_user_id": "U01ULDNCVKP",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b29ea1a5-f939-446e-80bb-0da0583acb33",
+        "type": "message",
+        "text": "Oh sorry, this was a reply to <@U020081M3D4> but I forgot to click \"reply in thread\".",
+        "user": "U0203USKJRE",
+        "ts": "1621262064.043300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vaa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oh sorry, this was a reply to "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U020081M3D4"
+                            },
+                            {
+                                "type": "text",
+                                "text": " but I forgot to click \"reply in thread\"."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262026.042800",
+        "parent_user_id": "U0203USKJRE"
+    },
+    {
+        "client_msg_id": "7c79815d-c827-426f-bb0e-cea32b804038",
+        "type": "message",
+        "text": "Yes, you could define gamma and omega individual- and time-specific, and do the same in the likelihood. By doing so, you'd have to change just the parameters as you see fit. The thing is that by doing that, you have to keep big arrays along the way, which makes calculations slower. <@U0203USKJRE> has probablement comments on that.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621262070.043500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tpzh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, you could define gamma and omega individual- and time-specific, and do the same in the likelihood. By doing so, you'd have to change just the parameters as you see fit. The thing is that by doing that, you have to keep big arrays along the way, which makes calculations slower. "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0203USKJRE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " has probablement comments on that."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621261807.038700",
+        "parent_user_id": "U020081M3D4"
+    },
+    {
+        "client_msg_id": "4285d168-42e2-407b-9b8d-b0daa3e6ffb9",
+        "type": "message",
+        "text": "Yes, we'll see an example later on. This is a situation where the beta distribution is useful.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621262113.043700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PYW1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, we'll see an example later on. This is a situation where the beta distribution is useful."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262021.042600",
+        "parent_user_id": "U021RJQBBGS"
+    },
+    {
+        "client_msg_id": "69ff6933-e098-4a30-a3ad-a82a5e488926",
+        "type": "message",
+        "text": "<@U0203USKJRE> says <https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621262026042800>",
+        "user": "U01ULDNCVKP",
+        "ts": "1621262148.043900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621262026042800",
+                "fallback": "[May 17th, 2021 7:33 AM] pdevalpine: In nimble we support model-definition-time if-then-else statements.  What that means is that you can use if-then-else where the if condition uses a variable (or expression) evaluated in your *R environment* to decide which piece of code to include in the model definition.  It does not create if-then-else in the model, but rather creates different models depending on the if-then-else condition.  It would be cumbersome for many model variants but can be a handy way to support a few variants in the same mode source code.",
+                "ts": "1621262026.042800",
+                "author_id": "U0203USKJRE",
+                "author_subname": "Perry de Valpine",
+                "channel_id": "C01U8NUE06T",
+                "channel_name": "questions-5-survival-estimation",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "In nimble we support model-definition-time if-then-else statements.  What that means is that you can use if-then-else where the if condition uses a variable (or expression) evaluated in your *R environment* to decide which piece of code to include in the model definition.  It does not create if-then-else in the model, but rather creates different models depending on the if-then-else condition.  It would be cumbersome for many model variants but can be a handy way to support a few variants in the same mode source code.",
+                "author_name": "Perry de Valpine",
+                "author_link": "https:\/\/workshoponbay-5ln5595.slack.com\/team\/U0203USKJRE",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "original_url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621262026042800",
+                "footer": "Thread in #questions-5-survival-estimation"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "prWA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0203USKJRE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " says "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/workshoponbay-5ln5595.slack.com\/archives\/C01U8NUE06T\/p1621262026042800"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621261807.038700",
+        "parent_user_id": "U020081M3D4"
+    },
+    {
+        "client_msg_id": "ab9f79d3-93d1-4c8a-ad5f-bba0b37e8f8e",
+        "type": "message",
+        "text": "n.eff = effective sample size",
+        "user": "U01ULDNCVKP",
+        "ts": "1621262206.044900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SxNoD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "n.eff = effective sample size"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "53898710-2205-46bb-854b-a9b3cf5f1d4f",
+        "type": "message",
+        "text": "How's model selection when we model with random effects? Does model selection lose sense at all then?",
+        "user": "U0221NMLRKL",
+        "ts": "1621262516.047800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae4f17e75d4c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2057300778887_ae4f17e75d4c9b6e10d9_72.png",
+            "first_name": "Jaume",
+            "real_name": "Jaume A. Badia",
+            "display_name": "Jaume A. Badia",
+            "team": "T01UVLT5RS8",
+            "name": "jabadia",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ojy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "How's model selection when we model with random effects? Does model selection lose sense at all then?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262516.047800",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621262879.051000",
+        "reply_users": [
+            "U0203USKJRE",
+            "U0221NMLRKL"
+        ],
+        "replies": [
+            {
+                "user": "U0203USKJRE",
+                "ts": "1621262795.048900"
+            },
+            {
+                "user": "U0221NMLRKL",
+                "ts": "1621262879.051000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "6840a2a1-55bb-417c-9c76-2263ad00b707",
+        "type": "message",
+        "text": "Calculating WAIC without monitoring latent states, so the WAIC uses Monte Carlo over the latent states, is under development.  This highlights that WAIC is not just one thing but depends on the level of the model.",
+        "user": "U0203USKJRE",
+        "ts": "1621262530.048100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TlyUD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Calculating WAIC without monitoring latent states, so the WAIC uses Monte Carlo over the latent states, is under development.  This highlights that WAIC is not just one thing but depends on the level of the model."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "4ad9f169-a985-416e-ac08-ef7ee70d0d31",
+        "type": "message",
+        "text": "Not sure if this will come up later but how would you code for variation in Phi\/p for specific occasions? e.g. for an oil spill year where you know there will be an effect on survival?",
+        "user": "U020J4MDZU0",
+        "ts": "1621262595.048600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae716ebe3268",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1994354335826_ae716ebe3268a5447e90_72.jpg",
+            "first_name": "",
+            "real_name": "Katharine Bowgen",
+            "display_name": "Katharine Bowgen",
+            "team": "T01UVLT5RS8",
+            "name": "katharine.bowgen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lJLr2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not sure if this will come up later but how would you code for variation in Phi\/p for specific occasions? e.g. for an oil spill year where you know there will be an effect on survival?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "reply_count": 11,
+        "reply_users_count": 2,
+        "latest_reply": "1621327096.084000",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U020J4MDZU0"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621262921.051700"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621262977.052300"
+            },
+            {
+                "user": "U020J4MDZU0",
+                "ts": "1621263154.053900"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621263178.054100"
+            },
+            {
+                "user": "U020J4MDZU0",
+                "ts": "1621263224.054700"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621263468.059800"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621263477.060000"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621263509.060600"
+            },
+            {
+                "user": "U020J4MDZU0",
+                "ts": "1621264089.065300"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621264321.066600"
+            },
+            {
+                "user": "U020J4MDZU0",
+                "ts": "1621327096.084000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "f1807304-7df3-402c-8bb4-885e4262cc16",
+        "type": "message",
+        "text": "I think it's a complicated topic.  From a Bayesian perspective, one can do model selection at different levels of the model.  Model selection conditioning on random effects may not necessarily make sense for choosing variables at a higher level of the model, and vice-versa, for example.  Here is one article that may be of interest: <https:\/\/link.springer.com\/article\/10.1007\/s11222-013-9416-2>",
+        "user": "U0203USKJRE",
+        "ts": "1621262795.048900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "service_name": "Statistics and Computing",
+                "title": "Understanding predictive information criteria for Bayesian models",
+                "title_link": "https:\/\/link.springer.com\/article\/10.1007\/s11222-013-9416-2",
+                "text": "We review the Akaike, deviance, and Watanabe-Akaike information criteria from a Bayesian perspective, where the goal is to estimate expected out-of-sample-prediction error using a bias-corrected adjustment of within-sample error. We focus on the choices involved in setting up these measures, and we compare them in three simple examples, one theoretical and two applied. The contribution of this paper is to put all these information criteria into a Bayesian predictive context and to better understand, through small examples, how these methods can apply in practice.",
+                "fallback": "Statistics and Computing: Understanding predictive information criteria for Bayesian models",
+                "thumb_url": "https:\/\/media.springernature.com\/w200\/springer-static\/cover\/journal\/11222.jpg",
+                "from_url": "https:\/\/link.springer.com\/article\/10.1007\/s11222-013-9416-2",
+                "thumb_width": 200,
+                "thumb_height": 267,
+                "id": 1,
+                "original_url": "https:\/\/link.springer.com\/article\/10.1007\/s11222-013-9416-2"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3q0A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think it's a complicated topic.  From a Bayesian perspective, one can do model selection at different levels of the model.  Model selection conditioning on random effects may not necessarily make sense for choosing variables at a higher level of the model, and vice-versa, for example.  Here is one article that may be of interest: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/link.springer.com\/article\/10.1007\/s11222-013-9416-2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262516.047800",
+        "parent_user_id": "U0221NMLRKL"
+    },
+    {
+        "client_msg_id": "1f08f3b4-a096-4ab3-84a9-d89b20f9d5b0",
+        "type": "message",
+        "text": "Checking, out of curiosity - I guess I should know this having heard about this data set so many times but hey - in the dipper data wing length is measured when (since wing length would change over the life time of the animals?)",
+        "user": "U021GG5HHMH",
+        "ts": "1621262869.050800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vtx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Checking, out of curiosity - I guess I should know this having heard about this data set so many times but hey - in the dipper data wing length is measured when (since wing length would change over the life time of the animals?)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262869.050800",
+        "reply_count": 4,
+        "reply_users_count": 3,
+        "latest_reply": "1621264449.066800",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U021GG5HHMH",
+            "U022EA0060H"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621263006.052500"
+            },
+            {
+                "user": "U021GG5HHMH",
+                "ts": "1621263099.053100"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621263119.053600"
+            },
+            {
+                "user": "U022EA0060H",
+                "ts": "1621264449.066800"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621264449.066800"
+    },
+    {
+        "client_msg_id": "de2c0e15-f2e6-44bc-a6ce-0623e92aa135",
+        "type": "message",
+        "text": "Thanks, Perry!",
+        "user": "U0221NMLRKL",
+        "ts": "1621262879.051000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae4f17e75d4c",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2057300778887_ae4f17e75d4c9b6e10d9_72.png",
+            "first_name": "Jaume",
+            "real_name": "Jaume A. Badia",
+            "display_name": "Jaume A. Badia",
+            "team": "T01UVLT5RS8",
+            "name": "jabadia",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "n4ot",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks, Perry!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262516.047800",
+        "parent_user_id": "U0221NMLRKL"
+    },
+    {
+        "client_msg_id": "d0c6f052-fc4d-4e75-97aa-a051d49adf58",
+        "type": "message",
+        "text": "Is overdispersion (the ominous c-hat) an issue with Bayesian estimates?",
+        "user": "U021YD0USER",
+        "ts": "1621262889.051400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a465261b88e5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2075683978292_a465261b88e573d13ebd_72.png",
+            "first_name": "",
+            "real_name": "Alexander Scheuerlein",
+            "display_name": "Alexander Scheuerlein",
+            "team": "T01UVLT5RS8",
+            "name": "scheuerleinalexander",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wsx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is overdispersion (the ominous c-hat) an issue with Bayesian estimates?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262889.051400",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621263454.059200",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U021YD0USER"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621263426.058400"
+            },
+            {
+                "user": "U021YD0USER",
+                "ts": "1621263454.059200"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621263454.059200",
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U020D3400HW"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "64e894a2-b428-423d-8847-a9af33d01edb",
+        "type": "message",
+        "text": "For a case like this, the best would be to make a dummy variable that takes 0 in all years without oil spill, and 1 in years with oil spill. You can then include this like any other covariate.",
+        "user": "U01UMBR0K38",
+        "ts": "1621262921.051700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hlxd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "For a case like this, the best would be to make a dummy variable that takes 0 in all years without oil spill, and 1 in years with oil spill. You can then include this like any other covariate."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "6615a9ac-4c4d-4f0d-b7c2-7d53e032dac9",
+        "type": "message",
+        "text": "If you need more than 2 levels (i.e. on\/off), you can still make a variable with integer entries representing different levels, but could then estimate intercepts specific to the different index levels.",
+        "user": "U01UMBR0K38",
+        "ts": "1621262977.052300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kVJK7",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "If you need more than 2 levels (i.e. on\/off), you can still make a variable with integer entries representing different levels, but could then estimate intercepts specific to the different index levels."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "66df03d3-d39f-454b-9c8a-bb189a93960f",
+        "type": "message",
+        "text": "Haha, I simulated this covariate for the purpose of illustration. Otherwise, you're right and we get time-varying individual covariate for which we need to do something for individuals that are not captured.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621263006.052500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZLk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Haha, I simulated this covariate for the purpose of illustration. Otherwise, you're right and we get time-varying individual covariate for which we need to do something for individuals that are not captured."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262869.050800",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "b62a523b-b62b-4578-8494-306954b051b2",
+        "type": "message",
+        "text": "aha - many thanks!",
+        "user": "U021GG5HHMH",
+        "ts": "1621263099.053100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3a70d7a81e8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2074140470224_b3a70d7a81e8284d2f9b_72.jpg",
+            "first_name": "",
+            "real_name": "Tiago Marques",
+            "display_name": "Tiago Marques",
+            "team": "T01UVLT5RS8",
+            "name": "tiagoandremarques",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "O4A6z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "aha - many thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262869.050800",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "4ae7f76e-ba0e-43bc-8dc3-13381746e32c",
+        "type": "message",
+        "text": "More soon on time-varying individual covariate.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621263119.053600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "512",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "More soon on time-varying individual covariate."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262869.050800",
+        "parent_user_id": "U021GG5HHMH"
+    },
+    {
+        "client_msg_id": "8ee97a43-4f69-4bc0-930c-4df60dcbc2bd",
+        "type": "message",
+        "text": "Thank you - I'll have a go! Sorry if this is a silly question but just to confirm you using the phrase dummy variable which do you specifically mean? You mention on\/off is this related to detected\/non-detected or another matrix (e.g omega)?",
+        "user": "U020J4MDZU0",
+        "ts": "1621263154.053900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae716ebe3268",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1994354335826_ae716ebe3268a5447e90_72.jpg",
+            "first_name": "",
+            "real_name": "Katharine Bowgen",
+            "display_name": "Katharine Bowgen",
+            "team": "T01UVLT5RS8",
+            "name": "katharine.bowgen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CZqc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you - I'll have a go! Sorry if this is a silly question but just to confirm you using the phrase dummy variable which do you specifically mean? You mention on\/off is this related to detected\/non-detected or another matrix (e.g omega)?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "96c1ecd7-8b4a-415a-8083-3b35f4d76684",
+        "type": "message",
+        "text": "I'll write it as an example. Check back later :wink:",
+        "user": "U01UMBR0K38",
+        "ts": "1621263178.054100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gNeVy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'll write it as an example. Check back later "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "8eddd9ad-bf16-475a-adc8-0079106dc07d",
+        "type": "message",
+        "text": "Thank you! Sorry I've been working with a complicated dataset in Mark so know how to do things there but trying to make sure I get how Nimble accepts it!",
+        "user": "U020J4MDZU0",
+        "ts": "1621263224.054700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae716ebe3268",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1994354335826_ae716ebe3268a5447e90_72.jpg",
+            "first_name": "",
+            "real_name": "Katharine Bowgen",
+            "display_name": "Katharine Bowgen",
+            "team": "T01UVLT5RS8",
+            "name": "katharine.bowgen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7RL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thank you! Sorry I've been working with a complicated dataset in Mark so know how to do things there but trying to make sure I get how Nimble accepts it!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "6e43209c-9115-4bcc-afb7-4080c1acc1e1",
+        "type": "message",
+        "text": "On a similar note. Should we look at goodness of fit of the dataset prior to the analysis?",
+        "user": "U0220681GLS",
+        "ts": "1621263274.056100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "b3ff4cc0d166",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-14\/2061435367030_b3ff4cc0d166ec265a69_72.png",
+            "first_name": "",
+            "real_name": "alepietrek",
+            "display_name": "alepietrek",
+            "team": "T01UVLT5RS8",
+            "name": "alepietrek",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wH4b",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "On a similar note. Should we look at goodness of fit of the dataset prior to the analysis?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263274.056100",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621263304.056700",
+        "reply_users": [
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621263304.056700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621263304.056700"
+    },
+    {
+        "client_msg_id": "399c456a-99f4-4483-a9e7-d9c09ea02b46",
+        "type": "message",
+        "text": "Does it matter if the population is open or closed?",
+        "user": "U021W75J75L",
+        "ts": "1621263285.056200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gdf715084232",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/df71508423296b6e7de9c7b60d818a15.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-72.png",
+            "first_name": "",
+            "real_name": "Niamh",
+            "display_name": "Niamh",
+            "team": "T01UVLT5RS8",
+            "name": "nesmonde01",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xy25U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Does it matter if the population is open or closed?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263285.056200",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621263517.060900",
+        "reply_users": [
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621263517.060900"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621263517.060900"
+    },
+    {
+        "client_msg_id": "0b9afad6-b41b-46bf-8bbc-7c1e4590158c",
+        "type": "message",
+        "text": "Yes, more about that tomorrow.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621263304.056700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SrFQO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, more about that tomorrow."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263274.056100",
+        "parent_user_id": "U0220681GLS"
+    },
+    {
+        "type": "message",
+        "text": "Ironically just got briefly distracted by the capture and marking part of capture-mark-recapture\/resighting! Woodpigeon (Columba palumbus) freshly ringed by my partner with colour ring white CH added for a BTO retrapping adults for survival (RAS) study. As its easier to add the colour ring with 2 people, there are now feathers in my home office...",
+        "files": [
+            {
+                "id": "F021PHBSW1M",
+                "created": 1621262179,
+                "timestamp": 1621262179,
+                "name": "20210517_153301.jpg",
+                "title": "20210517_153301.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U022EA0060H",
+                "editable": false,
+                "size": 528911,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F021PHBSW1M\/20210517_153301.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F021PHBSW1M\/download\/20210517_153301.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_64.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_80.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_360.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_480.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_160.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_720.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_800.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_960.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F021PHBSW1M-0327869532\/20210517_153301_1024.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "original_w": 4624,
+                "original_h": 3468,
+                "thumb_tiny": "AwAkADCRYoioYIuCM9Kd5Uf9xfyqO1YtDtPVDipsUAN8qP8Auj8qYB5crtjCkADFSF1Xqyj6mqc8jvMRESV7YpgPGRLIT3aph0qKOKQrufG48nJoMpQ4KYPvU7j2K65GQjlPXHelRHkfHLAdcmmn5aWOWQv8mCen4UATtDEJPmyp+mKkCRAfLj69aryBsFmZd3pnJqOOVkmBdM59OooAuqvy5Lc1HcKXUD0Oc96Y1zGGx81AnDZ28mkkytBIo1ZS7ckdj0qB2JcnA\/CrUP8AqW+lVG++aZIKxDfWtGJRsBAAJFZo+8K0ov8AVr9KOo+hUvUVXyByeagjYhhjvwas33UfSqifeX600Jn\/2Q==",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U022EA0060H\/F021PHBSW1M\/20210517_153301.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F021PHBSW1M-d566af6eb9",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Lcr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ironically just got briefly distracted by the capture and marking part of capture-mark-recapture\/resighting! Woodpigeon (Columba palumbus) freshly ringed by my partner with colour ring white CH added for a BTO retrapping adults for survival (RAS) study. As its easier to add the colour ring with 2 people, there are now feathers in my home office..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U022EA0060H",
+        "display_as_bot": false,
+        "ts": "1621263323.057100",
+        "thread_ts": "1621263323.057100",
+        "reply_count": 6,
+        "reply_users_count": 5,
+        "latest_reply": "1621264480.067300",
+        "reply_users": [
+            "U021NFFDJAX",
+            "U01ULDNCVKP",
+            "U021MSK4PPH",
+            "U022EA0060H",
+            "U01UDBUETM5"
+        ],
+        "replies": [
+            {
+                "user": "U021NFFDJAX",
+                "ts": "1621263460.059500"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621263572.061600"
+            },
+            {
+                "user": "U021MSK4PPH",
+                "ts": "1621263760.063800"
+            },
+            {
+                "user": "U022EA0060H",
+                "ts": "1621263897.064800"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621264454.067000"
+            },
+            {
+                "user": "U01UDBUETM5",
+                "ts": "1621264480.067300"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621264480.067300",
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U021NFFDJAX",
+                    "U0203USKJRE",
+                    "U021Y2G74H1",
+                    "U0222M1S8SE",
+                    "U0220681GLS",
+                    "U0203L8NKE2",
+                    "U021VSHD9QE",
+                    "U020J4MDZU0",
+                    "U021ZJC52QM",
+                    "U0222V0ABQT",
+                    "U022SDPT3LY",
+                    "U0221NMLRKL",
+                    "U022EG3UKDX",
+                    "U022RRJ8KLY",
+                    "U0222LD8JCA",
+                    "U01UDBUETM5",
+                    "U0228RFP1V2",
+                    "U022SEENZKJ"
+                ],
+                "count": 18
+            }
+        ]
+    },
+    {
+        "client_msg_id": "377ebfff-9a2e-40c2-8dd3-ded289af1758",
+        "type": "message",
+        "text": "In this kind of models, we do not need to re-sample the same spots (camera-sttations, etc) over the years\/seasons, right?",
+        "user": "U01UXJ46T6W",
+        "ts": "1621263336.057400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a1cc2bbc62a3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2076149179892_a1cc2bbc62a397c2a582_72.jpg",
+            "first_name": "Carlos",
+            "real_name": "Carlos A. Gaitán",
+            "display_name": "Carlos A. Gaitán",
+            "team": "T01UVLT5RS8",
+            "name": "gaitansantos.carlos",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pr3t",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In this kind of models, we do not need to re-sample the same spots (camera-sttations, etc) over the years\/seasons, right?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263336.057400",
+        "reply_count": 6,
+        "reply_users_count": 3,
+        "latest_reply": "1621333241.110700",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U01UXJ46T6W",
+            "U01UMBR0K38"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621263620.062800"
+            },
+            {
+                "user": "U01UXJ46T6W",
+                "ts": "1621263734.063500"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621264184.065700"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621264221.065900"
+            },
+            {
+                "user": "U01UXJ46T6W",
+                "ts": "1621321548.002200"
+            },
+            {
+                "user": "U01UXJ46T6W",
+                "ts": "1621333241.110700"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621333241.110700"
+    },
+    {
+        "client_msg_id": "d99698a2-bf88-466d-80ab-8f8bd0c21ed2",
+        "type": "message",
+        "text": "It's a general issue I guess, often caused by non-independence among individuals, which you can address with appropriate distribution (e.g. negative bin vs poisson) or random effects. We'll briefly talk about goodness-of-fit tests tomorrow.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621263426.058400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EqD0q",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It's a general issue I guess, often caused by non-independence among individuals, which you can address with appropriate distribution (e.g. negative bin vs poisson) or random effects. We'll briefly talk about goodness-of-fit tests tomorrow."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262889.051400",
+        "parent_user_id": "U021YD0USER"
+    },
+    {
+        "client_msg_id": "d4e04185-38b4-4389-ab95-cc71479e8609",
+        "type": "message",
+        "text": "Cool, thanks!",
+        "user": "U021YD0USER",
+        "ts": "1621263454.059200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a465261b88e5",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2075683978292_a465261b88e573d13ebd_72.png",
+            "first_name": "",
+            "real_name": "Alexander Scheuerlein",
+            "display_name": "Alexander Scheuerlein",
+            "team": "T01UVLT5RS8",
+            "name": "scheuerleinalexander",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xIrO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Cool, thanks!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262889.051400",
+        "parent_user_id": "U021YD0USER"
+    },
+    {
+        "client_msg_id": "633a28a3-c823-4e1e-9cde-ec4ed1fb293f",
+        "type": "message",
+        "text": "jealous :rolling_on_the_floor_laughing:",
+        "user": "U021NFFDJAX",
+        "ts": "1621263460.059500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "1935767c5d88",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-12\/2062475673220_1935767c5d885e5010f0_72.jpg",
+            "first_name": "",
+            "real_name": "Aurora Gonzalo Tarodo",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "aurora.tarodo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "64S",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "jealous "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "rolling_on_the_floor_laughing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263323.057100",
+        "parent_user_id": "U022EA0060H"
+    },
+    {
+        "client_msg_id": "fca21641-5e5c-4e90-897a-3c1129f8764a",
+        "type": "message",
+        "text": "Binary example (on\/off covariate, e.g. oil spill vs. no oil spill):\n\ndummy &lt;- c(1, 0, 0, 1, 0)\n\n\nIn your model:\n\n# Constraint\nfor(t in 1:Tmax){\n  logit(phi[t]) &lt;- logit(Mu.phi) + beta*dummy[t]\n\n}\n\n# Priors\nMu.phi ~ dunif(0, 1)\nbeta ~ dunif(-5, 5)",
+        "user": "U01UMBR0K38",
+        "ts": "1621263468.059800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PLYo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Binary example (on\/off covariate, e.g. oil spill vs. no oil spill):\n\ndummy <- c(1, 0, 0, 1, 0)\n\n\nIn your model:\n\n# Constraint\nfor(t in 1:Tmax){\n  logit(phi[t]) <- logit(Mu.phi) + beta*dummy[t]\n\n}\n\n# Priors\nMu.phi ~ dunif(0, 1)\nbeta ~ dunif(-5, 5)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "00f03b17-ed33-42e9-90c1-80e150318a0e",
+        "type": "message",
+        "text": "3+ level example (categorical covariate, e.g. bad oil spill, moderate oil spill, no oil spill):\n\ndummy &lt;- c(2, 1, 1, 3, 1)\n\nIn your model:\n\n# Constraint\nfor(t in 1:Tmax){\n  phi[t] &lt;- Mu.phi[dummy[t]]\n\n}\n\n# Priors\nfor(x in 1:3){\n  Mu.phi[x] ~ dunif(0, 1)\n}",
+        "user": "U01UMBR0K38",
+        "ts": "1621263477.060000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2fxoe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "3+ level example (categorical covariate, e.g. bad oil spill, moderate oil spill, no oil spill):\n\ndummy <- c(2, 1, 1, 3, 1)\n\nIn your model:\n\n# Constraint\nfor(t in 1:Tmax){\n  phi[t] <- Mu.phi[dummy[t]]\n\n}\n\n# Priors\nfor(x in 1:3){\n  Mu.phi[x] ~ dunif(0, 1)\n}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "a77723f4-e3b9-4be0-af34-f56f9cf8972d",
+        "type": "message",
+        "text": "what should be the minimum dataset size to correctly run such analyses ? (number of individual histories)",
+        "user": "U0228TE85EG",
+        "ts": "1621263495.060400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g949b0e022e9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/949b0e022e9f28ffa75d1c1741a43ab2.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Cecile Richard-Hansen",
+            "display_name": "Cecile Richard-Hansen",
+            "team": "T01UVLT5RS8",
+            "name": "cecile.richard-hansen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zw9EB",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what should be the minimum dataset size to correctly run such analyses ? (number of individual histories)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263495.060400",
+        "reply_count": 3,
+        "reply_users_count": 3,
+        "latest_reply": "1621263761.064000",
+        "reply_users": [
+            "U01UMBR0K38",
+            "U0228TE85EG",
+            "U01ULDNCVKP"
+        ],
+        "replies": [
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621263618.062600"
+            },
+            {
+                "user": "U0228TE85EG",
+                "ts": "1621263668.063200"
+            },
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621263761.064000"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621263761.064000"
+    },
+    {
+        "client_msg_id": "29fa0240-d625-4353-b682-32d0e1e127c2",
+        "type": "message",
+        "text": "I recommend checking out \"Bayesian Analysis using WinBUGS\" to get familiar with the basics of implementing different covariate effects.",
+        "user": "U01UMBR0K38",
+        "ts": "1621263509.060600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Nj9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I recommend checking out \"Bayesian Analysis using WinBUGS\" to get familiar with the basics of implementing different covariate effects."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "90d187a1-b961-4ba1-97b1-9b73bb823fd6",
+        "type": "message",
+        "text": "Yes, here we assume open populations, hence the estimation of survival. If your pop is closed, then you may assume survival is 1 :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621263517.060900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iy2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, here we assume open populations, hence the estimation of survival. If your pop is closed, then you may assume survival is 1 "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263285.056200",
+        "parent_user_id": "U021W75J75L",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021W75J75L"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "c70d2f2f-db7e-4ec5-b83e-5d3d7a275a98",
+        "type": "message",
+        "text": "Tempted to use this picture as the cover of our website. Meta-capture-recapture :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621263572.061600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "W0JA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Tempted to use this picture as the cover of our website. Meta-capture-recapture "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263323.057100",
+        "parent_user_id": "U022EA0060H"
+    },
+    {
+        "client_msg_id": "6204d078-ac6b-4ee6-9dbd-641b446b8c58",
+        "type": "message",
+        "text": "This depends on the model and on the number of years you surveyed for (in addition to number of individuals). There is no simple guideline here. You need to try it out. If you are fitting a way too complex model for your amount of data, you will not get convergence\/good estimates.\n\nThat then means you need to simplify your model.\nIn general, it's usually best to start with a simple model, and build complexity stepwise.",
+        "user": "U01UMBR0K38",
+        "ts": "1621263618.062600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MhLg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This depends on the model and on the number of years you surveyed for (in addition to number of individuals). There is no simple guideline here. You need to try it out. If you are fitting a way too complex model for your amount of data, you will not get convergence\/good estimates.\n\nThat then means you need to simplify your model.\nIn general, it's usually best to start with a simple model, and build complexity stepwise."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263495.060400",
+        "parent_user_id": "U0228TE85EG"
+    },
+    {
+        "client_msg_id": "b6f99a4f-e3f6-4544-ac61-eddd4af88143",
+        "type": "message",
+        "text": "Yes, resampling is key to separate non-detection from actual death.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621263620.062800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1621263627.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pYti",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, resampling is key to separate non-detection from actual death."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263336.057400",
+        "parent_user_id": "U01UXJ46T6W"
+    },
+    {
+        "client_msg_id": "ac984894-27f6-4282-9280-4a9955464015",
+        "type": "message",
+        "text": "Is WAIC also a recommended procedure for deciding to include covariates (e.g. sex, age, other individual characteristics) in survival models?",
+        "user": "U0222M1S8SE",
+        "ts": "1621263626.063000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gb131caca709",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/b131caca7090e79666e18bf5bbc32950.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Stephanie Harris",
+            "display_name": "Stephanie Harris",
+            "team": "T01UVLT5RS8",
+            "name": "stephanie.harris",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "tfd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is WAIC also a recommended procedure for deciding to include covariates (e.g. sex, age, other individual characteristics) in survival models?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263626.063000",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621264009.065100",
+        "reply_users": [
+            "U0203USKJRE",
+            "U01UMBR0K38"
+        ],
+        "replies": [
+            {
+                "user": "U0203USKJRE",
+                "ts": "1621263766.064200"
+            },
+            {
+                "user": "U01UMBR0K38",
+                "ts": "1621264009.065100"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false
+    },
+    {
+        "client_msg_id": "66e495e9-18e5-44de-8024-b72979f68a6b",
+        "type": "message",
+        "text": ":+1:",
+        "user": "U0228TE85EG",
+        "ts": "1621263668.063200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g949b0e022e9",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/949b0e022e9f28ffa75d1c1741a43ab2.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Cecile Richard-Hansen",
+            "display_name": "Cecile Richard-Hansen",
+            "team": "T01UVLT5RS8",
+            "name": "cecile.richard-hansen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HF2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "+1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263495.060400",
+        "parent_user_id": "U0228TE85EG"
+    },
+    {
+        "client_msg_id": "344e52b8-c560-4360-8d8d-38ce6433e0d1",
+        "type": "message",
+        "text": "I mean, do i have to re-sample the same specific habitat\/area\/sampling station? or just if i have a re-capture (no matter if i re-sampled different spots next season) in a different spots with different sampling effort\/sampling design?",
+        "user": "U01UXJ46T6W",
+        "ts": "1621263734.063500",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "a1cc2bbc62a3",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2076149179892_a1cc2bbc62a397c2a582_72.jpg",
+            "first_name": "Carlos",
+            "real_name": "Carlos A. Gaitán",
+            "display_name": "Carlos A. Gaitán",
+            "team": "T01UVLT5RS8",
+            "name": "gaitansantos.carlos",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VmgCM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I mean, do i have to re-sample the same specific habitat\/area\/sampling station? or just if i have a re-capture (no matter if i re-sampled different spots next season) in a different spots with different sampling effort\/sampling design?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263336.057400",
+        "parent_user_id": "U01UXJ46T6W"
+    },
+    {
+        "client_msg_id": "9f60e758-bb39-4e28-b2a1-db8719954346",
+        "type": "message",
+        "text": "Is: from field work to real data to theory and statistics, perfect illustration! I have never introduced a computer or a model to a kittiwake. Computers lack salt (according to seabirds).",
+        "user": "U021MSK4PPH",
+        "ts": "1621263760.063800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ga304237b2f5",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/a304237b2f5ca1a11bedb70815fbd050.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-72.png",
+            "first_name": "",
+            "real_name": "Emmanuelle Cam",
+            "display_name": "Emmanuelle Cam",
+            "team": "T01UVLT5RS8",
+            "name": "emmanuelle.cam",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4JZeI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is: from field work to real data to theory and statistics, perfect illustration! I have never introduced a computer or a model to a kittiwake. Computers lack salt (according to seabirds)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263323.057100",
+        "parent_user_id": "U022EA0060H"
+    },
+    {
+        "client_msg_id": "1615914d-932a-41ea-8871-44b226bffbb8",
+        "type": "message",
+        "text": "You may use simulations to investigate and get an idea of statistical power to detect some effects or the precision of your estimates.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621263761.064000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PYAPi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You may use simulations to investigate and get an idea of statistical power to detect some effects or the precision of your estimates."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263495.060400",
+        "parent_user_id": "U0228TE85EG"
+    },
+    {
+        "client_msg_id": "0b35a144-c421-4128-a1dc-6ac252888e93",
+        "type": "message",
+        "text": "Yes, I think variable selection is viewed as a particular kind of model selection.  Note that for Bayesian variable selection, the so-called indicator variable method is an option, and nimble provides \"reversible jump MCMC\" samplers, which is a fancy way to say it can handle that approach well.",
+        "user": "U0203USKJRE",
+        "ts": "1621263766.064200",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1854d930448",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1854d9304486334636531977a7fbaba9.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-72.png",
+            "first_name": "",
+            "real_name": "Perry de Valpine",
+            "display_name": "Perry de Valpine",
+            "team": "T01UVLT5RS8",
+            "name": "pdevalpine",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/svXL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yes, I think variable selection is viewed as a particular kind of model selection.  Note that for Bayesian variable selection, the so-called indicator variable method is an option, and nimble provides \"reversible jump MCMC\" samplers, which is a fancy way to say it can handle that approach well."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263626.063000",
+        "parent_user_id": "U0222M1S8SE",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U021W7G8Y14",
+                    "U0222M1S8SE"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b2fbcf5c-d0f1-4687-b78f-bc9f36fa54ae",
+        "type": "message",
+        "text": "Ha I would have got a better picture but I was still trying to pay attention to what <@U01UDBUETM5> was saying!",
+        "user": "U022EA0060H",
+        "ts": "1621263897.064800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qinNk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ha I would have got a better picture but I was still trying to pay attention to what "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UDBUETM5"
+                            },
+                            {
+                                "type": "text",
+                                "text": " was saying!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263323.057100",
+        "parent_user_id": "U022EA0060H",
+        "reactions": [
+            {
+                "name": "grin",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "8f571a51-9e48-4461-bc57-8102b9da6bf5",
+        "type": "message",
+        "text": "It's important to keep in mind that WAIC (just like any other whatever-IC, p-value, etc.) is not a panacea. Making mindless binary decisions based on one metric or another is always a bad idea.\n\nBefore fitting any covariates, think carefully about what you would expect to have an effect (based on biology, sampling regimes, etc.). Fit that model and check the posteriors for your effect. The degree to which your effect posterior overlaps with 0 will tell you how much evidence there is for this effect.",
+        "user": "U01UMBR0K38",
+        "ts": "1621264009.065100",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "D9LOU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It's important to keep in mind that WAIC (just like any other whatever-IC, p-value, etc.) is not a panacea. Making mindless binary decisions based on one metric or another is always a bad idea.\n\nBefore fitting any covariates, think carefully about what you would expect to have an effect (based on biology, sampling regimes, etc.). Fit that model and check the posteriors for your effect. The degree to which your effect posterior overlaps with 0 will tell you how much evidence there is for this effect."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263626.063000",
+        "parent_user_id": "U0222M1S8SE",
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U022RRJ8KLY",
+                    "U021MSHLUT1",
+                    "U020421P0P2"
+                ],
+                "count": 3
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U0222M1S8SE"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "86177eb8-c81f-4296-9662-7a98e65ecde5",
+        "type": "message",
+        "text": "Fab - thank you again, I'll have a go with testing that out and yes, actually get a copy of the book rather than sneak a peak of my colleagues copy!",
+        "user": "U020J4MDZU0",
+        "ts": "1621264089.065300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "ae716ebe3268",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-23\/1994354335826_ae716ebe3268a5447e90_72.jpg",
+            "first_name": "",
+            "real_name": "Katharine Bowgen",
+            "display_name": "Katharine Bowgen",
+            "team": "T01UVLT5RS8",
+            "name": "katharine.bowgen",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+HXW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Fab - thank you again, I'll have a go with testing that out and yes, actually get a copy of the book rather than sneak a peak of my colleagues copy!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0"
+    },
+    {
+        "client_msg_id": "fe31e120-6040-4cbc-8549-3ed7095dbc32",
+        "type": "message",
+        "text": "Oops, sorry. Yes, you need to resample the same station. If you change the sampling design (increasing the sampling area for example) then things you get a different population under sampling. Different sampling effort (less people doing the recaptures some years for example) can be accounted for in the detection process by having time variation, and possibly a covariate to explain time variation. I hope it answers better your question :slightly_smiling_face:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621264184.065700",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MiFWQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Oops, sorry. Yes, you need to resample the same station. If you change the sampling design (increasing the sampling area for example) then things you get a different population under sampling. Different sampling effort (less people doing the recaptures some years for example) can be accounted for in the detection process by having time variation, and possibly a covariate to explain time variation. I hope it answers better your question "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263336.057400",
+        "parent_user_id": "U01UXJ46T6W",
+        "reactions": [
+            {
+                "name": "slightly_smiling_face",
+                "users": [
+                    "U01UXJ46T6W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b00b4a37-ab5d-49d2-b0f5-97ba1042dda1",
+        "type": "message",
+        "text": "Technically, you do not need to re-sample the exactly same location. However, if your sampling locations and effort changed, you have to incorporate this into detection\/recapture probability (i.e. you need time-dependence). Additionally, if you changed locations, think carefully about what this means for your survival and detection estimates. Survival is always confounded with emigration (unless you model them separately with appropriate data and study\/model design), and if you change locations, that may introduce bias.",
+        "user": "U01UMBR0K38",
+        "ts": "1621264221.065900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=U9W",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Technically, you do not need to re-sample the exactly same location. However, if your sampling locations and effort changed, you have to incorporate this into detection\/recapture probability (i.e. you need time-dependence). Additionally, if you changed locations, think carefully about what this means for your survival and detection estimates. Survival is always confounded with emigration (unless you model them separately with appropriate data and study\/model design), and if you change locations, that may introduce bias."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263336.057400",
+        "parent_user_id": "U01UXJ46T6W",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            },
+            {
+                "name": "slightly_smiling_face",
+                "users": [
+                    "U01UXJ46T6W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "4591c0a1-45d7-4880-bd07-76e3653dbce7",
+        "type": "message",
+        "text": "You won't regret getting that book :wink:",
+        "user": "U01UMBR0K38",
+        "ts": "1621264321.066600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "7579e136e142",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-10\/2061471403009_7579e136e14293e70b37_72.jpg",
+            "first_name": "",
+            "real_name": "Chloé R. Nater",
+            "display_name": "Chloé R. Nater",
+            "team": "T01UVLT5RS8",
+            "name": "chloe.r.nater",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lHDex",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "You won't regret getting that book "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "wink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262595.048600",
+        "parent_user_id": "U020J4MDZU0",
+        "reactions": [
+            {
+                "name": "slightly_smiling_face",
+                "users": [
+                    "U020J4MDZU0"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "9afe8b9c-aee5-4e54-a163-96c77c193961",
+        "type": "message",
+        "text": "Not the case here if <@U01ULDNCVKP> has simulated the values but in real data wing length could be used to sex this species. How much bird wing length changes over an individual's life varies quite a lot between species and isn't well studied as far as I know...",
+        "user": "U022EA0060H",
+        "ts": "1621264449.066800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "e+n",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Not the case here if "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01ULDNCVKP"
+                            },
+                            {
+                                "type": "text",
+                                "text": " has simulated the values but in real data wing length could be used to sex this species. How much bird wing length changes over an individual's life varies quite a lot between species and isn't well studied as far as I know..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621262869.050800",
+        "parent_user_id": "U021GG5HHMH",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01ULDNCVKP"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b8c8d265-5c1f-4a1a-81f5-bd4a2084a0a3",
+        "type": "message",
+        "text": "I love the picture thanks for sharing ! Theory and practice finally re-united :slightly_smiling_face:",
+        "user": "U01UDBUETM5",
+        "ts": "1621264454.067000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "b0A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I love the picture thanks for sharing ! Theory and practice finally re-united "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263323.057100",
+        "parent_user_id": "U022EA0060H"
+    },
+    {
+        "client_msg_id": "79d28f5f-ffbe-4e4e-be6d-aa10a5dd8e66",
+        "type": "message",
+        "text": "Some are lucky (you) and others are less (me - 1 day of fieldwork in the last 3 years...)",
+        "user": "U01UDBUETM5",
+        "ts": "1621264480.067300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd3a059e9b3d",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d3a059e9b3d4fcc68b4000441248187a.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png",
+            "first_name": "",
+            "real_name": "sarah cubaynes",
+            "display_name": "sarah cubaynes",
+            "team": "T01UVLT5RS8",
+            "name": "sarah.cubaynes",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Vovo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Some are lucky (you) and others are less (me - 1 day of fieldwork in the last 3 years...)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621263323.057100",
+        "parent_user_id": "U022EA0060H"
+    },
+    {
+        "type": "message",
+        "text": "This lovely seemed to know I was jealous of you <@U022EA0060H> :stuck_out_tongue_closed_eyes:",
+        "files": [
+            {
+                "id": "F0221FFHMPX",
+                "created": 1621264978,
+                "timestamp": 1621264978,
+                "name": "Image from iOS.jpg",
+                "title": "Image from iOS",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U021NFFDJAX",
+                "editable": false,
+                "size": 300877,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0221FFHMPX\/image_from_ios.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T01UVLT5RS8-F0221FFHMPX\/download\/image_from_ios.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_64.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_80.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_360.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_360_w": 270,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_480.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_480_w": 360,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_160.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_720.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_720_w": 540,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_800.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1067,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_960.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_960_w": 720,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T01UVLT5RS8-F0221FFHMPX-85ec93d06a\/image_from_ios_1024.jpg?t=xoxe-1981707195892-2065042488631-2073036752134-b9ea975730fb492a2ca1afbb8a802ff4",
+                "thumb_1024_w": 768,
+                "thumb_1024_h": 1024,
+                "original_w": 3024,
+                "original_h": 4032,
+                "thumb_tiny": "AwAwACR7ikWoGnc9SB+FOjLt0yfoKmzHcuR\/6o\/WpYOhqqgcDHzVKuRTEWqKr5ozTAzJWUkbTU1mfv59qZMqqF2jHrSxNgHHcc0wLm4ZAzyaVgccdahTBYc4+vepzSGNw3tRtPtTqKAM9Njth2wKlURq3yE49xUIXvUqA0rhYm85Ihz3ppu096im4K\/Sk8sMme9O4Epu19KT7WvpVYxMDSeU\/pQI\/9k=",
+                "permalink": "https:\/\/workshoponbay-5ln5595.slack.com\/files\/U021NFFDJAX\/F0221FFHMPX\/image_from_ios.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T01UVLT5RS8-F0221FFHMPX-6c09c44b35",
+                "is_starred": false,
+                "has_rich_preview": false
+            }
+        ],
+        "upload": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ttb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This lovely seemed to know I was jealous of you "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U022EA0060H"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "stuck_out_tongue_closed_eyes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "user": "U021NFFDJAX",
+        "display_as_bot": false,
+        "ts": "1621265022.068600",
+        "client_msg_id": "2113D2B4-13B9-4C2B-B0F3-A7B95F60B6BC",
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U022EA0060H",
+                    "U01ULDNCVKP",
+                    "U022F9QE5LH",
+                    "U0222LE4N5Q",
+                    "U022SDPT3LY",
+                    "U0222LD8JCA"
+                ],
+                "count": 6
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b7bf2688-0033-42ed-9cad-c83e0a260264",
+        "type": "message",
+        "text": "Ha excellent <@U021NFFDJAX>!",
+        "user": "U022EA0060H",
+        "ts": "1621265058.069000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "2f6de2584ced",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-16\/2069942054067_2f6de2584ced46fa4342_72.jpg",
+            "first_name": "Hugh",
+            "real_name": "Hugh Hanmer",
+            "display_name": "",
+            "team": "T01UVLT5RS8",
+            "name": "hugh.hanmer",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ejb9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ha excellent "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U021NFFDJAX"
+                            },
+                            {
+                                "type": "text",
+                                "text": "!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "heart",
+                "users": [
+                    "U021NFFDJAX"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "8cdfd29c-0f41-4ef0-80a3-bb2007416b57",
+        "type": "message",
+        "text": "Keep these pix coming :hugging_face::star-struck:",
+        "user": "U01ULDNCVKP",
+        "ts": "1621265093.069600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uKTYW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Keep these pix coming "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "hugging_face"
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "star-struck"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "91f5e7af-956d-42e4-9562-39cf5e209fd2",
+        "type": "message",
+        "text": "Thanks for the presentation Sarah, can the same methods be used in Resource Selection Functions using Generalised Linear Mixed Models.. your examples are mostly based on binary data (0, 1)..",
+        "user": "U022FDT7YU9",
+        "ts": "1621269844.070800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "702e05f71eef",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-17\/2070853572690_702e05f71eef3951351d_72.png",
+            "first_name": "",
+            "real_name": "Anastacia Makati",
+            "display_name": "Anastacia Makati",
+            "team": "T01UVLT5RS8",
+            "name": "mktana001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6BE\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks for the presentation Sarah, can the same methods be used in Resource Selection Functions using Generalised Linear Mixed Models.. your examples are mostly based on binary data (0, 1).."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

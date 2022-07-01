@@ -1,0 +1,53 @@
+[
+    {
+        "client_msg_id": "17ded6e5-0a66-4beb-bb5b-4c8b1484cc2a",
+        "type": "message",
+        "text": "Hi all!\nMy name is Ana, I am a PhD student working with Eloy Revilla and Maria Paniw at Department of Conservation Biology, Estación Biológica de Doñana (EBD-CSIC; Spain). My research focuses on how individual, social and environmental factors interact to determine grey wolf population dynamics. I am particularly interested in how populations respond to global change and different management scenarios. I have never used capture-recapture models but I would like to learn about it to properly understand related literature, and because you never know what skills you will need in the future! Looking forward to see you all!",
+        "user": "U020E0D34F2",
+        "ts": "1619099367.015600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "f7c80b1312f6",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-22\/1990421115827_f7c80b1312f67e6a5c9a_72.jpg",
+            "first_name": "",
+            "real_name": "Ana Morales González",
+            "display_name": "Ana Morales González",
+            "team": "T01UVLT5RS8",
+            "name": "moralesglezana",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sIJo3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all!\nMy name is Ana, I am a PhD student working with Eloy Revilla and Maria Paniw at Department of Conservation Biology, Estación Biológica de Doñana (EBD-CSIC; Spain). My research focuses on how individual, social and environmental factors interact to determine grey wolf population dynamics. I am particularly interested in how populations respond to global change and different management scenarios. I have never used capture-recapture models but I would like to learn about it to properly understand related literature, and because you never know what skills you will need in the future! Looking forward to see you all!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01UQ29DG3C",
+                    "U01ULDNCVKP",
+                    "U01UMBR0K38",
+                    "U01UWAUMLR0",
+                    "U0227MDF1AQ"
+                ],
+                "count": 5
+            }
+        ]
+    }
+]

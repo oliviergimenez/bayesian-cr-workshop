@@ -1,0 +1,55 @@
+[
+    {
+        "client_msg_id": "6d27b964-acc0-4cdf-b014-894a5e744405",
+        "type": "message",
+        "text": "Thanks a lot <@U01UMBR0K38>",
+        "user": "U021VKN37C4",
+        "ts": "1621422018.126800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g1e465d2559a",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/1e465d2559a5cb22a7285fac74072902.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0008-72.png",
+            "first_name": "",
+            "real_name": "Natalia",
+            "display_name": "Natalia",
+            "team": "T01UVLT5RS8",
+            "name": "natalia.vizcaino.palo",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mIRHa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks a lot "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01UMBR0K38"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621322453.011500",
+        "parent_user_id": "U021VKN37C4",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U01UMBR0K38"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

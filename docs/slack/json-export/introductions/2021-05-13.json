@@ -1,0 +1,124 @@
+[
+    {
+        "client_msg_id": "9c34abe9-235c-4583-b854-c4f5792e14d0",
+        "type": "message",
+        "text": "Hello! My name is Jay VonBank, and I am a research ecologist with U.S. Geological Survey. My research is focused on migratory birds, particularly waterfowl and movement ecology using GPS\/ACC\/GSM tracking devices. I have built basic multi-state models using JAGS to understand transition probabilities among states, but am excited to dive deeper into parameterization and estimation using Nimble and to further my understanding of mark-recapture analyses. Very much looking forward to the workshop!",
+        "user": "U021U3RM8P3",
+        "ts": "1620922836.068800",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "g5944930ed9c",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/5944930ed9ca9d319b0ba3bf0f712b07.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-72.png",
+            "first_name": "",
+            "real_name": "Jay VonBank",
+            "display_name": "Jay VonBank",
+            "team": "T01UVLT5RS8",
+            "name": "jvonbank",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U021U3RM8P3",
+            "ts": "1620922859.000000"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Eyrw8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello! My name is Jay VonBank, and I am a research ecologist with U.S. Geological Survey. My research is focused on migratory birds, particularly waterfowl and movement ecology using GPS\/ACC\/GSM tracking devices. I have built basic multi-state models using JAGS to understand transition probabilities among states, but am excited to dive deeper into parameterization and estimation using Nimble and to further my understanding of mark-recapture analyses. Very much looking forward to the workshop!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b3b69a60-1815-4587-8aa2-c0ddb8ef9d8b",
+        "type": "message",
+        "text": "Hi all! My name is Patricia Calderon and I am a jaguar researcher, focusing mainly in issues related to connectivity, corridors and habitat suitability analysis. I am currently doing my PhD on jaguar population connectivity in Central America, using occupancy and agent based models. My project is a collaboration between the Leibniz Institute for Zoo and Wildlife Research, Potsdam University and the Helmholtz Centre for Environmental Research in Germany. Looking forward to the workshop and learning new tools that I could use for my research!",
+        "user": "U0227J5DB97",
+        "ts": "1620928018.073400",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "d472dd60b44d",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-05-13\/2063213946003_d472dd60b44d6cd3a126_72.png",
+            "first_name": "",
+            "real_name": "Ana Patricia Calderón",
+            "display_name": "Ana Patricia Calderón",
+            "team": "T01UVLT5RS8",
+            "name": "anncalderon",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fKf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi all! My name is Patricia Calderon and I am a jaguar researcher, focusing mainly in issues related to connectivity, corridors and habitat suitability analysis. I am currently doing my PhD on jaguar population connectivity in Central America, using occupancy and agent based models. My project is a collaboration between the Leibniz Institute for Zoo and Wildlife Research, Potsdam University and the Helmholtz Centre for Environmental Research in Germany. Looking forward to the workshop and learning new tools that I could use for my research!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1620928018.073400",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1621205059.134500",
+        "reply_users": [
+            "U022EGWE00Z"
+        ],
+        "replies": [
+            {
+                "user": "U022EGWE00Z",
+                "ts": "1621205059.134500"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "reactions": [
+            {
+                "name": "wave",
+                "users": [
+                    "U01ULDNCVKP",
+                    "U01UQ29DG3C"
+                ],
+                "count": 2
+            },
+            {
+                "name": "raised_hand_with_fingers_splayed",
+                "users": [
+                    "U022EGWE00Z"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

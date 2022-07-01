@@ -1,0 +1,130 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1618809887.000200",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> has joined the channel"
+    },
+    {
+        "client_msg_id": "1fb5dfe6-4d76-4807-9322-5c4668f70783",
+        "type": "message",
+        "text": "Workshop materials (slides and code) are here: <https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/>. Videos are there <https:\/\/youtu.be\/2qeCQoZizuU>.",
+        "user": "U01ULDNCVKP",
+        "ts": "1618810494.000600",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U01ULDNCVKP",
+            "ts": "1621271608.000000"
+        },
+        "attachments": [
+            {
+                "title": "Bayesian capture-recapture inference with hidden Markov models",
+                "title_link": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/",
+                "text": "A two-day workshop with `R` and `Nimble`",
+                "fallback": "Bayesian capture-recapture inference with hidden Markov models",
+                "from_url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/",
+                "service_name": "oliviergimenez.github.io",
+                "id": 1,
+                "original_url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/"
+            },
+            {
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/",
+                "title": "Bayesian capture-recapture inference with hidden Markov models and Nimble - classes 1, 2 and 3",
+                "title_link": "https:\/\/youtu.be\/2qeCQoZizuU",
+                "author_name": "Olivier Gimenez",
+                "author_link": "https:\/\/www.youtube.com\/channel\/UCFtTq-4WwH0LIczQ__KFC1A",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/2qeCQoZizuU\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "fallback": "YouTube Video: Bayesian capture-recapture inference with hidden Markov models and Nimble - classes 1, 2 and 3",
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/2qeCQoZizuU?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "from_url": "https:\/\/youtu.be\/2qeCQoZizuU",
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/youtube.png",
+                "id": 2,
+                "original_url": "https:\/\/youtu.be\/2qeCQoZizuU"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1jfWz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Workshop materials (slides and code) are here: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/oliviergimenez.github.io\/bayesian-cr-workshop\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". Videos are there "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/youtu.be\/2qeCQoZizuU"
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U01UQ29DG3C"
+                ],
+                "count": 1
+            },
+            {
+                "name": "100",
+                "users": [
+                    "U021GG5HHMH"
+                ],
+                "count": 1
+            },
+            {
+                "name": "+1",
+                "users": [
+                    "U022F9QE5LH",
+                    "U021W429ATG"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "subtype": "channel_purpose",
+        "ts": "1618810542.000800",
+        "user": "U01ULDNCVKP",
+        "text": "<@U01ULDNCVKP> set the channel description: This channel is for workspace-wide communication and announcements. All members are in this channel.",
+        "purpose": "This channel is for workspace-wide communication and announcements. All members are in this channel."
+    }
+]

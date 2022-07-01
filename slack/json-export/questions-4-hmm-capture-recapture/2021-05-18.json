@@ -1,0 +1,174 @@
+[
+    {
+        "client_msg_id": "a17c6554-f2f6-4640-bf0c-ed819a415089",
+        "type": "message",
+        "text": "Beginner question in CMR : The introduced models always assume a 1-year lag between two successive observations. What is the impact of this assumption on the parameter estimates if observations are actually spread over several months among years? Consequently, is there any way to implement CMR models based on continuous time?",
+        "user": "U022SGS1DJ4",
+        "ts": "1621351883.004900",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd918c0ee171",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d918c0ee171f892c4416bf56c489518c.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "",
+            "real_name": "adrien_tableau",
+            "display_name": "adrien_tableau",
+            "team": "T01UVLT5RS8",
+            "name": "adrien.tableau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QZn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Beginner question in CMR : The introduced models always assume a 1-year lag between two successive observations. What is the impact of this assumption on the parameter estimates if observations are actually spread over several months among years? Consequently, is there any way to implement CMR models based on continuous time?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621351883.004900",
+        "reply_count": 2,
+        "reply_users_count": 2,
+        "latest_reply": "1621355017.005300",
+        "reply_users": [
+            "U01ULDNCVKP",
+            "U022SGS1DJ4"
+        ],
+        "replies": [
+            {
+                "user": "U01ULDNCVKP",
+                "ts": "1621353955.005000"
+            },
+            {
+                "user": "U022SGS1DJ4",
+                "ts": "1621355017.005300"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1621355017.005300"
+    },
+    {
+        "client_msg_id": "d126309c-22b1-4288-a1c5-05753976e960",
+        "type": "message",
+        "text": "That's something we didn't cover, thank you for asking! You need to have some time between the sampling occasions, and the sampling occasions should be kind of instantaneous to avoid having survival or dispersal occurring within it. This paper offers a nice discussion of CMR assumptions <http:\/\/www.phidot.org\/software\/cmr_sampling_review.pdf>. If you need to go for continuous models, check out this nice paper <https:\/\/arxiv.org\/abs\/2002.10997> and references therein.",
+        "user": "U01ULDNCVKP",
+        "ts": "1621353955.005000",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "8bc24f3414dc",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-04-19\/1990857950913_8bc24f3414dcd018118d_72.png",
+            "first_name": "Olivier",
+            "real_name": "Olivier Gimenez",
+            "display_name": "Olivier Gimenez",
+            "team": "T01UVLT5RS8",
+            "name": "olivier.gimenez",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "service_name": "arXiv.org",
+                "title": "Continuous-time multi-state capture-recapture models",
+                "title_link": "https:\/\/arxiv.org\/abs\/2002.10997",
+                "text": "Multi-state capture-recapture data comprise individual-specific sighting histories together with information on individuals' states related, for example, to breeding status, infection level, or...",
+                "fallback": "arXiv.org: Continuous-time multi-state capture-recapture models",
+                "from_url": "https:\/\/arxiv.org\/abs\/2002.10997",
+                "service_icon": "https:\/\/static.arxiv.org\/static\/browse\/0.3.2.6\/images\/icons\/favicon.ico",
+                "id": 1,
+                "original_url": "https:\/\/arxiv.org\/abs\/2002.10997"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "E2RnP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "That's something we didn't cover, thank you for asking! You need to have some time between the sampling occasions, and the sampling occasions should be kind of instantaneous to avoid having survival or dispersal occurring within it. This paper offers a nice discussion of CMR assumptions "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/www.phidot.org\/software\/cmr_sampling_review.pdf"
+                            },
+                            {
+                                "type": "text",
+                                "text": ". If you need to go for continuous models, check out this nice paper "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/arxiv.org\/abs\/2002.10997"
+                            },
+                            {
+                                "type": "text",
+                                "text": " and references therein."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621351883.004900",
+        "parent_user_id": "U022SGS1DJ4"
+    },
+    {
+        "client_msg_id": "18d446d4-9a95-4d26-8839-576a27f9d9b2",
+        "type": "message",
+        "text": "Thanks you :slightly_smiling_face:",
+        "user": "U022SGS1DJ4",
+        "ts": "1621355017.005300",
+        "team": "T01UVLT5RS8",
+        "user_team": "T01UVLT5RS8",
+        "source_team": "T01UVLT5RS8",
+        "user_profile": {
+            "avatar_hash": "gd918c0ee171",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/d918c0ee171f892c4416bf56c489518c.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-72.png",
+            "first_name": "",
+            "real_name": "adrien_tableau",
+            "display_name": "adrien_tableau",
+            "team": "T01UVLT5RS8",
+            "name": "adrien.tableau",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lkpW\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Thanks you "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "thread_ts": "1621351883.004900",
+        "parent_user_id": "U022SGS1DJ4"
+    }
+]
